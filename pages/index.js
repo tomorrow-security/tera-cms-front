@@ -4,7 +4,8 @@ import Hero from '../components/organisms/Hero'
 
 export default function Home() {
   return (
-    <div>
+    <>
+
       <Head>
         <title>Tera Campus</title>
         <link rel="icon" href="/favicon.ico" />
@@ -13,6 +14,7 @@ export default function Home() {
       <main>
         <Hero />
       </main>
-    </div>
+
+    </>
   )
 }
