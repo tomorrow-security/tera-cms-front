@@ -17,6 +17,10 @@ export default function Footer() {
             <Link href="/legal">
               <a className="m-2 hover:underline">Mentions légales</a>
             </Link>
+            <span className="hidden lg:block m-2">-</span>
+            <Link href="/privacy">
+              <a className="m-2 hover:underline">Politique de confidentialité</a>
+            </Link>
           </div>
           <div className="text-center">© 2020-{today.getFullYear()} Tera Campus</div>
         </div>

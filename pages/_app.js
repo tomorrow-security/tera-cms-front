@@ -5,11 +5,13 @@ import Header from '../components/organisms/Header'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <Header />
-      <Component {...pageProps} />
+      <div className="flex-grow">
+        <Component {...pageProps} />
+      </div>
       <Footer />
-    </>
+    </div>
   )
 }
 
