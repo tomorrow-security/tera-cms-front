@@ -1,5 +1,7 @@
 import Head from 'next/head'
 
+import Hero from '../components/organisms/Hero'
+
 export default function Home() {
   return (
     <div>
@@ -9,9 +11,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1>
-          Welcome to Tera Campus
-        </h1>
+        <Hero />
       </main>
     </div>
   )
