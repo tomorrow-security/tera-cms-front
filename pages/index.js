@@ -1,5 +1,6 @@
 import Head from 'next/head'
 
+import BlockConcept from '../components/organisms/BlockConcept'
 import Hero from '../components/organisms/Hero'
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
 
       <main>
         <Hero />
+        <BlockConcept />
       </main>
 
     </>
