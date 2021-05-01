@@ -1,6 +1,7 @@
 import Head from 'next/head'
 
 import BlockConcept from '../components/organisms/BlockConcept'
+import BlockGuides from '../components/organisms/BlockGuides'
 import Hero from '../components/organisms/Hero'
 
 const pageTitle = "École supérieure d'informatique - Tera Campus"
@@ -22,6 +23,7 @@ export default function Home() {
       <main>
         <Hero />
         <BlockConcept />
+        <BlockGuides />
       </main>
 
     </>
