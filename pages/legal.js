@@ -1,11 +1,18 @@
 import Head from 'next/head'
 
+const pageTitle = "Mentions légales - Tera Campus"
+const pageDescription = "Mentions légales"
+const pageUrl = 'https://tera-campus.com/legal'
+
 export default function Legal() {
   return (
     <div>
       <Head>
-        <title>Mentions légales - Tera Campus</title>
+        <title>{pageTitle}</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content={pageDescription} />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:description" content={pageDescription} />
       </Head>
 
       <main>

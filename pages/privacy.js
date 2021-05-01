@@ -1,11 +1,18 @@
 import Head from 'next/head'
 
+const pageTitle = "Politique de confidentialité - Tera Campus"
+const pageDescription = "Politique de confidentialité"
+const pageUrl = 'https://tera-campus.com/privacy'
+
 export default function Privacy() {
   return (
     <div>
       <Head>
-        <title>Politique de confidentialité - Tera Campus</title>
+        <title>{pageTitle}</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content={pageDescription} />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:description" content={pageDescription} />
       </Head>
 
       <main>
