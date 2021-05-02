@@ -5,7 +5,7 @@ const pageDescription = "Page non trouvée"
 
 export default function Custom404() {
   return (
-    <div>
+    <>
       <Head>
         <title>{pageTitle}</title>
         <link rel="icon" href="/favicon.ico" />
@@ -16,6 +16,6 @@ export default function Custom404() {
       <main className="text-center">
         <h1>Cette page n'existe pas !</h1>
       </main>
-    </div>
+    </>
   )
 }

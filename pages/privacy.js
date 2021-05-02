@@ -6,7 +6,7 @@ const pageUrl = 'https://tera-campus.com/privacy'
 
 export default function Privacy() {
   return (
-    <div>
+    <>
       <Head>
         <title>{pageTitle}</title>
         <link rel="icon" href="/favicon.ico" />
@@ -115,6 +115,6 @@ export default function Privacy() {
           </ul>
         </div>
       </main>
-    </div>
+    </>
   )
 }

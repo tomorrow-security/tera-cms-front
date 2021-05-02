@@ -6,7 +6,7 @@ const pageUrl = 'https://tera-campus.com/legal'
 
 export default function Legal() {
   return (
-    <div>
+    <>
       <Head>
         <title>{pageTitle}</title>
         <link rel="icon" href="/favicon.ico" />
@@ -112,6 +112,6 @@ export default function Legal() {
           </ul>
         </div>
       </main>
-    </div>
+    </>
   )
 }

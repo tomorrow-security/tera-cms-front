@@ -3,28 +3,13 @@ import IconFacebook from '../atoms/IconFacebook'
 import IconInstagram from '../atoms/IconInstagram'
 import IconLinkedin from '../atoms/IconLinkedin'
 import IconTwitch from '../atoms/IconTwitch'
+import SocialLink from '../atoms/SocialLink'
 
 const platformsLogosDict = {
   'facebook': <IconFacebook />,
   'instagram': <IconInstagram />,
   'linkedin': <IconLinkedin />,
   'twitch': <IconTwitch />,
-}
-
-function SocialLink({ name, url }) {
-  return (
-    <a
-      href={url}
-      target="_blank"
-      rel="noreferrer"
-      className="h-12 w-12 mx-1 rounded-full bg-tc-blue flex justify-center items-center"
-      aria-label={name}
-    >
-      <div className="h-6 w-6 text-white">
-        { platformsLogosDict[name] }
-      </div>
-    </a>
-  )
 }
 
 export default function BlockAgenda({ events }) {
@@ -73,18 +58,22 @@ export default function BlockAgenda({ events }) {
               <SocialLink
                 name="linkedin"
                 url="https://www.linkedin.com/company/teracampus"
+                logo={platformsLogosDict["linkedin"]}
               />
               <SocialLink
                 name="facebook"
                 url="https://www.facebook.com/teracampus"
+                logo={platformsLogosDict["facebook"]}
               />
               <SocialLink
                 name="instagram"
                 url="https://www.instagram.com/tera.campus"
+                logo={platformsLogosDict["instagram"]}
               />
               <SocialLink
                 name="twitch"
                 url="https://www.twitch.tv/teracampus"
+                logo={platformsLogosDict["twitch"]}
               />
             </div>
           </div>

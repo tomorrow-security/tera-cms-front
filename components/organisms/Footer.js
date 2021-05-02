@@ -14,6 +14,10 @@ export default function Footer() {
               <span className="text-xl">Tera Campus</span>
           </div>
           <div className="my-8 lg:my-0 flex flex-col lg:flex-row text-center">
+          <Link href="/contact">
+              <a className="m-2 hover:underline">Contact</a>
+            </Link>
+            <span className="hidden lg:block m-2">-</span>
             <Link href="/legal">
               <a className="m-2 hover:underline">Mentions légales</a>
             </Link>
