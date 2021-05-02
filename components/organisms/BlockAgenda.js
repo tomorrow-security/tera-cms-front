@@ -1,5 +1,4 @@
 import BlockTitle from '../atoms/BlockTitle'
-
 import IconFacebook from '../atoms/IconFacebook'
 import IconInstagram from '../atoms/IconInstagram'
 import IconLinkedin from '../atoms/IconLinkedin'
