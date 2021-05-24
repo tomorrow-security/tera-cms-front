@@ -2,8 +2,6 @@ import Link from 'next/link'
 import { useState } from 'react'
 
 import IconLogo from '../atoms/IconLogo'
-import IconMenu from '../atoms/IconMenu'
-import IconX from '../atoms/IconX'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
