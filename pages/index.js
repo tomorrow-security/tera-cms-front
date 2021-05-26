@@ -37,33 +37,24 @@ export async function getServerSideProps() {
     props: {
       agenda: [
         {
-          date: '08/05/2021',
-          dateTimeDate: '2021-05-08',
-          timetable: '14h00',
-          dateTimeTimetable: '14:00',
-          title: 'Après-midi open doors !',
-          description: 'Découvre Tera Campus grâce aux portes ouvertes !',
-          platform: 'twitch',
-        },
-        {
-          date: '11/05/2021',
-          dateTimeDate: '2021-05-11',
-          timetable: '18h00',
-          dateTimeTimetable: '18:00',
-          title: 'Soirée open doors',
-          description: 'Tu n\'es pas libre le samedi ? \
-          Découvre Tera Campus grâce à la soirée portes ouvertes !',
-          platform: 'twitch',
-        },
-        {
-          date: '21/05/2021',
-          dateTimeDate: '2021-05-21',
+          date: '27/05/2021',
+          dateTimeDate: '2021-05-27',
           timetable: '17h00',
           dateTimeTimetable: '17:00',
-          title: 'Webinaire : Prépare ton alternance !',
-          description: 'Tera Campus te donne des conseils pour préparer tes supports \
-          et trouver rapidement une alternance !',
-          platform: 'twitch',
+          title: 'A découvrire bientôt',
+          description: 'Thurday Tech Live',
+          platefrom: 'twitch',
+          url: 'https://www.twitch.tv/teracampus'
+        },
+        {
+          date: '03/06/2021',
+          dateTimeDate: '2021-06-03',
+          timetable: '17h00',
+          dateTimeTimetable: '17:00',
+          title: 'A découvrire bientôt',
+          description: 'Thurday Tech Live',
+          platefrom: 'twitch',
+          url: 'https://www.twitch.tv/teracampus'
         },
       ],
       questions: [
