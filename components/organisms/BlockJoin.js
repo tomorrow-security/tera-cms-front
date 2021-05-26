@@ -61,7 +61,7 @@ const Step = ({ description, image, icon, stage }) => {
 }
 
 
-export default function BlockJoinUs() {
+export default function BlockJoin() {
   // const [fullTraining, setfullTraining] = useState(true)
 
     const displayPricing = () => {
@@ -88,6 +88,7 @@ export default function BlockJoinUs() {
     //                     Au final, le coût de tes études sera amorti grâce à la rémunération de ton alternance !
     //                 </div>
     //                 <div className="flex justify-center">
+                            {/* // TODO ajouter hover et visited */}
     //                     <a
     //                         href="https://www.moncompteformation.gouv.fr/espace-public/financer-sa-formation"
     //                         className="p-2 my-8 font-semibold text-center text-white rounded-t md:text-xl // bg-tc-blue hover:bg-tc-red rounded-b-xl">
@@ -119,6 +120,7 @@ export default function BlockJoinUs() {
                     Au total, tes études ne te coûteront rien, et tu démarreras ta carrière sans dette !
                 </div>
                 <div className="flex justify-center my-2">
+                     {/* //TODO ajouter hover et visited  */}
                     <a
                         href="https://www.alternance.emploi.gouv.fr/portail_alternance/"
                         className="p-2 mt-8 font-semibold text-center text-white rounded-t md:text-xl bg-tc-blue rounded-b-xl">
@@ -191,6 +193,7 @@ export default function BlockJoinUs() {
                             ))
                             }
                         </div>
+                        {/* // TODO decommenter Cta quand routage ok */}
                         {/* <Cta /> */}
                     </div>
                 </div>
