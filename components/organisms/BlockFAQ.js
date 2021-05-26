@@ -31,7 +31,7 @@ function Item({ question, answer }) {
   )
 }
 
-export default function BlockFAQ({ questions }) {
+export default function BlockFaq({ questions }) {
   return (
     <>
       <Head>
@@ -43,7 +43,10 @@ export default function BlockFAQ({ questions }) {
 
       <section id="faq" className="py-10 md:py-20">
         <div className="md:container md:mx-auto">
-          <BlockTitle title="FAQ" />
+          <BlockTitle
+                title="Les réponses à tes questions"
+                iconPicture={{ backgroundImage: "url('faq.png')" }}
+            />
           <div className="grid grid-cols-1 gap-8 mx-2 lg:grid-cols-2">
             {questions.map((item, index) => (
               <Item key={index} question={item.name} answer={item.text} />

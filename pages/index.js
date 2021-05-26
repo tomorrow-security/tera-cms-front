@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 import BlockAgenda from '../components/organisms/BlockAgenda'
 import BlockConcept from '../components/organisms/BlockConcept'
-import BlockFAQ from '../components/organisms/BlockFAQ'
+import BlockFaq from '../components/organisms/BlockFaq'
 import Hero from '../components/organisms/Hero'
 
 const pageTitle = "École supérieure d'informatique - Tera Campus"
@@ -24,7 +24,7 @@ function Index({ agenda, questions }) {
         <Hero />
         <BlockAgenda events={agenda} />
         <BlockConcept />
-        <BlockFAQ questions={questions} />
+        <BlockFaq questions={questions} />
       </main>
     </>
   )
