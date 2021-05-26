@@ -25,7 +25,7 @@ function generateJSONLD(questions) {
 function Item({ question, answer }) {
   return (
     <div>
-      <p className="text-lg md:text-xl font-bold">{question}</p>
+      <p className="text-lg font-bold md:text-xl">{question}</p>
       <p className="mt-3 text-justify">{answer}</p>
     </div>
   )
@@ -44,7 +44,7 @@ export default function BlockFAQ({ questions }) {
       <section id="faq" className="py-10 md:py-20">
         <div className="md:container md:mx-auto">
           <BlockTitle title="FAQ" />
-          <div className="mx-2 grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 gap-8 mx-2 lg:grid-cols-2">
             {questions.map((item, index) => (
               <Item key={index} question={item.name} answer={item.text} />
             ))}
