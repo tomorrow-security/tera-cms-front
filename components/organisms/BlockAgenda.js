@@ -4,6 +4,7 @@ import IconInstagram from '../atoms/IconInstagram'
 import IconLinkedin from '../atoms/IconLinkedin'
 import IconTwitch from '../atoms/IconTwitch'
 import SocialLink from '../atoms/SocialLink'
+import LiveLink from '../atoms/LiveLink'
 
 const platformsLogosDict = {
   'facebook': <IconFacebook />,
@@ -14,47 +15,60 @@ const platformsLogosDict = {
 
 export default function BlockAgenda({ events }) {
   return (
-    <section id="agenda" className="py-10 md:py-20">
-      <div className="md:container md:mx-auto">
-        <BlockTitle title="Agenda" />
-        <div className="md:flex md:flex-row md:flex-nowrap md:justify-around md:text-xl">
-          <div>
-            <ul className="mx-2 flex flex-col justify-center sm:justify-start md:text-lg">
-            {events.map((event, index) => (
-              <li
-                key={index}
-                className="my-2 flex flex-row items-center md:border md:border-tc-blue md:rounded md:shadow-lg"
-              >
-                <div className="w-6 h-6 sm:ml-4 text-tc-red">
-                  {platformsLogosDict[event.platform]}
-                </div>
-                <div className="flex flex-col py-4 px-2 w-3/4 xl:ml-2">
-                  <div className="flex flex-row mb-1">
-                    <time
-                      className="mr-2"
-                      dateTime={event.dateTimeDate}>
-                      {event.date}
-                    </time>
-                    <time dateTime={event.dateTimeTimetable}>
-                      {event.timetable}
-                    </time>
-                  </div>
-                  <div className="text-sm sm:text-base">
-                    <h3 className="font-bold">{event.title}</h3>
-                    <p>{event.description}</p>
-                  </div>
-                </div>
-              </li>
-            ))}
+    <section id="agenda" className="py-10 lg:py-20 bg-gray-50">
+        <div className="md:container md:mx-auto">
+            <BlockTitle title="Agenda" iconPicture={{ backgroundImage: "url('pop-corn.png')" }} />
+            <div className="lg:flex lg:flex-row lg:flex-nowrap lg:justify-around lg:text-xl">
+                <div className="w-full lg:w-1/2">
+                    <ul className="flex flex-col justify-center mx-2 sm:justify-start lg:text-lg ">
+                      {
+                    events.map((event, index) => (
+                        <li
+                            key={index}
+                            className="flex flex-col items-center justify-center w-full my-2 md:flex-row md:justify-between lg:w-11/12 lg:border lg:border-tc-blue lg:rounded lg:shadow-lg">
+                            <div className="flex flex-row items-center w-full md:w-3/4">
+                                <LiveLink
+                                  name= {event.platform}
+                                  url={event.url}
+                                  logo={platformsLogosDict[event.platform]}
+                                />
+                                <div className="flex flex-col w-5/6 px-2 py-4 xl:ml-2">
+                                    <div className="flex flex-row mb-1">
+                                        <time
+                                            className="mr-2"
+                                            dateTime={event.dateTimeDate}>
+                                            {event.date}
+                                        </time>
+                                        <time dateTime={event.dateTimeTimetable}>
+                                            {event.timetable}
+                                        </time>
+                                    </div>
+                                    <div className="text-sm sm:text-base">
+                                        <h3 className="font-bold">{event.title}</h3>
+                                        <p>{event.description}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="mx-auto mt-1 mb-4 w-max md:w-1/4 md:mx-0 md:mt-4">
+                                <div 
+                                // TODO adapté le lien à next.js to="/thursday-tech-live-registration" 
+                                    className="flex justify-center px-4 py-1 mx-1 font-bold text-white rounded-full md:px-0 intems-center lg:py-2 lg:text-sm xl:text-lg bg-tc-blue hover:bg-tc-red ">
+                                    Je m'inscris
+                                </div>
+                            </div> 
+                            
+                        </li>
+                    ))
+                }
             </ul>
           </div>
-          <div className="mt-8 flex flex-col justify-center md:space-y-10">
-            <p className="mx-auto text-center font-bold md:text-2xl md:flex md:flex-col md:justify-center md:space-y-2">
-              <span>Abonne toi&nbsp;</span>
-              <span>et&nbsp;</span>
-              <span>suis en direct toutes nos actualités :</span>
-            </p>
-            <div className="flex flex-row flex-nowrap justify-center justify-items-center mt-8">
+           <div className="flex flex-col justify-center mt-8 space-y-10">
+             <p className="flex flex-col justify-center mx-auto space-y-2 font-bold text-center lg:text-2xl">
+                        <span className="animate-wiggle">Abonne toi&nbsp;</span>
+                        <span>et&nbsp;</span>
+                        <span>suis en direct toutes nos actualités :</span>
+                    </p>
+             <div className="flex flex-row justify-center mt-8 flex-nowrap justify-items-center">
               <SocialLink
                 name="linkedin"
                 url="https://www.linkedin.com/company/teracampus"

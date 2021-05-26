@@ -43,7 +43,7 @@ export async function getServerSideProps() {
           dateTimeTimetable: '17:00',
           title: 'A découvrire bientôt',
           description: 'Thurday Tech Live',
-          platefrom: 'twitch',
+          platform: 'twitch',
           url: 'https://www.twitch.tv/teracampus'
         },
         {
@@ -53,7 +53,7 @@ export async function getServerSideProps() {
           dateTimeTimetable: '17:00',
           title: 'A découvrire bientôt',
           description: 'Thurday Tech Live',
-          platefrom: 'twitch',
+          platform: 'twitch',
           url: 'https://www.twitch.tv/teracampus'
         },
       ],
