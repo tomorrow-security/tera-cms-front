@@ -1,13 +1,18 @@
-const titleLayoutStyle = 'mb-3 pb-3 md:pl-2'
-const titleTextStyle = 'text-center md:text-left text-4xl md:text-5xl font-light text-tc-red'
+const titleLayoutStyle = 'ml-2 box-border w-max max-w-3/4'
+const titleTextStyle = 'text-center text-2xl sm:text-3xl md:text-5xl font-bold text-tc-red'
 const titleBorderStyle = 'border-b border-tc-red'
+const iconLayoutStyle = 'w-16 h-16 md:w-20 md:h-20 bg-center bg-contain bg-no-repeat'
+const titleBlock = ' mb-8 px-4 pb-8 flex flex-row flex-nowrap justify-center box-border items-center w-full'
 
-export default function BlockTitle({ title }) {
+export default function BlockTitle({ title, iconPicture }) {
 	return (
-		<div className="mb-10">
-			<h2 className={`${titleLayoutStyle} ${titleTextStyle} ${titleBorderStyle}`}>
-				{title}
-			</h2>
-		</div>
+		<div className={`${titleBorderStyle} ${titleBlock}`} >
+        <div style={iconPicture}
+            className={`${iconLayoutStyle}`}>
+        </div>
+        <h2 className={`${titleLayoutStyle} ${titleTextStyle}`}>
+            {title}
+        </h2>
+    </div>
 	)
 }
