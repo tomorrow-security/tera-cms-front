@@ -18,7 +18,7 @@ const guides = [
 ]
 
 const Guide = ({ name, description, imageUrl, reverse }) => (
-  <div className={`flex ${reverse ? 'flex-row-reverse' : 'flex-row' } lg:justify-center items-center lg:py-8`}>
+  <div className={`flex ${reverse ? 'flex-row-reverse' : 'flex-row' } justify-center items-center lg:py-8`}>
         <div className="rounded-full border-1 lg:border-2 borde-solid border-tc-blue">
             <div className="border-2 border-solid rounded-full lg:border-4 border-tc-red">
                 <img
@@ -28,11 +28,13 @@ const Guide = ({ name, description, imageUrl, reverse }) => (
                 />
             </div>
         </div>
-        <div className={`${reverse ? 'mr-8' : 'ml-8'} ${reverse ? 'justify-end' : 'justify-start'} lg:w-2/3`}>
+        <div className={` flex flex-col ${reverse ? 'mr-8' : 'ml-8'}  lg:w-2/3`}>
             <div className={`text-center ${reverse ? 'lg:text-right' : 'lg:text-left'} text-4xl lg:font-bold`}>
                 {name}
             </div>
-            <p className={`mt-4 text-justify ${reverse ? 'lg:text-left' : 'lg:text-right'} `}>{description}</p>
+            <p className={`mt-4 ${reverse ? 'lg:text-right' : 'lg:text-left'}`}>
+                {description}
+            </p>
         </div>
     </div>
 )
@@ -42,7 +44,7 @@ export default function BlockGuides() {
     <section id="guides" className="py-10 md:py-20">
         <div className="md:container md:mx-auto">
             <BlockTitle title="Nos guides"  iconPicture={{ backgroundImage: "url('panneaux-direction.png')" }}/>
-            <div className="mx-2 lg:px-10 lg:py-8 lg:divide-y-4 lg:divide-tc-blue lg:divide-double lg:w-6/7 lg:mx-auto">
+            <div className="mx-2 lg:px-8 lg:py-8 lg:divide-y-4 lg:divide-tc-blue lg:divide-double lg:w-6/7 lg:mx-auto">
                 {guides.map((guide, index) => (
                     <Guide
                         key={`guide-${index}`}

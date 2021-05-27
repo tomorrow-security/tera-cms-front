@@ -9,7 +9,7 @@ const links1 = [
 ]
 
 const links2 = [
-    { id: 'faq', label: 'FAQs' },
+    { id: 'faq', label: 'Questions' },
 ]
 
 const pages = [
