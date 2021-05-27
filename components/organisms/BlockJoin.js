@@ -1,7 +1,7 @@
 // import React, { useState } from 'react'
 
 import BlockTitle from '../atoms/BlockTitle'
-// import Cta from '../atoms/Cta'
+import Cta from '../atoms/Cta'
 import IconComputerGraduate from '../atoms/IconComputerGraduate'
 import IconBulb from '../atoms/IconBulb'
 import IconPhonebook from '../atoms/IconPhonebook'
@@ -193,8 +193,7 @@ export default function BlockJoin() {
                             ))
                             }
                         </div>
-                        {/* // TODO decommenter Cta quand routage ok */}
-                        {/* <Cta /> */}
+                        <Cta />
                     </div>
                 </div>
             </div>
