@@ -18,44 +18,44 @@ const guides = [
 ]
 
 const Guide = ({ name, description, imageUrl, reverse }) => (
-  <div className={`flex ${reverse && 'flex-row-reverse lg:flex-row'} items-center`}>
-      <div>
-          <img
-              className="
-                  w-96
-                  rounded-full 
-                  border-4 
-                  border-solid 
-                  border-tc-red 
-                  border-opacity-75"
-              src={imageUrl}
-              alt="Guide figure" loading="lazy"
-          />
-      </div>
-      <div className={`${reverse ? 'mr-8 lg:mr-0 lg:ml-8' : 'ml-8'}`}>
-          <div className="text-4xl text-center lg:text-left">{name}</div>
-          <p className="mt-4 text-justify">{description}</p>
-      </div>
-  </div>
+  <div className={`flex ${reverse ? 'flex-row-reverse' : 'flex-row' } justify-center items-center lg:py-8`}>
+        <div className="rounded-full border-1 lg:border-2 borde-solid border-tc-blue">
+            <div className="border-2 border-solid rounded-full lg:border-4 border-tc-red">
+                <img
+                    className="border-solid rounded-full w-96 lg:w-auto lg:h-full border-1 lg:border-2 border-tc-blue-light"
+                    src={imageUrl}
+                    alt="Guide figure" loading="lazy"
+                />
+            </div>
+        </div>
+        <div className={` flex flex-col ${reverse ? 'mr-8' : 'ml-8'}  lg:w-2/3`}>
+            <div className={`text-center ${reverse ? 'lg:text-right' : 'lg:text-left'} text-4xl lg:font-bold`}>
+                {name}
+            </div>
+            <p className={`mt-4 ${reverse ? 'lg:text-right' : 'lg:text-left'}`}>
+                {description}
+            </p>
+        </div>
+    </div>
 )
 
 export default function BlockGuides() {
   return (
-    <section id="guides" className="py-10 md:py-20 bg-tc-blue">
-      <div className="md:container md:mx-auto">
-        <BlockTitle title="Nos guides" />
-        <div className="mx-2 grid grid-cols-1 lg:grid-cols-2 gap-8 text-white">
-          {guides.map((guide, index) => (
-            <Guide
-                key={`guide-${index}`}
-                name={guide.name}
-                description={guide.description}
-                imageUrl={guide.imageUrl}
-                reverse={index % 2 !== 0}
-            />
-          ))}
+    <section id="guides" className="py-10 md:py-20">
+        <div className="md:container md:mx-auto">
+            <BlockTitle title="Nos guides"  iconPicture={{ backgroundImage: "url('panneaux-direction.png')" }}/>
+            <div className="mx-2 lg:px-8 lg:py-8 lg:divide-y-4 lg:divide-tc-blue lg:divide-double lg:w-6/7 lg:mx-auto">
+                {guides.map((guide, index) => (
+                    <Guide
+                        key={`guide-${index}`}
+                        name={guide.name}
+                        description={guide.description}
+                        imageUrl={guide.imageUrl}
+                        reverse={index % 2 !== 0}
+                    />
+                ))}
+            </div>
         </div>
-      </div>
     </section>
   )
 }

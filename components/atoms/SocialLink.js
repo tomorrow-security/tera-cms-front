@@ -1,13 +1,13 @@
 export default function SocialLink({ name, url, logo }) {
-  return (
-    <a
-      href={url}
-      target="_blank"
-      rel="noreferrer"
-      className="h-12 w-12 mx-1 rounded-full bg-tc-blue flex justify-center items-center"
-      aria-label={name}
-    >
-      <div className="h-6 w-6 text-white">{logo}</div>
-    </a>
-  )
+    return (
+        <a
+            href={url}
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center justify-center w-12 h-12 mx-1 rounded-full bg-tc-blue hover:bg-tc-red"
+            aria-label={name}
+        >
+          <div className="w-6 h-6 text-white">{logo}</div>
+        </a>
+    )
 }
