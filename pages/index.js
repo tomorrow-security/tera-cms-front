@@ -30,26 +30,17 @@ function Index({ agenda, questions }) {
   )
 }
 
+//TODO mettre à jour l'agenda
 export async function getServerSideProps() {
   return {
     props: {
       agenda: [
         {
-          date: '27/05/2021',
-          dateTimeDate: '2021-05-27',
-          timetable: '17h00',
-          dateTimeTimetable: '17:00',
-          title: 'A découvrire bientôt',
-          description: 'Thurday Tech Live',
-          platform: 'twitch',
-          url: 'https://www.twitch.tv/teracampus'
-        },
-        {
           date: '03/06/2021',
           dateTimeDate: '2021-06-03',
-          timetable: '17h00',
-          dateTimeTimetable: '17:00',
-          title: 'A découvrire bientôt',
+          timetable: '18h30',
+          dateTimeTimetable: '18:30',
+          title: 'Développer un jeux avec Unity',
           description: 'Thurday Tech Live',
           platform: 'twitch',
           url: 'https://www.twitch.tv/teracampus'
