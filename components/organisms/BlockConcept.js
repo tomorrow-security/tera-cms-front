@@ -1,5 +1,5 @@
 // TODO decommenter Cta quand routage ok
-// import Cta from '../atoms/Cta'
+import Cta from '../atoms/Cta'
 import IconCurvedArrow from '../atoms/IconCurvedArrow'
 
 const Paragraph = ({ bold, gutterBottom, children }) => (
@@ -25,16 +25,14 @@ export default function BlockConcept() {
     <section id="concept" className="pt-4 md:py-10 lg:py-20">
         <div className="md:container md:mx-auto">
         <div className="relative flex flex-col justify-center max-w-full mx-auto mb-8 text-xl font-bold text-center sm:text-2xl border-box w-max">
-                {/* // TODO decommenter quand Cta ok */}
-                {/* <div className="absolute w-16 h-16 transform sm:w-20 sm:h-20 bottom-3 right-7 text-tc-blue -rotate-6">
+                <div className="absolute w-16 h-16 transform sm:w-20 sm:h-20 bottom-3 right-7 text-tc-blue -rotate-6">
                     <IconCurvedArrow />
-                </div> */}
+                </div>
                 <div className="px-6">
                     <div>Prochaine rentrée académique</div>
                     <div>le lundi 04 octobre 2021</div>
           </div>
-                {/* // TODO decommenter Cta quand routage ok */}
-                {/* <Cta /> */}
+                <Cta />
             </div>
             <div className="flex flex-col lg:flex-row">
                 <ul className="mx-2 md:mx-0 md:pl-2 lg:w-2/3">
