@@ -27,7 +27,7 @@ export default function Contact() {
   const submitButtonParams = {
     loading: { value: 'En cours d\'envoi ...', color: 'bg-gray-400', disabled: true },
     success: { value: 'Envoyé !', color: 'bg-green-400', disabled: true },
-    default: { value: 'Envoyer', color: 'bg-yellow-400 hover:bg-yellow-500 shadow hover:shadow-none cursor-pointer', disabled: false }
+    default: { value: 'Envoyer', color: 'bg-tc-blue hover:bg-tc-red shadow hover:shadow-none cursor-pointer', disabled: false }
   }
 
   return (
@@ -97,14 +97,16 @@ export default function Contact() {
                     </div>
                   </div>
                 </div>
-                {/* // TODO design form à migrer */}
-                <form className="grid grid-cols-1 gap-6" onSubmit={handleSubmit(onSubmit)}>
+                <form
+                  className="grid grid-cols-1 gap-6"
+                  onSubmit={handleSubmit(onSubmit)}
+                >
                   <label className="block">
                     <span>Ton adresse e-mail :</span>
                     <input
                       type="email"
                       placeholder="thomas.anderson@tera-campus.com"
-                      className={`block mt-1 w-full p-2 border ${errors.email ? 'border-red-500' : 'border-black'} outline-none`}
+                      className={`block mt-1 w-full p-2 border ${errors.email ? 'border-red-500' : 'border-black'} rounded-none outline-none`}
                       {...register("email", { required: true })}
                     />
                     {
@@ -118,7 +120,7 @@ export default function Contact() {
                     <span>Ton message :</span>
                     <textarea
                       placeholder="thomas.anderson@tera-campus.com"
-                      className={`block mt-1 w-full p-2 border ${errors.message ? 'border-red-500' : 'border-black'} outline-none`}
+                      className={`block mt-1 w-full p-2 border ${errors.message ? 'border-red-500' : 'border-black'} rounded-none outline-none`}
                       rows="5"
                       {...register("message", { required: true })}
                     />
@@ -136,7 +138,12 @@ export default function Contact() {
                         {...register("acceptPrivacyRules", { required: true })}
                       />
                       <span className="text-xs sm:text-base">
-                        J'ai lu et j'accepte la <Link href="/privacy"><a className="underline">politique de confidentialité</a></Link>
+                        J'ai lu et j'accepte la
+                        <Link href="/privacy">
+                          <a className="underline">
+                            politique de confidentialité
+                          </a>
+                        </Link>
                       </span>
                     </div>
                     {
@@ -145,21 +152,24 @@ export default function Contact() {
                       </span>
                     }
                   </label>
-                  <input
-                    type="submit"
-                    value={['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].value : submitButtonParams['default'].value}
-                    className={`w-full p-4 outline-none ${['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].color : submitButtonParams['default'].color}`}
-                    disabled={['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].disabled : submitButtonParams['default'].disabled }
-                  />
+                  <div className="w-auto mx-auto my-2">
+                    <input
+                      type="submit"
+                      value={['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].value : submitButtonParams['default'].value}
+                      className={`w-max px-4
+                          outline-none cursor-pointer text-white font-bold rounded-t rounded-b-xl ${['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].color : submitButtonParams['default'].color}`}
+                      disabled={['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].disabled : submitButtonParams['default'].disabled }
+                    />
+                  </div>
                 </form>
               </div>
-              <div className="relative flex min-w-min">
+              <div className="md:w-1/2">
                 <Image
                   src="/happy-woman-phone.jpg"
                   alt="Femme utilisant un téléphone"
                   width={1152}
                   height={768}
-                  className="object-cover object-center"
+                  className="object-cover object-center w-full h-full md:inline-flex"
                 />
             </div>
             </div >
