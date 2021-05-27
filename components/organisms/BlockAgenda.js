@@ -18,7 +18,7 @@ export default function BlockAgenda({ events }) {
     <section id="agenda" className="py-10 lg:py-20 bg-gray-50">
         <div className="md:container md:mx-auto">
             <BlockTitle title="Agenda" iconPicture={{ backgroundImage: "url('pop-corn.png')" }} />
-            <div className="lg:flex lg:flex-row lg:flex-nowrap lg:justify-around lg:text-xl">
+            <div className="lg:flex lg:flex-row lg:flex-nowrap lg:justify-around lg:items-center lg:text-xl">
                 <div className="w-full lg:w-1/2">
                     <ul className="flex flex-col justify-center mx-2 sm:justify-start lg:text-lg ">
                       {
