@@ -1,7 +1,7 @@
 module.exports = {
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
-  theme: {
+    purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+    darkMode: false, // or 'media' or 'class'
+    theme: {
         rotate: {
             '-180': '-180deg',
             '-90': '-90deg',
@@ -70,28 +70,29 @@ module.exports = {
                 toggle: 'cubic-bezier(0.18, 0.89, 0.35, 1.15)',
             },
         },
-        variants: {
-            extend: {
-                animation: ['hover', 'focus', 'checked'],
-                backgroundColor: ['checked'],
-                borderColor: ['checked'],
-                borderOpacity: ['disabled'],
-                fontWeight: ['hover'],
-                fontSize: ['hover'],
-                fontStyle: ['hover', 'focus'],
-                opacity: ['disabled'],
-                textOpacity: ['disabled'],
-                textColor: ['visited'],
-                textDecoration: ['hover', 'focus', 'visited'],
-                transform: ['hover', 'focus', 'checked'],
-                transformOrigin: ['hover', 'focus', 'checked'],
-                transitionDelay: ['hover', 'focus', 'checked'],
-                transitionDuration: ['hover', 'focus', 'checked'],
-                transitionProperty: ['hover', 'focus', 'checked'],
-                transitionTimingFunction: ['hover', 'focus', 'checked'],
-                translate: ['checked'],
-            },
-        },
-        plugins: [],
     },
+    variants: {
+        extend: {
+            animation: ['hover', 'focus', 'checked'],
+            backgroundColor: ['checked'],
+            borderColor: ['checked'],
+            borderOpacity: ['disabled'],
+            fontWeight: ['hover'],
+            fontSize: ['hover'],
+            fontStyle: ['hover', 'focus'],
+            opacity: ['disabled'],
+            scale:['group-hover'],
+            textOpacity: ['disabled'],
+            textColor: ['visited'],
+            textDecoration: ['hover', 'focus', 'visited'],
+            transform: ['group-hover', 'hover', 'focus', 'checked'],
+            transformOrigin: ['group-hover', 'hover', 'focus', 'checked'],
+            transitionDelay: ['group-hover', 'hover', 'focus', 'checked'],
+            transitionDuration: ['group-hover', 'hover', 'focus', 'checked'],
+            transitionProperty: ['group-hover', 'hover', 'focus', 'checked'],
+            transitionTimingFunction: ['group-hover', 'hover', 'focus', 'checked'],
+            translate: ['checked'],
+        },
+    },
+    plugins: [],
 }
