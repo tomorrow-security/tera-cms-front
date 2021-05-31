@@ -91,7 +91,7 @@ module.exports = {
             transitionDuration: ['group-hover', 'hover', 'focus', 'checked'],
             transitionProperty: ['group-hover', 'hover', 'focus', 'checked'],
             transitionTimingFunction: ['group-hover', 'hover', 'focus', 'checked'],
-            translate: ['checked'],
+            translate: ['group-hover', 'checked'],
         },
     },
     plugins: [],
