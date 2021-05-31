@@ -52,13 +52,16 @@ export default function Header() {
                 </div>
                 </div>
                 <nav className={`${!isOpen && 'hidden'} lg:flex lg:justify-between text-center pr-2`}>
-                    <ul className="lg:flex">
+                    <ul className="space-y-2 lg:space-y-0 lg:space-x-4 lg:flex lg:justify-center">
                         {
                             links1.map(({ id, label }) => (
                                 <li key={`navmd-${id}`} onClick={() => setIsOpen(false)}>
                                     <Link href={`/#${id}`}>
-                                        <a>
-                                            <div className="my-2 text-lg border-b-2 border-transparent cursor-pointer lg:my-0 lg:px-4 hover:border-white">
+                                        <a className="relative flex items-center justify-center overflow-hidden group border-box">
+                                            <div className="absolute z-10 text-lg text-transparent transition-all duration-300 ease-in transform border-b-2 border-transparent border-white cursor-pointer -left-full group-hover:translate-x-full">
+                                                {label}
+                                            </div>
+                                            <div className="z-20 text-lg bg-transparent border-b-2 border-transparent cursor-pointer">
                                                 {label}
                                             </div>
                                         </a>
@@ -67,30 +70,34 @@ export default function Header() {
                             ))
                         }
                     </ul>
-                    <ul className="lg:flex">
+                    <ul className="space-y-2 lg:mx-4 lg:space-y-0 lg:space-x-4 lg:flex lg:justify-center">
                         {
                             pages.map(({ id, label }) => (
                                 <li key={`navmd-${id}`} onClick={() => setIsOpen(false)}>
                                     <Link href={`/${id}`}>
-                                        <a className="my-2 text-lg border-b-2 border-transparent cursor-pointer lg:my-0 lg:px-4 hover:border-white"
-                                        >
-                                            {label}
+                                        <a className="relative flex items-center justify-center overflow-hidden group border-box">
+                                            <div className="absolute z-10 text-lg text-transparent transition-all duration-300 ease-in transform border-b-2 border-transparent border-white cursor-pointer -left-full group-hover:translate-x-full">
+                                                {label}
+                                            </div>
+                                            <div className="z-20 text-lg bg-transparent border-b-2 border-transparent cursor-pointer">
+                                                {label}
+                                            </div>
                                         </a>
                                     </Link>
                                 </li>
                             ))
                         }
                     </ul>
-                    <ul className="space-y-2 lg:flex">
+                    <ul className="space-y-2 lg:space-y-0 lg:space-x-4 lg:flex lg:justify-center">
                         {
                             links2.map(({ id, label }) => (
                                 <li key={`navmd-${id}`} onClick={() => setIsOpen(false)}>
                                     <Link href={`/#${id}`}>
-                                        <a className="relative flex items-center justify-center group border-box">
-                                            <div className="absolute text-lg text-transparent border-b-2 border-transparent border-white cursor-pointer -left-full group-hover:translate-x-full">
+                                        <a className="relative flex items-center justify-center overflow-hidden group border-box">
+                                            <div className="absolute z-10 text-lg text-transparent transition-all duration-300 ease-in transform border-b-2 border-transparent border-white cursor-pointer -left-full group-hover:translate-x-full">
                                                 {label}
                                             </div>
-                                            <div className="my-2 text-lg border-b-2 border-transparent cursor-pointer lg:my-0 lg:px-4">
+                                            <div className="z-20 text-lg bg-transparent border-b-2 border-transparent cursor-pointer">
                                                 {label}
                                             </div>
                                         </a>
