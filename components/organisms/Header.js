@@ -22,7 +22,6 @@ const pages = [
 ]
 
 // TODO ajouter du style au liens visité
-// TODO améliorer le style du hover sur les lien
 // TODO ajouter du style au liens actif
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false)
@@ -53,11 +52,12 @@ export default function Header() {
                 </div>
                 <nav className={`${!isOpen && 'hidden'} lg:flex lg:justify-between text-center pr-2`}>
                     <ul className="space-y-2 lg:space-y-0 lg:space-x-4 lg:flex lg:justify-center">
-                        {
+                            {
                             links1.map(({ id, label }) => (
                                 <li key={`navmd-${id}`} onClick={() => setIsOpen(false)}>
                                     <Link href={`/#${id}`}>
-                                        <a className="relative flex items-center justify-center overflow-hidden group border-box">
+                                        {/* // TODO 'visited' et 'active' ne fonctionne pas */}
+                                        <a className="relative flex items-center justify-center overflow-hidden group border-box visited:text-tc-red-light active:border-tc-red-light">
                                             <div className="absolute z-10 text-lg text-transparent transition-all duration-300 ease-in transform border-b-2 border-transparent border-white cursor-pointer -left-full group-hover:translate-x-full">
                                                 {label}
                                             </div>
