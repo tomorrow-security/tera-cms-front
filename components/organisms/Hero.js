@@ -22,9 +22,9 @@ export default function Hero() {
                     <p className="mb-8 text-xl sm:text-2xl md:text-2xl">
                         École supérieure d&apos;informatique en télé-présentiel
                     </p>
-                    <Link href="/enrolment">
-                        <a className="text-base font-bold uppercase align-text-top md:text-2xl animate-pulse">
-                              <div className="box-border w-4/5 p-4 mx-auto mt-8 tracking-normal text-white transition-colors duration-700 rounded-full group 2xl:w-9/12 xl:mb-12 md:mt-0 lg:mt-20 xl:mt-10 2xl:mt-40 bg-tc-blue hover:bg-tc-red">
+                        <Link href="/enrolment">
+                            <a className="text-base font-bold uppercase align-text-top md:text-2xl animate-pulse">
+                                <div className="box-border w-4/5 p-4 mx-auto mt-8 tracking-normal text-white transition-colors duration-700 rounded-full group 2xl:w-9/12 xl:mb-12 md:mt-0 lg:mt-20 xl:mt-10 2xl:mt-40 bg-tc-blue hover:bg-tc-red">
                                 <div className="flex items-center justify-evenly animate-pulse group-hover:animate-none">
                                     <p>Je m&apos;inscris</p>
                                     <div className="pl-2 text-2xl sm:pl-4 md:pl-6 sm:text-4xl md:text-5xl">
