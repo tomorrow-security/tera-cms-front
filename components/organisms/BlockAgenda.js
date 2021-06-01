@@ -54,7 +54,7 @@ export default function BlockAgenda({ events }) {
                             <div className="mx-auto mt-1 mb-4 w-max md:w-1/4 md:mx-0 md:mt-4">
                                 <Link href="/registration">
                                   <a
-                                      className="flex justify-center px-4 py-1 mx-1 font-bold text-white rounded-full md:px-0 intems-center lg:py-2 lg:text-sm xl:text-lg bg-tc-blue hover:bg-tc-red ">
+                                      className="flex justify-center px-4 py-1 mx-1 font-bold text-white transition-colors duration-700 rounded-full md:px-0 intems-center lg:py-2 lg:text-sm xl:text-lg bg-tc-blue hover:bg-tc-red ">
                                       Je m'inscris
                                   </a>
                                 </Link>

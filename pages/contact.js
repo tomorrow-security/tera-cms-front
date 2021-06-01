@@ -27,7 +27,7 @@ export default function Contact() {
   const submitButtonParams = {
     loading: { value: 'En cours d\'envoi ...', color: 'bg-gray-400', disabled: true },
     success: { value: 'Envoyé !', color: 'bg-green-400', disabled: true },
-    default: { value: 'Envoyer', color: 'bg-tc-blue hover:bg-tc-red shadow hover:shadow-none cursor-pointer', disabled: false }
+    default: { value: 'Envoyer', color: 'bg-tc-blue hover:bg-tc-red shadow hover:shadow-none cursor-pointer  transition-colors duration-700', disabled: false }
   }
 
   return (
@@ -78,8 +78,8 @@ export default function Contact() {
                     <div className="relative mx-auto">
                       <a
                         href="mailto:contact@tera-campus.com"
-                        className="p-2 mx-auto text-sm text-center underline w-max md:text-lg hover:text-tc-red">
-                        contact@tera-campus.com
+                        className="p-2 mx-auto text-sm text-center underline hover:font-semibold w-max md:text-lg hover:text-tc-red">
+                        &#x1F4E7; contact@tera-campus.com
                       </a>
                     </div>
                   </div>
@@ -131,16 +131,16 @@ export default function Contact() {
                     }
                   </label>
                   <label className="block">
-                    <div>
+                    <div className="w-max">
                       <input
                         type="checkbox"
                         className="mr-2 border outline-none"
                         {...register("acceptPrivacyRules", { required: true })}
                       />
                       <span className="text-xs sm:text-base">
-                        J'ai lu et j'accepte la
+                        J'ai lu et j'accepte la&nbsp;
                         <Link href="/privacy">
-                          <a className="underline">
+                          <a className="underline hover:text-tc-red">
                             politique de confidentialité
                           </a>
                         </Link>
