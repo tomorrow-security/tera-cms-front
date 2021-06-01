@@ -121,8 +121,7 @@ export default function BlockJoin() {
                     Au total, tes études ne te coûteront rien, et tu démarreras ta carrière sans dette !
                 </div>
                 <div className="flex justify-center pt-8 my-2">
-                     {/* //TODO ajouter hover 
-                     // TODO ajouter visited */}
+                     {/* // TODO ajouter visited */}
                     <a href="https://www.alternance.emploi.gouv.fr/portail_alternance/" className="relative z-10 w-full overflow-hidden transition duration-700 rounded-t h-7 md:h-9 md:w-3/5 group md:text-xl bg-tc-blue rounded-b-xl">
                         <span className="absolute left-0 z-20 h-full transition-all delay-100 transform rounded-full bg-tc-red w-1/8 -bottom-full group-hover:-translate-y-full group-hover:scale-200"></span>
                         <span className="absolute z-20 h-full transition-all ease-out delay-200 transform rounded-full w-1/8 -bottom-full left-1/8 group-hover:-translate-y-full bg-tc-red group-hover:scale-200"></span>
