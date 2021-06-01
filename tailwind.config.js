@@ -114,7 +114,7 @@ module.exports = {
     },
     variants: {
         extend: {
-            animation: ['hover', 'focus', 'checked'],
+            animation: ['group-hover','hover', 'focus', 'checked'],
             backgroundColor: ['checked', 'active'],
             borderColor: ['checked', 'active'],
             borderOpacity: ['disabled'],
