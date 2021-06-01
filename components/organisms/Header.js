@@ -22,7 +22,6 @@ const pages = [
 ]
 
 // TODO ajouter du style au liens visité
-// TODO améliorer le style du hover sur les lien
 // TODO ajouter du style au liens actif
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
