@@ -85,9 +85,9 @@ export default function BlockCareer() {
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
                     <div className="mx-2 space-y-3 md:mx-0 md:pl-2 md:space-y-6">
                         <form
-                            className="relative w-4/5 mx-auto mb-8 text-xl text-white rounded-t texte-center rounded-b-xl bg-tc-blue hover:bg-tc-red">
+                            className="relative w-4/5 mx-auto mb-8 text-xl text-white transition-colors duration-700 rounded-t texte-center rounded-b-xl bg-tc-blue hover:bg-tc-red">
                             <select
-                                className="w-full p-2 bg-transparent rounded-t appearance-none rounded-b-xl focus:outline-none hover:bg-tc-red"
+                                className="w-full p-2 transition-colors duration-700 bg-transparent rounded-t appearance-none rounded-b-xl focus:outline-none hover:bg-tc-red"
                                 value={activeJobIndex}
                                 onChange={e => setActiveJobIndex(e.target.value)}
                                 aria-label="Sélecteur de carrière"
