@@ -30,7 +30,6 @@ function Index({ agenda, questions }) {
   )
 }
 
-//TODO mettre à jour l'agenda
 export async function getServerSideProps() {
   return {
     props: {

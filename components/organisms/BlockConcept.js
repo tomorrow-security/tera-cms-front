@@ -1,4 +1,3 @@
-// TODO decommenter Cta quand routage ok
 import Cta from '../atoms/Cta'
 import IconCurvedArrow from '../atoms/IconCurvedArrow'
 
