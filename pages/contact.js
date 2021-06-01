@@ -78,8 +78,8 @@ export default function Contact() {
                     <div className="relative mx-auto">
                       <a
                         href="mailto:contact@tera-campus.com"
-                        className="p-2 mx-auto text-sm text-center underline w-max md:text-lg hover:text-tc-red">
-                        contact@tera-campus.com
+                        className="p-2 mx-auto text-sm text-center underline hover:font-semibold w-max md:text-lg hover:text-tc-red">
+                        &#x1F4E7; contact@tera-campus.com
                       </a>
                     </div>
                   </div>
