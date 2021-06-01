@@ -74,8 +74,8 @@ module.exports = {
     variants: {
         extend: {
             animation: ['hover', 'focus', 'checked'],
-            backgroundColor: ['checked'],
-            borderColor: ['checked'],
+            backgroundColor: ['checked', 'active'],
+            borderColor: ['checked', 'active'],
             borderOpacity: ['disabled'],
             fontWeight: ['hover'],
             fontSize: ['hover'],
@@ -91,7 +91,7 @@ module.exports = {
             transitionDuration: ['group-hover', 'hover', 'focus', 'checked'],
             transitionProperty: ['group-hover', 'hover', 'focus', 'checked'],
             transitionTimingFunction: ['group-hover', 'hover', 'focus', 'checked'],
-            translate: ['checked'],
+            translate: ['group-hover', 'checked'],
         },
     },
     plugins: [],
