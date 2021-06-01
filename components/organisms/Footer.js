@@ -3,7 +3,6 @@ import Link from 'next/link'
 import IconLogo from '../atoms/IconLogo'
 
 // TODO ajouter du style au liens visité
-// TODO améliorer le style du hover sur les lien
 // TODO ajouter du style au liens actif
 export default function Footer() {
   const today = new Date()
@@ -18,15 +17,36 @@ export default function Footer() {
           </div>
           <div className="flex flex-col my-8 text-center lg:my-0 lg:flex-row">
           <Link href="/contact">
-              <a className="m-2 hover:underline">Contact</a>
+              <a className="relative flex items-center justify-center m-2 overflow-hidden group border-box ">
+                  <div className="absolute z-10 text-base text-transparent transition-all duration-300 ease-in transform border-b-2 border-transparent border-white cursor-pointer -left-full group-hover:translate-x-full">
+                      Contact
+                  </div>
+                  <div className="z-20 text-base bg-transparent border-b-2 border-transparent cursor-pointer">
+                      Contact
+                  </div>
+              </a>
             </Link>
             <span className="hidden m-2 lg:block">-</span>
             <Link href="/legal">
-              <a className="m-2 hover:underline">Mentions légales</a>
+              <a className="relative flex items-center justify-center m-2 overflow-hidden group border-box ">
+                  <div className="absolute z-10 text-base text-transparent transition-all duration-300 ease-in transform border-b-2 border-transparent border-white cursor-pointer -left-full group-hover:translate-x-full">
+                      Mentions légales
+                  </div>
+                  <div className="z-20 text-base bg-transparent border-b-2 border-transparent cursor-pointer">
+                      Mentions légales
+                  </div>
+              </a>
             </Link>
             <span className="hidden m-2 lg:block">-</span>
             <Link href="/privacy">
-              <a className="m-2 hover:underline">Politique de confidentialité</a>
+              <a className="relative flex items-center justify-center m-2 overflow-hidden group border-box ">
+                  <div className="absolute z-10 text-base text-transparent transition-all duration-300 ease-in transform border-b-2 border-transparent border-white cursor-pointer -left-full group-hover:translate-x-full">
+                      Politique de confidentialité
+                  </div>
+                  <div className="z-20 text-base bg-transparent border-b-2 border-transparent cursor-pointer">
+                      Politique de confidentialité
+                  </div>
+              </a>
             </Link>
           </div>
           <div className="text-center">© 2020-{today.getFullYear()} Tera Campus</div>
