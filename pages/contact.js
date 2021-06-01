@@ -131,16 +131,16 @@ export default function Contact() {
                     }
                   </label>
                   <label className="block">
-                    <div>
+                    <div className="w-max">
                       <input
                         type="checkbox"
                         className="mr-2 border outline-none"
                         {...register("acceptPrivacyRules", { required: true })}
                       />
                       <span className="text-xs sm:text-base">
-                        J'ai lu et j'accepte la
+                        J'ai lu et j'accepte la&nbsp;
                         <Link href="/privacy">
-                          <a className="underline">
+                          <a className="underline hover:text-tc-red">
                             politique de confidentialité
                           </a>
                         </Link>
