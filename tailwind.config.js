@@ -4,6 +4,7 @@ module.exports = {
     theme: {
         backgroundImage: theme => ({
             shine: 'linear-gradient(60deg, rgba(255,255,255,0) 40%,rgba(255,255,255,0.2) 42%,rgba(255,255,255,0.6) 47%,rgba(255,255,255,0.8) 50%,rgba(255,255,255,0.6) 53%,rgba(255,255,255,0.2) 58%,rgba(255,255,255,0) 60%,rgba(255,255,255,0) 100%)',
+            carousel : 'linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%)',
         }),
         backgroundSize: {
             auto: 'auto',
@@ -58,6 +59,11 @@ module.exports = {
         '200': '2',
         },
         extend: {
+            animation: {
+                wiggle: 'wiggle 1s ease-in-out infinite',
+                shine: 'shine 1.3s infinite',
+                scroll: 'scroll 40s linear infinite',
+            },
             colors: {
                 'tc-blue': '#04021D',
                 'tc-red': '#E03300',
@@ -82,10 +88,10 @@ module.exports = {
                     '0%': { backgroundPosition: '-100%;' },
                     '100%': { backgroundPosition: '100%' },
                 },
-            },
-            animation: {
-                wiggle: 'wiggle 1s ease-in-out infinite',
-                shine: 'shine 1.3s infinite',
+                scroll: {
+                    '0%' : { transform: 'translateX(0)'},
+                    '100%': { transform: 'translateX(calc(-200px * 6.24))' },
+                },
             },
             transitionDelay: {
                 50: '50ms',
@@ -109,6 +115,8 @@ module.exports = {
                 '5/8': '62.5%',
                 '6/8': '75%',
                 '7/8': '87.5%',
+                'carousel': 'calc(200px * 12)',
+                '200px': '200px',
             },
         },
     },

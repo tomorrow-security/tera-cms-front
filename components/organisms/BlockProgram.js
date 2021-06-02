@@ -1,41 +1,7 @@
 import BlockTitle from '../atoms/BlockTitle'
+import Partners1 from '../molecules/Partners1'
+import Partners2 from '../molecules/Partners2'
 
-const partners = [
-    {
-        name: 'Stormshield',
-        logoUrl: '/logo-stormshield.svg',
-    },
-    {
-        name: 'Scaleway',
-        logoUrl: '/logo-scaleway.svg',
-    },
-    {
-        name: 'Sap',
-        logoUrl: '/logo-sap.svg',
-    },
-    {
-        name: 'ENI',
-        logoUrl: '/logo-eni.svg',
-    },
-]
-const partners2 = [
-    {
-        name: 'Microsoft',
-        logoUrl: '/logo-microsoft.svg',
-    },
-    {
-        name: 'Github',
-        logoUrl: '/logo-github.svg',
-    },
-    {
-        name: 'Atlassian',
-        logoUrl: '/logo-atlassian.svg',
-    },
-    {
-        name: 'Zoom',
-        logoUrl: '/logo-zoom.svg',
-    },
-]
 
 const cursus = [
     {
@@ -174,20 +140,8 @@ export default function BlockProgramme () {
                     il est possible d&apos;en apprendre plus sur l&apos;écosystème technique européen&nbsp;
                     et nous privilégions les partenaires nationaux lorsque cela est possible.
                 </Paragraph>
-                <div className="flex flex-wrap items-center justify-center mb-8 md:flex-nowrap md:justify-between">
-                    {
-                        partners.map(partner => (
-                            <div key={partner.name} className="w-5/12 mx-2 mt-2 mb-6 md:w-max">
-                                <img
-                                    src={partner.logoUrl}
-                                    alt={`logo ${partner.name}`}
-                                    width={200}
-                                    height={100}
-                                    loading="lazy"
-                                />
-                            </div>
-                        ))
-                    }
+                    <div className="flex flex-wrap items-center justify-center mb-8 md:flex-nowrap md:justify-between">
+                        <Partners1 />
                 </div>
                 <div>
                     <div className="flex flex-row items-center max-w-full my-4 md:my-8">
@@ -253,20 +207,13 @@ export default function BlockProgramme () {
                         </p>
                     </div>
                 </div>
-                <div className="flex flex-wrap items-center justify-center my-8 md:flex-nowrap md:justify-between">
-                    {
-                        partners2.map(partner => (
-                            <div key={partner.name} className="w-5/12 mx-2 mt-2 mb-6 md:w-max">
-                                <img
-                                    src={partner.logoUrl}
-                                    alt={`logo ${partner.name}`}
-                                    width={200}
-                                    height={100}
-                                    loading="lazy"
-                                />
-                            </div>
-                        ))
-                    }
+                    <div className="relative overflow-hidden md:full">
+                        <div className="md:top-0 md:left-0 md:absolute md:bg-carousel md:z-10 md:h-full md:w-200px"></div>
+                        <div className="flex flex-wrap items-center justify-center my-8 md:flex-nowrap md:w-carousel md:justify-between md:animate-scroll">
+                            <Partners2 />
+                            <Partners2 />
+                        </div>
+                        <div className="md:absolute md:top-0 md:right-0 md:transform md:rotate-180 md:bg-carousel md:h-full md:w-200px md:z-10"></div>
                 </div>
                 <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
                     {
@@ -287,7 +234,7 @@ export default function BlockProgramme () {
                             </div>
                         ))
                     }
-                </div>
+                    </div>
             </div>
         </div>
     </section>
