@@ -9,7 +9,7 @@ module.exports = {
             auto: 'auto',
             cover: 'cover',
             contain: 'contain',
-            'hover-cover': '200%',
+            'big-cover': '200%',
         },
         boxShadow: {
             sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
@@ -115,7 +115,8 @@ module.exports = {
     variants: {
         extend: {
             animation: ['group-hover','hover', 'focus', 'checked'],
-            backgroundColor: ['checked', 'active'],
+            backgroundColor: ['group-hover', 'checked', 'active'],
+            backgroundImage: ['group-hover', 'hover'],
             borderColor: ['checked', 'active'],
             borderOpacity: ['disabled'],
             fontWeight: ['hover'],
