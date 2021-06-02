@@ -213,7 +213,7 @@ export default function BlockProgramme () {
                         </p>
                     </div>
                     </div>
-                    <CarouselPartners array={array["partners2"]}/>
+                    <CarouselPartners array={array.partners2}/>
                     {/* <div className="relative overflow-hidden md:full">
                         <div className="md:top-0 md:left-0 md:absolute md:bg-carousel md:z-10 md:h-full md:w-200px"></div>
                         <div className="flex flex-wrap items-center justify-center my-8 md:flex-nowrap md:w-carousel md:justify-between md:animate-scroll">
