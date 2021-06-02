@@ -93,7 +93,7 @@ export default function BlockJoin() {
     //                     <a
     //                         href="https://www.moncompteformation.gouv.fr/espace-public/financer-sa-formation"
     //                         className="p-2 my-8 font-semibold text-center text-white rounded-t md:text-xl // bg-tc-blue hover:bg-tc-red rounded-b-xl">
-    //                         Comment financer ma formation ?
+    //                         Comment financer ma formation ? &#x1F517;
     //                     </a>
     //                 </div>
     //             </>
