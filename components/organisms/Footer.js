@@ -20,13 +20,14 @@ export default function Footer() {
               <span className="text-xl">Tera Campus</span>
           </div>
           <div className="flex flex-col my-8 text-center divide-x lg:my-0 lg:flex-row">
-            <ul className="space-y-2 lg:mx-4 lg:space-y-0 lg:space-x-4 lg:flex lg:justify-center lg:divide-x">
+            // TODO régle l'espace avec les divide-x
+            <ul className="space-y-2 lg:mx-2 lg:space-y-0 lg:flex lg:justify-around lg:divide-x">
               {
                 pages.map(({ id, label }) => (
-                  <li key={`navmd-${id}`}>
+                  <li key={`navmd-${id}`} className="text-center lg:ml-2">
                     <Link href={`/${id}`}>
-                      <a className="relative flex items-center justify-center m-2 overflow-hidden group border-box focus:border-t-2 focus:border-tc-red">
-                        <div className="absolute z-10 text-base text-transparent transition-all duration-300 ease-in transform border-b-2 border-transparent border-white cursor-pointer -left-full group-hover:translate-x-full">
+                      <a className="relative flex items-center justify-center p-2 m-2 overflow-hidden lg:p-0 group border-box focus:border-l-2 lg:focus:border-t-2 lg:focus:border-l-0 focus:border-tc-red">
+                        <div className="absolute z-10 text-base text-transparent transition-all duration-300 ease-in transform border-b-2 border-transparent border-white cursor-pointer -left-full lg:group-hover:translate-x-full">
                           {label}
                       </div>
                       <div className="z-20 text-base bg-transparent border-b-2 border-transparent cursor-pointer">
