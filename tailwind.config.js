@@ -4,7 +4,7 @@ module.exports = {
     theme: {
         backgroundImage: theme => ({
             shine: 'linear-gradient(60deg, rgba(255,255,255,0) 40%,rgba(255,255,255,0.2) 42%,rgba(255,255,255,0.6) 47%,rgba(255,255,255,0.8) 50%,rgba(255,255,255,0.6) 53%,rgba(255,255,255,0.2) 58%,rgba(255,255,255,0) 60%,rgba(255,255,255,0) 100%)',
-            carousel : 'linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%)',
+            smoke : 'linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%)',
         }),
         backgroundSize: {
             auto: 'auto',
@@ -90,7 +90,7 @@ module.exports = {
                 },
                 scroll: {
                     '0%' : { transform: 'translateX(0)'},
-                    '100%': { transform: 'translateX(calc(-200px * 6.24))' },
+                    '100%': { transform: 'translateX(-50%)' },
                 },
             },
             transitionDelay: {
@@ -108,6 +108,7 @@ module.exports = {
                 'full-50': '150%',
             },
             width: {
+                '200px': '200px',
                 '1/8': '12.5%',
                 '2/8': '25%',
                 '3/8': '37.5%',
@@ -115,8 +116,8 @@ module.exports = {
                 '5/8': '62.5%',
                 '6/8': '75%',
                 '7/8': '87.5%',
-                'carousel': 'calc(200px * 12)',
-                '200px': '200px',
+                'full2': '200%',
+                'full3': '300%',
             },
         },
     },

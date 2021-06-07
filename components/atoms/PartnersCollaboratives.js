@@ -20,7 +20,7 @@ const partnersCollaboratives = [
 export default function PartnersCollaboratives() {
 	return (
             partnersCollaboratives.map(partner => (
-            <div key={partner.name} className="w-5/12 mx-2 mt-2 mb-6 md:h-full md:w-200px">
+            <div key={partner.name} className="h-full mx-4 mt-2 mb-6 md:mx-10">
                 <img
                     src={partner.logoUrl}
                     alt={`logo ${partner.name}`}
