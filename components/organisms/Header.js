@@ -56,10 +56,8 @@ export default function Header() {
                             links1.map(({ id, label }) => (
                                 <li key={`navmd-${id}`} onClick={() => setIsOpen(false)}>
                                     <Link href={`/#${id}`}>
-                                        {/* // TODO 'visited' et 'active' ne fonctionne pas 
-                                        visited:text-tc-red => text red tout le temps
-                                        active:uppercase */}
-                                        <a className="relative flex items-center justify-center overflow-hidden group border-box active:uppercase">
+                                        {/* // TODO 'visited'ne fonctionne pas : visited:text-tc-red => toujours red*/}
+                                        <a className="relative flex items-center justify-center overflow-hidden group border-box focus:border-t-2 focus:border-tc-red">
                                             <div className="absolute z-10 text-lg text-transparent transition-all duration-300 ease-in transform border-b-2 border-transparent border-white cursor-pointer -left-full group-hover:translate-x-full">
                                                 {label}
                                             </div>
@@ -78,7 +76,7 @@ export default function Header() {
                                 <li key={`navmd-${id}`} onClick={() => setIsOpen(false)}>
                                     <Link href={`/${id}`}>
                                        {/* // TODO 'visited'ne fonctionne pas : visited:text-tc-red => toujours red*/}
-                                        <a className="relative flex items-center justify-center overflow-hidden group border-box focus:uppercase active:text-tc-red-light">
+                                        <a className="relative flex items-center justify-center overflow-hidden ease-in transform group border-box focus:border-t-2 focus:border-tc-red">
                                             <div className="absolute z-10 text-lg text-transparent transition-all duration-300 ease-in transform border-b-2 border-transparent border-white cursor-pointer -left-full group-hover:translate-x-full">
                                                 {label}
                                             </div>
@@ -96,8 +94,8 @@ export default function Header() {
                             links2.map(({ id, label }) => (
                                 <li key={`navmd-${id}`} onClick={() => setIsOpen(false)}>
                                     <Link href={`/#${id}`}>
-                                        {/* // TODO 'visited' et 'active' ne fonctionne pas visited:text-tc-red */}
-                                        <a className="relative flex items-center justify-center overflow-hidden group border-box active:text-tc-red-light">
+                                       {/* // TODO 'visited'ne fonctionne pas : visited:text-tc-red => toujours red*/}
+                                        <a className="relative flex items-center justify-center overflow-hidden group border-box focus:border-t-2 focus:border-tc-red">
                                             <div className="absolute z-10 text-lg text-transparent transition-all duration-300 ease-in transform border-b-2 border-transparent border-white cursor-pointer -left-full group-hover:translate-x-full">
                                                 {label}
                                             </div>
