@@ -56,7 +56,7 @@ module.exports = {
         '110': '1.1',
         '125': '1.25',
         '150': '1.5',
-        '200': '2',
+        '2575': '25.75',
         },
         extend: {
             animation: {
@@ -71,13 +71,7 @@ module.exports = {
                 'tc-red-light': 'rgba(224, 51, 0, 0.3)',
             },
             inset: {
-                '1/8': '12.5%',
-                '2/8': '25%',
-                '3/8': '37.5%',
-                '4/8': '50%',
-                '5/8': '62.5%',
-                '6/8': '75%',
-                '7/8': '87.5%',
+                '12/25': '48%'
             },
             keyframes: {
                 wiggle: {
@@ -93,13 +87,6 @@ module.exports = {
                     '100%': { transform: 'translateX(-50%)' },
                 },
             },
-            transitionDelay: {
-                50: '50ms',
-                400: '400ms',
-                600: '600ms',
-                800: '800ms',
-                'external-link': 'calc((var(--n) - 1) * 0.1s)'
-            },
             transitionTimingFunction: {
                 ease: 'cubic-bezier(0.25, 0.1, 0.25, 1.0)',
                 toggle: 'cubic-bezier(0.18, 0.89, 0.35, 1.15)',
@@ -108,14 +95,8 @@ module.exports = {
                 'full-50': '150%',
             },
             width: {
+                '1/25': '4%',
                 '200px': '200px',
-                '1/8': '12.5%',
-                '2/8': '25%',
-                '3/8': '37.5%',
-                '4/8': '50%',
-                '5/8': '62.5%',
-                '6/8': '75%',
-                '7/8': '87.5%',
                 'full2': '200%',
                 'full3': '300%',
             },
@@ -124,9 +105,9 @@ module.exports = {
     variants: {
         extend: {
             animation: ['group-hover','hover', 'focus', 'checked'],
-            backgroundColor: ['group-hover', 'checked', 'active'],
+            backgroundColor: ['group-hover', 'checked', 'active', 'disabled'],
             backgroundImage: ['group-hover', 'hover'],
-            borderColor: ['checked', 'active'],
+            borderColor: ['checked','visited', 'active'],
             borderOpacity: ['disabled'],
             fontWeight: ['hover'],
             fontSize: ['hover'],
@@ -135,7 +116,7 @@ module.exports = {
             opacity: ['disabled'],
             scale:['group-hover'],
             textOpacity: ['disabled'],
-            textColor: ['visited'],
+            textColor: ['visited', 'active', 'disabled'],
             textDecoration: ['hover', 'focus', 'visited'],
             transform: ['group-hover', 'hover', 'focus', 'checked'],
             transformOrigin: ['group-hover', 'hover', 'focus', 'checked'],
