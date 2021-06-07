@@ -105,9 +105,9 @@ module.exports = {
     variants: {
         extend: {
             animation: ['group-hover','hover', 'focus', 'checked'],
-            backgroundColor: ['group-hover', 'checked', 'active'],
+            backgroundColor: ['group-hover', 'checked', 'active', 'disabled'],
             backgroundImage: ['group-hover', 'hover'],
-            borderColor: ['checked', 'active'],
+            borderColor: ['checked','visited', 'active'],
             borderOpacity: ['disabled'],
             fontWeight: ['hover'],
             fontSize: ['hover'],
@@ -116,7 +116,7 @@ module.exports = {
             opacity: ['disabled'],
             scale:['group-hover'],
             textOpacity: ['disabled'],
-            textColor: ['visited'],
+            textColor: ['visited', 'active', 'disabled'],
             textDecoration: ['hover', 'focus', 'visited'],
             transform: ['group-hover', 'hover', 'focus', 'checked'],
             transformOrigin: ['group-hover', 'hover', 'focus', 'checked'],
