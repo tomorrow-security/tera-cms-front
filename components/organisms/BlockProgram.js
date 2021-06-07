@@ -1,41 +1,8 @@
 import BlockTitle from '../atoms/BlockTitle'
+import PartnersEuropean from '../atoms/PartnersEuropean'
+import PartnersCollaboratives from '../atoms/PartnersCollaboratives'
+import CarouselPartners from '../molecules/CarouselPartners'
 
-const partners = [
-    {
-        name: 'Stormshield',
-        logoUrl: '/logo-stormshield.svg',
-    },
-    {
-        name: 'Scaleway',
-        logoUrl: '/logo-scaleway.svg',
-    },
-    {
-        name: 'Sap',
-        logoUrl: '/logo-sap.svg',
-    },
-    {
-        name: 'ENI',
-        logoUrl: '/logo-eni.svg',
-    },
-]
-const partners2 = [
-    {
-        name: 'Microsoft',
-        logoUrl: '/logo-microsoft.svg',
-    },
-    {
-        name: 'Github',
-        logoUrl: '/logo-github.svg',
-    },
-    {
-        name: 'Atlassian',
-        logoUrl: '/logo-atlassian.svg',
-    },
-    {
-        name: 'Zoom',
-        logoUrl: '/logo-zoom.svg',
-    },
-]
 
 const cursus = [
     {
@@ -128,6 +95,7 @@ const axes = [
     'La collaboration',
 ]
 
+
 const Strong = ({ children }) => <strong className="font-bold text-tc-red">{children}</strong>
 
 const Paragraph = ({ gutterBottom, children }) => (
@@ -174,20 +142,8 @@ export default function BlockProgramme () {
                     il est possible d&apos;en apprendre plus sur l&apos;écosystème technique européen&nbsp;
                     et nous privilégions les partenaires nationaux lorsque cela est possible.
                 </Paragraph>
-                <div className="flex flex-wrap items-center justify-center mb-8 md:flex-nowrap md:justify-between">
-                    {
-                        partners.map(partner => (
-                            <div key={partner.name} className="w-5/12 mx-2 mt-2 mb-6 md:w-max">
-                                <img
-                                    src={partner.logoUrl}
-                                    alt={`logo ${partner.name}`}
-                                    width={200}
-                                    height={100}
-                                    loading="lazy"
-                                />
-                            </div>
-                        ))
-                    }
+                    <div className="flex flex-wrap items-center justify-center justify-between mb-8 flex-nowrap">
+                        <CarouselPartners partners={<PartnersEuropean />} />
                 </div>
                 <div>
                     <div className="flex flex-row items-center max-w-full my-4 md:my-8">
@@ -252,22 +208,10 @@ export default function BlockProgramme () {
                             permettant un travail commun en toute simplicité, même en distanciel !
                         </p>
                     </div>
+                    </div>
+                   <div className="flex items-center mb-8 flex-nowrap">
                 </div>
-                <div className="flex flex-wrap items-center justify-center my-8 md:flex-nowrap md:justify-between">
-                    {
-                        partners2.map(partner => (
-                            <div key={partner.name} className="w-5/12 mx-2 mt-2 mb-6 md:w-max">
-                                <img
-                                    src={partner.logoUrl}
-                                    alt={`logo ${partner.name}`}
-                                    width={200}
-                                    height={100}
-                                    loading="lazy"
-                                />
-                            </div>
-                        ))
-                    }
-                </div>
+                    <CarouselPartners partners={<PartnersCollaboratives />} />
                 <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
                     {
                         cursus.map(year => (
