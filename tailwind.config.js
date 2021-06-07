@@ -87,9 +87,6 @@ module.exports = {
                     '100%': { transform: 'translateX(-50%)' },
                 },
             },
-            transitionDuration: {
-                1500: '1500ms',
-            },
             transitionTimingFunction: {
                 ease: 'cubic-bezier(0.25, 0.1, 0.25, 1.0)',
                 toggle: 'cubic-bezier(0.18, 0.89, 0.35, 1.15)',
