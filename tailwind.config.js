@@ -118,6 +118,7 @@ module.exports = {
             textOpacity: ['disabled'],
             textColor: ['visited', 'active', 'disabled'],
             textDecoration: ['hover', 'focus', 'visited'],
+            textTransform: ['focus','active'],
             transform: ['group-hover', 'hover', 'focus', 'checked'],
             transformOrigin: ['group-hover', 'hover', 'focus', 'checked'],
             transitionDelay: ['group-hover', 'hover', 'focus', 'checked'],
