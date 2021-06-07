@@ -2,7 +2,10 @@
 export default function ExternalLink({ title, url }) {
 	return (
     <div className="flex justify-center pt-8 my-2">
-        {/* // TODO ajouter visited */}
+        {/* 
+        // TODO modifier la transition 
+        // TODO ajouter visited 
+        */}
         <a href={url} className="relative z-10 w-full overflow-hidden transition duration-700 rounded-t h-7 md:h-9 md:w-4/5 group md:text-xl bg-tc-blue rounded-b-xl">
             <span className="absolute left-0 z-20 h-full transition-all delay-100 transform rounded-full bg-tc-red w-1/8 -bottom-full group-hover:-translate-y-full group-hover:scale-200"></span>
             <span className="absolute z-20 h-full transition-all ease-out delay-200 transform rounded-full w-1/8 -bottom-full left-1/8 group-hover:-translate-y-full bg-tc-red group-hover:scale-200"></span>

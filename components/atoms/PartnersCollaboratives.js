@@ -1,25 +1,25 @@
-const partners1 = [
+const partnersCollaboratives = [
     {
-        name: 'Stormshield',
-        logoUrl: '/logo-stormshield.svg',
+        name: 'Microsoft',
+        logoUrl: '/logo-microsoft.svg',
     },
     {
-        name: 'Scaleway',
-        logoUrl: '/logo-scaleway.svg',
+        name: 'Github',
+        logoUrl: '/logo-github.svg',
     },
     {
-        name: 'Sap',
-        logoUrl: '/logo-sap.svg',
+        name: 'Atlassian',
+        logoUrl: '/logo-atlassian.svg',
     },
     {
-        name: 'ENI',
-        logoUrl: '/logo-eni.svg',
+        name: 'Zoom',
+        logoUrl: '/logo-zoom.svg',
     },
 ]
 
-export default function Partners1() {
+export default function PartnersCollaboratives() {
 	return (
-            partners1.map(partner => (
+            partnersCollaboratives.map(partner => (
             <div key={partner.name} className="w-5/12 mx-2 mt-2 mb-6 md:h-full md:w-200px">
                 <img
                     src={partner.logoUrl}

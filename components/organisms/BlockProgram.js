@@ -1,6 +1,6 @@
 import BlockTitle from '../atoms/BlockTitle'
-import Partners1 from '../atoms/Partners1'
-import Partners2 from '../atoms/Partners2'
+import PartnersEuropean from '../atoms/PartnersEuropean'
+import PartnersCollaboratives from '../atoms/PartnersCollaboratives'
 import CarouselPartners from '../molecules/CarouselPartners'
 
 
@@ -95,10 +95,6 @@ const axes = [
     'La collaboration',
 ]
 
-const array = {
-    'partners1': <Partners1 />,
-    'partners2': <Partners2 />,
-}
 
 const Strong = ({ children }) => <strong className="font-bold text-tc-red">{children}</strong>
 
@@ -147,7 +143,7 @@ export default function BlockProgramme () {
                     et nous privilégions les partenaires nationaux lorsque cela est possible.
                 </Paragraph>
                     <div className="flex flex-wrap items-center justify-center mb-8 md:flex-nowrap md:justify-between">
-                        <Partners1 />
+                        <PartnersEuropean />
                 </div>
                 <div>
                     <div className="flex flex-row items-center max-w-full my-4 md:my-8">
@@ -213,12 +209,15 @@ export default function BlockProgramme () {
                         </p>
                     </div>
                     </div>
-                    <CarouselPartners array={array.partners2}/>
+                   <div className="flex flex-wrap items-center justify-center mb-8 md:flex-nowrap md:justify-between">
+                        <PartnersCollaboratives />
+                </div>
+                    <CarouselPartners partners={<PartnersCollaboratives />} />
                     {/* <div className="relative overflow-hidden md:full">
                         <div className="md:top-0 md:left-0 md:absolute md:bg-carousel md:z-10 md:h-full md:w-200px"></div>
                         <div className="flex flex-wrap items-center justify-center my-8 md:flex-nowrap md:w-carousel md:justify-between md:animate-scroll">
-                            <Partners2 />
-                            <Partners2 />
+                            <PartnersCollaboratives />
+                            <PartnersCollaboratives />
                         </div>
                         <div className="md:absolute md:top-0 md:right-0 md:transform md:rotate-180 md:bg-carousel md:h-full md:w-200px md:z-10"></div>
                     </div> */}
