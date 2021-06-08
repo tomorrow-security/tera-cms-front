@@ -1,5 +1,6 @@
 import Link from 'next/link'
 
+import PageLink from '../atoms/PageLink'
 
 const pages = [
     { id: 'contact', label: 'Contact' },
@@ -16,17 +17,8 @@ export default function FooterNav() {
             <ul className="space-y-2 lg:mx-2 lg:space-y-0 lg:flex lg:justify-around lg:divide-x">
                 {
                 pages.map(({ id, label }) => (
-                    <li key={`navmd-${id}`} className="text-center">
-                        <Link href={`/${id}`}>
-                            <a className="relative flex items-center justify-center p-2 mx-4 my-2 overflow-hidden lg:p-0 group border-box focus:font-bold">
-                                <div className="absolute z-10 text-base text-transparent transition-all duration-300 ease-in transform border-b-2 border-transparent border-white cursor-pointer -left-full lg:group-hover:translate-x-full">
-                                    {label}
-                                </div>
-                            <div className="z-20 text-base bg-transparent border-b-2 border-transparent cursor-pointer">
-                                {label}
-                            </div>
-                            </a>
-                        </Link>
+                    <li key={`navmd-${id}`} className="px-2 mx-auto text-center w-max">
+                        <PageLink id={id} label={label} />
                     </li>
                 ))
                 }

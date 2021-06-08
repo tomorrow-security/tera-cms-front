@@ -25,7 +25,7 @@ export default function HeaderNav(onClick) {
 			<ul className="space-y-2 lg:space-y-0 lg:space-x-4 lg:flex lg:justify-center">
 				{
 					links1.map(({ id, label }) => (
-						<li key={`navmd-${id}`} onClick={onClick}>
+						<li key={`navmd-${id}`} onClick={onClick} className="mx-auto text-center w-max">
 							<HashLink id={id} label={label} />
 						</li>
 					))
@@ -34,7 +34,7 @@ export default function HeaderNav(onClick) {
 			<ul className="space-y-2 lg:mx-4 lg:space-y-0 lg:space-x-4 lg:flex lg:justify-center">
 				{
 					pages.map(({ id, label }) => (
-						<li key={`navmd-${id}`} onClick={onClick}>
+						<li key={`navmd-${id}`} onClick={onClick} className="mx-auto text-center w-max">
 							<PageLink id={id} label={label} />
 						</li>
 					))
@@ -43,7 +43,7 @@ export default function HeaderNav(onClick) {
 			<ul className="space-y-2 lg:space-y-0 lg:space-x-4 lg:flex lg:justify-center">
 				{
 					links2.map(({ id, label }) => (
-						<li key={`navmd-${id}`} onClick={onClick}>
+						<li key={`navmd-${id}`} onClick={onClick} className="mx-auto text-center w-max">
 							<HashLink id={id} label={label} />
 						</li>
 					))
