@@ -36,7 +36,7 @@ export default function Header() {
                     </div>
                         </div>
                     <div className={`${!isOpen && 'hidden'} lg:block`}>
-                        <HeaderNav onClick={() => setIsOpen(false)} />
+                        <HeaderNav click={() => setIsOpen(false)} />
                     </div>
                 </div>
             </div>

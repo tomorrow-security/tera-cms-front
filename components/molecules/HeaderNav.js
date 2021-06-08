@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 import PageLink from '../atoms/PageLink'
 import HashLink from '../atoms/HashLink'
 
@@ -19,13 +17,13 @@ const pages = [
 	{ id: 'contact', label: 'Contact' },
 ]
 
-export default function HeaderNav(onClick) {
+export default function HeaderNav({click}) {
 	return (
 		<nav className="pr-2 text-center lg:flex lg:justify-between">
 			<ul className="space-y-2 lg:space-y-0 lg:space-x-4 lg:flex lg:justify-center">
 				{
 					links1.map(({ id, label }) => (
-						<li key={`navmd-${id}`} onClick={onClick}>
+						<li key={`navmd-${id}`} onClick={click} className="mx-auto text-center w-max">
 							<HashLink id={id} label={label} />
 						</li>
 					))
@@ -34,7 +32,7 @@ export default function HeaderNav(onClick) {
 			<ul className="space-y-2 lg:mx-4 lg:space-y-0 lg:space-x-4 lg:flex lg:justify-center">
 				{
 					pages.map(({ id, label }) => (
-						<li key={`navmd-${id}`} onClick={onClick}>
+						<li key={`navmd-${id}`} onClick={click} className="mx-auto text-center w-max">
 							<PageLink id={id} label={label} />
 						</li>
 					))
@@ -43,7 +41,7 @@ export default function HeaderNav(onClick) {
 			<ul className="space-y-2 lg:space-y-0 lg:space-x-4 lg:flex lg:justify-center">
 				{
 					links2.map(({ id, label }) => (
-						<li key={`navmd-${id}`} onClick={onClick}>
+						<li key={`navmd-${id}`} onClick={click} className="mx-auto text-center w-max">
 							<HashLink id={id} label={label} />
 						</li>
 					))
