@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 
 import PageLink from '../atoms/PageLink'
+import HashLink from '../atoms/HashLink'
 
 const links1 = [
     { id: 'agenda', label: 'Agenda' },
@@ -18,8 +19,6 @@ const pages = [
     { id: 'join', label: 'Rejoins-nous' },
     { id: 'contact', label: 'Contact' },
 ]
-// TODO ajouter du style au liens visité, 'visited'ne fonctionne pas : visited:text-tc-red => toujours red
-// TODO ajouter du style au liens actif, remplacer focus (ne correcpond pas) par "current" 
 
 export default function HeaderNav() {
     const [isOpen, setIsOpen] = useState(false)
@@ -30,16 +29,7 @@ export default function HeaderNav() {
                 {
                     links1.map(({ id, label }) => (
                         <li key={`navmd-${id}`} onClick={() => setIsOpen(false)}>
-                            <Link href={`/#${id}`}>
-                                <a className="relative flex items-center justify-center overflow-hidden group border-box focus:font-bold">
-                                    <div className="absolute z-10 text-lg text-transparent transition-all duration-300 ease-in transform border-b-2 border-transparent border-white cursor-pointer -left-full group-hover:translate-x-full">
-                                        {label}
-                                    </div>
-                                    <div className="z-20 text-lg bg-transparent border-b-2 border-transparent cursor-pointer">
-                                        {label}
-                                    </div>
-                                </a>
-                            </Link>
+                            <HashLink id={id} label={label} />
                         </li>
                     ))
                 }
@@ -57,16 +47,7 @@ export default function HeaderNav() {
                 {
                     links2.map(({ id, label }) => (
                         <li key={`navmd-${id}`} onClick={() => setIsOpen(false)}>
-                            <Link href={`/#${id}`}>
-                                <a className="relative flex items-center justify-center overflow-hidden group border-box focus:font-bold">
-                                    <div className="absolute z-10 text-lg text-transparent transition-all duration-300 ease-in transform border-b-2 border-transparent border-white cursor-pointer -left-full group-hover:translate-x-full">
-                                        {label}
-                                    </div>
-                                    <div className="z-20 text-lg bg-transparent border-b-2 border-transparent cursor-pointer">
-                                        {label}
-                                    </div>
-                                </a>
-                            </Link>
+                            <HashLink id={id} label={label} />
                         </li>
                     ))
                 }
