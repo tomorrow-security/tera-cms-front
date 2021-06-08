@@ -1,8 +1,6 @@
 import Link from 'next/link'
 import { useState } from 'react'
 
-import IconX from '../atoms/IconX'
-import IconMenu from '../atoms/IconMenu'
 
 const links1 = [
     { id: 'agenda', label: 'Agenda' },
