@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { useState } from 'react'
 
 import PageLink from '../atoms/PageLink'
@@ -20,15 +19,18 @@ const pages = [
     { id: 'contact', label: 'Contact' },
 ]
 
-export default function HeaderNav() {
-    const [isOpen, setIsOpen] = useState(false)
 
+// TODO view mobile ne s'ouvre pas
+
+export default function HeaderNav(click, open) {
     return (
-        <nav className={`${!isOpen && 'hidden'} lg:flex lg:justify-between text-center pr-2`}>
+        // <nav className={`${!isOpen && 'hidden'} lg:flex lg:justify-between text-center pr-2`}>
+            <nav className={`${!open && 'hidden'} lg:flex lg:justify-between text-center pr-2`}>
             <ul className="space-y-2 lg:space-y-0 lg:space-x-4 lg:flex lg:justify-center">
                 {
                     links1.map(({ id, label }) => (
-                        <li key={`navmd-${id}`} onClick={() => setIsOpen(false)}>
+                        // <li key={`navmd-${id}`} onClick={() => setIsOpen(false)}>
+                        <li key={`navmd-${id}`} onClick={click}>
                             <HashLink id={id} label={label} />
                         </li>
                     ))
@@ -37,7 +39,7 @@ export default function HeaderNav() {
             <ul className="space-y-2 lg:mx-4 lg:space-y-0 lg:space-x-4 lg:flex lg:justify-center">
                 {
                     pages.map(({ id, label }) => (
-                        <li key={`navmd-${id}`} onClick={() => setIsOpen(false)}>
+                        <li key={`navmd-${id}`} onClick={click}>
                             <PageLink id={id} label={label} />
                         </li>
                     ))
@@ -46,7 +48,7 @@ export default function HeaderNav() {
             <ul className="space-y-2 lg:space-y-0 lg:space-x-4 lg:flex lg:justify-center">
                 {
                     links2.map(({ id, label }) => (
-                        <li key={`navmd-${id}`} onClick={() => setIsOpen(false)}>
+                        <li key={`navmd-${id}`} onClick={click}>
                             <HashLink id={id} label={label} />
                         </li>
                     ))

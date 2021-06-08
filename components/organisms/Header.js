@@ -35,7 +35,7 @@ export default function Header() {
                         { isOpen ? <IconX /> : <IconMenu /> }
                     </div>
                         </div>
-                        <HeaderNav />
+                        <HeaderNav open={isOpen} click={() => setIsOpen(false)}  />
                 </div>
             </div>
         </header>
