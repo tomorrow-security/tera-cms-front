@@ -8,6 +8,7 @@ const pages = [
 ]
 
 // TODO ajouter du style au liens visité
+// TODO ajouter du style au liens actif, remplacer focus (ne correcpond pas) par "current" 
 export default function Footer() {
   const today = new Date()
 
@@ -19,14 +20,13 @@ export default function Footer() {
               <div className="w-10 mr-2"><IconLogo /></div>
               <span className="text-xl">Tera Campus</span>
           </div>
-          <div className="flex flex-col my-8 text-center divide-x lg:my-0 lg:flex-row">
-            // TODO régle l'espace avec les divide-x
+          <nav className="flex flex-col my-8 text-center divide-x lg:my-0 lg:flex-row">
             <ul className="space-y-2 lg:mx-2 lg:space-y-0 lg:flex lg:justify-around lg:divide-x">
               {
                 pages.map(({ id, label }) => (
-                  <li key={`navmd-${id}`} className="text-center lg:ml-2">
+                  <li key={`navmd-${id}`} className="text-center">
                     <Link href={`/${id}`}>
-                      <a className="relative flex items-center justify-center p-2 m-2 overflow-hidden lg:p-0 group border-box focus:border-l-2 lg:focus:border-t-2 lg:focus:border-l-0 focus:border-tc-red">
+                      <a className="relative flex items-center justify-center p-2 mx-4 my-2 overflow-hidden lg:p-0 group border-box focus:font-bold">
                         <div className="absolute z-10 text-base text-transparent transition-all duration-300 ease-in transform border-b-2 border-transparent border-white cursor-pointer -left-full lg:group-hover:translate-x-full">
                           {label}
                       </div>
@@ -39,7 +39,7 @@ export default function Footer() {
                 ))
               }
             </ul>
-          </div>
+          </nav>
           <div className="text-center">© 2020-{today.getFullYear()} Tera Campus</div>
         </div>
       </div>
