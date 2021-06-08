@@ -7,7 +7,7 @@ import IconX from '../atoms/IconX'
 import IconMenu from '../atoms/IconMenu'
 
 // TODO ajouter du style au liens visité, 'visited'ne fonctionne pas : visited:text-tc-red => toujours red
-// TODO ajouter du style au liens actif, remplacer focus (ne correcpond pas) par "current" 
+// TODO ajouter du style au liens actif, remplacer focus (ne correcpond pas car se perd au click) 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false)
 
@@ -31,11 +31,13 @@ export default function Header() {
                         </div>
                         </a>
                     </Link>
-                        <div className="w-12 lg:hidden" onClick={() => setIsOpen(!isOpen)}>
+                    <div className="w-12 lg:hidden" onClick={() => setIsOpen(!isOpen)}>
                         { isOpen ? <IconX /> : <IconMenu /> }
                     </div>
                         </div>
-                        <HeaderNav open={isOpen} click={() => setIsOpen(false)}  />
+                    <div className={`${!isOpen && 'hidden'} lg:block`}>
+                        <HeaderNav onClick={() => setIsOpen(false)} />
+                    </div>
                 </div>
             </div>
         </header>
