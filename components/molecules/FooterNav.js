@@ -4,10 +4,7 @@ const pages = [
     { id: 'contact', label: 'Contact' },
     { id: 'legal', label: 'Mentions légales' },
     { id: 'privacy', label: 'Politique de confidentialité' },
-]
-
-// TODO ajouter du style au liens visité, 'visited'ne fonctionne pas : visited:text-tc-red => toujours red
-// TODO ajouter du style au liens actif, remplacer focus (ne correcpond pas) par "current" 
+] 
 
 export default function FooterNav() {
     return (

@@ -6,8 +6,6 @@ import IconLogo from '../atoms/IconLogo'
 import IconX from '../atoms/IconX'
 import IconMenu from '../atoms/IconMenu'
 
-// TODO ajouter du style au liens visité, 'visited'ne fonctionne pas : visited:text-tc-red => toujours red
-// TODO ajouter du style au liens actif, remplacer focus (ne correcpond pas car se perd au click) 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false)
 

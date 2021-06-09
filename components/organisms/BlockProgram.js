@@ -209,7 +209,7 @@ export default function BlockProgramme () {
                         </p>
                     </div>
                     </div>
-                   <div className="flex items-center mb-8 flex-nowrap">
+                <div className="flex items-center mb-8 flex-nowrap">
                 </div>
                     <CarouselPartners partners={<PartnersCollaboratives />} />
                 <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
