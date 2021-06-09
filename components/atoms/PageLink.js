@@ -17,7 +17,7 @@ export default function PageLink({ id, label }) {
 	/**
 	 * comparison of the url route and the page path
 	 */
-	const current = url == href 
+	const current = url === href
 	/**
 	 * apply the class uppercase if it is true, otherwise leave a space
 	 */
