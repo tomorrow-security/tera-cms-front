@@ -111,7 +111,7 @@ module.exports = {
             borderOpacity: ['disabled'],
             borderStyle: ['focus'],
             borderWidth: ['focus'],
-            fontWeight: ['hover', 'focus'],
+            fontWeight: ['hover','active', 'focus'],
             fontSize: ['hover'],
             fontStyle: ['hover', 'focus'],
             inset: ['group-hover', 'hover'],
