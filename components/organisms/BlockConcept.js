@@ -45,11 +45,7 @@ export default function BlockConcept() {
                             </Strong>
                             et propose des formations diplômantes&nbsp;
                             <em className="not-italic font-bold ">
-                                &#x00028;
-                                <span className="underline">
-                                    en initial et en alternance
-                                </span>
-                                &#x00029;&nbsp;
+                                &#x00028;en initial et en alternance&#x00029;&nbsp;
                             </em>
                             validées par un agrément officiel d&apos;Etat &#x00028;RNPC niveau 6 et 7&#x00029;.&nbsp;
                             Nos cursus de 3 à 5 années &#x00028;BAC+3 et BAC+5&#x00029;&nbsp;
