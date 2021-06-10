@@ -90,7 +90,9 @@ export default function BlockJoin() {
     //                 </div>
     //                  <ExternalLink
     //                      title="Comment financer ma formation ?"
-    //                      url="https://www.moncompteformation.gouv.fr/espace-public/financer-sa-formation"/>
+        //                      url="https://www.moncompteformation.gouv.fr/espace-public/financer-sa-formation"
+        // aria="site gouvernemental du financement des formations"
+        // />
     //              </>
     //          )
     //      }
@@ -117,7 +119,9 @@ export default function BlockJoin() {
                 </div>
                 <ExternalLink
                     title="Comment trouver une entreprise ?"
-                    url="https://www.alternance.emploi.gouv.fr/portail_alternance/"/>
+                    url="https://www.alternance.emploi.gouv.fr/portail_alternance/"
+                    aria="site gouvernemental de l'alternance"
+                />
             </>
         )
     }
