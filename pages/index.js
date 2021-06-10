@@ -34,16 +34,16 @@ export async function getServerSideProps() {
   return {
     props: {
       agenda: [
-        {
-          date: '03/06/2021',
-          dateTimeDate: '2021-06-03',
-          timetable: '18h30',
-          dateTimeTimetable: '18:30',
-          title: 'Développer un jeux avec Unity',
-          description: 'Thurday Tech Live',
-          platform: 'twitch',
-          url: 'https://www.twitch.tv/teracampus'
-        },
+        // {
+        //   date: '03/06/2021',
+        //   dateTimeDate: '2021-06-03',
+        //   timetable: '18h30',
+        //   dateTimeTimetable: '18:30',
+        //   title: 'Développer un jeux avec Unity',
+        //   description: 'Thurday Tech Live',
+        //   platform: 'twitch',
+        //   url: 'https://www.twitch.tv/teracampus'
+        // },
       ],
       questions: [
         {
