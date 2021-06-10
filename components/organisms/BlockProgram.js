@@ -115,9 +115,9 @@ export default function BlockProgramme () {
                 </div>
                 <ul className="w-full my-12 md:my-14">
                     {
-                        axes.map(axe => (
+                        axes.map((axe, index) => (
                             <li
-                                key={axe.index}
+                                key={index}
                                 className="flex flex-row items-center justify-center w-full my-4 md:my-8">
                                 <div className="w-5 h-5 mr-4 transform rotate-45 bg-tc-red"></div>
                                 <div className="py-1 text-2xl text-center text-white rounded-t w-52 md:w-1/3 bg-tc-blue rounded-b-xl">
@@ -214,8 +214,8 @@ export default function BlockProgramme () {
                     <CarouselPartners partners={<PartnersCollaboratives />} />
                 <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
                     {
-                        cursus.map(year => (
-                            <div key={year.label} className="rounded shadow">
+                        cursus.map((year, index) => (
+                            <div key={index} className="rounded shadow">
                                 <h3 className="p-2 text-2xl font-bold text-center text-white rounded-t bg-tc-red">
                                     {year.number}
                                     <sup>{year.exp}</sup>
