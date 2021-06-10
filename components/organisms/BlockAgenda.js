@@ -1,29 +1,23 @@
 import BlockTitle from '../atoms/BlockTitle'
-import LinkButton from '../atoms/LinkButton'
-import IconFacebook from '../atoms/IconFacebook'
-import IconInstagram from '../atoms/IconInstagram'
-import IconLinkedin from '../atoms/IconLinkedin'
-import IconTwitch from '../atoms/IconTwitch'
 import SocialNav from '../molecules/SocialNav'
-import LiveLink from '../atoms/LiveLink'
 import EventLive from '../molecules/EventLive'
-
-const platformsLogosDict = {
-  'facebook': <IconFacebook />,
-  'instagram': <IconInstagram />,
-  'linkedin': <IconLinkedin />,
-  'twitch': <IconTwitch />,
-}
-
 
 
 export default function BlockAgenda({ events }) {
+  /**
+   * bolean of no event in the array
+   */
+  const notEvent = events.length === 0
+  /**
+   * calendar cache if no event in the array
+   */
+  const invisible = notEvent ? 'hidden' : ''
 	return (
 		<section id="agenda" className="py-10 lg:py-20 bg-gray-50">
 			<div className="md:container md:mx-auto">
 				<BlockTitle title="Agenda" iconPicture={{ backgroundImage: "url('pop-corn.png')" }} />
 				<div className="lg:flex lg:flex-row lg:flex-nowrap lg:justify-around lg:items-center lg:text-xl">
-					<div className="w-full lg:w-1/2">
+					<div className={`w-full lg:w-1/2 ${invisible}`}>
 						<ul className="flex flex-col justify-center mx-2 sm:justify-start lg:text-lg ">
 							{
 								events.map((event, index) => (
