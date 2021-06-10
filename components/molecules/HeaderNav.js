@@ -19,7 +19,7 @@ const pages = [
 
 export default function HeaderNav({click}) {
 	return (
-		<nav className="pr-2 text-center lg:flex lg:justify-between">
+		<nav className="pr-2 text-center lg:flex lg:justify-between text-lg">
 			<ul className="space-y-2 lg:space-y-0 lg:space-x-4 lg:flex lg:justify-center">
 				{
 					links1.map(({ id, label }) => (

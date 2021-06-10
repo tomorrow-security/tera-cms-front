@@ -8,7 +8,7 @@ const pages = [
 
 export default function FooterNav() {
     return (
-        <nav className="flex flex-col my-8 text-center divide-x lg:my-0 lg:flex-row">
+        <nav className="flex flex-col my-8 text-sm text-center divide-x lg:my-0 lg:flex-row">
             <ul className="space-y-2 lg:mx-2 lg:space-y-0 lg:flex lg:justify-around lg:divide-x">
                 {
                 pages.map(({ id, label }) => (

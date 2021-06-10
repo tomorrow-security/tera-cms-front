@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useForm } from 'react-hook-form'
 import { useMutation } from 'react-query'
 
+import PageLink from '../components/atoms/PageLink'
 import BlockTitle from '../components/atoms/BlockTitle'
 import SocialNav from '../components/molecules/SocialNav'
 import IconCurvedArrowX from '../components/atoms/IconCurvedArrowX'
@@ -53,7 +54,7 @@ export default function Contact() {
                     <div className="relative mx-auto">
                       <a
                         href="mailto:contact@tera-campus.com"
-                        className="p-2 mx-auto text-sm text-center underline hover:font-semibold w-max md:text-lg hover:text-tc-red">
+                        className="p-2 mx-auto text-sm text-center hover:font-semibold w-max md:text-lg hover:text-tc-red">
                         &#x1F4E7; contact@tera-campus.com
                       </a>
                     </div>
@@ -73,7 +74,7 @@ export default function Contact() {
                   </div>
                 </div>
                 <form
-                  className="grid grid-cols-1 gap-6"
+                  className="grid grid-cols-1 gap-6 place-content-center"
                   onSubmit={handleSubmit(onSubmit)}
                 >
                   <label className="block">
@@ -94,7 +95,7 @@ export default function Contact() {
                   <label className="block">
                     <span>Ton message :</span>
                     <textarea
-                      placeholder="thomas.anderson@tera-campus.com"
+                      placeholder="message"
                       className={`block mt-1 w-full p-2 border ${errors.message ? 'border-red-500' : 'border-black'} rounded-none outline-none`}
                       rows="5"
                       {...register("message", { required: true })}
@@ -106,19 +107,16 @@ export default function Contact() {
                     }
                   </label>
                   <label className="block">
-                    <div className="w-max">
+                    <div className="flex flex-row content-center align-center w-max">
                       <input
                         type="checkbox"
-                        className="mr-2 border outline-none"
+                        className="my-auto mr-2 border outline-none "
                         {...register("acceptPrivacyRules", { required: true })}
                       />
-                      <span className="text-xs sm:text-base">
+                      <span className="flex flex-row text-xs flex-nowrap align-items sm:text-base">
                         J'ai lu et j'accepte la&nbsp;
-                        <Link href="/privacy">
-                          <a className="underline hover:text-tc-red">
-                            politique de confidentialité
-                          </a>
-                        </Link>
+                        <PageLink id="privacy" 
+                            label="politique de confidentialité" />
                       </span>
                     </div>
                     {
