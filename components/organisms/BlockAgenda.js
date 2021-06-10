@@ -1,12 +1,10 @@
-import Link from 'next/link'
-
 import BlockTitle from '../atoms/BlockTitle'
 import LinkButton from '../atoms/LinkButton'
 import IconFacebook from '../atoms/IconFacebook'
 import IconInstagram from '../atoms/IconInstagram'
 import IconLinkedin from '../atoms/IconLinkedin'
 import IconTwitch from '../atoms/IconTwitch'
-import SocialLink from '../atoms/SocialLink'
+import SocialNav from '../molecules/SocialNav'
 import LiveLink from '../atoms/LiveLink'
 
 const platformsLogosDict = {
@@ -15,6 +13,8 @@ const platformsLogosDict = {
   'linkedin': <IconLinkedin />,
   'twitch': <IconTwitch />,
 }
+
+
 
 export default function BlockAgenda({ events }) {
 	return (
@@ -66,28 +66,7 @@ export default function BlockAgenda({ events }) {
               <span>et&nbsp;</span>
               <span>suis en direct toutes nos actualités :</span>
             </p>
-            <div className="flex flex-row justify-center mt-8 flex-nowrap justify-items-center">
-              <SocialLink
-                name="linkedin"
-                url="https://www.linkedin.com/company/teracampus"
-                logo={platformsLogosDict["linkedin"]}
-              />
-              <SocialLink
-                name="facebook"
-                url="https://www.facebook.com/teracampus"
-                logo={platformsLogosDict["facebook"]}
-              />
-              <SocialLink
-                name="instagram"
-                url="https://www.instagram.com/tera.campus"
-                logo={platformsLogosDict["instagram"]}
-              />
-              <SocialLink
-                name="twitch"
-                url="https://www.twitch.tv/teracampus"
-                logo={platformsLogosDict["twitch"]}
-              />
-            </div>
+            <SocialNav />
           </div>
         </div>
       </div>

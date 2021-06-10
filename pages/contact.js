@@ -6,11 +6,7 @@ import { useForm } from 'react-hook-form'
 import { useMutation } from 'react-query'
 
 import BlockTitle from '../components/atoms/BlockTitle'
-import IconFacebook from '../components/atoms/IconFacebook'
-import IconInstagram from '../components/atoms/IconInstagram'
-import IconLinkedin from '../components/atoms/IconLinkedin'
-import IconTwitch from '../components/atoms/IconTwitch'
-import SocialLink from '../components/atoms/SocialLink'
+import SocialNav from '../components/molecules/SocialNav'
 import IconCurvedArrowX from '../components/atoms/IconCurvedArrowX'
 
 const pageTitle = "Contact - Tera Campus"
@@ -49,28 +45,7 @@ export default function Contact() {
             />
             <div className="flex flex-col mx-2 flex-nowrap md:flex-row-reverse md:justify-around md:items-center">
               <div className="flex flex-col w-full p-2 space-y-2 md:w-1/2">
-                <div className="flex flex-row items-center justify-center space-x-4 flex-nowrap">
-                  <SocialLink
-                    name="linkedin"
-                    url="https://www.linkedin.com/company/teracampus"
-                    logo={<IconLinkedin />}
-                  />
-                  <SocialLink
-                    name="facebook"
-                    url="https://www.facebook.com/teracampus"
-                    logo={<IconFacebook />}
-                  />
-                  <SocialLink
-                    name="instagram"
-                    url="https://www.instagram.com/tera.campus"
-                    logo={<IconInstagram />}
-                  />
-                  <SocialLink
-                    name="twitch"
-                    url="https://www.twitch.tv/teracampus"
-                    logo={<IconTwitch />}
-                  />
-                </div>
+                <SocialNav />
                 <div className="flex flex-row items-start flex-nowrap">
                   <div className="w-4 h-4 m-2 transform rotate-45 bg-tc-red"> </div>
                   <div className="flex flex-col w-11/12 ">
