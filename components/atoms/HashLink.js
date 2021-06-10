@@ -25,10 +25,10 @@ export default function HashLink({ id, label }) {
 	return (
 		<Link href={href}>
 			<a className={`${active} relative flex items-center justify-center overflow-hidden ease-in transform group border-box active:font-extrabold`}>
-				<div className="absolute z-10 text-lg text-transparent transition-all duration-200 ease-in transform border-b-2 border-transparent border-white cursor-pointer -left-full group-hover:translate-x-full">
+				<div className="absolute z-10 text-lg text-transparent transition-all duration-200 ease-in transform border-b-2 border-current cursor-pointer -left-full group-hover:translate-x-full">
 					{label}
 				</div>
-				<div className="z-20 text-lg bg-transparent border-b-2 border-transparent cursor-pointer">
+				<div className="z-20 text-lg underline bg-transparent border-b-2 border-transparent cursor-pointer group-hover:no-underline">
 					{label}
 				</div>
 			</a>

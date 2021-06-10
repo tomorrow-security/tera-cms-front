@@ -175,8 +175,8 @@ export default function BlockJoin() {
                             </div>
                         </div>
                         <div className="md:flex md:flex-row md:justify-center md:mt-4 md:mb-8">
-                            {steps.map(step => (
-                                <Step key={step.index}
+                            {steps.map((step, index) => (
+                                <Step key={index}
                                     description={step.description}
                                     icon={step.icon}
                                     image={step.backgroundImage}
