@@ -6,6 +6,7 @@ import IconLinkedin from '../atoms/IconLinkedin'
 import IconTwitch from '../atoms/IconTwitch'
 import SocialNav from '../molecules/SocialNav'
 import LiveLink from '../atoms/LiveLink'
+import EventLive from '../molecules/EventLive'
 
 const platformsLogosDict = {
   'facebook': <IconFacebook />,
@@ -26,36 +27,47 @@ export default function BlockAgenda({ events }) {
 						<ul className="flex flex-col justify-center mx-2 sm:justify-start lg:text-lg ">
 							{
 								events.map((event, index) => (
-									<li
+									<EventLive
 										key={index}
-										className="flex flex-col items-center justify-center w-full my-2 md:flex-row md:justify-between lg:w-11/12 lg:border lg:border-tc-blue lg:rounded lg:shadow-lg">
-										<div className="flex flex-row items-center w-full md:w-3/4">
-											<LiveLink
-												name={event.platform}
-												url={event.url}
-												logo={platformsLogosDict[event.platform]}
-											/>
-											<div className="flex flex-col w-5/6 px-2 py-4 xl:ml-2">
-												<div className="flex flex-row mb-1">
-													<time
-														className="mr-2"
-														dateTime={event.dateTimeDate}>
-														{event.date}
-													</time>
-													<time dateTime={event.dateTimeTimetable}>
-														{event.timetable}
-													</time>
-												</div>
-												<div className="text-sm sm:text-base">
-													<h3 className="font-bold">{event.title}</h3>
-                          <p>{event.description}</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="mx-auto mt-1 mb-4 w-max md:w-1/4 md:mx-0 md:mt-4">
-                      <LinkButton url="registration" label="Je m'inscris" />
-                    </div>
-                  </li>
+										url={event.url}
+										platform={event.platform}
+										dateTimeDate={event.dateTimeDate}
+										date={event.date}
+										dateTimeTimetable={event.dateTimeTimetable}
+										timetable={event.timetable}
+										description={event.description}
+										title={event.title}
+									/>
+									// <li
+									// 	key={index}
+									// 	className="flex flex-col items-center justify-center w-full my-2 md:flex-row md:justify-between lg:w-11/12 lg:border lg:border-tc-blue lg:rounded lg:shadow-lg">
+									// 	<div className="flex flex-row items-center w-full md:w-3/4">
+									// 		<LiveLink
+									// 			name={event.platform}
+									// 			url={event.url}
+									// 			logo={platformsLogosDict[event.platform]}
+									// 		/>
+									// 		<div className="flex flex-col w-5/6 px-2 py-4 xl:ml-2">
+									// 			<div className="flex flex-row mb-1">
+									// 				<time
+									// 					className="mr-2"
+									// 					dateTime={event.dateTimeDate}>
+									// 					{event.date}
+									// 				</time>
+									// 				<time dateTime={event.dateTimeTimetable}>
+									// 					{event.timetable}
+									// 				</time>
+									// 			</div>
+									// 			<div className="text-sm sm:text-base">
+									// 				<h3 className="font-bold">{event.title}</h3>
+                  //         <p>{event.description}</p>
+                  //       </div>
+                  //     </div>
+                  //   </div>
+                  //   <div className="mx-auto mt-1 mb-4 w-max md:w-1/4 md:mx-0 md:mt-4">
+                  //     <LinkButton url="registration" label="Je m'inscris" />
+                  //   </div>
+                  // </li>
                 ))
               }
             </ul>
