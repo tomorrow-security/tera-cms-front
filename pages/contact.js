@@ -49,7 +49,7 @@ export default function Contact() {
                 <div className="flex flex-row items-start flex-nowrap">
                   <div className="w-4 h-4 m-2 transform rotate-45 bg-tc-red"> </div>
                   <div className="flex flex-col w-11/12 ">
-                    <p className="pt-1 pl-2">Tera Campus répond à tes questions</p>
+                    <p className="pt-1 pl-2">Tera Campus répond à toutes tes questions à l'adresse suivante :</p>
                     <div className="relative mx-auto">
                       <a
                         href="mailto:contact@tera-campus.com"
@@ -63,7 +63,7 @@ export default function Contact() {
                   <div className="flex flex-row items-start justify-start flex-nowrap">
                     <div className="w-4 h-4 m-2 transform rotate-45 bg-tc-red"> </div>
                     <p className="w-11/12 pt-1 pl-2">
-                      Pose tes questions directement via le formulaire
+                      Ou bien, tu peux poser directement tes questions via le formulaire ci-dessous :
                     </p>
                   </div>
                   <div className="m-2 animate-bounce">
@@ -115,7 +115,8 @@ export default function Contact() {
                       <span className="flex flex-row text-xs flex-nowrap align-items sm:text-base">
                         J'ai lu et j'accepte la&nbsp;
                         <PageLink id="privacy" 
-                            label="politique de confidentialité" />
+                          label="politique de confidentialité" />
+                        &nbsp;de Tera Campus.
                       </span>
                     </div>
                     {
