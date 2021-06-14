@@ -24,7 +24,7 @@ const steps = [
         stage: 2,
     },
     {
-        description: 'Passes gratuitement le test de positionnement',
+        description: 'Passe gratuitement le test de positionnement',
         backgroundImage: 'etape3.png',
         icon: <IconPlacementTest />,
         stage: 3,
@@ -36,7 +36,7 @@ const steps = [
         stage: 4,
     },
     {
-        description: 'Finalises ton inscription définitive !',
+        description: 'Finalise ton inscription définitive !',
         backgroundImage: 'etape5.png',
         icon: < IconHandShake />,
         stage: 5,
