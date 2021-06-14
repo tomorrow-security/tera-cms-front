@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 import BlockAgenda from '../components/organisms/BlockAgenda'
 import BlockConcept from '../components/organisms/BlockConcept'
-import BlockFaq from '../components/organisms/BlockFaq'
+import BlockFaq from '../components/organisms/BlockFAQ'
 import Hero from '../components/organisms/Hero'
 
 const pageTitle = "École supérieure d'informatique - Tera Campus"
