@@ -21,8 +21,8 @@ export default function Contact() {
   const onSubmit = formData => mutation.mutate(formData)
 
   const submitButtonParams = {
-    loading: { value: 'En cours d\'envoi ...', color: 'bg-gray-400', disabled: true },
-    success: { value: 'Envoyé !', color: 'bg-green-400', disabled: true },
+    loading: { value: 'En cours d\'envoi ...', color: 'bg-tc-red-light', disabled: true },
+    success: { value: 'Envoyé !', color: 'bg-tc-blue-light', disabled: true },
     default: { value: 'Envoyer', color: 'bg-tc-blue hover:bg-tc-red shadow hover:shadow-none cursor-pointer  transition-colors duration-700', disabled: false }
   }
 
