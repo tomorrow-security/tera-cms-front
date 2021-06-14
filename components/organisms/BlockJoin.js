@@ -106,16 +106,15 @@ export default function BlockJoin() {
                     </h2>
                 </div>
                 <div className="py-2 font-bold">
-                    Tes 3 années, en alternance, te coûteront 0 € chacune.
+                    Tes 3 années de formation en alternance seront entièrement financées par ton entreprise ! Ton reste à charge sera donc de 0 euro.
                 </div>
                 <div className="py-2">
                     <span className="font-bold">
-                    En effet, c&apos;est ton entreprise qui prendra en charge le coût de ces années.&nbsp;
-                        Tu seras en plus rémunéré(e) mensuellement !
+                    Tu seras en plus rémunéré(e) mensuellement pour ton travail et en fonction de ta situation
                     </span>
                 </div>
                 <div className="py-2">
-                    Au total, tes études ne te coûteront rien, et tu démarreras ta carrière sans dette !
+                    Le choix du télé-présentiel, couplé au financement de ta formation par l'entreprise, te permettra donc d'entamer ta carrière sereinement, et sans aucune dettes !
                 </div>
                 <ExternalLink
                     title="Comment trouver une entreprise ?"
@@ -153,17 +152,17 @@ export default function BlockJoin() {
                             </div>
                             <div className="p-4 text-sm sm:text-base">
                                 <p className="my-1">
-                                    Chez Tera Campus, tu seras en moyenne 4 jours par semaine en entreprise. Cela va te
+                                    Chez Tera Campus, ta semaine type sera en moyenne de 4 jours en entreprise pour un en formation. Cela va te
                                     permettre d&apos;acquérir de nombreuses compétences et de mettre en application ton
                                     apprentissage dans un environnement professionnel.
                                 </p>
                                 <p className="my-1">
                                     Tes frais de scolarité seront intégralement pris en charge grâce à ton contrat
-                                    d&apos;alternance. En tant que salarié, tu auras une rémunération basée sur un
+                                    d&apos;alternance. En tant que salarié, tu percevras une rémunération basée sur un
                                     pourcentage du SMIC en fonction de ton âge.
                                 </p>
                                 <p className="my-1">
-                                    Bien évidemment Tera Campus va t&apos;accompagner et t&apos;aider dans ta recherche
+                                    Bien évidemment, Tera Campus va t&apos;accompagner et t&apos;aider dans ta recherche
                                     d&apos;entreprise d&apos;accueil grâce à son réseau établi depuis plusieurs années.
                                 </p>
                             </div>
