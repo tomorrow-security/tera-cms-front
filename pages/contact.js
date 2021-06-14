@@ -1,7 +1,6 @@
 import axios from 'axios'
 import Head from 'next/head'
 import Image from 'next/image'
-import Link from 'next/link'
 import { useForm } from 'react-hook-form'
 import { useMutation } from 'react-query'
 
