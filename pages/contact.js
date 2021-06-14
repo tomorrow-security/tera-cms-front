@@ -1,15 +1,13 @@
 import axios from 'axios'
 import Head from 'next/head'
 import Image from 'next/image'
-import Link from 'next/link'
 import { useForm } from 'react-hook-form'
 import { useMutation } from 'react-query'
 
-import IconFacebook from '../components/atoms/IconFacebook'
-import IconInstagram from '../components/atoms/IconInstagram'
-import IconLinkedin from '../components/atoms/IconLinkedin'
-import IconTwitch from '../components/atoms/IconTwitch'
-import SocialLink from '../components/atoms/SocialLink'
+import PageLink from '../components/atoms/PageLink'
+import BlockTitle from '../components/atoms/BlockTitle'
+import SocialNav from '../components/molecules/SocialNav'
+import IconCurvedArrowX from '../components/atoms/IconCurvedArrowX'
 
 const pageTitle = "Contact - Tera Campus"
 const pageDescription = "Contacter Tera Campus"
@@ -25,7 +23,7 @@ export default function Contact() {
   const submitButtonParams = {
     loading: { value: 'En cours d\'envoi ...', color: 'bg-gray-400', disabled: true },
     success: { value: 'Envoyé !', color: 'bg-green-400', disabled: true },
-    default: { value: 'Envoyer', color: 'bg-yellow-400 hover:bg-yellow-500 shadow hover:shadow-none cursor-pointer', disabled: false }
+    default: { value: 'Envoyer', color: 'bg-tc-blue hover:bg-tc-red shadow hover:shadow-none cursor-pointer  transition-colors duration-700', disabled: false }
   }
 
   return (
@@ -39,46 +37,51 @@ export default function Contact() {
       </Head>
 
       <main>
-        <section className="pt-8 md:py-20">
+        <section id="contact" className="py-10 md:py-20">
           <div className="md:container md:mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div className="mx-2 flex flex-col space-y-8">
-                <div className="space-y-4">
-                  <div className="flex justify-center space-x-2">
-                    <SocialLink
-                      name="linkedin"
-                      url="https://www.linkedin.com/company/teracampus"
-                      logo={<IconLinkedin />}
-                    />
-                    <SocialLink
-                      name="facebook"
-                      url="https://www.facebook.com/teracampus"
-                      logo={<IconFacebook />}
-                    />
-                    <SocialLink
-                      name="instagram"
-                      url="https://www.instagram.com/tera.campus"
-                      logo={<IconInstagram />}
-                    />
-                    <SocialLink
-                      name="twitch"
-                      url="https://www.twitch.tv/teracampus"
-                      logo={<IconTwitch />}
-                    />
-                  </div>
-                  <div className="text-center">
-                    <a href="mailto:contact@tera-campus.com" className="text-xl text-blue-600 underline">
-                      contact@tera-campus.com
-                    </a>
+            <BlockTitle
+              title="Contact"
+              iconPicture={{ backgroundImage: "url('mobile-sms-blue.png')" }}
+            />
+            <div className="flex flex-col mx-2 flex-nowrap md:flex-row-reverse md:justify-around md:items-center">
+              <div className="flex flex-col w-full p-2 space-y-2 md:w-1/2">
+                <SocialNav />
+                <div className="flex flex-row items-start flex-nowrap">
+                  <div className="w-4 h-4 m-2 transform rotate-45 bg-tc-red"> </div>
+                  <div className="flex flex-col w-11/12 ">
+                    <p className="pt-1 pl-2">Tera Campus répond à tes questions</p>
+                    <div className="relative mx-auto">
+                      <a
+                        href="mailto:contact@tera-campus.com"
+                        className="p-2 mx-auto text-sm text-center hover:font-semibold w-max md:text-lg hover:text-tc-red">
+                        &#x1F4E7; contact@tera-campus.com
+                      </a>
+                    </div>
                   </div>
                 </div>
-                <form className="grid grid-cols-1 gap-6" onSubmit={handleSubmit(onSubmit)}>
+                <div className="my-4">
+                  <div className="flex flex-row items-start justify-start flex-nowrap">
+                    <div className="w-4 h-4 m-2 transform rotate-45 bg-tc-red"> </div>
+                    <p className="w-11/12 pt-1 pl-2">
+                      Pose tes questions directement via le formulaire
+                    </p>
+                  </div>
+                  <div className="m-2 animate-bounce">
+                    <div className="w-8 h-8 mx-auto transform -rotate-60">
+                      <IconCurvedArrowX />
+                    </div>
+                  </div>
+                </div>
+                <form
+                  className="grid grid-cols-1 gap-6 place-content-center"
+                  onSubmit={handleSubmit(onSubmit)}
+                >
                   <label className="block">
                     <span>Ton adresse e-mail :</span>
                     <input
                       type="email"
                       placeholder="thomas.anderson@tera-campus.com"
-                      className={`block mt-1 w-full p-2 border ${errors.email ? 'border-red-500' : 'border-black'} outline-none`}
+                      className={`block mt-1 w-full p-2 border ${errors.email ? 'border-red-500' : 'border-black'} rounded-none outline-none`}
                       {...register("email", { required: true })}
                     />
                     {
@@ -91,8 +94,8 @@ export default function Contact() {
                   <label className="block">
                     <span>Ton message :</span>
                     <textarea
-                      placeholder="thomas.anderson@tera-campus.com"
-                      className={`block mt-1 w-full p-2 border ${errors.message ? 'border-red-500' : 'border-black'} outline-none`}
+                      placeholder="message"
+                      className={`block mt-1 w-full p-2 border ${errors.message ? 'border-red-500' : 'border-black'} rounded-none outline-none`}
                       rows="5"
                       {...register("message", { required: true })}
                     />
@@ -103,14 +106,16 @@ export default function Contact() {
                     }
                   </label>
                   <label className="block">
-                    <div>
+                    <div className="flex flex-row content-center align-center w-max">
                       <input
                         type="checkbox"
-                        className="mr-2 border outline-none"
+                        className="my-auto mr-2 border outline-none "
                         {...register("acceptPrivacyRules", { required: true })}
                       />
-                      <span className="text-xs sm:text-base">
-                        J'ai lu et j'accepte la <Link href="/privacy"><a className="underline">politique de confidentialité</a></Link>
+                      <span className="flex flex-row text-xs flex-nowrap align-items sm:text-base">
+                        J'ai lu et j'accepte la&nbsp;
+                        <PageLink id="privacy" 
+                            label="politique de confidentialité" />
                       </span>
                     </div>
                     {
@@ -119,24 +124,27 @@ export default function Contact() {
                       </span>
                     }
                   </label>
-                  <input
-                    type="submit"
-                    value={['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].value : submitButtonParams['default'].value}
-                    className={`w-full p-4 outline-none ${['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].color : submitButtonParams['default'].color}`}
-                    disabled={['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].disabled : submitButtonParams['default'].disabled }
-                  />
+                  <div className="w-auto mx-auto my-2">
+                    <input
+                      type="submit"
+                      value={['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].value : submitButtonParams['default'].value}
+                      className={`w-max px-4
+                          outline-none cursor-pointer text-white font-bold rounded-t rounded-b-xl ${['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].color : submitButtonParams['default'].color}`}
+                      disabled={['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].disabled : submitButtonParams['default'].disabled }
+                    />
+                  </div>
                 </form>
               </div>
-              <div className="relative min-w-min flex">
+              <div className="md:w-1/2">
                 <Image
                   src="/happy-woman-phone.jpg"
                   alt="Femme utilisant un téléphone"
                   width={1152}
                   height={768}
-                  className="object-cover object-center"
+                  className="object-cover object-center w-full h-full md:inline-flex"
                 />
-              </div>
             </div>
+            </div >
           </div>
         </section>
       </main>

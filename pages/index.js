@@ -2,8 +2,7 @@ import Head from 'next/head'
 
 import BlockAgenda from '../components/organisms/BlockAgenda'
 import BlockConcept from '../components/organisms/BlockConcept'
-import BlockFAQ from '../components/organisms/BlockFAQ'
-import BlockGuides from '../components/organisms/BlockGuides'
+import BlockFaq from '../components/organisms/BlockFAQ'
 import Hero from '../components/organisms/Hero'
 
 const pageTitle = "École supérieure d'informatique - Tera Campus"
@@ -25,8 +24,7 @@ function Index({ agenda, questions }) {
         <Hero />
         <BlockAgenda events={agenda} />
         <BlockConcept />
-        <BlockGuides />
-        <BlockFAQ questions={questions} />
+        <BlockFaq questions={questions} />
       </main>
     </>
   )
@@ -36,35 +34,16 @@ export async function getServerSideProps() {
   return {
     props: {
       agenda: [
-        {
-          date: '08/05/2021',
-          dateTimeDate: '2021-05-08',
-          timetable: '14h00',
-          dateTimeTimetable: '14:00',
-          title: 'Après-midi open doors !',
-          description: 'Découvre Tera Campus grâce aux portes ouvertes !',
-          platform: 'twitch',
-        },
-        {
-          date: '11/05/2021',
-          dateTimeDate: '2021-05-11',
-          timetable: '18h00',
-          dateTimeTimetable: '18:00',
-          title: 'Soirée open doors',
-          description: 'Tu n\'es pas libre le samedi ? \
-          Découvre Tera Campus grâce à la soirée portes ouvertes !',
-          platform: 'twitch',
-        },
-        {
-          date: '21/05/2021',
-          dateTimeDate: '2021-05-21',
-          timetable: '17h00',
-          dateTimeTimetable: '17:00',
-          title: 'Webinaire : Prépare ton alternance !',
-          description: 'Tera Campus te donne des conseils pour préparer tes supports \
-          et trouver rapidement une alternance !',
-          platform: 'twitch',
-        },
+        // {
+        //   date: '03/06/2021',
+        //   dateTimeDate: '2021-06-03',
+        //   timetable: '18h30',
+        //   dateTimeTimetable: '18:30',
+        //   title: 'Développer un jeux avec Unity',
+        //   description: 'Thurday Tech Live',
+        //   platform: 'twitch',
+        //   url: 'https://www.twitch.tv/teracampus'
+        // },
       ],
       questions: [
         {
