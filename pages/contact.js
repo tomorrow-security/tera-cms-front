@@ -1,9 +1,11 @@
-import axios from 'axios'
+// import axios from 'axios'
 import Head from 'next/head'
 import Image from 'next/image'
 import { useForm } from 'react-hook-form'
-import { useMutation } from 'react-query'
+// import { useMutation } from 'react-query'
 
+
+import InputButton from '../components/molecules/InputButton'
 import PageLink from '../components/atoms/PageLink'
 import BlockTitle from '../components/atoms/BlockTitle'
 import SocialNav from '../components/molecules/SocialNav'
@@ -16,30 +18,32 @@ const pageUrl = 'https://tera-campus.com/contact'
 export default function Contact() {
   const { register, handleSubmit, formState: { errors } } = useForm()
 
-  const mutation = useMutation(data => axios.post('/api/contact', data), { retry: 3 })
+  const endPoint = '/api/contact'
+
+  // const mutation = useMutation(data => axios.post('/api/contact', data), { retry: 3 })
 
   const onSubmit = formData => mutation.mutate(formData)
-
-  const submitButtonParams = {
-    loading: {
-      value: 'En cours d\'envoi ...',
-      color: 'bg-tc-red-light',
-      shadow: 'bg-tc-red-xlight border border-tc-red-medium',
-      disabled: true
-    },
-    success: {
-      value: 'Envoyé !',
-      color: 'bg-tc-blue-medium',
-      shadow: 'bg-tc-blue-light border border-tc-blue ',
-      disabled: true
-    },
-    default: {
-      value: 'Envoyer',
-      color: 'bg-tc-blue group-hover:bg-tc-red shadow group-hover:shadow-none cursor-pointer  transition-colors duration-700 group-hover:-top-20/100 transform active:translate-y-20/100',
-      shadow: 'bg-tc-blue-medium border border-tc-blue-dark group-hover:bg-tc-red-medium group-hover:border-tc-red-dark shadow group-hover:shadow-none cursor-pointer  transition-colors duration-700',
-      disabled: false
-    }
-  }
+  
+  // const submitButtonParams = {
+  //   loading: {
+  //     value: 'En cours d\'envoi ...',
+  //     color: 'bg-tc-red-light',
+  //     shadow: 'bg-tc-red-xlight border border-tc-red-medium',
+  //     disabled: true
+  //   },
+  //   success: {
+  //     value: 'Envoyé !',
+  //     color: 'bg-tc-blue-medium',
+  //     shadow: 'bg-tc-blue-light border border-tc-blue ',
+  //     disabled: true
+  //   },
+  //   default: {
+  //     value: 'Envoyer',
+  //     color: 'bg-tc-blue group-hover:bg-tc-red shadow group-hover:shadow-none cursor-pointer  transition-colors duration-700 group-hover:-top-20/100 transform active:translate-y-20/100',
+  //     shadow: 'bg-tc-blue-medium border border-tc-blue-dark group-hover:bg-tc-red-medium group-hover:border-tc-red-dark shadow group-hover:shadow-none cursor-pointer  transition-colors duration-700',
+  //     disabled: false
+  //   }
+  // }
 
   return (
     <>
@@ -140,8 +144,8 @@ export default function Contact() {
                       </span>
                     }
                   </label>
-                  <div className="w-auto pt-2 mx-auto group">
-                    {/* // TODO WIP- appliquer un style au bouton comme https://codepen.io/elmsoftware/pen/rdewK */}
+                  <InputButton endPoint={endPoint} />
+                  {/* <div className="w-auto pt-2 mx-auto group">
                     <div className={`relative z-0 px-4 font-bold text-transparent rounded-t outline-none cursor-pointer w-max rounded-b-xl ${['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].shadow : submitButtonParams['default'].shadow}`}>
                       {['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].value : submitButtonParams['default'].value}
                       <input
@@ -152,7 +156,7 @@ export default function Contact() {
                       disabled={['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].disabled : submitButtonParams['default'].disabled }
                       />
                     </div>
-                  </div>
+                  </div> */}
                 </form>
               </div>
               <div className="md:w-1/2">
