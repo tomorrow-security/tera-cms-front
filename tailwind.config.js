@@ -71,10 +71,19 @@ module.exports = {
                 'tc-red-medium': 'rgba(224, 51, 0, 0.6)',
                 'tc-blue-light': 'rgba(4, 2, 29, 0.3)',
                 'tc-red-light': 'rgba(224, 51, 0, 0.3)',
+                'tc-blue-xlight': 'rgba(4, 2, 29, 0.1)',
+                'tc-red-xlight': 'rgba(224, 51, 0, 0.1)',
+                'tc-blue-bright': '#08043f',
+                'tc-red-bright': '#f93600',
+                'tc-blue-dark': '#01000a',
+                'tc-red-dark': '#c92b00',
             },
             inset: {
+                // TODO vérifier si tous les paramètres sont utilisés
                 '12/25': '48%',
-                '-1/10': '-10%'
+                '-20/100': '-20%',
+                '-15/100': '-15%',
+
             },
             keyframes: {
                 wiggle: {
@@ -98,7 +107,9 @@ module.exports = {
                 toggle: 'cubic-bezier(0.18, 0.89, 0.35, 1.15)',
             },
             translate: {
+                '20/100': '20%',
                 'full-50': '150%',
+
             },
             width: {
                 '1/25': '4%',
@@ -122,18 +133,19 @@ module.exports = {
             fontStyle: ['hover', 'focus'],
             inset: ['group-hover', 'hover'],
             opacity: ['disabled'],
-            scale:['group-hover'],
+            padding:['group-focus'],
+            scale:['group-hover', 'group-focus'],
             textOpacity: ['disabled'],
             textColor: ['visited', 'disabled'],
             textDecoration: ['hover', 'focus', 'visited'],
             textTransform: ['focus'],
-            transform: ['group-hover', 'hover', 'focus','active', 'checked'],
+            transform: ['group-hover', 'hover','group-focus', 'focus','active', 'checked'],
             transformOrigin: ['group-hover', 'hover', 'focus','active', 'checked'],
             transitionDelay: ['group-hover', 'hover', 'focus','active', 'checked'],
             transitionDuration: ['group-hover', 'hover', 'focus','active', 'checked'],
             transitionProperty: ['group-hover', 'hover', 'focus','active', 'checked'],
             transitionTimingFunction: ['group-hover', 'hover', 'focus','active', 'checked'],
-            translate: ['group-hover','active', 'checked'],
+            translate: ['group-hover','active','group-focus', 'checked'],
         },
     },
     plugins: [],
