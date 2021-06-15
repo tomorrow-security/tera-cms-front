@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import PageLink from '../components/atoms/PageLink'
 
+import IconLogoBig from '../components/atoms/IconLogoBig'
+
 const pageTitle = "Page non trouvée - Tera Campus"
 const pageDescription = "Page non trouvée"
 
@@ -14,13 +16,18 @@ export default function Custom404() {
         <meta property="og:description" content={pageDescription} />
       </Head>
 
-      <main className="text-center">
-        <div className="flex flex-col justify-center w-full h-full my-40 flex-nowrap align-center text-tc-blue">
-          <h1 className="text-xl font-extrabold">Cette page n'existe pas !</h1>
+      <main className="flex flex-col justify-center w-full h-full text-center">
+        <div className="flex flex-col justify-center w-full h-full align-center flex-nowrap text-tc-blue">
+          <div className="w-1/4 py-10 mx-auto">
+            <IconLogoBig />
+            <div className="text-base font-bold tracking-normal normal-case md:text-lg xl:text-2xl">
+                        The future of learning
+                </div>
+          </div>
+          <h1 className="text-3xl font-extrabold text-tc-red">Cette page n'existe pas !</h1>
           <div className="px-2 mx-auto text-center w-max">
             <PageLink id='' label="retour à la page d'accueil" />
           </div>
-
         </div>
       </main>
     </>
