@@ -1,28 +1,25 @@
-import { useMutation } from 'react-query'
-import axios from 'axios'
-
-export default function InputButton(endPoint) {
-  const mutation = useMutation(data => axios.post({ endPoint }, data), { retry: 3 })
-  console.log('endPoint :', endPoint)
-    console.log('mutation :', mutation)
-
+export default function InputButton({mutation}) {
+  
   const submitButtonParams = {
     loading: {
       value: 'En cours d\'envoi ...',
-      color: 'bg-tc-red-light',
-      shadow: 'bg-tc-red-xlight border border-tc-red-medium',
+      color: 'bg-tc-red-medium',
+      position:'absolute left-0 top-0 z-20',
+      shadow: 'bg-tc-red-xlight border border-tc-red-dark border-t-0',
       disabled: true
     },
     success: {
       value: 'Envoyé !',
       color: 'bg-tc-blue-medium',
-      shadow: 'bg-tc-blue-light border border-tc-blue ',
+      position:'absolute left-0 -top-20/100 z-20',
+      shadow: 'bg-tc-blue-xlight border border-tc-blue border-t-0',
       disabled: true
     },
     default: {
       value: 'Envoyer',
       color: 'bg-tc-blue group-hover:bg-tc-red shadow group-hover:shadow-none cursor-pointer  transition-colors duration-700 group-hover:-top-20/100 transform active:translate-y-20/100',
-      shadow: 'bg-tc-blue-medium border border-tc-blue-dark group-hover:bg-tc-red-medium group-hover:border-tc-red-dark shadow group-hover:shadow-none cursor-pointer  transition-colors duration-700',
+      position:'absolute left-0 -top-15/100 z-20',
+      shadow: 'bg-tc-blue-light border border-tc-blue-dark group-hover:bg-tc-red-light group-hover:border-tc-red-dark shadow group-hover:shadow-none cursor-pointer  transition-colors duration-700',
       disabled: false
     }
   }
@@ -34,7 +31,7 @@ export default function InputButton(endPoint) {
           <input
           type="submit"
           value={['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].value : submitButtonParams['default'].value}
-          className={`absolute left-0 -top-15/100 z-20 w-max px-4 mx-auto
+          className={`${['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].position : submitButtonParams['default'].position} w-max px-4 mx-auto
               outline-none cursor-pointer text-white font-bold rounded-t rounded-b-xl ${['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].color : submitButtonParams['default'].color}`}
           disabled={['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].disabled : submitButtonParams['default'].disabled }
           />
