@@ -21,9 +21,24 @@ export default function Contact() {
   const onSubmit = formData => mutation.mutate(formData)
 
   const submitButtonParams = {
-    loading: { value: 'En cours d\'envoi ...', color: 'bg-tc-red-light', disabled: true },
-    success: { value: 'Envoyé !', color: 'bg-tc-blue-light', disabled: true },
-    default: { value: 'Envoyer', color: 'bg-tc-blue hover:bg-tc-red shadow hover:shadow-none cursor-pointer  transition-colors duration-700', disabled: false }
+    loading: {
+      value: 'En cours d\'envoi ...',
+      color: 'bg-tc-red-light',
+      shadow: 'bg-tc-red-xlight border border-tc-red-medium',
+      disabled: true
+    },
+    success: {
+      value: 'Envoyé !',
+      color: 'bg-tc-blue-medium',
+      shadow: 'bg-tc-blue-light border border-tc-blue ',
+      disabled: true
+    },
+    default: {
+      value: 'Envoyer',
+      color: 'bg-tc-blue group-hover:bg-tc-red shadow group-hover:shadow-none cursor-pointer  transition-colors duration-700 group-hover:-top-20/100 transform active:translate-y-20/100',
+      shadow: 'bg-tc-blue-medium border border-tc-blue-dark group-hover:bg-tc-red-medium group-hover:border-tc-red-dark shadow group-hover:shadow-none cursor-pointer  transition-colors duration-700',
+      disabled: false
+    }
   }
 
   return (
@@ -81,7 +96,7 @@ export default function Contact() {
                     <input
                       type="email"
                       placeholder="thomas.anderson@tera-campus.com"
-                      className={`block mt-1 w-full p-2 border ${errors.email ? 'border-red-500' : 'border-black'} rounded-none outline-none`}
+                      className={`block mt-1 w-full p-2 border ${errors.email ? 'border-red-500' : 'border-black'} rounded-none outline-none shadow-button`}
                       {...register("email", { required: true })}
                     />
                     {
@@ -125,14 +140,18 @@ export default function Contact() {
                       </span>
                     }
                   </label>
-                  <div className="w-auto mx-auto my-2">
-                    <input
+                  <div className="w-auto pt-2 mx-auto group">
+                    {/* // TODO WIP- appliquer un style au bouton comme https://codepen.io/elmsoftware/pen/rdewK */}
+                    <div className={`relative z-0 px-4 font-bold text-transparent rounded-t outline-none cursor-pointer w-max rounded-b-xl ${['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].shadow : submitButtonParams['default'].shadow}`}>
+                      {['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].value : submitButtonParams['default'].value}
+                      <input
                       type="submit"
                       value={['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].value : submitButtonParams['default'].value}
-                      className={`w-max px-4
+                      className={`absolute left-0 -top-15/100 z-20 w-max px-4 mx-auto
                           outline-none cursor-pointer text-white font-bold rounded-t rounded-b-xl ${['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].color : submitButtonParams['default'].color}`}
                       disabled={['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].disabled : submitButtonParams['default'].disabled }
-                    />
+                      />
+                    </div>
                   </div>
                 </form>
               </div>
