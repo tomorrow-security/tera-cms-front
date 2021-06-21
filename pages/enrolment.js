@@ -1,19 +1,19 @@
+// import axios from 'axios'
 import Head from 'next/head'
+// import { useForm } from 'react-hook-form'
+// import { useMutation } from 'react-query'
 
+import BlockTitle from '../components/atoms/BlockTitle'
 import InputRadio from '../components/molecules/InputRadio'
 
 
 // import { yupResolver } from '@hookform/resolvers/yup'
-// import axios from 'axios'
+
 // import React, { useEffect } from 'react'
 // import { Helmet } from 'react-helmet'
-// import { useForm } from 'react-hook-form'
-// import { useMutation } from 'react-query'
 // import { useHistory } from 'react-router-dom'
 // import * as yup from 'yup'
 
-// import InputFiles from '../components/molecules/InputFiles'
-// import InputRadio from '../components/molecules/InputRadio'
 
 const pageTitle = "Inscription - Tera Campus"
 const pageDescription = "Inscription"
@@ -433,11 +433,19 @@ export default function Enrolment() {
         <meta property="og:description" content={pageDescription} />
       </Head>
 
-      <main className="mx-2 md:container md:mx-auto">
-        <EnrolmentForm
-          // status={mutation.status}
-          // onSubmit={onSubmit}
-        />
+      <main className="h-full mx-2 lg:container lg:mx-auto">
+        <section id="enrolment" className="py-10 md:py-20">
+          <div className="md:container md:mx-auto">
+            <BlockTitle
+              title="Inscription"
+              iconPicture={{ backgroundImage: "url('inscription-red-into-blue.png')" }}
+            />
+            <EnrolmentForm
+              // status={mutation.status}
+              // onSubmit={onSubmit}
+            />
+          </div>
+        </section>
       </main>
     </>
   )
