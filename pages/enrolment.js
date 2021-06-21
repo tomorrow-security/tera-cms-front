@@ -1,5 +1,7 @@
 import Head from 'next/head'
 
+import InputRadio from '../components/molecules/InputRadio'
+
 
 // import { yupResolver } from '@hookform/resolvers/yup'
 // import axios from 'axios'
@@ -102,14 +104,14 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                         <div>
                         <div>
                             <label htmlFor="gender">Civilité* :</label>
-                            {/* <InputRadio
+                            <InputRadio
                                 name="gender"
-                                control={control}
+                                // control={control}
                                 choices={[
                                     { label: 'Mme', value: 'F' },
                                     { label: 'M.', value: 'M' },
                                 ]}
-                            /> */}
+                            />
                             {/* <span className="col-span-2 text-tc-red">{errors?.gender?.message}</span> */}
                         </div>
                         <div>
