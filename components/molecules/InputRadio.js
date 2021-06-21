@@ -40,7 +40,7 @@ export default function InputRadio({
                                 id={id}
                                 name={name}
                                 value={choice.value}
-                                // className="hidden"
+                                className="hidden"
                                 // onChange={onChange}
                                 // ref={ref}
                             />
