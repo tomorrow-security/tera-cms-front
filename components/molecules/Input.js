@@ -4,6 +4,7 @@ export default function Input({
   name,
   placeholder,
   label,
+  required,
   // ref,
 }) {
   
@@ -18,10 +19,12 @@ export default function Input({
               {label}
             </label>
             <input
-              type={type}
-              id={id}
-              name={name}
-              placeholder={placeholder}
+            type={type}
+            id={id}
+            name={name}
+            placeholder={placeholder}
+            autoComplete={id}
+            required={required}
               // ref={ref}
             className="w-3/4 p-2 border rounded outline-none border-1"
             // className={`
