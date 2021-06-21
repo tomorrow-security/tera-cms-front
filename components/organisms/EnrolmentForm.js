@@ -97,21 +97,22 @@ export default function EnrolmentForm ({
       <form onSubmit={registerCandidat}
         // onSubmit={(handleSubmit(onSubmit))}
       >
-        <div className="grid grid-cols-1 gap-8 py-10 md:py-20 md:grid-cols-2">
-            <div>
-              <div>
+        <fieldset>
+           <legend className="w-full my-8 text-xl font-bold text-center">Ton identité</legend>
+            <div className="w-2/3 mx-auto">
+              <div className="m-2">
                 <Input
                   id="email"
                   type="email"
                   name="email"
                   placeholder="thomas.anderson@tera-campus.com"
-                label="E-mail"
+                label="E-mail :"
                 required="required"
                 />
                 {/* <span className="text-tc-red">{error?.type?.message}</span> */}
               </div>        
               <div>
-                <div>
+                <div className="m-2">
                   <InputRadio
                     name="gender"
                     // control={control}
@@ -122,7 +123,7 @@ export default function EnrolmentForm ({
                   />
                   {/* <span className="col-span-2 text-tc-red">{errors?.gender?.message}</span> */}
                 </div>
-              <div>
+              <div className="m-2">
                 <Input
                   id="lastName"
                   type="text"
@@ -133,7 +134,7 @@ export default function EnrolmentForm ({
                 />
                 {/* <span className="text-tc-red">{errors?.lastName?.message}</span> */}
               </div>
-              <div>
+              <div className="m-2">
                 <Input
                   id="firstName"
                   type="text"
@@ -146,8 +147,8 @@ export default function EnrolmentForm ({
               </div>
             </div>
           </div>
-          { renderSubmitButton() }
-            </div>
-        </form>
+          <div className="m-8">{ renderSubmitButton() }</div>
+        </fieldset>
+      </form>
     )
 }
