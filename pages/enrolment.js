@@ -62,7 +62,6 @@ const EnrolmentForm = ({ status, onSubmit }) => {
             <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
               <div className="space-y-1">
                 <label htmlFor="gender">Civilité* :</label>
-                {/* //* TypeError: Cannot destructure property 'invalid' of 'meta' as it is undefined. */}
                 <InputRadio
                   name="gender"
                   control={control}
@@ -71,7 +70,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                       { label: 'M.', value: 'M' },
                   ]}
                 />
-                {/* <span className="col-span-2 text-tc-red">{errors?.gender?.message}</span> */}
+                <span className="col-span-2 text-tc-red">{errors?.gender?.message}</span>
               </div>
               <div className="space-y-1">
                 <label htmlFor="email">E-mail* :</label>
@@ -90,7 +89,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                     w-full p-2 border
                     rounded-none outline-none
                   `}
-                  {...register("email")}
+                  {...register("email", { required: true })}
                 />
                 <span className="text-tc-red">{errors?.email?.message}</span>
               </div>
@@ -111,7 +110,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                       w-full p-2 border
                       rounded-none outline-none
                   `}
-                  {...register("lastName")}
+                  {...register("lastName", { required: true })}
                 />
                 <span className="text-tc-red">{errors?.lastName?.message}</span>
               </div>
@@ -132,7 +131,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                         w-full p-2 border
                         rounded-none outline-none
                     `}
-                    {...register("firstName")}
+                    {...register("firstName", { required: true })}
                   />
                   <span className="text-tc-red">{errors?.firstName?.message}</span>
                 </div>

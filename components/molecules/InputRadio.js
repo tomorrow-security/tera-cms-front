@@ -6,18 +6,17 @@ const getBorder = (invalid, selected) => {
     if (selected) return 'border border-blue-500 bg-blue-50'
     return 'border border-black'
 }
-
+// TODO nouvelle version react-hook-form :  useController nouvelle écriture
 function InputRadio({
     choices,
     control,
     name }) {
-    //* TypeError: Cannot destructure property 'invalid' of 'meta' as it is undefined.
   const { field, meta } = useController({
     name,
     control,
     defaultValue: ''
   })
-    const { onChange, ref, value } = field
+    const { onChange, value } = field
     const { invalid } = meta
 
     return (
@@ -25,7 +24,7 @@ function InputRadio({
             {
                 choices.map(choice => {
                     const id = `${name}${choice.value}`
-                    // const isSelected = choice.value == value
+                    const isSelected = choice.value == value
 
                     return(
                         <div className="flex flex-1" key={id}>
