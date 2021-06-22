@@ -75,14 +75,15 @@ const EnrolmentForm = ({ status, onSubmit }) => {
             <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
               <div className="space-y-1">
                 <label htmlFor="gender">Civilité* :</label>
-                <InputRadio
+                //* TypeError: Cannot destructure property 'invalid' of 'meta' as it is undefined.
+                {/* <InputRadio
                   name="gender"
                   control={control}
                   choices={[
                       { label: 'Mme', value: 'F' },
                       { label: 'M.', value: 'M' },
                   ]}
-                />
+                /> */}
                 <span className="col-span-2 text-tc-red">{errors?.gender?.message}</span>
               </div>
               <div className="space-y-1">
@@ -92,9 +93,14 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                   name="email"
                   type="email"
                   placeholder="thomas.anderson@tera-campus.com"
+                  //* TypeError: Cannot read property 'email' of undefined
+                  // className={`
+                  //   w-full p-2 border
+                  //   ${errors.email ? 'border-tc-red' : 'border-black'}
+                  //   rounded-none outline-none
+                  // `}
                   className={`
                     w-full p-2 border
-                    ${errors.email ? 'border-tc-red' : 'border-black'}
                     rounded-none outline-none
                   `}
                   ref={register}
@@ -108,9 +114,14 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                   name="lastName"
                   type="text"
                   placeholder="Anderson"
-                  className={`
+                  //* TypeError: Cannot read property 'lastName' of undefined
+                  // className={`
+                  //     w-full p-2 border
+                  //     ${errors.lastName ? 'border-tc-red' : 'border-black'}
+                  //     rounded-none outline-none
+                  // `}
+                className={`
                       w-full p-2 border
-                      ${errors.lastName ? 'border-tc-red' : 'border-black'}
                       rounded-none outline-none
                   `}
                   ref={register}
@@ -123,10 +134,15 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                     id="firstName"
                     name="firstName"
                     type="text"
-                    placeholder="Thomas"
-                    className={`
+                  placeholder="Thomas"
+                  //* TypeError: Cannot read property 'firstName' of undefined
+                    // className={`
+                    //     w-full p-2 border
+                    //     ${errors.firstName ? 'border-tc-red' : 'border-black'}
+                    //     rounded-none outline-none
+                    // `}
+                   className={`
                         w-full p-2 border
-                        ${errors.firstName ? 'border-tc-red' : 'border-black'}
                         rounded-none outline-none
                     `}
                     ref={register}
