@@ -7,25 +7,24 @@ const getBorder = (invalid, selected) => {
     return 'border border-black'
 }
 // TODO nouvelle version react-hook-form :  useController nouvelle écriture
-function InputRadio({
-    choices,
-    control,
-    name }) {
-  const { field, meta } = useController({
+function InputRadio({choices, control, name }) {
+    const {
+        field: { onChange, ref, value },
+        fieldState: { invalid },
+       
+    } = useController({
     name,
     control,
+    rules: { required: true },
     defaultValue: ''
   })
-    const { onChange, value } = field
-    const { invalid } = meta
 
     return (
         <div className="flex space-x-2">
             {
                 choices.map(choice => {
-                    const id = `${name}${choice.value}`
-                    const isSelected = choice.value == value
-
+									const id = `${name}${choice.value}`
+									const isSelected = choice.value == value
                     return(
                         <div className="flex flex-1" key={id}>
                             <label
