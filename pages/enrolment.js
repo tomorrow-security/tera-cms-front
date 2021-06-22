@@ -1,14 +1,13 @@
 import Head from 'next/head'
-
-import BlockTitle from '../components/atoms/BlockTitle'
+import { useRouter } from 'next/router'
 
 import axios from 'axios'
 import React, { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import { useMutation } from 'react-query'
-// TODO utiliser useRouter()
-// import { useHistory } from 'react-router-dom'
 
+
+import BlockTitle from '../components/atoms/BlockTitle'
 import InputRadio from '../components/molecules/InputRadio'
 
 const Title = ({ children }) => (
@@ -132,12 +131,11 @@ const pageDescription = "Inscription"
 const pageUrl = 'https://tera-campus.com/enrolment'
 
 export default function Enrolment() {
-  // *utiliser useRouter ()
-  // const history = useHistory()
+  const router = useRouter()
 
 
     const mutation = useMutation(data => axios.post('/arpette/enrolments/', data).then(
-        ({ data }) => history.push(`/enrolment-quiz?key=${data.quizSession}`)
+        ({ data }) => router.push(`/enrolment-quiz?key=${data.quizSession}`)
     ), { retry: 3 })
 
   const onSubmit = formData => mutation.mutate(formData)
