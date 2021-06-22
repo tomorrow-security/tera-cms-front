@@ -9,8 +9,7 @@ import { useMutation } from 'react-query'
 // TODO utiliser useRouter()
 // import { useHistory } from 'react-router-dom'
 
-// TODO à rajouter quand se sera fonctionnel
-// import InputRadio from '../components/molecules/InputRadio'
+import InputRadio from '../components/molecules/InputRadio'
 
 const Title = ({ children }) => (
     <div className="mb-4 border-b border-tc-blue">
@@ -62,16 +61,16 @@ const EnrolmentForm = ({ status, onSubmit }) => {
             <Title>Informations personnelles</Title>
             <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
               <div className="space-y-1">
-                {/* <label htmlFor="gender">Civilité* :</label> */}
+                <label htmlFor="gender">Civilité* :</label>
                 {/* //* TypeError: Cannot destructure property 'invalid' of 'meta' as it is undefined. */}
-                {/* <InputRadio
+                <InputRadio
                   name="gender"
                   control={control}
                   choices={[
                       { label: 'Mme', value: 'F' },
                       { label: 'M.', value: 'M' },
                   ]}
-                /> */}
+                />
                 {/* <span className="col-span-2 text-tc-red">{errors?.gender?.message}</span> */}
               </div>
               <div className="space-y-1">
