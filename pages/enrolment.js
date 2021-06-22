@@ -5,7 +5,6 @@ import BlockTitle from '../components/atoms/BlockTitle'
 import { yupResolver } from '@hookform/resolvers/yup'
 import axios from 'axios'
 import React, { useEffect } from 'react'
-import { Helmet } from 'react-helmet'
 import { useForm } from 'react-hook-form'
 import { useMutation } from 'react-query'
 import { useHistory } from 'react-router-dom'
@@ -71,7 +70,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                 return <input
                     type="submit"
                     value="Envoyer"
-                    className="w-full p-4 bg-yellow-400 shadow outline-none cursor-pointer  md:col-span-2 hover:bg-yellow-500 hover:shadow-none"
+                    className="w-full p-4 bg-yellow-400 shadow outline-none cursor-pointer md:col-span-2 hover:bg-yellow-500 hover:shadow-none"
                 />
         }
     }
