@@ -10,7 +10,8 @@ const getBorder = (invalid, selected) => {
 function InputRadio({
     choices,
     control,
-  name }) {
+    name }) {
+    //* TypeError: Cannot destructure property 'invalid' of 'meta' as it is undefined.
   const { field, meta } = useController({
     name,
     control,
