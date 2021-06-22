@@ -7,7 +7,8 @@ import axios from 'axios'
 import React, { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import { useMutation } from 'react-query'
-import { useHistory } from 'react-router-dom'
+// TODO voir avec Next comment faire 
+// import { useHistory } from 'react-router-dom'
 import * as yup from 'yup'
 
 
@@ -145,7 +146,8 @@ const pageDescription = "Inscription"
 const pageUrl = 'https://tera-campus.com/enrolment'
 
 export default function Enrolment() {
-  const history = useHistory()
+  // *fonctionne avec react-router-dom
+  // const history = useHistory()
 
     // Removes keys with empty string as value from an object
     // eslint-disable-next-line no-unused-vars
