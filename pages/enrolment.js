@@ -2,14 +2,12 @@ import Head from 'next/head'
 
 import BlockTitle from '../components/atoms/BlockTitle'
 
-import { yupResolver } from '@hookform/resolvers/yup'
 import axios from 'axios'
 import React, { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import { useMutation } from 'react-query'
-// TODO voir avec Next comment faire (useRouter ?)
+// TODO utiliser useRouter()
 // import { useHistory } from 'react-router-dom'
-import * as yup from 'yup'
 
 // TODO à rajouter quand se sera fonctionnel
 // import InputRadio from '../components/molecules/InputRadio'
@@ -21,25 +19,15 @@ const Title = ({ children }) => (
 )
 
 const EnrolmentForm = ({ status, onSubmit }) => {
-  const schema = yup.object().shape({
-      // TODO à rajouter quand se sera fonctionnel
-        // gender: yup.string().required('Requis'),
-        email: yup.string().required('Requis').email(),
-        lastName: yup.string().required('Requis'),
-        firstName: yup.string().required('Requis'),
-    })
-
-    const {
-        reset,
-        register,
-        handleSubmit,
-        control,
-        errors,
-        trigger,
-    } = useForm({
-        resolver: yupResolver(schema),
-    })
-
+  const {
+    reset,
+    register,
+    handleSubmit,
+    control,
+    errors,
+    trigger,
+  } = useForm()
+  
     useEffect(() => { reset() }, [])
 
     const renderSubmitButton = () => {
@@ -75,7 +63,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
             <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
               <div className="space-y-1">
                 {/* <label htmlFor="gender">Civilité* :</label> */}
-                //* TypeError: Cannot destructure property 'invalid' of 'meta' as it is undefined.
+                {/* //* TypeError: Cannot destructure property 'invalid' of 'meta' as it is undefined. */}
                 {/* <InputRadio
                   name="gender"
                   control={control}
@@ -103,7 +91,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                     w-full p-2 border
                     rounded-none outline-none
                   `}
-                  ref={register}
+                  {...register("email")}
                 />
                 <span className="text-tc-red">{errors?.email?.message}</span>
               </div>
@@ -124,7 +112,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                       w-full p-2 border
                       rounded-none outline-none
                   `}
-                  ref={register}
+                  {...register("lastName")}
                 />
                 <span className="text-tc-red">{errors?.lastName?.message}</span>
               </div>
@@ -145,7 +133,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                         w-full p-2 border
                         rounded-none outline-none
                     `}
-                    ref={register}
+                    {...register("firstName")}
                   />
                   <span className="text-tc-red">{errors?.firstName?.message}</span>
                 </div>
@@ -162,18 +150,16 @@ const pageDescription = "Inscription"
 const pageUrl = 'https://tera-campus.com/enrolment'
 
 export default function Enrolment() {
-  // *fonctionne avec react-router-dom
+  // *utiliser useRouter ()
   // const history = useHistory()
 
-    // Removes keys with empty string as value from an object
-    // eslint-disable-next-line no-unused-vars
-    const removeEmptyStrings = obj => Object.fromEntries(Object.entries(obj).filter(([_, v]) => v != ''))
 
     const mutation = useMutation(data => axios.post('/arpette/enrolments/', data).then(
         ({ data }) => history.push(`/enrolment-quiz?key=${data.quizSession}`)
     ), { retry: 3 })
 
-  const onSubmit = formData => mutation.mutate(orderDocuments(removeEmptyStrings(formData)))
+  const onSubmit = formData => mutation.mutate(formData)
+  // const onSubmit = formData => console.log(formData)
   
   return (
     <>
