@@ -27,7 +27,7 @@ export default function EnrolmentForm ({
     const {
     //     reset,
         register,
-    //     handleSubmit,
+        handleSubmit,
     //     control,
         errors,
     //     trigger,
@@ -50,32 +50,33 @@ export default function EnrolmentForm ({
     // ), { retry: 3 })
 
     // const onSubmit = formData => mutation.mutate(removeEmptyStrings(formData))
+  const onSubmit = (data) => console.log (`Email input value : ${data.email}`)
 
   // TODO voir pour importer la molecule ImputButton
-    const renderSubmitButton = () => {
-        switch (status) {
-            case 'loading':
-                return <input
-                    type="submit"
-                    value="En cours d'envoi ..."
-                    className="w-full p-4 bg-gray-400 outline-none md:col-span-2"
-                    disabled
-                />
-            case 'success':
-                return <input
-                    type="submit"
-                    value="Envoyé !"
-                    className="w-full p-4 bg-green-400 outline-none md:col-span-2"
-                    disabled
-                />
-            default:
-                return <input
-                    type="submit"
-                    value="Envoyer"
-                    className="w-full p-4 bg-yellow-400 shadow outline-none cursor-pointer md:col-span-2 hover:bg-yellow-500 hover:shadow-none"
-                />
-        }
-  }
+  //   const renderSubmitButton = () => {
+  //       switch (status) {
+  //           case 'loading':
+  //               return <input
+  //                   type="submit"
+  //                   value="En cours d'envoi ..."
+  //                   className="w-full p-4 bg-gray-400 outline-none md:col-span-2"
+  //                   disabled
+  //               />
+  //           case 'success':
+  //               return <input
+  //                   type="submit"
+  //                   value="Envoyé !"
+  //                   className="w-full p-4 bg-green-400 outline-none md:col-span-2"
+  //                   disabled
+  //               />
+  //           default:
+  //               return <input
+  //                   type="submit"
+  //                   value="Envoyer"
+  //                   className="w-full p-4 bg-yellow-400 shadow outline-none cursor-pointer md:col-span-2 hover:bg-yellow-500 hover:shadow-none"
+  //               />
+  //       }
+  // }
   
   const registerCandidat = async event => {
     event.preventDefault()
@@ -96,8 +97,9 @@ export default function EnrolmentForm ({
   }
 
     return (
-      <form onSubmit={registerCandidat}
-        // onSubmit={(handleSubmit(onSubmit))}
+      <form
+        // onSubmit={registerCandidat}
+        onSubmit={(handleSubmit(onSubmit))}
       >
         <fieldset>
            <legend className="w-full my-8 text-xl font-bold text-center">Ton identité</legend>
@@ -109,7 +111,7 @@ export default function EnrolmentForm ({
                   name="email"
                   placeholder="thomas.anderson@tera-campus.com"
                 label="E-mail :"
-                ref={register({ required: true })}
+                // ref={register({ required: true })}
                 />
                 <span className="text-tc-red">{errors?.type?.message}</span>
               </div>        
@@ -132,7 +134,7 @@ export default function EnrolmentForm ({
                   name="lastName"
                   placeholder="Anderson"
                   label="Nom* :"
-                  ref={register({ required: true })}
+                  // ref={register({ required: true })}
                 />
                 <span className="text-tc-red">{errors?.lastName?.message}</span>
               </div>
@@ -143,13 +145,16 @@ export default function EnrolmentForm ({
                   name="firstName"
                   placeholder="Thomas"
                   label="Prénom* :"
-                  ref={register({ required: true })}
+                  // ref={register({ required: true })}
                 />
                 <span className="text-tc-red">{errors?.firstName?.message}</span>
               </div>
             </div>
           </div>
-          <div className="m-8">{ renderSubmitButton() }</div>
+          {/* <div className="m-8">{ renderSubmitButton() }</div> */}
+          <div className="mx-auto">
+            <input type="submit" value="Envoyer" />
+          </div>
         </fieldset>
       </form>
     )
