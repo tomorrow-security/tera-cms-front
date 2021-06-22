@@ -8,7 +8,8 @@
 // }
 
 export default function InputRadio({
-  choices,
+    choices,
+    ref,
   // control,
   name }) {
   // const { field, meta } = useController({
@@ -42,7 +43,7 @@ export default function InputRadio({
                                 value={choice.value}
                                 className="hidden"
                                 // onChange={onChange}
-                                // ref={ref}
+                                ref={ref}
                             />
                         </div>
                     )
