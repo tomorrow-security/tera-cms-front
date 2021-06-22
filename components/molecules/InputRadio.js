@@ -9,7 +9,7 @@ const getBorder = (invalid, selected) => {
 // TODO nouvelle version react-hook-form :  useController nouvelle écriture
 function InputRadio({choices, control, name }) {
     const {
-        field: { onChange, ref, value },
+        field: { onChange, value },
         fieldState: { invalid },
        
     } = useController({
