@@ -432,6 +432,10 @@ export default function Enrolment() {
       </Head>
 
       <main className="mx-2 md:container md:mx-auto">
+        <BlockTitle
+                    title="Inscription"
+                    iconPicture={{ backgroundImage: "url('inscription-red-into-blue.png')" }}
+                />
                 <EnrolmentForm status={mutation.status} onSubmit={onSubmit} />
             </main>
     </>
