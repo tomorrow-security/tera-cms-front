@@ -23,8 +23,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
     register,
     handleSubmit,
     control,
-    errors,
-    trigger,
+    formState :{ errors }
   } = useForm()
   
     useEffect(() => { reset() }, [])
@@ -79,14 +78,9 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                   name="email"
                   type="email"
                   placeholder="thomas.anderson@tera-campus.com"
-                  //* TypeError: Cannot read property 'email' of undefined
-                  // className={`
-                  //   w-full p-2 border
-                  //   ${errors.email ? 'border-tc-red' : 'border-black'}
-                  //   rounded-none outline-none
-                  // `}
                   className={`
                     w-full p-2 border
+                    ${errors.email ? 'border-tc-red' : 'border-black'}
                     rounded-none outline-none
                   `}
                   {...register("email", { required: true })}
@@ -100,14 +94,9 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                   name="lastName"
                   type="text"
                   placeholder="Anderson"
-                  //* TypeError: Cannot read property 'lastName' of undefined
-                  // className={`
-                  //     w-full p-2 border
-                  //     ${errors.lastName ? 'border-tc-red' : 'border-black'}
-                  //     rounded-none outline-none
-                  // `}
-                className={`
+                  className={`
                       w-full p-2 border
+                      ${errors.lastName ? 'border-tc-red' : 'border-black'}
                       rounded-none outline-none
                   `}
                   {...register("lastName", { required: true })}
@@ -121,14 +110,9 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                     name="firstName"
                     type="text"
                   placeholder="Thomas"
-                  //* TypeError: Cannot read property 'firstName' of undefined
-                    // className={`
-                    //     w-full p-2 border
-                    //     ${errors.firstName ? 'border-tc-red' : 'border-black'}
-                    //     rounded-none outline-none
-                    // `}
-                   className={`
+                    className={`
                         w-full p-2 border
+                        ${errors.firstName ? 'border-tc-red' : 'border-black'}
                         rounded-none outline-none
                     `}
                     {...register("firstName", { required: true })}
