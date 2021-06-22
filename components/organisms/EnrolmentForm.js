@@ -1,8 +1,8 @@
 // import axios from 'axios'
 import { useForm } from 'react-hook-form'
-// import { useMutation } from 'react-query'
-// import { yupResolver } from '@hookform/resolvers/yup'
-// import * as yup from 'yup'
+import { useMutation } from 'react-query'
+import { yupResolver } from '@hookform/resolvers/yup'
+import * as yup from 'yup'
 
 import InputRadio from '../molecules/InputRadio'
 import Input from '../molecules/Input'
