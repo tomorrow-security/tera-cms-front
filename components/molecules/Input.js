@@ -4,8 +4,7 @@ export default function Input({
   name,
   placeholder,
   label,
-  required,
-  // ref,
+  ref,
 }) {
   
     return (
@@ -26,8 +25,7 @@ export default function Input({
             name={name}
             placeholder={placeholder}
             autoComplete={id}
-            required={required}
-              // ref={ref}
+            ref={ref}
             className="w-2/3 p-2 border rounded outline-none lg:max-w-md border-1"
             // className={`
             //     w-full p-2 border

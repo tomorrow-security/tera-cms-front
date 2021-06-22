@@ -1,5 +1,5 @@
 // import axios from 'axios'
-// import { useForm } from 'react-hook-form'
+import { useForm } from 'react-hook-form'
 // import { useMutation } from 'react-query'
 // import { yupResolver } from '@hookform/resolvers/yup'
 // import * as yup from 'yup'
@@ -24,16 +24,18 @@ export default function EnrolmentForm ({
     //     firstName: yup.string().required('Requis'),
     // })
 
-    // const {
+    const {
     //     reset,
-    //     register,
+        register,
     //     handleSubmit,
     //     control,
-    //     errors,
+        errors,
     //     trigger,
-    //       } = useForm({
+    } = useForm(
+      // {
     //          resolver: yupResolver(schema),
-    //       })
+      // }
+    )
 
     // useEffect(() => { reset() }, [])
   
@@ -41,7 +43,7 @@ export default function EnrolmentForm ({
   
   // Removes keys with empty string as value from an object
     // eslint-disable-next-line no-unused-vars
-    const removeEmptyStrings = obj => Object.fromEntries(Object.entries(obj).filter(([_, v]) => v != ''))
+    // const removeEmptyStrings = obj => Object.fromEntries(Object.entries(obj).filter(([_, v]) => v != ''))
 
     // const mutation = useMutation(data => axios.post('/arpette/enrolments/', data).then(
     //     ({ data }) => history.push(`/enrolment-quiz?key=${data.quizSession}`)
@@ -107,9 +109,9 @@ export default function EnrolmentForm ({
                   name="email"
                   placeholder="thomas.anderson@tera-campus.com"
                 label="E-mail :"
-                required="required"
+                ref={register({ required: true })}
                 />
-                {/* <span className="text-tc-red">{error?.type?.message}</span> */}
+                <span className="text-tc-red">{errors?.type?.message}</span>
               </div>        
               <div>
                 <div className="m-2">
@@ -121,7 +123,7 @@ export default function EnrolmentForm ({
                       { label: 'M.', value: 'M' },
                     ]}
                   />
-                  {/* <span className="col-span-2 text-tc-red">{errors?.gender?.message}</span> */}
+                  <span className="col-span-2 text-tc-red">{errors?.gender?.message}</span>
                 </div>
               <div className="m-2">
                 <Input
@@ -130,9 +132,9 @@ export default function EnrolmentForm ({
                   name="lastName"
                   placeholder="Anderson"
                   label="Nom* :"
-                  required="required"
+                  ref={register({ required: true })}
                 />
-                {/* <span className="text-tc-red">{errors?.lastName?.message}</span> */}
+                <span className="text-tc-red">{errors?.lastName?.message}</span>
               </div>
               <div className="m-2">
                 <Input
@@ -141,9 +143,9 @@ export default function EnrolmentForm ({
                   name="firstName"
                   placeholder="Thomas"
                   label="Prénom* :"
-                  required="required"
+                  ref={register({ required: true })}
                 />
-                {/* <span className="text-tc-red">{errors?.firstName?.message}</span> */}
+                <span className="text-tc-red">{errors?.firstName?.message}</span>
               </div>
             </div>
           </div>
