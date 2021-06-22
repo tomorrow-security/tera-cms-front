@@ -15,7 +15,7 @@ const Title = ({ children }) => (
         <h2 className="text-2xl font-light lg:text-3xl text-tc-blue">{children}</h2>
     </div>
 )
-
+// TODO importer la molecule EnrolmentForm à la palce
 const EnrolmentForm = ({ status, onSubmit }) => {
   const {
     reset,
@@ -27,6 +27,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
   
     useEffect(() => { reset() }, [])
 
+  // TODO importer la molecule InputButton à la palce
     const renderSubmitButton = () => {
         switch (status) {
             case 'loading':
@@ -71,6 +72,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                 <span className="col-span-2 text-tc-red">{errors?.gender?.message}</span>
               </div>
               <div className="space-y-1">
+                // TODO importer la molecule Input à la palce
                 <label htmlFor="email">E-mail* :</label>
                 <input
                   id="email"
@@ -87,6 +89,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                 <span className="text-tc-red">{errors?.email?.message}</span>
               </div>
               <div className="space-y-1">
+                 // TODO importer la molecule Input à la palce
                 <label htmlFor="lastName">Nom* :</label>
                 <input
                   id="lastName"
@@ -103,6 +106,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                 <span className="text-tc-red">{errors?.lastName?.message}</span>
               </div>
               <div className="space-y-1">
+                 // TODO importer la molecule Input à la palce
                   <label htmlFor="firstName">Prénom* :</label>
                   <input
                     id="firstName"
