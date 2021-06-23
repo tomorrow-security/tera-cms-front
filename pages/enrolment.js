@@ -57,7 +57,6 @@ const EnrolmentForm = ({ status, onSubmit }) => {
       <form onSubmit={(handleSubmit(onSubmit))}>
         <div className="grid grid-cols-1 gap-12 py-10 md:py-24">
           <div>
-            <Title>Ton identité</Title>
             <div className="grid grid-cols-1 gap-x-4 gap-y-8 lg:grid-cols-2">
               <div className="space-y-1">
                 <label htmlFor="gender">Civilité* :</label>
@@ -168,7 +167,7 @@ export default function Enrolment() {
         <section id="enrolment" className="py-10 md:py-20">
           <div className="flex flex-col justify-between flex-grow md:container md:mx-auto">
             <BlockTitle
-              title="Inscription"
+              title="Pré-inscription"
               iconPicture={{ backgroundImage: "url('inscription-red-into-blue.png')" }}
             />
           </div>
