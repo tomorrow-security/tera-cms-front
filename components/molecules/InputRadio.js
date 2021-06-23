@@ -11,7 +11,6 @@ function InputRadio({choices, control, name }) {
     const {
         field: { onChange, value },
         fieldState: { invalid },
-       
     } = useController({
     name,
     control,
