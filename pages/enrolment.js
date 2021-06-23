@@ -136,6 +136,8 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                   <span className="text-tc-red">{errors?.phone?.message}</span>
               </div>
               <div className="space-y-1">
+                {/* // TODO le message d'erreur ne fonctionne pas 
+                <InputCheckRGPD /> */}
                 <label className="block">
                   <div className="flex flex-row content-center align-center w-max">
                     <input
