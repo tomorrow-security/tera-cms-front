@@ -9,12 +9,9 @@ import { useMutation } from 'react-query'
 
 import BlockTitle from '../components/atoms/BlockTitle'
 import InputRadio from '../components/molecules/InputRadio'
+// import InputCheckRGPD from '../components/molecules/InputCheckRGPD'
+import PageLink from '../components/atoms/PageLink'
 
-const Title = ({ children }) => (
-    <div className="mb-4 border-b border-tc-blue">
-        <h2 className="text-2xl font-light lg:text-3xl text-tc-blue">{children}</h2>
-    </div>
-)
 // TODO importer la molecule EnrolmentForm à la place
 const EnrolmentForm = ({ status, onSubmit }) => {
   const {
@@ -57,7 +54,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
       <form onSubmit={(handleSubmit(onSubmit))}>
         <div className="grid grid-cols-1 gap-12 py-10 md:py-24">
           <div>
-            <div className="grid grid-cols-1 gap-x-4 gap-y-8 lg:grid-cols-2">
+            <div className="grid items-center grid-cols-1 gap-x-4 gap-y-8 lg:grid-cols-2">
               <div className="space-y-1">
                 <label htmlFor="gender">Civilité* :</label>
                 <InputRadio
@@ -108,19 +105,58 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                  {/* // TODO importer la molecule Input à la place */}
                   <label htmlFor="firstName">Prénom* :</label>
                   <input
-                    id="firstName"
-                    name="firstName"
-                    type="text"
+                  id="firstName"
+                  name="firstName"
+                  type="text"
                   placeholder="Thomas"
-                    className={`
-                        w-full p-2 border
-                        ${errors.firstName ? 'border-tc-red' : 'border-black'}
-                        rounded-none outline-none
-                    `}
-                    {...register("firstName", { required: true })}
+                  className={`
+                      w-full p-2 border
+                      ${errors.firstName ? 'border-tc-red' : 'border-black'}
+                      rounded-none outline-none
+                  `}
+                  {...register("firstName", { required: true })}
                   />
                   <span className="text-tc-red">{errors?.firstName?.message}</span>
-                </div>
+              </div>
+              <div className="space-y-1">
+                 {/* // TODO importer la molecule Input à la place */}
+                  <label htmlFor="phone">Prénom* :</label>
+                  <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  placeholder="1234567890"
+                  className={`
+                      w-full p-2 border
+                      ${errors.phone ? 'border-tc-red' : 'border-black'}
+                      rounded-none outline-none
+                  `}
+                  {...register("phone", { required: true })}
+                  />
+                  <span className="text-tc-red">{errors?.phone?.message}</span>
+              </div>
+              <div className="space-y-1">
+                <label className="block">
+                  <div className="flex flex-row content-center align-center w-max">
+                    <input
+                      type="checkbox"
+                      className="my-auto mr-2 border outline-none "
+                      {...register("acceptPrivacyRules", { required: true })}
+                    />
+                    <span className="flex flex-row text-xs flex-nowrap align-items sm:text-base">
+                      J'ai lu et j'accepte la&nbsp;
+                      <PageLink id="privacy" 
+                        label="politique de confidentialité" />
+                      &nbsp;de Tera Campus.
+                    </span>
+                  </div>
+                </label>
+                {
+                  errors.acceptPrivacyRules && <span className="text-tc-red">
+                    Tu dois accepter la politique de confidentialité pour continuer.
+                  </span>
+                }
+              </div>
             </div>
           </div>
         </div>
@@ -139,7 +175,8 @@ export default function Enrolment() {
       email: input.email,
       gender: input.gender,
       firstName: input.firstName,
-      lastName: input.lastName
+      lastName: input.lastName,
+      phone: imput.phone
     }
     return output
   }
@@ -163,7 +200,7 @@ export default function Enrolment() {
         <meta property="og:description" content={pageDescription} />
       </Head>
 
-      <main className="mx-2 md:container md:mx-auto">
+      <main className="mx-2 md:mx-4">
         <section id="enrolment" className="py-10 md:py-20">
           <div className="flex flex-col justify-between flex-grow md:container md:mx-auto">
             <BlockTitle
