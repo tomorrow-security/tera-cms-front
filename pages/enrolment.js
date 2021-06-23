@@ -10,6 +10,7 @@ import { useMutation } from 'react-query'
 import BlockTitle from '../components/atoms/BlockTitle'
 import InputRadio from '../components/molecules/InputRadio'
 // import InputCheckRGPD from '../components/molecules/InputCheckRGPD'
+import Input from '../components/molecules/Input'
 import PageLink from '../components/atoms/PageLink'
 
 // TODO importer la molecule EnrolmentForm à la place
@@ -69,6 +70,14 @@ const EnrolmentForm = ({ status, onSubmit }) => {
               </div>
               <div className="space-y-1">
                 {/* // TODO importer la molecule Input à la place */}
+                <Input
+                id="email"
+                type="email"
+                name="email"
+                placeholder="thomas.anderson@tera-campus.com"
+                label="E-mail :"
+                register={register("email", { required: true })}
+                />
                 <label htmlFor="email">E-mail* :</label>
                 <input
                   id="email"
