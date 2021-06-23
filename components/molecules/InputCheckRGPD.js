@@ -11,7 +11,7 @@ export default function InputCheckRGPD () {
         <input
           type="checkbox"
           name='acceptPrivacyRules'
-          className={`my-auto mr-2 border-8 outline-none ${errors.acceptPrivacyRules ? 'border-tc-red' : 'border-tc-blue'}`} 
+          className={`my-auto mr-2 border outline-none ${errors.acceptPrivacyRules ? 'border-tc-red' : 'border-tc-blue'}`} 
           {...register("acceptPrivacyRules", { required: true })}
         />
         <span className="flex flex-row text-xs flex-nowrap align-items sm:text-base">
@@ -21,7 +21,7 @@ export default function InputCheckRGPD () {
           &nbsp;de Tera Campus.
         </span>
       </div>
-      {/* errors ne fonctionne pas */}
+      {/* // TODO errors ne fonctionne pas */}
       {
         errors.acceptPrivacyRules && <span className="text-tc-red">
           Tu dois accepter la politique de confidentialité pour continuer.
