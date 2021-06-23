@@ -135,6 +135,16 @@ const pageDescription = "Inscription"
 const pageUrl = 'https://tera-campus.com/enrolment'
 
 export default function Enrolment() {
+  const orderDocuments = input => {
+    const output = {
+      email: input.email,
+      gender: input.gender,
+      firstName: input.firstName,
+      lastName: input.lastName
+    }
+    return output
+  }
+  
   const router = useRouter()
 
 
@@ -142,7 +152,7 @@ export default function Enrolment() {
         ({ data }) => router.push(`/enrolment-quiz?key=${data.quizSession}`)
     ), { retry: 3 })
 
-  const onSubmit = formData => mutation.mutate(formData)
+  const onSubmit = formData => mutation.mutate(orderDocuments(formData))
   
   return (
     <>
