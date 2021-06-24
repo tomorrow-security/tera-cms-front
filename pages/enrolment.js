@@ -188,7 +188,9 @@ const EnrolmentForm = ({ status, onSubmit }) => {
             </div>
           </div>
         </div>
-          <div className="flex items-center justify-center my-4">{ renderSubmitButton() }</div>
+        <div className="flex items-center justify-center my-4 xl:my-20">
+          {renderSubmitButton()}
+        </div>
       </form>
     )
 }
@@ -236,7 +238,9 @@ export default function Enrolment() {
               iconPicture={{ backgroundImage: "url('inscription-red-into-blue.png')" }}
             />
           </div>
-          <EnrolmentForm status={mutation.status} onSubmit={onSubmit} />
+          <div className="xl:my-12"
+          ><EnrolmentForm status={mutation.status} onSubmit={onSubmit} />
+          </div>
         </section>
       </main>
     </>
