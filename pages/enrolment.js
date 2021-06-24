@@ -13,6 +13,9 @@ import InputRadio from '../components/molecules/InputRadio'
 import Input from '../components/molecules/Input'
 import PageLink from '../components/atoms/PageLink'
 
+//TODO descendre un peu le submit en view desktop
+
+
 // TODO importer la molecule EnrolmentForm à la place
 const EnrolmentForm = ({ status, onSubmit }) => {
   const {
