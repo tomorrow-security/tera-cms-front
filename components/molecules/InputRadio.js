@@ -19,16 +19,16 @@ function InputRadio({choices, control, name }) {
   })
 
     return (
-        <div className="flex">
+        <div className="flex flex-1">
             {
                 choices.map(choice => {
 									const id = `${name}${choice.value}`
 									const isSelected = choice.value == value
                     return(
-                        <div className="flex flex-1" key={id}>
+                        <div className="flex justify-center flex-1" key={id}>
                             <label
                                 htmlFor={id}
-                                className={`flex-1 p-2 mx-2 rounded ${getBorder(invalid, isSelected)} text-center cursor-pointer`}
+                                className={`flex flex-1 justify-center p-2 mx-2 rounded ${getBorder(invalid, isSelected)} text-center cursor-pointer`}
                             >
                                 {choice.label}
                             </label>
