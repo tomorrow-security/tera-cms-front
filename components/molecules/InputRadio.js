@@ -28,7 +28,7 @@ function InputRadio({choices, control, name }) {
                         <div className="flex flex-1" key={id}>
                             <label
                                 htmlFor={id}
-                                className={`flex-1 p-2 ${getBorder(invalid, isSelected)} text-center cursor-pointer`}
+                                className={`flex-1 p-2 mx-2 rounded ${getBorder(invalid, isSelected)} text-center cursor-pointer`}
                             >
                                 {choice.label}
                             </label>
