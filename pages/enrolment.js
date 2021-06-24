@@ -70,111 +70,117 @@ const EnrolmentForm = ({ status, onSubmit }) => {
       <form classname="w-full mx-2" onSubmit={(handleSubmit(onSubmit))}>
         <div>
           <div>
-            <div className="space-y-1">
-              <div className="flex items-center space-y-1">
-                <label htmlFor="gender" className="w-1/4">Civilité* :</label>
-                <InputRadio
-                  name="gender"
-                  control={control}
-                  choices={[
-                      { label: 'Mme', value: 'F' },
-                      { label: 'M.', value: 'M' },
-                  ]}
-                />
-                <span className=" text-tc-red">{errors?.gender?.message}</span>
-              </div>
-              <div className="flex items-center space-y-1">
-                {/* // TODO importer la molecule Input à la place */}
-                {/* //* errors ne fonctionne pas
-                <Input
-                id="email"
-                type="email"
-                name="email"
-                placeholder="thomas.anderson@tera-campus.com"
-                label="E-mail :"
-                register={register("email", { required: true })}
-                /> */}
-                <label htmlFor="email" className="w-1/4">E-mail* :</label>
-                <input
+            <div className="space-y-1 xl:space-y-8 xl:flex xl:flex-col xl:items-center">
+              <div className="xl:flex xl:justify-between xl:w-4/5 xl:flex-nowrap">
+                <div className="flex items-center space-y-1 xl:w-45%">
+                  <label htmlFor="gender" className="w-30%">Civilité* :</label>
+                  <InputRadio
+                    name="gender"
+                    control={control}
+                    choices={[
+                        { label: 'Mme', value: 'F' },
+                        { label: 'M.', value: 'M' },
+                    ]}
+                  />
+                  <span className=" text-tc-red">{errors?.gender?.message}</span>
+                </div>
+                <div className="flex items-center space-y-1 xl:w-45%">
+                  {/* // TODO importer la molecule Input à la place */}
+                  {/* //* errors ne fonctionne pas
+                  <Input
                   id="email"
-                  name="email"
                   type="email"
+                  name="email"
                   placeholder="thomas.anderson@tera-campus.com"
-                  className={`p-2 flex-1 border rounded mx-2 outline-none
-                    ${errors.email ? 'border-tc-red' : 'border-black'}
-                  `}
-                  {...register("email", { required: true })}
-                />
-                <span className="text-tc-red">{errors?.email?.message}</span>
-              </div>
-              <div className="flex items-center space-y-1">
-                 {/* // TODO importer la molecule Input à la place */}
-                <label htmlFor="lastName" className="w-1/4">Nom* :</label>
-                <input
-                  id="lastName"
-                  name="lastName"
-                  type="text"
-                  placeholder="Anderson"
-                  className={`mx-2 p-2 flex-1 border rounded outline-none
-                    ${errors.lastName ? 'border-tc-red' : 'border-black'}
-                  `}
-                  {...register("lastName", { required: true })}
-                />
-                <span className="text-tc-red">{errors?.lastName?.message}</span>
-              </div>
-              <div className="flex items-center space-y-1">
-                 {/* // TODO importer la molecule Input à la place */}
-                  <label htmlFor="firstName" className="w-1/4">Prénom* :</label>
+                  label="E-mail :"
+                  register={register("email", { required: true })}
+                  /> */}
+                  <label htmlFor="email" className="w-30%">E-mail* :</label>
                   <input
-                  id="firstName"
-                  name="firstName"
-                  type="text"
-                  placeholder="Thomas"
-                  className={`mx-2 p-2 flex-1 border rounded outline-none
-                      ${errors.firstName ? 'border-tc-red' : 'border-black'}
-                  `}
-                  {...register("firstName", { required: true })}
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="thomas.anderson@tera-campus.com"
+                    className={`p-2 flex-1 border rounded mx-2 outline-none
+                      ${errors.email ? 'border-tc-red' : 'border-black'}
+                    `}
+                    {...register("email", { required: true })}
                   />
-                  <span className="text-tc-red">{errors?.firstName?.message}</span>
+                  <span className="text-tc-red">{errors?.email?.message}</span>
+                </div>
               </div>
-              <div className="flex items-center space-y-1">
-                 {/* // TODO importer la molecule Input à la place */}
-                  <label htmlFor="phone" className="w-1/4">Prénom* :</label>
+              <div className="xl:flex xl:justify-between xl:w-4/5 xl:flex-nowrap">
+                <div className="flex items-center space-y-1 xl:w-45%">
+                   {/* // TODO importer la molecule Input à la place */}
+                  <label htmlFor="lastName" className="w-30%">Nom* :</label>
                   <input
-                  id="phone"
-                  name="phone"
-                  type="tel"
-                  placeholder="1234567890"
-                  className={`mx-2 p-2 flex-1 border rounded outline-none
-                      ${errors.phone ? 'border-tc-red' : 'border-black'}
-                  `}
-                  {...register("phone", { required: true })}
+                    id="lastName"
+                    name="lastName"
+                    type="text"
+                    placeholder="Anderson"
+                    className={`mx-2 p-2 flex-1 border rounded outline-none
+                      ${errors.lastName ? 'border-tc-red' : 'border-black'}
+                    `}
+                    {...register("lastName", { required: true })}
                   />
-                  <span className="text-tc-red">{errors?.phone?.message}</span>
-              </div>
-              <div className="space-y-1">
-                {/* // TODO le message d'erreur ne fonctionne pas 
-                <InputCheckRGPD /> */}
-                <label className="flex my-4">
-                  <div className="flex flex-row content-center flex-nowrap align-center w-max">
+                  <span className="text-tc-red">{errors?.lastName?.message}</span>
+                </div>
+                <div className="flex items-center space-y-1 xl:w-45%">
+                   {/* // TODO importer la molecule Input à la place */}
+                    <label htmlFor="firstName" className="w-30%">Prénom* :</label>
                     <input
-                      type="checkbox"
-                      className="my-auto mr-2 border outline-none "
-                      {...register("acceptPrivacyRules", { required: true })}
+                    id="firstName"
+                    name="firstName"
+                    type="text"
+                    placeholder="Thomas"
+                    className={`mx-2 p-2 flex-1 border rounded outline-none
+                        ${errors.firstName ? 'border-tc-red' : 'border-black'}
+                    `}
+                    {...register("firstName", { required: true })}
                     />
-                    <div className="flex flex-row flex-wrap max-w-full text-xs align-items sm:text-base">
-                      <p>J'ai lu et j'accepte la&nbsp;</p>
-                      <PageLink id="privacy" 
-                        label="politique de confidentialité" />
-                      <p>&nbsp;de Tera Campus.</p>
+                    <span className="text-tc-red">{errors?.firstName?.message}</span>
+                </div>
+              </div>
+              <div className="xl:flex xl:justify-between xl:w-4/5 xl:flex-nowrap">
+                <div className="flex items-center space-y-1 xl:w-45%">
+                   {/* // TODO importer la molecule Input à la place */}
+                    <label htmlFor="phone" className="w-30%">Téléphone* :</label>
+                    <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    placeholder="1234567890"
+                    className={`mx-2 p-2 flex-1 border rounded outline-none
+                        ${errors.phone ? 'border-tc-red' : 'border-black'}
+                    `}
+                    {...register("phone", { required: true })}
+                    />
+                    <span className="text-tc-red">{errors?.phone?.message}</span>
+                </div>
+                <div className="flex flex-col space-y-1 xl:w-45%">
+                  {/* // TODO le message d'erreur ne fonctionne pas 
+                  <InputCheckRGPD /> */}
+                  <label className="flex justify-center flex-1 my-4">
+                    <div className="flex flex-row flex-nowrap w-max">
+                      <input
+                        type="checkbox"
+                        className="mx-4 my-auto border outline-none "
+                        {...register("acceptPrivacyRules", { required: true })}
+                      />
+                      <div className="flex flex-row flex-wrap max-w-full text-xs align-items sm:text-base">
+                        <p>J'ai lu et j'accepte la&nbsp;</p>
+                        <PageLink id="privacy" 
+                          label="politique de confidentialité" />
+                        <p>&nbsp;de Tera Campus.</p>
+                      </div>
                     </div>
-                  </div>
-                </label>
-                {
-                  errors.acceptPrivacyRules && <span className="text-tc-red">
-                    Tu dois accepter la politique de confidentialité pour continuer.
-                  </span>
-                }
+                  </label>
+                  {
+                    errors.acceptPrivacyRules && <span className="text-tc-red">
+                      Tu dois accepter la politique de confidentialité pour continuer.
+                    </span>
+                  }
+                </div>
               </div>
             </div>
           </div>
@@ -219,7 +225,7 @@ export default function Enrolment() {
         <meta property="og:description" content={pageDescription} />
       </Head>
 
-      <main className="mx-2 md:mx-4">
+      <main className="mx-2 md:container md:mx-auto">
         <section id="enrolment" className="py-10 md:py-20">
           <div className="flex flex-col justify-between flex-grow md:container md:mx-auto">
             <BlockTitle
