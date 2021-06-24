@@ -53,11 +53,11 @@ const EnrolmentForm = ({ status, onSubmit }) => {
 
     return (
       <form classname="w-full mx-2" onSubmit={(handleSubmit(onSubmit))}>
-        <div className="grid grid-cols-1 gap-12 py-10 md:py-24">
+        <div>
           <div>
-            <div className="grid items-center grid-cols-1 gap-x-4 gap-y-8 lg:grid-cols-2">
-              <div className="space-y-1">
-                <label htmlFor="gender">Civilité* :</label>
+            <div className="space-y-1">
+              <div className="flex items-center space-y-1">
+                <label htmlFor="gender" className="w-1/4">Civilité* :</label>
                 <InputRadio
                   name="gender"
                   control={control}
@@ -66,9 +66,9 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                       { label: 'M.', value: 'M' },
                   ]}
                 />
-                <span className="col-span-2 text-tc-red">{errors?.gender?.message}</span>
+                <span className=" text-tc-red">{errors?.gender?.message}</span>
               </div>
-              <div className="space-y-1">
+              <div className="flex items-center space-y-1">
                 {/* // TODO importer la molecule Input à la place */}
                 {/* //* errors ne fonctionne pas
                 <Input
@@ -79,67 +79,59 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                 label="E-mail :"
                 register={register("email", { required: true })}
                 /> */}
-                <label htmlFor="email">E-mail* :</label>
+                <label htmlFor="email" className="w-1/4">E-mail* :</label>
                 <input
                   id="email"
                   name="email"
                   type="email"
                   placeholder="thomas.anderson@tera-campus.com"
-                  className={`
-                    w-full p-2 border rounded
+                  className={`p-2 flex-1 border rounded mx-2 outline-none
                     ${errors.email ? 'border-tc-red' : 'border-black'}
-                    outline-none
                   `}
                   {...register("email", { required: true })}
                 />
                 <span className="text-tc-red">{errors?.email?.message}</span>
               </div>
-              <div className="space-y-1">
+              <div className="flex items-center space-y-1">
                  {/* // TODO importer la molecule Input à la place */}
-                <label htmlFor="lastName">Nom* :</label>
+                <label htmlFor="lastName" className="w-1/4">Nom* :</label>
                 <input
                   id="lastName"
                   name="lastName"
                   type="text"
                   placeholder="Anderson"
-                  className={`
-                      w-full p-2 border
-                      ${errors.lastName ? 'border-tc-red' : 'border-black'}
-                      rounded-none outline-none
+                  className={`mx-2 p-2 flex-1 border rounded outline-none
+                    ${errors.lastName ? 'border-tc-red' : 'border-black'}
                   `}
                   {...register("lastName", { required: true })}
                 />
                 <span className="text-tc-red">{errors?.lastName?.message}</span>
               </div>
-              <div className="space-y-1">
+              <div className="flex items-center space-y-1">
                  {/* // TODO importer la molecule Input à la place */}
-                  <label htmlFor="firstName">Prénom* :</label>
+                  <label htmlFor="firstName" className="w-1/4">Prénom* :</label>
                   <input
                   id="firstName"
                   name="firstName"
                   type="text"
                   placeholder="Thomas"
-                  className={`
-                      w-full p-2 border
+                  className={`mx-2 p-2 flex-1 border rounded outline-none
                       ${errors.firstName ? 'border-tc-red' : 'border-black'}
-                      rounded-none outline-none
                   `}
                   {...register("firstName", { required: true })}
                   />
                   <span className="text-tc-red">{errors?.firstName?.message}</span>
               </div>
-              <div className="space-y-1">
+              <div className="flex items-center space-y-1">
                  {/* // TODO importer la molecule Input à la place */}
-                  <label htmlFor="phone">Prénom* :</label>
+                  <label htmlFor="phone" className="w-1/4">Prénom* :</label>
                   <input
                   id="phone"
                   name="phone"
                   type="tel"
                   placeholder="1234567890"
-                  className={`
-                      w-full p-2 border
+                  className={`mx-2 p-2 flex-1 border rounded outline-none
                       ${errors.phone ? 'border-tc-red' : 'border-black'}
-                      rounded-none outline-none
                   `}
                   {...register("phone", { required: true })}
                   />
@@ -148,7 +140,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
               <div className="space-y-1">
                 {/* // TODO le message d'erreur ne fonctionne pas 
                 <InputCheckRGPD /> */}
-                <label className="flex ">
+                <label className="flex my-4">
                   <div className="flex flex-row content-center flex-nowrap align-center w-max">
                     <input
                       type="checkbox"
@@ -172,7 +164,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
             </div>
           </div>
         </div>
-          <div className="flex items-center justify-center">{ renderSubmitButton() }</div>
+          <div className="flex items-center justify-center my-4">{ renderSubmitButton() }</div>
       </form>
     )
 }
@@ -212,7 +204,7 @@ export default function Enrolment() {
         <meta property="og:description" content={pageDescription} />
       </Head>
 
-      <main className="w-full mx-2 md:mx-4">
+      <main className="mx-2 md:mx-4">
         <section id="enrolment" className="py-10 md:py-20">
           <div className="flex flex-col justify-between flex-grow md:container md:mx-auto">
             <BlockTitle
