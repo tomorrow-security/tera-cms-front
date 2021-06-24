@@ -32,27 +32,27 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                 return <input
                     type="submit"
                     value="En cours d'envoi ..."
-                    className="w-full p-4 bg-gray-400 outline-none md:col-span-2"
+                    className="w-1/3 p-4 bg-gray-400 outline-none md:col-span-2"
                     disabled
                 />
             case 'success':
                 return <input
                     type="submit"
                     value="Envoyé !"
-                    className="w-full p-4 bg-green-400 outline-none md:col-span-2"
+                    className="w-1/3 p-4 bg-green-400 outline-none md:col-span-2"
                     disabled
                 />
             default:
                 return <input
                     type="submit"
                     value="Envoyer"
-                    className="w-full p-4 bg-yellow-400 shadow outline-none cursor-pointer md:col-span-2 hover:bg-yellow-500 hover:shadow-none"
+                    className="w-1/3 p-4 bg-yellow-400 shadow outline-none cursor-pointer md:col-span-2 hover:bg-yellow-500 hover:shadow-none"
                 />
         }
     }
 
     return (
-      <form onSubmit={(handleSubmit(onSubmit))}>
+      <form classname="w-full mx-2" onSubmit={(handleSubmit(onSubmit))}>
         <div className="grid grid-cols-1 gap-12 py-10 md:py-24">
           <div>
             <div className="grid items-center grid-cols-1 gap-x-4 gap-y-8 lg:grid-cols-2">
@@ -172,7 +172,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
             </div>
           </div>
         </div>
-          { renderSubmitButton() }
+          <div className="flex items-center justify-center">{ renderSubmitButton() }</div>
       </form>
     )
 }
