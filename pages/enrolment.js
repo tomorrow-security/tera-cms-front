@@ -70,6 +70,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
               </div>
               <div className="space-y-1">
                 {/* // TODO importer la molecule Input à la place */}
+                {/* //* errors ne fonctionne pas
                 <Input
                 id="email"
                 type="email"
@@ -77,7 +78,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                 placeholder="thomas.anderson@tera-campus.com"
                 label="E-mail :"
                 register={register("email", { required: true })}
-                />
+                /> */}
                 <label htmlFor="email">E-mail* :</label>
                 <input
                   id="email"
@@ -85,9 +86,9 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                   type="email"
                   placeholder="thomas.anderson@tera-campus.com"
                   className={`
-                    w-full p-2 border
+                    w-full p-2 border rounded
                     ${errors.email ? 'border-tc-red' : 'border-black'}
-                    rounded-none outline-none
+                    outline-none
                   `}
                   {...register("email", { required: true })}
                 />
@@ -147,19 +148,19 @@ const EnrolmentForm = ({ status, onSubmit }) => {
               <div className="space-y-1">
                 {/* // TODO le message d'erreur ne fonctionne pas 
                 <InputCheckRGPD /> */}
-                <label className="block">
-                  <div className="flex flex-row content-center align-center w-max">
+                <label className="flex ">
+                  <div className="flex flex-row content-center flex-nowrap align-center w-max">
                     <input
                       type="checkbox"
                       className="my-auto mr-2 border outline-none "
                       {...register("acceptPrivacyRules", { required: true })}
                     />
-                    <span className="flex flex-row text-xs flex-nowrap align-items sm:text-base">
-                      J'ai lu et j'accepte la&nbsp;
+                    <div className="flex flex-row flex-wrap max-w-full text-xs align-items sm:text-base">
+                      <p>J'ai lu et j'accepte la&nbsp;</p>
                       <PageLink id="privacy" 
                         label="politique de confidentialité" />
-                      &nbsp;de Tera Campus.
-                    </span>
+                      <p>&nbsp;de Tera Campus.</p>
+                    </div>
                   </div>
                 </label>
                 {
@@ -211,7 +212,7 @@ export default function Enrolment() {
         <meta property="og:description" content={pageDescription} />
       </Head>
 
-      <main className="mx-2 md:mx-4">
+      <main className="w-full mx-2 md:mx-4">
         <section id="enrolment" className="py-10 md:py-20">
           <div className="flex flex-col justify-between flex-grow md:container md:mx-auto">
             <BlockTitle
