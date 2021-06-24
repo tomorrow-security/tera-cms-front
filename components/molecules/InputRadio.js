@@ -19,7 +19,7 @@ function InputRadio({choices, control, name }) {
   })
 
     return (
-        <div className="flex space-x-2">
+        <div className="flex">
             {
                 choices.map(choice => {
 									const id = `${name}${choice.value}`
