@@ -145,7 +145,7 @@ export default function BlockJoin() {
                                 { displayPricing() }
                             </div>
                         </div>
-                        <div className="border rounded md:w-1/2 bg-tc-blue-light">
+                        <div className="border rounded md:w-1/2 bg-tc-blue-xlight">
                             <div className="p-2 text-lg font-bold text-center text-white rounded-t bg-tc-blue">
                                 Découvre l&apos;alternance
                                 {/* dès la 3ème année */}
