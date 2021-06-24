@@ -97,27 +97,30 @@ export default function Contact() {
                         As-tu oublié ce que tu souhaites nous dire ?
                       </span>
                     }
-                  </label>
-                  <label className="block">
-                    <div className="flex flex-row content-center align-center w-max">
+                  </label><div className="flex flex-col space-y-1 xl:w-45%">
+                  {/* // TODO le message d'erreur ne fonctionne pas 
+                  <InputCheckRGPD /> */}
+                  <label className="flex justify-center flex-1 my-4">
+                    <div className="flex flex-row flex-nowrap w-max">
                       <input
                         type="checkbox"
-                        className="my-auto mr-2 border outline-none "
+                        className="mx-4 my-auto border outline-none "
                         {...register("acceptPrivacyRules", { required: true })}
                       />
-                      <span className="flex flex-row text-xs flex-nowrap align-items sm:text-base">
-                        J'ai lu et j'accepte la&nbsp;
+                      <div className="flex flex-row flex-wrap max-w-full text-xs align-items sm:text-base">
+                        <p>J'ai lu et j'accepte la&nbsp;</p>
                         <PageLink id="privacy" 
                           label="politique de confidentialité" />
-                        &nbsp;de Tera Campus.
-                      </span>
+                        <p>&nbsp;de Tera Campus.</p>
+                      </div>
                     </div>
-                    {
-                      errors.acceptPrivacyRules && <span className="text-tc-red">
-                        Tu dois accepter la politique de confidentialité pour continuer.
-                      </span>
-                    }
                   </label>
+                  {
+                    errors.acceptPrivacyRules && <span className="text-tc-red">
+                      Tu dois accepter la politique de confidentialité pour continuer.
+                    </span>
+                  }
+                </div>
                   <InputButton mutation={mutation} />
                 </form>
               </div>
