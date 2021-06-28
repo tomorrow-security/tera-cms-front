@@ -165,20 +165,24 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                     <label className="flex justify-end flex-1 my-4">
                       <div className="flex flex-row flex-nowrap w-max">
                         <input
+                          id='consentContact'
+                          name="consentContact"
                           type="checkbox"
                           className="mx-4 my-auto border outline-none "
-                          {...register("consentContact", { required: true })}
+                          {...register("consentContact"
+                            // , { required: true }
+                          )}
                         />
                         <div className="flex flex-row flex-wrap max-w-full text-xs align-items sm:text-base">
                           <p>J'accepte d'être contacté par Tera Campus</p>
                         </div>
                       </div>
                     </label>
-                    {
+                    {/* {
                       errors.consentContact && <span className="text-tc-red">
                         On ne pourra pas finaliser ton inscription si tu n'accepte pas d'être recontacté
                       </span>
-                    }
+                    } */}
                   </div>
                 </div>
                 <div className="flex flex-col space-y-1 xl:w-45%">
@@ -221,25 +225,28 @@ const pageDescription = "Inscription"
 const pageUrl = 'https://tera-campus.com/enrolment'
 
 export default function Enrolment() {
-  const orderDocuments = input => {
+  // TODO mettre le consent à la fin, il apparaît au début
+  const orderPayload = input => {
     const output = {
       email: input.email,
       gender: input.gender,
       firstName: input.firstName,
       lastName: input.lastName,
-      phone: input.phone
+      phone: input.phone,
+      consent: input.consentContact
     }
     return output
   }
-  
+
   const router = useRouter()
 
-    const mutation = useMutation(data => axios.post('/api/enrolment', data).then(
-        ({ data }) => router.push(`/enrolment-quiz?key=${data.quizSession}`)
-    ), { retry: 3 })
+  const mutation = useMutation(data => axios.post('/api/enrolment', data).then(
+      ({ data }) => router.push(`/enrolment-quiz?key=${data.quizSession}`)
+  ), { retry: 3 })
 
-  const onSubmit = formData => mutation.mutate(orderDocuments(formData))
-  
+  const onSubmit = formData => mutation.mutate(orderPayload(formData))
+  // const onSubmit = formData => console.log(orderPayload(formData))
+
   return (
     <>
       <Head>
