@@ -145,8 +145,9 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                 </div>
               </div>
               <div className="xl:flex xl:justify-between xl:w-4/5 xl:flex-nowrap">
-                <div className="flex items-center space-y-1 xl:w-45%">
-                   {/* // TODO importer la molecule Input à la place */}
+                <div className="space-y-1 xl:w-45%">
+                  <div className="flex items-center ">
+                    {/* // TODO importer la molecule Input à la place */}
                     <label htmlFor="phone" className="w-30%">Téléphone* :</label>
                     <input
                     id="phone"
@@ -159,18 +160,38 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                     {...register("phone", { required: true })}
                     />
                     <span className="text-tc-red">{errors?.phone?.message}</span>
+                  </div>
+                  <div>
+                    <label className="flex justify-end flex-1 my-4">
+                      <div className="flex flex-row flex-nowrap w-max">
+                        <input
+                          type="checkbox"
+                          className="mx-4 my-auto border outline-none "
+                          {...register("consentContact", { required: true })}
+                        />
+                        <div className="flex flex-row flex-wrap max-w-full text-xs align-items sm:text-base">
+                          <p>J'accepte d'être contacté par Tera Campus</p>
+                        </div>
+                      </div>
+                    </label>
+                    {
+                      errors.consentContact && <span className="text-tc-red">
+                        On ne pourra pas finaliser ton inscription si tu n'accepte pas d'être recontacté
+                      </span>
+                    }
+                  </div>
                 </div>
                 <div className="flex flex-col space-y-1 xl:w-45%">
                   {/* // TODO le message d'erreur ne fonctionne pas 
                   <InputCheckRGPD /> */}
                   <label className="flex justify-center flex-1 my-4">
-                    <div className="flex flex-row flex-nowrap w-max">
+                    <div className="flex flex-row items-sart flex-nowrap w-max">
                       <input
                         type="checkbox"
                         className="mx-4 my-auto border outline-none "
                         {...register("acceptPrivacyRules", { required: true })}
                       />
-                      <div className="flex flex-row flex-wrap max-w-full text-xs align-items sm:text-base">
+                      <div className="flex flex-row flex-wrap items-center max-w-full text-xs sm:text-base">
                         <p>J'ai lu et j'accepte la&nbsp;</p>
                         <PageLink id="privacy" 
                           label="politique de confidentialité" />
