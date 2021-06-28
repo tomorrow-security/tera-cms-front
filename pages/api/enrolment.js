@@ -1,10 +1,18 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+export default (req, res) => {
+  const api = process.env.API_URL
 
-export default function handler(req, res) {
-  req.status(200).json({
-  email: 'teracampustest34@yopmail.com',
-  gender: 'M',
-  firstName: 'Toto',
-  lastName: 'TITI' 
+  const request = api
+    .post('send')
+    .request({
+      email: req.body.email,
+      gender: req.body.gender,
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      phone: req.body.phone
+    })
+  
+  request
+    .then(() => res.status(200).send())
+    .catch(() => res.status(500).send())
   })
 }
