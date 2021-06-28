@@ -10,7 +10,7 @@ import { useMutation } from 'react-query'
 import BlockTitle from '../components/atoms/BlockTitle'
 import InputRadio from '../components/molecules/InputRadio'
 // import InputCheckRGPD from '../components/molecules/InputCheckRGPD'
-import Input from '../components/molecules/Input'
+// import Input from '../components/molecules/Input'
 import PageLink from '../components/atoms/PageLink'
 
 //TODO descendre un peu le submit en view desktop
@@ -70,7 +70,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
     }
 
     return (
-      <form classname="w-full mx-2" onSubmit={(handleSubmit(onSubmit))}>
+      <form className="w-full mx-2" onSubmit={(handleSubmit(onSubmit))}>
         <div>
           <div>
             <div className="space-y-1 xl:space-y-8 xl:flex xl:flex-col xl:items-center">
@@ -213,8 +213,7 @@ export default function Enrolment() {
   
   const router = useRouter()
 
-
-    const mutation = useMutation(data => axios.post('/arpette/enrolments/', data).then(
+    const mutation = useMutation(data => axios.post('/api/enrolment', data).then(
         ({ data }) => router.push(`/enrolment-quiz?key=${data.quizSession}`)
     ), { retry: 3 })
 
