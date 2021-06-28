@@ -4,6 +4,7 @@
 [context.production]
   command = "make production"
   [context.production.environment]
+    API_URL = "https://api.tera-campus.com"
     ACCESS_TOKEN = "super secret"
   # Deploys from main branch run this plugin in the build.
   # Plugins context requires double brackets.
@@ -14,6 +15,8 @@
 # All deploys generated from a pull/merge request
 # will inherit these settings.
 [context.deploy-preview.environment]
+  # API_URL = "https://api-staging.tera-campus.com"
+  API_URL = "https://api.tera-campus.com"
   ACCESS_TOKEN = "not so secret"
 
 # Branch deploy context:
