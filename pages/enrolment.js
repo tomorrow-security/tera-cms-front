@@ -169,20 +169,18 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                           name="consentContact"
                           type="checkbox"
                           className="mx-4 my-auto border outline-none "
-                          {...register("consentContact"
-                            // , { required: true }
-                          )}
+                          {...register("consentContact", { required: true })}
                         />
                         <div className="flex flex-row flex-wrap max-w-full text-xs align-items sm:text-base">
                           <p>J'accepte d'être contacté par Tera Campus</p>
                         </div>
                       </div>
                     </label>
-                    {/* {
+                    {
                       errors.consentContact && <span className="text-tc-red">
                         On ne pourra pas finaliser ton inscription si tu n'accepte pas d'être recontacté
                       </span>
-                    } */}
+                    }
                   </div>
                 </div>
                 <div className="flex flex-col space-y-1 xl:w-45%">
