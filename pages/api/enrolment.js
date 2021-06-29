@@ -25,6 +25,6 @@ export default function handler(req, res) {
     })
   
   request
-    .then(() => res.status(200).send({"redirectUrl": "https://tera-campus.com/enrolment/quiz/<UUID>"}))
-    .catch(() => res.status(500).send())
+    .then(() => res.status(201).send({"redirectUrl": "https://tera-campus.com/enrolment/quiz/<UUID>"}))
+    .catch(() => res.status(400).send())
 }
