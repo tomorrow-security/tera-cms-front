@@ -239,6 +239,9 @@ export default function Enrolment() {
   const router = useRouter()
   
 // test------------------
+  //~ const api = connect(process.env.API_URL)
+  //* => connect is not defined
+  
   const api = process.env.API_URL
   const apiEnrolment1 = `{${api}/public/new}`
   console.log(api, apiEnrolment1)
