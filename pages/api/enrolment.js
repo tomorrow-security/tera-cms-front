@@ -2,8 +2,9 @@ export default function handler(req, res) {
   // l'exemple de la doc
   // res.status(200).json({ text: 'Hello' })
 
-  const api = connect(process.env.API_URL)
-  const apiEnrolment1 = `{${API_URL}/public/new}`
+  const connect = connect(process.env.API_URL)
+  const api = process.env.API_URL
+  const apiEnrolment1 = `{${api}/public/new}`
 
   const email = req.body.email
   const gender = req.body.gender
@@ -12,7 +13,7 @@ export default function handler(req, res) {
   const phone = req.body.phone
   const consent = req.body.consentContact
 
-  const request = api
+  const request = connect
     .post({apiEnrolment1})
     .request({
       email,
