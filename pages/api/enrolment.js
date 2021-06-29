@@ -27,4 +27,7 @@ export default function handler(req, res) {
   request
     .then(() => res.status(201).send({"redirectUrl": "https://tera-campus.com/enrolment/quiz/<UUID>"}))
     .catch(() => res.status(400).send())
+  // 400  bad request
+  // 408 Request Timeout
+  // 500 Internal Server Error
 }
