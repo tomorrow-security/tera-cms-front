@@ -237,6 +237,13 @@ export default function Enrolment() {
   }
 
   const router = useRouter()
+  
+// test------------------
+  const api = process.env.API_URL
+  const apiEnrolment1 = `{${api}/public/new}`
+  console.log(api, apiEnrolment1)
+  //* => undefined "{undefined/public/new}"
+//------------------------------
 
   const mutation = useMutation(data => axios.post('/api/enrolment', data).then(
       ({ data }) => router.push(`/enrolment-quiz?key=${data.quizSession}`)
