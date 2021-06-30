@@ -238,16 +238,22 @@ export default function Enrolment() {
 
   const router = useRouter()
 
-  const mutation = useMutation(data => axios.post('/api/enrolment', data)
+   /**connexion à l'API */
+  const api = process.env.NEXT_PUBLIC_API_URL
+  /** enpoint de l'API */
+  const apiEnrolment1 = `${api}/public/enrolment/new`
+    console.log('apiErolment1 :',apiEnrolment1)
+  
+  const mutation = useMutation(data => axios.post(apiEnrolment1, data)
       .then(
       ({ data }) =>
         router.push(`/enrolment-quiz?key=${data.quizSession}`)
       ),
     { retry: 3 },
   )
-  //* => XHR : Methode ok, Request Payload ok
 
   // https://tera-campus.com/enrolment/quiz/<UUID>
+  // {"redirectUrl": "https://tera-campus.com/enrolment/quiz/<UUID>"}
 
   const onSubmit = formData => mutation.mutate(orderPayload(formData))
 
