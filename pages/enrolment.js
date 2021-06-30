@@ -294,36 +294,8 @@ export default function Enrolment() {
 
   // https://tera-campus.com/enrolment/quiz/<UUID>
 
-  // console.log('data :', data)
-  //* => data is not defined
-
   const onSubmit = formData => mutation.mutate(orderPayload(formData))
-  // test -----------------------------------------------------------------------
-   // const onSubmit = formData =>  console.log('formData :', formData)
-  //* => ok
-  // const onSubmit = formData => console.log(orderPayload(formData))
-  //* => ok
-  // const onSubmit = formData => console.log('mutation :', mutate(orderPayload(formData)))
-  //* => 
-  // const onSubmit = formData => console.log('mutation.mutate :', mutation.mutate(orderPayload(formData)))
-  //* => undefined
-  // const onSubmit = console.log('mutation :', mutation)
-  //* => context: undefined
-  //* data: undefined
-  //* error: null
-  //* failureCount: 0
-  //* isError: false
-  //* isIdle: true
-  //* isLoading: false
-  //* isPaused: false
-  //* isSuccess: false
-  //* mutate: ƒ (variables, mutateOptions)
-  //* mutateAsync: ƒ ()
-  //* reset: ƒ ()
-  //* status: "idle"
-  //* variables: undefined
-  //* __proto__: Object
-//--------------------------------------------------------------------------------------------
+
   return (
     <>
       <Head>
