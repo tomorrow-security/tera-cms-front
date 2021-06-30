@@ -239,12 +239,12 @@ export default function Enrolment() {
   const router = useRouter()
   
 // test------------------
-  const api = process.env.NEXT_PUBLIC_API_URL
-  const apiEnrolment1 = `{${api}/public/new}`
-  console.log(api)
-  //* => ok
-  console.log(apiEnrolment1)
-    //* => ok
+  // const api = process.env.NEXT_PUBLIC_API_URL
+  // const apiEnrolment1 = `{${api}/public/new}`
+  // console.log(api)
+  // //* => ok
+  // console.log(apiEnrolment1)
+  //   //* => ok
 
 //------------------------------
 
@@ -252,8 +252,12 @@ export default function Enrolment() {
       ({ data }) => router.push(`/enrolment-quiz?key=${data.quizSession}`)
   ), { retry: 3 })
 
+  // console.log('data :', data)
+  //* => data is not defined
+
   const onSubmit = formData => mutation.mutate(orderPayload(formData))
   // const onSubmit = formData => console.log(orderPayload(formData))
+  // const onSubmit = formData => console.log(mutation.mutate(orderPayload(formData)))
 
   return (
     <>
