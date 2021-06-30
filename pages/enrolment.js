@@ -237,52 +237,7 @@ export default function Enrolment() {
   }
 
   const router = useRouter()
-  
-// test------------------
-  // const api = process.env.NEXT_PUBLIC_API_URL
-  // const apiEnrolment1 = `{${api}/public/new}`
-  // console.log(api)
-  // //* => ok
-  // console.log(apiEnrolment1)
-  // //* => ok
 
-//------------------------------
-  // VIDEO--------------------------------------------------
-  // const addUser = async user => {
-  //   const res = await fetch(
-  //     '/api/enrolment', {
-  //       method: "POST",
-  //       body: JSON.stringify(
-  //         {
-  //         email: user.email,
-  //         gender: user.gender,
-  //         firstName: user.firstName,
-  //         lastName: user.lastName,
-  //         phone: user.phone,
-  //         consent: user.consentContact
-  //         }
-  //       )
-  //     }
-  //   )
-  //   return res.json()
-  // }
-
-  // const mutation = useMutation(addUser, {
-  //   onError: (error, variable, context) => {
-  //     console.log('erreur :', error)
-  //     //* =>  SyntaxError: Unexpected token I in JSON at position 0
-  //     console.log('variable :', variable)
-  //     //* => ok
-  //     console.log('context :', context)
-  //     //* => undefined
-  //   },
-  //   onSuccess: (data, variable, context) => {
-  //     console.log('data')
-  //     axios.post('/api/enrolment', data)
-  //   }
-  // })
-  // //* => XHR : Methode ok, Request Payload ok
-//------------------------------------------------------------------------
   const mutation = useMutation(data => axios.post('/api/enrolment', data)
       .then(
       ({ data }) =>

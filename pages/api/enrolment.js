@@ -7,22 +7,15 @@ export default function handler(req, res) {
   /** enpoint de l'API */
   const apiEnrolment1 = `{${api}/public/new}`
 
-  const email = req.body.email
-  const gender = req.body.gender
-  const firstName = req.body.firstName
-  const lastName = req.body.lastName
-  const phone = req.body.phone
-  const consent = req.body.consentContact
-
   const request = connect
     .post({apiEnrolment1})
     .request({
-      email,
-      gender,
-      firstName,
-      lastName,
-      phone,
-      consent
+      email: req.body.email,
+      gender: req.body.gender,
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      phone: req.body.consentContact,
+      consent: req.body.consentContact
     })
   
   request
