@@ -244,25 +244,54 @@ export default function Enrolment() {
   // console.log(api)
   // //* => ok
   // console.log(apiEnrolment1)
-  //   //* => ok
+  // //* => ok
 
 //------------------------------
+  // VIDEO--------------------------------------------------
+  const addUser = async user => {
+    const res = await fetch(
+      `/api/enrolment`, {
+        method: "POST",
+        body: JSON.stringify({
+          email: user.email,
+          gender: user.gender,
+          firstName: user.firstName,
+          lastName: user.lastName,
+          phone: user.phone,
+          consent: user.consentContact
+        })
+      }
+    )
+    return res.json()
+  }
+
+  const mutation = useMutation(addUser, {
+    onError: (error, variable, context) => {
+      console.log('erreur :', error)
+      console.log('variable :', variable)
+      console.log('context :', context)
+    },
+    onSuccess: (data, variable, context) => {
+      console.log('data')
+      axios.post('/api/enrolment', data)
+    }
+  })
+
+//------------------------------------------------------------------------
+  // const mutation = useMutation(data => axios.post('/api/enrolment', data)
+  //     .then(
+  //     ({ data }) =>
+  //       router.push(`/enrolment-quiz?key=${data.quizSession}`)
+  //     ),
+  //   { retry: 3 },
+  // )
   
-
-  const mutation = useMutation(data => axios.post('/api/enrolment', data)
-      .then(
-      ({ data }) =>
-        router.push(`/enrolment-quiz?key=${data.quizSession}`)
-      ),
-    { retry: 3 },
-  )
-
   // https://tera-campus.com/enrolment/quiz/<UUID>
 
   // console.log('data :', data)
   //* => data is not defined
 
-  // const onSubmit = formData => mutation.mutate(orderPayload(formData))
+  const onSubmit = formData => mutation.mutate(orderPayload(formData))
   // test -----------------------------------------------------------------------
    // const onSubmit = formData =>  console.log('formData :', formData)
   //* => ok
@@ -270,8 +299,24 @@ export default function Enrolment() {
   //* => ok
   // const onSubmit = formData => console.log('mutation :', mutate(orderPayload(formData)))
   //* => 
-  const onSubmit = formData => console.log('mutation.mutate :', mutation.mutate(orderPayload(formData)))
+  // const onSubmit = formData => console.log('mutation.mutate :', mutation.mutate(orderPayload(formData)))
   //* => undefined
+  // const onSubmit = console.log('mutation :', mutation)
+  //* => context: undefined
+  //* data: undefined
+  //* error: null
+  //* failureCount: 0
+  //* isError: false
+  //* isIdle: true
+  //* isLoading: false
+  //* isPaused: false
+  //* isSuccess: false
+  //* mutate: ƒ (variables, mutateOptions)
+  //* mutateAsync: ƒ ()
+  //* reset: ƒ ()
+  //* status: "idle"
+  //* variables: undefined
+  //* __proto__: Object
 //--------------------------------------------------------------------------------------------
   return (
     <>
