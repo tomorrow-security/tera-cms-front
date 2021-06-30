@@ -246,12 +246,14 @@ export default function Enrolment() {
   // TODO mettre dans le push l'url récupéré de l'api et le router va devoir gérer pour renvoyer sur cet url
   const mutation = useMutation(data => axios.post(apiEnrolment1, data)
       .then(
-      ({ data }) =>
-        router.push(`/enrolment-quiz?key=${data.quizSession}`)
+        ({ data }) => {
+          console.log('data :', data)
+          router.push(data.redirectUrl)
+        }
       ),
     { retry: 3 },
   )
-
+  
 
   // https://tera-campus.com/enrolment/quiz/<UUID>
   // {"redirectUrl": "https://tera-campus.com/enrolment/quiz/<UUID>"}
