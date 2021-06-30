@@ -248,44 +248,50 @@ export default function Enrolment() {
 
 //------------------------------
   // VIDEO--------------------------------------------------
-  const addUser = async user => {
-    const res = await fetch(
-      `/api/enrolment`, {
-        method: "POST",
-        body: JSON.stringify({
-          email: user.email,
-          gender: user.gender,
-          firstName: user.firstName,
-          lastName: user.lastName,
-          phone: user.phone,
-          consent: user.consentContact
-        })
-      }
-    )
-    return res.json()
-  }
+  // const addUser = async user => {
+  //   const res = await fetch(
+  //     '/api/enrolment', {
+  //       method: "POST",
+  //       body: JSON.stringify(
+  //         {
+  //         email: user.email,
+  //         gender: user.gender,
+  //         firstName: user.firstName,
+  //         lastName: user.lastName,
+  //         phone: user.phone,
+  //         consent: user.consentContact
+  //         }
+  //       )
+  //     }
+  //   )
+  //   return res.json()
+  // }
 
-  const mutation = useMutation(addUser, {
-    onError: (error, variable, context) => {
-      console.log('erreur :', error)
-      console.log('variable :', variable)
-      console.log('context :', context)
-    },
-    onSuccess: (data, variable, context) => {
-      console.log('data')
-      axios.post('/api/enrolment', data)
-    }
-  })
-
+  // const mutation = useMutation(addUser, {
+  //   onError: (error, variable, context) => {
+  //     console.log('erreur :', error)
+  //     //* =>  SyntaxError: Unexpected token I in JSON at position 0
+  //     console.log('variable :', variable)
+  //     //* => ok
+  //     console.log('context :', context)
+  //     //* => undefined
+  //   },
+  //   onSuccess: (data, variable, context) => {
+  //     console.log('data')
+  //     axios.post('/api/enrolment', data)
+  //   }
+  // })
+  // //* => XHR : Methode ok, Request Payload ok
 //------------------------------------------------------------------------
-  // const mutation = useMutation(data => axios.post('/api/enrolment', data)
-  //     .then(
-  //     ({ data }) =>
-  //       router.push(`/enrolment-quiz?key=${data.quizSession}`)
-  //     ),
-  //   { retry: 3 },
-  // )
-  
+  const mutation = useMutation(data => axios.post('/api/enrolment', data)
+      .then(
+      ({ data }) =>
+        router.push(`/enrolment-quiz?key=${data.quizSession}`)
+      ),
+    { retry: 3 },
+  )
+  //* => XHR : Methode ok, Request Payload ok
+
   // https://tera-campus.com/enrolment/quiz/<UUID>
 
   // console.log('data :', data)
