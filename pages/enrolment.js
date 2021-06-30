@@ -242,8 +242,8 @@ export default function Enrolment() {
   const api = process.env.NEXT_PUBLIC_API_URL
   /** enpoint de l'API */
   const apiEnrolment1 = `${api}/public/enrolment/new`
-    console.log('apiErolment1 :',apiEnrolment1)
   
+  // TODO mettre dans le push l'url récupéré de l'api et le router va devoir gérer pour renvoyer sur cet url
   const mutation = useMutation(data => axios.post(apiEnrolment1, data)
       .then(
       ({ data }) =>
@@ -251,6 +251,7 @@ export default function Enrolment() {
       ),
     { retry: 3 },
   )
+
 
   // https://tera-campus.com/enrolment/quiz/<UUID>
   // {"redirectUrl": "https://tera-campus.com/enrolment/quiz/<UUID>"}
