@@ -2,8 +2,9 @@ export default function handler(req, res) {
   // l'exemple de la doc
   // res.status(200).json({ text: 'Hello' })
 
-  const connect = connect(process.env.API_URL)
-  const api = process.env.API_URL
+  /**connexion à l'API */
+  const api = process.env.NEXT_PUBLIC_API_URL
+  /** enpoint de l'API */
   const apiEnrolment1 = `{${api}/public/new}`
 
   const email = req.body.email

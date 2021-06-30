@@ -239,13 +239,13 @@ export default function Enrolment() {
   const router = useRouter()
   
 // test------------------
-  //~ const api = connect(process.env.API_URL)
-  //* => connect is not defined
-  
-  const api = process.env.API_URL
+  const api = process.env.NEXT_PUBLIC_API_URL
   const apiEnrolment1 = `{${api}/public/new}`
-  console.log(api, apiEnrolment1)
-  //* => undefined "{undefined/public/new}"
+  console.log(api)
+  //* => ok
+  console.log(apiEnrolment1)
+    //* => ok
+
 //------------------------------
 
   const mutation = useMutation(data => axios.post('/api/enrolment', data).then(
