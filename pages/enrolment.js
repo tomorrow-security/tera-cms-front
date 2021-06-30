@@ -249,13 +249,12 @@ export default function Enrolment() {
 //------------------------------
   
 
-  const mutation = useMutation(data =>
-    axios.post('/api/enrolment', data)
+  const mutation = useMutation(data => axios.post('/api/enrolment', data)
       .then(
       ({ data }) =>
         router.push(`/enrolment-quiz?key=${data.quizSession}`)
       ),
-    { retry: 3 }
+    { retry: 3 },
   )
 
   // https://tera-campus.com/enrolment/quiz/<UUID>
@@ -265,9 +264,13 @@ export default function Enrolment() {
 
   // const onSubmit = formData => mutation.mutate(orderPayload(formData))
   // test -----------------------------------------------------------------------
+   // const onSubmit = formData =>  console.log('formData :', formData)
+  //* => ok
   // const onSubmit = formData => console.log(orderPayload(formData))
   //* => ok
-  // const onSubmit = formData => console.log(mutation.mutate(orderPayload(formData)))
+  // const onSubmit = formData => console.log('mutation :', mutate(orderPayload(formData)))
+  //* => 
+  const onSubmit = formData => console.log('mutation.mutate :', mutation.mutate(orderPayload(formData)))
   //* => undefined
 //--------------------------------------------------------------------------------------------
   return (
