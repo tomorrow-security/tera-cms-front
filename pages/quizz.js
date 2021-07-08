@@ -67,7 +67,8 @@ const MultipleAnswersForm = ({ session, onSubmit }) => {
 
 const NotStartedQuiz = ({ sendQuizResponse }) => (
     <div>
-        <button onClick={() => sendQuizResponse()}>Lancer le test !</button>
+        <p className="justify-center m-8 text-center">Tu peux maintenant commencer ton test de positionnement, pas d'inquiétude ce n'est pas un test d'admission. Ce test nous permet de connaître ton niveau et surtout de savoir quels sont tes points forts et tes axes d'améliorations.</p>
+        <button className="m-24 mx-auto text-center text-white border rounded-md w-max border-tc-blue bg-tc-blue-medium" onClick={() => sendQuizResponse()}>Lancer le test !</button>
     </div>
 )
 
@@ -167,6 +168,7 @@ export default function Quiz() {
             return <h1>Not found</h1>
         }
 
+    // TODO changer les status (CREATED, ONGOING, ENDED)
         switch(question.status) {
             case 'NOT_STARTED':
                 return <NotStartedQuiz sendQuizResponse={sendQuizResponse} />
