@@ -12,7 +12,13 @@ const pageDescription = 'Test de positionnement Tera Campus'
 const pageUrl = 'https://tera-campus.com/enrolment/quiz'
 
 const SingleAnswerForm = ({ session, onSubmit }) => {
-    const { register, handleSubmit, reset, formState: { errors } } = useForm()
+    const {
+        register,
+        handleSubmit,
+        reset,
+        formState: { errors }
+    } = useForm()
+    
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
             {session.question.answers.map(answer => (
@@ -22,7 +28,7 @@ const SingleAnswerForm = ({ session, onSubmit }) => {
                         id={`answer${answer.id}`}
                         name="answer"
                         value={answer.id}
-                        ref={register}
+                        {...register(`answer${answer.id}`, { required: true })}
                     />
                     <label htmlFor={`answer${answer.id}`}>{answer.body}</label>
                 </div>
@@ -33,7 +39,13 @@ const SingleAnswerForm = ({ session, onSubmit }) => {
 }
 
 const MultipleAnswersForm = ({ session, onSubmit }) => {
-    const { register, handleSubmit, reset, formState: { errors } } = useForm()
+    const {
+        register,
+        handleSubmit,
+        reset,
+        formState: { errors }
+    } = useForm()
+
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
             {session.question.answers.map(answer => (
@@ -43,7 +55,7 @@ const MultipleAnswersForm = ({ session, onSubmit }) => {
                         id={`answer${answer.id}`}
                         name={`answer${answer.id}`}
                         value={answer.id}
-                        ref={register}
+                        {...register(`answer${answer.id}`, { required: true })}
                     />
                     <label htmlFor={`answer${answer.id}`}>{answer.body}</label>
                 </div>
@@ -60,7 +72,13 @@ const NotStartedQuiz = ({ sendQuizResponse }) => (
 )
 
 const StartedQuiz = ({ session, sendQuizResponse }) => {
-    const { register, handleSubmit, reset, formState: { errors } } = useForm()
+    const {
+        register,
+        handleSubmit,
+        reset,
+        formState: { errors }
+    } = useForm()
+    
     const onSubmit = data => {
         console.log(data)
         const answers = []
@@ -117,7 +135,8 @@ const EndedQuiz = () => {
     )
 }
 
-const Quiz = () => {
+//TODO voir pour les endpoints avec Brice
+export default function Quiz() {
     const key = new URLSearchParams(useLocation().search).get('key')
     const { isLoading, isError, data, error } = useQuery('fetchQestion', () => axios.get(`/arpette/enrolments/get-quiz/?key=${key}`))
     const mutation = useMutation(data => axios.post(`/arpette/enrolments/send-quiz-response/?key=${key}`, data))
@@ -173,5 +192,3 @@ const Quiz = () => {
         </>
     )
 }
-
-export default Quiz
