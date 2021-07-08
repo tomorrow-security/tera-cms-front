@@ -14,6 +14,7 @@ import InputRadio from '../components/molecules/InputRadio'
 import PageLink from '../components/atoms/PageLink'
 
 //TODO descendre un peu le submit en view desktop
+// TODO layout msg d'erreur des checkbox ()
 
 
 // TODO importer la molecule EnrolmentForm à la place
@@ -177,9 +178,9 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                       </div>
                     </label>
                     {
-                      errors.consentContact && <span className="text-tc-red">
+                      errors.consentContact && <div className="text-right text-tc-red">
                         On ne pourra pas finaliser ton inscription si tu n'accepte pas d'être recontacté
-                      </span>
+                      </div>
                     }
                   </div>
                 </div>
@@ -202,7 +203,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                     </div>
                   </label>
                   {
-                    errors.acceptPrivacyRules && <span className="text-tc-red">
+                    errors.acceptPrivacyRules && <span className="text-center text-tc-red">
                       Tu dois accepter la politique de confidentialité pour continuer.
                     </span>
                   }
