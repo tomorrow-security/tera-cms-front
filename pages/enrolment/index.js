@@ -209,22 +209,15 @@ const EnrolmentForm = ({ status, onSubmit }) => {
 const pageTitle = "Inscription - Tera Campus"
 const pageDescription = "Inscription"
 const pageUrl = 'https://tera-campus.com/enrolment'
+const apiUrl = process.env.NEXT_PUBLIC_ARPETTE_URL
 
 export default function Enrolment() {
   const router = useRouter()
-
-  const apiUrl = process.env.NEXT_PUBLIC_ARPETTE_URL
   
   const mutation = useMutation(formData => {
     axios
       .post(`${apiUrl}/public/enrolment/new`, formData)
-      .then(
-        ({ data }) => {
-          console.log('formData :', formData)
-          console.log('data :', data)
-          router.push(`/enrolment/quiz/${data.quizKey}`)
-        }
-      )
+      .then(({ data }) => router.push(`/enrolment/quiz/${data.quizKey}`))
       .catch(error => console.log(error))
   }, { retry: 3 })
 
