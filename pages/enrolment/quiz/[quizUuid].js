@@ -67,7 +67,7 @@ export default function Quiz({ uuid, initialPageData }) {
 }
 
 const QuizCreated = ({ pageData, submit }) => (
-  <div className="text-center space-y-8">
+  <div className="space-y-8 text-center">
     <div className="space-y-2">
       <p className="font-bold">{pageData.applicant}, merci pour ton inscription chez Tera Campus !</p>
       <p>Dans quelques instants tu pourras démarrer ton test de positionnement.</p>
@@ -85,17 +85,23 @@ const QuizCreated = ({ pageData, submit }) => (
         <ul className="list-disc list-inside">
           <li>Une ou plusieurs réponses seront possible selon les questions</li>
           <li>Une fois le test lancé, tu auras deux heures pour le valider</li>
+          <li>Si tu n'as pas le temps maintenant tu pourras lancer le test via un lien dans le mail que tu vas recevoir</li>
           <li>Toute réponse est définitive, tu ne pourras plus revenir en arrière</li>
         </ul>
       </div>
       <p>Bon courage et à très vite !</p>
     </div>
-    <button
-        className="p-2 bg-tc-blue hover:bg-tc-red rounded-t rounded-b-xl text-white uppercase"
-        onClick={() => submit()}
-      >
+    <div className="w-auto pt-8 mx-auto group">
+      <div className="relative z-0 px-4 mx-auto font-bold text-transparent transition-colors duration-700 border rounded-t shadow outline-none cursor-pointer w-max rounded-b-xl bg-tc-blue-light border-tc-blue-dark group-hover:bg-tc-red-light group-hover:border-tc-red-dark group-hover:shadow-none">
         Démarrer le test
-      </button>
+        <input
+          type="submit"
+          value="Démarrer le test"
+          className="absolute left-0 z-20 px-4 mx-auto font-bold text-white transition-colors duration-700 transform rounded-t shadow outline-none cursor-pointer -top-15/100 w-max rounded-b-xl bg-tc-blue group-hover:bg-tc-red group-hover:shadow-none group-hover:-top-20/100 active:translate-y-20/100"
+          onClick={() => submit()}
+        />
+      </div>
+    </div>
   </div>
 )
 
@@ -118,20 +124,39 @@ const QuizOngoing = ({ pageData, submit }) => {
         return <MultipleChoicesForm question={pageData.question} onSubmit={onSubmit} />
     }
   }
+  
+  const typeChoice = () => {
+    switch(pageData.question.kind) {
+      case 'SINGLE':
+        return <div>il n'y a qu'une seule réponse possible</div>
+      case 'MULTIPLE':
+        return <div>il y a plusieurs réponses possibles</div>
+    }
+  }
 
   return (
     <>
-      <div>Inscription de {pageData.applicant}</div>
-      <div>Nombre de questions restantes : {pageData.remainingQuestions}</div>
-      <div>{pageData.question.title}</div>
-      { renderForm() }
+      <div className="flex flex-col max-w-full mx-auto space-y-4 w-max">
+        <div className="text-xl text-center uppercase">Inscription de <span className="font-bold">{pageData.applicant}</span></div>
+        <div className="text-xs text-right">Question : {pageData.question.id}/{pageData.remainingQuestions}</div>
+        <div>
+          <div>Domaine : <span className="my-4 italic font-bold uppercase">{ pageData.question.domain }</span></div>
+          <div className="font-semibold">{pageData.question.title}</div>
+          <div className="text-sm italic text-right">{ typeChoice() }</div>
+        </div>
+        { renderForm() }
+      </div>
     </>
   )
 }
 
 const QuizEnded = ({ pageData }) => (
   <>
-    <div>Félicitations {pageData.applicant} !</div>
+    <div className="mt-12 mb-8 text-xl font-bold text-center">Félicitations {pageData.applicant} !</div>
+    <div className="text-center">Ton test est terminé, voici tes résultats : </div>
+    {/* //TODO intégrer les résultats du test */}
+    <div className="text-lg font-semibold text-center"> </div>
+    <div className="text-center">Tu recevras également tes résultats par email.</div>
   </>
 )
 
@@ -139,19 +164,27 @@ const SingleChoiceForm = ({ question, onSubmit }) => {
   const { register, handleSubmit } = useForm()
   return (
       <form onSubmit={handleSubmit(onSubmit)}>
-          {question.choices.map(choice => (
-              <div key={choice.body}>
-                  <input
-                      type="radio"
-                      id={`choice${choice.id}`}
-                      name="choice"
-                      value={choice.id}
-                      {...register("choice")}
-                  />
-                  <label htmlFor={`choice${choice.id}`}>{choice.body}</label>
-              </div>
-          ))}
-          <input type="submit" value="Valider ma réponse" />
+          <div className="space-y-2">
+            {question.choices.map(choice => (
+                <div key={choice.body}>
+                    <input
+                        type="radio"
+                        id={`choice${choice.id}`}
+                        name="choice"
+                        value={choice.id}
+                        {...register("choice")}
+                        className="mr-2"
+                    />
+                    <label htmlFor={`choice${choice.id}`}>{choice.body}</label>
+                </div>
+            ))}
+          </div>
+          <div className="flex justify-center">
+            <input
+              type="submit"
+              value="Valider ma réponse"
+              className="box-border px-2 mx-auto mt-8 font-semibold border rounded bg-tc-blue-xlight border-tc-blue-bright" />
+          </div>
       </form>
   )
 }
@@ -159,7 +192,8 @@ const SingleChoiceForm = ({ question, onSubmit }) => {
 const MultipleChoicesForm = ({ question, onSubmit }) => {
   const { register, handleSubmit } = useForm()
   return (
-      <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <div className="space-y-2">
           {question.choices.map(choice => (
               <div key={choice.body}>
                   <input
@@ -172,7 +206,13 @@ const MultipleChoicesForm = ({ question, onSubmit }) => {
                   <label htmlFor={`choice${choice.id}`}>{choice.body}</label>
               </div>
           ))}
-          <input type="submit" value="Valider ma réponse" />
+      </div>
+      <div className="flex justify-center">
+        <input
+          type="submit"
+          value="Valider ma réponse"
+          className="box-border px-2 mx-auto mt-8 font-semibold border rounded bg-tc-blue-xlight border-tc-blue-bright" />
+      </div>
       </form>
   )
 }
