@@ -123,13 +123,28 @@ const QuizOngoing = ({ pageData, submit }) => {
         return <MultipleChoicesForm question={pageData.question} onSubmit={onSubmit} />
     }
   }
+  
+  const typeChoice = () => {
+    switch(pageData.question.kind) {
+      case 'SINGLE':
+        return <div>il n'y a qu'une réponse possible</div>
+      case 'MULTIPLE':
+        return <div>il y a plusieur réponses possibles</div>
+    }
+  }
 
+  //TODO layout & style "valider ma réponse" innaccessible
   return (
     <>
-      <div>Inscription de {pageData.applicant}</div>
-      <div>Nombre de questions restantes : {pageData.remainingQuestions}</div>
-      <div>{pageData.question.title}</div>
-      { renderForm() }
+       <div className="flex flex-col max-w-full mx-auto space-y-4 w-max">
+          <div className="text-xl text-center uppercase">Inscription de <span className="font-bold">{pageData.applicant}</span></div>
+          <div className="text-xs text-right">Nombre de questions restantes : {pageData.remainingQuestions}</div>
+        <div>
+          <div className="font-semibold">{pageData.question.title}</div>
+          <div className="text-sm italic text-right">{ typeChoice() }</div>
+        </div>
+          { renderForm() }
+       </div>
     </>
   )
 }
@@ -144,19 +159,27 @@ const SingleChoiceForm = ({ question, onSubmit }) => {
   const { register, handleSubmit } = useForm()
   return (
       <form onSubmit={handleSubmit(onSubmit)}>
-          {question.choices.map(choice => (
-              <div key={choice.body}>
-                  <input
-                      type="radio"
-                      id={`choice${choice.id}`}
-                      name="choice"
-                      value={choice.id}
-                      {...register("choice")}
-                  />
-                  <label htmlFor={`choice${choice.id}`}>{choice.body}</label>
-              </div>
-          ))}
-          <input type="submit" value="Valider ma réponse" />
+          <div className="space-y-2">
+            {question.choices.map(choice => (
+                <div key={choice.body}>
+                    <input
+                        type="radio"
+                        id={`choice${choice.id}`}
+                        name="choice"
+                        value={choice.id}
+                  {...register("choice")}
+                  className="mr-2"
+                    />
+                    <label htmlFor={`choice${choice.id}`}>{choice.body}</label>
+                </div>
+            ))}
+          </div>
+      <div className="flex justify-center">
+        <input
+          type="submit"
+          value="Valider ma réponse"
+          className="box-border px-2 mx-auto mt-8 font-semibold border rounded bg-tc-blue-xlight border-tc-blue-bright" />
+      </div>
       </form>
   )
 }
@@ -164,7 +187,8 @@ const SingleChoiceForm = ({ question, onSubmit }) => {
 const MultipleChoicesForm = ({ question, onSubmit }) => {
   const { register, handleSubmit } = useForm()
   return (
-      <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <div className="space-y-2">
           {question.choices.map(choice => (
               <div key={choice.body}>
                   <input
@@ -177,7 +201,13 @@ const MultipleChoicesForm = ({ question, onSubmit }) => {
                   <label htmlFor={`choice${choice.id}`}>{choice.body}</label>
               </div>
           ))}
-          <input type="submit" value="Valider ma réponse" />
+      </div>
+          <div className="flex justify-center">
+        <input
+          type="submit"
+          value="Valider ma réponse"
+          className="box-border px-2 mx-auto mt-8 font-semibold border rounded bg-tc-blue-xlight border-tc-blue-bright" />
+      </div>
       </form>
   )
 }
