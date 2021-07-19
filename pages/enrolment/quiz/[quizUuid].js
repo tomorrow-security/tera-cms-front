@@ -85,6 +85,7 @@ const QuizCreated = ({ pageData, submit }) => (
         <ul className="list-disc list-inside">
           <li>Une ou plusieurs réponses seront possible selon les questions</li>
           <li>Une fois le test lancé, tu auras deux heures pour le valider</li>
+          <li>Si tu n'as pas le temps maintenant tu pourras lancer le test via un lien dans le mail que tu vas recevoir</li>
           <li>Toute réponse est définitive, tu ne pourras plus revenir en arrière</li>
         </ul>
       </div>
@@ -138,8 +139,9 @@ const QuizOngoing = ({ pageData, submit }) => {
     <>
        <div className="flex flex-col max-w-full mx-auto space-y-4 w-max">
           <div className="text-xl text-center uppercase">Inscription de <span className="font-bold">{pageData.applicant}</span></div>
-          <div className="text-xs text-right">Nombre de questions restantes : {pageData.remainingQuestions}</div>
+          <div className="text-xs text-right">Question : {pageData.question.id}/100</div>
         <div>
+          <div>Domaine : <span className="my-4 italic font-bold uppercase">{ pageData.question.domain }</span></div>
           <div className="font-semibold">{pageData.question.title}</div>
           <div className="text-sm italic text-right">{ typeChoice() }</div>
         </div>
@@ -149,10 +151,12 @@ const QuizOngoing = ({ pageData, submit }) => {
   )
 }
 
+//TODO intégrer les résultats du test
 const QuizEnded = ({ pageData }) => (
   <>
-    <div className="mt-12 mb-4 text-xl font-bold text-center">Félicitations {pageData.applicant} !</div>
-    <div className="text-center">Ton test est terminé, nous te recontacterons pour te donner tes réusltats</div>
+    <div className="mt-12 mb-8 text-xl font-bold text-center">Félicitations {pageData.applicant} !</div>
+    <div className="text-center">Ton test est terminé, voici tes résultats : </div>
+    <div className="text-center">Tu recevras également tes résultats par email</div>
   </>
 )
 
