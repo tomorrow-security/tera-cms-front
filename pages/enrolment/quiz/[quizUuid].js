@@ -151,7 +151,8 @@ const QuizOngoing = ({ pageData, submit }) => {
 
 const QuizEnded = ({ pageData }) => (
   <>
-    <div>Félicitations {pageData.applicant} !</div>
+    <div className="mt-12 mb-4 text-xl font-bold text-center">Félicitations {pageData.applicant} !</div>
+    <div className="text-center">Ton test est terminé, nous te recontacterons pour te donner tes réusltats</div>
   </>
 )
 
