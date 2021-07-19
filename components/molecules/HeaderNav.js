@@ -17,9 +17,11 @@ const pages = [
 	{ id: 'contact', label: 'Contact' },
 ]
 
+//TODO revoir les space-y en wiew mobile
+
 export default function HeaderNav({click}) {
 	return (
-		<nav className="pr-2 text-center lg:flex lg:justify-between text-lg">
+		<nav className="pr-2 text-lg text-center lg:flex lg:justify-between">
 			<ul className="space-y-2 lg:space-y-0 lg:space-x-4 lg:flex lg:justify-center">
 				{
 					links1.map(({ id, label }) => (

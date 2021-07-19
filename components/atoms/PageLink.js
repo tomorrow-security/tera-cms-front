@@ -24,7 +24,7 @@ export default function PageLink({ id, label }) {
 	const active = current ? 'uppercase' : ''
 	
 	return (
-		<Link href={ href }>
+		<Link href={href}>
 			<a className={`${active} relative flex items-center justify-center overflow-hidden ease-in transform group border-box active:font-extrabold`}>
 				<div className="absolute z-10 transition-all duration-200 ease-in transform border-b-2 cursor-pointer border-tc-red -left-full group-hover:translate-x-full">
 					<p className="text-transparent">{label}</p>

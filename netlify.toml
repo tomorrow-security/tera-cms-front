@@ -1,0 +1,8 @@
+[context.branch-deploy.environment]
+  NEXT_PUBLIC_ARPETTE_URL = "https://api.tera-campus.com"
+
+[context.deploy-preview.environment]
+  NEXT_PUBLIC_ARPETTE_URL = "https://api.tera-campus.com"
+
+[context.production.environment]
+  NEXT_PUBLIC_ARPETTE_URL = "https://api.tera-campus.com"
