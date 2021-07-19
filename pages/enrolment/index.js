@@ -160,10 +160,10 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                         id='consent'
                         name="consent"
                         type="checkbox"
-                        className="mx-4 my-auto border outline-none "
+                        className="my-auto mr-2 border outline-none "
                         {...register("consent")}
                       />
-                      <div className="flex flex-row flex-wrap max-w-full text-xs align-items sm:text-base">
+                      <div className="flex flex-row flex-wrap max-w-full pr-2 text-xs align-items sm:text-base">
                         J'accepte d'être contacté par Tera Campus
                       </div>
                     </div>
