@@ -1,5 +1,8 @@
+import axios from 'axios'
 import Head from 'next/head'
-import React from 'react'
+import React, { useState } from 'react'
+import { useForm } from 'react-hook-form'
+import { useMutation } from 'react-query'
 
 import BlockTitle from '../../../components/atoms/BlockTitle'
 
@@ -10,23 +13,29 @@ const apiUrl = process.env.NEXT_PUBLIC_ARPETTE_URL
 
 export async function getServerSideProps(context) {
   const res = await fetch(`${apiUrl}/public/enrolment/quiz/${context.query.quizUuid}`)
-  console.log(res)
   const data = await res.json()
   if (!data.status) return {notFound: true}
-  return { props: {pageData: data}}
+  return { props: {uuid: context.query.quizUuid, initialPageData: data}}
 }
 
-export default function Quiz({ pageData }) {
-  const sendAnswer = (data = {}) => console.log(data)
+export default function Quiz({ uuid, initialPageData }) {
+  const [pageData, setPageData] = useState(initialPageData)
+  
+  const mutation = useMutation(data => axios
+    .post(`${apiUrl}/public/enrolment/quiz/${uuid}`, data)
+    .then(({ data }) => setPageData(data))
+  )
+
+  const onSubmit = (data = {}) => mutation.mutate(data)
 
   const renderBody = () => {
     switch(pageData.status) {
       case 'CREATED':
-        return <QuizCreated pageData={pageData} sendAnswer={sendAnswer} />
+        return <QuizCreated pageData={pageData} submit={onSubmit} />
       case 'ONGOING':
-        return 'ongoing'
+        return <QuizOngoing pageData={pageData} submit={onSubmit} />
       case 'ENDED':
-        return 'ended'
+        return <QuizEnded pageData={pageData} />
     }
   }
 
@@ -57,7 +66,7 @@ export default function Quiz({ pageData }) {
   )
 }
 
-const QuizCreated = ({ pageData, sendAnswer }) => (
+const QuizCreated = ({ pageData, submit }) => (
   <div className="text-center space-y-8">
     <div className="space-y-2">
       <p className="font-bold">{pageData.applicant}, merci pour ton inscription chez Tera Campus !</p>
@@ -83,9 +92,87 @@ const QuizCreated = ({ pageData, sendAnswer }) => (
     </div>
     <button
         className="p-2 bg-tc-blue hover:bg-tc-red rounded-t rounded-b-xl text-white uppercase"
-        onClick={() => sendAnswer()}
+        onClick={() => submit()}
       >
-        Démarrer le test !
+        Démarrer le test
       </button>
   </div>
 )
+
+const QuizOngoing = ({ pageData, submit }) => {
+  const onSubmit = data => {
+    const answers = []
+    for (const [key, value] of Object.entries(data)) {
+        if (value) {
+            answers.push(parseInt(value))
+        }
+    }
+    submit({ question: pageData.question.id, answers })
+  }
+
+  const renderForm = () => {
+    switch(pageData.question.kind) {
+      case 'SINGLE':
+        return <SingleChoiceForm question={pageData.question} onSubmit={onSubmit} />
+      case 'MULTIPLE':
+        return <MultipleChoicesForm question={pageData.question} onSubmit={onSubmit} />
+    }
+  }
+
+  return (
+    <>
+      <div>Inscription de {pageData.applicant}</div>
+      <div>Nombre de questions restantes : {pageData.remainingQuestions}</div>
+      <div>{pageData.question.title}</div>
+      { renderForm() }
+    </>
+  )
+}
+
+const QuizEnded = ({ pageData }) => (
+  <>
+    <div>Félicitations {pageData.applicant} !</div>
+  </>
+)
+
+const SingleChoiceForm = ({ question, onSubmit }) => {
+  const { register, handleSubmit } = useForm()
+  return (
+      <form onSubmit={handleSubmit(onSubmit)}>
+          {question.choices.map(choice => (
+              <div key={choice.body}>
+                  <input
+                      type="radio"
+                      id={`choice${choice.id}`}
+                      name="choice"
+                      value={choice.id}
+                      {...register("choice")}
+                  />
+                  <label htmlFor={`choice${choice.id}`}>{choice.body}</label>
+              </div>
+          ))}
+          <input type="submit" value="Valider ma réponse" />
+      </form>
+  )
+}
+
+const MultipleChoicesForm = ({ question, onSubmit }) => {
+  const { register, handleSubmit } = useForm()
+  return (
+      <form onSubmit={handleSubmit(onSubmit)}>
+          {question.choices.map(choice => (
+              <div key={choice.body}>
+                  <input
+                      type="checkbox"
+                      id={`choice${choice.id}`}
+                      name="choice"
+                      value={choice.id}
+                      {...register("choice")}
+                  />
+                  <label htmlFor={`choice${choice.id}`}>{choice.body}</label>
+              </div>
+          ))}
+          <input type="submit" value="Valider ma réponse" />
+      </form>
+  )
+}
