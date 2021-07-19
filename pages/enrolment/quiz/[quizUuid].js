@@ -92,16 +92,16 @@ const QuizCreated = ({ pageData, submit }) => (
       <p>Bon courage et à très vite !</p>
     </div>
     <div className="w-auto pt-8 mx-auto group">
-            <div className="relative z-0 px-4 mx-auto font-bold text-transparent transition-colors duration-700 border rounded-t shadow outline-none cursor-pointer w-max rounded-b-xl bg-tc-blue-light border-tc-blue-dark group-hover:bg-tc-red-light group-hover:border-tc-red-dark group-hover:shadow-none">
-              Démarrer le test
-              <input
-                type="submit"
-                value="Démarrer le test"
+      <div className="relative z-0 px-4 mx-auto font-bold text-transparent transition-colors duration-700 border rounded-t shadow outline-none cursor-pointer w-max rounded-b-xl bg-tc-blue-light border-tc-blue-dark group-hover:bg-tc-red-light group-hover:border-tc-red-dark group-hover:shadow-none">
+        Démarrer le test
+        <input
+          type="submit"
+          value="Démarrer le test"
           className="absolute left-0 z-20 px-4 mx-auto font-bold text-white transition-colors duration-700 transform rounded-t shadow outline-none cursor-pointer -top-15/100 w-max rounded-b-xl bg-tc-blue group-hover:bg-tc-red group-hover:shadow-none group-hover:-top-20/100 active:translate-y-20/100"
           onClick={() => submit()}
-              />
-            </div>
-          </div>
+        />
+      </div>
+    </div>
   </div>
 )
 
@@ -130,22 +130,22 @@ const QuizOngoing = ({ pageData, submit }) => {
       case 'SINGLE':
         return <div>il n'y a qu'une seule réponse possible</div>
       case 'MULTIPLE':
-        return <div>il y a plusieur réponses possibles</div>
+        return <div>il y a plusieurs réponses possibles</div>
     }
   }
 
   return (
     <>
-        <div className="flex flex-col max-w-full mx-auto space-y-4 w-max">
-            <div className="text-xl text-center uppercase">Inscription de <span className="font-bold">{pageData.applicant}</span></div>
-            <div className="text-xs text-right">Question : {pageData.question.id}/{pageData.remainingQuestions}</div>
+      <div className="flex flex-col max-w-full mx-auto space-y-4 w-max">
+        <div className="text-xl text-center uppercase">Inscription de <span className="font-bold">{pageData.applicant}</span></div>
+        <div className="text-xs text-right">Question : {pageData.question.id}/{pageData.remainingQuestions}</div>
         <div>
-            <div>Domaine : <span className="my-4 italic font-bold uppercase">{ pageData.question.domain }</span></div>
-            <div className="font-semibold">{pageData.question.title}</div>
-            <div className="text-sm italic text-right">{ typeChoice() }</div>
+          <div>Domaine : <span className="my-4 italic font-bold uppercase">{ pageData.question.domain }</span></div>
+          <div className="font-semibold">{pageData.question.title}</div>
+          <div className="text-sm italic text-right">{ typeChoice() }</div>
         </div>
-            { renderForm() }
-        </div>
+        { renderForm() }
+      </div>
     </>
   )
 }
@@ -172,8 +172,8 @@ const SingleChoiceForm = ({ question, onSubmit }) => {
                         id={`choice${choice.id}`}
                         name="choice"
                         value={choice.id}
-                  {...register("choice")}
-                  className="mr-2"
+                        {...register("choice")}
+                        className="mr-2"
                     />
                     <label htmlFor={`choice${choice.id}`}>{choice.body}</label>
                 </div>
