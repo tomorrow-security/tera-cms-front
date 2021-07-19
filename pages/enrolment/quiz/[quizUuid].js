@@ -134,29 +134,29 @@ const QuizOngoing = ({ pageData, submit }) => {
     }
   }
 
-  //TODO layout & style "valider ma réponse" innaccessible
   return (
     <>
-       <div className="flex flex-col max-w-full mx-auto space-y-4 w-max">
-          <div className="text-xl text-center uppercase">Inscription de <span className="font-bold">{pageData.applicant}</span></div>
-          <div className="text-xs text-right">Question : {pageData.question.id}/100</div>
+        <div className="flex flex-col max-w-full mx-auto space-y-4 w-max">
+            <div className="text-xl text-center uppercase">Inscription de <span className="font-bold">{pageData.applicant}</span></div>
+            <div className="text-xs text-right">Question : {pageData.question.id}/{pageData.remainingQuestions}</div>
         <div>
-          <div>Domaine : <span className="my-4 italic font-bold uppercase">{ pageData.question.domain }</span></div>
-          <div className="font-semibold">{pageData.question.title}</div>
-          <div className="text-sm italic text-right">{ typeChoice() }</div>
+            <div>Domaine : <span className="my-4 italic font-bold uppercase">{ pageData.question.domain }</span></div>
+            <div className="font-semibold">{pageData.question.title}</div>
+            <div className="text-sm italic text-right">{ typeChoice() }</div>
         </div>
-          { renderForm() }
-       </div>
+            { renderForm() }
+        </div>
     </>
   )
 }
 
-//TODO intégrer les résultats du test
 const QuizEnded = ({ pageData }) => (
   <>
     <div className="mt-12 mb-8 text-xl font-bold text-center">Félicitations {pageData.applicant} !</div>
     <div className="text-center">Ton test est terminé, voici tes résultats : </div>
-    <div className="text-center">Tu recevras également tes résultats par email</div>
+    {/* //TODO intégrer les résultats du test */}
+    <div className="text-lg font-semibold text-center"> </div>
+    <div className="text-center">Tu recevras également tes résultats par email.</div>
   </>
 )
 
@@ -179,12 +179,12 @@ const SingleChoiceForm = ({ question, onSubmit }) => {
                 </div>
             ))}
           </div>
-      <div className="flex justify-center">
-        <input
-          type="submit"
-          value="Valider ma réponse"
-          className="box-border px-2 mx-auto mt-8 font-semibold border rounded bg-tc-blue-xlight border-tc-blue-bright" />
-      </div>
+          <div className="flex justify-center">
+            <input
+              type="submit"
+              value="Valider ma réponse"
+              className="box-border px-2 mx-auto mt-8 font-semibold border rounded bg-tc-blue-xlight border-tc-blue-bright" />
+          </div>
       </form>
   )
 }
@@ -207,7 +207,7 @@ const MultipleChoicesForm = ({ question, onSubmit }) => {
               </div>
           ))}
       </div>
-          <div className="flex justify-center">
+      <div className="flex justify-center">
         <input
           type="submit"
           value="Valider ma réponse"
