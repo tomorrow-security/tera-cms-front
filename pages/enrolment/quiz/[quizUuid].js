@@ -127,7 +127,7 @@ const QuizOngoing = ({ pageData, submit }) => {
   const typeChoice = () => {
     switch(pageData.question.kind) {
       case 'SINGLE':
-        return <div>il n'y a qu'une réponse possible</div>
+        return <div>il n'y a qu'une seule réponse possible</div>
       case 'MULTIPLE':
         return <div>il y a plusieur réponses possibles</div>
     }
