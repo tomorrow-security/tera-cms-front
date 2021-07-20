@@ -1,7 +1,7 @@
 import axios from 'axios'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useMutation } from 'react-query'
 import 'react-phone-number-input/style.css'
@@ -70,6 +70,8 @@ const EnrolmentForm = ({ status, onSubmit }) => {
         )
     }
   }
+
+  const [value, setValue] = useState()
 
   return (
     <form className="w-full mx-2" onSubmit={(handleSubmit(onSubmit))}>
