@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useMutation } from 'react-query'
 import 'react-phone-number-input/style.css'
-import PhoneInput from 'react-phone-number-input'
+import PhoneInputWithCountry from 'react-phone-number-input/react-hook-form'
 
 
 import BlockTitle from '../../components/atoms/BlockTitle'
@@ -147,10 +147,18 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                 <div className="flex items-center ">
                   {/* // TODO importer la molecule Input à la place */}
                   <label htmlFor="phone" className="w-30%">Téléphone* :</label>
-                  <PhoneInput
-                    placeholder="Enter phone number"
-                    value={value}
-                    onChange={setValue}/>
+                  <div className={`mx-2 p-2 flex-1 border rounded outline-none ${errors.firstName ? 'border-tc-red' : 'border-black'}`}>
+                    <PhoneInputWithCountry
+                      name="phoneInputWithCountrySelect"
+                      defaultCountry="FR"
+                      international
+                      withCountryCallingCode
+                      countryCallingCodeEditable={false}
+                      control={control}
+                      rules={{ required: true }} 
+                    />
+                  </div>
+                  
                   {/* <input
                     id="phone"
                     name="phone"
