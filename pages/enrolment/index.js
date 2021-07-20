@@ -148,6 +148,9 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                   {/* // TODO importer la molecule Input à la place */}
                   <label htmlFor="phone" className="w-30%">Téléphone* :</label>
                   <div className={`mx-2 p-2 flex-1 border rounded outline-none ${errors.firstName ? 'border-tc-red' : 'border-black'}`}>
+                    {/* //! error au submit : {phone: ["This field is required."]}
+                      phone: ["This field is required."]
+                        0: "This field is required." */}
                     <PhoneInputWithCountry
                       name="phoneInputWithCountrySelect"
                       defaultCountry="FR"
