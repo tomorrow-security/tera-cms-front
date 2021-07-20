@@ -77,7 +77,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
     <form className="w-full mx-2" onSubmit={(handleSubmit(onSubmit))}>
       <div>
         <div>
-          <div className="space-y-1 xl:space-y-8 xl:flex xl:flex-col xl:items-center">
+          <div className="space-y-1 xl:space-y-8 xl:flex xl:flex-col xl:items-center ">
             <div className="xl:flex xl:justify-between xl:w-4/5 xl:flex-nowrap">
               <div className="flex items-center space-y-1 xl:w-45%">
                 <label htmlFor="gender" className="w-30%">Civilité* :</label>
