@@ -147,7 +147,6 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                 <div className="flex items-center ">
                   {/* // TODO importer la molecule Input à la place */}
                   <label htmlFor="phone" className="w-30%">Téléphone* :</label>
-                  <div className={`mx-2 p-2 flex-1 border rounded outline-none ${errors.firstName ? 'border-tc-red' : 'border-black'}`}>
                     {/* //! error au submit : {phone: ["This field is required."]}
                       phone: ["This field is required."]
                         0: "This field is required." */}
@@ -156,12 +155,14 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                       defaultCountry="FR"
                       international
                       withCountryCallingCode
-                      countryCallingCodeEditable={false}
                       control={control}
-                      rules={{ required: true }} 
+                      rules={{ required: true }}
+                    className={`mx-2 p-2 flex-1 border w-65%
+                       rounded outline-none ${errors.phone ? 'border-tc-red' : 'border-black'}`}
                     />
-                  </div>
-                  
+                    {errors["phone-input"] && (
+                      <span className="text-tc-red">{errors?.phone?.message}</span>
+                    )}
                   {/* <input
                     id="phone"
                     name="phone"
@@ -170,7 +171,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                     className={`mx-2 p-2 flex-1 border rounded outline-none ${errors.phone ? 'border-tc-red' : 'border-black'}`}
                     {...register("phone", { required: true })}
                   /> */}
-                  <span className="text-tc-red">{errors?.phone?.message}</span>
+                  {/* <span className="text-tc-red">{errors?.phone?.message}</span> */}
                 </div>
                 <div>
                   <label className="flex justify-end flex-1 my-4">
