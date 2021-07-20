@@ -147,14 +147,18 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                 <div className="flex items-center ">
                   {/* // TODO importer la molecule Input à la place */}
                   <label htmlFor="phone" className="w-30%">Téléphone* :</label>
-                  <input
+                  <PhoneInput
+                    placeholder="Enter phone number"
+                    value={value}
+                    onChange={setValue}/>
+                  {/* <input
                     id="phone"
                     name="phone"
                     type="tel"
                     placeholder="+33648766670"
                     className={`mx-2 p-2 flex-1 border rounded outline-none ${errors.phone ? 'border-tc-red' : 'border-black'}`}
                     {...register("phone", { required: true })}
-                  />
+                  /> */}
                   <span className="text-tc-red">{errors?.phone?.message}</span>
                 </div>
                 <div>
