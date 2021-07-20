@@ -150,15 +150,15 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                     {/* //! error au submit : {phone: ["This field is required."]}
                       phone: ["This field is required."]
                         0: "This field is required." */}
-                    <PhoneInputWithCountry
-                      name="phoneInputWithCountrySelect"
-                      defaultCountry="FR"
-                      international
-                      withCountryCallingCode
-                      control={control}
-                      rules={{ required: true }}
-                    className={`mx-2 p-2 flex-1 border w-65%
-                       rounded outline-none ${errors.phone ? 'border-tc-red' : 'border-black'}`}
+                  <PhoneInputWithCountry
+                    id="phone"
+                    name="phone"
+                    defaultCountry="FR"
+                    international
+                    withCountryCallingCode
+                    control={control}
+                    rules={{ required: true }}
+                    className={`mx-2 p-2 flex-1 border w-65% rounded outline-none ${errors.phone ? 'border-tc-red' : 'border-black'}`}
                     />
                     {errors["phone-input"] && (
                       <span className="text-tc-red">{errors?.phone?.message}</span>
