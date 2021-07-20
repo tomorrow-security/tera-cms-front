@@ -216,8 +216,8 @@ export default function Enrolment() {
   
   const mutation = useMutation(formData => {
     axios
-      .post(`${apiUrl}/public/enrolment/new`, formData)
-      .then(({ data }) => router.push(`/enrolment/quiz/${data.quizKey}`))
+      .post(`${apiUrl}/enrolment/create`, formData)
+      .then(({ data }) => router.push(`/enrolment/${data.enrolment}`))
       .catch(error => console.log(error))
   }, { retry: 3 })
 
