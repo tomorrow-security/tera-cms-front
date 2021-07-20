@@ -145,11 +145,8 @@ const EnrolmentForm = ({ status, onSubmit }) => {
             <div className="xl:flex xl:justify-between xl:w-4/5 xl:flex-nowrap">
               <div className="space-y-1 xl:w-45%">
                 <div className="flex items-center ">
-                  {/* // TODO importer la molecule Input à la place */}
                   <label htmlFor="phone" className="w-30%">Téléphone* :</label>
-                    {/* //! error au submit : {phone: ["This field is required."]}
-                      phone: ["This field is required."]
-                        0: "This field is required." */}
+                  {/* //TODO voir pour retirer le border intern au focus */}
                   <PhoneInputWithCountry
                     id="phone"
                     name="phone"
@@ -163,15 +160,6 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                     {errors["phone-input"] && (
                       <span className="text-tc-red">{errors?.phone?.message}</span>
                     )}
-                  {/* <input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    placeholder="+33648766670"
-                    className={`mx-2 p-2 flex-1 border rounded outline-none ${errors.phone ? 'border-tc-red' : 'border-black'}`}
-                    {...register("phone", { required: true })}
-                  /> */}
-                  {/* <span className="text-tc-red">{errors?.phone?.message}</span> */}
                 </div>
                 <div>
                   <label className="flex justify-end flex-1 my-4">
