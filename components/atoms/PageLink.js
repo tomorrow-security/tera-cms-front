@@ -21,7 +21,7 @@ export default function PageLink({ id, label }) {
 	/**
 	 * apply the class uppercase if it is true, otherwise leave a space
 	 */
-	const active = current ? 'uppercase' : ''
+	const active = current ? 'uppercase text-tc-red' : ''
 	
 	return (
 		<Link href={href}>

@@ -21,7 +21,7 @@ export default function HashLink({ id, label }) {
 	/**
 	 * apply the class uppercase if it is true, otherwise leave a space
 	 */
-	const active = current ? 'uppercase' : ''
+	const active = current ? 'uppercase text-tc-red' : ''
 	return (
 		<Link href={ href }>
 			<a className={`${active} relative flex items-center justify-center overflow-hidden ease-in transform group border-box active:font-extrabold`}>
