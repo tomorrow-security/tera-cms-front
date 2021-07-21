@@ -6,6 +6,7 @@ import { useForm } from 'react-hook-form'
 import { useMutation } from 'react-query'
 import 'react-phone-number-input/style.css'
 import PhoneInputWithCountry from 'react-phone-number-input/react-hook-form'
+import { isPossiblePhoneNumber } from 'react-phone-number-input'
 
 
 import BlockTitle from '../../components/atoms/BlockTitle'
@@ -71,8 +72,9 @@ const EnrolmentForm = ({ status, onSubmit }) => {
     }
   }
 
-  const [value, setValue] = useState()
-
+  // TODO faire la validation du numéro avec isPossiblePhoneNumber 
+  // TODO style au focue du phoneInput border à enlever à l'intérieur
+  
   return (
     <form className="w-full mx-2" onSubmit={(handleSubmit(onSubmit))}>
       <div>
@@ -93,15 +95,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
               </div>
               <div className="flex items-center space-y-1 xl:w-45%">
                 {/* // TODO importer la molecule Input à la place */}
-                {/* //* errors ne fonctionne pas
-                <Input
-                  id="email"
-                  type="email"
-                  name="email"
-                  placeholder="thomas.anderson@tera-campus.com"
-                  label="E-mail :"
-                  register={register("email", { required: true })}
-                /> */}
+                 {/* //* Input composant ne fonctionne pas : à revoir */}
                 <label htmlFor="email" className="w-30%">E-mail* :</label>
                 <input
                   id="email"
@@ -155,6 +149,8 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                     withCountryCallingCode
                     control={control}
                     rules={{ required: true }}
+                    errors={errors}
+                    {...register("phone", { required: true })}
                     className={`mx-2 p-2 flex-1 border w-65% rounded outline-none ${errors.phone ? 'border-tc-red' : 'border-black'}`}
                     />
                     {errors["phone-input"] && (
