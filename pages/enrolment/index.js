@@ -166,9 +166,9 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                 />
                 <div>
                   <div className="flex flex-row flex-wrap items-center max-w-full text-xs sm:text-base">
-                    <p>J'ai lu et j'accepte la&nbsp;</p>
+                    <p className="border-b-2 border-transparent">J'ai lu et j'accepte la&nbsp;</p>
                     <PageLink id="privacy" label="politique de confidentialité" />
-                    <p>&nbsp;de Tera Campus.</p>
+                    <p className="border-b-2 border-transparent">&nbsp;de Tera Campus.</p>
                   </div>
                     <p>Et j'accepte d'être recontacté par Tera Campus pour finaliser mon inscription.</p>
                 </div>
