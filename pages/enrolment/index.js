@@ -153,50 +153,35 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                   />
                   <span className="text-tc-red">{errors?.phone?.message}</span>
                 </div>
+              </div>
+          </div>
+            <label className="flex flex-col justify-center">
+              <div className="flex flex-row pt-8 mx-auto flex-nowrap w-max">
+                <input
+                  id='consent'
+                  name="consent"
+                  type="checkbox"
+                  className="my-auto mr-2 border outline-none "
+                  {...register("consent", { required: true })}
+                />
                 <div>
-                  <label className="flex justify-end flex-1 my-4">
-                    <div className="flex flex-row flex-nowrap w-max">
-                      <input
-                        id='consent'
-                        name="consent"
-                        type="checkbox"
-                        className="my-auto mr-2 border outline-none "
-                        {...register("consent")}
-                      />
-                      <div className="flex flex-row flex-wrap max-w-full pr-2 text-xs align-items sm:text-base">
-                        J'accepte d'être contacté par Tera Campus
-                      </div>
-                    </div>
-                  </label>
+                  <div className="flex flex-row flex-wrap items-center max-w-full text-xs sm:text-base">
+                    <p>J'ai lu et j'accepte la&nbsp;</p>
+                    <PageLink id="privacy" label="politique de confidentialité" />
+                    <p>&nbsp;de Tera Campus.</p>
+                  </div>
+                    <p>Et j'accepte d'être recontacté par Tera Campus pour finaliser mon inscription.</p>
                 </div>
               </div>
-              <div className="flex flex-col space-y-1 xl:w-45%">
-                {/* // TODO le message d'erreur ne fonctionne pas 
-                <InputCheckRGPD /> */}
-                <label className="flex justify-center flex-1 my-4">
-                  <div className="flex flex-row items-sart flex-nowrap w-max">
-                    <input
-                      type="checkbox"
-                      className="mx-4 my-auto border outline-none "
-                      {...register("acceptPrivacyRules", { required: true })}
-                    />
-                    <div className="flex flex-row flex-wrap items-center max-w-full text-xs sm:text-base">
-                      <p>J'ai lu et j'accepte la&nbsp;</p>
-                      <PageLink id="privacy" label="politique de confidentialité" />
-                      <p>&nbsp;de Tera Campus.</p>
-                    </div>
-                  </div>
-                </label>
-                {
-                  errors.acceptPrivacyRules ? (
-                    <span className="text-center text-tc-red">
-                      Tu dois accepter la politique de confidentialité pour continuer.
-                    </span>
-                  ) : null
-                }
-              </div>
-            </div>
-          </div>
+              {
+                errors.consent ? (
+                  <span className="text-center text-tc-red">
+                    Tu dois accepter la politique de confidentialité pour continuer ton inscription.
+                  </span>
+                ) : null
+              }
+            </label>
+          </div>  
         </div>
       </div>
       <div className="flex items-center justify-center my-4 xl:my-20">
