@@ -122,12 +122,50 @@ const TestOngoing = ({ applicant, test, uuid, setPageData }) => {
   )
 }
 
-const TestEnded = ({ applicant, test, uuid, setPageData }) => (
-  <>
-    <div className="mt-12 mb-8 text-xl font-bold text-center">Félicitations {applicant} !</div>
-    <div className="text-center">Tu as terminé ton test avec {test.score}% de réussite.</div>
-  </>
-)
+const TestEnded = ({ applicant, test, uuid, setPageData }) => {
+  const { reset, register, handleSubmit } = useForm()
+  useEffect(() => { reset() }, [])
+
+  const mutation = useMutation(data => axios
+    .post(`${apiUrl}/enrolment/${uuid}/save-files`, data, {
+      headers: { 'Content-Type': 'multipart/form-data' }
+    })
+    .then(({ data }) => setPageData(data))
+  )
+
+  const onSubmit = ({ document, resume }) => {
+    let formData = new FormData()
+    formData.append("resume", resume[0])
+    formData.append("document", document[0])
+    mutation.mutate(formData)
+  }
+
+  return(
+    <>
+      <div className="mt-12 mb-8 text-xl font-bold text-center">Félicitations {applicant} !</div>
+      <div className="text-center">Tu as terminé ton test avec {test.score}% de réussite.</div>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div>
+          <input
+            type="file"
+            accept="application/pdf"
+            {...register("resume", { required: true })}
+          />
+        </div>
+        <div>
+          <input
+            type="file"
+            accept="application/pdf"
+            {...register("document", { required: true })}
+          />
+        </div>
+        <div>
+          <input type="submit" value="envoyer" />
+        </div>
+      </form>
+    </>
+  )
+}
 
 const SingleChoiceForm = ({ question, onSubmit }) => {
   const { reset, register, handleSubmit } = useForm()
