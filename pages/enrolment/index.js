@@ -72,6 +72,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
     }
   }
 
+  const [value, setValue] = useState()
   // TODO faire la validation du numéro avec isPossiblePhoneNumber 
   // TODO style au focue du phoneInput border à enlever à l'intérieur
   
@@ -149,13 +150,11 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                     withCountryCallingCode
                     control={control}
                     rules={{ required: true }}
-                    errors={errors}
-                    {...register("phone", { required: true })}
                     className={`mx-2 p-2 flex-1 border w-65% rounded outline-none ${errors.phone ? 'border-tc-red' : 'border-black'}`}
                     />
-                    {errors["phone-input"] && (
+                    {/* {errors["phone-input"] && (
                       <span className="text-tc-red">{errors?.phone?.message}</span>
-                    )}
+                    )} */}
                 </div>
                 <div>
                   <label className="flex justify-end flex-1 my-4">
