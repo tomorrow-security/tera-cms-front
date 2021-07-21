@@ -156,7 +156,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
               </div>
           </div>
             <label className="flex flex-col justify-center">
-              <div className="flex flex-row pt-8 mx-auto flex-nowrap w-max">
+              <div className="flex flex-row pt-8 mx-auto flex-nowrap w-max-full">
                 <input
                   id='consent'
                   name="consent"
@@ -170,7 +170,9 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                     <PageLink id="privacy" label="politique de confidentialité" />
                     <p className="border-b-2 border-transparent">&nbsp;de Tera Campus.</p>
                   </div>
-                    <p>Et j'accepte d'être recontacté par Tera Campus pour finaliser mon inscription.</p>
+                  <p className="flex flex-row flex-wrap items-center max-w-full text-xs sm:text-base">
+                    Et j'accepte d'être recontacté par Tera Campus pour finaliser mon inscription.
+                  </p>
                 </div>
               </div>
               {

@@ -104,21 +104,21 @@ export default function Contact() {
                         As-tu oublié ce que tu souhaites nous dire ?
                       </span>
                     }
-                  </label><div className="flex flex-col space-y-1 xl:w-45%">
+                  </label>
+                  <div className="flex flex-col space-y-1">
                   {/* // TODO le message d'erreur ne fonctionne pas 
                   <InputCheckRGPD /> */}
                   <label className="flex justify-center flex-1 my-4">
-                    <div className="flex flex-row flex-nowrap w-max">
+                    <div className="flex flex-row flex-nowrap w-max-full">
                       <input
                         type="checkbox"
                         className="mx-4 my-auto border outline-none "
                         {...register("acceptPrivacyRules", { required: true })}
                       />
-                      <div className="flex flex-row flex-wrap max-w-full text-xs align-items sm:text-base">
-                        <p>J'ai lu et j'accepte la&nbsp;</p>
-                        <PageLink id="privacy" 
-                          label="politique de confidentialité" />
-                        <p>&nbsp;de Tera Campus.</p>
+                      <div className="flex flex-row flex-wrap items-center max-w-full text-xs sm:text-base">
+                        <p className="border-b-2 border-transparent">J'ai lu et j'accepte la&nbsp;</p>
+                        <PageLink id="privacy" label="politique de confidentialité" />
+                        <p className="border-b-2 border-transparent">&nbsp;de Tera Campus.</p>
                       </div>
                     </div>
                   </label>
