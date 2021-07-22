@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { useState } from 'react'
 
 import BlockTitle from '../../components/atoms/BlockTitle'
+import EnrolmentAppointment from '../../components/organisms/EnrolmentAppointment'
 import EnrolmentTest from '../../components/organisms/EnrolmentTest'
 
 const apiUrl = process.env.NEXT_PUBLIC_ARPETTE_URL
@@ -26,6 +27,8 @@ export default function EnrolmentProcess({ initialPageData, uuid }) {
       case 2:
       case 3:
         return <EnrolmentTest applicant={pageData.applicant} test={pageData.test} uuid={uuid} setPageData={setPageData} />
+      case 4:
+        return <EnrolmentAppointment />
     }
   }
 

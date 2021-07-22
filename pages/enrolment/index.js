@@ -171,11 +171,10 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                     {/* // TODO vérifier alignement des éléments */}
                     <p className="border-b-2 border-transparent">J'ai lu et j'accepte la&nbsp;</p>
                     <PageLink id="privacy" label="politique de confidentialité" />
-                    <p className="border-b-2 border-transparent">&nbsp;de Tera Campus.</p>
+                    <p className="border-b-2 border-transparent">
+                      , et j'accepte d'être recontacté par Tera Campus pour finaliser mon inscription.
+                    </p>
                   </div>
-                  <p className="flex flex-row flex-wrap items-center max-w-full text-xs sm:text-base">
-                    Et j'accepte d'être recontacté par Tera Campus pour finaliser mon inscription.
-                  </p>
                 </div>
               </div>
               {
