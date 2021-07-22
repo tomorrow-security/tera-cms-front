@@ -146,6 +146,19 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
   const [identityValue, setIdentityValue] = useState("Ajouter mon identité")
   const uploaded = "1 document chargé"
 
+  const handleOnChange = event => {
+    setInputValues(uploaded);
+  }
+
+  const [inputResumeValue, setInputResumeValue] = useState()
+  const onChangeResume = event => {
+    setInputResumeValue(event.target.value);
+  };
+
+  const [inputIdentityValue, setInputIdentityValue] = useState()
+  const onChangeIdentity = event => {
+    setInputIdentityValue(event.target.value);
+  };
 
   return(
     <>
@@ -160,6 +173,7 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
               </label>
               <label htmlFor="resume" className="p-8 text-center border rounded cursor-pointer bg-tc-blue-xlight border-tc-blue hover:bg-tc-blue-light">
                 <p className="font-bold">{resumeValue}</p>
+                <p>{ inputResumeValue }</p>
                 <div className="text-xs italic">
                   <p id="resume-return"></p>
                 <p >Maximum 1 fichier de 2MB</p>
@@ -174,7 +188,7 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
                 accept="application/pdf"
                 {...register("resume", { required: true })}
                 className="hidden"
-                onChange={event => setResumeValue (uploaded)}
+                onChange={handleOnChange, onChangeResume}
               />
             </div>
             
@@ -184,6 +198,7 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
               </label>
               <label htmlFor="document" className="p-8 text-center border rounded cursor-pointer bg-tc-blue-xlight border-tc-blue hover:bg-tc-blue-light">
                 <p id="document-trigger" className="font-bold">{identityValue}</p>
+                <p>{ inputIdentityValue }</p>
                 <div className="text-xs italic">
                   <p id="document-return"></p>
                 <p >Maximum 1 fichier de 2MB</p>
@@ -198,7 +213,7 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
                 accept="application/pdf"
                 {...register("document", { required: true })}
                 className="hidden"
-                onChange={event => setIdentityValue(uploaded)}
+                onChange={handleOnChange, onChangeIdentity}
               />
             </div>
           </div>
