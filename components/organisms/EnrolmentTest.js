@@ -141,23 +141,21 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
     formData.append("document", document[0])
     mutation.mutate(formData)
   }
-
-  const [resumeValue, setResumeValue] = useState("Ajouter mon CV")
-  const [identityValue, setIdentityValue] = useState("Ajouter mon identité")
+  
   const uploaded = "1 document chargé"
 
-  const handleOnChange = event => {
-    setInputValues(uploaded);
-  }
-
+  const [resumeValue, setResumeValue] = useState("Ajouter mon CV")
   const [inputResumeValue, setInputResumeValue] = useState()
   const onChangeResume = event => {
     setInputResumeValue(event.target.value);
+    setResumeValue(uploaded);
   };
 
+  const [identityValue, setIdentityValue] = useState("Ajouter mon identité")
   const [inputIdentityValue, setInputIdentityValue] = useState()
   const onChangeIdentity = event => {
     setInputIdentityValue(event.target.value);
+    setIdentityValue(uploaded);
   };
 
   return(
@@ -188,7 +186,7 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
                 accept="application/pdf"
                 {...register("resume", { required: true })}
                 className="hidden"
-                onChange={handleOnChange, onChangeResume}
+                onChange={onChangeResume}
               />
             </div>
             
@@ -212,7 +210,7 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
                 accept="application/pdf"
                 {...register("document", { required: true })}
                 className="hidden"
-                onChange={handleOnChange, onChangeIdentity}
+                onChange={onChangeIdentity}
               />
             </div>
           </div>
