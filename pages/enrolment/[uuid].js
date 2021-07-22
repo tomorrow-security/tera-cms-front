@@ -24,6 +24,7 @@ export default function EnrolmentProcess({ initialPageData, uuid }) {
     switch(pageData.step) {
       case 1:
       case 2:
+      case 3:
         return <EnrolmentTest applicant={pageData.applicant} test={pageData.test} uuid={uuid} setPageData={setPageData} />
     }
   }
