@@ -71,8 +71,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
         )
     }
   }
-
-  const [value, setValue] = useState()
+  
   // TODO faire la validation du numéro avec isPossiblePhoneNumber 
   // TODO style au focue du phoneInput border à enlever à l'intérieur
   
