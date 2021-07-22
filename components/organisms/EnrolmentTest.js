@@ -205,7 +205,6 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
                 <p>Format accepté : PDF</p>
              </div>
               </label>
-              {/* // TODO faire apparaître une indication de document chagé */}
               <input
                 type="file"
                 name="document"
