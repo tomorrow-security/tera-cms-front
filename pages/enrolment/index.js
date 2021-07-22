@@ -4,6 +4,10 @@ import { useRouter } from 'next/router'
 import React, { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import { useMutation } from 'react-query'
+import 'react-phone-number-input/style.css'
+import PhoneInputWithCountry from 'react-phone-number-input/react-hook-form'
+// TODO faire la validation du numéro avec isPossiblePhoneNumber 
+// import { isPossiblePhoneNumber } from 'react-phone-number-input'
 
 
 import BlockTitle from '../../components/atoms/BlockTitle'
@@ -68,12 +72,14 @@ const EnrolmentForm = ({ status, onSubmit }) => {
         )
     }
   }
-
+  
+  // TODO style au focue du phoneInput border à enlever à l'intérieur
+  
   return (
     <form className="w-full mx-2" onSubmit={(handleSubmit(onSubmit))}>
       <div>
         <div>
-          <div className="space-y-1 xl:space-y-8 xl:flex xl:flex-col xl:items-center">
+          <div className="space-y-1 xl:space-y-8 xl:flex xl:flex-col xl:items-center ">
             <div className="xl:flex xl:justify-between xl:w-4/5 xl:flex-nowrap">
               <div className="flex items-center space-y-1 xl:w-45%">
                 <label htmlFor="gender" className="w-30%">Civilité* :</label>
@@ -89,15 +95,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
               </div>
               <div className="flex items-center space-y-1 xl:w-45%">
                 {/* // TODO importer la molecule Input à la place */}
-                {/* //* errors ne fonctionne pas
-                <Input
-                  id="email"
-                  type="email"
-                  name="email"
-                  placeholder="thomas.anderson@tera-campus.com"
-                  label="E-mail :"
-                  register={register("email", { required: true })}
-                /> */}
+                 {/* //* Input composant ne fonctionne pas : à revoir */}
                 <label htmlFor="email" className="w-30%">E-mail* :</label>
                 <input
                   id="email"
@@ -141,17 +139,21 @@ const EnrolmentForm = ({ status, onSubmit }) => {
             <div className="xl:flex xl:justify-between xl:w-4/5 xl:flex-nowrap">
               <div className="space-y-1 xl:w-45%">
                 <div className="flex items-center ">
-                  {/* // TODO importer la molecule Input à la place */}
                   <label htmlFor="phone" className="w-30%">Téléphone* :</label>
-                  <input
+                  {/* //TODO voir pour retirer le border intern au focus */}
+                  <PhoneInputWithCountry
                     id="phone"
                     name="phone"
-                    type="tel"
-                    placeholder="+33648766670"
-                    className={`mx-2 p-2 flex-1 border rounded outline-none ${errors.phone ? 'border-tc-red' : 'border-black'}`}
-                    {...register("phone", { required: true })}
-                  />
-                  <span className="text-tc-red">{errors?.phone?.message}</span>
+                    defaultCountry="FR"
+                    international
+                    withCountryCallingCode
+                    control={control}
+                    rules={{ required: true }}
+                    className={`mx-2 p-2 flex-1 border w-65% rounded outline-none ${errors.phone ? 'border-tc-red' : 'border-black'}`}
+                    />
+                    {/* {errors["phone-input"] && (
+                      <span className="text-tc-red">{errors?.phone?.message}</span>
+                    )} */}
                 </div>
               </div>
           </div>
