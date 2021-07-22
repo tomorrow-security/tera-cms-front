@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useMutation } from 'react-query'
 
@@ -142,6 +142,11 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
     mutation.mutate(formData)
   }
 
+  const [resumeValue, setResumeValue] = useState("Ajouter mon CV")
+  const [identityValue, setIdentityValue] = useState("Ajouter mon identité")
+  const uploaded = "1 document chargé"
+
+
   return(
     <>
       <div className="flex flex-col items-stretch">
@@ -154,8 +159,9 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
                 CV* :
               </label>
               <label htmlFor="resume" className="p-8 text-center border rounded cursor-pointer bg-tc-blue-xlight border-tc-blue hover:bg-tc-blue-light">
-                <p className="font-bold">Ajouter mon CV</p>
+                <p className="font-bold">{resumeValue}</p>
                 <div className="text-xs italic">
+                  <p id="resume-return"></p>
                 <p >Maximum 1 fichier de 2MB</p>
                 <p>Format accepté : PDF</p>
              </div>
@@ -168,24 +174,32 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
                 accept="application/pdf"
                 {...register("resume", { required: true })}
                 className="hidden"
+                onChange={event => setResumeValue (uploaded)}
               />
-             
             </div>
-            <div className="flex flex-col justify-center my-8 space-y-2">
+            
+            <div className="flex flex-col justify-center w-3/4 my-8 space-y-2 md:w-2/3 lg:w-1/4 xl:w-1/5 2xl:w-2/12">
               <label htmlFor="document" className="cursor-pointer">
                 Document d'identité* :
               </label>
+              <label htmlFor="document" className="p-8 text-center border rounded cursor-pointer bg-tc-blue-xlight border-tc-blue hover:bg-tc-blue-light">
+                <p id="document-trigger" className="font-bold">{identityValue}</p>
+                <div className="text-xs italic">
+                  <p id="document-return"></p>
+                <p >Maximum 1 fichier de 2MB</p>
+                <p>Format accepté : PDF</p>
+             </div>
+              </label>
+              {/* // TODO faire apparaître une indication de document chagé */}
               <input
                 type="file"
                 name="document"
                 id="document"
                 accept="application/pdf"
                 {...register("document", { required: true })}
+                className="hidden"
+                onChange={event => setIdentityValue(uploaded)}
               />
-              <div className="text-xs italic">
-                <p >Maximum 1 fichier de 2MB</p>
-                <p>Format accepté : PDF</p>
-             </div>
             </div>
           </div>
           <div className="mt-12">
