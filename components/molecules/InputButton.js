@@ -24,8 +24,10 @@ export default function InputButton({mutation}) {
     }
   }
 
+  // TODO revoir de submit style hover plus cibler sur le button
+
     return (
-       <div className="w-auto pt-2 mx-auto group">
+       <div className="pt-2 mx-auto w-max group">
         <div className={`relative z-0 px-4 font-bold text-transparent rounded-t outline-none cursor-pointer w-max rounded-b-xl ${['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].shadow : submitButtonParams['default'].shadow}`}>
           {['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].value : submitButtonParams['default'].value}
           <input

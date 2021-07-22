@@ -1,7 +1,9 @@
 import axios from 'axios'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useMutation } from 'react-query'
+
+import InputButton from './../molecules/InputButton'
 
 const apiUrl = process.env.NEXT_PUBLIC_ARPETTE_URL
 
@@ -29,7 +31,7 @@ const TestCreated = ({ applicant, test, uuid, setPageData }) => {
     .post(`${apiUrl}/enrolment/${uuid}/start-test`)
     .then(({ data }) => setPageData(data))
   )
-
+  
   return (
     <div className="space-y-8 text-center">
       <div className="space-y-2">
@@ -123,7 +125,7 @@ const TestOngoing = ({ applicant, test, uuid, setPageData }) => {
 }
 
 const TestEnded = ({ applicant, test, uuid, setPageData }) => {
-  const { reset, register, handleSubmit } = useForm()
+  const { reset, register, handleSubmit, formState : { errors }} = useForm()
   useEffect(() => { reset() }, [])
 
   const mutation = useMutation(data => axios
@@ -139,30 +141,85 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
     formData.append("document", document[0])
     mutation.mutate(formData)
   }
+  
+  // const uploaded = "1 document chargé"
+
+  // const [resumeValue, setResumeValue] = useState("Ajouter mon CV")
+  // // const [inputResumeValue, setInputResumeValue] = useState()
+  // const onChangeResume = event => {
+  //   // setInputResumeValue(event.target.value);
+  //   setResumeValue(uploaded);
+  // };
+
+  // const [identityValue, setIdentityValue] = useState("Ajouter mon identité")
+  // // const [inputIdentityValue, setInputIdentityValue] = useState()
+  // const onChangeIdentity = event => {
+  //   // setInputIdentityValue(event.target.value);
+  //   setIdentityValue(uploaded);
+  // };
 
   return(
     <>
-      <div className="mt-12 mb-8 text-xl font-bold text-center">Félicitations {applicant} !</div>
-      <div className="text-center">Tu as terminé ton test avec {test.score}% de réussite.</div>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div>
-          <input
-            type="file"
-            accept="application/pdf"
-            {...register("resume", { required: true })}
-          />
-        </div>
-        <div>
-          <input
-            type="file"
-            accept="application/pdf"
-            {...register("document", { required: true })}
-          />
-        </div>
-        <div>
-          <input type="submit" value="envoyer" />
-        </div>
-      </form>
+      <div className="flex flex-col items-stretch">
+        <div className="mt-12 mb-8 text-xl font-bold text-center">Félicitations {applicant} !</div>
+        <div className="text-center">Tu as terminé ton test avec {test.score}% de réussite.</div>
+        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-center w-full mx-auto my-4 lg:flex-row lg:justify-around 2xl:justify-evenly">
+            <div className="flex flex-col justify-center w-3/4 my-8 space-y-2 md:w-2/3 lg:w-1/4 xl:w-1/5 2xl:w-2/12">
+              <label htmlFor="resume" className="cursor-pointer">CV* :</label>
+              <label htmlFor="resume" className={`p-8 text-center rounded cursor-pointer  hover:bg-tc-blue-light  ${errors.resume ? 'border-tc-red bg-tc-red-xlight border-4' : 'border-tc-blue bg-tc-blue-xlight border'}`}>
+                <p className="font-bold">
+                  {/* {resumeValue} */}
+                  Ajouter mon CV
+                </p>
+                {/* <p>{ inputResumeValue }</p> */}
+                <div className="text-xs italic">
+                  {/* <p >Maximum 1 fichier de 2MB</p> */}
+                  <p>Format accepté : PDF</p>
+                </div>
+              </label>
+              <input
+                type="file"
+                name="resume"
+                id="resume"
+                accept="application/pdf"
+                {...register("resume", { required: true })}
+                className="hidden"
+                // onChange={onChangeResume}
+              />
+            </div>
+            
+            <div className="flex flex-col justify-center w-3/4 my-8 space-y-2 md:w-2/3 lg:w-1/4 xl:w-1/5 2xl:w-2/12">
+              <label htmlFor="document" className="cursor-pointer">
+                Document d'identité* :
+              </label>
+              <label htmlFor="document" className={`p-8 text-center rounded cursor-pointer  hover:bg-tc-blue-light  ${errors.resume ? 'border-tc-red bg-tc-red-xlight border-4' : 'border-tc-blue bg-tc-blue-xlight border'}`}>
+                <p id="document-trigger" className="font-bold">
+                  {/* {identityValue} */}
+                  Ajouter mon identité
+                </p>
+                {/* <p>{ inputIdentityValue }</p> */}
+                <div className="text-xs italic">
+                {/* <p >Maximum 1 fichier de 2MB</p> */}
+                <p>Format accepté : PDF</p>
+             </div>
+              </label>
+              <input
+                type="file"
+                name="document"
+                id="document"
+                accept="application/pdf"
+                {...register("document", { required: true })}
+                className="hidden"
+                // onChange={onChangeIdentity}
+              />
+            </div>
+          </div>
+          <div className="mt-12">
+            <InputButton mutation={ mutation } />
+            </div>
+        </form>
+      </div>
     </>
   )
 }
