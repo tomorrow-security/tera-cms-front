@@ -152,7 +152,7 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
             <label htmlFor="resume" className="cursor-pointer">
               CV* :
             </label>
-            <label htmlFor="resume" className="p-8 border rounded cursor-pointer bg-tc-blue-xlight border-tc-blue">
+            <label htmlFor="resume" className="p-8 border rounded cursor-pointer bg-tc-blue-xlight border-tc-blue hover:bg-tc-blue-light">
               <p className="font-bold">Ajouter mon CV</p>
               <div className="text-xs italic">
               <p >Maximum 1 fichier de 2MB</p>
