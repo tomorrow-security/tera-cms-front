@@ -3,6 +3,8 @@ import { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import { useMutation } from 'react-query'
 
+import InputButton from './../molecules/InputButton'
+
 const apiUrl = process.env.NEXT_PUBLIC_ARPETTE_URL
 
 export default function EnrolmentTest({ applicant, test, uuid, setPageData }) {
@@ -29,7 +31,7 @@ const TestCreated = ({ applicant, test, uuid, setPageData }) => {
     .post(`${apiUrl}/enrolment/${uuid}/start-test`)
     .then(({ data }) => setPageData(data))
   )
-
+  
   return (
     <div className="space-y-8 text-center">
       <div className="space-y-2">
@@ -145,23 +147,49 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
       <div className="mt-12 mb-8 text-xl font-bold text-center">Félicitations {applicant} !</div>
       <div className="text-center">Tu as terminé ton test avec {test.score}% de réussite.</div>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div>
-          <input
-            type="file"
-            accept="application/pdf"
-            {...register("resume", { required: true })}
-          />
+        <div className="flex w-full mx-auto my-4 justify-evenly">
+          <div className="flex flex-col justify-center my-8 space-y-2">
+            <label htmlFor="resume" className="cursor-pointer">
+              CV* :
+            </label>
+            <label htmlFor="resume" className="p-8 border rounded cursor-pointer bg-tc-blue-xlight border-tc-blue">
+              <p className="font-bold">Ajouter mon CV</p>
+              <div className="text-xs italic">
+              <p >Maximum 1 fichier de 2MB</p>
+              <p>Format accepté : PDF</p>
+           </div>
+            </label>
+            {/* // TODO faire apparaître une indication de document chagé */}
+            <input
+              type="file"
+              name="resume"
+              id="resume"
+              accept="application/pdf"
+              {...register("resume", { required: true })}
+              className="hidden"
+            />
+           
+          </div>
+          <div className="flex flex-col justify-center my-8 space-y-2">
+            <label htmlFor="document" className="cursor-pointer">
+              Document d'identité* :
+            </label>
+            <input
+              type="file"
+              name="document"
+              id="document"
+              accept="application/pdf"
+              {...register("document", { required: true })}
+            />
+            <div className="text-xs italic">
+              <p >Maximum 1 fichier de 2MB</p>
+              <p>Format accepté : PDF</p>
+           </div>
+          </div>
         </div>
-        <div>
-          <input
-            type="file"
-            accept="application/pdf"
-            {...register("document", { required: true })}
-          />
-        </div>
-        <div>
-          <input type="submit" value="envoyer" />
-        </div>
+        <div className="mt-12">
+          <InputButton mutation={ mutation } />
+          </div>
       </form>
     </>
   )
