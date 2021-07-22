@@ -1,12 +1,13 @@
 import axios from 'axios'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import { useMutation } from 'react-query'
 import 'react-phone-number-input/style.css'
 import PhoneInputWithCountry from 'react-phone-number-input/react-hook-form'
-import { isPossiblePhoneNumber } from 'react-phone-number-input'
+// TODO faire la validation du numéro avec isPossiblePhoneNumber 
+// import { isPossiblePhoneNumber } from 'react-phone-number-input'
 
 
 import BlockTitle from '../../components/atoms/BlockTitle'
@@ -72,7 +73,6 @@ const EnrolmentForm = ({ status, onSubmit }) => {
     }
   }
   
-  // TODO faire la validation du numéro avec isPossiblePhoneNumber 
   // TODO style au focue du phoneInput border à enlever à l'intérieur
   
   return (
