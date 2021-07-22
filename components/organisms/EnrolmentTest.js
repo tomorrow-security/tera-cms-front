@@ -144,53 +144,55 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
 
   return(
     <>
-      <div className="mt-12 mb-8 text-xl font-bold text-center">Félicitations {applicant} !</div>
-      <div className="text-center">Tu as terminé ton test avec {test.score}% de réussite.</div>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="flex w-full mx-auto my-4 justify-evenly">
-          <div className="flex flex-col justify-center my-8 space-y-2">
-            <label htmlFor="resume" className="cursor-pointer">
-              CV* :
-            </label>
-            <label htmlFor="resume" className="p-8 border rounded cursor-pointer bg-tc-blue-xlight border-tc-blue hover:bg-tc-blue-light">
-              <p className="font-bold">Ajouter mon CV</p>
+      <div className="flex flex-col items-stretch">
+        <div className="mt-12 mb-8 text-xl font-bold text-center">Félicitations {applicant} !</div>
+        <div className="text-center">Tu as terminé ton test avec {test.score}% de réussite.</div>
+        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-center w-full mx-auto my-4 lg:flex-row lg:justify-around 2xl:justify-evenly">
+            <div className="flex flex-col justify-center w-3/4 my-8 space-y-2 md:w-2/3 lg:w-1/4 xl:w-1/5 2xl:w-2/12">
+              <label htmlFor="resume" className="cursor-pointer">
+                CV* :
+              </label>
+              <label htmlFor="resume" className="p-8 text-center border rounded cursor-pointer bg-tc-blue-xlight border-tc-blue hover:bg-tc-blue-light">
+                <p className="font-bold">Ajouter mon CV</p>
+                <div className="text-xs italic">
+                <p >Maximum 1 fichier de 2MB</p>
+                <p>Format accepté : PDF</p>
+             </div>
+              </label>
+              {/* // TODO faire apparaître une indication de document chagé */}
+              <input
+                type="file"
+                name="resume"
+                id="resume"
+                accept="application/pdf"
+                {...register("resume", { required: true })}
+                className="hidden"
+              />
+             
+            </div>
+            <div className="flex flex-col justify-center my-8 space-y-2">
+              <label htmlFor="document" className="cursor-pointer">
+                Document d'identité* :
+              </label>
+              <input
+                type="file"
+                name="document"
+                id="document"
+                accept="application/pdf"
+                {...register("document", { required: true })}
+              />
               <div className="text-xs italic">
-              <p >Maximum 1 fichier de 2MB</p>
-              <p>Format accepté : PDF</p>
-           </div>
-            </label>
-            {/* // TODO faire apparaître une indication de document chagé */}
-            <input
-              type="file"
-              name="resume"
-              id="resume"
-              accept="application/pdf"
-              {...register("resume", { required: true })}
-              className="hidden"
-            />
-           
+                <p >Maximum 1 fichier de 2MB</p>
+                <p>Format accepté : PDF</p>
+             </div>
+            </div>
           </div>
-          <div className="flex flex-col justify-center my-8 space-y-2">
-            <label htmlFor="document" className="cursor-pointer">
-              Document d'identité* :
-            </label>
-            <input
-              type="file"
-              name="document"
-              id="document"
-              accept="application/pdf"
-              {...register("document", { required: true })}
-            />
-            <div className="text-xs italic">
-              <p >Maximum 1 fichier de 2MB</p>
-              <p>Format accepté : PDF</p>
-           </div>
-          </div>
-        </div>
-        <div className="mt-12">
-          <InputButton mutation={ mutation } />
-          </div>
-      </form>
+          <div className="mt-12">
+            <InputButton mutation={ mutation } />
+            </div>
+        </form>
+      </div>
     </>
   )
 }
