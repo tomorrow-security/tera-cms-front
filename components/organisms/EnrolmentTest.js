@@ -125,7 +125,7 @@ const TestOngoing = ({ applicant, test, uuid, setPageData }) => {
 }
 
 const TestEnded = ({ applicant, test, uuid, setPageData }) => {
-  const { reset, register, handleSubmit, formState : { errors } } = useForm()
+  const { reset, register, handleSubmit, formState : { errors }} = useForm()
   useEffect(() => { reset() }, [])
 
   const mutation = useMutation(data => axios
@@ -142,21 +142,21 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
     mutation.mutate(formData)
   }
   
-  const uploaded = "1 document chargé"
+  // const uploaded = "1 document chargé"
 
-  const [resumeValue, setResumeValue] = useState("Ajouter mon CV")
-  const [inputResumeValue, setInputResumeValue] = useState()
-  const onChangeResume = event => {
-    setInputResumeValue(event.target.value);
-    setResumeValue(uploaded);
-  };
+  // const [resumeValue, setResumeValue] = useState("Ajouter mon CV")
+  // // const [inputResumeValue, setInputResumeValue] = useState()
+  // const onChangeResume = event => {
+  //   // setInputResumeValue(event.target.value);
+  //   setResumeValue(uploaded);
+  // };
 
-  const [identityValue, setIdentityValue] = useState("Ajouter mon identité")
-  const [inputIdentityValue, setInputIdentityValue] = useState()
-  const onChangeIdentity = event => {
-    setInputIdentityValue(event.target.value);
-    setIdentityValue(uploaded);
-  };
+  // const [identityValue, setIdentityValue] = useState("Ajouter mon identité")
+  // // const [inputIdentityValue, setInputIdentityValue] = useState()
+  // const onChangeIdentity = event => {
+  //   // setInputIdentityValue(event.target.value);
+  //   setIdentityValue(uploaded);
+  // };
 
   return(
     <>
@@ -168,11 +168,13 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
             <div className="flex flex-col justify-center w-3/4 my-8 space-y-2 md:w-2/3 lg:w-1/4 xl:w-1/5 2xl:w-2/12">
               <label htmlFor="resume" className="cursor-pointer">CV* :</label>
               <label htmlFor="resume" className={`p-8 text-center rounded cursor-pointer  hover:bg-tc-blue-light  ${errors.resume ? 'border-tc-red bg-tc-red-xlight border-4' : 'border-tc-blue bg-tc-blue-xlight border'}`}>
-                <p className="font-bold">{resumeValue}</p>
-                <p>{ inputResumeValue }</p>
+                <p className="font-bold">
+                  {/* {resumeValue} */}
+                  Ajouter mon CV
+                </p>
+                {/* <p>{ inputResumeValue }</p> */}
                 <div className="text-xs italic">
-                  <p id="resume-return"></p>
-                  <p >Maximum 1 fichier de 2MB</p>
+                  {/* <p >Maximum 1 fichier de 2MB</p> */}
                   <p>Format accepté : PDF</p>
                 </div>
               </label>
@@ -183,7 +185,7 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
                 accept="application/pdf"
                 {...register("resume", { required: true })}
                 className="hidden"
-                onChange={onChangeResume}
+                // onChange={onChangeResume}
               />
             </div>
             
@@ -192,11 +194,13 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
                 Document d'identité* :
               </label>
               <label htmlFor="document" className={`p-8 text-center rounded cursor-pointer  hover:bg-tc-blue-light  ${errors.resume ? 'border-tc-red bg-tc-red-xlight border-4' : 'border-tc-blue bg-tc-blue-xlight border'}`}>
-                <p id="document-trigger" className="font-bold">{identityValue}</p>
-                <p>{ inputIdentityValue }</p>
+                <p id="document-trigger" className="font-bold">
+                  {/* {identityValue} */}
+                  Ajouter mon identité
+                </p>
+                {/* <p>{ inputIdentityValue }</p> */}
                 <div className="text-xs italic">
-                  <p id="document-return"></p>
-                <p >Maximum 1 fichier de 2MB</p>
+                {/* <p >Maximum 1 fichier de 2MB</p> */}
                 <p>Format accepté : PDF</p>
              </div>
               </label>
@@ -207,7 +211,7 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
                 accept="application/pdf"
                 {...register("document", { required: true })}
                 className="hidden"
-                onChange={onChangeIdentity}
+                // onChange={onChangeIdentity}
               />
             </div>
           </div>
