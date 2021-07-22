@@ -167,7 +167,8 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                   {...register("consent", { required: true })}
                 />
                 <div>
-                  <div className="flex flex-row flex-wrap items-center max-w-full text-xs sm:text-base">
+                  <div className="box-border flex flex-row flex-wrap items-center max-w-full text-xs sm:text-base">
+                    {/* // TODO vérifier alignement des éléments */}
                     <p className="border-b-2 border-transparent">J'ai lu et j'accepte la&nbsp;</p>
                     <PageLink id="privacy" label="politique de confidentialité" />
                     <p className="border-b-2 border-transparent">&nbsp;de Tera Campus.</p>
