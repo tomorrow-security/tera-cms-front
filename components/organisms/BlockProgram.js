@@ -2,6 +2,7 @@ import BlockTitle from '../atoms/BlockTitle'
 import PartnersEuropean from '../atoms/PartnersEuropean'
 import PartnersCollaboratives from '../atoms/PartnersCollaboratives'
 import CarouselPartners from '../molecules/CarouselPartners'
+import BrochureButton from '../atoms/BrochureButton'
 
 
 const cursus = [
@@ -107,43 +108,44 @@ export default function BlockProgramme () {
         <section id="programme" className="py-10 md:py-20">
         <div className="md:container md:mx-auto">
             <BlockTitle title="Notre programme" iconPicture={{ backgroundImage: "url('programme.png')" }} />
-            <div className="mx-2">
-                <div className="text-lg text-center">
-                    <Strong>
-                        Le programme Tera Campus s&apos;articule sur trois principaux axes de développement :
-                    </Strong>
-                </div>
-                <ul className="w-full my-12 md:my-14">
-                    {
-                        axes.map((axe, index) => (
-                            <li
-                                key={index}
-                                className="flex flex-row items-center justify-center w-full my-4 md:my-8">
-                                <div className="w-5 h-5 mr-4 transform rotate-45 bg-tc-red"></div>
-                                <div className="py-1 text-2xl text-center text-white rounded-t w-52 md:w-1/3 bg-tc-blue rounded-b-xl">
-                                    {axe}
-                                </div>
-                            </li>
-                        ))
-                    }
-                </ul>
-                <Paragraph gutterBottom>
-                    A travers ses partenaires,&nbsp;
-                    Tera Campus veut te donner l&apos;opportunité
-                    d&apos;apprendre de tous les acteurs du marché.&nbsp;
-                    Notre approche est conceptuelle :&nbsp;
-                    <Strong>
-                        nous ne nous focalisons pas sur des technologies spécifiques,&nbsp;
-                        mais formons nos étudiants à savoir s&apos;adapter à n&apos;importe laquelle.
-                    </Strong>
-                </Paragraph>
-                <Paragraph gutterBottom>
+                <div className="mx-2">
+									<div className="text-lg text-center">
+											<Strong>
+													Le programme Tera Campus s&apos;articule sur trois principaux axes de développement :
+											</Strong>
+									</div>
+									<ul className="w-full my-12 md:my-14">
+											{
+													axes.map((axe, index) => (
+															<li
+																	key={index}
+																	className="flex flex-row items-center justify-center w-full my-4 md:my-8">
+																	<div className="w-5 h-5 mr-4 transform rotate-45 bg-tc-red"></div>
+																	<div className="py-1 text-2xl text-center text-white rounded-t w-52 md:w-1/3 bg-tc-blue rounded-b-xl">
+																			{axe}
+																	</div>
+															</li>
+													))
+											}
+									</ul>
+									<Paragraph gutterBottom>
+											A travers ses partenaires,&nbsp;
+											Tera Campus veut te donner l&apos;opportunité
+											d&apos;apprendre de tous les acteurs du marché.&nbsp;
+											Notre approche est conceptuelle :&nbsp;
+											<Strong>
+													nous ne nous focalisons pas sur des technologies spécifiques,&nbsp;
+													mais formons nos étudiants à savoir s&apos;adapter à n&apos;importe laquelle.
+											</Strong>
+									</Paragraph>
+									<BrochureButton />
+									<Paragraph gutterBottom>
                     Chez Tera Campus,&nbsp;
                     il est possible d&apos;en apprendre plus sur l&apos;écosystème technique européen&nbsp;
                     et nous privilégions les partenaires nationaux lorsque cela est possible.
                 </Paragraph>
                 <div className="flex items-center justify-between mb-8 flex-nowrap">
-                        <CarouselPartners partners={<PartnersEuropean />}/>
+                    <CarouselPartners partners={<PartnersEuropean />}/>
                 </div>
                 <div>
                     <div className="flex flex-row items-center max-w-full my-4 md:my-8">
