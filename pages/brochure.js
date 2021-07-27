@@ -180,7 +180,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
               {
                 errors.consent ? (
                   <span className="text-center text-tc-red">
-                    Tu dois accepter la politique de confidentialité pour continuer ton inscription.
+                    Tu dois accepter la politique de confidentialité pour recevoir la brochure.
                   </span>
                 ) : null
               }
@@ -231,6 +231,9 @@ export default function Brochure() {
               iconPicture={{ backgroundImage: "url('brochure icon-blue.png')" }}
             />
           </div>
+          <p className="my-8 text-center ">
+            Je remplis le formulaire pour me permettre de recevoir la brochure de Tera Campus directement dans ma boite mail.
+          </p>
           <div className="xl:my-12">
             <EnrolmentForm status={mutation.status} onSubmit={onSubmit} />
           </div>
