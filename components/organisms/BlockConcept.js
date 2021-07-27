@@ -1,5 +1,6 @@
 import Cta from '../atoms/Cta'
 import IconCurvedArrow from '../atoms/IconCurvedArrow'
+import BrochureButton from '../atoms/BrochureButton'
 
 const Paragraph = ({ bold, gutterBottom, children }) => (
     <p
@@ -86,12 +87,13 @@ export default function BlockConcept() {
                             apprentissage pour mieux t&apos;intégrer dans le monde professionnel.
                         </Paragraph>
                     </li>
-                </ul>
+                  </ul>
                 <div
                     className="w-full h-64 bg-center bg-cover lg:w-1/2 lg:h-auto lg:hy-auto lg:mx-2"
                     style={{ backgroundImage: "url('students-collaboration.jpg')" }}
-                ></div>
-            </div>
+                  ></div>
+              </div>
+              <BrochureButton />
         </div>
     </section>
   )
