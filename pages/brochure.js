@@ -204,6 +204,7 @@ const apiUrl = process.env.NEXT_PUBLIC_ARPETTE_URL
 export default function Brochure() {
   const router = useRouter()
   
+  //* à modifier avec les bon endpoints
   const mutation = useMutation(formData => {
     axios
       .post(`${apiUrl}/enrolment/create`, formData)
@@ -224,7 +225,7 @@ export default function Brochure() {
       </Head>
 
       <main className="mx-2 md:container md:mx-auto">
-        <section id="enrolment" className="py-10 md:py-20">
+        <section id="brochure" className="py-10 md:py-20">
           <div className="flex flex-col justify-between flex-grow md:container md:mx-auto">
             <BlockTitle
               title="Demande de brochure"

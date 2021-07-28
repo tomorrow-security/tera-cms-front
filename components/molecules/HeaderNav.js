@@ -13,6 +13,8 @@ const pages1 = [
 	{ id: 'career', label: 'Carrières' },
 	{ id: 'guides', label: 'Nos guides' },
 	{ id: 'program', label: 'Programme' },
+	{ id: 'brochure', label: 'Brochure' },
+	{ id: 'enrolment', label: 'Inscription' },
 	{ id: 'join', label: 'Rejoins-nous' },
 ]
 
@@ -24,7 +26,7 @@ const pages2 = [
 
 export default function HeaderNav({click}) {
 	return (
-		<nav className="pr-2 text-lg text-center lg:flex lg:justify-between">
+		<nav className="pr-2 text-lg text-center lg:text-base xl:text-lg lg:flex lg:justify-between ">
 			<ul className="space-y-2 lg:space-y-0 lg:space-x-4 lg:flex lg:justify-center">
 				{
 					links1.map(({ id, label }) => (
