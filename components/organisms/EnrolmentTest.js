@@ -32,7 +32,6 @@ const TestCreated = ({ applicant, test, uuid, setPageData }) => {
     .post(`${apiUrl}/enrolment/${uuid}/start-test`)
     .then(({ data }) => setPageData(data))
   )
-  //TODO boutton unique à utiliser
   return (
     <div className="space-y-8 text-center">
       <div className="space-y-2">
@@ -60,7 +59,7 @@ const TestCreated = ({ applicant, test, uuid, setPageData }) => {
       </div>
       <div className="flex flex-row justify-center">
         <InputButtonSimple
-          value="Démarrer le test"
+          defaultValue="Démarrer le test"
           onClick={() => mutation.mutate()}
         />
       </div>
@@ -218,9 +217,6 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
           </div>
           <div className="mt-12">
             <InputButtonMutation
-              // defaultValue="Envoyer"
-              // loadingValue="En cours d'envoi..."
-              // successValue="Envoyé !"
               mutation={mutation}
             />
           </div>
@@ -252,7 +248,7 @@ const SingleChoiceForm = ({ question, onSubmit }) => {
       </div>
       <div className="flex justify-center pt-4">
         <InputButtonSimple
-          value="Valider ma réponse"
+          defaultValue="Valider ma réponse"
         />
       </div>
     </form>
@@ -281,7 +277,7 @@ const MultipleChoicesForm = ({ question, onSubmit }) => {
       </div>
       <div className="flex justify-center pt-4">
         <InputButtonSimple
-          value="Valider ma réponse"
+          defaultValue="Valider ma réponse"
         />
       </div>
       </form>
