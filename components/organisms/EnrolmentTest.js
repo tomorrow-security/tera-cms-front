@@ -73,6 +73,8 @@ const TestOngoing = ({ applicant, test, uuid, setPageData }) => {
     .then(({ data }) => setPageData(data))
   )
 
+  // ! le bouton reste avec submitedValue à la question suivante => avoir un nouveau rendu du bouton à chaque nouvelle question.
+
   const onSubmit = ({ choice }) => {
     const answers = []
     if (Array.isArray(choice)) {
@@ -229,6 +231,8 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
 const SingleChoiceForm = ({ question, onSubmit }) => {
   const { reset, register, handleSubmit } = useForm()
   useEffect(() => { reset() }, [])
+  // const [value, setValue] = useState("Valider ma réponse")
+  // const submitedValue = "Réponse validée"
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="space-y-2">
@@ -248,7 +252,8 @@ const SingleChoiceForm = ({ question, onSubmit }) => {
       </div>
       <div className="flex justify-center pt-4">
         <InputButtonSimple
-          defaultValue="Valider ma réponse"
+          defaultValue={value}
+          // onClick={() =>setValue(submitedValue)}
         />
       </div>
     </form>
@@ -258,10 +263,15 @@ const SingleChoiceForm = ({ question, onSubmit }) => {
 const MultipleChoicesForm = ({ question, onSubmit }) => {
   const { reset, register, handleSubmit } = useForm()
   useEffect(() => { reset() }, [])
+
+  // const [value, setValue] = useState("Valider ma réponse")
+  // const submitedValue = "Réponse validée"
+  
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="space-y-2">
         {question.choices.map(choice => (
+          
           <div key={choice.body}>
             <input
               type="checkbox"
@@ -277,9 +287,10 @@ const MultipleChoicesForm = ({ question, onSubmit }) => {
       </div>
       <div className="flex justify-center pt-4">
         <InputButtonSimple
-          defaultValue="Valider ma réponse"
+          defaultValue={value}
+          // onClick={() => setValue(submitedValue)}
         />
       </div>
-      </form>
+    </form>
   )
 }
