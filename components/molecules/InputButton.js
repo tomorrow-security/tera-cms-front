@@ -1,4 +1,4 @@
-export default function InputButton({loadingValue, successValue, defaultValue }) {
+export default function InputButton({ loadingValue, successValue, defaultValue }) {
     
   switch (status) {
     case 'loading':
