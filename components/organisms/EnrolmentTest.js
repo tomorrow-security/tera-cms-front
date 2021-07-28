@@ -3,7 +3,8 @@ import { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useMutation } from 'react-query'
 
-import InputButton from './../molecules/InputButton'
+import InputButtonMutation from '../molecules/InputButtonMutation'
+import InputButtonSimple from '../molecules/InputButtonSimple'
 
 const apiUrl = process.env.NEXT_PUBLIC_ARPETTE_URL
 
@@ -31,7 +32,7 @@ const TestCreated = ({ applicant, test, uuid, setPageData }) => {
     .post(`${apiUrl}/enrolment/${uuid}/start-test`)
     .then(({ data }) => setPageData(data))
   )
-  
+  //TODO boutton unique à utiliser
   return (
     <div className="space-y-8 text-center">
       <div className="space-y-2">
@@ -57,16 +58,11 @@ const TestCreated = ({ applicant, test, uuid, setPageData }) => {
         </div>
         <p>Bon courage et à très vite !</p>
       </div>
-      <div className="w-auto pt-8 mx-auto group">
-        <div className="relative z-0 px-4 mx-auto font-bold text-transparent transition-colors duration-700 border rounded-t shadow outline-none cursor-pointer w-max rounded-b-xl bg-tc-blue-light border-tc-blue-dark group-hover:bg-tc-red-light group-hover:border-tc-red-dark group-hover:shadow-none">
-          Démarrer le test
-          <input
-            type="submit"
-            value="Démarrer le test"
-            className="absolute left-0 z-20 px-4 mx-auto font-bold text-white transition-colors duration-700 transform rounded-t shadow outline-none cursor-pointer -top-15/100 w-max rounded-b-xl bg-tc-blue group-hover:bg-tc-red group-hover:shadow-none group-hover:-top-20/100 active:translate-y-20/100"
-            onClick={() => mutation.mutate()}
-          />
-        </div>
+      <div className="flex flex-row justify-center">
+        <InputButtonSimple
+          value="Démarrer le test"
+          onClick={() => mutation.mutate()}
+        />
       </div>
     </div>
   )
@@ -221,7 +217,9 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
             
           </div>
           <div className="mt-12">
-            <InputButton mutation={ mutation } />
+            <InputButtonMutation
+              mutation={mutation}
+            />
           </div>
         </form>
       </div>
@@ -250,6 +248,7 @@ const SingleChoiceForm = ({ question, onSubmit }) => {
         ))}
       </div>
       <div className="flex justify-center">
+         //TODO boutton unique à utiliser
         <input
           type="submit"
           className="box-border px-2 mx-auto mt-8 font-semibold border rounded bg-tc-blue-xlight border-tc-blue-bright"
@@ -281,6 +280,7 @@ const MultipleChoicesForm = ({ question, onSubmit }) => {
         ))}
       </div>
       <div className="flex justify-center">
+        //TODO boutton unique à utiliser
         <input
           type="submit"
           className="box-border px-2 mx-auto mt-8 font-semibold border rounded bg-tc-blue-xlight border-tc-blue-bright"
