@@ -252,7 +252,8 @@ const SingleChoiceForm = ({ question, onSubmit }) => {
       </div>
       <div className="flex justify-center pt-4">
         <InputButtonSimple
-          defaultValue={value}
+          defaultValue="Valider ma réponse"
+          // defaultValue={value}
           // onClick={() =>setValue(submitedValue)}
         />
       </div>
@@ -287,7 +288,8 @@ const MultipleChoicesForm = ({ question, onSubmit }) => {
       </div>
       <div className="flex justify-center pt-4">
         <InputButtonSimple
-          defaultValue={value}
+          defaultValue="Valider ma réponse"
+          // defaultValue={value}
           // onClick={() => setValue(submitedValue)}
         />
       </div>
