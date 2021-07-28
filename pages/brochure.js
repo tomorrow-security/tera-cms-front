@@ -204,10 +204,12 @@ const apiUrl = process.env.NEXT_PUBLIC_ARPETTE_URL
 export default function Brochure() {
   const router = useRouter()
   
-  //* à modifier avec les bon endpoints
+  
   const mutation = useMutation(formData => {
     axios
+      // TODO à modifier avec les bons endpoints
       .post(`${apiUrl}/enrolment/create`, formData)
+      // TODO à modifier : écrire une validation de l'envoie du mail avec le brochure
       .then(({ data }) => router.push(`/enrolment/${data.enrolment}`))
       .catch(error => console.log(error))
   }, { retry: 3 })
