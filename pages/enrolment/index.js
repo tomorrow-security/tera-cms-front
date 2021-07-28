@@ -12,6 +12,7 @@ import PhoneInputWithCountry from 'react-phone-number-input/react-hook-form'
 
 import BlockTitle from '../../components/atoms/BlockTitle'
 import InputRadio from '../../components/molecules/InputRadio'
+import InputButton from '../../components/molecules/InputButton'
 // import InputCheckRGPD from '../components/molecules/InputCheckRGPD'
 // import Input from '../components/molecules/Input'
 import PageLink from '../../components/atoms/PageLink'
@@ -25,56 +26,8 @@ const EnrolmentForm = ({ status, onSubmit }) => {
   const {reset, register, handleSubmit, control, formState : { errors }} = useForm()
   
   useEffect(() => { reset() }, [])
-
-  // TODO importer la molecule InputButton à la place
-  const renderSubmitButton = () => {
-    switch (status) {
-      case 'loading':
-        return (
-          <div className="w-auto pt-2 mx-auto group">
-            <div className="relative z-0 px-4 font-bold text-transparent border border-t-0 rounded-t outline-none cursor-pointer w-max rounded-b-xl bg-tc-red-xlight border-tc-red-dark">
-              En cours d'envoi ...
-              <input
-                type="submit"
-                value="En cours d'envoi ..."
-                className="absolute top-0 left-0 z-20 px-4 mx-auto font-bold text-white rounded-t outline-none cursor-pointer w-max rounded-b-xl bg-tc-red-medium"
-                disabled
-              />
-            </div>
-          </div>
-        )
-      case 'success':
-        return (
-          <div className="w-auto pt-2 mx-auto group">
-            <div className="relative z-0 px-4 font-bold text-transparent border border-t-0 rounded-t outline-none cursor-pointer w-max rounded-b-xl bg-tc-blue-xlight border-tc-blue">
-              Envoyé !
-              <input
-                type="submit"
-                value="Envoyé !"
-                className="absolute left-0 z-20 px-4 mx-auto font-bold text-white rounded-t outline-none cursor-pointer bg-tc-blue-medium -top-20/100 w-max rounded-b-xl"
-                disabled
-              />
-            </div>
-          </div>
-        )
-      default:
-        return (
-          <div className="w-auto pt-2 mx-auto group">
-            <div className="relative z-0 px-4 font-bold text-transparent transition-colors duration-700 border rounded-t shadow outline-none cursor-pointer w-max rounded-b-xl bg-tc-blue-light border-tc-blue-dark group-hover:bg-tc-red-light group-hover:border-tc-red-dark group-hover:shadow-none">
-              Envoyer
-              <input
-                type="submit"
-                value="Envoyer"
-                className="absolute left-0 z-20 px-4 mx-auto font-bold text-white transition-colors duration-700 transform rounded-t shadow outline-none cursor-pointer -top-15/100 w-max rounded-b-xl bg-tc-blue group-hover:bg-tc-red group-hover:shadow-none group-hover:-top-20/100 active:translate-y-20/100"
-              />
-            </div>
-          </div>
-        )
-    }
-  }
   
-  // TODO style au focue du phoneInput border à enlever à l'intérieur
-  
+  // TODO style au focus du phoneInput border à enlever à l'intérieur
   return (
     <form className="w-full mx-2" onSubmit={(handleSubmit(onSubmit))}>
       <div>
@@ -189,7 +142,11 @@ const EnrolmentForm = ({ status, onSubmit }) => {
         </div>
       </div>
       <div className="flex items-center justify-center my-4 xl:my-20">
-        {renderSubmitButton()}
+        <InputButton
+        defaultValue="Envoyer"
+        loadingValue="En cours d'envoi..."
+        successValue="Envoyé !"
+        />
       </div>
     </form>
   )
