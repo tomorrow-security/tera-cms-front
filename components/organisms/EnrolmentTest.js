@@ -218,6 +218,9 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
           </div>
           <div className="mt-12">
             <InputButtonMutation
+              // defaultValue="Envoyer"
+              // loadingValue="En cours d'envoi..."
+              // successValue="Envoyé !"
               mutation={mutation}
             />
           </div>
