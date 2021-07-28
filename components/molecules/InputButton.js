@@ -4,12 +4,12 @@ export default function InputButton({loadingValue, successValue, defaultValue })
     case 'loading':
       return (
         <div className="w-auto pt-2 mx-auto group">
-          <div className="relative z-0 h-10 px-4 font-bold text-transparent border border-t-0 rounded-t outline-none cursor-pointer w-max rounded-b-xl bg-tc-red-xlight border-tc-red-dark">
+          <div className="relative z-0 h-10 px-4 font-bold text-transparent border border-t-0 rounded-t outline-none cursor-wait w-max rounded-b-xl bg-tc-red-xlight border-tc-red-dark">
             {loadingValue}
             <input
               type="submit"
               value={loadingValue}
-              className="absolute top-0 left-0 z-20 h-10 px-4 mx-auto font-bold text-white rounded-t outline-none cursor-pointer w-max rounded-b-xl bg-tc-red-medium"
+              className="absolute top-0 left-0 z-20 h-10 px-4 mx-auto font-bold text-white rounded-t outline-none cursor-wait w-max rounded-b-xl bg-tc-red-medium"
               disabled
             />
           </div>
@@ -18,12 +18,12 @@ export default function InputButton({loadingValue, successValue, defaultValue })
     case 'success':
       return (
         <div className="w-auto pt-2 mx-auto group">
-          <div className="relative z-0 h-10 px-4 font-bold text-transparent border border-t-0 rounded-t outline-none cursor-pointer w-max rounded-b-xl bg-tc-blue-xlight border-tc-blue">
+          <div className="relative z-0 h-10 px-4 font-bold text-transparent border border-t-0 rounded-t outline-none cursor-not-allowed w-max rounded-b-xl bg-tc-blue-xlight border-tc-blue">
             {successValue}
             <input
               type="submit"
               value={successValue}
-              className="absolute left-0 z-20 h-10 px-4 mx-auto font-bold text-white rounded-t outline-none cursor-pointer bg-tc-blue-medium -top-20/100 w-max rounded-b-xl"
+              className="absolute left-0 z-20 h-10 px-4 mx-auto font-bold text-white rounded-t outline-none cursor-not-allowed bg-tc-blue-medium -top-20/100 w-max rounded-b-xl"
               disabled
             />
           </div>
