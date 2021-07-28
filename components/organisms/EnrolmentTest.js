@@ -247,11 +247,8 @@ const SingleChoiceForm = ({ question, onSubmit }) => {
           </div>
         ))}
       </div>
-      <div className="flex justify-center">
-         //TODO boutton unique à utiliser
-        <input
-          type="submit"
-          className="box-border px-2 mx-auto mt-8 font-semibold border rounded bg-tc-blue-xlight border-tc-blue-bright"
+      <div className="flex justify-center pt-4">
+        <InputButtonSimple
           value="Valider ma réponse"
         />
       </div>
@@ -279,11 +276,8 @@ const MultipleChoicesForm = ({ question, onSubmit }) => {
           </div>
         ))}
       </div>
-      <div className="flex justify-center">
-        //TODO boutton unique à utiliser
-        <input
-          type="submit"
-          className="box-border px-2 mx-auto mt-8 font-semibold border rounded bg-tc-blue-xlight border-tc-blue-bright"
+      <div className="flex justify-center pt-4">
+        <InputButtonSimple
           value="Valider ma réponse"
         />
       </div>
