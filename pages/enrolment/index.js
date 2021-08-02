@@ -17,6 +17,7 @@ import InputButtonMutation from '../../components/molecules/InputButtonMutation'
 // import Input from '../components/molecules/Input'
 import PageLink from '../../components/atoms/PageLink'
 
+//TODO importer une molécule Input
 //TODO descendre un peu le submit en view desktop
 // TODO layout msg d'erreur des checkbox ()
 
@@ -47,8 +48,6 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                 <span className=" text-tc-red">{errors?.gender?.message}</span>
               </div>
               <div className="flex items-center space-y-1 xl:w-45%">
-                {/* // TODO importer la molecule Input à la place */}
-                 {/* //* Input composant ne fonctionne pas : à revoir */}
                 <label htmlFor="email" className="w-30%">E-mail* :</label>
                 <input
                   id="email"
@@ -63,7 +62,6 @@ const EnrolmentForm = ({ status, onSubmit }) => {
             </div>
             <div className="xl:flex xl:justify-between xl:w-4/5 xl:flex-nowrap">
               <div className="flex items-center space-y-1 xl:w-45%">
-                {/* // TODO importer la molecule Input à la place */}
                 <label htmlFor="lastName" className="w-30%">Nom* :</label>
                 <input
                   id="lastName"
@@ -76,7 +74,6 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                 <span className="text-tc-red">{errors?.lastName?.message}</span>
               </div>
               <div className="flex items-center space-y-1 xl:w-45%">
-                {/* // TODO importer la molecule Input à la place */}
                 <label htmlFor="firstName" className="w-30%">Prénom* :</label>
                 <input
                   id="firstName"
@@ -121,7 +118,6 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                 />
                 <div>
                   <div className="box-border flex flex-row flex-wrap items-center max-w-full text-xs sm:text-base">
-                    {/* // TODO vérifier alignement des éléments */}
                     <p className="border-b-2 border-transparent">J'ai lu et j'accepte la&nbsp;</p>
                     <PageLink id="privacy" label="politique de confidentialité" />
                     <p className="border-b-2 border-transparent">
