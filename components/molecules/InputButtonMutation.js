@@ -1,4 +1,4 @@
-export default function InputButtonMutation({mutation, defaultValue, loadingValue, successValue}) {
+export default function InputButtonMutation({mutation, defaultValue, loadingValue, successValue, onClick}) {
   
   const submitButtonParams = {
     loading: {
@@ -29,6 +29,7 @@ export default function InputButtonMutation({mutation, defaultValue, loadingValu
         <div className={`relative z-0 h-10 px-4 font-bold text-transparent rounded-t outline-none w-max rounded-b-xl ${['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].shadow : submitButtonParams['default'].shadow}`}>
           {['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].value : submitButtonParams['default'].value}
           <input
+            onClick= {onClick}
             type="submit"
             value={['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].value : submitButtonParams['default'].value}
             className={`${['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].position : submitButtonParams['default'].position} 

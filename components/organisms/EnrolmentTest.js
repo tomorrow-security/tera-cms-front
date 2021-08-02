@@ -32,7 +32,11 @@ const TestCreated = ({ applicant, test, uuid, setPageData }) => {
     .post(`${apiUrl}/enrolment/${uuid}/start-test`)
     .then(({ data }) => setPageData(data))
   )
-  // const clickMutate = () => mutation.mutate
+
+  const handleClick = () => {
+    mutation.mutate(),
+    console.log("mutation :", mutation)
+  }
 
   return (
     <div className="space-y-8 text-center">
@@ -60,21 +64,12 @@ const TestCreated = ({ applicant, test, uuid, setPageData }) => {
         <p>Bon courage et à très vite !</p>
       </div>
       <div className="flex flex-row justify-center">
-        {/* <InputButtonSimple
-          defaultValue="Démarrer le test"
-          submitedValue="C'est parti..."
-          onClick={()=> mutation.mutate}
-          //* ne fonctionne pas
-          click={clickMutate}
-          //* passe directement au quizz sans click
-          // onClick={mutation.mutate()}
-        /> */}
         <InputButtonMutation
           defaultValue="Démarrer de le test"
           loadingValue="Test en cours de chargement ..."
           successValue="Test chargé"
           mutation={mutation}
-          onClick={()=> mutation.mutate}
+          onClick={handleClick}
         />
       </div>
     </div>
