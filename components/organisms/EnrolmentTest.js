@@ -121,6 +121,75 @@ const TestOngoing = ({ applicant, test, uuid, setPageData }) => {
   )
 }
 
+const SingleChoiceForm = ({ question, onSubmit }) => {
+  const { reset, register, handleSubmit } = useForm()
+  useEffect(() => { reset() }, [])
+  // const [value, setValue] = useState("Valider ma réponse")
+  // const submitedValue = "Réponse validée"
+  return (
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <div className="space-y-2">
+        {question.choices.map(choice => (
+          <div key={choice.body}>
+            <input
+              type="radio"
+              id={`choice${choice.id}`}
+              className="mr-2"
+              name="choice"
+              value={choice.id}
+              {...register("choice", { required: true })}
+            />
+            <label htmlFor={`choice${choice.id}`}>{choice.body}</label>
+          </div>
+        ))}
+      </div>
+      <div className="flex justify-center pt-4">
+        <InputButtonSimple
+          defaultValue="Valider ma réponse"
+          // defaultValue={value}
+          // onClick={() =>setValue(submitedValue)}
+        />
+      </div>
+    </form>
+  )
+}
+
+const MultipleChoicesForm = ({ question, onSubmit }) => {
+  const { reset, register, handleSubmit } = useForm()
+  useEffect(() => { reset() }, [])
+
+  // const [value, setValue] = useState("Valider ma réponse")
+  // const submitedValue = "Réponse validée"
+  
+  return (
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <div className="space-y-2">
+        {question.choices.map(choice => (
+          
+          <div key={choice.body}>
+            <input
+              type="checkbox"
+              id={`choice${choice.id}`}
+              className="mr-2"
+              name="choice"
+              value={choice.id}
+              {...register("choice", { required: true })}
+            />
+            <label htmlFor={`choice${choice.id}`}>{choice.body}</label>
+          </div>
+        ))}
+      </div>
+      <div className="flex justify-center pt-4">
+        <InputButtonSimple
+          defaultValue="Valider ma réponse"
+          // defaultValue={value}
+          // onClick={() => setValue(submitedValue)}
+        />
+      </div>
+    </form>
+  )
+}
+
 const TestEnded = ({ applicant, test, uuid, setPageData }) => {
   const { reset, register, handleSubmit } = useForm()
   useEffect(() => { reset() }, [])
@@ -228,71 +297,4 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
   )
 }
 
-const SingleChoiceForm = ({ question, onSubmit }) => {
-  const { reset, register, handleSubmit } = useForm()
-  useEffect(() => { reset() }, [])
-  // const [value, setValue] = useState("Valider ma réponse")
-  // const submitedValue = "Réponse validée"
-  return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <div className="space-y-2">
-        {question.choices.map(choice => (
-          <div key={choice.body}>
-            <input
-              type="radio"
-              id={`choice${choice.id}`}
-              className="mr-2"
-              name="choice"
-              value={choice.id}
-              {...register("choice", { required: true })}
-            />
-            <label htmlFor={`choice${choice.id}`}>{choice.body}</label>
-          </div>
-        ))}
-      </div>
-      <div className="flex justify-center pt-4">
-        <InputButtonSimple
-          defaultValue="Valider ma réponse"
-          // defaultValue={value}
-          // onClick={() =>setValue(submitedValue)}
-        />
-      </div>
-    </form>
-  )
-}
 
-const MultipleChoicesForm = ({ question, onSubmit }) => {
-  const { reset, register, handleSubmit } = useForm()
-  useEffect(() => { reset() }, [])
-
-  // const [value, setValue] = useState("Valider ma réponse")
-  // const submitedValue = "Réponse validée"
-  
-  return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <div className="space-y-2">
-        {question.choices.map(choice => (
-          
-          <div key={choice.body}>
-            <input
-              type="checkbox"
-              id={`choice${choice.id}`}
-              className="mr-2"
-              name="choice"
-              value={choice.id}
-              {...register("choice", { required: true })}
-            />
-            <label htmlFor={`choice${choice.id}`}>{choice.body}</label>
-          </div>
-        ))}
-      </div>
-      <div className="flex justify-center pt-4">
-        <InputButtonSimple
-          defaultValue="Valider ma réponse"
-          // defaultValue={value}
-          // onClick={() => setValue(submitedValue)}
-        />
-      </div>
-    </form>
-  )
-}
