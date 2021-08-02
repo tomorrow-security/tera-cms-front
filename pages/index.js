@@ -40,7 +40,7 @@ export async function getServerSideProps() {
           timetable: '18h30',
           dateTimeTimetable: '18:30',
           title: "Motion Design, c'est quoi ?",
-          description: 'Thurday Tech Live',
+          description: 'Thursday Tech Live',
           platform: 'twitch',
           url: 'https://www.twitch.tv/teracampus'
         },
@@ -50,7 +50,7 @@ export async function getServerSideProps() {
           timetable: '17h00',
           dateTimeTimetable: '17:00',
           title: "Qu'est ce que la 5G ?",
-          description: 'Thurday Tech Live',
+          description: 'Thursday Tech Live',
           platform: 'twitch',
           url: 'https://www.twitch.tv/teracampus'
         },
@@ -60,7 +60,7 @@ export async function getServerSideProps() {
           timetable: '18h30',
           dateTimeTimetable: '18:30',
           title: "Unity 2D : jeu de plate-forme, parallaxe et bien plus encore !",
-          description: 'Thurday Tech Live',
+          description: 'Thursday Tech Live',
           platform: 'twitch',
           url: 'https://www.twitch.tv/teracampus'
         },
@@ -70,7 +70,7 @@ export async function getServerSideProps() {
         //   timetable: '18h00',
         //   dateTimeTimetable: '18:00',
         //   title: "Introduxion à l'UX.",
-        //   description: 'Thurday Tech Live',
+        //   description: 'Thursday Tech Live',
         //   platform: 'twitch',
         //   url: 'https://www.twitch.tv/teracampus'
         // },
@@ -80,7 +80,7 @@ export async function getServerSideProps() {
         //   timetable: '18h00',
         //   dateTimeTimetable: '18:00',
         //   title: "Evolution des bandes d'annonces",
-        //   description: 'Thurday Tech Live',
+        //   description: 'Thursday Tech Live',
         //   platform: 'twitch',
         //   url: 'https://www.twitch.tv/teracampus'
         // },
