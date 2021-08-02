@@ -140,7 +140,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
       <div className="flex items-center justify-center my-4 xl:my-20">
         <InputButtonMutation
           defaultValue="Envoyer"
-          loadingValue="En cours de chargement ..."
+          loadingValue="En cours d'envoi' ..."
           successValue="Envoyé"
           mutation={status}
         />
