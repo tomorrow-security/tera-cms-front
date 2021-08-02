@@ -12,7 +12,7 @@ import PhoneInputWithCountry from 'react-phone-number-input/react-hook-form'
 
 import BlockTitle from '../../components/atoms/BlockTitle'
 import InputRadio from '../../components/molecules/InputRadio'
-import InputButton from '../../components/molecules/InputButton'
+import InputButtonMutation from '../../components/molecules/InputButtonMutation'
 // import InputCheckRGPD from '../components/molecules/InputCheckRGPD'
 // import Input from '../components/molecules/Input'
 import PageLink from '../../components/atoms/PageLink'
@@ -142,10 +142,8 @@ const EnrolmentForm = ({ status, onSubmit }) => {
         </div>
       </div>
       <div className="flex items-center justify-center my-4 xl:my-20">
-        <InputButton
-        defaultValue="Envoyer"
-        loadingValue="En cours d'envoi..."
-        successValue="Envoyé !"
+        <InputButtonMutation
+          mutation={status}
         />
       </div>
     </form>
