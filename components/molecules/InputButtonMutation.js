@@ -1,25 +1,25 @@
-export default function InputButtonMutation({mutation}) {
+export default function InputButtonMutation({mutation, defaultValue, loadingValue, successValue}) {
   
   const submitButtonParams = {
     loading: {
-      value: 'En cours d\'envoi ...',
+      value: loadingValue,
       color: 'bg-tc-red-medium cursor-wait',
       position:'absolute left-0 top-0 z-20',
       shadow: 'bg-tc-red-xlight border border-tc-red-dark cursor-wait border-t-0',
       disabled: true
     },
     success: {
-      value: 'Envoyé !',
+      value: successValue,
       color: 'bg-tc-blue-medium cursor-not-allowed',
       position:'absolute left-0 -top-20/100 z-20',
       shadow: 'bg-tc-blue-xlight border border-tc-blue cursor-not-allowed border-t-0',
       disabled: true
     },
     default: {
-      value: 'Envoyer',
-      color: 'bg-tc-blue group-hover:bg-tc-red shadow cursor-pointer group-hover:shadow-none transition-colors duration-700 group-hover:-top-20/100 transform active:translate-y-20/100',
+      value: defaultValue,
+      color: 'bg-tc-blue group-hover:bg-tc-red shadow cursor-pointer group-hover:shadow-none transition-colors duration-500 group-hover:-top-20/100 transform active:translate-y-20/100',
       position:'absolute left-0 -top-15/100 z-20',
-      shadow: 'bg-tc-blue-light border border-tc-blue-dark group-hover:bg-tc-red-light group-hover:border-tc-red-dark shadow group-hover:shadow-none cursor-pointer  transition-colors duration-700',
+      shadow: 'bg-tc-blue-light border border-tc-blue-dark group-hover:bg-tc-red-light group-hover:border-tc-red-dark shadow group-hover:shadow-none cursor-pointer  transition-colors duration-500',
       disabled: false
     }
   }

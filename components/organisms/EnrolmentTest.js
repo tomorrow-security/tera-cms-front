@@ -32,6 +32,8 @@ const TestCreated = ({ applicant, test, uuid, setPageData }) => {
     .post(`${apiUrl}/enrolment/${uuid}/start-test`)
     .then(({ data }) => setPageData(data))
   )
+  // const clickMutate = () => mutation.mutate
+
   return (
     <div className="space-y-8 text-center">
       <div className="space-y-2">
@@ -58,22 +60,33 @@ const TestCreated = ({ applicant, test, uuid, setPageData }) => {
         <p>Bon courage et à très vite !</p>
       </div>
       <div className="flex flex-row justify-center">
-        <InputButtonSimple
+        {/* <InputButtonSimple
           defaultValue="Démarrer le test"
-          onClick={() => mutation.mutate()}
+          submitedValue="C'est parti..."
+          onClick={()=> mutation.mutate}
+          //* ne fonctionne pas
+          click={clickMutate}
+          //* passe directement au quizz sans click
+          // onClick={mutation.mutate()}
+        /> */}
+        <InputButtonMutation
+          defaultValue="Démarrer de le test"
+          loadingValue="Test en cours de chargement ..."
+          successValue="Test chargé"
+          mutation={mutation}
+          onClick={()=> mutation.mutate}
         />
       </div>
     </div>
   )
 }
 
+// TODO fix : le InputButtonSimple reste cliqué au changement de question (donc en rouge)
 const TestOngoing = ({ applicant, test, uuid, setPageData }) => {
   const mutation = useMutation(data => axios
     .post(`${apiUrl}/enrolment/${uuid}/save-test-answer`, data)
     .then(({ data }) => setPageData(data))
   )
-
-  // ! le bouton reste avec submitedValue à la question suivante => avoir un nouveau rendu du bouton à chaque nouvelle question.
 
   const onSubmit = ({ choice }) => {
     const answers = []
@@ -124,8 +137,8 @@ const TestOngoing = ({ applicant, test, uuid, setPageData }) => {
 const SingleChoiceForm = ({ question, onSubmit }) => {
   const { reset, register, handleSubmit } = useForm()
   useEffect(() => { reset() }, [])
-  // const [value, setValue] = useState("Valider ma réponse")
-  // const submitedValue = "Réponse validée"
+ 
+  
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="space-y-2">
@@ -146,8 +159,7 @@ const SingleChoiceForm = ({ question, onSubmit }) => {
       <div className="flex justify-center pt-4">
         <InputButtonSimple
           defaultValue="Valider ma réponse"
-          // defaultValue={value}
-          // onClick={() =>setValue(submitedValue)}
+          submitedValue="Réponse envoyée"
         />
       </div>
     </form>
@@ -157,9 +169,6 @@ const SingleChoiceForm = ({ question, onSubmit }) => {
 const MultipleChoicesForm = ({ question, onSubmit }) => {
   const { reset, register, handleSubmit } = useForm()
   useEffect(() => { reset() }, [])
-
-  // const [value, setValue] = useState("Valider ma réponse")
-  // const submitedValue = "Réponse validée"
   
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -180,10 +189,9 @@ const MultipleChoicesForm = ({ question, onSubmit }) => {
         ))}
       </div>
       <div className="flex justify-center pt-4">
-        <InputButtonSimple
+         <InputButtonSimple
           defaultValue="Valider ma réponse"
-          // defaultValue={value}
-          // onClick={() => setValue(submitedValue)}
+          submitedValue="Réponse envoyée"
         />
       </div>
     </form>
