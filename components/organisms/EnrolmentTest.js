@@ -192,10 +192,6 @@ const MultipleChoicesForm = ({ question, onSubmit, mutation }) => {
         ))}
       </div>
       <div className="flex justify-center pt-4">
-         {/* <InputButtonSimple
-          defaultValue="Valider ma réponse"
-          submitedValue="Réponse envoyée"
-        /> */}
         <InputButtonMutation
           defaultValue="Valider ma réponse"
           loadingValue="En cours d'envoi ..."
