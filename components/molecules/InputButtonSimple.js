@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 
 export default function InputButtonSimple({ defaultValue, submitedValue}) {
-  // TODO améliorer le style un fois cliqué
+  // TODO fix : le InputButtonSimple reste cliqué au changement de question (donc en rouge)
+    //TODO réinitialiser le bouton
   
   const [buttonValue, setButtonValue] = useState(defaultValue)
 
@@ -9,10 +10,15 @@ export default function InputButtonSimple({ defaultValue, submitedValue}) {
     setButtonValue(submitedValue);
   }
 
-  const onSubmit = () => {
-    useEffect(setButtonValue(defaultValue))
-    console.log("onSubmit")
-  }
+  //! ne fonctionne pas
+  // const onSubmit = () => {
+  //   useEffect(setButtonValue(defaultValue))
+  // }
+
+  //! ne fonctionne pas
+  // const onSubmit = () => {
+  //   setButtonValue(defaultValue)
+  // }
 
   return (
   <div className="pt-8 mx-auto w-max group">

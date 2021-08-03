@@ -34,8 +34,7 @@ const TestCreated = ({ applicant, test, uuid, setPageData }) => {
   )
 
   const handleClick = () => {
-    mutation.mutate(),
-    console.log("mutation :", mutation)
+    mutation.mutate()
   }
 
   return (
@@ -76,7 +75,7 @@ const TestCreated = ({ applicant, test, uuid, setPageData }) => {
   )
 }
 
-// TODO fix : le InputButtonSimple reste cliqué au changement de question (donc en rouge)
+
 const TestOngoing = ({ applicant, test, uuid, setPageData }) => {
   const mutation = useMutation(data => axios
     .post(`${apiUrl}/enrolment/${uuid}/save-test-answer`, data)
