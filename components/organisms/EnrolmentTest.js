@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form'
 import { useMutation } from 'react-query'
 
 import InputButtonMutation from '../molecules/InputButtonMutation'
-import InputButtonSimple from '../molecules/InputButtonSimple'
+// import InputButtonSimple from '../molecules/InputButtonSimple'
 
 const apiUrl = process.env.NEXT_PUBLIC_ARPETTE_URL
 
@@ -103,7 +103,11 @@ const TestOngoing = ({ applicant, test, uuid, setPageData }) => {
           mutation={mutation}
         />
       case 'MULTIPLE':
-        return <MultipleChoicesForm question={test.question} onSubmit={onSubmit} />
+        return <MultipleChoicesForm
+          question={test.question}
+          onSubmit={onSubmit}
+          mutation={mutation}
+        />
     }
   }
   
@@ -170,7 +174,7 @@ const SingleChoiceForm = ({ question, onSubmit, mutation }) => {
   )
 }
 
-const MultipleChoicesForm = ({ question, onSubmit }) => {
+const MultipleChoicesForm = ({ question, onSubmit, mutation }) => {
   const { reset, register, handleSubmit } = useForm()
   useEffect(() => { reset() }, [])
   
@@ -193,9 +197,15 @@ const MultipleChoicesForm = ({ question, onSubmit }) => {
         ))}
       </div>
       <div className="flex justify-center pt-4">
-         <InputButtonSimple
+         {/* <InputButtonSimple
           defaultValue="Valider ma réponse"
           submitedValue="Réponse envoyée"
+        /> */}
+        <InputButtonMutation
+          defaultValue="Valider ma réponse"
+          loadingValue="En cours d'envoi ..."
+          successValue="Réponse envoyée"
+          mutation={mutation}
         />
       </div>
     </form>
