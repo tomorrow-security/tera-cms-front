@@ -1,14 +1,17 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
-export default function InputButtonSimple({ defaultValue, submitedValue, click }) {
+export default function InputButtonSimple({ defaultValue, submitedValue}) {
   // TODO améliorer le style un fois cliqué
   
-  const [buttonValue, setButtonValuealue] = useState(defaultValue)
+  const [buttonValue, setButtonValue] = useState(defaultValue)
 
   const handleClick=()=>{
-    setButtonValuealue(submitedValue);
-    { click }
-    console.log (click)
+    setButtonValue(submitedValue);
+  }
+
+  const onSubmit = () => {
+    useEffect(setButtonValue(defaultValue))
+    console.log("onSubmit")
   }
 
   return (
@@ -19,10 +22,8 @@ export default function InputButtonSimple({ defaultValue, submitedValue, click }
           type="submit"
           value={buttonValue}
           className="absolute left-0 z-20 h-10 px-4 mx-auto font-bold text-white transition-colors transform rounded-t shadow outline-none cursor-pointer duration-400 -top-15/100 w-max rounded-b-xl bg-tc-blue group-hover:bg-tc-red group-hover:shadow-none group-hover:-top-20/100 active:translate-y-20/100"
-          // TODO faire passer la props onClick à onClick (pour TestCreated par exemple)
-          // onClick={() => setButtonValuealue(submitedValue)}
-          // onClick={()=>setButtonValuealue(submitedValue)}
-          onClick = {handleClick}
+          onClick={handleClick}
+          onSubmit={onSubmit}
       />
     </div>
     </div>
