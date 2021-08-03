@@ -4,7 +4,6 @@ import { useForm } from 'react-hook-form'
 import { useMutation } from 'react-query'
 
 import InputButtonMutation from '../molecules/InputButtonMutation'
-// import InputButtonSimple from '../molecules/InputButtonSimple'
 
 const apiUrl = process.env.NEXT_PUBLIC_ARPETTE_URL
 
@@ -159,10 +158,6 @@ const SingleChoiceForm = ({ question, onSubmit, mutation }) => {
         ))}
       </div>
       <div className="flex justify-center pt-4">
-        {/* <InputButtonSimple
-          defaultValue="Valider ma réponse"
-          submitedValue="Réponse envoyée"
-        /> */}
         <InputButtonMutation
           defaultValue="Valider ma réponse"
           loadingValue="En cours d'envoi ..."
