@@ -97,7 +97,11 @@ const TestOngoing = ({ applicant, test, uuid, setPageData }) => {
   const renderForm = () => {
     switch(test.question.kind) {
       case 'SINGLE':
-        return <SingleChoiceForm question={test.question} onSubmit={onSubmit} />
+        return <SingleChoiceForm
+          question={test.question}
+          onSubmit={onSubmit}
+          mutation={mutation}
+        />
       case 'MULTIPLE':
         return <MultipleChoicesForm question={test.question} onSubmit={onSubmit} />
     }
@@ -128,7 +132,7 @@ const TestOngoing = ({ applicant, test, uuid, setPageData }) => {
   )
 }
 
-const SingleChoiceForm = ({ question, onSubmit }) => {
+const SingleChoiceForm = ({ question, onSubmit, mutation }) => {
   const { reset, register, handleSubmit } = useForm()
   useEffect(() => { reset() }, [])
  
@@ -151,9 +155,15 @@ const SingleChoiceForm = ({ question, onSubmit }) => {
         ))}
       </div>
       <div className="flex justify-center pt-4">
-        <InputButtonSimple
+        {/* <InputButtonSimple
           defaultValue="Valider ma réponse"
           submitedValue="Réponse envoyée"
+        /> */}
+        <InputButtonMutation
+          defaultValue="Valider ma réponse"
+          loadingValue="En cours d'envoi ..."
+          successValue="Réponse envoyée"
+          mutation={mutation}
         />
       </div>
     </form>
