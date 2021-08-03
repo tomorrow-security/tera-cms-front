@@ -23,7 +23,10 @@ import PageLink from '../../components/atoms/PageLink'
 
 
 // TODO importer la molecule EnrolmentForm à la place
-const EnrolmentForm = ({ status, onSubmit }) => {
+const EnrolmentForm = ({
+  mutation,
+  onSubmit
+}) => {
   const {reset, register, handleSubmit, control, formState : { errors }} = useForm()
   
   useEffect(() => { reset() }, [])
@@ -138,11 +141,12 @@ const EnrolmentForm = ({ status, onSubmit }) => {
         </div>
       </div>
       <div className="flex items-center justify-center my-4 xl:my-20">
+        {/* //* Les status de l'InputButtonMutation ne s'applique pas */}
         <InputButtonMutation
           defaultValue="Envoyer"
           loadingValue="En cours d'envoi' ..."
           successValue="Envoyé"
-          mutation={status}
+          mutation={mutation}
         />
       </div>
     </form>
@@ -185,7 +189,11 @@ export default function Enrolment() {
             />
           </div>
           <div className="xl:my-12">
-            <EnrolmentForm status={mutation.status} onSubmit={onSubmit} />
+            <EnrolmentForm
+              status={mutation.status}
+              onSubmit={onSubmit}
+              mutation={mutation}
+            />
           </div>
         </section>
       </main>
