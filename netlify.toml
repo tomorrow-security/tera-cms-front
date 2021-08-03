@@ -1,8 +1,11 @@
 [context.branch-deploy.environment]
   NEXT_PUBLIC_ARPETTE_URL = "https://api-test.tera-campus.com"
+  NEXT_PUBLIC_FACEBOOK_PIXEL_ID = "000000000000000"
 
 [context.deploy-preview.environment]
   NEXT_PUBLIC_ARPETTE_URL = "https://api-test.tera-campus.com"
+  NEXT_PUBLIC_FACEBOOK_PIXEL_ID = "000000000000000"
 
 [context.production.environment]
   NEXT_PUBLIC_ARPETTE_URL = "https://api.tera-campus.com"
+  NEXT_PUBLIC_FACEBOOK_PIXEL_ID = "351563326012968"
