@@ -1,4 +1,7 @@
-import { useState, useEffect } from 'react'
+import {
+  useState,
+  // useEffect
+} from 'react'
 
 export default function InputButtonSimple({ defaultValue, submitedValue}) {
   // TODO fix : le InputButtonSimple reste cliqué au changement de question (donc en rouge)
@@ -9,16 +12,12 @@ export default function InputButtonSimple({ defaultValue, submitedValue}) {
   const handleClick=()=>{
     setButtonValue(submitedValue);
   }
-
-  //! ne fonctionne pas
-  // const onSubmit = () => {
-  //   useEffect(setButtonValue(defaultValue))
-  // }
-
-  //! ne fonctionne pas
-  // const onSubmit = () => {
+  //* onSbmit que sur le Form, ne fonctionne pas sur input
+  
+  //! annule handleclick
+  // useEffect(() => {
   //   setButtonValue(defaultValue)
-  // }
+  // })
 
   return (
   <div className="pt-8 mx-auto w-max group">
@@ -29,7 +28,6 @@ export default function InputButtonSimple({ defaultValue, submitedValue}) {
           value={buttonValue}
           className="absolute left-0 z-20 h-10 px-4 mx-auto font-bold text-white transition-colors transform rounded-t shadow outline-none cursor-pointer duration-400 -top-15/100 w-max rounded-b-xl bg-tc-blue group-hover:bg-tc-red group-hover:shadow-none group-hover:-top-20/100 active:translate-y-20/100"
           onClick={handleClick}
-          onSubmit={onSubmit}
       />
     </div>
     </div>
