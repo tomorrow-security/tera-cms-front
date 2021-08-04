@@ -1,4 +1,4 @@
-export default function InputButtonMutation({mutation, defaultValue, loadingValue, successValue, onClick}) {
+export default function InputButton({mutation, defaultValue, loadingValue, successValue, onClick}) {
   
   const submitButtonParams = {
     loading: {
