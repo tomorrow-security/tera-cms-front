@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import { useMutation } from 'react-query'
 
-import InputButtonMutation from '../molecules/InputButtonMutation'
+import InputButton from '../molecules/InputButton'
 
 const apiUrl = process.env.NEXT_PUBLIC_ARPETTE_URL
 
@@ -62,7 +62,7 @@ const TestCreated = ({ applicant, test, uuid, setPageData }) => {
         <p>Bon courage et à très vite !</p>
       </div>
       <div className="flex flex-row justify-center">
-        <InputButtonMutation
+        <InputButton
           defaultValue="Démarrer de le test"
           loadingValue="Test en cours de chargement ..."
           successValue="Test chargé"
@@ -158,7 +158,7 @@ const SingleChoiceForm = ({ question, onSubmit, mutation }) => {
         ))}
       </div>
       <div className="flex justify-center pt-4">
-        <InputButtonMutation
+        <InputButton
           defaultValue="Valider ma réponse"
           loadingValue="En cours d'envoi ..."
           successValue="Réponse envoyée"
@@ -192,7 +192,7 @@ const MultipleChoicesForm = ({ question, onSubmit, mutation }) => {
         ))}
       </div>
       <div className="flex justify-center pt-4">
-        <InputButtonMutation
+        <InputButton
           defaultValue="Valider ma réponse"
           loadingValue="En cours d'envoi ..."
           successValue="Réponse envoyée"
@@ -300,7 +300,7 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
             
           </div>
           <div className="mt-12">
-            <InputButtonMutation
+            <InputButton
               defaultValue="Envoyer"
               loadingValue="En cours d'envoi ..."
               successValue="Envoyé"
