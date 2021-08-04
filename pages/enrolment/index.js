@@ -163,7 +163,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                   id='consent'
                   name="consent"
                   type="checkbox"
-                  className="my-auto mr-2 text-xl border outline-none"
+                  className="my-auto mr-2 border outline-none "
                   {...register("consent", { required: true })}
                 />
                 <div>
