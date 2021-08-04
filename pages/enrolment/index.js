@@ -172,7 +172,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                     <p className="border-b-2 border-transparent">J'ai lu et j'accepte la&nbsp;</p>
                     <PageLink id="privacy" label="politique de confidentialité" />
                     <p className="border-b-2 border-transparent">
-                      , et j'accepte d'être recontacté par Tera Campus pour finaliser mon inscription.
+                      &nbsp;et j'accepte d'être recontacté par Tera Campus pour finaliser mon inscription.
                     </p>
                   </div>
                 </div>
