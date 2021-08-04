@@ -12,7 +12,7 @@ import PhoneInputWithCountry from 'react-phone-number-input/react-hook-form'
 
 import BlockTitle from '../../components/atoms/BlockTitle'
 import InputRadio from '../../components/molecules/InputRadio'
-import InputButtonMutation from '../../components/molecules/InputButtonMutation'
+import InputButton from '../../components/molecules/InputButton'
 // import InputCheckRGPD from '../components/molecules/InputCheckRGPD'
 // import Input from '../components/molecules/Input'
 import PageLink from '../../components/atoms/PageLink'
@@ -104,9 +104,6 @@ const EnrolmentForm = ({
                     rules={{ required: true }}
                     className={`mx-2 p-2 flex-1 border w-65% rounded outline-none ${errors.phone ? 'border-tc-red' : 'border-black'}`}
                     />
-                    {/* {errors["phone-input"] && (
-                      <span className="text-tc-red">{errors?.phone?.message}</span>
-                    )} */}
                 </div>
               </div>
           </div>
@@ -141,8 +138,7 @@ const EnrolmentForm = ({
         </div>
       </div>
       <div className="flex items-center justify-center my-4 xl:my-20">
-        {/* //* Les status de l'InputButtonMutation ne s'applique pas */}
-        <InputButtonMutation
+        <InputButton
           defaultValue="Envoyer"
           loadingValue="En cours d'envoi' ..."
           successValue="Envoyé"
