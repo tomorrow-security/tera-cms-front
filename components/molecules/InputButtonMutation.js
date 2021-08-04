@@ -11,7 +11,7 @@ export default function InputButtonMutation({mutation, defaultValue, loadingValu
     success: {
       value: successValue,
       color: 'bg-tc-blue-medium cursor-not-allowed',
-      position:'absolute left-0 -top-20/100 z-20',
+      position:'absolute left-0 -top-10/100 z-20',
       shadow: 'bg-tc-blue-xlight border border-tc-blue cursor-not-allowed border-t-0',
       disabled: true
     },
