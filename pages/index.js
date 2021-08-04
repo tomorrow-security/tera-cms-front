@@ -64,16 +64,16 @@ export async function getServerSideProps() {
           platform: 'twitch',
           url: 'https://www.twitch.tv/teracampus'
         },
-        // {
-        //   date: '02/09/2021',
-        //   dateTimeDate: '2021-09-02',
-        //   timetable: '18h00',
-        //   dateTimeTimetable: '18:00',
-        //   title: "Introduxion à l'UX.",
-        //   description: 'Thursday Tech Live',
-        //   platform: 'twitch',
-        //   url: 'https://www.twitch.tv/teracampus'
-        // },
+        // // {
+        // //   date: '02/09/2021',
+        // //   dateTimeDate: '2021-09-02',
+        // //   timetable: '',
+        // //   dateTimeTimetable: '',
+        // //   title: '',
+        // //   description: 'Thursday Tech Live',
+        // //   platform: 'twitch',
+        // //   url: 'https://www.twitch.tv/teracampus'
+        // // },
         // {
         //   date: '09/09/2021',
         //   dateTimeDate: '2021-08-09',
