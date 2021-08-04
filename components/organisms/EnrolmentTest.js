@@ -269,7 +269,8 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
                 id="document"
                 accept="application/pdf"
                 {...register("document", { required: true })}
-                // className="hidden"
+                // préféré la transparence pour une lecture de l'input par les robots
+                // //className="hidden"
                 // onChange={onChangeIdentity}
               />
             </div>
