@@ -163,11 +163,11 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                   id='consent'
                   name="consent"
                   type="checkbox"
-                  className="my-auto mr-2 border outline-none "
+                  className="w-6 h-6 my-auto border-black rounded md:w-4 md:h-4 text-tc-blue focus:ring-offset-0"
                   {...register("consent", { required: true })}
                 />
                 <div>
-                  <div className="box-border flex flex-row flex-wrap items-center max-w-full text-xs sm:text-base">
+                  <div className="box-border flex flex-row flex-wrap items-center max-w-full ml-2 text-xs sm:text-base">
                     {/* // TODO vérifier alignement des éléments */}
                     <p className="border-b-2 border-transparent">J'ai lu et j'accepte la&nbsp;</p>
                     <PageLink id="privacy" label="politique de confidentialité" />
