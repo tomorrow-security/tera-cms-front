@@ -138,7 +138,7 @@ const TestOngoing = ({ applicant, test, uuid, setPageData }) => {
 const SingleChoiceForm = ({ question, onSubmit, mutation }) => {
   const { reset, register, handleSubmit } = useForm()
   useEffect(() => { reset() }, [])
-  //* dans le reset keepIsSubmited: true => le passer à false
+  //* dans le reset : keepIsSubmitted:true => le passer à false
  
   
   return (
