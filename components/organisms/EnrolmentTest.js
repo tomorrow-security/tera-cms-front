@@ -91,6 +91,9 @@ const TestOngoing = ({ applicant, test, uuid, setPageData }) => {
   // useEffect(() => { reset({},{keepIsSubmitted:false}) }, []) //!
  
   // useEffect(() => { mutation.isIdle=true }) //!
+  // useEffect(() => { mutation.isIdle }) //! 
+  
+  // useEffect(() => mutation.mutate( mutation.isIdle)) //! boucle infini
 
   const onSubmit = ({ choice }) => {
     const answers = []
@@ -102,6 +105,7 @@ const TestOngoing = ({ applicant, test, uuid, setPageData }) => {
       answers.push(parseInt(choice))
     }
     mutation.mutate({ question: test.question.id, answers })
+    // useEffect(() => mutation.mutate( mutation.isIdle)) //! boucle infini
   }
 
   const renderForm = () => {
