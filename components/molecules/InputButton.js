@@ -1,4 +1,4 @@
-// import { useEffect } from "react"
+import { useEffect } from "react"
 // import { useForm } from "react-hook-form"
 
 export default function InputButton({ mutation, defaultValue, loadingValue, successValue, onClick }) {
@@ -29,6 +29,7 @@ export default function InputButton({ mutation, defaultValue, loadingValue, succ
   
   // const { reset} = useForm() //!
   // useEffect(() => { reset({},{keepIsSubmitted:false}) }, []) //!
+  // useEffect(() => mutation.reset()) //! boucle infini
 
   return (
       <div className="pt-2 mx-auto w-max group">

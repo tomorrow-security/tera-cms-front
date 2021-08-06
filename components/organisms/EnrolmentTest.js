@@ -107,6 +107,7 @@ const TestOngoing = ({ applicant, test, uuid, setPageData }) => {
     mutation.mutate({ question: test.question.id, answers })
     // useEffect(() => mutation.mutate( mutation.isIdle)) //! boucle infini
   }
+  console.log("mutation testOnGoing :", mutation)
 
   const renderForm = () => {
     switch(test.question.kind) {
@@ -159,7 +160,8 @@ const SingleChoiceForm = ({ question, onSubmit, mutation }) => {
   // useEffect(() => { reset({},{keepIsSubmitted:false}) }, []) //! 
   // useEffect(() => { reset({keepIsSubmitted:false}) }, []) //!
   // useEffect(() => { reset() }, [reset]) //!
-  console.log("mutation :", mutation)
+  console.log("mutation singleChoice :", mutation)
+  //* apparaît 2 fois en console
   //* reste sur success : true
  
   
