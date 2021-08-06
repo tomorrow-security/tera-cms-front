@@ -1,5 +1,8 @@
 import axios from 'axios'
-import { useEffect } from 'react'
+import {
+  useEffect,
+  // useState
+} from 'react'
 import { useForm } from 'react-hook-form'
 import { useMutation } from 'react-query'
 
@@ -76,10 +79,18 @@ const TestCreated = ({ applicant, test, uuid, setPageData }) => {
 
 
 const TestOngoing = ({ applicant, test, uuid, setPageData }) => {
+
+  // TODO la status de la mutation reste sur success à la question suivante, mais revient à default avec un rafraîchissement
+  
+
   const mutation = useMutation(data => axios
     .post(`${apiUrl}/enrolment/${uuid}/save-test-answer`, data)
     .then(({ data }) => setPageData(data))
   )
+  // const { reset} = useForm() //!
+  // useEffect(() => { reset({},{keepIsSubmitted:false}) }, []) //!
+ 
+  // useEffect(() => { mutation.isIdle=true }) //!
 
   const onSubmit = ({ choice }) => {
     const answers = []
@@ -138,7 +149,14 @@ const TestOngoing = ({ applicant, test, uuid, setPageData }) => {
 const SingleChoiceForm = ({ question, onSubmit, mutation }) => {
   const { reset, register, handleSubmit } = useForm()
   useEffect(() => { reset() }, [])
+ 
+  // // console.log ("reset :", reset)
   //* dans le reset : keepIsSubmitted:true => le passer à false
+  // useEffect(() => { reset({},{keepIsSubmitted:false}) }, []) //! 
+  // useEffect(() => { reset({keepIsSubmitted:false}) }, []) //!
+  // useEffect(() => { reset() }, [reset]) //!
+  console.log("mutation :", mutation)
+  //* reste sur success : true
  
   
   return (

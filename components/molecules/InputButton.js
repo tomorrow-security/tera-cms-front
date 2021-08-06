@@ -1,5 +1,8 @@
-export default function InputButton({mutation, defaultValue, loadingValue, successValue, onClick}) {
-  
+import { useEffect } from "react"
+import { useForm } from "react-hook-form"
+
+export default function InputButton({ mutation, defaultValue, loadingValue, successValue, onClick }) {
+
   const submitButtonParams = {
     loading: {
       value: loadingValue,
@@ -23,21 +26,25 @@ export default function InputButton({mutation, defaultValue, loadingValue, succe
       disabled: false
     }
   }
+  
+  // const { reset} = useForm() //!
+  // useEffect(() => { reset({},{keepIsSubmitted:false}) }, []) //!
 
-    return (
-       <div className="pt-2 mx-auto w-max group">
-        <div className={`relative z-0 h-10 px-4 font-bold text-transparent rounded-t outline-none w-max rounded-b-xl ${['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].shadow : submitButtonParams['default'].shadow}`}>
-          {['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].value : submitButtonParams['default'].value}
-          <input
-            onClick= {onClick}
-            type="submit"
-            value={['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].value : submitButtonParams['default'].value}
-            className={`${['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].position : submitButtonParams['default'].position} 
-            w-max px-4 h-10 mx-auto outline-none text-white font-bold rounded-t rounded-b-xl
-            ${['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].color : submitButtonParams['default'].color}`}
-            disabled={['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].disabled : submitButtonParams['default'].disabled }
-          />
-          </div>
-      </div>
-    )
+  return (
+      <div className="pt-2 mx-auto w-max group">
+      <div className={`relative z-0 h-10 px-4 font-bold text-transparent rounded-t outline-none w-max rounded-b-xl ${['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].shadow : submitButtonParams['default'].shadow}`}>
+        {['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].value : submitButtonParams['default'].value}
+        <input
+          onClick={onClick}
+          // onSubmit={() => reset({ keepIsSubmitted:false })}  //!
+          type="submit"
+          value={['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].value : submitButtonParams['default'].value}
+          className={`${['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].position : submitButtonParams['default'].position} 
+          w-max px-4 h-10 mx-auto outline-none text-white font-bold rounded-t rounded-b-xl
+          ${['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].color : submitButtonParams['default'].color}`}
+          disabled={['loading', 'success'].includes(mutation.status) ? submitButtonParams[mutation.status].disabled : submitButtonParams['default'].disabled }
+        />
+        </div>
+    </div>
+  )
 }
