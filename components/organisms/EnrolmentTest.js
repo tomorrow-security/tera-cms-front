@@ -125,7 +125,7 @@ const TestOngoing = ({ applicant, test, uuid, setPageData }) => {
 }
 
 const TestEnded = ({ applicant, test, uuid, setPageData }) => {
-  const { reset, register, handleSubmit, errors } = useForm()
+  const { reset, register, handleSubmit, formState: {errors} } = useForm()
   useEffect(() => { reset() }, [])
 
   const mutation = useMutation(data => axios
@@ -172,8 +172,8 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
               {/* //TODO rendre l'errors fonctionnel */}
               <div className="relative group">
                 <label htmlFor="document"
-                  className="absolute p-4 border rounded cursor-pointer bg-tc-blue-xlight border-tc-blue group-hover:border-2"
-                  // className={`absolute p-4 border rounded cursor-pointer group-hover:border-4 ${errors.document ? 'border-tc-red bg-tc-red-xlight' : 'border-tc-blue bg-tc-blue-xlight'}`}
+                  // className="absolute p-4 border rounded cursor-pointer bg-tc-blue-xlight border-tc-blue group-hover:border-2"
+                  className={`absolute p-4 border rounded cursor-pointer group-hover:border-4 ${errors.document ? 'border-tc-red bg-tc-red-xlight' : 'border-tc-blue bg-tc-blue-xlight'}`}
                 >
                   {identityValue}
                 </label>
@@ -193,8 +193,8 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
               <label htmlFor="resume" className="cursor-pointer">CV* :</label>
               <div className="relative group">
                 <label htmlFor="resume"
-                  className="absolute p-4 border rounded cursor-pointer bg-tc-blue-xlight border-tc-blue group-hover:border-2"
-                  // className={`absolute p-4 border rounded cursor-pointer group-hover:border-4 ${errors.resume ? 'border-tc-red bg-tc-red-xlight' : 'border-tc-blue bg-tc-blue-xlight'}`}
+                  // className="absolute p-4 border rounded cursor-pointer bg-tc-blue-xlight border-tc-blue group-hover:border-2"
+                  className={`absolute p-4 border rounded cursor-pointer group-hover:border-4 ${errors.resume ? 'border-tc-red bg-tc-red-xlight' : 'border-tc-blue bg-tc-blue-xlight'}`}
                 >
                   {resumeValue}
                 </label>
