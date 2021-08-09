@@ -158,6 +158,8 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
   //   setIdentityValue(uploaded);
   // };
 
+  //* Le glisser-déposer fonctionne sur l'input type files de base
+
   return(
     <>
       <div className="flex flex-col items-stretch">
@@ -173,26 +175,20 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
               <label htmlFor="document" className="cursor-pointer">
                 Document d'identité* :
               </label>
-              {/* <label htmlFor="document" className={`p-8 text-center rounded cursor-pointer  hover:bg-tc-blue-light  ${errors.resume ? 'border-tc-red bg-tc-red-xlight border-4' : 'border-tc-blue bg-tc-blue-xlight border'}`}>
-                <p id="document-trigger" className="font-bold">
-                  {identityValue}
-                  Ajouter mon identité
-                </p>
-                <p>{ inputIdentityValue }</p>
-                <div className="text-xs italic">
-                  <p >Maximum 1 fichier de 2MB</p>
-                  <p>Format accepté : PDF</p>
-                </div>
-              </label> */}
-              <input
-                type="file"
-                name="document"
-                id="document"
-                accept="application/pdf"
-                {...register("document", { required: true })}
-                // className="hidden"
-                // onChange={onChangeIdentity}
-              />
+              {/* //TODO voir pour le hover et autres dynamismes */}
+              <div className="relative group">
+                <label htmlFor="document" className="absolute p-4 border rounded cursor-pointer bg-tc-blue-xlight border-tc-blue group-hover:border-4">
+                  Choisir votre fichier
+                </label>
+                <input
+                  type="file"
+                  name="document"
+                  id="document"
+                  accept="application/pdf"
+                  {...register("document", { required: true })}
+                  className="absolute text-transparent bg-transparent opacity-0"
+                />
+              </div>
             </div>
 
             <div className="flex flex-col justify-center w-3/4 my-8 space-y-2 md:w-2/3 lg:w-1/4 xl:w-1/5 2xl:w-2/12">
