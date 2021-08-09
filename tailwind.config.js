@@ -133,7 +133,7 @@ module.exports = {
             borderColor: [ 'focus', 'checked'],
             borderOpacity: ['disabled'],
             borderStyle: ['focus'],
-            borderWidth: ['focus'],
+            borderWidth: ['group-hover', 'hover', 'focus'],
             fontWeight: ['hover','active', 'focus'],
             fontSize: ['hover'],
             fontStyle: ['hover', 'focus'],
