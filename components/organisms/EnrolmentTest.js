@@ -142,7 +142,7 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
     mutation.mutate(formData)
   }
   
-  // const uploaded = "1 document chargé"
+  const uploaded = "1 document chargé"
 
   // const [resumeValue, setResumeValue] = useState("Ajouter mon CV")
   // // const [inputResumeValue, setInputResumeValue] = useState()
@@ -151,12 +151,12 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
   //   setResumeValue(uploaded);
   // };
 
-  // const [identityValue, setIdentityValue] = useState("Ajouter mon identité")
-  // // const [inputIdentityValue, setInputIdentityValue] = useState()
-  // const onChangeIdentity = event => {
-  //   // setInputIdentityValue(event.target.value);
-  //   setIdentityValue(uploaded);
-  // };
+  const [identityValue, setIdentityValue] = useState("Ajouter mon identité")
+  // const [inputIdentityValue, setInputIdentityValue] = useState()
+  const onChangeIdentity = event => {
+    // setInputIdentityValue(event.target.value);
+    setIdentityValue(uploaded);
+  };
 
   //* Le glisser-déposer fonctionne sur l'input type files de base
 
@@ -177,8 +177,11 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
               </label>
               {/* //TODO voir pour le hover et autres dynamismes */}
               <div className="relative group">
-                <label htmlFor="document" className="absolute p-4 border rounded cursor-pointer bg-tc-blue-xlight border-tc-blue group-hover:border-4">
-                  Choisir votre fichier
+                <label htmlFor="document"
+                  className="absolute p-4 border rounded cursor-pointer bg-tc-blue-xlight border-tc-blue group-hover:border-2"
+                  // className={`absolute p-4 border rounded cursor-pointer group-hover:border-4 ${errors.document ? 'border-tc-red bg-tc-red-xlight' : 'border-tc-blue bg-tc-blue-xlight'}`}
+                >
+                  {identityValue}
                 </label>
                 <input
                   type="file"
@@ -186,7 +189,8 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
                   id="document"
                   accept="application/pdf"
                   {...register("document", { required: true })}
-                  className="absolute text-transparent bg-transparent opacity-0"
+                  className="absolute opacity-0"
+                  onChange={onChangeIdentity}
                 />
               </div>
             </div>
@@ -210,7 +214,7 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
                 id="resume"
                 accept="application/pdf"
                 {...register("resume", { required: true })}
-                // className="hidden"
+                // className="opacity-0"
                 // onChange={onChangeResume}
               />
             </div>
