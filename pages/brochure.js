@@ -172,7 +172,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                     <p className="border-b-2 border-transparent">J'ai lu et j'accepte la&nbsp;</p>
                     <PageLink id="privacy" label="politique de confidentialité" />
                     <p className="border-b-2 border-transparent">
-                      &nbsp;et j'accepte d'être recontacté par Tera Campus pour finaliser mon inscription.
+                      &nbsp;et j'accepte d'être recontacté par Tera Campus pour recevoir la brochure.
                     </p>
                   </div>
                 </div>
@@ -180,7 +180,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
               {
                 errors.consent ? (
                   <span className="text-center text-tc-red">
-                    Tu dois accepter la politique de confidentialité pour continuer ton inscription.
+                    Tu dois accepter la politique de confidentialité pour continuer recevoir la brochure.
                   </span>
                 ) : null
               }
