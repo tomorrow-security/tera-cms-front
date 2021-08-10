@@ -156,20 +156,23 @@ const SingleChoiceForm = ({ question, onSubmit, mutation }) => {
     register,
     handleSubmit
   } = useForm()
-
+  
+  //* d'origine mais pas de diff si commenté :
+  useEffect(() => { reset() }, []) 
+  
+  //? tentative avec mutate pour obtenir mutation.Idle: true :
   // useEffect(() => { //! 
   //   if (mutation.isSuccess) { //! 
   //     reset(); //!
-  // //     mutation.mutate( mutation.isIdle) //!
+  // //  mutation.mutate( mutation.isIdle) //!
   //     mutation.mutate( mutation.isIdle=true)}}, []) //!
-  
-  // useEffect(() => { reset() }, []) //* d'origine
-  
+
   // useEffect(() => { reset() }, [reset]) //! (version field array)
+
   // useEffect(() => mutation.mutate( mutation.isIdle))//! 
  
   // // console.log ("reset :", reset)
-  // tentative avec le reset : keepIsSubmitted:true => le passer à false : 
+  //? tentative avec le reset : passer à false keepIsSubmitted : 
   // useEffect(() => { reset({},{keepIsSubmitted:false}) }, []) //! 
   // useEffect(() => { reset({keepIsSubmitted:false}) }, []) //!
   // useEffect(() => { reset() }, [reset]) //!
