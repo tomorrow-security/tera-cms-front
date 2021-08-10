@@ -81,7 +81,6 @@ const TestCreated = ({ applicant, test, uuid, setPageData }) => {
 const TestOngoing = ({ applicant, test, uuid, setPageData }) => {
 
   // TODO la status de la mutation reste sur success à la question suivante, mais revient à default avec un rafraîchissement
-  
 
   const mutation = useMutation(data => axios
     .post(`${apiUrl}/enrolment/${uuid}/save-test-answer`, data)
@@ -152,17 +151,31 @@ const TestOngoing = ({ applicant, test, uuid, setPageData }) => {
 }
 
 const SingleChoiceForm = ({ question, onSubmit, mutation }) => {
-  const { reset, register, handleSubmit } = useForm()
-  useEffect(() => { reset() }, [])
+  const {
+    reset,
+    register,
+    handleSubmit
+  } = useForm()
+
+  // useEffect(() => { //! 
+  //   if (mutation.isSuccess) { //! 
+  //     reset(); //!
+  // //     mutation.mutate( mutation.isIdle) //!
+  //     mutation.mutate( mutation.isIdle=true)}}, []) //!
+  
+  // useEffect(() => { reset() }, []) //* d'origine
+  
+  // useEffect(() => { reset() }, [reset]) //! (version field array)
+  // useEffect(() => mutation.mutate( mutation.isIdle))//! 
  
   // // console.log ("reset :", reset)
-  //* dans le reset : keepIsSubmitted:true => le passer à false
+  // tentative avec le reset : keepIsSubmitted:true => le passer à false : 
   // useEffect(() => { reset({},{keepIsSubmitted:false}) }, []) //! 
   // useEffect(() => { reset({keepIsSubmitted:false}) }, []) //!
   // useEffect(() => { reset() }, [reset]) //!
   console.log("mutation singleChoice :", mutation)
   //* apparaît 2 fois en console
-  //* reste sur success : true
+  //* la mutation reste sur success:true
  
   
   return (
@@ -188,6 +201,9 @@ const SingleChoiceForm = ({ question, onSubmit, mutation }) => {
           loadingValue="En cours d'envoi ..."
           successValue="Réponse envoyée"
           mutation={mutation}
+          //! ne valide pas la réponse et rest sur la question en cours.
+          // onClick={() => {reset({},{keepIsSubmitted: false,})}} 
+          // onClick={reset} //! Uncaught RangeError: Maximum call stack size exceeded
         />
       </div>
     </form>
