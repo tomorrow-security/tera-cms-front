@@ -13,7 +13,7 @@ export default function BlockAgenda({ events }) {
    */
   const invisible = notEvent ? 'hidden' : ''
 	return (
-		<section id="agenda" className="py-10 lg:py-20 bg-gray-50">
+		<section id="agenda" className="py-10 lg:py-20">
 			<div className="md:container md:mx-auto">
 				<BlockTitle title="Agenda" iconPicture={{ backgroundImage: "url('pop-corn.png')" }} />
 				<div className="lg:flex lg:flex-row lg:flex-nowrap lg:justify-around lg:items-center lg:text-xl">

@@ -81,7 +81,7 @@ export default function Contact() {
                     <input
                       type="email"
                       placeholder="thomas.anderson@tera-campus.com"
-                      className={`block mt-1 w-full p-2 border ${errors.email ? 'border-red-500' : 'border-black'} rounded-none outline-none shadow-button`}
+                      className={`block mt-1 w-full p-2 border ${errors.email ? 'border-red-500' : 'border-tc-blue'} rounded-none outline-none shadow-button`}
                       {...register("email", { required: true })}
                     />
                     {
@@ -95,7 +95,7 @@ export default function Contact() {
                     <span>Ton message :</span>
                     <textarea
                       placeholder="message"
-                      className={`block mt-1 w-full p-2 border ${errors.message ? 'border-red-500' : 'border-black'} rounded-none outline-none`}
+                      className={`block mt-1 w-full p-2 border ${errors.message ? 'border-red-500' : 'border-tc-blue'} rounded-none outline-none`}
                       rows="5"
                       {...register("message", { required: true })}
                     />

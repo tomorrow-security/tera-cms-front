@@ -1,25 +1,25 @@
 export default function InputButton({mutation}) {
-  
+  //TODO voir pour uniformiser les couleurs dark
   const submitButtonParams = {
     loading: {
       value: 'En cours d\'envoi ...',
       color: 'bg-tc-red-medium',
       position:'absolute left-0 top-0 z-20',
-      shadow: 'bg-tc-red-xlight border border-tc-red-dark border-t-0',
+      shadow: 'bg-tc-red bg-opacity-25 border border-tc-red-dark border-t-0',
       disabled: true
     },
     success: {
       value: 'Envoyé !',
       color: 'bg-tc-blue-medium',
       position:'absolute left-0 -top-20/100 z-20',
-      shadow: 'bg-tc-blue-xlight border border-tc-blue border-t-0',
+      shadow: 'bg-tc-blue bg-opacity-25 border border-tc-blue border-t-0',
       disabled: true
     },
     default: {
       value: 'Envoyer',
       color: 'bg-tc-blue group-hover:bg-tc-red shadow group-hover:shadow-none cursor-pointer  transition-colors duration-700 group-hover:-top-20/100 transform active:translate-y-20/100',
       position:'absolute left-0 -top-15/100 z-20',
-      shadow: 'bg-tc-blue-light border border-tc-blue-dark group-hover:bg-tc-red-light group-hover:border-tc-red-dark shadow group-hover:shadow-none cursor-pointer  transition-colors duration-700',
+      shadow: 'bg-tc-blue bg-opacity-50 border border-tc-blue-dark group-hover:bg-tc-red bg-opacity-50 group-hover:border-tc-red-dark shadow group-hover:shadow-none cursor-pointer  transition-colors duration-700',
       disabled: false
     }
   }
