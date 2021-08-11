@@ -2,7 +2,7 @@ import BlockTitle from '../atoms/BlockTitle'
 import PartnersEuropean from '../atoms/PartnersEuropean'
 import PartnersCollaboratives from '../atoms/PartnersCollaboratives'
 import CarouselPartners from '../molecules/CarouselPartners'
-import BrochureButton from '../atoms/BrochureButton'
+import PageLink from '../atoms/PageLink'
 
 
 const cursus = [
@@ -137,8 +137,10 @@ export default function BlockProgramme () {
 													nous ne nous focalisons pas sur des technologies spécifiques,&nbsp;
 													mais formons nos étudiants à savoir s&apos;adapter à n&apos;importe laquelle.
 											</Strong>
-									</Paragraph>
-									<BrochureButton />
+						</Paragraph>
+						<div className="mx-auto mb-4 text-xl font-bold w-max md:mb-8">
+							<PageLink id="brochure" label="Télécharger la brochure"/>
+						</div>
 									<Paragraph gutterBottom>
                     Chez Tera Campus,&nbsp;
                     il est possible d&apos;en apprendre plus sur l&apos;écosystème technique européen&nbsp;
