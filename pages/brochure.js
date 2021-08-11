@@ -72,15 +72,18 @@ const EnrolmentForm = ({ status, onSubmit }) => {
     }
   }
   
-  // TODO style au focue du phoneInput border à enlever à l'intérieur
+  // TODO style au focus du phoneInput border à enlever à l'intérieur
   
   return (
-    <form className="w-full mx-2" onSubmit={(handleSubmit(onSubmit))}>
+    <form
+      className="w-full mx-2"
+      onSubmit={(handleSubmit(onSubmit))}
+    >
       <div>
         <div>
           <div className="space-y-1 xl:space-y-8 xl:flex xl:flex-col xl:items-center ">
             <div className="xl:flex xl:justify-between xl:w-4/5 xl:flex-nowrap">
-              <div className="flex items-center space-y-1 xl:w-45%">
+              {/* <div className="flex items-center space-y-1 xl:w-45%">
                 <label htmlFor="gender" className="w-30%">Civilité* :</label>
                 <InputRadio
                   name="gender"
@@ -91,7 +94,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                   ]}
                 />
                 <span className=" text-tc-red">{errors?.gender?.message}</span>
-              </div>
+              </div> */}
               <div className="flex items-center space-y-1 xl:w-45%">
                 {/* // TODO importer la molecule Input à la place */}
                  {/* //* Input composant ne fonctionne pas : à revoir */}
@@ -101,7 +104,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                   name="email"
                   type="email"
                   placeholder="thomas.anderson@tera-campus.com"
-                  className={`p-2 flex-1 border rounded mx-2 outline-none ${errors.email ? 'border-tc-red' : 'border-black'}`}
+                  className={`p-2 flex-1 border rounded mx-2 outline-none ${errors.email ? 'border-tc-red' : 'border-tc-blue'}`}
                   {...register("email", { required: true })}
                 />
                 <span className="text-tc-red">{errors?.email?.message}</span>
@@ -116,7 +119,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                   name="lastName"
                   type="text"
                   placeholder="Anderson"
-                  className={`mx-2 p-2 flex-1 border rounded outline-none ${errors.lastName ? 'border-tc-red' : 'border-black'}`}
+                  className={`mx-2 p-2 flex-1 border rounded outline-none ${errors.lastName ? 'border-tc-red' : 'border-tc-blue'}`}
                   {...register("lastName", { required: true })}
                 />
                 <span className="text-tc-red">{errors?.lastName?.message}</span>
@@ -129,7 +132,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                   name="firstName"
                   type="text"
                   placeholder="Thomas"
-                  className={`mx-2 p-2 flex-1 border rounded outline-none ${errors.firstName ? 'border-tc-red' : 'border-black'}`}
+                  className={`mx-2 p-2 flex-1 border rounded outline-none ${errors.firstName ? 'border-tc-red' : 'border-tc-blue'}`}
                   {...register("firstName", { required: true })}
                 />
                 <span className="text-tc-red">{errors?.firstName?.message}</span>
@@ -147,8 +150,9 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                     international
                     withCountryCallingCode
                     control={control}
-                    rules={{ required: true }}
-                    className={`mx-2 p-2 flex-1 border w-65% rounded outline-none ${errors.phone ? 'border-tc-red' : 'border-black'}`}
+                    // rules={{ required: true }}
+                    // className={`mx-2 p-2 flex-1 border w-65% rounded outline-none ${errors.phone ? 'border-tc-red' : 'border-tc-blue'}`}
+                    className="mx-2 p-2 flex-1 border border-tc-blue w-65% rounded outline-none"
                     />
                     {/* {errors["phone-input"] && (
                       <span className="text-tc-red">{errors?.phone?.message}</span>
@@ -162,7 +166,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                   id='consent'
                   name="consent"
                   type="checkbox"
-                  className="w-6 h-6 my-auto border-black rounded md:w-4 md:h-4 text-tc-blue focus:ring-offset-0"
+                  className="w-6 h-6 my-auto rounded border-tc-blue md:w-4 md:h-4 text-tc-blue focus:ring-offset-0"
                   {...register("consent", { required: true })}
                 />
                 <div>
@@ -196,22 +200,21 @@ const EnrolmentForm = ({ status, onSubmit }) => {
 const pageTitle = "Brochure - Tera Campus"
 const pageDescription = "Demande de brochure"
 const pageUrl = 'https://tera-campus.com/brochure'
-const apiUrl = process.env.NEXT_PUBLIC_ARPETTE_URL
 
 export default function Brochure() {
   const router = useRouter()
-  
-  
-  const mutation = useMutation(formData => {
+  const mutation = useMutation(data => {
     axios
-      // TODO à modifier avec les bons endpoints
-      .post(`${apiUrl}/enrolment/create`, formData)
-      // TODO à modifier : écrire une validation de l'envoie du mail avec le brochure
-      .then(({ data }) => router.push(`/enrolment/${data.enrolment}`))
+      .post('/api/brochure', data)
       .catch(error => console.log(error))
   }, { retry: 3 })
 
-  const onSubmit = formData => mutation.mutate(formData)
+  const onSubmit = data => {
+    mutation.mutate(data),
+      console.log("data :", data)
+      // ,router.push("/brochuresent") //ok
+  }
+  
 
   return (
     <>
@@ -236,8 +239,8 @@ export default function Brochure() {
           </p>
           <div className="xl:my-12">
             <EnrolmentForm
-            // status={mutation.status}
-            // onSubmit={onSubmit} 
+            status={mutation.status}
+            onSubmit={onSubmit} 
             />
           </div>
         </section>
