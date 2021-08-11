@@ -160,25 +160,27 @@ const SingleChoiceForm = ({ question, onSubmit, mutation }) => {
   //* d'origine mais pas de diff si commenté :
   // useEffect(() => { reset() }, []) 
   
-  //? tentative avec mutate pour obtenir mutation.Idle: true :
+  //? tentative avec la mutation :
   // useEffect(() => { //! 
   //   if (mutation.isSuccess) { //! 
   //     reset(); //!
   // //  mutation.mutate( mutation.isIdle) //!
   //     mutation.mutate( mutation.isIdle=true)}}, []) //!
 
-  // useEffect(() => { reset() }, [reset]) //! (version field array)
+  
 
   // useEffect(() => mutation.mutate( mutation.isIdle))//! 
  
   // // console.log ("reset :", reset)
-  //? tentative avec le reset : passer à false keepIsSubmitted : 
+  //? tentative avec le reset de useForm : 
   // useEffect(() => { reset() }, [reset]) //!
   //! Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
   // useEffect(() => {reset({},{keepIsSubmitted: false})})
   // useEffect(() => { reset({},{keepIsSubmitted:false}) }, []) //! 
   // useEffect(() => { reset({},{keepIsSubmitted:false}) }, [reset]) //! 
   // useEffect(() => { reset({keepIsSubmitted:false}) }, []) //!
+  // useEffect(() => { reset() }, [reset]) //! (version field array)
+
   // console.log("mutation singleChoice :", mutation)
   // console.log("mutation.status singleChoice:", mutation.status)
   // // //* apparaît 2 fois en console
@@ -211,6 +213,7 @@ const SingleChoiceForm = ({ question, onSubmit, mutation }) => {
           //! ne valide pas la réponse et reste sur la question en cours.
           // onClick={() => {reset({},{keepIsSubmitted: false})}} 
           // onClick={reset} //! Uncaught RangeError: Maximum call stack size exceeded
+          // onClick={() => mutation.reset()} //!
         />
       </div>
     </form>
