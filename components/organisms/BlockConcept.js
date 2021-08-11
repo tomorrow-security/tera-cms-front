@@ -1,6 +1,6 @@
 import Cta from '../atoms/Cta'
 import IconCurvedArrow from '../atoms/IconCurvedArrow'
-import BrochureButton from '../atoms/BrochureButton'
+import PageLink from '../atoms/PageLink'
 
 const Paragraph = ({ bold, gutterBottom, children }) => (
     <p
@@ -93,7 +93,9 @@ export default function BlockConcept() {
                     style={{ backgroundImage: "url('students-collaboration.jpg')" }}
                   ></div>
               </div>
-              <BrochureButton />
+              <div className="mx-auto mt-8 text-lg font-bold md:text-xl w-max md:mt-12">
+                <PageLink id="brochure" label="Télécharger la brochure"/>
+            	</div>  
         </div>
     </section>
   )

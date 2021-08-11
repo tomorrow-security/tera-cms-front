@@ -1,11 +1,10 @@
 import Head from 'next/head'
 
-
 const pageTitle = "Alternance - Tera Campus"
 const pageDescription = "Les études en alternance"
 const pageUrl = 'https://tera-campus.com/alternation'
 
-export default function Enrolment() {
+export default function Alternation() {
   return (
     <>
       <Head>
