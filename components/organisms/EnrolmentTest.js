@@ -79,20 +79,10 @@ const TestCreated = ({ applicant, test, uuid, setPageData }) => {
 
 
 const TestOngoing = ({ applicant, test, uuid, setPageData }) => {
-
-  // TODO la status de la mutation reste sur success à la question suivante, mais revient à default avec un rafraîchissement
-
   const mutation = useMutation(data => axios
     .post(`${apiUrl}/enrolment/${uuid}/save-test-answer`, data)
     .then(({ data }) => setPageData(data))
   )
-  // const { reset} = useForm() //!
-  // useEffect(() => { reset({},{keepIsSubmitted:false}) }, []) //!
- 
-  // useEffect(() => { mutation.isIdle=true }) //!
-  // useEffect(() => { mutation.isIdle }) //! 
-  
-  // useEffect(() => mutation.mutate( mutation.isIdle)) //! boucle infini
 
   const onSubmit = ({ choice }) => {
     const answers = []
@@ -104,11 +94,7 @@ const TestOngoing = ({ applicant, test, uuid, setPageData }) => {
       answers.push(parseInt(choice))
     }
     mutation.mutate({ question: test.question.id, answers })
-    // useEffect(() => mutation.mutate( mutation.isIdle)) //! boucle infini
-    //! fonctionne mais annule les statuts loading et success
-    // mutation.reset()
   }
-  // console.log("mutation testOnGoing :", mutation)
 
   const renderForm = () => {
     switch(test.question.kind) {
@@ -126,7 +112,12 @@ const TestOngoing = ({ applicant, test, uuid, setPageData }) => {
         />
     }
   }
-  
+ 
+  /**
+   * Defines the type of questions
+   * @param {string} test.question.kind
+   * @returns {HTMLElement}
+   */
   const typeChoice = () => {
     switch(test.question.kind) {
       case 'SINGLE':
@@ -158,37 +149,8 @@ const SingleChoiceForm = ({ question, onSubmit, mutation }) => {
     register,
     handleSubmit
   } = useForm()
-  
-  //* d'origine mais pas de diff si commenté :
+
   useEffect(() => {reset()}, [])
-  //? le button ne se rerend pas ???
-  
-  //~ tentative avec la mutation :
-  // useEffect(() => { //! 
-  //   if (mutation.isSuccess) { //! 
-  //     reset(); //!
-  // //  mutation.mutate( mutation.isIdle) //!
-  //     mutation.mutate( mutation.isIdle=true)}}, []) //!
-
-  
-
-  // useEffect(() => mutation.mutate( mutation.isIdle))//! 
- 
-  // // console.log ("reset :", reset)
-  //~ tentative avec le reset de useForm : 
-  // useEffect(() => { reset() }, [reset]) //!
-  //! Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-  // useEffect(() => {reset({},{keepIsSubmitted: false})})
-  // useEffect(() => { reset({},{keepIsSubmitted:false}) }, []) //! 
-  // useEffect(() => { reset({},{keepIsSubmitted:false}) }, [reset]) //! 
-  // useEffect(() => { reset({keepIsSubmitted:false}) }, []) //!
-  // useEffect(() => { reset() }, [reset]) //! (version field array)
-
-  // console.log("mutation singleChoice :", mutation)
-  // console.log("mutation.status singleChoice:", mutation.status)
-  // // //* apparaît 2 fois en console
-  //* la mutation reste sur success:true
- 
   
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -213,10 +175,6 @@ const SingleChoiceForm = ({ question, onSubmit, mutation }) => {
           loadingValue="En cours d'envoi ..."
           successValue="Réponse envoyée"
           mutation={mutation}
-          //! ne valide pas la réponse et reste sur la question en cours.
-          // onClick={() => {reset({},{keepIsSubmitted: false})}} 
-          // onClick={reset} //! Uncaught RangeError: Maximum call stack size exceeded
-          // onClick={() => mutation.reset()} //!
         />
       </div>
     </form>

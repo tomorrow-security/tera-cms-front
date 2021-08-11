@@ -1,5 +1,4 @@
 import { useEffect } from "react"
-import { useForm } from "react-hook-form"
 
 export default function InputButton({
   mutation,
@@ -32,25 +31,14 @@ export default function InputButton({
       disabled: false
     }
   }
-  
-  const { reset } = useForm()
-  //~ tentative avec le reset de useForm : 
-  // useEffect(() => { reset }, []) //! 
-  // useEffect(() => { reset({},{keepIsSubmitted:false}) }, []) //!
-   // useEffect(() => mutation.reset()) //! boucle infini
+
+  /** Reset button status 
+   * on successful submission */
   useEffect(() => {
     if (mutation.status === 'success') {
       mutation.reset()
     }
   })
-  //~ tentative avec la mutation :
-  // useEffect(()=> mutation.isIdle=true) //!
-  // useEffect(()=> mutation.status='idle') //! 
-  // useEffect(()=> mutation.reset(),[])//! 
-  
-  console.log("mutation button :", mutation)
-  console.log("mutation.status button:", mutation.status)
-  console.log("mutation.isIdle button:", mutation.isIdle)
 
   return (
       <div className="pt-2 mx-auto w-max group">
