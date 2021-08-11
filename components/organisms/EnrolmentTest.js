@@ -106,7 +106,7 @@ const TestOngoing = ({ applicant, test, uuid, setPageData }) => {
     mutation.mutate({ question: test.question.id, answers })
     // useEffect(() => mutation.mutate( mutation.isIdle)) //! boucle infini
   }
-  console.log("mutation testOnGoing :", mutation)
+  // console.log("mutation testOnGoing :", mutation)
 
   const renderForm = () => {
     switch(test.question.kind) {
@@ -158,7 +158,7 @@ const SingleChoiceForm = ({ question, onSubmit, mutation }) => {
   } = useForm()
   
   //* d'origine mais pas de diff si commenté :
-  useEffect(() => { reset() }, []) 
+  // useEffect(() => { reset() }, []) 
   
   //? tentative avec mutate pour obtenir mutation.Idle: true :
   // useEffect(() => { //! 
@@ -174,6 +174,7 @@ const SingleChoiceForm = ({ question, onSubmit, mutation }) => {
   // // console.log ("reset :", reset)
   //? tentative avec le reset : passer à false keepIsSubmitted : 
   // useEffect(() => { reset({},{keepIsSubmitted:false}) }, []) //! 
+  useEffect(() => { reset({},{keepIsSubmitted:false}) }, [reset]) //! 
   // useEffect(() => { reset({keepIsSubmitted:false}) }, []) //!
   // useEffect(() => { reset() }, [reset]) //!
   console.log("mutation singleChoice :", mutation)
