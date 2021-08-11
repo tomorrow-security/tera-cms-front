@@ -235,7 +235,9 @@ export default function Brochure() {
             Je remplis le formulaire pour me permettre de recevoir la brochure de Tera Campus directement dans ma boite mail.
           </p>
           <div className="xl:my-12">
-            <EnrolmentForm status={mutation.status} onSubmit={onSubmit} />
+            <EnrolmentForm
+              // status={mutation.status}
+              onSubmit={onSubmit} />
           </div>
         </section>
       </main>
