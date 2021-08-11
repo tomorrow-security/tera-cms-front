@@ -180,7 +180,7 @@ const SingleChoiceForm = ({ question, onSubmit, mutation }) => {
   // useEffect(() => { reset({},{keepIsSubmitted:false}) }, [reset]) //! 
   // useEffect(() => { reset({keepIsSubmitted:false}) }, []) //!
   console.log("mutation singleChoice :", mutation)
-  //* apparaît 2 fois en console
+  // // //* apparaît 2 fois en console
   //* la mutation reste sur success:true
  
   
