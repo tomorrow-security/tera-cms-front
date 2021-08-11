@@ -100,7 +100,7 @@ export async function getServerSideProps() {
         },
         {
           name: "Quel est le coût de la formation ?",
-          text: "Chez Tera Campus, nous avons souhaité faire une proposition simple et accessible à 6000€ par année en formation initiale. Le cursus intégral ne te coûtera qu'un maximum de deux années (1ère et 2ème année), soit 12000€, puisque le coût de ta formation sera ensuite prise en charge par ton contrat d'alternance.",
+          text: "Chez Tera Campus, nous avons souhaité faire une proposition simple et accessible à 6500€ par année en formation initiale. Le cursus intégral ne te coûtera qu'un maximum de deux années (1ère et 2ème année), soit 13000€, puisque le coût de ta formation sera ensuite prise en charge par ton contrat d'alternance.",
         },
         {
           name: "Comment se déroule l'inscription ?",
