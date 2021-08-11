@@ -1,5 +1,5 @@
-// import { useEffect } from "react" //!
-// import { useForm } from "react-hook-form" //! 
+import { useEffect } from "react"
+import { useForm } from "react-hook-form"
 
 export default function InputButton({
   mutation,
@@ -33,9 +33,17 @@ export default function InputButton({
     }
   }
   
-  // const { reset} = useForm() //!
+  const {reset} = useForm()
   // useEffect(() => { reset({},{keepIsSubmitted:false}) }, []) //!
   // useEffect(() => mutation.reset()) //! boucle infini
+  // useEffect(() => { reset }, []) //! 
+  // useEffect(()=> mutation.isIdle=true) //!
+  // useEffect(()=> mutation.status='idle') //! 
+  
+  console.log("mutation button :", mutation)
+  
+  console.log("mutation.status button:", mutation.status)
+  console.log("mutation.isIdle button:", mutation.isIdle)
 
   return (
       <div className="pt-2 mx-auto w-max group">
