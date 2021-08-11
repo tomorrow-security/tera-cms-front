@@ -3,14 +3,14 @@ export default function InputButton({mutation}) {
   const submitButtonParams = {
     loading: {
       value: 'En cours d\'envoi ...',
-      color: 'bg-tc-red-medium',
+      color: 'bg-tc-red bg-opacity-75',
       position:'absolute left-0 top-0 z-20',
       shadow: 'bg-tc-red bg-opacity-25 border border-tc-red-dark border-t-0',
       disabled: true
     },
     success: {
       value: 'Envoyé !',
-      color: 'bg-tc-blue-medium',
+      color: 'bg-tc-blue bg-opacity-75',
       position:'absolute left-0 -top-20/100 z-20',
       shadow: 'bg-tc-blue bg-opacity-25 border border-tc-blue border-t-0',
       disabled: true
