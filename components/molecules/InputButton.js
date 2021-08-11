@@ -34,11 +34,11 @@ export default function InputButton({
   }
   
   const { reset } = useForm()
-  //? tentative avec le reset de useForm : 
+  //~ tentative avec le reset de useForm : 
   // useEffect(() => { reset }, []) //! 
   // useEffect(() => { reset({},{keepIsSubmitted:false}) }, []) //!
    // useEffect(() => mutation.reset()) //! boucle infini
-  //? tentative avec la mutation :
+  //~ tentative avec la mutation :
   // useEffect(()=> mutation.isIdle=true) //!
   // useEffect(()=> mutation.status='idle') //! 
   // useEffect(()=> mutation.reset(),[])//! 

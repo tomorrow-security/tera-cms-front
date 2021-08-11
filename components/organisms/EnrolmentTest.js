@@ -159,8 +159,9 @@ const SingleChoiceForm = ({ question, onSubmit, mutation }) => {
   
   //* d'origine mais pas de diff si commenté :
   // useEffect(() => { reset() }, []) 
+  //? le button ne se rerend pas ???
   
-  //? tentative avec la mutation :
+  //~ tentative avec la mutation :
   // useEffect(() => { //! 
   //   if (mutation.isSuccess) { //! 
   //     reset(); //!
@@ -172,7 +173,7 @@ const SingleChoiceForm = ({ question, onSubmit, mutation }) => {
   // useEffect(() => mutation.mutate( mutation.isIdle))//! 
  
   // // console.log ("reset :", reset)
-  //? tentative avec le reset de useForm : 
+  //~ tentative avec le reset de useForm : 
   // useEffect(() => { reset() }, [reset]) //!
   //! Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
   // useEffect(() => {reset({},{keepIsSubmitted: false})})
