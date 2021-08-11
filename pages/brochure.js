@@ -202,16 +202,16 @@ export default function Brochure() {
   const router = useRouter()
   
   
-  // const mutation = useMutation(formData => {
-  //   axios
-  //     // TODO à modifier avec les bons endpoints
-  //     .post(`${apiUrl}/enrolment/create`, formData)
-  //     // TODO à modifier : écrire une validation de l'envoie du mail avec le brochure
-  //     .then(({ data }) => router.push(`/enrolment/${data.enrolment}`))
-  //     .catch(error => console.log(error))
-  // }, { retry: 3 })
+  const mutation = useMutation(formData => {
+    axios
+      // TODO à modifier avec les bons endpoints
+      .post(`${apiUrl}/enrolment/create`, formData)
+      // TODO à modifier : écrire une validation de l'envoie du mail avec le brochure
+      .then(({ data }) => router.push(`/enrolment/${data.enrolment}`))
+      .catch(error => console.log(error))
+  }, { retry: 3 })
 
-  const onSubmit = formData => mutation.mutate(formData)
+  // const onSubmit = formData => mutation.mutate(formData)
 
   return (
     <>
@@ -237,7 +237,8 @@ export default function Brochure() {
           <div className="xl:my-12">
             <EnrolmentForm
               // status={mutation.status}
-              onSubmit={onSubmit} />
+            // onSubmit={onSubmit} 
+            />
           </div>
         </section>
       </main>
