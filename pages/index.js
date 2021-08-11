@@ -69,7 +69,7 @@ export async function getServerSideProps() {
           dateTimeDate: '2021-08-09',
           timetable: '18h00',
           dateTimeTimetable: '18:00',
-          title: "Evolution des bandes d'annonces",
+          title: "L'impact des données numériques",
           description: 'Thursday Tech Live',
           platform: 'twitch',
           url: 'https://www.twitch.tv/teracampus'
