@@ -173,10 +173,12 @@ const SingleChoiceForm = ({ question, onSubmit, mutation }) => {
  
   // // console.log ("reset :", reset)
   //? tentative avec le reset : passer à false keepIsSubmitted : 
-  // useEffect(() => { reset({},{keepIsSubmitted:false}) }, []) //! 
-  useEffect(() => { reset({},{keepIsSubmitted:false}) }, [reset]) //! 
-  // useEffect(() => { reset({keepIsSubmitted:false}) }, []) //!
   // useEffect(() => { reset() }, [reset]) //!
+  //! Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
+  // useEffect(() => {reset({},{keepIsSubmitted: false})})
+  // useEffect(() => { reset({},{keepIsSubmitted:false}) }, []) //! 
+  // useEffect(() => { reset({},{keepIsSubmitted:false}) }, [reset]) //! 
+  // useEffect(() => { reset({keepIsSubmitted:false}) }, []) //!
   console.log("mutation singleChoice :", mutation)
   //* apparaît 2 fois en console
   //* la mutation reste sur success:true
@@ -205,8 +207,8 @@ const SingleChoiceForm = ({ question, onSubmit, mutation }) => {
           loadingValue="En cours d'envoi ..."
           successValue="Réponse envoyée"
           mutation={mutation}
-          //! ne valide pas la réponse et rest sur la question en cours.
-          // onClick={() => {reset({},{keepIsSubmitted: false,})}} 
+          //! ne valide pas la réponse et reste sur la question en cours.
+          // onClick={() => {reset({},{keepIsSubmitted: false})}} 
           // onClick={reset} //! Uncaught RangeError: Maximum call stack size exceeded
         />
       </div>
