@@ -17,7 +17,6 @@ import InputRadio from './../components/molecules/InputRadio'
 import PageLink from './../components/atoms/PageLink'
 
 //TODO descendre un peu le submit en view desktop
-// TODO layout msg d'erreur des checkbox ()
 
 
 // TODO importer la molecule EnrolmentForm à la place
@@ -32,12 +31,12 @@ const EnrolmentForm = ({ status, onSubmit }) => {
       case 'loading':
         return (
           <div className="w-auto pt-2 mx-auto group">
-            <div className="relative z-0 px-4 font-bold text-transparent border border-t-0 rounded-t outline-none cursor-pointer w-max rounded-b-xl bg-tc-red-xlight border-tc-red-dark">
+            <div className="relative z-0 px-4 font-bold text-transparent bg-opacity-25 border border-t-0 rounded-t outline-none cursor-pointer w-max rounded-b-xl bg-tc-red border-tc-red-dark">
               En cours d'envoi ...
               <input
                 type="submit"
                 value="En cours d'envoi ..."
-                className="absolute top-0 left-0 z-20 px-4 mx-auto font-bold text-white rounded-t outline-none cursor-pointer w-max rounded-b-xl bg-tc-red-medium"
+                className="absolute top-0 left-0 z-20 px-4 mx-auto font-bold text-white bg-opacity-75 rounded-t outline-none cursor-pointer w-max rounded-b-xl bg-tc-red"
                 disabled
               />
             </div>
@@ -46,12 +45,12 @@ const EnrolmentForm = ({ status, onSubmit }) => {
       case 'success':
         return (
           <div className="w-auto pt-2 mx-auto group">
-            <div className="relative z-0 px-4 font-bold text-transparent border border-t-0 rounded-t outline-none cursor-pointer w-max rounded-b-xl bg-tc-blue-xlight border-tc-blue">
+            <div className="relative z-0 px-4 font-bold text-transparent bg-opacity-25 border border-t-0 rounded-t outline-none cursor-pointer w-max rounded-b-xl bg-tc-blue border-tc-blue">
               Envoyé !
               <input
                 type="submit"
                 value="Envoyé !"
-                className="absolute left-0 z-20 px-4 mx-auto font-bold text-white rounded-t outline-none cursor-pointer bg-tc-blue-medium -top-20/100 w-max rounded-b-xl"
+                className="absolute left-0 z-20 px-4 mx-auto font-bold text-white bg-opacity-75 rounded-t outline-none cursor-pointer bg-tc-blue -top-20/100 w-max rounded-b-xl"
                 disabled
               />
             </div>
@@ -60,7 +59,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
       default:
         return (
           <div className="w-auto pt-2 mx-auto group">
-            <div className="relative z-0 px-4 font-bold text-transparent transition-colors duration-700 border rounded-t shadow outline-none cursor-pointer w-max rounded-b-xl bg-tc-blue-light border-tc-blue-dark group-hover:bg-tc-red-light group-hover:border-tc-red-dark group-hover:shadow-none">
+            <div className="relative z-0 px-4 font-bold text-transparent transition-colors duration-700 bg-opacity-50 border rounded-t shadow outline-none cursor-pointer w-max rounded-b-xl bg-tc-blue border-tc-blue-dark group-hover:bg-tc-red group-hover:border-tc-red-dark group-hover:shadow-none">
               Envoyer
               <input
                 type="submit"
@@ -168,7 +167,6 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                 />
                 <div>
                   <div className="box-border flex flex-row flex-wrap items-center max-w-full ml-2 text-xs sm:text-base">
-                    {/* // TODO vérifier alignement des éléments */}
                     <p className="border-b-2 border-transparent">J'ai lu et j'accepte la&nbsp;</p>
                     <PageLink id="privacy" label="politique de confidentialité" />
                     <p className="border-b-2 border-transparent">
@@ -180,7 +178,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
               {
                 errors.consent ? (
                   <span className="text-center text-tc-red">
-                    Tu dois accepter la politique de confidentialité pour continuer recevoir la brochure.
+                    Tu dois accepter la politique de confidentialité pour recevoir la brochure.
                   </span>
                 ) : null
               }
@@ -199,20 +197,19 @@ const pageTitle = "Brochure - Tera Campus"
 const pageDescription = "Demande de brochure"
 const pageUrl = 'https://tera-campus.com/brochure'
 const apiUrl = process.env.NEXT_PUBLIC_ARPETTE_URL
-// TODO vérifier endpoint avec Brice
 
 export default function Brochure() {
   const router = useRouter()
   
   
-  const mutation = useMutation(formData => {
-    axios
-      // TODO à modifier avec les bons endpoints
-      .post(`${apiUrl}/enrolment/create`, formData)
-      // TODO à modifier : écrire une validation de l'envoie du mail avec le brochure
-      .then(({ data }) => router.push(`/enrolment/${data.enrolment}`))
-      .catch(error => console.log(error))
-  }, { retry: 3 })
+  // const mutation = useMutation(formData => {
+  //   axios
+  //     // TODO à modifier avec les bons endpoints
+  //     .post(`${apiUrl}/enrolment/create`, formData)
+  //     // TODO à modifier : écrire une validation de l'envoie du mail avec le brochure
+  //     .then(({ data }) => router.push(`/enrolment/${data.enrolment}`))
+  //     .catch(error => console.log(error))
+  // }, { retry: 3 })
 
   const onSubmit = formData => mutation.mutate(formData)
 
