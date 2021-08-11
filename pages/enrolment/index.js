@@ -102,7 +102,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                   name="email"
                   type="email"
                   placeholder="thomas.anderson@tera-campus.com"
-                  className={`p-2 flex-1 border rounded mx-2 outline-none ${errors.email ? 'border-tc-red' : 'border-black'}`}
+                  className={`p-2 flex-1 border rounded mx-2 outline-none ${errors.email ? 'border-tc-red' : 'border-tc-blue'}`}
                   {...register("email", { required: true })}
                 />
                 <span className="text-tc-red">{errors?.email?.message}</span>
@@ -117,7 +117,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                   name="lastName"
                   type="text"
                   placeholder="Anderson"
-                  className={`mx-2 p-2 flex-1 border rounded outline-none ${errors.lastName ? 'border-tc-red' : 'border-black'}`}
+                  className={`mx-2 p-2 flex-1 border rounded outline-none ${errors.lastName ? 'border-tc-red' : 'border-tc-blue'}`}
                   {...register("lastName", { required: true })}
                 />
                 <span className="text-tc-red">{errors?.lastName?.message}</span>
@@ -130,7 +130,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                   name="firstName"
                   type="text"
                   placeholder="Thomas"
-                  className={`mx-2 p-2 flex-1 border rounded outline-none ${errors.firstName ? 'border-tc-red' : 'border-black'}`}
+                  className={`mx-2 p-2 flex-1 border rounded outline-none ${errors.firstName ? 'border-tc-red' : 'border-tc-blue'}`}
                   {...register("firstName", { required: true })}
                 />
                 <span className="text-tc-red">{errors?.firstName?.message}</span>
@@ -149,7 +149,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                     withCountryCallingCode
                     control={control}
                     rules={{ required: true }}
-                    className={`mx-2 p-2 flex-1 border w-65% rounded outline-none ${errors.phone ? 'border-tc-red' : 'border-black'}`}
+                    className={`mx-2 p-2 flex-1 border w-65% rounded outline-none ${errors.phone ? 'border-tc-red' : 'border-tc-blue'}`}
                     />
                     {/* {errors["phone-input"] && (
                       <span className="text-tc-red">{errors?.phone?.message}</span>
@@ -163,7 +163,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                   id='consent'
                   name="consent"
                   type="checkbox"
-                  className="w-6 h-6 my-auto border-black rounded md:w-4 md:h-4 text-tc-blue focus:ring-offset-0"
+                  className="w-6 h-6 my-auto rounded border-tc-blue md:w-4 md:h-4 text-tc-blue focus:ring-offset-0"
                   {...register("consent", { required: true })}
                 />
                 <div>

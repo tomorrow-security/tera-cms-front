@@ -1,7 +1,7 @@
 export default function InputToggle({ onClick, checked }) {
     const isLeft = checked ? '-top-8' : 'top-1'
     const isRight = checked ? 'top-1' : '-top-8'
-    const background = checked ? 'bg-tc-blue-light' : 'bg-tc-red-light'
+    const background = checked ? 'bg-tc-blue bg-opacity-50' : 'bg-tc-red bg-opacity-50'
 
     return (
         <div

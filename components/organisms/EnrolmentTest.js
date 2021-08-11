@@ -58,7 +58,7 @@ const TestCreated = ({ applicant, test, uuid, setPageData }) => {
         <p>Bon courage et à très vite !</p>
       </div>
       <div className="w-auto pt-8 mx-auto group">
-        <div className="relative z-0 px-4 mx-auto font-bold text-transparent transition-colors duration-700 border rounded-t shadow outline-none cursor-pointer w-max rounded-b-xl bg-tc-blue-light border-tc-blue-dark group-hover:bg-tc-red-light group-hover:border-tc-red-dark group-hover:shadow-none">
+        <div className="relative z-0 px-4 mx-auto font-bold text-transparent transition-colors duration-700 bg-opacity-50 border rounded-t shadow outline-none cursor-pointer w-max rounded-b-xl bg-tc-blue border-tc-blue-dark group-hover:bg-tc-red group-hover:bg-opacity-50 group-hover:border-tc-red-dark group-hover:shadow-none">
           Démarrer le test
           <input
             type="submit"

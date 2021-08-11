@@ -22,7 +22,7 @@ const Guide = ({ name, description, imageUrl, reverse }) => (
         <div className="rounded-full border-1 lg:border-2 borde-solid border-tc-blue">
             <div className="border-2 border-solid rounded-full lg:border-4 border-tc-red">
                 <img
-                    className="border-solid rounded-full w-96 lg:w-auto lg:h-full border-1 lg:border-2 border-tc-blue-light"
+                    className="border-opacity-50 border-solid rounded-full w-96 lg:w-auto lg:h-full border-1 lg:border-2 border-tc-blue"
                     src={imageUrl}
                     alt="Guide figure" loading="lazy"
                 />
