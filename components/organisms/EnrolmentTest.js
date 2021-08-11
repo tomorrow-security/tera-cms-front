@@ -105,6 +105,8 @@ const TestOngoing = ({ applicant, test, uuid, setPageData }) => {
     }
     mutation.mutate({ question: test.question.id, answers })
     // useEffect(() => mutation.mutate( mutation.isIdle)) //! boucle infini
+    //! fonctionne mais annule les statuts loading et success
+    // mutation.reset()
   }
   // console.log("mutation testOnGoing :", mutation)
 
@@ -158,7 +160,7 @@ const SingleChoiceForm = ({ question, onSubmit, mutation }) => {
   } = useForm()
   
   //* d'origine mais pas de diff si commenté :
-  // useEffect(() => { reset() }, []) 
+  useEffect(() => {reset()}, [])
   //? le button ne se rerend pas ???
   
   //~ tentative avec la mutation :

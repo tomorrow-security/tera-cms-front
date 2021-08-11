@@ -38,6 +38,11 @@ export default function InputButton({
   // useEffect(() => { reset }, []) //! 
   // useEffect(() => { reset({},{keepIsSubmitted:false}) }, []) //!
    // useEffect(() => mutation.reset()) //! boucle infini
+  useEffect(() => {
+    if (mutation.status === 'success') {
+      mutation.reset()
+    }
+  })
   //~ tentative avec la mutation :
   // useEffect(()=> mutation.isIdle=true) //!
   // useEffect(()=> mutation.status='idle') //! 
