@@ -34,16 +34,6 @@ export async function getServerSideProps() {
   return {
     props: {
       agenda: [
-        {
-          date: '05/08/2021',
-          dateTimeDate: '2021-08-05',
-          timetable: '18h30',
-          dateTimeTimetable: '18:30',
-          title: "Motion Design, c'est quoi ?",
-          description: 'Thursday Tech Live',
-          platform: 'twitch',
-          url: 'https://www.twitch.tv/teracampus'
-        },
          {
           date: '12/08/2021',
           dateTimeDate: '2021-08-12',
@@ -74,12 +64,31 @@ export async function getServerSideProps() {
         // //   platform: 'twitch',
         // //   url: 'https://www.twitch.tv/teracampus'
         // // },
+        {
+          date: '09/09/2021',
+          dateTimeDate: '2021-08-09',
+          timetable: '18h00',
+          dateTimeTimetable: '18:00',
+          title: "Evolution des bandes d'annonces",
+          description: 'Thursday Tech Live',
+          platform: 'twitch',
+          url: 'https://www.twitch.tv/teracampus'
+        },
         // {
-        //   date: '09/09/2021',
-        //   dateTimeDate: '2021-08-09',
-        //   timetable: '18h00',
-        //   dateTimeTimetable: '18:00',
-        //   title: "Evolution des bandes d'annonces",
+        //   date: '23/09/2021',
+        //   dateTimeDate: '2021-09-23',
+        //   timetable: '18h30',
+        //   dateTimeTimetable: '18:30',
+        //   title: "Unity 2D - Zelda-like",
+        //   description: 'Thursday Tech Live',
+        //   platform: 'twitch',
+        //   url: 'https://www.twitch.tv/teracampus'
+        // },
+        //   date: '30/09/2021',
+        //   dateTimeDate: '2021-09-30',
+        //   timetable: '18h30',
+        //   dateTimeTimetable: '18:30',
+        //   title: "Motion Design - apprenez les effets spéciaux",
         //   description: 'Thursday Tech Live',
         //   platform: 'twitch',
         //   url: 'https://www.twitch.tv/teracampus'
