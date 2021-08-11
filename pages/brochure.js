@@ -211,7 +211,7 @@ export default function Brochure() {
       .catch(error => console.log(error))
   }, { retry: 3 })
 
-  // const onSubmit = formData => mutation.mutate(formData)
+  const onSubmit = formData => mutation.mutate(formData)
 
   return (
     <>
@@ -236,7 +236,7 @@ export default function Brochure() {
           </p>
           <div className="xl:my-12">
             <EnrolmentForm
-              // status={mutation.status}
+            // status={mutation.status}
             // onSubmit={onSubmit} 
             />
           </div>
