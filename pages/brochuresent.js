@@ -6,7 +6,7 @@ const pageTitle = "Brochure envoyée - Tera Campus"
 const pageDescription = "Confirmation d'envoie de la brochure"
 const pageUrl = 'https://tera-campus.com/brochuresent'
 
-export default function brochureSent() {
+export default function brochureSented() {
   return (
     <>
       <Head>
