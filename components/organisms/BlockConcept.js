@@ -38,22 +38,19 @@ export default function BlockConcept() {
                 <ul className="mx-2 md:mx-0 md:pl-2 lg:w-2/3">
                     <li>
                         <LittleTitle>
-                            Tera Campus c&apos;est quoi ?
+                            Tera Campus c'est quoi ?
                         </LittleTitle>
                         <Paragraph gutterBottom>
                             <Strong>
-                                Tera Campus est une école Supérieure d&apos;Informatique en télé-présentiel,&nbsp;
+                                Tera Campus est une école Supérieure d'Informatique en télé-présentiel,&nbsp;
                             </Strong>
                             et propose des formations diplômantes&nbsp;
                             <em className="not-italic font-bold ">
-                                &#x00028;en initial et en alternance&#x00029;&nbsp;
+                                (en initial et en alternance)&nbsp;
                             </em>
-                            validées par un agrément officiel d&apos;Etat &#x00028;RNPC niveau 6 et 7&#x00029;.&nbsp;
-                            Nos cursus de 3 à 5 années &#x00028;BAC+3 et BAC+5&#x00029;&nbsp;
-                            orientés sur les technologies de l&apos;information,&nbsp;
-                            réalisés et validés par des professionnels du secteurs,&nbsp;
-                            qui te permettront d&apos;acquérir non seulement de fortes compétences techniques,&nbsp;
-                            mais aussi des méthodes d'organisation,&nbsp;
+                            validées par un agrément officiel d'Etat (RNPC niveau 6 et 7). Nos cursus de 3 à 5 années (BAC+3 et BAC+5)
+                            orientés sur les technologies de l'information, réalisés et validés par des professionnels du secteur
+                            te permettront d'acquérir non seulement de fortes compétences techniques, mais aussi des méthodes d'organisation,
                             de collaboration et de communication indispensables à toute carrière professionnelle !
                         </Paragraph>
                     </li>
@@ -63,11 +60,11 @@ export default function BlockConcept() {
                         </LittleTitle>
                         <Paragraph gutterBottom>
                             <Strong>
-                                La formation Tera Campus peut être suivie de n&apos;importe où,&nbsp;
-                                le seul pré-requis : un ordinateur et une connexion internet.&nbsp;
+                                La formation Tera Campus peut être suivie de n'importe où avec un seul pré-requis :
+                                un ordinateur et une connexion internet.&nbsp;
                             </Strong>
-                            Tous les cours seront animés par un formateur qualifié.&nbsp;
-                            Oublie les déplacements, cette fois-ci c&apos;est l&apos;école qui vient à toi !
+                            Tous les cours seront animés par un formateur qualifié. Oublie les déplacements, cette fois-ci
+                            c'est l'école qui vient à toi !
                         </Paragraph>
                     </li>
                     <li>
@@ -75,16 +72,13 @@ export default function BlockConcept() {
                             Vais-je rencontrer les étudiants ?
                         </LittleTitle>
                         <Paragraph gutterBottom>
-                            Tout au long de l&apos;année, Tera Campus organise trois Bivouacs de
-                            deux semaines complètes.&nbsp;
+                            Tout au long de l'année, Tera Campus organise trois Bivouacs de deux semaines complètes.&nbsp;
                             <Strong>
-                                En octobre, en février puis en mai,&nbsp;
-                                tu rejoindras les autres étudiants de Tera Campus pour partager,&nbsp;
-                                créer et construire un esprit d&apos;équipe au&nbsp;
-                                travers d&apos;exercices de team building et de Hackathons.&nbsp;
+                                En octobre, en février puis en mai, tu rejoindras les autres étudiants de Tera Campus pour partager,
+                                créer et construire un esprit d'équipe au travers d'exercices de team building et de Hackathons.&nbsp;
                             </Strong>
-                            En améliorant la cohésion de groupe, nous améliorons aussi ton&nbsp;
-                            apprentissage pour mieux t&apos;intégrer dans le monde professionnel.
+                            En améliorant la cohésion de groupe, nous améliorons aussi ton apprentissage pour mieux t'intégrer dans
+                            le monde professionnel.
                         </Paragraph>
                     </li>
                   </ul>

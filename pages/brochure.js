@@ -1,6 +1,5 @@
 import axios from 'axios'
 import Head from 'next/head'
-import { useRouter } from 'next/router'
 import React, { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import { useMutation } from 'react-query'
@@ -83,19 +82,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
         <div>
           <div className="space-y-1 xl:space-y-8 xl:flex xl:flex-col xl:items-center ">
             <div className="xl:flex xl:justify-between xl:w-4/5 xl:flex-nowrap">
-              {/* <div className="flex items-center space-y-1 xl:w-45%">
-                <label htmlFor="gender" className="w-30%">Civilité* :</label>
-                <InputRadio
-                  name="gender"
-                  control={control}
-                  choices={[
-                    { label: 'Mme', value: 'F' },
-                    { label: 'M.', value: 'M' },
-                  ]}
-                />
-                <span className=" text-tc-red">{errors?.gender?.message}</span>
-              </div> */}
-              <div className="flex items-center space-y-1 xl:w-45%">
+            <div className="flex items-center space-y-1 xl:w-45%">
                 {/* // TODO importer la molecule Input à la place */}
                  {/* //* Input composant ne fonctionne pas : à revoir */}
                 <label htmlFor="email" className="w-30%">E-mail* :</label>
@@ -108,6 +95,18 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                   {...register("email", { required: true })}
                 />
                 <span className="text-tc-red">{errors?.email?.message}</span>
+              </div>
+              <div className="flex items-center space-y-1 xl:w-45%">
+                <label htmlFor="gender" className="w-30%">Civilité* :</label>
+                <InputRadio
+                  name="gender"
+                  control={control}
+                  choices={[
+                    { label: 'Mme', value: 'F' },
+                    { label: 'M.', value: 'M' },
+                  ]}
+                />
+                <span className=" text-tc-red">{errors?.gender?.message}</span>
               </div>
             </div>
             <div className="xl:flex xl:justify-between xl:w-4/5 xl:flex-nowrap">
@@ -150,16 +149,15 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                     international
                     withCountryCallingCode
                     control={control}
-                    // rules={{ required: true }}
-                    // className={`mx-2 p-2 flex-1 border w-65% rounded outline-none ${errors.phone ? 'border-tc-red' : 'border-tc-blue'}`}
-                    className="mx-2 p-2 flex-1 border border-tc-blue w-65% rounded outline-none"
-                    />
-                    {/* {errors["phone-input"] && (
-                      <span className="text-tc-red">{errors?.phone?.message}</span>
-                    )} */}
+                    rules={{ required: true }}
+                    className={`mx-2 p-2 flex-1 border w-65% rounded outline-none ${errors.phone ? 'border-tc-red' : 'border-tc-blue'}`}
+                  />
+                  {/* {errors["phone-input"] && (
+                    <span className="text-tc-red">{errors?.phone?.message}</span>
+                  )} */}
                 </div>
               </div>
-          </div>
+            </div>
             <label className="flex flex-col justify-center">
               <div className="flex flex-row pt-8 mx-auto flex-nowrap w-max-full">
                 <input
@@ -174,7 +172,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                     <p className="border-b-2 border-transparent">J'ai lu et j'accepte la&nbsp;</p>
                     <PageLink id="privacy" label="politique de confidentialité" />
                     <p className="border-b-2 border-transparent">
-                      &nbsp;et j'accepte d'être recontacté par Tera Campus pour recevoir la brochure.
+                      &nbsp;et j'accepte d'être recontacté par Tera Campus.
                     </p>
                   </div>
                 </div>
@@ -202,12 +200,7 @@ const pageDescription = "Demande de brochure"
 const pageUrl = 'https://tera-campus.com/brochure'
 
 export default function Brochure() {
-  const router = useRouter()
-  const mutation = useMutation(data => {
-    axios
-      .post('/api/brochure', data)
-      .catch(error => console.log(error))
-  }, { retry: 3 })
+  const mutation = useMutation(data => axios.post('/api/brochure', data), { retry: 3 })
 
   const onSubmit = data => {
     mutation.mutate(data),
@@ -215,7 +208,6 @@ export default function Brochure() {
     console.log("data :", data)
     
   }
-  
 
   return (
     <>
@@ -236,13 +228,10 @@ export default function Brochure() {
             />
           </div>
           <p className="my-8 text-center ">
-            Je remplis le formulaire pour me permettre de recevoir la brochure de Tera Campus directement dans ma boite mail.
+            Remplir le formulaire suivant pour recevoir la brochure de Tera Campus par e-mail.
           </p>
           <div className="xl:my-12">
-            <EnrolmentForm
-            status={mutation.status}
-            onSubmit={onSubmit} 
-            />
+            <EnrolmentForm status={mutation.status} onSubmit={onSubmit} />
           </div>
         </section>
       </main>

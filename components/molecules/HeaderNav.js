@@ -13,7 +13,6 @@ const pages1 = [
 	{ id: 'career', label: 'Carrières' },
 	{ id: 'guides', label: 'Nos guides' },
 	{ id: 'program', label: 'Programme' },
-	{ id: 'brochure', label: 'Brochure' },
 	{ id: 'enrolment', label: 'Inscription' },
 	{ id: 'join', label: 'Rejoins-nous' },
 ]

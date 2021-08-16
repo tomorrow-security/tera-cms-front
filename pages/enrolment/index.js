@@ -150,13 +150,13 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                     control={control}
                     rules={{ required: true }}
                     className={`mx-2 p-2 flex-1 border w-65% rounded outline-none ${errors.phone ? 'border-tc-red' : 'border-tc-blue'}`}
-                    />
-                    {/* {errors["phone-input"] && (
-                      <span className="text-tc-red">{errors?.phone?.message}</span>
-                    )} */}
+                  />
+                  {/* {errors["phone-input"] && (
+                    <span className="text-tc-red">{errors?.phone?.message}</span>
+                  )} */}
                 </div>
               </div>
-          </div>
+            </div>
             <label className="flex flex-col justify-center">
               <div className="flex flex-row pt-8 mx-auto flex-nowrap w-max-full">
                 <input
