@@ -34,16 +34,6 @@ export async function getServerSideProps() {
   return {
     props: {
       agenda: [
-         {
-          date: '12/08/2021',
-          dateTimeDate: '2021-08-12',
-          timetable: '17h00',
-          dateTimeTimetable: '17:00',
-          title: "Qu'est ce que la 5G ?",
-          description: 'Thursday Tech Live',
-          platform: 'twitch',
-          url: 'https://www.twitch.tv/teracampus'
-        },
           {
           date: '26/08/2021',
           dateTimeDate: '2021-08-26',
@@ -59,7 +49,7 @@ export async function getServerSideProps() {
         // //   dateTimeDate: '2021-09-02',
         // //   timetable: '',
         // //   dateTimeTimetable: '',
-        // //   title: '',
+        // //   title: 'Coaching alternance',
         // //   description: 'Thursday Tech Live',
         // //   platform: 'twitch',
         // //   url: 'https://www.twitch.tv/teracampus'
@@ -74,16 +64,16 @@ export async function getServerSideProps() {
           platform: 'twitch',
           url: 'https://www.twitch.tv/teracampus'
         },
-        // {
-        //   date: '23/09/2021',
-        //   dateTimeDate: '2021-09-23',
-        //   timetable: '18h30',
-        //   dateTimeTimetable: '18:30',
-        //   title: "Unity 2D - Zelda-like",
-        //   description: 'Thursday Tech Live',
-        //   platform: 'twitch',
-        //   url: 'https://www.twitch.tv/teracampus'
-        // },
+        {
+          date: '23/09/2021',
+          dateTimeDate: '2021-09-23',
+          timetable: '18h30',
+          dateTimeTimetable: '18:30',
+          title: "Unity 2D - Zelda-like",
+          description: 'Thursday Tech Live',
+          platform: 'twitch',
+          url: 'https://www.twitch.tv/teracampus'
+        },
         //   date: '30/09/2021',
         //   dateTimeDate: '2021-09-30',
         //   timetable: '18h30',
