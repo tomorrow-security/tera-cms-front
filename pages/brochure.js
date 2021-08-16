@@ -18,7 +18,7 @@ import PageLink from './../components/atoms/PageLink'
 //TODO descendre un peu le submit en view desktop
 
 
-// TODO importer la molecule EnrolmentForm à la place
+// TODO importer la molecule EnrolmentForm à la place (molécule à faire)
 const EnrolmentForm = ({ status, onSubmit }) => {
   const {reset, register, handleSubmit, control, formState : { errors }} = useForm()
   
@@ -204,6 +204,7 @@ export default function Brochure() {
 
   const onSubmit = data => {
     mutation.mutate(data),
+    // TODO faire une condition avec le satus success pour router.push
     // router.push("/brochuresented") //ok
     console.log("data :", data)
     
