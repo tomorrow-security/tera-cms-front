@@ -5,20 +5,13 @@ import { useForm } from 'react-hook-form'
 import { useMutation } from 'react-query'
 import 'react-phone-number-input/style.css'
 import PhoneInputWithCountry from 'react-phone-number-input/react-hook-form'
-// TODO faire la validation du numéro avec isPossiblePhoneNumber 
-// import { isPossiblePhoneNumber } from 'react-phone-number-input'
-
 
 import BlockTitle from './../components/atoms/BlockTitle'
 import InputRadio from './../components/molecules/InputRadio'
-// import InputCheckRGPD from './../components/molecules/InputCheckRGPD'
-// import Input from './../components/molecules/Input'
 import PageLink from './../components/atoms/PageLink'
 
-//TODO descendre un peu le submit en view desktop
 
-
-// TODO importer la molecule EnrolmentForm à la place (molécule à faire)
+// TODO importer la molecule Form à la place (molécule à faire)
 const EnrolmentForm = ({ status, onSubmit }) => {
   const {reset, register, handleSubmit, control, formState : { errors }} = useForm()
   
@@ -71,8 +64,6 @@ const EnrolmentForm = ({ status, onSubmit }) => {
     }
   }
   
-  // TODO style au focus du phoneInput border à enlever à l'intérieur
-  
   return (
     <form
       className="w-full mx-2"
@@ -83,8 +74,6 @@ const EnrolmentForm = ({ status, onSubmit }) => {
           <div className="space-y-1 xl:space-y-8 xl:flex xl:flex-col xl:items-center ">
             <div className="xl:flex xl:justify-between xl:w-4/5 xl:flex-nowrap">
             <div className="flex items-center space-y-1 xl:w-45%">
-                {/* // TODO importer la molecule Input à la place */}
-                 {/* //* Input composant ne fonctionne pas : à revoir */}
                 <label htmlFor="email" className="w-30%">E-mail* :</label>
                 <input
                   id="email"
@@ -111,7 +100,6 @@ const EnrolmentForm = ({ status, onSubmit }) => {
             </div>
             <div className="xl:flex xl:justify-between xl:w-4/5 xl:flex-nowrap">
               <div className="flex items-center space-y-1 xl:w-45%">
-                {/* // TODO importer la molecule Input à la place */}
                 <label htmlFor="lastName" className="w-30%">Nom* :</label>
                 <input
                   id="lastName"
@@ -124,7 +112,6 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                 <span className="text-tc-red">{errors?.lastName?.message}</span>
               </div>
               <div className="flex items-center space-y-1 xl:w-45%">
-                {/* // TODO importer la molecule Input à la place */}
                 <label htmlFor="firstName" className="w-30%">Prénom* :</label>
                 <input
                   id="firstName"
@@ -141,7 +128,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
               <div className="space-y-1 xl:w-45%">
                 <div className="flex items-center ">
                   <label htmlFor="phone" className="w-30%">Téléphone* :</label>
-                  {/* //TODO voir pour retirer le border intern au focus */}
+                  {/* //TODO voir pour retirer le border interne au focus */}
                   <PhoneInputWithCountry
                     id="phone"
                     name="phone"
@@ -152,9 +139,6 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                     rules={{ required: true }}
                     className={`mx-2 p-2 flex-1 border w-65% rounded outline-none ${errors.phone ? 'border-tc-red' : 'border-tc-blue'}`}
                   />
-                  {/* {errors["phone-input"] && (
-                    <span className="text-tc-red">{errors?.phone?.message}</span>
-                  )} */}
                 </div>
               </div>
             </div>
