@@ -18,8 +18,9 @@ export default function brochureSented() {
       </Head>
 
       <main>
-        <div className="flex justify-center mt-24 text-xl font bold">
-          <p>Tera Campus vous remercie d'avoir demandé la brochure, elle vient d'être envoyée par email</p>
+        <div className="flex flex-col items-center justify-center my-12 space-y-6 text-xl font bold">
+          <p className="mt-8 text-center">Tera Campus vous remercie d'avoir demandé la brochure.</p>
+          <p className="text-center">La brochure vous a été envoyé par email.</p>
           <div className="mx-auto w-max">
             <PageLink id="" label="Retour à l'accueil"/>
           </div>

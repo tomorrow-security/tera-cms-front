@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form'
 import { useMutation } from 'react-query'
 import 'react-phone-number-input/style.css'
 import PhoneInputWithCountry from 'react-phone-number-input/react-hook-form'
+import router from 'next/router'
 
 import BlockTitle from './../components/atoms/BlockTitle'
 import InputRadio from './../components/molecules/InputRadio'
@@ -189,8 +190,9 @@ export default function Brochure() {
   const onSubmit = data => {
     mutation.mutate(data),
     // TODO faire une condition avec le satus success pour router.push
-    // router.push("/brochuresented") //ok
-    console.log("data :", data)
+    router.push("/brochuresented")
+    //   console.log("data :", data)
+    // console.log("mutation :", mutation)
     
   }
 
