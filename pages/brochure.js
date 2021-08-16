@@ -211,8 +211,9 @@ export default function Brochure() {
 
   const onSubmit = data => {
     mutation.mutate(data),
-      console.log("data :", data)
-      // ,router.push("/brochuresent") //ok
+    // router.push("/brochuresented") //ok
+    console.log("data :", data)
+    
   }
   
 
