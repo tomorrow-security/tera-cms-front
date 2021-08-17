@@ -128,7 +128,7 @@ module.exports = {
     variants: {
         extend: {
             animation: ['group-hover','hover', 'focus', 'checked'],
-            backgroundColor: ['group-hover', 'checked', 'disabled'],
+            backgroundColor: ['group-focus', 'checked', 'disabled'],
             backgroundImage: ['group-hover', 'hover'],
             borderColor: [ 'focus', 'checked'],
             borderOpacity: ['disabled'],
