@@ -46,7 +46,7 @@ const steps = [
 const Step = ({ description, image, icon, stage }) => {
     const oddStep = stage % 2 !== 0
     return (
-        <div className="border-t border-tc-red md:pt-4 md:w-1/5">
+        <div className="px-4 border-t border-tc-red md:pt-4 md:w-1/5">
             <div
                 style={{ backgroundImage: `url('${image}')` }}
                 className="z-0 w-full h-20 my-2 bg-center bg-no-repeat bg-contain md:h-full md:mx-2">
@@ -100,20 +100,18 @@ export default function BlockJoin() {
         return (
             <>
                 <div className="flex flex-row items-center my-2">
-                    <div className="w-5 h-5 mr-4 transform rotate-45 bg-tc-red"></div>
-                    <h2 className="text-lg font-bold text-tc-blue sm:text-xl xl:text-2xl">
-                        Mon parcours en alternance
-                    </h2>
+                    <div className="w-5 h-5 mr-4 transform rotate-45 bg-tc-red"> </div>
+                    <h2 className="w-5/6 text-lg font-bold text-tc-blue sm:text-xl xl:text-2xl">Mon parcours en alternance</h2>
                 </div>
-                <div className="py-2 font-bold">
+                <div className="py-2 mx-4 font-bold">
                     Tes 3 années de formation en alternance seront entièrement financées par ton entreprise ! Ton reste à charge sera donc de 0 euro.
                 </div>
-                <div className="py-2">
+                <div className="py-2 mx-4">
                     <span className="font-bold">
                     Tu seras en plus rémunéré(e) mensuellement pour ton travail et en fonction de ta situation
                     </span>
                 </div>
-                <div className="py-2">
+                <div className="py-2 mx-4">
                     Le choix du télé-présentiel, couplé au financement de ta formation par l'entreprise, te permettra donc d'entamer ta carrière sereinement, et sans aucune dettes !
                 </div>
                 <ExternalLink
@@ -145,12 +143,12 @@ export default function BlockJoin() {
                                 { displayPricing() }
                             </div>
                         </div>
-                        <div className="bg-opacity-25 border rounded md:w-1/2 bg-tc-blue">
+                        <div className="mx-4 bg-opacity-25 border rounded md:w-1/2 bg-tc-blue">
                             <div className="p-2 text-lg font-bold text-center text-white rounded-t bg-tc-blue">
                                 Découvre l&apos;alternance
                                 {/* dès la 3ème année */}
                             </div>
-                            <div className="p-4 text-sm sm:text-base">
+                            <div className="p-4 text-sm sm:text-base ">
                                 <p className="my-1">
                                     Chez Tera Campus, ta semaine type sera en moyenne de 4 jours en entreprise pour un en formation. Cela va te
                                     permettre d&apos;acquérir de nombreuses compétences et de mettre en application ton
