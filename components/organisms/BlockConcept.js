@@ -15,7 +15,7 @@ const Strong = ({ children }) => <strong className="font-bold text-tc-red">{chil
 const LittleTitle = ({ children }) => (
     <div className="flex flex-row items-center my-2">
         <div className="w-5 h-5 mr-4 transform rotate-45 bg-tc-red"></div>
-        <h2 className="text-lg font-bold text-tc-blue sm:text-xl xl:text-2xl">{children}</h2>
+        <h2 className="w-4/5 text-lg font-bold text-tc-blue sm:text-xl xl:text-2xl">{children}</h2>
     </div>
 )
 
