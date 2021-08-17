@@ -43,7 +43,7 @@ export default function Contact() {
               title="Contact"
               iconPicture={{ backgroundImage: "url('mobile-sms-blue.png')" }}
             />
-            <div className="flex flex-col mx-2 flex-nowrap md:flex-row-reverse md:justify-around md:items-center">
+            <div className="flex flex-col flex-nowrap md:flex-row-reverse md:justify-around md:items-center">
               <div className="flex flex-col w-full p-2 space-y-2 md:w-1/2">
                 <SocialNav />
                 <div className="flex flex-row items-start flex-nowrap">
@@ -73,7 +73,7 @@ export default function Contact() {
                   </div>
                 </div>
                 <form
-                  className="grid grid-cols-1 gap-6 place-content-center"
+                  className="grid grid-cols-1 mx-4 gap-y-6 place-content-center"
                   onSubmit={handleSubmit(onSubmit)}
                 >
                   <label className="block">
@@ -131,7 +131,7 @@ export default function Contact() {
                   <InputButton mutation={mutation} />
                 </form>
               </div>
-              <div className="md:w-1/2">
+              <div className="w-full md:w-1/2">
                 <Image
                   src="/happy-woman-phone.jpg"
                   alt="Femme utilisant un téléphone"
