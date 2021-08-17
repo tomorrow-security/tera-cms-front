@@ -19,7 +19,7 @@ export default function Hero() {
                         The future of learning
                 </div> */}
                 <div className="mt-24 font-semibold text-center">
-                    <p className="mb-6 text-xl sm:text-2xl md:text-2xl">École supérieure d&apos;informatique en télé-présentiel</p>
+                    <p className="mx-2 mb-6 text-xl sm:text-2xl md:text-2xl">École supérieure d&apos;informatique en télé-présentiel</p>
                     <Link href="/enrolment">
                         <a className="text-base font-bold uppercase align-text-top md:text-2xl animate-pulse">
                             <div className="box-border w-4/5 p-4 mx-auto mt-8 tracking-normal text-white transition-colors duration-700 rounded-full group 2xl:w-9/12 xl:mb-12 md:mt-0 lg:mt-20 xl:mt-10 2xl:mt-40 bg-tc-blue hover:bg-tc-red">
