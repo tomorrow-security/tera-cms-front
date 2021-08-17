@@ -24,7 +24,7 @@ function generateJSONLD(questions) {
 
 function Item({ question, answer }) {
   return (
-    <div>
+    <div className="mx-4">
       <p className="text-lg font-bold md:text-xl">{question}</p>
       <p className="mt-3 text-justify">{answer}</p>
     </div>
