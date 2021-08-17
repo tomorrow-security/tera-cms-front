@@ -34,7 +34,7 @@ export default function BlockConcept() {
                 <Cta />
             </div>
             <div className="flex flex-col lg:flex-row">
-                <ul className="mx-2 md:mx-0 md:pl-2 lg:w-2/3">
+                <ul className="mx-4 md:mx-0 md:pl-2 lg:w-2/3">
                     <li>
                         <LittleTitle>
                             Tera Campus c&apos;est quoi ?
