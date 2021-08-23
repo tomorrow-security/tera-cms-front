@@ -34,16 +34,6 @@ export async function getServerSideProps() {
   return {
     props: {
       agenda: [
-         {
-          date: '12/08/2021',
-          dateTimeDate: '2021-08-12',
-          timetable: '17h00',
-          dateTimeTimetable: '17:00',
-          title: "Qu'est ce que la 5G ?",
-          description: 'Thursday Tech Live',
-          platform: 'twitch',
-          url: 'https://www.twitch.tv/teracampus'
-        },
           {
           date: '26/08/2021',
           dateTimeDate: '2021-08-26',
@@ -51,6 +41,16 @@ export async function getServerSideProps() {
           dateTimeTimetable: '18:30',
           title: "Unity 2D : jeu de plate-forme, parallaxe et bien plus encore !",
           description: 'Thursday Tech Live',
+          platform: 'twitch',
+          url: 'https://www.twitch.tv/teracampus'
+        },
+        {
+          date: '27/08/2021',
+          dateTimeDate: '2021-08-27',
+          timetable: '16h00',
+          dateTimeTimetable: '16:00',
+          title: "Le recrutement",
+          description: 'Coaching alternance',
           platform: 'twitch',
           url: 'https://www.twitch.tv/teracampus'
         },
