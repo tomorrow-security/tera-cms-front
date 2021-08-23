@@ -94,29 +94,36 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                         { label: 'M.', value: 'M' },
                       ]}
                     />
-                    {/* <span className=" text-tc-red">{errors?.gender?.message}</span> */}
                 </div>
-                 {
-                    errors.gender ? (
-                      <div className="text-center text-tc-red">
-                        Tu dois cocher le case qui te correspond pour envoyer
-                      </div>
-                    ) : null
-                  }
+                {
+                  errors.gender ? (
+                    <div className="text-center text-tc-red">
+                      Tu dois cocher le case qui te correspond pour continuer ton inscription
+                    </div>
+                  ) : null
+                }
               </div>
-              <div className="flex items-center space-y-1 xl:w-45%">
+              <div className="space-y-1 xl:w-45%">
                 {/* // TODO importer la molecule Input à la place */}
                  {/* //* Input composant ne fonctionne pas : à revoir */}
-                <label htmlFor="email" className="w-30%">E-mail* :</label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  placeholder="thomas.anderson@tera-campus.com"
-                  className={`p-2 flex-1 border rounded mx-2 outline-none ${errors.email ? 'border-tc-red' : 'border-tc-blue'}`}
-                  {...register("email", { required: true })}
-                />
-                <span className="text-tc-red">{errors?.email?.message}</span>
+                <div className="flex items-center">
+                  <label htmlFor="email" className="w-30%">E-mail* :</label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="thomas.anderson@tera-campus.com"
+                    className={`p-2 flex-1 border rounded mx-2 outline-none ${errors.email ? 'border-tc-red' : 'border-tc-blue'}`}
+                    {...register("email", { required: true })}
+                  />
+                </div>
+                {
+                  errors.email ? (
+                    <div className="text-center text-tc-red">
+                      Tu dois donner ton email pour continuer ton inscription
+                    </div>
+                  ) : null
+                }
               </div>
             </div>
             <div className="xl:flex xl:justify-between xl:w-4/5 xl:flex-nowrap">
