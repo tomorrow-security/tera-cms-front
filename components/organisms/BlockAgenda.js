@@ -53,6 +53,7 @@ export default function BlockAgenda({ events }) {
           <div className="flex">
             <p className="w-max">Retouve tous&nbsp;</p>
             <div>
+              // TODO faire la page des live passés
               <PageLink
                 id="pastlive"
                 label="nos lives passés"
