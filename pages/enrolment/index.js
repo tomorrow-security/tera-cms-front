@@ -81,17 +81,28 @@ const EnrolmentForm = ({ status, onSubmit }) => {
         <div>
           <div className="space-y-1 xl:space-y-8 xl:flex xl:flex-col xl:items-center ">
             <div className="xl:flex xl:justify-between xl:w-4/5 xl:flex-nowrap">
-              <div className="flex items-center space-y-1 xl:w-45%">
-                <label htmlFor="gender" className="w-30%">Civilité* :</label>
-                <InputRadio
-                  name="gender"
-                  control={control}
-                  choices={[
-                    { label: 'Mme', value: 'F' },
-                    { label: 'M.', value: 'M' },
-                  ]}
-                />
-                <span className=" text-tc-red">{errors?.gender?.message}</span>
+              <div className="xl:w-45%">
+                <div className="flex items-center space-y-1">
+                  <div className="w-30%">
+                    <label htmlFor="gender" >Civilité* :</label>
+                  </div>
+                    <InputRadio
+                      name="gender"
+                      control={control}
+                      choices={[
+                        { label: 'Mme', value: 'F' },
+                        { label: 'M.', value: 'M' },
+                      ]}
+                    />
+                    {/* <span className=" text-tc-red">{errors?.gender?.message}</span> */}
+                </div>
+                 {
+                    errors.gender ? (
+                      <div className="text-center text-tc-red">
+                        Tu dois cocher le case qui te correspond pour envoyer
+                      </div>
+                    ) : null
+                  }
               </div>
               <div className="flex items-center space-y-1 xl:w-45%">
                 {/* // TODO importer la molecule Input à la place */}
