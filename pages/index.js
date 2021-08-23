@@ -49,10 +49,10 @@ export async function getServerSideProps() {
           dateTimeDate: '2021-08-27',
           timetable: '16h00',
           dateTimeTimetable: '16:00',
-          title: "Le recrutement",
-          description: 'Coaching alternance',
-          platform: 'twitch',
-          url: 'https://www.twitch.tv/teracampus'
+          title: "Comment optimiser son profil pour être recruté",
+          description: 'Summer coaching',
+          platform: 'linkedin',
+          url: 'https://www.linkedin.com/events/summercoaching-commentoptimiser6835531909062242304/'
         },
         // // {
         // //   date: '02/09/2021',
