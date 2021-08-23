@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import BlockTitle from '../components/atoms/BlockTitle'
 
 
 const pageTitle = "Bivouacs - Tera Campus"
@@ -17,6 +18,7 @@ export default function Enrolment() {
       </Head>
 
       <main>
+        <BlockTitle title="Evénements passés" iconPicture={{ backgroundImage: "url('calendrier-cloche.png')" }} />
         <div className="flex justify-center mt-24 text-xl font bold">Page en construction</div>
       </main>
     </>
