@@ -4,12 +4,14 @@ import IconFacebook from '../atoms/IconFacebook'
 import IconInstagram from '../atoms/IconInstagram'
 import IconLinkedin from '../atoms/IconLinkedin'
 import IconTwitch from '../atoms/IconTwitch'
+// TODO importer Incone Youtube quand fait
 
 const platformsLogosDict = {
-  'facebook': <IconFacebook />,
-  'instagram': <IconInstagram />,
-  'linkedin': <IconLinkedin />,
-  'twitch': <IconTwitch />,
+  'Facebook': <IconFacebook />,
+  'Instagram': <IconInstagram />,
+  'Linkedin': <IconLinkedin />,
+  'Twitch': <IconTwitch />,
+  // TODO ajouter Youtube
 }
 
 export default function EventLive({
@@ -20,8 +22,9 @@ export default function EventLive({
   dateTimeTimetable,
   timetable,
   description,
-  title,})
-{
+  title,
+}) {
+  
   return (
     <li className="flex flex-col items-center justify-center w-full my-2 md:flex-row md:justify-between lg:w-11/12 lg:border lg:border-tc-blue lg:rounded lg:shadow-lg">
       <div className="flex flex-row items-center w-full md:w-3/4">

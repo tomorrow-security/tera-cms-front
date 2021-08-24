@@ -1,3 +1,5 @@
+import axios from 'axios'
+
 import PageLink from '../atoms/PageLink'
 import SocialLink from '../atoms/SocialLink'
 import BlockTitle from '../atoms/BlockTitle'
@@ -7,7 +9,9 @@ import IconeYoutube from '../atoms/IconeYoutube'
 
 
 
-export default function BlockAgenda({ events }) {
+export default function BlockAgenda(data) {
+  const events = axios.get('/api/agenda', data)
+  console.log(data)
   /**
    * bolean of no event in the array
    */
@@ -16,14 +20,16 @@ export default function BlockAgenda({ events }) {
    * calendar cache if no event in the array
    */
   const invisible = notEvent ? 'hidden' : ''
+
 	return (
 		<section id="agenda" className="py-10 lg:py-20">
 			<div className="md:container md:mx-auto">
 				<BlockTitle title="Agenda" iconPicture={{ backgroundImage: "url('pop-corn.png')" }} />
 				<div className="lg:flex lg:flex-row lg:flex-nowrap lg:justify-around lg:items-center lg:text-xl">
 					<div className={`w-full lg:w-1/2 ${invisible}`}>
-						<ul className="flex flex-col justify-center mx-2 sm:justify-start lg:text-lg ">
-							{
+            <ul className="flex flex-col justify-center mx-2 sm:justify-start lg:text-lg ">
+              Test
+							{/* {
 								events.map((event, index) => (
 									<EventLive
 										key={index}
@@ -37,7 +43,7 @@ export default function BlockAgenda({ events }) {
 										title={event.title}
 									/>
                 ))
-              }
+              } */}
             </ul>
           </div>
           <div className="flex flex-col justify-center mt-8 space-y-10">
