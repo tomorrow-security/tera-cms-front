@@ -34,16 +34,6 @@ export async function getServerSideProps() {
   return {
     props: {
       agenda: [
-          {
-          date: '26/08/2021',
-          dateTimeDate: '2021-08-26',
-          timetable: '18h30',
-          dateTimeTimetable: '18:30',
-          title: "Unity 2D : jeu de plate-forme, parallaxe et bien plus encore !",
-          description: 'Thursday Tech Live',
-          platform: 'twitch',
-          url: 'https://www.twitch.tv/teracampus'
-        },
         {
           date: '27/08/2021',
           dateTimeDate: '2021-08-27',
@@ -54,16 +44,16 @@ export async function getServerSideProps() {
           platform: 'linkedin',
           url: 'https://www.linkedin.com/events/summercoaching-commentoptimiser6835531909062242304/'
         },
-        // // {
-        // //   date: '02/09/2021',
-        // //   dateTimeDate: '2021-09-02',
-        // //   timetable: '',
-        // //   dateTimeTimetable: '',
-        // //   title: '',
-        // //   description: 'Thursday Tech Live',
-        // //   platform: 'twitch',
-        // //   url: 'https://www.twitch.tv/teracampus'
-        // // },
+        // {
+        //   date: '03/09/2021',
+        //   dateTimeDate: '2021-09-03',
+        //   timetable: '16h00',
+        //   dateTimeTimetable: '16:00',
+        //   title: "Les astuces pour : valoriser l'alternance, vos softs skills et préparer votre entretien.",
+        //   description: 'Summer coaching part II',
+        //   platform: 'linkedin',
+        //   url: ''
+        // },
         {
           date: '09/09/2021',
           dateTimeDate: '2021-08-09',
@@ -74,16 +64,16 @@ export async function getServerSideProps() {
           platform: 'twitch',
           url: 'https://www.twitch.tv/teracampus'
         },
-        // {
-        //   date: '23/09/2021',
-        //   dateTimeDate: '2021-09-23',
-        //   timetable: '18h30',
-        //   dateTimeTimetable: '18:30',
-        //   title: "Unity 2D - Zelda-like",
-        //   description: 'Thursday Tech Live',
-        //   platform: 'twitch',
-        //   url: 'https://www.twitch.tv/teracampus'
-        // },
+        {
+          date: '23/09/2021',
+          dateTimeDate: '2021-09-23',
+          timetable: '18h30',
+          dateTimeTimetable: '18:30',
+          title: "Unity 2D - Zelda-like",
+          description: 'Thursday Tech Live',
+          platform: 'twitch',
+          url: 'https://www.twitch.tv/teracampus'
+        },
         //   date: '30/09/2021',
         //   dateTimeDate: '2021-09-30',
         //   timetable: '18h30',
