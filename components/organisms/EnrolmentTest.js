@@ -219,11 +219,11 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
 					Félicitations {applicant} !
 				</div>
 				<div className="text-center">
-					Tu as terminé ton test avec {test.score}% de réussite.
+					Vous avez terminé votre test avec {test.score}% de réussite.
 				</div>
 				<div className="mt-12 text-center">
-					Pour continuer ton inscription, tu dois nous transmettre un document
-					d'indentité ainsi que ton CV à jour :
+					Pour continuer votre inscription, vous devez nous transmettre un
+					document d'indentité ainsi que votre CV à jour :
 				</div>
 				<form
 					onSubmit={handleSubmit(onSubmit)}
