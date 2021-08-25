@@ -1,10 +1,10 @@
-import Head from 'next/head'
+import Head from "next/head";
 
-import PageLink from '../components/atoms/PageLink'
+import PageLink from "../components/atoms/PageLink";
 
-const pageTitle = "Brochure envoyée - Tera Campus"
-const pageDescription = "Confirmation d'envoie de la brochure"
-const pageUrl = 'https://tera-campus.com/brochuresent'
+const pageTitle = "Brochure envoyée - Tera Campus";
+const pageDescription = "Confirmation d'envoie de la brochure";
+const pageUrl = "https://tera-campus.com/brochuresent";
 
 export default function brochureSented() {
   return (
@@ -19,13 +19,17 @@ export default function brochureSented() {
 
       <main>
         <div className="flex flex-col items-center justify-center my-12 space-y-6 text-xl font bold">
-          <p className="mt-8 text-center">Tera Campus vous remercie d'avoir demandé la brochure.</p>
-          <p className="text-center">La brochure vous a été envoyé par email.</p>
+          <p className="mt-8 text-center">
+            Tera Campus vous remercie d'avoir demandé la brochure.
+          </p>
+          <p className="text-center">
+            La brochure vous a été envoyé par email.
+          </p>
           <div className="mx-auto w-max">
-            <PageLink id="" label="Retour à l'accueil"/>
+            <PageLink id="" label="Retour à l'accueil" />
           </div>
         </div>
       </main>
     </>
-  )
+  );
 }
