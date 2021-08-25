@@ -1,8 +1,8 @@
-import Head from 'next/head'
+import Head from "next/head";
 
-const pageTitle = "Alternance - Tera Campus"
-const pageDescription = "Les études en alternance"
-const pageUrl = 'https://tera-campus.com/alternation'
+const pageTitle = "Alternance - Tera Campus";
+const pageDescription = "Les études en alternance";
+const pageUrl = "https://tera-campus.com/alternation";
 
 export default function Alternation() {
   return (
@@ -16,8 +16,10 @@ export default function Alternation() {
       </Head>
 
       <main>
-        <div className="flex justify-center mt-24 text-xl font bold">Page en construction</div>
+        <div className="flex justify-center mt-24 text-xl font bold">
+          Page en construction
+        </div>
       </main>
     </>
-  )
+  );
 }
