@@ -87,103 +87,123 @@ const EnrolmentForm = ({ status, onSubmit }) => {
         <div>
           <div className="space-y-1 xl:space-y-8 xl:flex xl:flex-col xl:items-center ">
             <div className="xl:flex xl:justify-between xl:w-4/5 xl:flex-nowrap">
-              <div className="flex items-center space-y-1 xl:w-45%">
-                <label htmlFor="gender" className="w-30%">
-                  Civilité* :
-                </label>
-                <InputRadio
-                  name="gender"
-                  control={control}
-                  choices={[
-                    { label: "Mme", value: "F" },
-                    { label: "M.", value: "M" },
-                  ]}
-                />
-                <span className=" text-tc-red">{errors?.gender?.message}</span>
+              <div className="xl:w-45% space-y-1">
+                <div className="flex items-center">
+                  <div className="w-30%">
+                    <label htmlFor="gender" >Civilité* :</label>
+                  </div>
+                    <InputRadio
+                      name="gender"
+                      control={control}
+                      choices={[
+                        { label: 'Mme', value: 'F' },
+                        { label: 'M.', value: 'M' },
+                      ]}
+                    />
+                </div>
+                {
+                  errors.gender ? (
+                    <div className="text-center text-tc-red">
+                      Tu dois cocher la case qui te correspond pour continuer ton inscription
+                    </div>
+                  ) : null
+                }
               </div>
-              <div className="flex items-center space-y-1 xl:w-45%">
+              <div className="space-y-1 xl:w-45%">
                 {/* // TODO importer la molecule Input à la place */}
-                {/* //* Input composant ne fonctionne pas : à revoir */}
-                <label htmlFor="email" className="w-30%">
-                  E-mail* :
-                </label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  placeholder="thomas.anderson@tera-campus.com"
-                  className={`p-2 flex-1 border rounded mx-2 outline-none ${
-                    errors.email ? "border-tc-red" : "border-tc-blue"
-                  }`}
-                  {...register("email", { required: true })}
-                />
-                <span className="text-tc-red">{errors?.email?.message}</span>
-              </div>
-            </div>
-            <div className="xl:flex xl:justify-between xl:w-4/5 xl:flex-nowrap">
-              <div className="flex items-center space-y-1 xl:w-45%">
-                {/* // TODO importer la molecule Input à la place */}
-                <label htmlFor="lastName" className="w-30%">
-                  Nom* :
-                </label>
-                <input
-                  id="lastName"
-                  name="lastName"
-                  type="text"
-                  placeholder="Anderson"
-                  className={`mx-2 p-2 flex-1 border rounded outline-none ${
-                    errors.lastName ? "border-tc-red" : "border-tc-blue"
-                  }`}
-                  {...register("lastName", { required: true })}
-                />
-                <span className="text-tc-red">{errors?.lastName?.message}</span>
-              </div>
-              <div className="flex items-center space-y-1 xl:w-45%">
-                {/* // TODO importer la molecule Input à la place */}
-                <label htmlFor="firstName" className="w-30%">
-                  Prénom* :
-                </label>
-                <input
-                  id="firstName"
-                  name="firstName"
-                  type="text"
-                  placeholder="Thomas"
-                  className={`mx-2 p-2 flex-1 border rounded outline-none ${
-                    errors.firstName ? "border-tc-red" : "border-tc-blue"
-                  }`}
-                  {...register("firstName", { required: true })}
-                />
-                <span className="text-tc-red">
-                  {errors?.firstName?.message}
-                </span>
+                 {/* //* Input composant ne fonctionne pas : à revoir */}
+                <div className="flex items-center">
+                  <label htmlFor="email" className="w-30%">E-mail* :</label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="thomas.anderson@tera-campus.com"
+                    className={`p-2 flex-1 border rounded mx-2 outline-none ${errors.email ? 'border-tc-red' : 'border-tc-blue'}`}
+                    {...register("email", { required: true })}
+                  />
+                </div>
+                {
+                  errors.email ? (
+                    <div className="text-center text-tc-red">
+                      Tu dois donner ton email pour continuer ton inscription
+                    </div>
+                  ) : null
+                }
               </div>
             </div>
             <div className="xl:flex xl:justify-between xl:w-4/5 xl:flex-nowrap">
               <div className="space-y-1 xl:w-45%">
-                <div className="flex items-center ">
-                  <label htmlFor="phone" className="w-30%">
-                    Téléphone* :
-                  </label>
-                  {/* //TODO voir pour retirer le border intern au focus */}
-                  <PhoneInputWithCountry
-                    id="phone"
-                    name="phone"
-                    defaultCountry="FR"
-                    international
-                    withCountryCallingCode
-                    control={control}
-                    rules={{ required: true }}
-                    className={`mx-2 p-2 flex-1 border w-65% rounded outline-none ${
-                      errors.phone ? "border-tc-red" : "border-tc-blue"
-                    }`}
+                {/* // TODO importer la molecule Input à la place */}
+                <div className="flex items-center">
+                  <label htmlFor="lastName" className="w-30%">Nom* :</label>
+                  <input
+                    id="lastName"
+                    name="lastName"
+                    type="text"
+                    placeholder="Anderson"
+                    className={`mx-2 p-2 flex-1 border rounded outline-none ${errors.lastName ? 'border-tc-red' : 'border-tc-blue'}`}
+                    {...register("lastName", { required: true })}
                   />
-                  {/* {errors["phone-input"] && (
-                    <span className="text-tc-red">{errors?.phone?.message}</span>
-                  )} */}
                 </div>
+                {
+                  errors.lastName ? (
+                    <div className="text-center text-tc-red">
+                      Tu dois donner ton nom pour continuer ton inscription
+                    </div>
+                  ) : null
+                }
+              </div>
+              <div className="space-y-1 xl:w-45%">
+                {/* // TODO importer la molecule Input à la place */}
+                <div className="flex items-center">
+                  <label htmlFor="firstName" className="w-30%">Prénom* :</label>
+                  <input
+                    id="firstName"
+                    name="firstName"
+                    type="text"
+                    placeholder="Thomas"
+                    className={`mx-2 p-2 flex-1 border rounded outline-none ${errors.firstName ? 'border-tc-red' : 'border-tc-blue'}`}
+                    {...register("firstName", { required: true })}
+                  />
+                </div>
+                {
+                  errors.firstName ? (
+                    <div className="text-center text-tc-red">
+                      Tu dois donner ton prénom pour continuer ton inscription
+                    </div>
+                  ) : null
+                }
               </div>
             </div>
-            <label className="flex flex-col justify-center">
+            <div className="xl:flex xl:justify-between xl:w-4/5 xl:flex-nowrap">
+              <div className="space-y-1 xl:w-45%">
+                <div className="space-y-1">
+                 <div className="flex items-center">
+                    <label htmlFor="phone" className="w-30%">Téléphone* :</label>
+                    {/* //TODO voir pour retirer le border intern au focus */}
+                    <PhoneInputWithCountry
+                      id="phone"
+                      name="phone"
+                      defaultCountry="FR"
+                      international
+                      withCountryCallingCode
+                      control={control}
+                      rules={{ required: true }}
+                      className={`mx-2 p-2 flex-1 border w-65% rounded outline-none ${errors.phone ? 'border-tc-red' : 'border-tc-blue'}`}
+                      />
+                 </div>
+                    {
+                  errors.phone ? (
+                    <div className="text-center text-tc-red">
+                      Tu dois donner ton numéro de téléphone pour continuer ton inscription
+                    </div>
+                  ) : null
+                }
+                </div>
+              </div>
+          </div>
+            <label className="flex flex-col justify-center space-y-1">
               <div className="flex flex-row pt-8 mx-auto flex-nowrap w-max-full">
                 <input
                   id="consent"
@@ -209,12 +229,13 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                   </div>
                 </div>
               </div>
-              {errors.consent ? (
-                <span className="text-center text-tc-red">
-                  Tu dois accepter la politique de confidentialité pour
-                  continuer ton inscription.
-                </span>
-              ) : null}
+              {
+                errors.consent ? (
+                  <div className="text-center text-tc-red">
+                    Tu dois accepter la politique de confidentialité pour continuer ton inscription.
+                  </div>
+                ) : null
+              }
             </label>
           </div>
         </div>

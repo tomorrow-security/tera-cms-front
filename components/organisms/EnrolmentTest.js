@@ -35,7 +35,7 @@ const TestCreated = ({ applicant, test, uuid, setPageData }) => {
   return (
     <div className="space-y-8 text-center">
       <div className="space-y-2">
-        <p className="font-bold">{applicant}, merci pour ton inscription chez Tera Campus !</p>
+        <p className="font-bold"><span className="capitalize">{applicant}</span>, merci pour ton inscription chez Tera Campus !</p>
         <p>Dans quelques instants tu pourras démarrer ton test de positionnement.</p>
         <p>
           Ce test se présente sous la forme d’un QCM de {test.remainingQuestions} questions autour
