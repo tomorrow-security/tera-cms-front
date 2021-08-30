@@ -40,11 +40,10 @@ export async function getServerSideProps() {
 					dateTimeDate: "2021-09-03",
 					timetable: "16h00",
 					dateTimeTimetable: "16:00",
-					title:
-						"Les astuces pour : valoriser l'alternance, vos softs skills et préparer votre entretien.",
-					description: "Summer coaching part II",
+					title: "Comment préparer et réussir son entretien d'alternance ?",
+					description: "Summer coaching",
 					platform: "linkedin",
-					url: "",
+					url: "https://www.linkedin.com/events/summercoaching-commentpr-parere6838045096844238848/",
 				},
 				{
 					date: "09/09/2021",
