@@ -36,25 +36,15 @@ export async function getServerSideProps() {
 		props: {
 			agenda: [
 				{
-					date: "27/08/2021",
-					dateTimeDate: "2021-08-27",
+					date: "03/09/2021",
+					dateTimeDate: "2021-09-03",
 					timetable: "16h00",
 					dateTimeTimetable: "16:00",
-					title: "Comment optimiser son profil pour être recruté",
+					title: "Comment préparer et réussir son entretien d'alternance ?",
 					description: "Summer coaching",
 					platform: "linkedin",
-					url: "https://www.linkedin.com/events/summercoaching-commentoptimiser6835531909062242304/",
+					url: "https://www.linkedin.com/events/summercoaching-commentpr-parere6838045096844238848/",
 				},
-				// {
-				//   date: '03/09/2021',
-				//   dateTimeDate: '2021-09-03',
-				//   timetable: '16h00',
-				//   dateTimeTimetable: '16:00',
-				//   title: "Les astuces pour : valoriser l'alternance, vos softs skills et préparer votre entretien.",
-				//   description: 'Summer coaching part II',
-				//   platform: 'linkedin',
-				//   url: ''
-				// },
 				{
 					date: "09/09/2021",
 					dateTimeDate: "2021-08-09",
@@ -75,6 +65,7 @@ export async function getServerSideProps() {
 					platform: "twitch",
 					url: "https://www.twitch.tv/teracampus",
 				},
+				// {
 				//   date: '30/09/2021',
 				//   dateTimeDate: '2021-09-30',
 				//   timetable: '18h30',
