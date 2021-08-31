@@ -1,7 +1,8 @@
-import axios from 'axios'
+import axios from "axios"
 
 export default async (req, res) => {
-  const query = {boards (ids: ${process.env.MONDAY_PLANNING_LIVES_BOARD_ID}){
+	// const query = `boards(ids: ${process.env.MONDAY_PLANNING_LIVES_BOARD_ID}) {
+	const query = `boards(ids: 1606107159) {
     items(limit: 3){
       name
       id
@@ -9,17 +10,18 @@ export default async (req, res) => {
         id
         text
       }
-    }
-  }
-  }
+    }`
 
-  const response = await axios.get('https://api.monday.com/v2', JSON.stringify({'query' : query}), {
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization' : process.env.MONDAY_API_KEY
-    },
-  })
+	const response = await axios.get(
+		"https://api.monday.com/v2",
+		JSON.stringify({ query: query }),
+		{
+			headers: {
+				"Content-Type": "application/json",
+				Authorization: process.env.MONDAY_API_KEY,
+			},
+		}
+	)
 
-  res.status(response.status)
+	res.status(response.status)
 }
-
