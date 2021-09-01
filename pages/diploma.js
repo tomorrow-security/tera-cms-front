@@ -25,7 +25,8 @@ export default function Diploma() {
 							iconPicture={{ backgroundImage: "url('diploma-blue.png')" }}
 						/>
 						<div className="flex justify-center mt-24 text-xl font bold">
-							Page en construction
+							Page en construction, pas de lien vers cette page actuellement sur
+							le site.
 						</div>
 					</div>
 				</section>
