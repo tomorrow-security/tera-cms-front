@@ -79,7 +79,7 @@ export async function getServerSideProps() {
 			questions: [
 				{
 					name: "Qui peut rejoindre Tera Campus ?",
-					text: "Aucun pré-requis n'est nécessaire pour rejoindre Tera Campus. La formation s'adresse à des personnes motivées avant tout.",
+					text: "Aucun pré-requis n'est nécessaire pour rejoindre Tera Campus. Il faut un ordinateur et avoir accès à une connexion internet. La formation s'adresse à des personnes motivées avant tout.",
 				},
 				{
 					name: "Le diplôme est-il reconnu par l'état ?",
