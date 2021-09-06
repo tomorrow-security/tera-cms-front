@@ -36,16 +36,6 @@ export async function getServerSideProps() {
 		props: {
 			agenda: [
 				{
-					date: "03/09/2021",
-					dateTimeDate: "2021-09-03",
-					timetable: "16h00",
-					dateTimeTimetable: "16:00",
-					title: "Comment préparer et réussir son entretien d'alternance ?",
-					description: "Summer coaching",
-					platform: "linkedin",
-					url: "https://www.linkedin.com/events/summercoaching-commentpr-parere6838045096844238848/",
-				},
-				{
 					date: "09/09/2021",
 					dateTimeDate: "2021-08-09",
 					timetable: "18h00",
@@ -65,16 +55,16 @@ export async function getServerSideProps() {
 					platform: "twitch",
 					url: "https://www.twitch.tv/teracampus",
 				},
-				// {
-				//   date: '30/09/2021',
-				//   dateTimeDate: '2021-09-30',
-				//   timetable: '18h30',
-				//   dateTimeTimetable: '18:30',
-				//   title: "Motion Design - apprenez les effets spéciaux",
-				//   description: 'Thursday Tech Live',
-				//   platform: 'twitch',
-				//   url: 'https://www.twitch.tv/teracampus'
-				// },
+				{
+					date: "30/09/2021",
+					dateTimeDate: "2021-09-30",
+					timetable: "18h30",
+					dateTimeTimetable: "18:30",
+					title: "Motion Design - apprenez les effets spéciaux",
+					description: "Thursday Tech Live",
+					platform: "twitch",
+					url: "https://www.twitch.tv/teracampus",
+				},
 			],
 			questions: [
 				{
