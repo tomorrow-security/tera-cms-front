@@ -76,7 +76,7 @@ export default function BlockJoin() {
     //                     </h2>
     //                 </div>
     //                 <div className="py-2 font-bold">
-    //                     Ta première et ta deuxième année en formation initiale te coûteront 6000 € chacune.
+    //                     Ta première et ta deuxième année en formation initiale te coûteront 6500 € chacune.
     //                 </div>
     //                 <div className="py-2">
     //                     Les années suivantes, en alternance, te coûteront 0 € chacune.
