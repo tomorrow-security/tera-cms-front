@@ -29,7 +29,7 @@ const socialNetworks = [
 
 export default function SocialNav() {
   return (
-   <ul className="flex flex-row justify-center mt-8 flex-nowrap justify-items-center">
+   <ul className="flex flex-row justify-center m-2 flex-nowrap justify-items-center">
       {
         socialNetworks.map((socialNetwork) => (
           <li key={socialNetwork.label}>

@@ -142,8 +142,8 @@ export default function BlockProgramme () {
                     il est possible d&apos;en apprendre plus sur l&apos;écosystème technique européen&nbsp;
                     et nous privilégions les partenaires nationaux lorsque cela est possible.
                 </Paragraph>
-                    <div className="flex flex-wrap items-center justify-center justify-between mb-8 flex-nowrap">
-                        <CarouselPartners partners={<PartnersEuropean />} />
+                <div className="flex items-center justify-between mb-8 flex-nowrap">
+                        <CarouselPartners partners={<PartnersEuropean />}/>
                 </div>
                 <div>
                     <div className="flex flex-row items-center max-w-full my-4 md:my-8">

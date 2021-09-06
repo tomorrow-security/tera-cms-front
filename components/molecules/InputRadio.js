@@ -3,7 +3,7 @@ import { useController } from 'react-hook-form'
 
 const getBorder = (invalid, selected) => {
     if (invalid) return 'border border-tc-red'
-    if (selected) return 'border border-blue-500 bg-blue-50'
+    if (selected) return 'border border-tc-blue bg-tc-blue bg-opacity-25'
     return 'border border-black'
 }
 // TODO nouvelle version react-hook-form :  useController nouvelle écriture
