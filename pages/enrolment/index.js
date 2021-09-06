@@ -1,35 +1,41 @@
-import axios from 'axios'
-import Head from 'next/head'
-import { useRouter } from 'next/router'
-import React, { useEffect } from 'react'
-import { useForm } from 'react-hook-form'
-import { useMutation } from 'react-query'
-import 'react-phone-number-input/style.css'
-import PhoneInputWithCountry from 'react-phone-number-input/react-hook-form'
-// TODO faire la validation du numéro avec isPossiblePhoneNumber 
+import axios from "axios";
+import Head from "next/head";
+import { useRouter } from "next/router";
+import React, { useEffect } from "react";
+import { useForm } from "react-hook-form";
+import { useMutation } from "react-query";
+import "react-phone-number-input/style.css";
+import PhoneInputWithCountry from "react-phone-number-input/react-hook-form";
+// TODO faire la validation du numéro avec isPossiblePhoneNumber
 // import { isPossiblePhoneNumber } from 'react-phone-number-input'
 
-
-import BlockTitle from '../../components/atoms/BlockTitle'
-import InputRadio from '../../components/molecules/InputRadio'
+import BlockTitle from "../../components/atoms/BlockTitle";
+import InputRadio from "../../components/molecules/InputRadio";
 // import InputCheckRGPD from '../components/molecules/InputCheckRGPD'
 // import Input from '../components/molecules/Input'
-import PageLink from '../../components/atoms/PageLink'
+import PageLink from "../../components/atoms/PageLink";
 
 //TODO descendre un peu le submit en view desktop
 // TODO layout msg d'erreur des checkbox ()
 
-
 // TODO importer la molecule EnrolmentForm à la place
 const EnrolmentForm = ({ status, onSubmit }) => {
-  const {reset, register, handleSubmit, control, formState : { errors }} = useForm()
-  
-  useEffect(() => { reset() }, [])
+  const {
+    reset,
+    register,
+    handleSubmit,
+    control,
+    formState: { errors },
+  } = useForm();
+
+  useEffect(() => {
+    reset();
+  }, []);
 
   // TODO importer la molecule InputButton à la place
   const renderSubmitButton = () => {
     switch (status) {
-      case 'loading':
+      case "loading":
         return (
           <div className="w-auto pt-2 mx-auto group">
             <div className="relative z-0 px-4 font-bold text-transparent border border-t-0 rounded-t outline-none cursor-pointer w-max rounded-b-xl bg-tc-red-xlight border-tc-red-dark">
@@ -42,8 +48,8 @@ const EnrolmentForm = ({ status, onSubmit }) => {
               />
             </div>
           </div>
-        )
-      case 'success':
+        );
+      case "success":
         return (
           <div className="w-auto pt-2 mx-auto group">
             <div className="relative z-0 px-4 font-bold text-transparent border border-t-0 rounded-t outline-none cursor-pointer w-max rounded-b-xl bg-tc-blue-xlight border-tc-blue">
@@ -56,7 +62,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
               />
             </div>
           </div>
-        )
+        );
       default:
         return (
           <div className="w-auto pt-2 mx-auto group">
@@ -69,14 +75,14 @@ const EnrolmentForm = ({ status, onSubmit }) => {
               />
             </div>
           </div>
-        )
+        );
     }
-  }
-  
+  };
+
   // TODO style au focue du phoneInput border à enlever à l'intérieur
-  
+
   return (
-    <form className="w-full mx-2" onSubmit={(handleSubmit(onSubmit))}>
+    <form className="w-full mx-2" onSubmit={handleSubmit(onSubmit)}>
       <div>
         <div>
           <div className="space-y-1 xl:space-y-8 xl:flex xl:flex-col xl:items-center ">
@@ -200,7 +206,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
             <label className="flex flex-col justify-center space-y-1">
               <div className="flex flex-row pt-8 mx-auto flex-nowrap w-max-full">
                 <input
-                  id='consent'
+                  id="consent"
                   name="consent"
                   type="checkbox"
                   className="w-6 h-6 my-auto rounded border-tc-blue md:w-4 md:h-4 text-tc-blue focus:ring-offset-0"
@@ -209,10 +215,16 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                 <div>
                   <div className="box-border flex flex-row flex-wrap items-center max-w-full ml-2 text-xs sm:text-base">
                     {/* // TODO vérifier alignement des éléments */}
-                    <p className="border-b-2 border-transparent">J'ai lu et j'accepte la&nbsp;</p>
-                    <PageLink id="privacy" label="politique de confidentialité" />
                     <p className="border-b-2 border-transparent">
-                      &nbsp;et j'accepte d'être recontacté par Tera Campus pour finaliser mon inscription.
+                      J'ai lu et j'accepte la&nbsp;
+                    </p>
+                    <PageLink
+                      id="privacy"
+                      label="politique de confidentialité"
+                    />
+                    <p className="border-b-2 border-transparent">
+                      &nbsp;et j'accepte d'être recontacté par Tera Campus pour
+                      finaliser mon inscription.
                     </p>
                   </div>
                 </div>
@@ -225,32 +237,35 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                 ) : null
               }
             </label>
-          </div>  
+          </div>
         </div>
       </div>
       <div className="flex items-center justify-center my-4 xl:my-20">
         {renderSubmitButton()}
       </div>
     </form>
-  )
-}
+  );
+};
 
-const pageTitle = "Inscription - Tera Campus"
-const pageDescription = "Inscription"
-const pageUrl = 'https://tera-campus.com/enrolment'
-const apiUrl = process.env.NEXT_PUBLIC_ARPETTE_URL
+const pageTitle = "Inscription - Tera Campus";
+const pageDescription = "Inscription";
+const pageUrl = "https://tera-campus.com/enrolment";
+const apiUrl = process.env.NEXT_PUBLIC_ARPETTE_URL;
 
 export default function Enrolment() {
-  const router = useRouter()
-  
-  const mutation = useMutation(formData => {
-    axios
-      .post(`${apiUrl}/enrolment/create`, formData)
-      .then(({ data }) => router.push(`/enrolment/${data.enrolment}`))
-      .catch(error => console.log(error))
-  }, { retry: 3 })
+  const router = useRouter();
 
-  const onSubmit = formData => mutation.mutate(formData)
+  const mutation = useMutation(
+    (formData) => {
+      axios
+        .post(`${apiUrl}/enrolment/create`, formData)
+        .then(({ data }) => router.push(`/enrolment/${data.enrolment}`))
+        .catch((error) => console.log(error));
+    },
+    { retry: 3 }
+  );
+
+  const onSubmit = (formData) => mutation.mutate(formData);
 
   return (
     <>
@@ -267,7 +282,9 @@ export default function Enrolment() {
           <div className="flex flex-col justify-between flex-grow md:container md:mx-auto">
             <BlockTitle
               title="Inscription"
-              iconPicture={{ backgroundImage: "url('inscription-red-into-blue.png')" }}
+              iconPicture={{
+                backgroundImage: "url('inscription-red-into-blue.png')",
+              }}
             />
           </div>
           <div className="xl:my-12">
@@ -276,5 +293,5 @@ export default function Enrolment() {
         </section>
       </main>
     </>
-  )
+  );
 }
