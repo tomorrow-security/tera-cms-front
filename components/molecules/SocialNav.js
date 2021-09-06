@@ -3,6 +3,7 @@ import IconFacebook from '../atoms/IconFacebook'
 import IconInstagram from '../atoms/IconInstagram'
 import IconLinkedin from '../atoms/IconLinkedin'
 import IconTwitch from '../atoms/IconTwitch'
+import IconYoutube from '../atoms/IconeYoutube.js'
 
 const socialNetworks = [
   {
@@ -24,6 +25,11 @@ const socialNetworks = [
     label: 'twitch',
     url: 'https://www.twitch.tv/teracampus',
     logo: <IconTwitch />,
+  },
+  {
+    label: 'youtube',
+    url: 'https://www.youtube.com/channel/UCwP2ZwND8Ce4U0qpz03iSeg',
+    logo: <IconYoutube />,
   },
 ]
 
