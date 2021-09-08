@@ -69,37 +69,37 @@ const Step = ({ description, image, icon, stage }) => {
 export default function BlockJoin() {
 	// const [fullTraining, setfullTraining] = useState(true)
 
-	const displayPricing = () => {
-		//     if (fullTraining) {
-		//         return (
-		//             <>
-		//                 <div className="flex flex-row items-center my-2">
-		//                     <div className="w-5 h-5 mr-4 transform rotate-45 bg-tc-red"></div>
-		//                     <h2 className="text-lg font-bold text-tc-blue sm:text-xl xl:text-2xl">
-		//                         Mon parcours en initiale
-		//                     </h2>
-		//                 </div>
-		//                 <div className="py-2 font-bold">
-		//                     Ta première et ta deuxième année en formation initiale te coûteront 6000 € chacune.
-		//                 </div>
-		//                 <div className="py-2">
-		//                     Les années suivantes, en alternance, te coûteront 0 € chacune.
-		//                 </div>
-		//                 <div className="py-2">
-		//                     En effet, c&apos;est ton entreprise qui prendra en charge le coût de ces années.&nbsp;
-		//                     Tu seras en plus rémunéré(e) mensuellement !
-		//                 </div>
-		//                 <div className="py-2">
-		//                     Au final, le coût de tes études sera amorti grâce à la rémunération de ton alternance !
-		//                 </div>
-		//                  <ExternalLink
-		//                      title="Comment financer ma formation ?"
-		//                      url="https://www.moncompteformation.gouv.fr/espace-public/financer-sa-formation"
-		// aria="site gouvernemental du financement des formations"
-		// />
-		//              </>
-		//          )
-		//      }
+    const displayPricing = () => {
+    //     if (fullTraining) {
+    //         return (
+    //             <>
+    //                 <div className="flex flex-row items-center my-2">
+    //                     <div className="w-5 h-5 mr-4 transform rotate-45 bg-tc-red"></div>
+    //                     <h2 className="text-lg font-bold text-tc-blue sm:text-xl xl:text-2xl">
+    //                         Mon parcours en initiale
+    //                     </h2>
+    //                 </div>
+    //                 <div className="py-2 font-bold">
+    //                     Ta première et ta deuxième année en formation initiale te coûteront 6500 € chacune.
+    //                 </div>
+    //                 <div className="py-2">
+    //                     Les années suivantes, en alternance, te coûteront 0 € chacune.
+    //                 </div>
+    //                 <div className="py-2">
+    //                     En effet, c&apos;est ton entreprise qui prendra en charge le coût de ces années.&nbsp;
+    //                     Tu seras en plus rémunéré(e) mensuellement !
+    //                 </div>
+    //                 <div className="py-2">
+    //                     Au final, le coût de tes études sera amorti grâce à la rémunération de ton alternance !
+    //                 </div>
+    //                  <ExternalLink
+    //                      title="Comment financer ma formation ?"
+        //                      url="https://www.moncompteformation.gouv.fr/espace-public/financer-sa-formation"
+        // aria="site gouvernemental du financement des formations"
+        // />
+    //              </>
+    //          )
+    //      }
 
 		return (
 			<>
