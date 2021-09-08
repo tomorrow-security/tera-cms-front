@@ -18,8 +18,8 @@ export default function Hero() {
 					{/* <div className="text-base font-bold tracking-normal normal-case md:text-lg xl:text-2xl">
                         The future of learning
                 </div> */}
-					<div className="w-11/12 mt-24 font-semibold text-center">
-						<p className="mb-6 text-xl sm:text-2xl md:text-2xl">
+					<div className="mt-24 font-semibold text-center">
+						<p className="w-11/12 mx-auto mb-6 text-xl text-center sm:text-2xl md:text-2xl">
 							École supérieure d&apos;informatique en télé-présentiel
 						</p>
 						<Link href="/enrolment">
