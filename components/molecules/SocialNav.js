@@ -34,19 +34,17 @@ const socialNetworks = [
 ]
 
 export default function SocialNav() {
-  return (
-   <ul className="flex flex-row justify-center m-2 flex-nowrap justify-items-center">
-      {
-        socialNetworks.map((socialNetwork) => (
-          <li key={socialNetwork.label}>
-            <SocialLink
-                    name={socialNetwork.label}
-                    url={socialNetwork.url}
-                    logo={socialNetwork.logo}
-            />
-          </li>
-        ))
-      }
-   </ul>
-  )
+	return (
+		<ul className="flex flex-row justify-center m-2 flex-nowrap justify-items-center">
+			{socialNetworks.map((socialNetwork) => (
+				<li key={socialNetwork.label}>
+					<SocialLink
+						name={socialNetwork.label}
+						url={socialNetwork.url}
+						logo={socialNetwork.logo}
+					/>
+				</li>
+			))}
+		</ul>
+	)
 }

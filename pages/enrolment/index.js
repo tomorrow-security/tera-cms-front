@@ -15,6 +15,7 @@ import InputRadio from "../../components/molecules/InputRadio";
 // import Input from '../components/molecules/Input'
 import PageLink from "../../components/atoms/PageLink";
 
+
 //TODO descendre un peu le submit en view desktop
 // TODO layout msg d'erreur des checkbox ()
 
@@ -267,15 +268,15 @@ export default function Enrolment() {
 
   const onSubmit = (formData) => mutation.mutate(formData);
 
-  return (
-    <>
-      <Head>
-        <title>{pageTitle}</title>
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="description" content={pageDescription} />
-        <meta property="og:url" content={pageUrl} />
-        <meta property="og:description" content={pageDescription} />
-      </Head>
+	return (
+		<>
+			<Head>
+				<title>{pageTitle}</title>
+				<link rel="icon" href="/favicon.ico" />
+				<meta name="description" content={pageDescription} />
+				<meta property="og:url" content={pageUrl} />
+				<meta property="og:description" content={pageDescription} />
+			</Head>
 
       <main className="mx-2 md:container md:mx-auto">
         <section id="enrolment" className="py-10 md:py-20">
