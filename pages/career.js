@@ -1,24 +1,24 @@
-import Head from 'next/head'
-import BlockCareer from '../components/organisms/BlockCareer'
+import Head from "next/head"
+import BlockCareer from "../components/organisms/BlockCareer"
 
 const pageTitle = "Débouchés professionnels - Tera Campus"
 const pageDescription = "Débouchés professionnels"
-const pageUrl = 'https://tera-campus.com/career'
+const pageUrl = "https://tera-campus.com/career"
 
 export default function Legal() {
-  return (
-    <>
-      <Head>
-        <title>{pageTitle}</title>
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="description" content={pageDescription} />
-        <meta property="og:url" content={pageUrl} />
-        <meta property="og:description" content={pageDescription} />
-      </Head>
+	return (
+		<>
+			<Head>
+				<title>{pageTitle}</title>
+				<link rel="icon" href="/favicon.ico" />
+				<meta name="description" content={pageDescription} />
+				<meta property="og:url" content={pageUrl} />
+				<meta property="og:description" content={pageDescription} />
+			</Head>
 
-      <main>
-        <BlockCareer />
-      </main>
-    </>
-  )
+			<main>
+				<BlockCareer />
+			</main>
+		</>
+	)
 }
