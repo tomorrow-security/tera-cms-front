@@ -138,7 +138,7 @@ module.exports = {
 			fontSize: ["hover"],
 			fontStyle: ["hover", "focus"],
 			inset: ["group-hover", "hover"],
-			opacity: ["disabled"],
+			opacity: ["visited","disabled"],
 			padding: ["group-focus"],
 			scale: ["group-hover", "group-focus"],
 			textOpacity: ["disabled"],

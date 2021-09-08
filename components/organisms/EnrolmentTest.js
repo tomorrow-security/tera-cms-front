@@ -51,10 +51,11 @@ const TestCreated = ({ applicant, test, uuid, setPageData }) => {
 	)
 
 	return (
-		<div className="space-y-8 text-center">
+		<div className="mx-4 space-y-8 text-center">
 			<div className="space-y-2">
 				<p className="font-bold">
-					{applicant}, merci pour ton inscription chez Tera Campus !
+					<span className="capitalize">{applicant}</span>, merci pour ton
+					inscription chez Tera Campus !
 				</p>
 				<p>
 					Dans quelques instants tu pourras démarrer ton test de positionnement.
@@ -94,7 +95,7 @@ const TestCreated = ({ applicant, test, uuid, setPageData }) => {
 				<p>Bon courage et à très vite !</p>
 			</div>
 			<div className="w-auto pt-8 mx-auto group">
-				<div className="relative z-0 px-4 mx-auto font-bold text-transparent transition-colors duration-700 border rounded-t shadow outline-none cursor-pointer w-max rounded-b-xl bg-tc-blue-light border-tc-blue-dark group-hover:bg-tc-red-light group-hover:border-tc-red-dark group-hover:shadow-none">
+				<div className="relative z-0 px-4 mx-auto font-bold text-transparent transition-colors duration-700 bg-opacity-50 border rounded-t shadow outline-none cursor-pointer w-max rounded-b-xl bg-tc-blue border-tc-blue-dark group-hover:bg-tc-red group-hover:bg-opacity-50 group-hover:border-tc-red-dark group-hover:shadow-none">
 					Démarrer le test
 					<input
 						type="submit"
@@ -153,18 +154,19 @@ const TestOngoing = ({ applicant, test, uuid, setPageData }) => {
 		<>
 			<div className="flex flex-col max-w-full mx-auto space-y-4 w-max">
 				<div className="text-xl text-center uppercase">
-					Inscription de <span className="font-bold">{applicant}</span>
+					Inscription de 
+          <span className="font-bold">{applicant}</span>
 				</div>
-				<div className="text-xs text-right">Question : {test.progress}</div>
+				<div className="mr-4 text-xs text-right">Question : {test.progress}</div>
 				<div>
-					<div>
+					<div className="ml-4">
 						Domaine :{" "}
 						<span className="my-4 italic font-bold uppercase">
 							{test.question.domain}
 						</span>
 					</div>
-					<div className="font-semibold">{test.question.title}</div>
-					<div className="text-sm italic text-right">{typeChoice()}</div>
+					<div className="ml-4 font-semibold">{test.question.title}</div>
+					<div className="mr-4 text-sm italic text-right">{typeChoice()}</div>
 				</div>
 				{renderForm()}
 			</div>
@@ -179,6 +181,7 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
 		handleSubmit,
 		formState: { errors },
 	} = useForm()
+  
 	useEffect(() => {
 		reset()
 	}, [])
@@ -212,8 +215,8 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
 
 	return (
 		<>
-			<div className="flex flex-col items-stretch">
-				<div className="mt-12 mb-8 text-xl font-bold text-center">
+			<div className="flex flex-col items-stretch mx-4">
+				<div className="mt-12 mb-8 text-xl font-bold text-center capitalize">
 					Félicitations {applicant} !
 				</div>
 				<div className="text-center">
@@ -300,7 +303,7 @@ const SingleChoiceForm = ({ question, onSubmit }) => {
 		reset()
 	}, [])
 	return (
-		<form onSubmit={handleSubmit(onSubmit)}>
+		<form className="mx-4" onSubmit={handleSubmit(onSubmit)}>
 			<div className="space-y-2">
 				{question.choices.map((choice) => (
 					<div key={choice.body}>
@@ -333,7 +336,7 @@ const MultipleChoicesForm = ({ question, onSubmit }) => {
 		reset()
 	}, [])
 	return (
-		<form onSubmit={handleSubmit(onSubmit)}>
+		<form className="mx-4" onSubmit={handleSubmit(onSubmit)}>
 			<div className="space-y-2">
 				{question.choices.map((choice) => (
 					<div key={choice.body}>
