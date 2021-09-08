@@ -178,9 +178,12 @@ export default function Contact() {
 											Et tu peux aussi joindre Tera Campus à ce numéro :
 										</p>
 										<div className="flex justify-center">
-											<p className="py-2 mx-auto mb-2 text-sm text-center w-max md:text-lg hover:text-tc-red">
+											<a
+												href="tel:+33469960065"
+												className="py-2 mx-auto mb-2 text-sm text-center w-max md:text-lg hover:text-tc-red"
+											>
 												&#9742;04.69.96.00.65
-											</p>
+											</a>
 										</div>
 									</div>
 								</div>
