@@ -3,6 +3,7 @@ import IconFacebook from '../atoms/IconFacebook'
 import IconInstagram from '../atoms/IconInstagram'
 import IconLinkedin from '../atoms/IconLinkedin'
 import IconTwitch from '../atoms/IconTwitch'
+import IconYoutube from '../atoms/IconeYoutube.js'
 
 const socialNetworks = [
   {
@@ -25,22 +26,25 @@ const socialNetworks = [
     url: 'https://www.twitch.tv/teracampus',
     logo: <IconTwitch />,
   },
+  {
+    label: 'youtube',
+    url: 'https://www.youtube.com/channel/UCwP2ZwND8Ce4U0qpz03iSeg',
+    logo: <IconYoutube />,
+  },
 ]
 
 export default function SocialNav() {
-  return (
-   <ul className="flex flex-row justify-center m-2 flex-nowrap justify-items-center">
-      {
-        socialNetworks.map((socialNetwork) => (
-          <li key={socialNetwork.label}>
-            <SocialLink
-                    name={socialNetwork.label}
-                    url={socialNetwork.url}
-                    logo={socialNetwork.logo}
-            />
-          </li>
-        ))
-      }
-   </ul>
-  )
+	return (
+		<ul className="flex flex-row justify-center m-2 flex-nowrap justify-items-center">
+			{socialNetworks.map((socialNetwork) => (
+				<li key={socialNetwork.label}>
+					<SocialLink
+						name={socialNetwork.label}
+						url={socialNetwork.url}
+						logo={socialNetwork.logo}
+					/>
+				</li>
+			))}
+		</ul>
+	)
 }
