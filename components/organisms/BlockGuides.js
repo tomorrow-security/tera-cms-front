@@ -35,7 +35,7 @@ const Guide = ({ name, description, imageUrl, reverse }) => (
 				/>
 			</div>
 		</div>
-		<div className={` flex flex-col ${reverse ? "mr-8" : "ml-8"}  lg:w-2/3`}>
+		<div className={` flex flex-col ${reverse ? "mr-8" : "ml-8"} lg:w-2/3`}>
 			<div
 				className={`text-center ${
 					reverse ? "lg:text-right" : "lg:text-left"
@@ -58,7 +58,7 @@ export default function BlockGuides() {
 					title="Nos guides"
 					iconPicture={{ backgroundImage: "url('panneaux-direction.png')" }}
 				/>
-				<div className="mx-2 lg:px-8 lg:py-8 lg:divide-y-4 lg:divide-tc-blue lg:divide-double lg:w-6/7 lg:mx-auto">
+				<div className="mx-4 lg:px-8 lg:py-8 lg:divide-y-4 lg:divide-tc-blue lg:divide-double lg:w-6/7 lg:mx-auto">
 					{guides.map((guide, index) => (
 						<Guide
 							key={`guide-${index}`}

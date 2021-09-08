@@ -43,7 +43,7 @@ export default function Contact() {
 			</Head>
 
 			<main>
-				<section id="contact" className="py-10 md:py-20">
+				<section id="contact" className="pt-10 md:py-20">
 					<div className="md:container md:mx-auto">
 						<BlockTitle
 							title="Contact"
@@ -178,14 +178,17 @@ export default function Contact() {
 											Et tu peux aussi joindre Tera Campus à ce numéro :
 										</p>
 										<div className="flex justify-center">
-											<p className="py-2 mx-auto mb-2 text-sm text-center w-max md:text-lg hover:text-tc-red">
+											<a
+												href="tel:+33469960065"
+												className="py-2 mx-auto mb-2 text-sm text-center w-max md:text-lg hover:text-tc-red"
+											>
 												&#9742;04.69.96.00.65
-											</p>
+											</a>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div className="md:w-1/2">
+							<div className="h-auto md:w-1/2">
 								<Image
 									src="/happy-woman-phone.jpg"
 									alt="Femme utilisant un téléphone"

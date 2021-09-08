@@ -13,7 +13,9 @@ export default function Footer() {
 						</div>
 						<div>
 							<div className="text-xl">Tera Campus</div>
-							<div className="text-sm">&nbsp;04.69.96.00.65</div>
+							<a href="tel:+33469960065" className="text-sm">
+								04.69.96.00.65
+							</a>
 						</div>
 					</div>
 					<FooterNav />

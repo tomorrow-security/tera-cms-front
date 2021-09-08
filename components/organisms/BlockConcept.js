@@ -19,7 +19,7 @@ const Strong = ({ children }) => (
 const LittleTitle = ({ children }) => (
   <div className="flex flex-row items-center my-2">
     <div className="w-5 h-5 mr-4 transform rotate-45 bg-tc-red"></div>
-    <h2 className="text-lg font-bold text-tc-blue sm:text-xl xl:text-2xl">
+    <h2 className="w-3/4 text-lg font-bold text-tc-blue sm:text-xl xl:text-2xl">
       {children}
     </h2>
   </div>
@@ -40,7 +40,7 @@ export default function BlockConcept() {
           <Cta />
         </div>
         <div className="flex flex-col lg:flex-row">
-          <ul className="mx-2 md:mx-0 md:pl-2 lg:w-2/3">
+          <ul className="mx-4 md:mx-0 md:pl-2 lg:w-2/3">
             <li>
               <LittleTitle>Tera Campus c'est quoi ?</LittleTitle>
               <Paragraph gutterBottom>

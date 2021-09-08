@@ -83,7 +83,7 @@ export default function BlockCareer() {
 	return (
 		<section
 			id="career"
-			className="flex flex-col flex-grow pt-10 md:pt-20 md:pb-20 "
+			className="flex flex-col flex-grow pt-10 md:pt-20 md:pb-20"
 		>
 			<div className="flex flex-col justify-between flex-grow md:container md:mx-auto">
 				<BlockTitle
@@ -91,7 +91,7 @@ export default function BlockCareer() {
 					iconPicture={{ backgroundImage: "url('bulb.png')" }}
 				/>
 				<div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-					<div className="mx-2 space-y-3 md:mx-0 md:pl-2 md:space-y-6">
+					<div className="mx-4 space-y-3 md:mx-0 md:pl-2 md:space-y-6">
 						<form className="relative w-4/5 mx-auto mb-8 text-xl text-white transition-colors duration-700 rounded-t texte-center rounded-b-xl bg-tc-blue hover:bg-tc-red">
 							<select
 								className="w-full p-2 transition-colors duration-700 bg-transparent rounded-t appearance-none rounded-b-xl focus:outline-none hover:bg-tc-red"

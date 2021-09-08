@@ -107,7 +107,7 @@ export default function BlockProgramme() {
           title="Notre programme"
           iconPicture={{ backgroundImage: "url('programme.png')" }}
         />
-        <div className="mx-2">
+        <div className="mx-4">
           <div className="text-lg text-center">
             <Strong>
               Le programme Tera Campus s&apos;articule sur trois principaux axes

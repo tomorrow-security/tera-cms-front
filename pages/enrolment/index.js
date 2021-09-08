@@ -15,7 +15,6 @@ import InputRadio from "../../components/molecules/InputRadio";
 // import Input from '../components/molecules/Input'
 import PageLink from "../../components/atoms/PageLink";
 
-
 //TODO descendre un peu le submit en view desktop
 // TODO layout msg d'erreur des checkbox ()
 
@@ -87,7 +86,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
       <div>
         <div>
           <div className="space-y-1 xl:space-y-8 xl:flex xl:flex-col xl:items-center ">
-            <div className="xl:flex xl:justify-between xl:w-4/5 xl:flex-nowrap">
+            <div className="space-y-1 xl:flex xl:justify-between xl:w-4/5 xl:flex-nowrap">
               <div className="xl:w-45% space-y-1">
                 <div className="flex items-center">
                   <div className="w-30%">
@@ -278,21 +277,21 @@ export default function Enrolment() {
 				<meta property="og:description" content={pageDescription} />
 			</Head>
 
-      <main className="mx-2 md:container md:mx-auto">
-        <section id="enrolment" className="py-10 md:py-20">
-          <div className="flex flex-col justify-between flex-grow md:container md:mx-auto">
-            <BlockTitle
-              title="Inscription"
-              iconPicture={{
-                backgroundImage: "url('inscription-red-into-blue.png')",
-              }}
-            />
-          </div>
-          <div className="xl:my-12">
-            <EnrolmentForm status={mutation.status} onSubmit={onSubmit} />
-          </div>
-        </section>
-      </main>
-    </>
-  );
+			<main className="mx-2 md:container md:mx-auto">
+				<section id="enrolment" className="py-10 md:py-20">
+					<div className="flex flex-col justify-between flex-grow md:container md:mx-auto">
+						<BlockTitle
+							title="Inscription"
+							iconPicture={{
+								backgroundImage: "url('inscription-red-into-blue.png')",
+							}}
+						/>
+					</div>
+					<div className="xl:my-12">
+						<EnrolmentForm status={mutation.status} onSubmit={onSubmit} />
+					</div>
+				</section>
+			</main>
+		</>
+	)
 }

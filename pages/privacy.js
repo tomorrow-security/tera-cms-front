@@ -16,7 +16,7 @@ export default function Privacy() {
 			</Head>
 
 			<main>
-				<div className="py-10 mx-2 md:container md:mx-auto md:py-20">
+				<div className="py-10 mx-4 md:container md:mx-auto md:py-20">
 					<h1 className="mb-10 text-3xl font-bold text-center md:text-6xl">
 						Politique de confidentialité
 					</h1>

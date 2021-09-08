@@ -47,7 +47,7 @@ export default function BlockFaq({ questions }) {
 						title="Les réponses à tes questions"
 						iconPicture={{ backgroundImage: "url('faq.png')" }}
 					/>
-					<div className="grid grid-cols-1 gap-8 mx-2 lg:grid-cols-2">
+					<div className="grid grid-cols-1 gap-8 mx-4 lg:grid-cols-2">
 						{questions.map((item, index) => (
 							<Item key={index} question={item.name} answer={item.text} />
 						))}
