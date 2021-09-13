@@ -1,12 +1,9 @@
 import axios from "axios"
-import {
-  useEffect,
-  // useState
-} from "react"
+import { useEffect, useState } from "react"
 import { useForm } from "react-hook-form"
 import { useMutation } from "react-query"
 
-import InputButton from "../molecules/InputButton"
+import InputButton from "./../molecules/InputButton"
 
 const apiUrl = process.env.NEXT_PUBLIC_ARPETTE_URL
 
@@ -58,10 +55,11 @@ const TestCreated = ({ applicant, test, uuid, setPageData }) => {
   }
 
   return (
-    <div className="space-y-8 text-center">
+    <div className="mx-4 space-y-8 text-center">
       <div className="space-y-2">
         <p className="font-bold">
-          {applicant}, merci pour ton inscription chez Tera Campus !
+          <span className="capitalize">{applicant}</span>, merci pour ton
+          inscription chez Tera Campus !
         </p>
         <p>
           Dans quelques instants tu pourras démarrer ton test de positionnement.
@@ -173,18 +171,21 @@ const TestOngoing = ({ applicant, test, uuid, setPageData }) => {
     <>
       <div className="flex flex-col max-w-full mx-auto space-y-4 w-max">
         <div className="text-xl text-center uppercase">
-          Inscription de <span className="font-bold">{applicant}</span>
+          Inscription de
+          <span className="font-bold">{applicant}</span>
         </div>
-        <div className="text-xs text-right">Question : {test.progress}</div>
+        <div className="mr-4 text-xs text-right">
+          Question : {test.progress}
+        </div>
         <div>
-          <div>
+          <div className="ml-4">
             Domaine :{" "}
             <span className="my-4 italic font-bold uppercase">
               {test.question.domain}
             </span>
           </div>
-          <div className="font-semibold">{test.question.title}</div>
-          <div className="text-sm italic text-right">{typeChoice()}</div>
+          <div className="ml-4 font-semibold">{test.question.title}</div>
+          <div className="mr-4 text-sm italic text-right">{typeChoice()}</div>
         </div>
         {renderForm()}
       </div>
@@ -302,8 +303,8 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
 
   return (
     <>
-      <div className="flex flex-col items-stretch">
-        <div className="mt-12 mb-8 text-xl font-bold text-center">
+      <div className="flex flex-col items-stretch mx-4">
+        <div className="mt-12 mb-8 text-xl font-bold text-center capitalize">
           Félicitations {applicant} !
         </div>
         <div className="text-center">
@@ -382,5 +383,71 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
         </form>
       </div>
     </>
+  )
+}
+
+const SingleChoiceForm = ({ question, onSubmit }) => {
+  const { reset, register, handleSubmit } = useForm()
+  useEffect(() => {
+    reset()
+  }, [])
+  return (
+    <form className="mx-4" onSubmit={handleSubmit(onSubmit)}>
+      <div className="space-y-2">
+        {question.choices.map((choice) => (
+          <div key={choice.body}>
+            <input
+              type="radio"
+              id={`choice${choice.id}`}
+              className="mr-2"
+              name="choice"
+              value={choice.id}
+              {...register("choice", { required: true })}
+            />
+            <label htmlFor={`choice${choice.id}`}>{choice.body}</label>
+          </div>
+        ))}
+      </div>
+      <div className="flex justify-center">
+        <input
+          type="submit"
+          className="box-border px-2 mx-auto mt-8 font-semibold border rounded bg-tc-blue-xlight border-tc-blue-bright"
+          value="Valider ma réponse"
+        />
+      </div>
+    </form>
+  )
+}
+
+const MultipleChoicesForm = ({ question, onSubmit }) => {
+  const { reset, register, handleSubmit } = useForm()
+  useEffect(() => {
+    reset()
+  }, [])
+  return (
+    <form className="mx-4" onSubmit={handleSubmit(onSubmit)}>
+      <div className="space-y-2">
+        {question.choices.map((choice) => (
+          <div key={choice.body}>
+            <input
+              type="checkbox"
+              id={`choice${choice.id}`}
+              className="mr-2"
+              name="choice"
+              value={choice.id}
+              {...register("choice", { required: true })}
+            />
+            <label htmlFor={`choice${choice.id}`}>{choice.body}</label>
+          </div>
+        ))}
+      </div>
+      <div className="flex justify-center">
+        <input
+          type="submit"
+          className="box-border px-2 mx-auto mt-8 font-semibold border rounded bg-tc-blue-xlight border-tc-blue-bright"
+          value="Valider ma réponse"
+        />
+      </div>
+    </form>
   )
 }

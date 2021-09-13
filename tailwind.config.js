@@ -1,3 +1,5 @@
+const plugin = require("tailwindcss/plugin")
+
 module.exports = {
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   darkMode: false, // or 'media' or 'class'
@@ -87,6 +89,7 @@ module.exports = {
         "-20/100": "-20%",
         "-15/100": "-15%",
         "-10/100": "-10%",
+
       },
       keyframes: {
         wiggle: {
@@ -137,7 +140,7 @@ module.exports = {
       fontSize: ["hover"],
       fontStyle: ["hover", "focus"],
       inset: ["group-hover", "hover"],
-      opacity: ["disabled"],
+      opacity: ["visited", "disabled"],
       padding: ["group-focus"],
       scale: ["group-hover", "group-focus"],
       textOpacity: ["disabled"],
@@ -178,5 +181,5 @@ module.exports = {
       translate: ["group-hover", "active", "group-focus", "checked"],
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 }
