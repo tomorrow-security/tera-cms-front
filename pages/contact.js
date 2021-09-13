@@ -14,13 +14,6 @@ const pageTitle = "Contact - Tera Campus"
 const pageDescription = "Contacter Tera Campus"
 const pageUrl = "https://tera-campus.com/contact"
 
-//TODO layout space-y-top social-nav view mobile
-//TODO layout space-y-bottom social-nav view desktop
-//TODO curved - arrow animée view mobile
-//TODO curved - arrow animée view desktop
-//TODO desecendre un peu l'image view mobile
-//TODO nowrap RGPD en desktop
-
 export default function Contact() {
 	const {
 		register,
