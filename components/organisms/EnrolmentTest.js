@@ -50,6 +50,10 @@ const TestCreated = ({ applicant, test, uuid, setPageData }) => {
       .then(({ data }) => setPageData(data))
   )
 
+  const handleClick = () => {
+    mutation.mutate()
+  }
+
   return (
     <div className="mx-4 space-y-8 text-center">
       <div className="space-y-2">
@@ -94,16 +98,14 @@ const TestCreated = ({ applicant, test, uuid, setPageData }) => {
         </div>
         <p>Bon courage et à très vite !</p>
       </div>
-      <div className="w-auto pt-8 mx-auto group">
-        <div className="relative z-0 px-4 mx-auto font-bold text-transparent transition-colors duration-700 bg-opacity-50 border rounded-t shadow outline-none cursor-pointer w-max rounded-b-xl bg-tc-blue border-tc-blue-dark group-hover:bg-tc-red group-hover:bg-opacity-50 group-hover:border-tc-red-dark group-hover:shadow-none">
-          Démarrer le test
-          <input
-            type="submit"
-            value="Démarrer le test"
-            className="absolute left-0 z-20 px-4 mx-auto font-bold text-white transition-colors duration-700 transform rounded-t shadow outline-none cursor-pointer -top-15/100 w-max rounded-b-xl bg-tc-blue group-hover:bg-tc-red group-hover:shadow-none group-hover:-top-20/100 active:translate-y-20/100"
-            onClick={() => mutation.mutate()}
-          />
-        </div>
+      <div className="flex flex-row justify-center">
+        <InputButton
+          defaultValue="Démarrer de le test"
+          loadingValue="Test en cours de chargement ..."
+          successValue="Test chargé"
+          mutation={mutation}
+          onClick={handleClick}
+        />
       </div>
     </div>
   )
@@ -133,14 +135,29 @@ const TestOngoing = ({ applicant, test, uuid, setPageData }) => {
   const renderForm = () => {
     switch (test.question.kind) {
       case "SINGLE":
-        return <SingleChoiceForm question={test.question} onSubmit={onSubmit} />
+        return (
+          <SingleChoiceForm
+            question={test.question}
+            onSubmit={onSubmit}
+            mutation={mutation}
+          />
+        )
       case "MULTIPLE":
         return (
-          <MultipleChoicesForm question={test.question} onSubmit={onSubmit} />
+          <MultipleChoicesForm
+            question={test.question}
+            onSubmit={onSubmit}
+            mutation={mutation}
+          />
         )
     }
   }
 
+  /**
+   * Defines the type of questions
+   * @param {string} test.question.kind
+   * @returns {HTMLElement}
+   */
   const typeChoice = () => {
     switch (test.question.kind) {
       case "SINGLE":
@@ -173,6 +190,77 @@ const TestOngoing = ({ applicant, test, uuid, setPageData }) => {
         {renderForm()}
       </div>
     </>
+  )
+}
+
+const SingleChoiceForm = ({ question, onSubmit, mutation }) => {
+  const { reset, register, handleSubmit } = useForm()
+
+  useEffect(() => {
+    reset()
+  }, [])
+
+  return (
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <div className="space-y-2">
+        {question.choices.map((choice) => (
+          <div key={choice.body}>
+            <input
+              type="radio"
+              id={`choice${choice.id}`}
+              className="mr-2"
+              name="choice"
+              value={choice.id}
+              {...register("choice", { required: true })}
+            />
+            <label htmlFor={`choice${choice.id}`}>{choice.body}</label>
+          </div>
+        ))}
+      </div>
+      <div className="flex justify-center pt-4">
+        <InputButton
+          defaultValue="Valider ma réponse"
+          loadingValue="En cours d'envoi ..."
+          successValue="Réponse envoyée"
+          mutation={mutation}
+        />
+      </div>
+    </form>
+  )
+}
+
+const MultipleChoicesForm = ({ question, onSubmit, mutation }) => {
+  const { reset, register, handleSubmit } = useForm()
+  useEffect(() => {
+    reset()
+  }, [])
+
+  return (
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <div className="space-y-2">
+        {question.choices.map((choice) => (
+          <div key={choice.body}>
+            <input
+              type="checkbox"
+              id={`choice${choice.id}`}
+              className="mr-2"
+              name="choice"
+              value={choice.id}
+              {...register("choice", { required: true })}
+            />
+            <label htmlFor={`choice${choice.id}`}>{choice.body}</label>
+          </div>
+        ))}
+      </div>
+      <div className="flex justify-center pt-4">
+        <InputButton
+          defaultValue="Valider ma réponse"
+          loadingValue="En cours d'envoi ..."
+          successValue="Réponse envoyée"
+          mutation={mutation}
+        />
+      </div>
+    </form>
   )
 }
 
@@ -252,7 +340,8 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
                 id="document"
                 accept="application/pdf"
                 {...register("document", { required: true })}
-                // className="hidden"
+                // préféré la transparence pour une lecture de l'input par les robots
+                // //className="hidden"
                 // onChange={onChangeIdentity}
               />
             </div>
@@ -284,76 +373,15 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
             </div>
           </div>
           <div className="mt-12">
-            <InputButton mutation={mutation} />
+            <InputButton
+              defaultValue="Envoyer"
+              loadingValue="En cours d'envoi ..."
+              successValue="Envoyé"
+              mutation={mutation}
+            />
           </div>
         </form>
       </div>
     </>
-  )
-}
-
-const SingleChoiceForm = ({ question, onSubmit }) => {
-  const { reset, register, handleSubmit } = useForm()
-  useEffect(() => {
-    reset()
-  }, [])
-  return (
-    <form className="mx-4" onSubmit={handleSubmit(onSubmit)}>
-      <div className="space-y-2">
-        {question.choices.map((choice) => (
-          <div key={choice.body}>
-            <input
-              type="radio"
-              id={`choice${choice.id}`}
-              className="mr-2"
-              name="choice"
-              value={choice.id}
-              {...register("choice", { required: true })}
-            />
-            <label htmlFor={`choice${choice.id}`}>{choice.body}</label>
-          </div>
-        ))}
-      </div>
-      <div className="flex justify-center">
-        <input
-          type="submit"
-          className="box-border px-2 mx-auto mt-8 font-semibold border rounded bg-tc-blue-xlight border-tc-blue-bright"
-          value="Valider ma réponse"
-        />
-      </div>
-    </form>
-  )
-}
-
-const MultipleChoicesForm = ({ question, onSubmit }) => {
-  const { reset, register, handleSubmit } = useForm()
-  useEffect(() => {
-    reset()
-  }, [])
-  return (
-    <form className="mx-4" onSubmit={handleSubmit(onSubmit)}>
-      <div className="space-y-2">
-        {question.choices.map((choice) => (
-          <div key={choice.body}>
-            <input
-              type="checkbox"
-              id={`choice${choice.id}`}
-              className="mr-2"
-              name="choice"
-              value={choice.id}
-              {...register("choice", { required: true })}
-            />
-            <label htmlFor={`choice${choice.id}`}>{choice.body}</label>
-          </div>
-        ))}
-      </div>
-      <div className="flex justify-center">
-        <input
-          type="submit"
-          className="box-border px-2 mx-auto mt-8 font-semibold border rounded bg-tc-blue-xlight border-tc-blue-bright"
-          value="Valider ma réponse"
-        />
-      </div>
-    </form>
   )
 }
