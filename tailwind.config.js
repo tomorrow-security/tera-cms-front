@@ -14,6 +14,7 @@ module.exports = {
       auto: "auto",
       cover: "cover",
       contain: "contain",
+      hero: "190%",
       "big-cover": "200%",
     },
     boxShadow: {
@@ -89,7 +90,6 @@ module.exports = {
         "-20/100": "-20%",
         "-15/100": "-15%",
         "-10/100": "-10%",
-
       },
       keyframes: {
         wiggle: {
