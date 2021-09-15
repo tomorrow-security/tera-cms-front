@@ -154,7 +154,7 @@ const TestOngoing = ({ applicant, test, uuid, setPageData }) => {
     <>
       <div className="flex flex-col max-w-full mx-auto space-y-4 w-max">
         <div className="text-xl text-center uppercase">
-          Inscription de
+          Inscription de&nbsp;
           <span className="font-bold">{applicant}</span>
         </div>
         <div className="mr-4 text-xs text-right">
