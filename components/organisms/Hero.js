@@ -4,25 +4,21 @@ export default function Hero() {
     <section
       id="hero"
       style={{ backgroundImage: "url('montagne.jpg')" }}
-      className="relative w-full bg-center bg-no-repeat bg-hero"
+      className="relative w-full bg-top bg-no-repeat bg-big-cover md:bg-cover"
     >
-      <div className="absolute z-10 w-full h-full" />
-      <div className="relative z-20">
-        <div className="space-y-10 font-semibold text-center text-white pt-96 pb-96">
-          <p className="w-11/12 mx-auto mb-6 text-xl text-center sm:text-2xl md:text-2xl">
-            Tera Campus
-          </p>
-          <p className="w-11/12 mx-auto mb-6 text-xl text-center sm:text-2xl md:text-2xl">
-            École supérieure d&apos;informatique
-          </p>
-          <div className="space-y-4">
-            <p className="w-11/12 mx-auto mb-6 text-xl text-center sm:text-2xl md:text-2xl">
-              Une pédagogie innovante avec un cursus
-            </p>
-            <p className="w-11/12 mx-auto mb-6 text-xl text-center sm:text-2xl md:text-2xl">
-              100% télé-présentiel
-            </p>
-          </div>
+      <div className="pt-12 space-y-4 font-semibold text-center text-white pb-36">
+        <p className="mx-auto text-center max-content">Tera Campus</p>
+        <p className="mx-auto text-center max-content">
+          École supérieure d&apos;informatique
+        </p>
+        <div className="">
+          <span className="w-11/12 mx-autotext-center">
+            Une pédagogie innovante avec un cursus
+          </span>
+          <span className="md:hidden">&nbsp;</span>
+          <span className="w-11/12 mx-auto text-center">
+            100% télé-présentiel
+          </span>
         </div>
       </div>
     </section>
