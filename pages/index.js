@@ -38,16 +38,6 @@ export async function getServerSideProps() {
     props: {
       agenda: [
         {
-          date: "09/09/2021",
-          dateTimeDate: "2021-08-09",
-          timetable: "18h00",
-          dateTimeTimetable: "18:00",
-          title: "L'impact des données numériques",
-          description: "Thursday Tech Live",
-          platform: "twitch",
-          url: "https://www.twitch.tv/teracampus",
-        },
-        {
           date: "23/09/2021",
           dateTimeDate: "2021-09-23",
           timetable: "18h30",
