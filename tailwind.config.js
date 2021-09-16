@@ -14,7 +14,6 @@ module.exports = {
       auto: "auto",
       cover: "cover",
       contain: "contain",
-      hero: "190%",
       "big-cover": "200%",
     },
     boxShadow: {
