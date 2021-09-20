@@ -15,7 +15,9 @@ const pages2 = [
   { id: "#", label: "Les partenaires" },
   { id: "career", label: "Les carrières" },
 ]
-const pages3 = [{ id: "#", label: "C'est quoi l'alternance" }]
+const pages3 = [
+  { id: "blockreleasetraining", label: "C'est quoi l'alternance" },
+]
 const pages4 = [
   { id: "#", label: "CGV - Conditions Générales de Ventes" },
   { id: "#", label: "CGA - Conditions Générales d'Achats" },
