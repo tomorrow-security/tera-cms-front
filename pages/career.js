@@ -5,7 +5,7 @@ const pageTitle = "Débouchés professionnels - Tera Campus"
 const pageDescription = "Débouchés professionnels"
 const pageUrl = "https://tera-campus.com/career"
 
-export default function Legal() {
+export default function Career() {
 	return (
 		<>
 			<Head>
