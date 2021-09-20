@@ -65,16 +65,16 @@ export async function getServerSideProps() {
           platform: "twitch",
           url: "https://www.twitch.tv/teracampus",
         },
-        {
-          date: "28/10/2021",
-          dateTimeDate: "2021-10-28",
-          timetable: "",
-          dateTimeTimetable: "",
-          title: "Motion Design - ",
-          description: "Thursday Tech Live",
-          platform: "twitch",
-          url: "https://www.twitch.tv/teracampus",
-        },
+        // {
+        //   date: "28/10/2021",
+        //   dateTimeDate: "2021-10-28",
+        //   timetable: "",
+        //   dateTimeTimetable: "",
+        //   title: "Motion Design - ",
+        //   description: "Thursday Tech Live",
+        //   platform: "twitch",
+        //   url: "https://www.twitch.tv/teracampus",
+        // },
       ],
       questions: [
         {
