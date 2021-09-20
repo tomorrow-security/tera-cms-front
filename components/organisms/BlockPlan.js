@@ -1,5 +1,6 @@
 import BlockTitle from "../atoms/BlockTitle"
 import NavList from "../molecules/NavList"
+import PlanLink from "../atoms/PlanLink"
 
 const pages1 = [
   { id: "concept", label: "Tera campus c'est quoi ?" },
@@ -26,6 +27,12 @@ const pages4 = [
   { id: "#", label: "Règlement intérieur" },
   { id: "legacy", label: "Mentions légales" },
   { id: "#", label: "Règlement des études" },
+]
+
+const pages5 = [
+  { id: "#agenda", label: "agenda" },
+  { id: "enrolment", label: "admission" },
+  { id: "contact", label: "contact" },
 ]
 
 export default function BlockPlan({ id, label }) {
@@ -59,6 +66,15 @@ export default function BlockPlan({ id, label }) {
               pages={pages4}
             />
           </div>
+        </div>
+        <div className="md:flex md:justify-center">
+          <ul className="space-y-2 font-semibold uppercase md:space-y-0 md:flex md:w-max-content md:text-center md:space-x-24">
+            {pages5.map(({ id, label }) => (
+              <li key={`navmd-${id}`}>
+                <PlanLink id={id} label={label} />
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>
