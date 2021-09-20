@@ -171,7 +171,7 @@ const TestOngoing = ({ applicant, test, uuid, setPageData }) => {
     <>
       <div className="flex flex-col max-w-full mx-auto space-y-4 w-max">
         <div className="text-xl text-center uppercase">
-          Inscription de
+          Inscription de&nbsp;
           <span className="font-bold">{applicant}</span>
         </div>
         <div className="mr-4 text-xs text-right">
@@ -265,7 +265,13 @@ const MultipleChoicesForm = ({ question, onSubmit, mutation }) => {
 }
 
 const TestEnded = ({ applicant, test, uuid, setPageData }) => {
-  const { reset, register, handleSubmit } = useForm()
+  const {
+    reset,
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm()
+
   useEffect(() => {
     reset()
   }, [])
@@ -285,21 +291,17 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
     mutation.mutate(formData)
   }
 
-  // const uploaded = "1 document chargé"
+  const uploaded = "1 document chargé"
 
-  // const [resumeValue, setResumeValue] = useState("Ajouter mon CV")
-  // // const [inputResumeValue, setInputResumeValue] = useState()
-  // const onChangeResume = event => {
-  //   // setInputResumeValue(event.target.value);
-  //   setResumeValue(uploaded);
-  // };
+  const [resumeValue, setResumeValue] = useState("Ajouter mon CV")
+  const onChangeResume = (event) => {
+    setResumeValue(uploaded)
+  }
 
-  // const [identityValue, setIdentityValue] = useState("Ajouter mon identité")
-  // // const [inputIdentityValue, setInputIdentityValue] = useState()
-  // const onChangeIdentity = event => {
-  //   // setInputIdentityValue(event.target.value);
-  //   setIdentityValue(uploaded);
-  // };
+  const [identityValue, setIdentityValue] = useState("Ajouter mon identité")
+  const onChangeIdentity = (event) => {
+    setIdentityValue(uploaded)
+  }
 
   return (
     <>
@@ -323,53 +325,57 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
               <label htmlFor="document" className="cursor-pointer">
                 Document d'identité* :
               </label>
-              {/* <label htmlFor="document" className={`p-8 text-center rounded cursor-pointer  hover:bg-tc-blue-light  ${errors.resume ? 'border-tc-red bg-tc-red-xlight border-4' : 'border-tc-blue bg-tc-blue-xlight border'}`}>
-                <p id="document-trigger" className="font-bold">
+              {/* //TODO rendre l'errors fonctionnel */}
+              <div className="relative group">
+                <label
+                  htmlFor="document"
+                  // className="absolute p-4 border rounded cursor-pointer bg-tc-blue-xlight border-tc-blue group-hover:border-2"
+                  className={`absolute p-4 border rounded cursor-pointer group-hover:border-4 ${
+                    errors.document
+                      ? "border-tc-red bg-tc-red-xlight"
+                      : "border-tc-blue bg-tc-blue-xlight"
+                  }`}
+                >
                   {identityValue}
-                  Ajouter mon identité
-                </p>
-                <p>{ inputIdentityValue }</p>
-                <div className="text-xs italic">
-                  <p >Maximum 1 fichier de 2MB</p>
-                  <p>Format accepté : PDF</p>
-                </div>
-              </label> */}
-              <input
-                type="file"
-                name="document"
-                id="document"
-                accept="application/pdf"
-                {...register("document", { required: true })}
-                // préféré la transparence pour une lecture de l'input par les robots
-                // //className="hidden"
-                // onChange={onChangeIdentity}
-              />
+                </label>
+                <input
+                  type="file"
+                  name="document"
+                  id="document"
+                  accept="application/pdf"
+                  {...register("document", { required: true })}
+                  className="absolute opacity-0"
+                  onChange={onChangeIdentity}
+                />
+              </div>
             </div>
 
             <div className="flex flex-col justify-center w-3/4 my-8 space-y-2 md:w-2/3 lg:w-1/4 xl:w-1/5 2xl:w-2/12">
               <label htmlFor="resume" className="cursor-pointer">
                 CV* :
               </label>
-              {/* <label htmlFor="resume" className={`p-8 text-center rounded cursor-pointer  hover:bg-tc-blue-light  ${errors.resume ? 'border-tc-red bg-tc-red-xlight border-4' : 'border-tc-blue bg-tc-blue-xlight border'}`}>
-                <p className="font-bold">
+              <div className="relative group">
+                <label
+                  htmlFor="resume"
+                  // className="absolute p-4 border rounded cursor-pointer bg-tc-blue-xlight border-tc-blue group-hover:border-2"
+                  className={`absolute p-4 border rounded cursor-pointer group-hover:border-4 ${
+                    errors.resume
+                      ? "border-tc-red bg-tc-red-xlight"
+                      : "border-tc-blue bg-tc-blue-xlight"
+                  }`}
+                >
                   {resumeValue}
-                  Ajouter mon CV
-                </p>
-                <p>{ inputResumeValue }</p>
-                <div className="text-xs italic">
-                  <p>Maximum 1 fichier de 2MB</p>
-                  <p>Format accepté : PDF</p>
-                </div>
-              </label> */}
-              <input
-                type="file"
-                name="resume"
-                id="resume"
-                accept="application/pdf"
-                {...register("resume", { required: true })}
-                // className="hidden"
-                // onChange={onChangeResume}
-              />
+                </label>
+                <input
+                  type="file"
+                  name="resume"
+                  id="resume"
+                  accept="application/pdf"
+                  {...register("resume", { required: true })}
+                  className="absolute opacity-0"
+                  onChange={onChangeResume}
+                />
+              </div>
             </div>
           </div>
           <div className="mt-12">
