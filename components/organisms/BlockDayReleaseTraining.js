@@ -2,15 +2,14 @@ import BlockTitle from "../atoms/BlockTitle"
 
 export default function BlockDayReleaseTraining() {
   return (
-    <section id="DayReleaseTraining" className="py-10 md:py-20">
+    <section id="DayReleaseTraining" className="py-10 lg:py-20">
       <div className="md:container md:mx-auto">
         <BlockTitle
           title="L'alternance"
           iconPicture={{ backgroundImage: "url('alternance.png')" }}
         />
-
-        <section className="flex flex-col md:mx-6 lg:mx-12 md:flex-row md:justify-between md:items-center">
-          <div className="mx-4 md:mx-0 md:w-1/2 ">
+        <section className="md:flex md:mx-6 lg:mx-12 md:flex-row md:justify-between md:items-center">
+          <div className="mx-4 md:mx-0 md:mr-6 md:w-1/2">
             <h2 className="py-2 text-lg font-bold lg:text-xl 2xl:text-2xl">
               L'alternance chez <span className="uppercase">Tera Campus</span>
             </h2>
@@ -24,7 +23,7 @@ export default function BlockDayReleaseTraining() {
             </p>
           </div>
           <div
-            className="w-screen bg-center bg-no-repeat bg-cover h-33vh sm:h-50vh md:bg-contain md:bg-right md:w-1/2 md:h-80"
+            className="w-screen bg-center bg-no-repeat bg-cover h-33vh sm:h-50vh md:bg-contain md:bg-right md:w-1/2"
             style={{ backgroundImage: "url('groupe-ordi.jpg')" }}
           ></div>
         </section>
