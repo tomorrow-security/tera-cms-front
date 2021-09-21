@@ -90,7 +90,7 @@ export default function BlockConcept() {
             </li>
           </ul>
           <div
-            className="w-full h-64 bg-center bg-cover lg:w-1/2 lg:h-auto lg:hy-auto lg:mx-2"
+            className="w-full h-64 bg-center bg-cover lg:w-1/2 lg:h-auto lg:mx-2"
             style={{ backgroundImage: "url('students-collaboration.jpg')" }}
           ></div>
         </div>
