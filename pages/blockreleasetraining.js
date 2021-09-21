@@ -1,5 +1,5 @@
 import Head from "next/head"
-// import BlockCareer from "../components/organisms/BlockCareer"
+import BlockDayReleaseTraining from "../components/organisms/BlockDayReleaseTraining"
 
 const pageTitle = "L'alternance - Tera Campus"
 const pageDescription = "L'alternance"
@@ -16,7 +16,9 @@ export default function BlockReleaseTraining() {
         <meta property="og:description" content={pageDescription} />
       </Head>
 
-      <main>{/* <BlockCareer /> */}</main>
+      <main>
+        <BlockDayReleaseTraining />
+      </main>
     </>
   )
 }
