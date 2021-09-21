@@ -84,6 +84,9 @@ module.exports = {
         "tc-blue-dark": "#01000a",
         "tc-red-dark": "#c92b00",
       },
+      height: {
+        "33vh": "33vh",
+      },
       inset: {
         // TODO vérifier si tous les paramètres sont utilisés
         "12/25": "48%",
