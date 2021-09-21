@@ -1,6 +1,6 @@
-import Cta from "../atoms/Cta";
-import IconCurvedArrow from "../atoms/IconCurvedArrow";
-import PageLink from "../atoms/PageLink";
+import Cta from "../atoms/Cta"
+import IconCurvedArrow from "../atoms/IconCurvedArrow"
+import PageLink from "../atoms/PageLink"
 
 const Paragraph = ({ bold, gutterBottom, children }) => (
   <p
@@ -10,11 +10,11 @@ const Paragraph = ({ bold, gutterBottom, children }) => (
   >
     {children}
   </p>
-);
+)
 
 const Strong = ({ children }) => (
   <strong className="font-bold text-tc-red">{children}</strong>
-);
+)
 
 const LittleTitle = ({ children }) => (
   <div className="flex flex-row items-center my-2">
@@ -23,7 +23,7 @@ const LittleTitle = ({ children }) => (
       {children}
     </h2>
   </div>
-);
+)
 
 export default function BlockConcept() {
   return (
@@ -90,7 +90,7 @@ export default function BlockConcept() {
             </li>
           </ul>
           <div
-            className="w-full h-64 bg-center bg-cover lg:w-1/2 lg:h-auto lg:hy-auto lg:mx-2"
+            className="w-full h-64 bg-center bg-cover lg:w-1/2 lg:h-auto lg:mx-2"
             style={{ backgroundImage: "url('students-collaboration.jpg')" }}
           ></div>
         </div>
@@ -99,5 +99,5 @@ export default function BlockConcept() {
         </div>
       </div>
     </section>
-  );
+  )
 }
