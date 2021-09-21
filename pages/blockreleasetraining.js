@@ -1,5 +1,7 @@
 import Head from "next/head"
 import BlockDayReleaseTraining from "../components/organisms/BlockDayReleaseTraining"
+import BlockReleaseTrainingDef from "../components/organisms/BlockTrainingReleaseDef"
+import BlockTrainingReleseFunding from "../components/organisms/BlockTrainingReleseFunding"
 
 const pageTitle = "L'alternance - Tera Campus"
 const pageDescription = "L'alternance"
@@ -18,6 +20,8 @@ export default function BlockReleaseTraining() {
 
       <main>
         <BlockDayReleaseTraining />
+        <BlockReleaseTrainingDef />
+        <BlockTrainingReleseFunding />
       </main>
     </>
   )
