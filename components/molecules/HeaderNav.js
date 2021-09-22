@@ -21,13 +21,13 @@ const pages3 = [
 ]
 
 const pages5 = [
-  { id: "#agenda", label: "agenda" },
-  { id: "enrolment", label: "admission" },
-  { id: "contact", label: "contact" },
+  { id: "#agenda", label: "Agenda" },
+  { id: "enrolment", label: "Admission" },
+  { id: "contact", label: "Contact" },
 ]
 export default function HeaderNav({ click, id, label }) {
   return (
-    <nav className="pr-2 text-lg text-center lg:text-base xl:text-lg lg:flex lg:justify-between ">
+    <nav className="text-center lg:flex lg:justify-between ">
       <ul className="space-y-2 lg:mx-4 lg:space-y-0 lg:space-x-4 lg:flex lg:justify-center">
         <li onClick={click} className="mx-auto text-center w-max">
           <HeaderSubNav
@@ -53,12 +53,8 @@ export default function HeaderNav({ click, id, label }) {
             pages={pages3}
           />
         </li>
-        {pages5.map(({ id, label, click }) => (
-          <li
-            key={`navmd-${id}`}
-            onClick={click}
-            className="mx-auto text-center capitalize w-max"
-          >
+        {pages5.map(({ id, label }) => (
+          <li key={`navmd-${id}`} className="mx-auto text-center w-max">
             <PageLink id={id} label={label} />
           </li>
         ))}
