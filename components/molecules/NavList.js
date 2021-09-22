@@ -1,4 +1,4 @@
-import PlanLink from "../atoms/PlanLink"
+import SubLink from "../atoms/SubLink"
 
 export default function NavList({ pages, title }) {
   return (
@@ -7,7 +7,7 @@ export default function NavList({ pages, title }) {
       <ul className="space-y-2">
         {pages.map(({ id, label }) => (
           <li key={`navmd-${id}`}>
-            <PlanLink id={id} label={label} />
+            <SubLink id={id} label={label} />
           </li>
         ))}
       </ul>
