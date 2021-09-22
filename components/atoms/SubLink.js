@@ -2,7 +2,7 @@ import React from "react"
 import Link from "next/link"
 import { useRouter } from "next/router"
 
-export default function PlanLink({ id, label }) {
+export default function SubLink({ id, label }) {
   const router = useRouter()
   /**
    * formatting the id for use in url route
