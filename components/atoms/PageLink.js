@@ -12,7 +12,7 @@ export default function PageLink({ id, label }) {
 
   return (
     <Link href={href}>
-      <a className="flex items-center justify-center rounded hover:bg-tc-red hover:bg-opacity-50 ">
+      <a className="px-2 rounded  hover:bg-tc-red hover:bg-opacity-50">
         <div className="cursor-pointer">{label}</div>
       </a>
     </Link>

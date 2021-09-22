@@ -57,7 +57,7 @@ export default function HeaderNav({ click, id, label }) {
           <li
             key={`navmd-${id}`}
             onClick={click}
-            className="mx-auto text-center w-max"
+            className="flex items-center mx-auto text-center w-max"
           >
             <PageLink id={id} label={label} />
           </li>
