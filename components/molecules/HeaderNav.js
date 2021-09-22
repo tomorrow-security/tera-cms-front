@@ -29,7 +29,7 @@ export default function HeaderNav({ click, id, label }) {
   return (
     <nav className="text-center lg:flex lg:justify-between ">
       <ul className="space-y-2 lg:mx-4 lg:space-y-0 lg:space-x-4 lg:flex lg:justify-center">
-        <li onClick={click} className="mx-auto text-center w-max">
+        <li className="mx-auto text-center w-max">
           <HeaderSubNav
             id={id}
             label={label}
@@ -37,7 +37,7 @@ export default function HeaderNav({ click, id, label }) {
             pages={pages1}
           />
         </li>
-        <li onClick={click} className="mx-auto text-center w-max">
+        <li className="mx-auto text-center w-max">
           <HeaderSubNav
             id={id}
             label={label}
@@ -45,7 +45,7 @@ export default function HeaderNav({ click, id, label }) {
             pages={pages2}
           />
         </li>
-        <li onClick={click} className="mx-auto text-center w-max">
+        <li className="mx-auto text-center w-max">
           <HeaderSubNav
             id={id}
             label={label}
@@ -54,7 +54,11 @@ export default function HeaderNav({ click, id, label }) {
           />
         </li>
         {pages5.map(({ id, label }) => (
-          <li key={`navmd-${id}`} className="mx-auto text-center w-max">
+          <li
+            key={`navmd-${id}`}
+            onClick={click}
+            className="mx-auto text-center w-max"
+          >
             <PageLink id={id} label={label} />
           </li>
         ))}
