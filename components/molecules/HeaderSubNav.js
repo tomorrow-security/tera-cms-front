@@ -6,7 +6,12 @@ export default function HeaderSubNav({ click, pages, title }) {
   return (
     <nav className="relative cursor-pointer">
       <h3
+        //TODO fermer le sous-menu quand le focus est perdu :
+        //* fonctionne mais ne se ferme qu'en recliquant dessus
         onClick={() => setIsOpen(!isOpen)}
+        //! ne fonctionne pas
+        onFocus={() => setIsOpen(true)}
+        onBlur={() => setIsOpen(false)}
         className="px-2 rounded hover:bg-tc-red hover:bg-opacity-50"
       >
         {title}
