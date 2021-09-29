@@ -12,7 +12,7 @@ export default function Header() {
   return (
     <header className="py-2 text-white border-b-2 bg-tc-blue border-tc-red">
       <div className="md:container md:mx-auto">
-        <div className="flex flex-col items-center justify-between lg:flex-row">
+        <div className="flex flex-col lg:flex-row lg:justify-between">
           <div className="flex items-center justify-between w-full lg:w-max">
             <Link href="/">
               <a className="flex items-center pl-2">
