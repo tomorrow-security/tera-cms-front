@@ -29,7 +29,7 @@ const headernav = [
 ]
 export default function HeaderNav({ click, id, label }) {
   return (
-    <nav className="lg:flex lg:justify-between ">
+    <nav className="lg:flex lg:justify-between">
       <ul className="space-y-2 lg:mx-4 lg:space-y-0 lg:space-x-4 lg:flex lg:justify-center">
         <li className="w-32 lg:text-center lg:mx-auto lg:w-max">
           <HeaderSubNav
