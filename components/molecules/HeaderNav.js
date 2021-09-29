@@ -29,9 +29,9 @@ const headernav = [
 ]
 export default function HeaderNav({ click, id, label }) {
   return (
-    <nav className="text-center lg:flex lg:justify-between ">
+    <nav className="lg:flex lg:justify-between ">
       <ul className="space-y-2 lg:mx-4 lg:space-y-0 lg:space-x-4 lg:flex lg:justify-center">
-        <li className="mx-auto text-center w-max">
+        <li className="w-32 lg:text-center lg:mx-auto lg:w-max">
           <HeaderSubNav
             id={id}
             label={label}
@@ -39,7 +39,7 @@ export default function HeaderNav({ click, id, label }) {
             pages={ecole}
           />
         </li>
-        <li className="mx-auto text-center w-max">
+        <li className="w-28 lg:text-center lg:mx-auto lg:w-max">
           <HeaderSubNav
             id={id}
             label={label}
@@ -47,7 +47,7 @@ export default function HeaderNav({ click, id, label }) {
             pages={program}
           />
         </li>
-        <li className="mx-auto text-center w-max">
+        <li className="w-32 lg:text-center lg:mx-auto lg:w-max">
           <HeaderSubNav
             id={id}
             label={label}
@@ -59,7 +59,7 @@ export default function HeaderNav({ click, id, label }) {
           <li
             key={`${id}`}
             onClick={click}
-            className="flex items-center mx-auto text-center w-max"
+            className="flex text-center lg:items-center lg:mx-auto lg:w-max"
           >
             <PageLink id={id} label={label} />
           </li>
