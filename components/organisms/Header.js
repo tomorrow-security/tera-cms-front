@@ -32,7 +32,7 @@ export default function Header() {
               {isOpen ? <IconX /> : <IconMenu />}
             </div>
           </div>
-          <div className="flex flex-col ml-1 lg:items-center lg:flex-grow lg:ml-0 lg:justify-between lg:flex-row lg:mx-10">
+          <div className="flex flex-col ml-1 lg:items-center lg:flex-grow lg:justify-between lg:flex-row lg:mx-10">
             <div className={`${!isOpen && "hidden"} lg:block`}>
               <HeaderNav click={() => setIsOpen(false)} />
             </div>
