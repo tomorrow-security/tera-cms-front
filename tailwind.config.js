@@ -84,6 +84,14 @@ module.exports = {
         "tc-blue-dark": "#01000a",
         "tc-red-dark": "#c92b00",
       },
+      gridRowStart: {
+        8: "8",
+        9: "9",
+        10: "10",
+        11: "11",
+        12: "12",
+        13: "13",
+      },
       height: {
         "33vh": "33vh",
       },
