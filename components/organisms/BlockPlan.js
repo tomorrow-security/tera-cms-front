@@ -1,6 +1,7 @@
 import BlockTitle from "../atoms/BlockTitle"
 import NavList from "../molecules/NavList"
-import SubLink from "../atoms/SubLink"
+import PlanLink from "../atoms/PlanLink"
+import SocialNav from "../molecules/SocialNav"
 
 const ecole = [
   { id: "concept", label: "Tera campus c'est quoi ?" },
@@ -38,7 +39,7 @@ const autre = [
 
 export default function BlockPlan({ id, label }) {
   return (
-    <section id="plan" className="px-4 pt-4 md:py-10 lg:py-20">
+    <section id="plan" className="px-4 pt-4 md:pt-10 md:pb-5">
       <div className="md:container md:mx-auto">
         <BlockTitle
           title="Plan du site"
@@ -79,7 +80,7 @@ export default function BlockPlan({ id, label }) {
               />
             </div>
           </div>
-          <div className="md:bottom-6 md:absolute md:mx-auto md:w-1/2 md:inset-x-0">
+          <div className="md:bottom-6 lg:bottom-2 md:absolute md:mx-auto md:w-1/2 md:inset-x-0">
             <ul className="space-y-2 font-semibold uppercase md:space-y-0 md:flex md:w-max-content md:text-center md:justify-evenly">
               {autre.map(({ id, label }) => (
                 <li key={`${id}`}>
@@ -87,6 +88,14 @@ export default function BlockPlan({ id, label }) {
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+        <div className="mt-12 lg:mt-20 md:flex md:justify-between md:items-center">
+          <p className="px-4 mx-auto my-4 text-lg border rounded md:mx-0 border-tc-red text-tc-red">
+            Suivez-nous
+          </p>
+          <div className="flex-grow">
+            <SocialNav />
           </div>
         </div>
       </div>

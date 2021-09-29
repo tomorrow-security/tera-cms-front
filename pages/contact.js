@@ -25,15 +25,16 @@ export default function Contact() {
 	})
 	const onSubmit = (formData) => mutation.mutate(formData)
 
-	return (
-		<>
-			<Head>
-				<title>{pageTitle}</title>
-				<link rel="icon" href="/favicon.ico" />
-				<meta name="description" content={pageDescription} />
-				<meta property="og:url" content={pageUrl} />
-				<meta property="og:description" content={pageDescription} />
-			</Head>
+  //TODO revoir le layout md
+  return (
+    <>
+      <Head>
+        <title>{pageTitle}</title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content={pageDescription} />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:description" content={pageDescription} />
+      </Head>
 
 			<main>
 				<section id="contact" className="pt-10 md:py-20">
