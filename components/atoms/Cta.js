@@ -1,16 +1,14 @@
 import Link from "next/link"
 
+//TODO design à refaire
 export default function Cta() {
-	return (
-		<div className="flex justify-center">
-			<Link href="/enrolment">
-				<a className="max-w-3xl mx-auto my-4 transition-colors duration-700 rounded-t group bg-tc-blue hover:bg-tc-red rounded-b-xl">
-					{/* // TODO retirer le bg-shine au hover : 'group-hover:bg-none' ne fonctionne pas */}
-					<p className="p-2 text-xl font-bold text-center text-white bg-shine bg-clip-border animate-shine group-hover:animate-none bg-big-cover sm:px-6">
-						Candidature
-					</p>
-				</a>
-			</Link>
-		</div>
-	)
+  return (
+    <>
+      <Link href="/enrolment" className="flex justify-center">
+        <a className="px-4 text-lg font-bold text-center transition-colors duration-700 bg-white rounded w-max p-y-1 text-tc-blue hover:bg-tc-red">
+          Admission
+        </a>
+      </Link>
+    </>
+  )
 }

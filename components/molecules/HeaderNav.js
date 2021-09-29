@@ -24,14 +24,13 @@ const alternance = [
 
 const headernav = [
   { id: "#agenda", label: "Agenda" },
-  { id: "enrolment", label: "Admission" },
   { id: "contact", label: "Contact" },
 ]
 export default function HeaderNav({ click, id, label }) {
   return (
     <nav className="lg:flex lg:justify-between">
       <ul className="space-y-2 lg:mx-4 lg:space-y-0 lg:space-x-4 lg:flex lg:justify-center">
-        <li className="w-32 lg:text-center lg:mx-auto lg:w-max">
+        <li className="w-28 lg:text-center lg:mx-auto lg:w-max">
           <HeaderSubNav
             id={id}
             label={label}
@@ -47,7 +46,7 @@ export default function HeaderNav({ click, id, label }) {
             pages={program}
           />
         </li>
-        <li className="w-32 lg:text-center lg:mx-auto lg:w-max">
+        <li className="w-28 lg:text-center lg:mx-auto lg:w-max">
           <HeaderSubNav
             id={id}
             label={label}
