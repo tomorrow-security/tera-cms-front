@@ -134,7 +134,7 @@ module.exports = {
     extend: {
       animation: ["group-hover", "hover", "focus", "checked"],
       backgroundColor: ["group-hover", "checked", "disabled"],
-      backgroundImage: ["group-hover", "hover"],
+      backgroundImage: ["group-hover", "group-focus", "hover"],
       borderColor: ["focus", "checked"],
       borderOpacity: ["disabled"],
       borderStyle: ["focus"],
@@ -144,7 +144,7 @@ module.exports = {
       fontSize: ["hover"],
       fontStyle: ["hover", "focus"],
       inset: ["group-hover", "hover"],
-      opacity: ["visited", "disabled"],
+      opacity: ["group-focus", "visited", "disabled"],
       padding: ["group-focus"],
       scale: ["group-hover", "group-focus"],
       textOpacity: ["disabled"],
