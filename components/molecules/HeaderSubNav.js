@@ -18,7 +18,7 @@ export default function HeaderSubNav({ click, pages, title }) {
         {title}
       </h3>
       <div className={`${!isOpen && "hidden"}`}>
-        <ul className="absolute top-0 z-30 w-48 mt-2 space-y-2 bg-opacity-75 border rounded lg:w-full left-full lg:left-auto lg:top-full bg-tc-blue border-tc-red">
+        <ul className="absolute top-0 z-30 w-48 mt-2 space-y-2 bg-opacity-75 border rounded lg:w-full2 left-full lg:left-auto lg:top-full bg-tc-blue border-tc-red">
           {pages.map(({ id, label }) => (
             <li key={`${id}`} onClick={click} className="lg:w-full">
               <PageLink id={id} label={label} />
