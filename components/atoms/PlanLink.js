@@ -23,8 +23,8 @@ export default function PlanLink({ id, label }) {
 
   return (
     <Link href={href}>
-      <a className={`${active}  items-center border-box`}>
-        <div className="cursor-pointer">{label}</div>
+      <a className={`${active}  items-center border-box cursor-pointer`}>
+        {label}
       </a>
     </Link>
   )
