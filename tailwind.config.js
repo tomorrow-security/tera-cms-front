@@ -116,6 +116,10 @@ module.exports = {
           "100%": { transform: "translateX(-50%)" },
         },
       },
+      // TODO mettre un losange
+      listStyleType: {
+        square: "square",
+      },
       padding: {
         4.5: "1.125rem",
       },
