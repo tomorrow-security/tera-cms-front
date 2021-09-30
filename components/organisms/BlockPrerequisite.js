@@ -3,7 +3,7 @@ import LittleTitle from "../atoms/LittleTitle"
 
 export default function BlockPreRequisite() {
   return (
-    <section id="programme" className="py-10 md:py-20">
+    <section id="prerequis" className="py-10 md:py-20">
       <div className="md:container md:mx-auto">
         <BlockTitle
           title="Pré-requis"
