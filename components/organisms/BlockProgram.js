@@ -1,93 +1,96 @@
+import Image from "next/image"
+
 import BlockTitle from "../atoms/BlockTitle"
 import PartnersEuropean from "../atoms/PartnersEuropean"
 import PartnersCollaboratives from "../atoms/PartnersCollaboratives"
 import CarouselPartners from "../molecules/CarouselPartners"
 import PageLink from "../atoms/PageLink"
+// import developper from "../../public/developpeurdevantordi.jpg"
 
-const cursus = [
-  // {
-  //   number: "1",
-  //   exp: "ère",
-  //   topics: [
-  //     "Système d'exploitation Windows",
-  //     "Système d'exploitation Linux",
-  //     "Algorithmique",
-  //     "Développement Web",
-  //     "Introduction aux bases de données",
-  //     "Introduction au réseau",
-  //     "Introduction au Cloud",
-  //     "Introduction à la cybersécurité",
-  //     "Gestion de projets",
-  //     "Savoir-être et intelligence émotionnelle",
-  //     "Anglais",
-  //   ],
-  // },
-  // {
-  //   number: "2",
-  //   exp: "ème",
-  //   topics: [
-  //     "Administration serveur",
-  //     "Méthodologie de développement",
-  //     "Développement d'applications",
-  //     "Introduction à la Data Science",
-  //     "Administration de base de données",
-  //     "Administration réseau",
-  //     "Administration Cloud",
-  //     "Cybersécurité : Ethical Hacking",
-  //     "Gestion de projets",
-  //     "Savoir-être et intelligence émotionnelle",
-  //     "Anglais",
-  //   ],
-  // },
-  {
-    number: "3",
-    exp: "ème",
-    topics: [
-      "Expertise serveur",
-      "Développement mobile",
-      "Data science : Intelligence artificielle",
-      "Architecture de bases de données",
-      "Architecture réseau",
-      "Architecture Cloud",
-      "Cybersécurité : Defense in Depth",
-      "Gestion de projets",
-      "Savoir-être et intelligence émotionnelle",
-      "Anglais",
-    ],
-  },
-  // {
-  //   number: "4",
-  //   exp: "ème",
-  //   topics: [
-  //     "Systèmes d'exploitation alternatifs",
-  //     "Développement et organisation",
-  //     "Data science : Machine learning",
-  //     "Expertise base de données",
-  //     "Expertise réseau",
-  //     "Automatisation Cloud",
-  //     "DevOps",
-  //     "Sécurité de l'information",
-  //     "Gestion de projets",
-  //     "Savoir-être et intelligence émotionnelle",
-  //     "Anglais",
-  //   ],
-  // },
-  // {
-  //   number: "5",
-  //   exp: "ème",
-  //   topics: [
-  //     "Évolution d'un système d'exploitation",
-  //     "Management du développement",
-  //     "Data Science : Big Data",
-  //     "Base de données : scaling",
-  //     "Architecture et choix technologiques",
-  //     "Création de Cloud",
-  //     "Sécurité et conformité (RGPD, ISO)",
-  //     "Management et économie des entreprises",
-  //     "Anglais",
-  //   ],
-  // },
-]
+// const cursus = [
+// {
+//   number: "1",
+//   exp: "ère",
+//   topics: [
+//     "Système d'exploitation Windows",
+//     "Système d'exploitation Linux",
+//     "Algorithmique",
+//     "Développement Web",
+//     "Introduction aux bases de données",
+//     "Introduction au réseau",
+//     "Introduction au Cloud",
+//     "Introduction à la cybersécurité",
+//     "Gestion de projets",
+//     "Savoir-être et intelligence émotionnelle",
+//     "Anglais",
+//   ],
+// },
+// {
+//   number: "2",
+//   exp: "ème",
+//   topics: [
+//     "Administration serveur",
+//     "Méthodologie de développement",
+//     "Développement d'applications",
+//     "Introduction à la Data Science",
+//     "Administration de base de données",
+//     "Administration réseau",
+//     "Administration Cloud",
+//     "Cybersécurité : Ethical Hacking",
+//     "Gestion de projets",
+//     "Savoir-être et intelligence émotionnelle",
+//     "Anglais",
+//   ],
+// },
+// {
+//   number: "3",
+//   exp: "ème",
+//   topics: [
+//     "Expertise serveur",
+//     "Développement mobile",
+//     "Data science : Intelligence artificielle",
+//     "Architecture de bases de données",
+//     "Architecture réseau",
+//     "Architecture Cloud",
+//     "Cybersécurité : Defense in Depth",
+//     "Gestion de projets",
+//     "Savoir-être et intelligence émotionnelle",
+//     "Anglais",
+//   ],
+// },
+// {
+//   number: "4",
+//   exp: "ème",
+//   topics: [
+//     "Systèmes d'exploitation alternatifs",
+//     "Développement et organisation",
+//     "Data science : Machine learning",
+//     "Expertise base de données",
+//     "Expertise réseau",
+//     "Automatisation Cloud",
+//     "DevOps",
+//     "Sécurité de l'information",
+//     "Gestion de projets",
+//     "Savoir-être et intelligence émotionnelle",
+//     "Anglais",
+//   ],
+// },
+// {
+//   number: "5",
+//   exp: "ème",
+//   topics: [
+//     "Évolution d'un système d'exploitation",
+//     "Management du développement",
+//     "Data Science : Big Data",
+//     "Base de données : scaling",
+//     "Architecture et choix technologiques",
+//     "Création de Cloud",
+//     "Sécurité et conformité (RGPD, ISO)",
+//     "Management et économie des entreprises",
+//     "Anglais",
+//   ],
+// },
+// ]
 
 const axes = ["La technique", "Les soft skills", "La collaboration"]
 
@@ -220,7 +223,7 @@ export default function BlockProgramme() {
           </div>
           <div className="flex items-center mb-8 flex-nowrap"></div>
           <CarouselPartners partners={<PartnersCollaboratives />} />
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+          {/* <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {cursus.map((year, index) => (
               <div key={index} className="rounded shadow">
                 <h3 className="p-2 text-2xl font-bold text-center text-white rounded-t bg-tc-red">
@@ -237,24 +240,34 @@ export default function BlockProgramme() {
                 </ul>
               </div>
             ))}
-          </div>
-          <div className="pt-12">
-            <sub className="text-lg italic font-bold">
-              BAC+3, titre de niveau 6
-            </sub>
-            <h3 className="text-xl font-semibold">
-              Bachelor Administrateur des systèmes d'Information
-            </h3>
-            <div className="flex flex-col">
-              <small>(Titre niveau II - ancienne nomenclature)</small>
-              <small>
-                {" "}
-                Titre d'administrateur des systèmes d'information délivré par
-                Adales-Sup de Vinci - code NSF 326 - RNCP n°34022 - enregistré
-                au RNCP par décision de France Compétences du 23 mai 2019
-              </small>
+          </div> */}
+          <section className="flex flex-col flex-nowrap lg:flex-row-reverse md:justify-around md:items-center">
+            <div className="p-2 m-4 space-y-4 text-center text-white rounded bg-tc-blue lg:w-1/2">
+              <p className="text-xl">BAC+3</p>
+              <h2 className="text-lg font-bold uppercase">
+                Admnistrateur(rice) des systèmes d'information
+              </h2>
+              <div>
+                <p>Titre RNCP de Niveau 6</p>
+                <p>
+                  Formation en alternance : 4 jours par semaine en entreprise, 1
+                  jour à l'école.
+                </p>
+              </div>
+              <p className="text-sm">
+                Contrat d’apprentissage ou de professionnalisation
+              </p>
             </div>
-          </div>
+            <div className="h-auto lg:w-1/2">
+              <Image
+                src="/developpeurdevantordi.jpg"
+                alt="développeur devant un ordinateur"
+                width={1152}
+                height={768}
+                className="object-cover object-center w-full h-full md:inline-flex"
+              />
+            </div>
+          </section>
         </div>
       </div>
     </section>
