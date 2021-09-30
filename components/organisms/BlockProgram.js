@@ -241,34 +241,34 @@ export default function BlockProgramme() {
               </div>
             ))}
           </div> */}
-          <section className="flex flex-col flex-nowrap lg:flex-row-reverse md:justify-around md:items-center">
-            <div className="p-2 m-4 space-y-4 text-center text-white rounded bg-tc-blue lg:w-1/2">
-              <p className="text-xl">BAC+3</p>
-              <h2 className="text-lg font-bold uppercase">
-                Admnistrateur(rice) des systèmes d'information
-              </h2>
-              <div>
-                <p>Titre RNCP de Niveau 6</p>
-                <p>
-                  Formation en alternance : 4 jours par semaine en entreprise, 1
-                  jour à l'école.
-                </p>
-              </div>
-              <p className="text-sm">
-                Contrat d’apprentissage ou de professionnalisation
+        </div>
+        <section className="flex flex-col flex-nowrap md:flex-row md:justify-around md:items-center">
+          <div className="flex flex-col p-2 m-4 space-y-4 text-center text-white rounded flex-nowrap bg-tc-blue md:w-1/2">
+            <p className="text-xl">BAC+3</p>
+            <h2 className="text-lg font-bold uppercase">
+              Admnistrateur(rice) des systèmes d'information
+            </h2>
+            <div>
+              <p>Titre RNCP de Niveau 6</p>
+              <p>
+                Formation en alternance : 4 jours par semaine en entreprise, 1
+                jour à l'école.
               </p>
             </div>
-            <div className="h-auto lg:w-1/2">
-              <Image
-                src="/developpeurdevantordi.jpg"
-                alt="développeur devant un ordinateur"
-                width={1152}
-                height={768}
-                className="object-cover object-center w-full h-full md:inline-flex"
-              />
-            </div>
-          </section>
-        </div>
+            <p className="text-sm ">
+              Contrat d’apprentissage ou de professionnalisation
+            </p>
+          </div>
+          <div className="h-auto md:w-1/2">
+            <Image
+              src="/developpeurdevantordi.jpg"
+              alt="développeur devant un ordinateur"
+              width={1152}
+              height={768}
+              className="object-cover object-center w-full h-full lg:inline-flex"
+            />
+          </div>
+        </section>
       </div>
     </section>
   )
