@@ -105,7 +105,7 @@ const Paragraph = ({ gutterBottom, children }) => (
 
 export default function BlockProgramme() {
   return (
-    <section id="programme" className="py-10 md:py-20">
+    <section id="programme" className="py-10 md:pt-20 md:pb-0">
       <div className="md:container md:mx-auto">
         <BlockTitle
           title="Notre programme"
@@ -238,8 +238,8 @@ export default function BlockProgramme() {
             ))}
           </div> */}
         </div>
-        <section className="flex flex-col flex-nowrap md:flex-row md:justify-around md:items-center">
-          <div className="flex flex-col p-2 m-4 space-y-4 text-center text-white rounded flex-nowrap bg-tc-blue md:w-1/2">
+        <section className="flex flex-col flex-nowrap md:flex-row md:justify-around md:items-center xl:w-9/12 xl:mx-auto">
+          <div className="flex flex-col p-2 m-4 space-y-4 text-center text-white rounded xl:mr-12 2xl:mr-20 flex-nowrap bg-tc-blue md:w-1/2">
             <p className="text-xl">BAC+3</p>
             <h2 className="text-lg font-bold uppercase">
               Admnistrateur(rice) des systèmes d'information

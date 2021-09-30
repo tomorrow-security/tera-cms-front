@@ -9,9 +9,9 @@ export default function BlockPreRequisite() {
           title="Pré-requis"
           iconPicture={{ backgroundImage: "url('pre-requis.png')" }}
         />
-        <div className="mx-4">
+        <div className="mx-4 ">
           <LittleTitle children="Accès à la formation" />
-          <ul className="pl-2 space-y-2 list-inside list-square">
+          <ul className="pl-2 space-y-2 list-inside list-square lg:w-11/12 lg:mx-auto">
             <li>
               Avoir validé une 2ème année (BAC+2) en Informatique ou une
               formation équivalente en France ou à l’international.{" "}
