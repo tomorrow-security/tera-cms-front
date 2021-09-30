@@ -1,6 +1,7 @@
 import Head from "next/head"
 import BlockProgram from "../components/organisms/BlockProgram"
 import BlockPreRequisite from "../components/organisms/BlockPreRequisite"
+import BlockPartners from "../components/organisms/BlockPartners"
 import BlockMethod from "../components/organisms/BlockMethod"
 
 const pageTitle = "Programme - Tera Campus"
@@ -20,6 +21,7 @@ export default function Legal() {
 
       <main>
         <BlockMethod />
+        <BlockPartners />
         <BlockProgram />
         <BlockPreRequisite />
       </main>
