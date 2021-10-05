@@ -60,7 +60,7 @@ const syllabusTC3 = [
   },
 ]
 
-export default function Program({ subject }) {
+export default function Program({}) {
   return (
     <section className="mx-4">
       <LittleTitle children="Programme détaillé TC3" />
