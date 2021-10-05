@@ -25,7 +25,7 @@ const syllabusTC3 = [
   {
     subject:
       "Maintenir le système informatique en condition opérationnelle optimale",
-    duration: 140,
+    duration: 252,
     credits: 20,
     topics: [
       "Bases de Données Avancées",
@@ -43,7 +43,7 @@ const syllabusTC3 = [
   },
   {
     subject: "Faire évoluer le système informatique ",
-    duration: 140,
+    duration: 252,
     credits: 20,
     topics: [
       "Savoir-être & Intelligence Emotionnelle ",
