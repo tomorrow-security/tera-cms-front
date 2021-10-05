@@ -94,6 +94,8 @@ module.exports = {
       },
       height: {
         "33vh": "33vh",
+        "1/12": "8.333333%",
+        "7/12": "58.333333%",
       },
       inset: {
         // TODO vérifier si tous les paramètres sont utilisés
