@@ -11,7 +11,7 @@ export default function BlockMethod() {
           title="La méthode"
           iconPicture={{ backgroundImage: "url('method.png')" }}
         />
-        <div className="flex flex-col xl:flex-row">
+        <div className="flex flex-col">
           <div className="flex-1 mx-4">
             <LittleTitle children="Les plus de Tera Campus" />
             <div className="grid w-full xl:w-3/4 xl:mx-auto grid-programPlusRows grid-programPlusColumns gap-x-6">
@@ -74,8 +74,8 @@ export default function BlockMethod() {
               className="mx-4 "
               children="La méthode de Tera Campus"
             />
-            <div className="flex flex-col flex-nowrap md:flex-row-reverse md:justify-around md:items-center xl:flex-col-reverse xl:mx-auto">
-              <div className="flex flex-col p-2 m-4 space-y-4 bg-opacity-25 rounded xl:space-y-5 xl:p-4 flex-nowrap bg-tc-blue md:w-1/2">
+            <div className="flex flex-col flex-nowrap md:flex-row-reverse md:justify-around md:items-center xl:mx-auto xl:p-2">
+              <div className="flex flex-col p-2 m-4 space-y-4 bg-opacity-25 rounded xl:space-y-5 flex-nowrap bg-tc-blue md:w-1/2">
                 <p>
                   Cours théoriques et exercices d'application en face à face
                   pédagogique en télé-présentiel, dispensés par des consultants
@@ -90,7 +90,7 @@ export default function BlockMethod() {
                 </p>
                 <p>Périodes professionnelles en entreprises (alternance)</p>
               </div>
-              <div className="h-auto md:w-1/2">
+              <div className="h-auto md:w-1/2 xl:m-4">
                 <Image
                   src="/entraide-montagne.jpg"
                   alt="deux personnes qui s'aide à gravir une montagne"
