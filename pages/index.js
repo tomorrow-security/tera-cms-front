@@ -36,16 +36,6 @@ export async function getServerSideProps() {
     props: {
       agenda: [
         {
-          date: "23/09/2021",
-          dateTimeDate: "2021-09-23",
-          timetable: "18h30",
-          dateTimeTimetable: "18:30",
-          title: "Unity 2D - Animations en 2D",
-          description: "Thursday Tech Live",
-          platform: "twitch",
-          url: "https://www.twitch.tv/teracampus",
-        },
-        {
           date: "30/09/2021",
           dateTimeDate: "2021-09-30",
           timetable: "18h30",
@@ -65,16 +55,16 @@ export async function getServerSideProps() {
           platform: "twitch",
           url: "https://www.twitch.tv/teracampus",
         },
-        // {
-        //   date: "28/10/2021",
-        //   dateTimeDate: "2021-10-28",
-        //   timetable: "",
-        //   dateTimeTimetable: "",
-        //   title: "Motion Design - ",
-        //   description: "Thursday Tech Live",
-        //   platform: "twitch",
-        //   url: "https://www.twitch.tv/teracampus",
-        // },
+        {
+          date: "28/10/2021",
+          dateTimeDate: "2021-10-28",
+          timetable: "",
+          dateTimeTimetable: "",
+          title: "Motion Design - ",
+          description: "Thursday Tech Live",
+          platform: "twitch",
+          url: "https://www.twitch.tv/teracampus",
+        },
       ],
       questions: [
         {
