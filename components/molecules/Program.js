@@ -71,10 +71,9 @@ export default function Program({}) {
             className="p-2 md:grid md:grid-cols-1 md:grid-rows-program-domain"
           >
             <div className="row-start-1">
-              <h3 className="p-2 text-lg font-semibold text-center bg-opacity-25 rounded-lg bg-tc-red">
-                {domain.subject}
-                &nbsp;année
-              </h3>
+              <div className="flex items-center justify-center p-2 text-lg font-semibold bg-opacity-25 rounded-lg md:h-3/4 bg-tc-red">
+                <h3 className="text-center">{domain.subject}</h3>
+              </div>
               <p className="text-sm text-right">
                 {domain.duration} Heures, ECTS {domain.credits}
               </p>
@@ -86,9 +85,11 @@ export default function Program({}) {
                 </li>
               ))}
             </ul>
-            <h4 className="row-start-3 p-2 mx-4 my-2 text-base font-semibold text-center bg-opacity-25 rounded-lg bg-tc-blue">
-              Les compétences acquises en fin de cursus :
-            </h4>
+            <div className="flex items-center justify-center row-start-3 p-2 mx-4 my-2 text-base font-semibold text-center bg-opacity-25 rounded-lg bg-tc-blue">
+              <p className="text-center">
+                Les compétences acquises en fin de cursus :
+              </p>
+            </div>
             <ul className="row-start-4 p-2 space-y-2 list-inside list-square md:mt-1">
               {domain.competences.map((competence, index) => (
                 <li
