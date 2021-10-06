@@ -8,7 +8,7 @@ export default function BlockMethod() {
     <section id="method" className="pt-10 md:pt-20">
       <div className="md:container md:mx-auto">
         <BlockTitle
-          title="La méthode"
+          title="Notre méthode"
           iconPicture={{ backgroundImage: "url('method.png')" }}
         />
         <div className="flex flex-col">
