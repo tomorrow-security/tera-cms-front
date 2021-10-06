@@ -64,31 +64,36 @@ export default function Program({}) {
   return (
     <section className="mx-4">
       <LittleTitle children="Programme détaillé TC3" />
-      <ul className="flex flex-col p-4 space-y-2 divide-y rounded shadow md:space-y-0 md:divide-y-0 md:divide-x md:flex-row divide-tc-red md:space-x-2">
+      <ul className="p-4 space-y-2 divide-y rounded shadow md:grid md:grid-cols-3 md:space-y-0 md:divide-y-0 md:divide-x divide-tc-red md:space-x-2">
         {syllabusTC3.map((domain, index) => (
-          <div key={index} className="flex-1 p-2">
-            <h3 className="p-2 text-lg font-semibold text-center bg-opacity-25 rounded-lg md:h-1/6 bg-tc-red">
-              {domain.subject}
-              &nbsp;année
-            </h3>
-            <p className="text-sm text-right ">
-              {domain.duration} Heures, ECTS {domain.credits}
-            </p>
-            <ul className="p-2 space-y-2 list-inside list-square md:h-1/6">
+          <div
+            key={index}
+            className="p-2 md:grid md:grid-cols-1 md:grid-rows-program-domain"
+          >
+            <div className="row-start-1">
+              <h3 className="p-2 text-lg font-semibold text-center bg-opacity-25 rounded-lg bg-tc-red">
+                {domain.subject}
+                &nbsp;année
+              </h3>
+              <p className="text-sm text-right">
+                {domain.duration} Heures, ECTS {domain.credits}
+              </p>
+            </div>
+            <ul className="row-start-2 p-2 space-y-2 list-inside list-square">
               {domain.topics.map((topic, index) => (
                 <li key={`${index}-${topic}`} className="text-sm">
                   {topic}
                 </li>
               ))}
             </ul>
-            <h4 className="p-2 mx-4 mt-4 text-base font-semibold text-center bg-opacity-25 rounded-lg md:mt-1 md:h-1/12 bg-tc-blue">
+            <h4 className="row-start-3 p-2 mx-4 my-2 text-base font-semibold text-center bg-opacity-25 rounded-lg bg-tc-blue">
               Les compétences acquises en fin de cursus :
             </h4>
-            <ul className="p-2 space-y-2 list-inside md:h-7/12 list-square">
+            <ul className="row-start-4 p-2 space-y-2 list-inside list-square md:mt-1">
               {domain.competences.map((competence, index) => (
                 <li
                   key={`${index}-${competence}`}
-                  className="my-2 text-sm md:my-0 md:mt-1"
+                  className="my-2 text-sm md:my-0"
                 >
                   {competence}
                 </li>

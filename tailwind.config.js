@@ -92,6 +92,9 @@ module.exports = {
         12: "12",
         13: "13",
       },
+      gridTemplateRows: {
+        "program-domain": "1fr 1fr 1fr 5fr",
+      },
       height: {
         "33vh": "33vh",
         "1/12": "8.333333%",
