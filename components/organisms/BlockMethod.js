@@ -69,12 +69,12 @@ export default function BlockMethod() {
               </p>
             </div>
           </div>
-          <div className="flex-1">
+          <div className="flex-1 mx-4">
             <LittleTitle
               className="mx-4 "
               children="La méthode de Tera Campus"
             />
-            <div className="flex flex-col flex-nowrap md:flex-row-reverse md:justify-around md:items-center xl:mx-auto xl:p-2">
+            <div className="flex flex-col flex-nowrap md:flex-row-reverse md:justify-around md:items-center md:mx-auto md:p-2">
               <div className="flex flex-col p-2 m-4 space-y-4 bg-opacity-25 rounded xl:space-y-5 flex-nowrap bg-tc-blue md:w-1/2">
                 <p>
                   Cours théoriques et exercices d'application en face à face
