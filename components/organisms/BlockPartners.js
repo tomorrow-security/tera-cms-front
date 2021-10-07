@@ -1,5 +1,4 @@
 import BlockTitle from "../atoms/BlockTitle"
-import LittleTitle from "../atoms/LittleTitle"
 import PartnersEuropean from "../atoms/PartnersEuropean"
 import PartnersCollaboratives from "../atoms/PartnersCollaboratives"
 import CarouselPartners from "../molecules/CarouselPartners"
@@ -7,6 +6,7 @@ import PageLink from "../atoms/PageLink"
 import Approach from "../molecules/Approach"
 import Strong from "../atoms/Strong"
 
+//TODO voir pour en faire un atom
 const Paragraph = ({ gutterBottom, children }) => (
   <p className={`${gutterBottom && "mb-4 md:mb-8 py-4 px-2"}`}>{children}</p>
 )
