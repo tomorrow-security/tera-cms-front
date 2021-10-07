@@ -4,6 +4,7 @@ import BlockPreRequisite from "../components/organisms/BlockPreRequisite"
 import BlockPartners from "../components/organisms/BlockPartners"
 import BlockMethod from "../components/organisms/BlockMethod"
 import BlockEval from "../components/organisms/BlockEval"
+import Registration from "../components/molecules/Registration"
 
 const pageTitle = "Programme - Tera Campus"
 const pageDescription = "Notre programme"
@@ -26,7 +27,7 @@ export default function Legal() {
         <BlockProgram />
         <BlockEval />
         <BlockPreRequisite />
-        <p>Modalités d'inscription</p>
+        <Registration />
       </main>
     </>
   )
