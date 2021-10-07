@@ -24,9 +24,9 @@ export default function Legal() {
         <BlockMethod />
         <BlockPartners />
         <BlockProgram />
-        <p>modalité d'évaluation</p>
-        <BlockPreRequisite />
         <BlockEval />
+        <BlockPreRequisite />
+        <p>Modalités d'inscription</p>
       </main>
     </>
   )

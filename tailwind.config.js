@@ -156,6 +156,7 @@ module.exports = {
       fontWeight: ["hover", "active", "focus"],
       fontSize: ["hover"],
       fontStyle: ["hover", "focus"],
+      justifyContent: ["group-focus"],
       inset: ["group-hover", "hover"],
       opacity: ["group-focus", "visited", "disabled"],
       padding: ["group-focus"],
