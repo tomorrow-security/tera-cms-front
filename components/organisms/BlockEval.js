@@ -1,20 +1,18 @@
-import BlockTitle from "../atoms/BlockTitle"
-import LittleTitle from "../atoms/LittleTitle"
-
 export default function BlockEval() {
+  // TODO faire fonctionner le group-focus
   return (
-    <section id="evaluation" className="py-10 md:py-20">
-      <div className="md:container md:mx-auto">
-        <BlockTitle
-          title="Evaluations"
-          iconPicture={{ backgroundImage: "url('pre-requis.png')" }}
-        />
-        <div className="mx-4 ">
-          <LittleTitle children="Les modalités d'évaluation" />
-          <ul className="pl-2 space-y-2 list-inside list-square lg:w-11/12 lg:mx-auto">
+    <section className="py-10">
+      <div className="mx-4 group">
+        <div className="flex justify-center cursor-pointer">
+          <p className="p-4 font-semibold text-white rounded bg-tc-blue w-max">
+            Les modalités d'évaluation
+          </p>
+        </div>
+        <div className="hidden w-11/12 p-2 m-auto space-y-2 list-inside rounded group-focus:justify-center group-focus:flex lg:mx-auto">
+          <ul className="p-2 border rounded list-square w-max border-tc-blue">
             <li>Travaux de groupe ou individuels</li>
             <li>Projets techniques</li>
-            <li>Projets inter-matières </li>
+            <li>Projets inter-matières</li>
             <li>Hackathons</li>
             <li>Projets professionnels (alternance) </li>
           </ul>
