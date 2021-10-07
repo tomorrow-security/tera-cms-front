@@ -3,8 +3,8 @@ export default function BlockEval() {
   return (
     <section className="py-10">
       <div className="mx-4 group">
-        <div className="flex justify-center cursor-pointer">
-          <p className="p-4 font-semibold text-white rounded bg-tc-blue w-max">
+        <div className="flex justify-center ">
+          <p className="p-4 font-semibold text-white rounded cursor-pointer bg-tc-blue w-max">
             Les modalités d'évaluation
           </p>
         </div>
