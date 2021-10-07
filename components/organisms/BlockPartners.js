@@ -4,12 +4,8 @@ import PartnersEuropean from "../atoms/PartnersEuropean"
 import PartnersCollaboratives from "../atoms/PartnersCollaboratives"
 import CarouselPartners from "../molecules/CarouselPartners"
 import PageLink from "../atoms/PageLink"
-
-const axes = ["La technique", "Les soft skills", "La collaboration"]
-
-const Strong = ({ children }) => (
-  <strong className="font-bold text-tc-red">{children}</strong>
-)
+import Approach from "../molecules/Approach"
+import Strong from "../atoms/Strong"
 
 const Paragraph = ({ gutterBottom, children }) => (
   <p className={`${gutterBottom && "mb-4 md:mb-8 py-4 px-2"}`}>{children}</p>
@@ -24,25 +20,7 @@ export default function BlockPartners() {
           iconPicture={{ backgroundImage: "url('partenairs.png')" }}
         />
         <div className="mx-4">
-          <div className="text-lg text-center">
-            <Strong>
-              Le programme Tera Campus s&apos;articule sur trois principaux axes
-              de développement :
-            </Strong>
-          </div>
-          <ul className="w-full my-12 md:my-14">
-            {axes.map((axe, index) => (
-              <li
-                key={index}
-                className="flex flex-row items-center justify-center w-full my-4 md:my-8"
-              >
-                <div className="w-5 h-5 mr-4 transform rotate-45 bg-tc-red"></div>
-                <div className="py-1 text-2xl text-center text-white rounded-t w-52 md:w-1/3 bg-tc-blue rounded-b-xl">
-                  {axe}
-                </div>
-              </li>
-            ))}
-          </ul>
+          <Approach />
           <div className="flex items-center justify-between mb-8 flex-nowrap">
             <CarouselPartners partners={<PartnersEuropean />} />
           </div>
