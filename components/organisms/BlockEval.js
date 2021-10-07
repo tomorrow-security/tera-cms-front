@@ -1,5 +1,4 @@
 export default function BlockEval() {
-  // TODO faire fonctionner le group-focus
   return (
     <section className="py-10">
       <button className="mx-4 group">
