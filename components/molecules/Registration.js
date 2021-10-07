@@ -8,31 +8,33 @@ import IconHandShake from "../atoms/IconHandShake"
 
 const steps = [
   {
-    description: "Soumets ton dossier en ligne",
+    description: "Candidature en ligne",
     backgroundImage: "etape1.png",
     icon: <IconBulb />,
     stage: 1,
   },
   {
-    description: "Fixe un rendez-vous téléphonique avec l'un de nos guides",
+    description:
+      "Test de positionnement (valide 1 semaine après l'inscription, prévoir minimum 1H, résultats disponibles à la fin du test)",
     backgroundImage: "etape2.png",
     icon: <IconPhonebook />,
     stage: 2,
   },
   {
-    description: "Passe gratuitement le test de positionnement",
+    description: "Entretien en visioconférence avec l'un de nos Guides",
     backgroundImage: "etape3.png",
     icon: <IconPlacementTest />,
     stage: 3,
   },
   {
-    description: "Reçois ta réponse sous 48 heures",
+    description:
+      "Inscription définitive et choix du contrat (contrat d’apprentissage ou de professionnalisation) ",
     backgroundImage: "etape4.png",
     icon: <IconMagnifyingGlass />,
     stage: 4,
   },
   {
-    description: "Finalise ton inscription définitive !",
+    description: "Suivi régulier pour la recherche d’entreprise",
     backgroundImage: "etape5.png",
     icon: <IconHandShake />,
     stage: 5,
@@ -64,7 +66,7 @@ const Step = ({ description, image, icon, stage }) => {
 
 export default function Registration() {
   return (
-    <div className="mt-8 lg:mt-12">
+    <div className="my-4 mt-8 md:container lg:mt-12 md:mx-auto">
       <div className="flex flex-row items-center justify-center mb-2 flex-nowrap md:mb-4">
         <div className="w-12 h-12 text-tc-blue">
           <IconComputerGraduate />
@@ -73,18 +75,26 @@ export default function Registration() {
           &Eacute;tapes d&apos;inscription
         </div>
       </div>
-      <div className="md:flex md:flex-row md:justify-center md:mt-4 md:mb-8">
-        {steps.map((step, index) => (
-          <Step
-            key={index}
-            description={step.description}
-            icon={step.icon}
-            image={step.backgroundImage}
-            stage={step.stage}
-          />
-        ))}
+      <div>
+        <div className="md:flex md:flex-row md:justify-center md:mt-4 md:mb-8">
+          {steps.map((step, index) => (
+            <Step
+              key={index}
+              description={step.description}
+              icon={step.icon}
+              image={step.backgroundImage}
+              stage={step.stage}
+            />
+          ))}
+        </div>
+        <p className="m-2 text-sm italic md:text-right">
+          Temps de la procédure d'inscription : 1 semaine
+        </p>
       </div>
-      <Cta />
+      <div className="my-8">
+        {/* <p>Rentrée scolaire le : 04/10/2021 (premier Bivouac) </p> */}
+        <Cta />
+      </div>
     </div>
   )
 }
