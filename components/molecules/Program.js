@@ -104,7 +104,7 @@ export default function Program({}) {
         ))}
       </ul>
       <p className="text-sm italic">
-        La validation peut s’acquérir par bloc de compétences.{" "}
+        La validation peut s’acquérir par bloc de compétences.
       </p>
     </section>
   )
