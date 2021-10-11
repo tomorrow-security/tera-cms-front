@@ -33,10 +33,10 @@ function Index({ agenda, questions }) {
 }
 
 export async function getServerSideProps() {
-  // axios.get("/api/agenda")
+  axios.get("/api/agenda")
   return {
     props: {
-      agenda: [
+      events: [
         {
           date: "30/09/2021",
           dateTimeDate: "2021-09-30",
@@ -44,6 +44,8 @@ export async function getServerSideProps() {
           dateTimeTimetable: "18:30",
           title: "Motion Design - apprenez les effets spéciaux",
           description: "Thursday Tech Live",
+          // title: `{${items.name}}`,
+          // description: `{${items.column_values[statut_16]}}`,
           platform: "twitch",
           url: "https://www.twitch.tv/teracampus",
         },
