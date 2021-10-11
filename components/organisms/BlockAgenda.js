@@ -7,10 +7,7 @@ import SocialNav from "../molecules/SocialNav"
 import EventLive from "../molecules/EventLive"
 import IconeYoutube from "../atoms/IconeYoutube"
 
-export default function BlockAgenda(data) {
-  // const events = axios.post("/api/agenda", data)
-  // console.log("data :", events)
-
+export default function BlockAgenda(events) {
   /**
    * bolean of no event in the array
    */
@@ -30,34 +27,19 @@ export default function BlockAgenda(data) {
         <div className="lg:flex lg:flex-row lg:flex-nowrap lg:justify-around lg:items-center lg:text-xl">
           <div className={`w-full lg:w-1/2 ${invisible}`}>
             <ul className="flex flex-col justify-center mx-2 sm:justify-start lg:text-lg ">
-              {/* {events.map((event, index) => (
-								<EventLive
-									key={index}
-									url={event.url}
-									platform={event.platform}
-									dateTimeDate={event.timetable}
-									date={event.date}
-									dateTimeTimetable={event.dateTimeTimetable}
-									timetable={event.timetable}
-									description={event.description}
-									title={event.title}
-								/>
-							))} */}
-              {/* {
-								events.map((event, index) => (
-									<EventLive
-										key={index}
-										url={event.url}
-										platform={event.platform}
-										dateTimeDate={event.dateTimeDate}
-										date={event.date}
-										dateTimeTimetable={event.dateTimeTimetable}
-										timetable={event.timetable}
-										description={event.description}
-										title={event.title}
-									/>
-                ))
-              } */}
+              {events.map((event, index) => (
+                <EventLive
+                  key={index}
+                  url={event.url}
+                  platform={event.platform}
+                  dateTimeDate={event.dateTimeDate}
+                  date={event.date}
+                  dateTimeTimetable={event.dateTimeTimetable}
+                  timetable={event.timetable}
+                  description={event.description}
+                  title={event.title}
+                />
+              ))}
             </ul>
           </div>
           <div className="flex flex-col justify-center mt-8 space-y-10">
