@@ -1,5 +1,3 @@
-import axios from "axios"
-
 import PageLink from "../atoms/PageLink"
 import SocialLink from "../atoms/SocialLink"
 import BlockTitle from "../atoms/BlockTitle"
@@ -26,7 +24,7 @@ export default function BlockAgenda(events) {
         />
         <div className="lg:flex lg:flex-row lg:flex-nowrap lg:justify-around lg:items-center lg:text-xl">
           <div className={`w-full lg:w-1/2 ${invisible}`}>
-            <ul className="flex flex-col justify-center mx-2 sm:justify-start lg:text-lg ">
+            {/* <ul className="flex flex-col justify-center mx-2 sm:justify-start lg:text-lg ">
               {events.map((event, index) => (
                 <EventLive
                   key={index}
@@ -40,7 +38,7 @@ export default function BlockAgenda(events) {
                   title={event.title}
                 />
               ))}
-            </ul>
+            </ul> */}
           </div>
           <div className="flex flex-col justify-center mt-8 space-y-10">
             <p className="flex flex-col justify-center mx-auto space-y-2 font-bold text-center lg:text-2xl">
