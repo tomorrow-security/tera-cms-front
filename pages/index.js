@@ -33,7 +33,7 @@ function Index({ agenda, questions }) {
 }
 
 export async function getServerSideProps() {
-  // axios.get("/api/agenda")
+  const coucou = await axios.get("http://localhost:3000/api/agenda")
   return {
     props: {
       events: [

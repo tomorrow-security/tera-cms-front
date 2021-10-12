@@ -12,7 +12,7 @@ export default async (req, res) => {
     }
 	}`
 
-  response = fetch("https://api.monday.com/v2", {
+  const response = await fetch("https://api.monday.com/v2", {
     method: "post",
     headers: {
       "Content-Type": "application/json",
@@ -22,8 +22,9 @@ export default async (req, res) => {
       query: query,
     }),
   })
-    .then((res) => res.json())
-    .then((res) => console.log(JSON.stringify(res, null, 2)))
+  // .then((res) => res.json())
+  // .then((res) => console.log(JSON.stringify(res, null, 2)
+  // ))
 
-  console.log("response :", res)
+  console.log("response :", response)
 }
