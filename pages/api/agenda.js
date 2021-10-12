@@ -22,9 +22,8 @@ export default async (req, res) => {
       query: query,
     }),
   })
-  // .then((res) => res.json())
-  // .then((res) => console.log(JSON.stringify(res, null, 2)
-  // ))
+
+  res.status(200).json()
 
   console.log("response :", response)
 }
