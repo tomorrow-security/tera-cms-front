@@ -34,6 +34,7 @@ function Index({ agenda, questions }) {
 
 export async function getServerSideProps() {
   const agenda = await axios.get("http://localhost:3000/api/agenda")
+
   // const agenda = () => {
   //   axios
   //     .get("http://localhost:3000/api/agenda")

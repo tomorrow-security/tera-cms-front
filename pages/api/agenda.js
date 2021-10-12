@@ -22,9 +22,13 @@ export default async (req, res) => {
       query: query,
     }),
   })
+  const test = (res) => res.json()
+  const test2 = (res) => console.log(JSON.stringify(res, null, 2))
 
   console.log("response :", response)
-  // console.log("res :", res)
+  console.log("res :", res)
+  console.log("test :", test)
+  console.log("test2 :", test2)
 
   return res.status(200).json()
 }
