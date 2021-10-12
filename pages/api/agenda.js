@@ -23,7 +23,8 @@ export default async (req, res) => {
     }),
   })
 
-  res.status(200).json()
-
   console.log("response :", response)
+  // console.log("res :", res)
+
+  return res.status(200).json()
 }
