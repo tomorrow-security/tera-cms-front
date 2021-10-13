@@ -16,7 +16,7 @@ export default function BlockAgenda(events) {
    */
   const invisible = notEvent ? "hidden" : ""
 
-  // console.log("events:", events)
+  console.log("events:", events)
   console.log("lives:", lives)
 
   /**
@@ -28,6 +28,15 @@ export default function BlockAgenda(events) {
     )
   )
   console.log("onTheAir:", onTheAir)
+
+  const broadcasts = lives.map((live) =>
+    live.map(({ column_values }) => Object.values(column_values))
+  )
+  console.log("broadcasts:", broadcasts)
+  // const date = (broadcasts = "statut_1") && { text }
+
+  // console.log("date:", date)
+  // TODO voir .find pour récupéré précisement la valuer voulue
 
   return (
     <section id="agenda" className="py-10 lg:py-20">
@@ -43,16 +52,21 @@ export default function BlockAgenda(events) {
                 <div key={index}>
                   {live.map((stream, index) => (
                     <div key={index}>
-                      {onTheAir.map((event) => (
+                      {broadcasts.map((broadcast, index) => (
                         <EventLive
                           key={index}
-                          url={event.text}
-                          platform={event.text}
-                          dateTimeDate={event.text}
-                          date={event.text}
-                          dateTimeTimetable={event.text}
-                          timetable={event.text}
-                          description={event.text}
+                          // url={date}
+                          url={broadcast.id}
+                          platform={broadcast.id}
+                          dateTimeDate={broadcast.find(
+                            (id) => id == "statut_1"
+                          )}
+                          date={broadcast.find((id) => id == "statut_1")}
+                          dateTimeTimetable={broadcast.find(
+                            (id) => id == "statut_1"
+                          )}
+                          timetable={broadcast.find((id) => id == "statut_1")}
+                          description={broadcast.find((id) => id == "statut_1")}
                           title={stream.name}
                         />
                       ))}
