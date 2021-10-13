@@ -19,6 +19,16 @@ export default function BlockAgenda(events) {
   // console.log("events:", events)
   console.log("lives:", lives)
 
+  /**
+   * mise en tableau de l'objet contenant les valeur désirées
+   */
+  const onTheAir = lives.map((live) =>
+    live.map(({ column_values }) =>
+      Object.values(column_values).map((i) => Object.values(i))
+    )
+  )
+  console.log("onTheAir:", onTheAir)
+
   return (
     <section id="agenda" className="py-10 lg:py-20">
       <div className="md:container md:mx-auto">
@@ -31,18 +41,22 @@ export default function BlockAgenda(events) {
             <ul className="flex flex-col justify-center mx-2 sm:justify-start lg:text-lg">
               {lives.map((live, index) => (
                 <div key={index}>
-                  {live.map((event, index) => (
-                    <EventLive
-                      key={index}
-                      url={event.column_values.statut_1}
-                      platform={event.column_values.statut_1}
-                      dateTimeDate={event.column_values.date4}
-                      date={event.column_values.date4}
-                      dateTimeTimetable={event.column_values.date4}
-                      timetable={event.column_values.date4}
-                      description={event.column_values.statut_16}
-                      title={event.name}
-                    />
+                  {live.map((stream, index) => (
+                    <div key={index}>
+                      {onTheAir.map((event) => (
+                        <EventLive
+                          key={index}
+                          url={event.text}
+                          platform={event.text}
+                          dateTimeDate={event.text}
+                          date={event.text}
+                          dateTimeTimetable={event.text}
+                          timetable={event.text}
+                          description={event.text}
+                          title={stream.name}
+                        />
+                      ))}
+                    </div>
                   ))}
                 </div>
               ))}
