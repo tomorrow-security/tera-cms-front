@@ -6,16 +6,18 @@ import EventLive from "../molecules/EventLive"
 import IconeYoutube from "../atoms/IconeYoutube"
 
 export default function BlockAgenda(events) {
+  const lives = Object.values(events)
   /**
    * bolean of no event in the array
    */
-  const notEvent = events.length === 0
+  const notEvent = lives.length === 0
   /**
    * calendar cache if no event in the array
    */
   const invisible = notEvent ? "hidden" : ""
 
-  console.log(events)
+  // console.log("events:", events)
+  console.log("lives:", lives)
 
   return (
     <section id="agenda" className="py-10 lg:py-20">
@@ -26,21 +28,29 @@ export default function BlockAgenda(events) {
         />
         <div className="lg:flex lg:flex-row lg:flex-nowrap lg:justify-around lg:items-center lg:text-xl">
           <div className={`w-full lg:w-1/2 ${invisible}`}>
-            {/* <ul className="flex flex-col justify-center mx-2 sm:justify-start lg:text-lg ">
-              {events.map((event, index) => (
+            <ul className="flex flex-col justify-center mx-2 sm:justify-start lg:text-lg">
+              {lives.map((live, index) => (
+                <div>
+                  <p key={index}>coucou</p>
+                  {live.map((event, index) => (
+                    <p key={index}>{event.name}</p>
+                  ))}
+                </div>
+              ))}
+              {/* {events.map((event, index) => (
                 <EventLive
                   key={index}
-                  url={event.url}
-                  platform={event.platform}
-                  dateTimeDate={event.dateTimeDate}
-                  date={event.date}
-                  dateTimeTimetable={event.dateTimeTimetable}
-                  timetable={event.timetable}
-                  description={event.description}
-                  title={event.title}
+                  url={event.column_values.statut_1}
+                  platform={event.column_values.statut_1}
+                  dateTimeDate={event.column_values.date4}
+                  date={event.column_values.date4}
+                  dateTimeTimetable={event.column_values.date4}
+                  timetable={event.column_values.date4}
+                  description={event.column_values.statut_16}
+                  title={event.name}
                 />
-              ))}
-            </ul> */}
+              ))} */}
+            </ul>
           </div>
           <div className="flex flex-col justify-center mt-8 space-y-10">
             <p className="flex flex-col justify-center mx-auto space-y-2 font-bold text-center lg:text-2xl">
