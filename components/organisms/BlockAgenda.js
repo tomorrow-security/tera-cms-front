@@ -15,6 +15,8 @@ export default function BlockAgenda(events) {
    */
   const invisible = notEvent ? "hidden" : ""
 
+  console.log(events)
+
   return (
     <section id="agenda" className="py-10 lg:py-20">
       <div className="md:container md:mx-auto">

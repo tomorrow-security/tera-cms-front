@@ -35,31 +35,9 @@ function Index({ agenda, questions }) {
 export async function getServerSideProps() {
   const agenda = await axios.get("http://localhost:3000/api/agenda")
 
-  // const agenda = () => {
-  //   axios
-  //     .get("http://localhost:3000/api/agenda")
-  //     .then((response) => {
-  //       console.log(response)
-  //     })
-  //     .catch((error) => {
-  //       console.log(error)
-  //     })
-  // }
-
   return {
     props: {
-      events: [
-        {
-          date: "30/09/2021",
-          dateTimeDate: "2021-09-30",
-          timetable: "18h30",
-          dateTimeTimetable: "18:30",
-          title: "Motion Design - apprenez les effets spéciaux",
-          description: "Thursday Tech Live",
-          platform: "twitch",
-          url: "https://www.twitch.tv/teracampus",
-        },
-      ],
+      agenda: agenda.data,
       questions: [
         {
           name: "Qui peut rejoindre Tera Campus ?",
