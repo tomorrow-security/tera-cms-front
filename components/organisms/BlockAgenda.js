@@ -30,26 +30,22 @@ export default function BlockAgenda(events) {
           <div className={`w-full lg:w-1/2 ${invisible}`}>
             <ul className="flex flex-col justify-center mx-2 sm:justify-start lg:text-lg">
               {lives.map((live, index) => (
-                <div>
-                  <p key={index}>coucou</p>
+                <div key={index}>
                   {live.map((event, index) => (
-                    <p key={index}>{event.name}</p>
+                    <EventLive
+                      key={index}
+                      url={event.column_values.statut_1}
+                      platform={event.column_values.statut_1}
+                      dateTimeDate={event.column_values.date4}
+                      date={event.column_values.date4}
+                      dateTimeTimetable={event.column_values.date4}
+                      timetable={event.column_values.date4}
+                      description={event.column_values.statut_16}
+                      title={event.name}
+                    />
                   ))}
                 </div>
               ))}
-              {/* {events.map((event, index) => (
-                <EventLive
-                  key={index}
-                  url={event.column_values.statut_1}
-                  platform={event.column_values.statut_1}
-                  dateTimeDate={event.column_values.date4}
-                  date={event.column_values.date4}
-                  dateTimeTimetable={event.column_values.date4}
-                  timetable={event.column_values.date4}
-                  description={event.column_values.statut_16}
-                  title={event.name}
-                />
-              ))} */}
             </ul>
           </div>
           <div className="flex flex-col justify-center mt-8 space-y-10">
