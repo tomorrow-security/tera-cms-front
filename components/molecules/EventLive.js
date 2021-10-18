@@ -19,8 +19,6 @@ export default function EventLive({
   platform,
   dateTimeDate,
   date,
-  dateTimeTimetable,
-  timetable,
   description,
   title,
 }) {
