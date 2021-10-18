@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 
 import BlockTitle from "../atoms/BlockTitle"
-import IconChevronDown from "../atoms/IconChevronDown"
 
 const jobs = [
   {
@@ -105,11 +104,6 @@ export default function BlockCareer() {
                   </option>
                 ))}
               </select>
-              <div className="absolute inset-y-0 right-0 flex items-center px-3 bg-transparent pointer-events-none ">
-                <div className="w-8 h-8 animate-bounce">
-                  <IconChevronDown />
-                </div>
-              </div>
             </form>
             <div className="my-4">
               <p>
