@@ -6,11 +6,20 @@ import IconLinkedin from "../atoms/IconLinkedin"
 import IconTwitch from "../atoms/IconTwitch"
 // TODO importer Incone Youtube quand fait
 
-const platformsLogosDict = {
+//TODO voir pour regrouper ces tableaux avec celui de SocialNav
+const platformsLogos = {
   Facebook: <IconFacebook />,
   Instagram: <IconInstagram />,
   Linkedin: <IconLinkedin />,
   Twitch: <IconTwitch />,
+  // TODO ajouter Youtube
+}
+
+const platformsLink = {
+  Facebook: "https://www.facebook.com/teracampus",
+  Instagram: "https://www.instagram.com/tera.campus",
+  Linkedin: "https://www.linkedin.com/company/teracampus",
+  Twitch: "https://www.twitch.tv/teracampus",
   // TODO ajouter Youtube
 }
 
@@ -27,8 +36,8 @@ export default function EventLive({
       <div className="flex flex-row items-center w-full md:w-3/4">
         <LiveLink
           name={platform}
-          url={url}
-          logo={platformsLogosDict[platform]}
+          url={platformsLink[platform]}
+          logo={platformsLogos[platform]}
         />
         <div className="flex flex-col w-5/6 px-2 py-4 xl:ml-2">
           <div className="flex flex-row mb-1">
