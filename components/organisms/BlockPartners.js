@@ -21,16 +21,14 @@ export default function BlockPartners() {
         />
         <div className="mx-4">
           <Approach />
-          <div className="flex items-center justify-between mb-8 flex-nowrap">
-            <CarouselPartners partners={<PartnersEuropean />} />
-          </div>
+          <CarouselPartners partners={<PartnersEuropean />} />
           <Paragraph gutterBottom>
             A travers ses partenaires,&nbsp; Tera Campus veut te donner
             l&apos;opportunité d&apos;apprendre de tous les acteurs du
             marché.&nbsp; Notre approche est conceptuelle :&nbsp;
             <Strong>
               nous ne nous focalisons pas sur des technologies
-              spécifiques,&nbsp; mais formons nos étudiants à savoir
+              spécifiques,&nbsp;mais formons nos étudiants à savoir
               s&apos;adapter à n&apos;importe laquelle.
             </Strong>
           </Paragraph>
@@ -38,11 +36,10 @@ export default function BlockPartners() {
             <PageLink id="brochure" label="Télécharger la brochure" />
           </div>
           <Paragraph gutterBottom>
-            Chez Tera Campus,&nbsp; il est possible d&apos;en apprendre plus sur
-            l&apos;écosystème technique européen&nbsp; et nous privilégions les
+            Chez Tera Campus,&nbsp;il est possible d&apos;en apprendre plus sur
+            l&apos;écosystème technique européen&nbsp;et nous privilégions les
             partenaires nationaux lorsque cela est possible.
           </Paragraph>
-
           <CarouselPartners partners={<PartnersCollaboratives />} />
         </div>
       </div>
