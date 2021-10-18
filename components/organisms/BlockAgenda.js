@@ -6,45 +6,14 @@ import EventLive from "../molecules/EventLive"
 import IconeYoutube from "../atoms/IconeYoutube"
 
 export default function BlockAgenda(events) {
-  const lives = Object.values(events)
   /**
    * bolean of no event in the array
    */
-  const notEvent = lives.length === 0
+  const notEvent = events.events.length === 0
   /**
    * calendar cache if no event in the array
    */
   const invisible = notEvent ? "hidden" : ""
-
-  // console.log("events:", events)
-  console.log("lives:", lives)
-
-  // const broadcasts = lives.map((live) =>
-  //   live.map(({ column_values }) => Object.values(column_values))
-  // )
-
-  // console.log("broadcasts:", broadcasts)
-
-  /**
-   * mise en tableau de l'objet contenant les valeur désirées
-   */
-  // const onTheAir = lives.map((live) =>
-  //   live.map(({ column_values }) =>
-  //     Object.values(column_values).map((i) => Object.values(i))
-  //   )
-  // )
-
-  // console.log("onTheAir:", onTheAir)
-
-  // console.log("date:", date)
-  // TODO voir .find pour récupéré précisement la valuer voulue
-
-  //* en test :
-  // const stream = events.column_values.text
-  // console.log("stream:", stream)
-
-  // TODO map sur lives
-  //*
 
   return (
     <section id="agenda" className="py-10 lg:py-20">
