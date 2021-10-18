@@ -5,9 +5,6 @@ import SocialNav from "../molecules/SocialNav"
 import EventLive from "../molecules/EventLive"
 import IconeYoutube from "../atoms/IconeYoutube"
 
-import LiveLink from "../atoms/LiveLink"
-import LinkButton from "../atoms/LinkButton"
-
 export default function BlockAgenda(events) {
   const lives = Object.values(events)
   /**
@@ -22,29 +19,32 @@ export default function BlockAgenda(events) {
   // console.log("events:", events)
   console.log("lives:", lives)
 
-  const broadcasts = lives.map((live) =>
-    live.map(({ column_values }) => Object.values(column_values))
-  )
+  // const broadcasts = lives.map((live) =>
+  //   live.map(({ column_values }) => Object.values(column_values))
+  // )
 
-  console.log("broadcasts:", broadcasts)
+  // console.log("broadcasts:", broadcasts)
 
   /**
    * mise en tableau de l'objet contenant les valeur désirées
    */
-  const onTheAir = lives.map((live) =>
-    live.map(({ column_values }) =>
-      Object.values(column_values).map((i) => Object.values(i))
-    )
-  )
+  // const onTheAir = lives.map((live) =>
+  //   live.map(({ column_values }) =>
+  //     Object.values(column_values).map((i) => Object.values(i))
+  //   )
+  // )
 
-  console.log("onTheAir:", onTheAir)
-
-  // const test = onTheAir.map((a) => console.log("a:", a))
-
-  // const date = (broadcasts = "statut_1") && { text }
+  // console.log("onTheAir:", onTheAir)
 
   // console.log("date:", date)
   // TODO voir .find pour récupéré précisement la valuer voulue
+
+  //* en test :
+  // const stream = events.column_values.text
+  // console.log("stream:", stream)
+
+  // TODO map sur lives
+  //*
 
   return (
     <section id="agenda" className="py-10 lg:py-20">
@@ -56,57 +56,16 @@ export default function BlockAgenda(events) {
         <div className="lg:flex lg:flex-row lg:flex-nowrap lg:justify-around lg:items-center lg:text-xl">
           <div className={`w-full lg:w-1/2 ${invisible}`}>
             <ul className="flex flex-col justify-center mx-2 sm:justify-start lg:text-lg">
-              {lives.map((live, index) => (
-                <div key={index}>
-                  {live.map(({ name, id }) => (
-                    <div key={id}>
-                      <li className="flex flex-col items-center justify-center w-full my-2 md:flex-row md:justify-between lg:w-11/12 lg:border lg:border-tc-blue lg:rounded lg:shadow-lg">
-                        <div className="flex flex-row items-center w-full md:w-3/4">
-                          {/* <LiveLink
-                          name={platform}
-                          url={url}
-                          logo={platformsLogosDict[platform]}
-                        /> */}
-                          <div className="flex flex-col w-5/6 px-2 py-4 xl:ml-2">
-                            <div className="flex flex-row mb-1">
-                              <time
-                                className="mr-2"
-                                dateTime={broadcasts[0][0].text}
-                              >
-                                {broadcasts[0][0].text}
-                              </time>
-                              <time dateTime={broadcasts[0][0].text}>
-                                {broadcasts[0][0].text}
-                              </time>
-                            </div>
-                            <div className="text-sm sm:text-base">
-                              <h3 className="font-bold">{live.name}</h3>
-                              <p>{broadcasts[0][0].text}</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="mx-auto mt-1 mb-4 w-max md:w-1/4 md:mx-0 md:mt-4">
-                          <LinkButton url="registration" label="Je m'inscris" />
-                        </div>
-                      </li>
-
-                      {/* {broadcasts.map((broadcast, index) => (
-                        <EventLive
-                          key={index}
-                          // url={date}
-                          url={broadcast.text}
-                          platform={broadcast.text}
-                          dateTimeDate={broadcast.text}
-                          date={broadcast.text}
-                          dateTimeTimetable={broadcast.text}
-                          timetable={broadcast.text}
-                          description={broadcast.text}
-                          title={name}
-                        />
-                      ))} */}
-                    </div>
-                  ))}
-                </div>
+              {events.events.map((event, index) => (
+                <EventLive
+                  key={index}
+                  url={event.column_values[6].text}
+                  platform={event.column_values[6].text}
+                  dateTimeDate={event.column_values[2].text}
+                  date={event.column_values[2].text}
+                  description={event.column_values[5].text}
+                  title={event.name}
+                />
               ))}
             </ul>
           </div>

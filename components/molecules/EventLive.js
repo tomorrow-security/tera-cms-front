@@ -15,7 +15,6 @@ const platformsLogosDict = {
 }
 
 export default function EventLive({
-  boadcast,
   url,
   platform,
   dateTimeDate,
@@ -25,8 +24,6 @@ export default function EventLive({
   description,
   title,
 }) {
-  //TODO map à ce niveau
-
   return (
     <li className="flex flex-col items-center justify-center w-full my-2 md:flex-row md:justify-between lg:w-11/12 lg:border lg:border-tc-blue lg:rounded lg:shadow-lg">
       <div className="flex flex-row items-center w-full md:w-3/4">
@@ -40,7 +37,6 @@ export default function EventLive({
             <time className="mr-2" dateTime={dateTimeDate}>
               {date}
             </time>
-            <time dateTime={dateTimeTimetable}>{timetable}</time>
           </div>
           <div className="text-sm sm:text-base">
             <h3 className="font-bold">{title}</h3>
