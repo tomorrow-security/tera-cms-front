@@ -1,37 +1,44 @@
+import axios from "axios";
+
 const capitalize = (str) => {
-  str = str.toLowerCase()
-  return `${str.charAt(0).toUpperCase()}${str.slice(1)}`
-}
+  str = str.toLowerCase();
+  return `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
+};
 
 export default async (req, res) => {
-  const firstName = capitalize(req.body.firstName)
-  const lastName = req.body.lastName.toUpperCase()
-  const email = req.body.email
-  // const phone = req.body.phone
-  const consent = req.body.consent
+  if (req.method === "POST") {
+    const firstName = capitalize(req.body.firstName);
+    const lastName = req.body.lastName.toUpperCase();
+    const email = req.body.email;
+    const phone = req.body.phone;
+    const consent = req.body.consent;
 
-  const data = JSON.stringify({
-    text: lastName,
-    text2: firstName,
-    email: { email: email, text: email },
-    // 'phone': {'phone': phone , 'countryShortName': enrolment.phone_country_short_name},
-    status: { label: "Brochure" },
-    dropdown: "Website",
-    check: { checked: consent },
-  })
+    let data = "{";
+    data = data + `"text": "${lastName}",`;
+    data = data + `"text2": "${firstName}",`;
+    data = data + `"email": {"email": "${email}", "text": "${email}"},`;
+    data = data + `"phone": {"phone": "${phone}"},`;
+    data = data + `"status": {"label": "Brochure"},`;
+    data = data + `"check": {"checked": "${consent}"}`;
+    data = data + "}";
 
-  const query = `mutation { create_item (board_id: ${process.env.MONDAY_CRM_STUDENTS_BOARD_ID}, group_id: topics, item_name: "${firstName} ${lastName}", column_values: ${data}) { id }}`
+    const query = `mutation { create_item (board_id: ${
+      process.env.MONDAY_CRM_STUDENTS_BOARD_ID
+    }, group_id: "topics", item_name: "${firstName} ${lastName}", column_values: ${JSON.stringify(
+      data
+    )}) { id } }`;
 
-  response = await fetch("https://api.monday.com/v2", {
-    method: "post",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: process.env.MONDAY_API_KEY,
-    },
-    body: JSON.stringify({
-      query: query,
-    }),
-  })
+    const response = await axios.post(
+      "https://api.monday.com/v2",
+      JSON.stringify({ query: query }),
+      {
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": process.env.MONDAY_API_KEY,
+        },
+      }
+    );
 
-  res.status(200).json({ name: "John Doe" })
-}
+    res.status(response.status);
+  }
+};

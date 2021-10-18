@@ -1,8 +1,9 @@
-import SocialLink from "../atoms/SocialLink"
-import IconFacebook from "../atoms/IconFacebook"
-import IconInstagram from "../atoms/IconInstagram"
-import IconLinkedin from "../atoms/IconLinkedin"
-import IconTwitch from "../atoms/IconTwitch"
+import SocialLink from '../atoms/SocialLink'
+import IconFacebook from '../atoms/IconFacebook'
+import IconInstagram from '../atoms/IconInstagram'
+import IconLinkedin from '../atoms/IconLinkedin'
+import IconTwitch from '../atoms/IconTwitch'
+import IconYoutube from '../atoms/IconeYoutube.js'
 
 // TODO voir pour regrouper ce tableau et ceux de EventLive
 const socialNetworks = [
@@ -26,21 +27,25 @@ const socialNetworks = [
     url: "https://www.twitch.tv/teracampus",
     logo: <IconTwitch />,
   },
-  //TODO ajouter Youtube
+  {
+    label: 'youtube',
+    url: 'https://www.youtube.com/channel/UCwP2ZwND8Ce4U0qpz03iSeg',
+    logo: <IconYoutube />,
+  },
 ]
 
 export default function SocialNav() {
-  return (
-    <ul className="flex flex-row justify-center mt-8 flex-nowrap justify-items-center">
-      {socialNetworks.map((socialNetwork) => (
-        <li key={socialNetwork.label}>
-          <SocialLink
-            name={socialNetwork.label}
-            url={socialNetwork.url}
-            logo={socialNetwork.logo}
-          />
-        </li>
-      ))}
-    </ul>
-  )
+	return (
+		<ul className="flex flex-row justify-center m-2 flex-nowrap justify-items-center">
+			{socialNetworks.map((socialNetwork) => (
+				<li key={socialNetwork.label}>
+					<SocialLink
+						name={socialNetwork.label}
+						url={socialNetwork.url}
+						logo={socialNetwork.logo}
+					/>
+				</li>
+			))}
+		</ul>
+	)
 }
