@@ -1,3 +1,4 @@
+// TODO laisser Github ou mettre Giuthub campus Program ?
 const partnersCollaboratives = [
   {
     name: "Cisco",
@@ -19,14 +20,14 @@ const partnersCollaboratives = [
     name: "Github",
     logoUrl: "/logo-github.svg",
   },
-  {
-    name: "Atlassian",
-    logoUrl: "/logo-atlassian.svg",
-  },
-  {
-    name: "Zoom",
-    logoUrl: "/logo-zoom.svg",
-  },
+  // {
+  //   name: "Atlassian",
+  //   logoUrl: "/logo-atlassian.svg",
+  // },
+  // {
+  //   name: "Zoom",
+  //   logoUrl: "/logo-zoom.svg",
+  // },
   {
     name: "VMware ",
     logoUrl: "/logo-vmware.svg",
