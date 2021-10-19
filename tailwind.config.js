@@ -154,6 +154,7 @@ module.exports = {
       backgroundImage: ["group-hover", "hover"],
       borderColor: ["focus", "checked"],
       borderOpacity: ["disabled"],
+      borderRadius: ["group-focus"],
       borderStyle: ["focus"],
       borderWidth: ["focus"],
       display: ["group-focus"],
