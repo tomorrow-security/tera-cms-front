@@ -1,27 +1,7 @@
 import PageLink from "../atoms/PageLink"
-
-const Paragraph = ({ bold, gutterBottom, children }) => (
-  <p
-    className={`${gutterBottom && "mb-4 md:mb-8"}
-		ml-9 text-left
-		${bold && "font-bold"}`}
-  >
-    {children}
-  </p>
-)
-
-const Strong = ({ children }) => (
-  <strong className="font-bold text-tc-red">{children}</strong>
-)
-
-const LittleTitle = ({ children }) => (
-  <div className="flex flex-row items-center my-2">
-    <div className="w-5 h-5 mr-4 transform rotate-45 bg-tc-red"></div>
-    <h2 className="w-3/4 text-lg font-bold text-tc-blue sm:text-xl xl:text-2xl">
-      {children}
-    </h2>
-  </div>
-)
+import LittleTitle from "../atoms/LittleTitle"
+import Strong from "../atoms/Strong"
+import Paragraphe from "../atoms/Paragraphe"
 
 export default function BlockConcept() {
   return (
@@ -31,7 +11,7 @@ export default function BlockConcept() {
           <ul className="mx-4 md:mx-0 md:pl-2 lg:w-2/3">
             <li>
               <LittleTitle>Tera Campus c'est quoi ?</LittleTitle>
-              <Paragraph gutterBottom>
+              <Paragraphe>
                 <Strong>
                   Tera Campus est une école Supérieure d'Informatique en
                   télé-présentiel,&nbsp;
@@ -47,34 +27,36 @@ export default function BlockConcept() {
                 seulement de fortes compétences techniques, mais aussi des
                 méthodes d'organisation, de collaboration et de communication
                 indispensables à toute carrière professionnelle !
-              </Paragraph>
+              </Paragraphe>
             </li>
             <li>
               <LittleTitle>Comment étudier avec Tera Campus ?</LittleTitle>
-              <Paragraph gutterBottom>
+              <Paragraphe>
                 <Strong>
-                  La formation Tera Campus peut être suivie de n'importe où avec
-                  un seul pré-requis : un ordinateur et une connexion
-                  internet.&nbsp;
+                  La formation Tera Campus peut être suivie de n'importe
+                  où,&nbsp;
                 </Strong>
-                Tous les cours seront animés par un formateur qualifié. Oublie
-                les déplacements, cette fois-ci c'est l'école qui vient à toi !
-              </Paragraph>
+                les seuls prérequis sont un ordinateur et une connexion
+                internet. Tous les cours seront animés par un formateur
+                qualifié. Oublie les déplacements, cette fois-ci c'est l'école
+                qui vient à toi !
+              </Paragraphe>
             </li>
             <li>
               <LittleTitle>Vais-je rencontrer les étudiants ?</LittleTitle>
-              <Paragraph gutterBottom>
+              <Paragraphe>
                 Tout au long de l'année, Tera Campus organise trois Bivouacs de
                 deux semaines complètes.&nbsp;
                 <Strong>
-                  En octobre, en février puis en mai, tu rejoindras les autres
+                  En octobre, en janvier puis en mai, vous rejoindrez les autres
                   étudiants de Tera Campus pour partager, créer et construire un
                   esprit d'équipe au travers d'exercices de team building et de
                   Hackathons.&nbsp;
                 </Strong>
-                En améliorant la cohésion de groupe, nous améliorons aussi ton
-                apprentissage pour mieux t'intégrer dans le monde professionnel.
-              </Paragraph>
+                En améliorant la cohésion de groupe, nous améliorons aussi votre
+                apprentissage pour mieux vous intégrer dans le monde
+                professionnel.
+              </Paragraphe>
             </li>
           </ul>
           <div
