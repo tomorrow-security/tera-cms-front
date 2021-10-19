@@ -57,7 +57,6 @@ export default function InputButton({
           : submitButtonParams["default"].value}
         <input
           onClick={onClick}
-          // onSubmit={() => reset({ keepIsSubmitted:false })}  //!
           type="submit"
           value={
             ["loading", "success"].includes(mutation.status)

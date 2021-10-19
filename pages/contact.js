@@ -25,6 +25,8 @@ export default function Contact() {
   })
   const onSubmit = (formData) => mutation.mutate(formData)
 
+  //TODO revoir le layout md
+
   return (
     <>
       <Head>
@@ -44,7 +46,9 @@ export default function Contact() {
             />
             <div className="flex flex-col flex-nowrap md:flex-row-reverse md:justify-around md:items-center">
               <div className="flex flex-col w-full px-2 space-y-2 md:w-1/2">
-                <SocialNav />
+                <div className="w-3/4 mx-auto">
+                  <SocialNav />
+                </div>
                 <div className="flex flex-row items-start flex-nowrap">
                   <div className="w-4 h-4 m-2 transform rotate-45 bg-tc-red">
                     {" "}
@@ -155,7 +159,8 @@ export default function Contact() {
                           )}
                         </div>
                         <div className="flex justify-center">
-                          {/* // TODO remonter le bouton dans inputButoon (voir avec le nouveau bouton) */}
+                          {/* //TODO revoir le bouton pb de style */}
+
                           <InputButton mutation={mutation} />
                         </div>
                       </form>
