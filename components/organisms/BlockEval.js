@@ -1,5 +1,5 @@
 export default function BlockEval() {
-  // TODO suppr le grand cadre au focus
+  // TODO faire un tableau et boucler dessus
   return (
     <section className="py-10">
       <div className="flex flex-col justify-center mx-4 md:w-1/2 lg:w-1/3 2xl:w-1/4 md:mx-auto">
