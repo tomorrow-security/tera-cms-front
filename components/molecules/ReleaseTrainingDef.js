@@ -1,24 +1,38 @@
 import LittleTitle from "../atoms/LittleTitle"
 import TrainingReleaseFunding from "../molecules/TrainingReleaseFunding"
+import Paragraphe from "../atoms/Paragraphe"
 
 export default function ReleaseTrainingDef() {
   return (
-    <section id="BlockTrainingReleseFunding" className="py-5 lg:py-10">
+    <section id="releasetrainingdef" className="py-5">
       <div className="md:container md:mx-auto">
         <div className="mx-4">
           <LittleTitle children=" L'alternance c'est quoi ?" />
-          <p className="my-6 md:mx-6 lg:text-lg lg:mx-12 2xl:text-xl">
+          <Paragraphe>
             Un système de formation qui est fondé sur une phase pratique et une
             phase théorique qui alternent, permettant de se préparer plus
             efficacement à un métier.
-          </p>
+          </Paragraphe>
           <p className="font-bold md:mx-6 lg:mx-12 text-tc-red">
             Étudier gratuitement tout en étant salarié : la vraie force de
             l’alternance !
           </p>
-          <div className="md:m-6 lg:mx-12">
+          <div className="my-2 md:m-6 lg:mx-12">
             <TrainingReleaseFunding />
           </div>
+          <Paragraphe>
+            Durant cette période, l’alternant suit un ensemble de cours
+            techniques en télé-présentiel, lui permettant de restituer son
+            savoir au travers des missions professionnelles qui lui sont
+            confiées au sein de l’entreprise. Le lien ainsi créé entre
+            enseignement théorique et application en entreprise, permet
+            d’exploiter les acquis immédiatement. Dans cette démarche, notre
+            école s’engage à aider tous ses étudiants dans leur recherche
+            d’entreprise, et propose deux solutions : le contrat d'apprentissage
+            et le contrat de professionnalisation. Connaissez-vous le plan “1
+            jeune, 1 solution” ? Une solution d’Etat pour former, accompagner et
+            faciliter l’insertion professionnelle de tous les jeunes...
+          </Paragraphe>
         </div>
       </div>
     </section>

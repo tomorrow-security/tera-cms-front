@@ -1,5 +1,6 @@
 import Head from "next/head"
 import BlockRelease from "../components/organisms/BlockRelease"
+import BlockContract from "../components/organisms/BlockContract"
 
 const pageTitle = "L'alternance - Tera Campus"
 const pageDescription = "L'alternance"
@@ -18,6 +19,7 @@ export default function ReleaseTraining() {
 
       <main>
         <BlockRelease />
+        <BlockContract />
       </main>
     </>
   )
