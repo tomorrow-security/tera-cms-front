@@ -26,6 +26,9 @@ const headernav = [
   { id: "#agenda", label: "Agenda" },
   { id: "contact", label: "Contact" },
 ]
+
+// TODO les lien via HeaderSubNav ne fonctione pas ne fonctionne pas
+
 export default function HeaderNav() {
   return (
     <nav className="lg:flex lg:justify-between">
