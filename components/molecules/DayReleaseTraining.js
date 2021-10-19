@@ -1,9 +1,9 @@
 import BlockTitle from "../atoms/BlockTitle"
 import LittleTitle from "../atoms/LittleTitle"
 
-export default function BlockDayReleaseTraining() {
+export default function DayReleaseTraining() {
   return (
-    <section id="DayReleaseTraining" className="py-10 lg:py-20">
+    <section id="DayReleaseTraining" className="py-5 lg:py-10">
       <div className="md:container md:mx-auto">
         <BlockTitle
           title="L'alternance"
