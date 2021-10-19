@@ -1,21 +1,25 @@
 import PageLink from "../atoms/PageLink"
 import HeaderSubNav from "./HeaderSubNav"
 
+// TODO mettre à jour les routes quand touts les pages et block seront fait
 // TODO rassembler les datas communes au header et au plan
 const ecole = [
   { id: "concept", label: "Tera campus c'est quoi ?" },
+  { id: "guides", label: "Nos guides" },
   { id: "pedagogy", label: "Notre pédagogie" },
   { id: "bivouac", label: "Bivouac" },
   { id: "schoolboard", label: "Conseil de perfectionnement" },
   { id: "handicap", label: "Etudier en situation de handicap" },
   { id: "quality", label: "Habilitation qualité" },
-  { id: "faq", label: "FAQ" },
+  { id: "#faq", label: "FAQ" },
 ]
-// TODO test entre career et #career pour le route des bloque hors homePage
+
 const program = [
   { id: "program", label: "BAC+3 Administrateur des systèmes d'information" },
   { id: "partner", label: "Les partenaires" },
-  { id: "#career", label: "Les carrières" },
+  { id: "career", label: "Les carrières" },
+  { id: "brochure", label: "Demande de brochure" },
+  { id: "join", label: "Nous rejoindre" },
 ]
 
 const alternance = [
