@@ -1,7 +1,7 @@
 import BlockTitle from "../atoms/BlockTitle"
 import LittleTitle from "../atoms/LittleTitle"
 
-export default function BlockPreRequisite() {
+export default function BlockPrerequisite() {
   return (
     <section id="prerequis" className="py-10 md:pt-10">
       <div className="md:container md:mx-auto">
