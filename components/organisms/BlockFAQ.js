@@ -26,7 +26,7 @@ function Item({ question, answer }) {
   return (
     <div>
       <p className="text-lg font-bold md:text-xl">{question}</p>
-      <p className="mt-3 text-justify">{answer}</p>
+      <p className="mt-3">{answer}</p>
     </div>
   )
 }
@@ -44,7 +44,7 @@ export default function BlockFaq({ questions }) {
       <section id="faq" className="py-10 md:py-20">
         <div className="md:container md:mx-auto">
           <BlockTitle
-            title="Les réponses à tes questions"
+            title="FAQ"
             iconPicture={{ backgroundImage: "url('faq.png')" }}
           />
           <div className="grid grid-cols-1 gap-8 mx-4 lg:grid-cols-2">

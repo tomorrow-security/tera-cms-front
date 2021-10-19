@@ -61,7 +61,7 @@ export async function getServerSideProps() {
       questions: [
         {
           name: "Qui peut rejoindre Tera Campus ?",
-          text: "Aucun pré-requis n'est nécessaire pour rejoindre Tera Campus. Il faut un ordinateur et avoir accès à une connexion internet. La formation s'adresse à des personnes motivées avant tout.",
+          text: "La formation Tera Campus s'adresse à des personnes motivées avant tout. Les seuls prérequis sont : un ordinateur et une connexion internet.",
         },
         {
           name: "Le diplôme est-il reconnu par l'état ?",
@@ -69,19 +69,19 @@ export async function getServerSideProps() {
         },
         {
           name: "Quelle est la durée de la formation ?",
-          text: "Le cursus complet se déroule en 5 années. D'octobre à juin pour les deux premières années en formation initiale, puis d'octobre à septembre les années suivantes en contrat d'alternance. Tera Campus propose aussi un diplôme optionnel en fin de troisième année, te permettant ainsi de réduire la durée de ton cursus.",
+          text: "Le cursus complet se déroule sur 3 années et se décompose en deux périodes distinctes : D'octobre à septembre pour la première année délivrant un diplôme de niveau BAC+3 en formation par alternance, puis d'octobre à septembre les deux années suivantes, en contrat d'alternance également mais aussi intégralement en anglais. Ces deux années vous permettront de valider un titre RNCP de niveau BAC+5.",
         },
         {
           name: "Quel est le coût de la formation ?",
-          text: "Chez Tera Campus, nous avons souhaité faire une proposition simple et accessible à 6500€ par année en formation initiale. Le cursus intégral ne te coûtera qu'un maximum de deux années (1ère et 2ème année), soit 13000€, puisque le coût de ta formation sera ensuite prise en charge par ton contrat d'alternance.",
+          text: "Chez Tera Campus, le coût de formation est intégralement pris en charge par les opérateurs de compétences affiliés aux entreprises, puisque nous avons fait le choix de proposer des formations par alternance uniquement. Elle n’aura donc aucun coût pour l’étudiant et vous serez rémunéré pour votre travail dans le cadre du contrat d’alternance.",
         },
         {
           name: "Comment se déroule l'inscription ?",
-          text: "Après avoir rempli le formulaire de pré-inscription en ligne, tu accéderas pourras accéder à notre test de positionnement sous forme de QCM (tu recevras aussi le lien par e-mail). Ce test nous permettra de connaître ton niveau afin de te proposer un programme adapté. Une fois le test réalisé, Tera Campus t'inviteras à passer un court entretien par visioconférence pour motiver ta candidature et t'expliquer le concept de notre école. Enfin, tu recevras une réponse sous 48 heures qui te permettras de finaliser ton inscription.",
+          text: "Après avoir reçu votre candidature en ligne, vous accèderez à notre test de positionnement sous forme de QCM (directement sur le site ou via un lien reçu par mail). Ce test ayant une simple valeur informative, nous permettra de connaître votre niveau afin de vous proposer un programme adapté. Une fois le test réalisé, l’école vous invitera à prendre un rendez-vous via un lien « Calendly » avec l’un de nos guides, avec qui vous passerez un court entretien par visioconférence pour nous faire part de votre situation, de vos motivations, mais aussi afin que nous vous expliquions notre vision de la formation et du parcours pédagogique",
         },
         {
           name: "Comment se déroule une année académique ?",
-          text: "La rentrée débute avec un Bivouac de deux semaines complètes, dans un lieu choisi par Tera Campus. Ce premier Bivouac permettra de créer un esprit d'équipe, entre tous les étudiants de l'école, qui va perdurer tout au long de l'année académique . Ensuite tu auras des cours en ligne avec de vrais professionnels, ainsi que des ressources complémentaires pour pouvoir approfondir tes connaissances à ton rythme. Un deuxième Bivouac de deux semaines complètes permettra de faire le point à mi-parcours, et de collaborer avec les autre étudiants lors d'un Hackathon et d'exercices stimulants de Team Building. Et enfin, les cours en ligne reprendront jusqu'au mois de juin pour finaliser le programme de l'année. Le dernier Bivouac sera un moyen de clôturer l'année tous ensemble, autour d'activités permettant de sceller tous les étudiants et de fêter l'arrivée de l'été.",
+          text: "La rentrée débute avec un Bivouac de deux semaines complètes, dans un lieu choisi par Tera Campus. Ce premier Bivouac permettra de créer un esprit d'équipe qui va perdurer tout au long de l'année académique. Ensuite, jusqu'aux vacances de février, les étudiants suivent des cours en ligne avec des professionnels reconnus, ainsi que des ressources complémentaires pour pouvoir approfondir leurs connaissances à leur rythme. Un deuxième Bivouac de deux semaines complètes permettra de faire le point à mi-parcours, et de collaborer avec les autres étudiants lors d'un Hackathon et d'exercices stimulants de Team Building. À la suite de ce deuxième bivouac, les cours en ligne reprendront jusqu'au mois de juin pour finaliser le programme de l'année. Le dernier Bivouac quand-t à lui sera un moyen de clôturer l'année tous ensemble autour d'activités permettant de sceller les relations entre étudiants, et de fêter l'arrivée de l'été.",
         },
       ],
     },
