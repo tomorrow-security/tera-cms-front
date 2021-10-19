@@ -26,6 +26,7 @@ export default function Contact() {
   const onSubmit = (formData) => mutation.mutate(formData)
 
   //TODO revoir le layout md
+
   return (
     <>
       <Head>
@@ -159,6 +160,7 @@ export default function Contact() {
                         </div>
                         <div className="flex justify-center">
                           {/* //TODO revoir le bouton pb de style */}
+
                           <InputButton mutation={mutation} />
                         </div>
                       </form>

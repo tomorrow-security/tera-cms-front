@@ -84,8 +84,21 @@ module.exports = {
         "tc-blue-dark": "#01000a",
         "tc-red-dark": "#c92b00",
       },
+      gridRowStart: {
+        8: "8",
+        9: "9",
+        10: "10",
+        11: "11",
+        12: "12",
+        13: "13",
+      },
+      gridTemplateRows: {
+        "program-domain": "1fr 1fr 1fr 3fr",
+      },
       height: {
         "33vh": "33vh",
+        "1/12": "8.333333%",
+        "7/12": "58.333333%",
       },
       inset: {
         // TODO vérifier si tous les paramètres sont utilisés
@@ -107,6 +120,10 @@ module.exports = {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },
         },
+      },
+      // TODO mettre un losange
+      listStyleType: {
+        square: "square",
       },
       padding: {
         4.5: "1.125rem",
@@ -137,11 +154,14 @@ module.exports = {
       backgroundImage: ["group-hover", "hover"],
       borderColor: ["focus", "checked"],
       borderOpacity: ["disabled"],
+      borderRadius: ["group-focus"],
       borderStyle: ["focus"],
       borderWidth: ["focus"],
+      display: ["group-focus"],
       fontWeight: ["hover", "active", "focus"],
       fontSize: ["hover"],
       fontStyle: ["hover", "focus"],
+      justifyContent: ["group-focus"],
       inset: ["group-hover", "hover"],
       opacity: ["visited", "disabled"],
       padding: ["group-focus"],
