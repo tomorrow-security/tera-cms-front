@@ -25,7 +25,7 @@ const legal = [
   { id: "cgv", label: "CGV - Conditions Générales de Ventes" },
   { id: "cga", label: "CGA - Conditions Générales d'Achats" },
   { id: "cgi", label: "CGI - Conditions Générales d'Inscription" },
-  { id: "#", label: "Charte de l'utilisation du systè_me d'informations (SI)" },
+  { id: "#", label: "Charte de l'utilisation du système d'informations (SI)" },
   { id: "schoolrules", label: "Règlement intérieur" },
   { id: "legacy", label: "Mentions légales" },
   { id: "studyrules", label: "Règlement des études" },
