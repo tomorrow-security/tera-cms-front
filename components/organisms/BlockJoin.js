@@ -1,6 +1,7 @@
 // import React, { useState } from 'react'
 import BlockTitle from "../atoms/BlockTitle"
 import ExternalLink from "../molecules/ExternalLink"
+
 import Registration from "../molecules/Registration"
 
 export default function BlockJoin() {

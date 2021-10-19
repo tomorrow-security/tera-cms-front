@@ -1,5 +1,3 @@
-import PlanLink from "../atoms/PlanLink"
-
 export default function NavList({ pages, title }) {
   return (
     <nav>

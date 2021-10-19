@@ -16,6 +16,7 @@ const program = [
   { id: "program", label: "BAC+3 Administrateur des systèmes d'information" },
   { id: "partner", label: "Les partenaires" },
   { id: "career", label: "Les carrières" },
+  { id: "brochure", label: "La brochure" },
 ]
 const alternance = [
   { id: "blockreleasetraining", label: "C'est quoi l'alternance" },
