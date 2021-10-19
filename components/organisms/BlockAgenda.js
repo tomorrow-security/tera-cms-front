@@ -42,7 +42,9 @@ export default function BlockAgenda({ events }) {
               <span>et&nbsp;</span>
               <span>suis en direct toutes nos actualités :</span>
             </p>
-            <SocialNav />
+            <div className="w-1/2 mx-auto lg:w-1/3">
+              <SocialNav />
+            </div>
           </div>
         </div>
       </div>
