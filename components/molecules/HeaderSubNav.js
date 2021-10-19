@@ -7,7 +7,7 @@ export default function HeaderSubNav({ pages, title }) {
         <h3 className="relative px-1 rounded lg:px-2 lg:text-center hover:bg-tc-red hover:bg-opacity-50">
           {title}
         </h3>
-        <div className="hidden group-focus:flex">
+        <div className="hidden group-focus:flex hover:flex">
           <ul className="absolute top-0 z-30 w-48 mt-2 space-y-2 bg-opacity-75 border rounded lg:w-full2 left-full lg:left-auto lg:top-full bg-tc-blue border-tc-red">
             {pages.map(({ id, label }) => (
               <li key={`${id}`} className="lg:w-full">
