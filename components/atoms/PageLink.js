@@ -1,6 +1,5 @@
 import React from "react"
 import Link from "next/link"
-import { useRouter } from "next/router"
 
 // TODO ajouter du style au liens visité, 'visited'ne fonctionne pas : visited:text-tc-red => toujours red
 

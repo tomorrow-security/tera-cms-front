@@ -26,38 +26,22 @@ const headernav = [
   { id: "#agenda", label: "Agenda" },
   { id: "contact", label: "Contact" },
 ]
-export default function HeaderNav({ click, id, label }) {
+export default function HeaderNav() {
   return (
     <nav className="lg:flex lg:justify-between">
       <ul className="space-y-2 lg:mx-4 lg:space-y-0 lg:space-x-4 lg:flex lg:justify-center">
         <li className="w-28 lg:text-center lg:mx-auto lg:w-max">
-          <HeaderSubNav
-            id={id}
-            label={label}
-            title="Notre école"
-            pages={ecole}
-          />
+          <HeaderSubNav title="Notre école" pages={ecole} />
         </li>
         <li className="w-28 lg:text-center lg:mx-auto lg:w-max">
-          <HeaderSubNav
-            id={id}
-            label={label}
-            title="Le programme"
-            pages={program}
-          />
+          <HeaderSubNav title="Le programme" pages={program} />
         </li>
         <li className="w-28 lg:text-center lg:mx-auto lg:w-max">
-          <HeaderSubNav
-            id={id}
-            label={label}
-            title="Alternance"
-            pages={alternance}
-          />
+          <HeaderSubNav title="Alternance" pages={alternance} />
         </li>
         {headernav.map(({ id, label }) => (
           <li
             key={`${id}`}
-            onClick={click}
             className="flex text-center lg:items-center lg:mx-auto lg:w-max"
           >
             <PageLink id={id} label={label} />
