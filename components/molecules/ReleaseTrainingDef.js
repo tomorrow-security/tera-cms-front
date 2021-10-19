@@ -1,6 +1,7 @@
 import LittleTitle from "../atoms/LittleTitle"
+import TrainingReleaseFunding from "../molecules/TrainingReleaseFunding"
 
-export default function BlockReleaseTrainingDef() {
+export default function ReleaseTrainingDef() {
   return (
     <section id="BlockTrainingReleseFunding" className="py-5 lg:py-10">
       <div className="md:container md:mx-auto">
@@ -15,6 +16,9 @@ export default function BlockReleaseTrainingDef() {
             Étudier gratuitement tout en étant salarié : la vraie force de
             l’alternance !
           </p>
+          <div className="md:m-6 lg:mx-12">
+            <TrainingReleaseFunding />
+          </div>
         </div>
       </div>
     </section>
