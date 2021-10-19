@@ -3,24 +3,26 @@ import NavList from "../molecules/NavList"
 import PlanLink from "../atoms/PlanLink"
 import SocialNav from "../molecules/SocialNav"
 
+// TODO mettre à jour les routes quand touts les pages et block seront fait
 const ecole = [
-  { id: "concept", label: "Tera campus c'est quoi ?" },
-  { id: "pedagogy", label: "Notre pédagogie" },
-  { id: "bivouac", label: "Bivouac" },
+  { id: "#concept", label: "Tera campus c'est quoi ?" },
+  { id: "program/#method", label: "Notre pédagogie" },
+  { id: "bivouacs", label: "Bivouac" },
   { id: "schoolboard", label: "Conseil de perfectionnement" },
   { id: "handicap", label: "Etudier en situation de handicap" },
   { id: "quality", label: "Habilitation qualité" },
   { id: "faq", label: "FAQ" },
 ]
 const program = [
-  { id: "program", label: "BAC+3 Administrateur des systèmes d'information" },
-  { id: "partner", label: "Les partenaires" },
+  {
+    id: "program/#program",
+    label: "BAC+3 Administrateur des systèmes d'information",
+  },
+  { id: "program/#partners", label: "Les partenaires" },
   { id: "career", label: "Les carrières" },
   { id: "brochure", label: "La brochure" },
 ]
-const alternance = [
-  { id: "blockreleasetraining", label: "C'est quoi l'alternance" },
-]
+const alternance = [{ id: "releasetraining", label: "C'est quoi l'alternance" }]
 const legal = [
   { id: "cgv", label: "CGV - Conditions Générales de Ventes" },
   { id: "cga", label: "CGA - Conditions Générales d'Achats" },

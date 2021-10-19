@@ -4,10 +4,10 @@ import HeaderSubNav from "./HeaderSubNav"
 // TODO mettre à jour les routes quand touts les pages et block seront fait
 // TODO rassembler les datas communes au header et au plan
 const ecole = [
-  { id: "concept", label: "Tera campus c'est quoi ?" },
+  { id: "#concept", label: "Tera campus c'est quoi ?" },
   { id: "guides", label: "Nos guides" },
-  { id: "pedagogy", label: "Notre pédagogie" },
-  { id: "bivouac", label: "Bivouac" },
+  { id: "program/#method", label: "Notre pédagogie" },
+  { id: "bivouacs", label: "Bivouac" },
   { id: "schoolboard", label: "Conseil de perfectionnement" },
   { id: "handicap", label: "Etudier en situation de handicap" },
   { id: "quality", label: "Habilitation qualité" },
@@ -15,16 +15,17 @@ const ecole = [
 ]
 
 const program = [
-  { id: "program", label: "BAC+3 Administrateur des systèmes d'information" },
-  { id: "partner", label: "Les partenaires" },
+  {
+    id: "program/#program",
+    label: "BAC+3 Administrateur des systèmes d'information",
+  },
+  { id: "program/#partners", label: "Les partenaires" },
   { id: "career", label: "Les carrières" },
   { id: "brochure", label: "Demande de brochure" },
   { id: "join", label: "Nous rejoindre" },
 ]
 
-const alternance = [
-  { id: "blockreleasetraining", label: "C'est quoi l'alternance" },
-]
+const alternance = [{ id: "releasetraining", label: "C'est quoi l'alternance" }]
 
 const headernav = [
   { id: "#agenda", label: "Agenda" },
