@@ -5,7 +5,7 @@ import Program from "../molecules/Program"
 
 export default function BlockProgramme() {
   return (
-    <section id="programme" className="py-10 md:pb-0">
+    <section id="program" className="py-10 md:pb-0">
       <div className="md:container md:mx-auto">
         <BlockTitle
           title="Notre programme"

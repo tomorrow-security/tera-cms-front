@@ -13,7 +13,7 @@ const Paragraph = ({ gutterBottom, children }) => (
 
 export default function BlockPartners() {
   return (
-    <section id="prerequis" className="py-10 md:py-20">
+    <section id="partners" className="py-10 md:py-20">
       <div className="md:container md:mx-auto">
         <BlockTitle
           title="Nos partenaires"
