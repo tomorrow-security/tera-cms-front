@@ -1,5 +1,3 @@
-import SubLink from "../atoms/SubLink"
-
 export default function NavList({ pages, title }) {
   return (
     <nav>
