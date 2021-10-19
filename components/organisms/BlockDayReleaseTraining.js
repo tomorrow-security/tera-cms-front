@@ -1,4 +1,5 @@
 import BlockTitle from "../atoms/BlockTitle"
+import LittleTitle from "../atoms/LittleTitle"
 
 export default function BlockDayReleaseTraining() {
   return (
@@ -8,11 +9,9 @@ export default function BlockDayReleaseTraining() {
           title="L'alternance"
           iconPicture={{ backgroundImage: "url('alternance.png')" }}
         />
-        <section className="md:flex md:mx-6 lg:mx-12 md:flex-row md:justify-between md:items-center">
+        <section className="md:mx-4 md:flex md:flex-row md:justify-between md:items-center">
           <div className="mx-4 md:mx-0 md:mr-6 md:w-1/2">
-            <h2 className="py-2 text-lg font-bold lg:text-xl 2xl:text-2xl">
-              L'alternance chez <span className="uppercase">Tera Campus</span>
-            </h2>
+            <LittleTitle children="L'alternance chez TERA CAMPUS" />
             <p className="my-6 lg:text-lg 2xl:text-xl">
               Dès la troisième année (BAC +2/3), l’ensemble des formations Tera
               Campus sont dispensées à 100% par alternance. Cette période est
