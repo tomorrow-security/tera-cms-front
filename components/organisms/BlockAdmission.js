@@ -3,7 +3,12 @@ import LitleTile from "../atoms/LittleTitle"
 import Paragraphe from "../atoms/Paragraphe"
 import Cta from "../atoms/Cta"
 
-import Registration from "../molecules/Registration"
+const steps = [
+  "Dossier de candidature",
+  "Test de positionnement (100 questions sous forme de QCM autour de l'IT)",
+  "Résultats du test et entretien en visioconférence avec l'un de nos Guides",
+  "Signature du contrat d'inscription",
+]
 
 export default function BlockAdmission() {
   return (
@@ -18,7 +23,7 @@ export default function BlockAdmission() {
             <p>Tera Campus, une école post-bac</p>
             <p>100% en télé-présentiel</p>
           </div>
-          <div className="mx-4">
+          <div>
             <LitleTile children="Prérequis" />
             <Paragraphe>
               La formation Tera Campus s'adresse avant tout à des personnes
@@ -26,11 +31,26 @@ export default function BlockAdmission() {
               connexion à Internet
             </Paragraphe>
           </div>
-          <Registration />
-          <div className="flex justify-around p-8 bg-tc-blue">
-            <Cta title="Candidature en ligne" id="/enrolment" />
-            <Cta title="Télécharger la brochure" id="/brochure" />
+          <div className="p-2 text-2xl text-center lg:text-4xl md:text-3xl">
+            <p>Vous pouvez candidater gratuitement dès maintenant</p>
+            <p className="text-lg lg:text-2xl md:text-xl">
+              (hors procédure Parcoursup)
+            </p>
           </div>
+          <div className="py-2">
+            <LitleTile children="Procédure d'inscription" />
+            <Paragraphe>
+              <ol className="list-decimal list-inside">
+                {steps.map((step, index) => (
+                  <li key={index}>{step}</li>
+                ))}
+              </ol>
+            </Paragraphe>
+          </div>
+        </div>
+        <div className="flex flex-col items-center justify-center p-8 mb-8 space-y-4 md:flex-row md:justify-around bg-tc-blue">
+          <Cta title="Candidature en ligne" id="/enrolment" />
+          <Cta title="Télécharger la brochure" id="/brochure" />
         </div>
       </div>
     </section>
