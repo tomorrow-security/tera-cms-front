@@ -5,7 +5,7 @@ import HeaderNav from "../molecules/HeaderNav"
 import IconLogo from "../atoms/IconLogo"
 import IconX from "../atoms/IconX"
 import IconMenu from "../atoms/IconMenu"
-import Cta from "../atoms/Cta"
+import Admission from "../molecules/Admission"
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -37,7 +37,7 @@ export default function Header() {
               <HeaderNav click={() => setIsOpen(false)} />
             </div>
             <div className={`${!isOpen && "hidden"} lg:block`}>
-              <Cta click={() => setIsOpen(false)} />
+              <Admission click={() => setIsOpen(false)} />
             </div>
           </div>
         </div>
