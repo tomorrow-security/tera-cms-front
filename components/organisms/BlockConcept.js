@@ -2,6 +2,7 @@ import PageLink from "../atoms/PageLink"
 import LittleTitle from "../atoms/LittleTitle"
 import Strong from "../atoms/Strong"
 import Paragraphe from "../atoms/Paragraphe"
+import Cta from "../atoms/Cta"
 
 export default function BlockConcept() {
   return (
@@ -62,8 +63,8 @@ export default function BlockConcept() {
             style={{ backgroundImage: "url('students-collaboration.jpg')" }}
           ></div>
         </div>
-        <div className="mx-auto mt-8 text-lg font-bold md:text-xl w-max md:mt-12">
-          <PageLink id="brochure" label="Télécharger la brochure" />
+        <div className="flex justify-center py-8 mt-8 text-lg font-bold md:text-xl md:mt-12 bg-tc-blue">
+          <Cta id="/brochure" title="Télécharger la brochure" />
         </div>
       </div>
     </section>
