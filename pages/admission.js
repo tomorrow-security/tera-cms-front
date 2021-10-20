@@ -1,5 +1,4 @@
 import Head from "next/head"
-import BlockJoin from "../components/organisms/BlockJoin"
 import BlockAdmission from "../components/organisms/BlockAdmission"
 
 const pageTitle = "Admission - Tera Campus"
@@ -19,7 +18,6 @@ export default function admission() {
 
       <main>
         <BlockAdmission />
-        <BlockJoin />
       </main>
     </>
   )
