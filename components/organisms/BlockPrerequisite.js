@@ -1,12 +1,12 @@
-import BlockTitle from "../atoms/BlockTitle"
+import SubTitle from "../atoms/SubTitle"
 import LittleTitle from "../atoms/LittleTitle"
 
 export default function BlockPrerequisite() {
   return (
     <section id="prerequis" className="py-10 md:pt-10">
       <div className="md:container md:mx-auto">
-        <BlockTitle
-          title="Pré-requis"
+        <SubTitle
+          title="Prérequis"
           iconPicture={{ backgroundImage: "url('pre-requis.png')" }}
         />
         <div className="mx-4 ">

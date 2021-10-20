@@ -33,13 +33,11 @@ export default function BlockConcept() {
               <LittleTitle>Comment étudier avec Tera Campus ?</LittleTitle>
               <Paragraphe>
                 <Strong>
-                  La formation Tera Campus peut être suivie de n'importe
-                  où,&nbsp;
+                  La formation chez Tera Campus s'adresse avant tout à des
+                  personnes motivées.&nbsp;
                 </Strong>
-                les seuls prérequis sont un ordinateur et une connexion
-                internet. Tous les cours seront animés par un formateur
-                qualifié. Oublie les déplacements, cette fois-ci c'est l'école
-                qui vient à toi !
+                Les seuls prérequis sont un ordinateur et une connexion
+                internet.
               </Paragraphe>
             </li>
             <li>

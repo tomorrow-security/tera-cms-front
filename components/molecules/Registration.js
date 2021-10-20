@@ -1,10 +1,9 @@
-import Cta from "../atoms/Cta"
-import IconComputerGraduate from "../atoms/IconComputerGraduate"
 import IconBulb from "../atoms/IconBulb"
 import IconPhonebook from "../atoms/IconPhonebook"
 import IconPlacementTest from "../atoms/IconPlacementTest"
 import IconMagnifyingGlass from "../atoms/IconMagnifyingGlass"
 import IconHandShake from "../atoms/IconHandShake"
+import SubTitle from "../atoms/SubTitle"
 
 const steps = [
   {
@@ -44,20 +43,20 @@ const steps = [
 const Step = ({ description, image, icon, stage }) => {
   const oddStep = stage % 2 !== 0
   return (
-    <div className="border-t border-tc-red md:pt-4 md:w-1/5">
+    <div className="flex-1">
       <div
         style={{ backgroundImage: `url('${image}')` }}
-        className="z-0 w-full h-20 my-2 bg-center bg-no-repeat bg-contain md:h-full md:mx-2"
+        className="z-0 w-full h-32 bg-center bg-no-repeat bg-contain md:h-full "
       >
         <div
-          className={`flex flex-nowrap justify-around items-center
+          className={`flex flex-nowrap justify-around md:justify-between items-center
                 ${
                   oddStep ? "flex-row-reverse text-left" : "flex-row text-right"
                 }
-                md:flex-col-reverse md:text-center bg-white bg-opacity-80 w-full h-full z-10`}
+                md:flex-col-reverse md:text-center bg-white bg-opacity-70 w-full h-full z-10`}
         >
           <div className="z-20 w-12 md:w-8 md:mt-2 text-tc-blue">{icon}</div>
-          <div className="z-20 w-2/3 mx-3 md:mx-1 md:w-full">{description}</div>
+          <div className="z-20 w-2/3 m-2 md:m-1 md:w-full">{description}</div>
         </div>
       </div>
     </div>
@@ -66,17 +65,13 @@ const Step = ({ description, image, icon, stage }) => {
 
 export default function Registration() {
   return (
-    <div className="my-4 mt-8 md:container lg:mt-12 md:mx-auto">
-      <div className="flex flex-row items-center justify-center mb-2 flex-nowrap md:mb-4">
-        <div className="w-12 h-12 text-tc-blue">
-          <IconComputerGraduate />
-        </div>
-        <div className="text-xl font-bold text-center md:text-2xl xl:text-3xl text-tc-red">
-          &Eacute;tapes d&apos;inscription
-        </div>
-      </div>
+    <div className="my-4 mt-8 md:container lg:mt-12 ">
+      <SubTitle
+        title="&Eacute;tapes d'inscription"
+        iconPicture={{ backgroundImage: "url('computer-graduate.png')" }}
+      />
       <div>
-        <div className="md:flex md:flex-row md:justify-center md:mt-4 md:mb-8">
+        <div className="divide-y divide-dashed divide-tc-red md:divide-y-0 md:flex md:flex-row md:justify-evenly md:mt-4 md:mb-8">
           {steps.map((step, index) => (
             <Step
               key={index}
@@ -90,10 +85,6 @@ export default function Registration() {
         <p className="m-2 text-sm italic md:text-right">
           Temps de la procédure d'inscription : 1 semaine
         </p>
-      </div>
-      <div className="my-8">
-        {/* <p>Rentrée scolaire le : 04/10/2021 (premier Bivouac) </p> */}
-        <Cta />
       </div>
     </div>
   )
