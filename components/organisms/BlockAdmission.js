@@ -48,7 +48,7 @@ export default function BlockAdmission() {
             </Paragraphe>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center p-8 mb-8 space-y-4 md:flex-row md:justify-around bg-tc-blue">
+        <div className="flex flex-col items-center justify-center p-6 mb-8 space-y-4 md:space-y-0 md:flex-row md:justify-around bg-tc-blue">
           <Cta title="Candidature en ligne" id="/enrolment" />
           <Cta title="Télécharger la brochure" id="/brochure" />
         </div>
