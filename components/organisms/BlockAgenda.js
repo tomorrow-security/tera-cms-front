@@ -19,20 +19,20 @@ export default function BlockAgenda(events) {
   console.log("now:", now)
 
   //TODO récupérer la date du live et la transformer en nombre, le comparer à la date du jour et faire un tableau avec les live dont la date n'est pas passé
+  /** table of upcoming events */
+  const streams = []
 
   const regex = /[- :]/g
 
   /**Retrieving the date of the live and converting it into a number*/
-  const eventLives = events.events.map((eventLive) =>
-    new Date(eventLive.column_values[2].text.replace(regex, ",")).getTime()
+  const eventLives = events.events.map(
+    (eventLive) =>
+      new Date(eventLive.column_values[2].text.replace(regex, ",")).getTime() >
+        now && streams.push({ eventLive })
   )
 
   console.log("eventLives:", eventLives)
-
-  /** table of upcoming events */
-  // const streams = []
-
-  // console.log("streams:", streams)
+  console.log("streams:", streams)
 
   // TODO faire une tableau avec les lives non passés dont le statut est "Confirmé"
   // const lives = []
