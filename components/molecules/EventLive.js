@@ -24,14 +24,7 @@ const platformsLink = {
   // TODO ajouter Youtube
 }
 
-export default function EventLive({
-  url,
-  platform,
-  dateTimeDate,
-  date,
-  description,
-  title,
-}) {
+export default function EventLive({ platform, date, description, title }) {
   return (
     <li className="flex flex-col items-center justify-center w-full my-2 md:flex-row md:justify-between lg:w-11/12 lg:border lg:border-tc-blue lg:rounded lg:shadow-lg">
       <div className="flex flex-row items-center w-full md:w-3/4">
@@ -42,7 +35,7 @@ export default function EventLive({
         />
         <div className="flex flex-col w-5/6 px-2 py-4 xl:ml-2">
           <div className="flex flex-row mb-1">
-            <time className="mr-2" dateTime={dateTimeDate}>
+            <time className="mr-2" dateTime={date}>
               {date}
             </time>
           </div>

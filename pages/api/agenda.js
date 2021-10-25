@@ -2,7 +2,7 @@ export default async (req, res) => {
   // TODO améliorer la requête pour ne récupérer que les événements futurs et confirmés.
   const query = `query {
     boards (ids: ${process.env.MONDAY_PLANNING_LIVES_BOARD_ID}) {
-    items (limit: 3) {
+    items {
 			id
       name
 			column_values {
