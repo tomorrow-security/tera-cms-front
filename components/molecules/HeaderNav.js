@@ -6,7 +6,7 @@ import HeaderSubNav from "./HeaderSubNav"
 const ecole = [
   { id: "#concept", label: "Tera campus c'est quoi ?" },
   { id: "guides", label: "Nos guides" },
-  { id: "program/#method", label: "Notre pédagogie" },
+  { id: "pedagogy", label: "Notre pédagogie" },
   { id: "bivouacs", label: "Bivouac" },
   { id: "schoolboard", label: "Conseil de perfectionnement" },
   { id: "handicap", label: "Etudier en situation de handicap" },
