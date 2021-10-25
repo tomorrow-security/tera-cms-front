@@ -6,37 +6,36 @@ import EventLive from "../molecules/EventLive"
 import IconeYoutube from "../atoms/IconeYoutube"
 
 export default function BlockAgenda(events) {
-  /** bolean of no event in the array */
-  const notEvent = events.events.length === 0
-
-  /** calendar cache if no event in the array */
-  const invisible = notEvent ? "hidden" : ""
-
-  console.log("events :", events)
-
   /** retrieving today's date as a number */
   const now = Date.now()
-  console.log("now:", now)
 
-  //TODO récupérer la date du live et la transformer en nombre, le comparer à la date du jour et faire un tableau avec les live dont la date n'est pas passé
   /** table of upcoming events */
   const streams = []
 
-  const regex = /[- :]/g
+  const regex = /[-]/g
 
   /**Retrieving the date of the live and converting it into a number*/
-  const eventLives = events.events.map(
-    (eventLive) =>
-      new Date(eventLive.column_values[2].text.replace(regex, ",")).getTime() >
-        now && streams.push({ eventLive })
+  const upComming = events.events.map(
+    (event) =>
+      new Date(
+        event.column_values[2].text.slice(0, 10).replace(regex, ",")
+      ).getTime() > now && streams.push({ event })
   )
 
-  console.log("eventLives:", eventLives)
-  console.log("streams:", streams)
+  /** table of upcoming and confirmed events */
+  const lives = []
 
-  // TODO faire une tableau avec les lives non passés dont le statut est "Confirmé"
-  // const lives = []
-  //TODO mapper le tableau lives pour récupérer les infos dans le composant EventLive
+  /** insertion of upcoming and confirmed events in the lives table */
+  const confirmed = streams.map(
+    (stream) =>
+      stream.event.column_values[4].text == "Confirmé" && lives.push({ stream })
+  )
+
+  /** bolean of no event in the array */
+  const notEvent = lives.length === 0
+
+  /** calendar cache if no event in the array */
+  const invisible = notEvent ? "hidden" : ""
 
   return (
     <section id="agenda" className="py-10 lg:py-20">
@@ -48,15 +47,15 @@ export default function BlockAgenda(events) {
         <div className="lg:flex lg:flex-row lg:flex-nowrap lg:justify-around lg:items-center lg:text-xl">
           <div className={`w-full lg:w-1/2 ${invisible}`}>
             <ul className="flex flex-col justify-center mx-2 sm:justify-start lg:text-lg">
-              {events.events.map((event, index) => (
+              {lives.map((live, index) => (
                 <EventLive
                   key={index}
-                  url={event.column_values[6].text}
-                  platform={event.column_values[6].text}
-                  dateTimeDate={event.column_values[2].text}
-                  date={event.column_values[2].text}
-                  description={event.column_values[5].text}
-                  title={event.name}
+                  url={live.stream.event.column_values[6].text}
+                  platform={live.stream.event.column_values[6].text}
+                  dateTimeDate={live.stream.event.column_values[2].text}
+                  date={live.stream.event.column_values[2].text}
+                  description={live.stream.event.column_values[5].text}
+                  title={live.stream.event.name}
                 />
               ))}
             </ul>
