@@ -6,14 +6,42 @@ import EventLive from "../molecules/EventLive"
 import IconeYoutube from "../atoms/IconeYoutube"
 
 export default function BlockAgenda(events) {
-  /**
-   * bolean of no event in the array
-   */
+  /** bolean of no event in the array */
   const notEvent = events.events.length === 0
-  /**
-   * calendar cache if no event in the array
-   */
+
+  /** calendar cache if no event in the array */
   const invisible = notEvent ? "hidden" : ""
+
+  console.log("events :", events)
+
+  /** retrieving today's date as a number */
+  const now = Date.now()
+  console.log("now:", now)
+
+  //TODO récupérer la date du live et la transformer en nombre, le comparer à la date du jour et faire un tableau avec les live dont la date n'est pas passé
+
+  /**Retrieving the date of the live and converting it into a number*/
+  const eventLives = events.events.map((event) => event)
+
+  console.log("eventLives :", eventLives)
+
+  /** Insertion of upcoming live performances in the streams table */
+  const dateTime = eventLives.map(
+    (eventLive) => eventLive.column_values[2].text
+    // Date(eventLive.column_values[2].text).getTime() > now ??
+    // streams.push[eventLive]
+  )
+
+  console.log("dateTime:", dateTime)
+
+  /** table of upcoming events */
+  const streams = []
+
+  console.log("streams:", streams)
+
+  // TODO faire une tableau avec les lives non passés dont le statut est "Confirmé"
+  const lives = []
+  //TODO mapper le tableau lives pour récupérer les infos dans le composant EventLive
 
   return (
     <section id="agenda" className="py-10 lg:py-20">
