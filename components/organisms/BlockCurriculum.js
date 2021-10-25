@@ -2,7 +2,7 @@ import React, { useState } from "react"
 
 import BlockTitle from "../atoms/BlockTitle"
 
-const years = [
+const initialYears = [
   {
     name: "1ère année",
     subjects: [
@@ -35,6 +35,9 @@ const years = [
       "Anglais",
     ],
   },
+]
+
+const releaseYears = [
   {
     name: "3ème année",
     subjects: [
@@ -82,8 +85,6 @@ const years = [
   },
 ]
 
-//TODO changer l'iconPicture du BlockTitle
-
 export default function BlockCurriculum() {
   const [activeYearIndex, setActiveYearIndex] = useState(0)
   return (
@@ -93,28 +94,54 @@ export default function BlockCurriculum() {
           title="Notre cursus"
           iconPicture={{ backgroundImage: "url('montagnard.png')" }}
         />
-        <div className="mx-4 space-y-3 md:mx-0 md:pl-2 md:space-y-6">
-          <form className="relative w-5/6 mx-auto mb-8 text-xl text-white transition-colors duration-700 rounded-t lg:w-1/3 sm:w-3/4 md:w-1/2 rounded-b-xl bg-tc-blue hover:bg-tc-red">
-            <select
-              className="w-full p-2 font-semibold text-center transition-colors duration-700 bg-transparent rounded-t appearance-none rounded-b-xl focus:outline-none hover:bg-tc-red"
-              value={activeYearIndex}
-              onChange={(e) => setActiveYearIndex(e.target.value)}
-              aria-label="Sélecteur d'année scolaire'"
-            >
-              {years.map((year, index) => (
-                <option key={index} value={index}>
-                  {year.name}
-                </option>
+        {/* // TODO mise en page flex-row en md */}
+        <div classname="mx-4 md:flex md:mx-0">
+          <div className="mb-8 space-y-3 md:pl-2 md:space-y-6">
+            <form className="relative w-5/6 mx-auto mb-8 text-xl text-white transition-colors duration-700 rounded-t lg:w-1/3 sm:w-3/4 md:w-1/2 rounded-b-xl bg-tc-blue hover:bg-tc-red">
+              <select
+                className="w-full p-2 font-semibold text-center transition-colors duration-700 bg-transparent rounded-t appearance-none rounded-b-xl focus:outline-none hover:bg-tc-red"
+                value={activeYearIndex}
+                onChange={(e) => setActiveYearIndex(e.target.value)}
+                aria-label="Sélecteur d'année scolaire'"
+              >
+                {initialYears.map((year, index) => (
+                  <option key={index} value={index}>
+                    {year.name}
+                  </option>
+                ))}
+              </select>
+            </form>
+            <ul className="w-5/6 mx-auto my-4 space-y-1 lg:w-1/3 md:w-1/2 sm:w-3/4">
+              {initialYears[activeYearIndex].subjects.map((subject, index) => (
+                <li key={index} className="list-inside list-square">
+                  {subject}
+                </li>
               ))}
-            </select>
-          </form>
-          <ul className="w-5/6 mx-auto my-4 space-y-1 lg:w-1/3 md:w-1/2 sm:w-3/4">
-            {years[activeYearIndex].subjects.map((subject, index) => (
-              <li key={index} className="list-inside list-square">
-                {subject}
-              </li>
-            ))}
-          </ul>
+            </ul>
+          </div>
+          <div className="mx-4 space-y-3 md:mx-0 md:pl-2 md:space-y-6">
+            <form className="relative w-5/6 mx-auto mb-8 text-xl text-white transition-colors duration-700 rounded-t lg:w-1/3 sm:w-3/4 md:w-1/2 rounded-b-xl bg-tc-blue hover:bg-tc-red">
+              <select
+                className="w-full p-2 font-semibold text-center transition-colors duration-700 bg-transparent rounded-t appearance-none rounded-b-xl focus:outline-none hover:bg-tc-red"
+                value={activeYearIndex}
+                onChange={(e) => setActiveYearIndex(e.target.value)}
+                aria-label="Sélecteur d'année scolaire'"
+              >
+                {releaseYears.map((year, index) => (
+                  <option key={index} value={index}>
+                    {year.name}
+                  </option>
+                ))}
+              </select>
+            </form>
+            <ul className="w-5/6 mx-auto my-4 space-y-1 lg:w-1/3 md:w-1/2 sm:w-3/4">
+              {releaseYears[activeYearIndex].subjects.map((subject, index) => (
+                <li key={index} className="list-inside list-square">
+                  {subject}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </section>
