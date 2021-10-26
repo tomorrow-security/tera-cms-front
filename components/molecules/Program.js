@@ -63,7 +63,7 @@ const syllabusTC3 = [
 export default function Program({}) {
   return (
     <section className="mx-4">
-      <LittleTitle children="Programme détaillé TC3" />
+      <LittleTitle children="Programme détaillé :" />
       <ul className="p-4 space-y-2 divide-y rounded shadow md:grid md:grid-cols-3 md:space-y-0 md:divide-y-0 md:divide-x divide-tc-red md:space-x-2">
         {syllabusTC3.map((domain, index) => (
           <div
