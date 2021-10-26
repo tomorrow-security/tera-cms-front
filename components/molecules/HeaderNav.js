@@ -5,7 +5,6 @@ import HeaderSubNav from "./HeaderSubNav"
 // TODO rassembler les datas communes au header et au plan
 const ecole = [
   { id: "#concept", label: "Tera campus c'est quoi ?" },
-  { id: "guides", label: "Nos guides" },
   { id: "pedagogy", label: "Notre pédagogie" },
   { id: "bivouacs", label: "Bivouac" },
   { id: "schoolboard", label: "Conseil de perfectionnement" },
@@ -16,13 +15,12 @@ const ecole = [
 
 const program = [
   {
-    id: "program/#program",
+    id: "program",
     label: "BAC+3 Administrateur des systèmes d'information",
   },
   { id: "program/#partners", label: "Les partenaires" },
   { id: "career", label: "Les carrières" },
   { id: "brochure", label: "Demande de brochure" },
-  { id: "join", label: "Nous rejoindre" },
 ]
 
 const alternance = [{ id: "releasetraining", label: "C'est quoi l'alternance" }]

@@ -15,7 +15,7 @@ const ecole = [
 ]
 const program = [
   {
-    id: "program/#program",
+    id: "program",
     label: "BAC+3 Administrateur des systèmes d'information",
   },
   { id: "program/#partners", label: "Les partenaires" },
