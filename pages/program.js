@@ -1,7 +1,6 @@
 import Head from "next/head"
 import BlockProgram from "../components/organisms/BlockProgram"
 import BlockPrerequisite from "../components/organisms/BlockPrerequisite"
-import BlockPartners from "../components/organisms/BlockPartners"
 import BlockMethod from "../components/organisms/BlockMethod"
 import BlockEval from "../components/organisms/BlockEval"
 import Registration from "../components/molecules/Registration"
@@ -23,7 +22,6 @@ export default function Legal() {
 
       <main>
         <BlockMethod />
-        <BlockPartners />
         <BlockProgram />
         <BlockEval />
         <BlockPrerequisite />
