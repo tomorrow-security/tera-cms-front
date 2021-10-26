@@ -91,7 +91,7 @@ const releaseYears = [
 
 export default function BlockCurriculum() {
   return (
-    <section id="curriculum" className="py-10 md:py-20">
+    <section id="curriculum" className="py-5">
       <div className="flex flex-col justify-between flex-grow md:container md:mx-auto">
         <BlockTitle
           title="Notre pedagogie"
