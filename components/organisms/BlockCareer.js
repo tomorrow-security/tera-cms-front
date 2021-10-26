@@ -1,6 +1,9 @@
 import React, { useState } from "react"
 
 import BlockTitle from "../atoms/BlockTitle"
+import Paragraphe from "../atoms/Paragraphe"
+import ExternalLink from "../molecules/ExternalLink"
+import LittleTitle from "../atoms/LittleTitle"
 
 const jobs = [
   {
@@ -15,7 +18,7 @@ const jobs = [
             spécifiques de sa clientèle.",
     imageUrl: "/developer.jpg",
     salary: "À partir de 36k€ pour un débutant et 65k€ pour un profil senior",
-    training: "3 ans minimum",
+    training: "3 ans minimum (BAC+3)",
   },
   {
     name: "Consultant en cybersécurité",
@@ -30,7 +33,7 @@ const jobs = [
             sensibles (bancaires, personnelles, médicales).",
     imageUrl: "/vpn.jpg",
     salary: "À partir de 36k€ pour un débutant et 65k€ pour un profil senior",
-    training: "5 ans",
+    training: "5 ans (BAC+5)",
   },
   {
     name: "Product Owner",
@@ -43,7 +46,7 @@ const jobs = [
             partie technique avec les équipes et les échanges clients.",
     imageUrl: "/kanban.jpg",
     salary: "À partir de 40k€ pour un débutant et 65k€ pour un profil senior",
-    training: "3 ans minimum",
+    training: "3 ans minimum (BAC+3)",
   },
   {
     name: "Administrateur Cloud",
@@ -56,7 +59,7 @@ const jobs = [
             fonctionnement des infrastructures.",
     imageUrl: "/adminsys.jpg",
     salary: "À partir de 36k€ pour un débutant et 50k€ pour un profil senior",
-    training: "3 ans minimum",
+    training: "3 ans minimum (BAC+3)",
   },
   {
     name: "Chef de projet",
@@ -69,7 +72,7 @@ const jobs = [
             équipe, de dialoguer avec les clients et de mener à bien sa mission.",
     imageUrl: "/project.jpg",
     salary: "À partir de 40k€ pour un débutant et 55k€ pour un profil senior",
-    training: "3 ans minimum",
+    training: "3 ans minimum (BAC+3)",
   },
 ]
 
@@ -80,15 +83,30 @@ export default function BlockCareer() {
   const vowel = /[aeiouy]/i
   const isAVowel = firstLetter.match(vowel) !== null ?? true
   return (
-    <section
-      id="career"
-      className="flex flex-col flex-grow pt-10 md:pt-20 md:pb-20"
-    >
+    <section id="career" className="flex flex-col flex-grow py-5">
       <div className="flex flex-col justify-between flex-grow md:container md:mx-auto">
         <BlockTitle
-          title="Quels débouchés ?"
+          title="Les carrières"
           iconPicture={{ backgroundImage: "url('bulb.png')" }}
         />
+        <Paragraphe>
+          Après avoir obtenu votre diplôme d’Administrateur Systèmes
+          d'Informations, vous pourrez intégrer la 4ème année chez Tera Campus
+          avec un parcours en alternance (contrat d'apprentissage ou bien
+          contrat de professionnalisation). En intégrant la 4ème année vous
+          préparerez un diplôme enregistré par l’État au RNCP au niveau 7
+          (BAC+5).
+        </Paragraphe>
+        <ExternalLink
+          title=" Fiche dutitre Bachelor Administrateur Systèmes d'Informations"
+          url="https://www.francecompetences.fr/recherche/rncp/34022/"
+          aria="lien vers le site France compétence"
+        ></ExternalLink>
+        <Paragraphe>
+          Si vous faites le choix d’arrêter vos études vous pourrez également
+          rejoindre une entreprise.
+        </Paragraphe>
+        <LittleTitle children="Quels débouchés après les études chez Tera Campus ?" />
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           <div className="mx-4 space-y-3 md:mx-0 md:pl-2 md:space-y-6">
             <form className="relative w-4/5 mx-auto mb-8 text-xl text-white transition-colors duration-700 rounded-t texte-center rounded-b-xl bg-tc-blue hover:bg-tc-red">
