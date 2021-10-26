@@ -1,5 +1,6 @@
 import LittleTitle from "../atoms/LittleTitle"
 import TrainingReleaseFunding from "../molecules/TrainingReleaseFunding"
+import Strong from "../atoms/Strong"
 import Paragraphe from "../atoms/Paragraphe"
 
 export default function ReleaseTrainingDef() {
@@ -12,11 +13,13 @@ export default function ReleaseTrainingDef() {
             Un système de formation qui est fondé sur une phase pratique et une
             phase théorique qui alternent, permettant de se préparer plus
             efficacement à un métier.
+            <div>
+              <Strong>
+                Étudier gratuitement tout en étant salarié : la vraie force de
+                l’alternance !
+              </Strong>
+            </div>
           </Paragraphe>
-          <p className="font-bold md:mx-6 lg:mx-12 text-tc-red">
-            Étudier gratuitement tout en étant salarié : la vraie force de
-            l’alternance !
-          </p>
           <div className="my-2 md:m-6 lg:mx-12">
             <TrainingReleaseFunding />
           </div>

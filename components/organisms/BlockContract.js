@@ -1,5 +1,5 @@
 import Traineeship from "../molecules/Traineeship"
-import BlockTitle from "../atoms/BlockTitle"
+import SubTitle from "../atoms/SubTitle"
 import Professionalization from "../molecules/Professionalization"
 import LittleTitle from "../atoms/LittleTitle"
 import Paragraphe from "../atoms/Paragraphe"
@@ -8,7 +8,7 @@ export default function BlockContract() {
   return (
     <section id="contratc" className="py-5">
       <div className="md:container md:mx-auto">
-        <BlockTitle
+        <SubTitle
           title="Les types de contrats"
           iconPicture={{ backgroundImage: "url('contract.png')" }}
         />

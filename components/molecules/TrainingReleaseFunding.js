@@ -1,3 +1,5 @@
+import Paragraphe from "../atoms/Paragraphe"
+
 export default function TrainingReleseFunding() {
   return (
     <section id="trainingreleasefunding">
@@ -5,12 +7,13 @@ export default function TrainingReleseFunding() {
         <p className="font-semibold">
           Le coût total de la formation est pris en charge par l’entreprise.
         </p>
-        <p className="mt-4">
+        <Paragraphe className="mt-4">
           Avec un double statut, l’alternant profite du statut d’étudiant
           (formation, réduction pour les activités culturelles, transports) et
           du statut de salarié (rémunération, congés payés, insertion
           professionnelle).
-        </p>
+        </Paragraphe>
+        <Paragraphe>Contrats longue durée (de 6 à 24 mois). </Paragraphe>
       </div>
     </section>
   )
