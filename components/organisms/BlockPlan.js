@@ -5,7 +5,7 @@ import SocialNav from "../molecules/SocialNav"
 
 // TODO mettre à jour les routes quand touts les pages et block seront fait
 const ecole = [
-  { id: "#concept", label: "Tera campus c'est quoi ?" },
+  { id: "description", label: "Tera campus c'est quoi ?" },
   { id: "pedagogy", label: "Notre pédagogie" },
   { id: "bivouacs", label: "Bivouac" },
   { id: "schoolboard", label: "Conseil de perfectionnement" },
