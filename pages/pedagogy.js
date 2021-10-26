@@ -1,7 +1,4 @@
 import Head from "next/head"
-import PageLink from "../components/atoms/PageLink"
-
-import IconLogoBig from "../components/atoms/IconLogoBig"
 import BlockCurriculum from "../components/organisms/BlockCurriculum"
 
 const pageTitle = "Pédagogie - Tera Campus"
