@@ -1,7 +1,7 @@
 import Head from "next/head"
 import PageLink from "../components/atoms/PageLink"
 
-import IconLogoBig from "../components/atoms/IconLogoBig"
+import BlockHandicap from "../components/organisms/BlockHandicap"
 
 const pageTitle = "Handicap - Tera Campus"
 const pageDescription = "Situation de handicap"
@@ -16,21 +16,8 @@ export default function Handicap() {
         <meta property="og:description" content={pageDescription} />
       </Head>
 
-      <main className="flex flex-col justify-center w-full h-full text-center">
-        <div className="flex flex-col justify-center w-full h-full align-center flex-nowrap text-tc-blue">
-          <div className="w-1/4 py-10 mx-auto">
-            <IconLogoBig />
-            <div className="text-base font-bold tracking-normal normal-case md:text-lg xl:text-2xl">
-              The future of learning
-            </div>
-          </div>
-          <h1 className="text-3xl font-extrabold text-tc-red">
-            Cette pages est en construction
-          </h1>
-          <div className="px-2 mx-auto text-center w-max">
-            <PageLink id="" label="retour à la page d'accueil" />
-          </div>
-        </div>
+      <main>
+        <BlockHandicap />
       </main>
     </>
   )
