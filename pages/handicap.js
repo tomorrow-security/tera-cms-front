@@ -1,5 +1,4 @@
 import Head from "next/head"
-import PageLink from "../components/atoms/PageLink"
 
 import BlockHandicap from "../components/organisms/BlockHandicap"
 
