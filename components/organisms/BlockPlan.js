@@ -20,7 +20,6 @@ const program = [
   },
   { id: "partners", label: "Les partenaires" },
   { id: "career", label: "Les carrières" },
-  { id: "brochure", label: "La brochure" },
 ]
 const alternance = [{ id: "releasetraining", label: "C'est quoi l'alternance" }]
 const legal = [
