@@ -8,7 +8,7 @@ import Paragraphe from "../atoms/Paragraphe"
 
 export default function BlockPartners() {
   return (
-    <section id="partners" className="py-10 md:py-20">
+    <section id="partners" className="py-5">
       <div className="md:container md:mx-auto">
         <BlockTitle
           title="Nos partenaires"
