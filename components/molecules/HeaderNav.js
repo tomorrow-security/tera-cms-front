@@ -18,7 +18,7 @@ const program = [
     id: "program",
     label: "BAC+3 Administrateur des systèmes d'information",
   },
-  { id: "program/#partners", label: "Les partenaires" },
+  { id: "partners", label: "Les partenaires" },
   { id: "career", label: "Les carrières" },
   { id: "brochure", label: "Demande de brochure" },
 ]
