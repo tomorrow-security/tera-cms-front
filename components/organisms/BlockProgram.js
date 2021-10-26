@@ -5,10 +5,10 @@ import Program from "../molecules/Program"
 
 export default function BlockProgramme() {
   return (
-    <section id="program" className="py-10 md:pb-0">
+    <section id="program" className="py-5">
       <div className="md:container md:mx-auto">
         <BlockTitle
-          title="Notre programme"
+          title="BAC+3 Administrateur (rice) des systèmes d’Information"
           iconPicture={{ backgroundImage: "url('programme.png')" }}
         />
         <section className="flex flex-col flex-nowrap md:flex-row md:justify-around md:items-center xl:w-9/12 xl:mx-auto">
