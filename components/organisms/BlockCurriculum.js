@@ -1,6 +1,10 @@
-import React, { useState } from "react"
+import React from "react"
 
 import BlockTitle from "../atoms/BlockTitle"
+import PageLink from "../atoms/PageLink"
+import LittleTitle from "../atoms/LittleTitle"
+import List from "../atoms/List"
+import CardList from "../atoms/CardList"
 
 const initialYears = [
   {
@@ -86,61 +90,92 @@ const releaseYears = [
 ]
 
 export default function BlockCurriculum() {
-  const [activeYearIndex, setActiveYearIndex] = useState(0)
   return (
     <section id="curriculum" className="py-10 md:py-20">
       <div className="flex flex-col justify-between flex-grow md:container md:mx-auto">
         <BlockTitle
-          title="Notre cursus"
+          title="Notre pedagogie"
           iconPicture={{ backgroundImage: "url('montagnard.png')" }}
         />
-        {/* // TODO mise en page flex-row en md */}
-        <div classname="mx-4 md:flex md:mx-0">
-          <div className="mb-8 space-y-3 md:pl-2 md:space-y-6">
-            <form className="relative w-5/6 mx-auto mb-8 text-xl text-white transition-colors duration-700 rounded-t lg:w-1/3 sm:w-3/4 md:w-1/2 rounded-b-xl bg-tc-blue hover:bg-tc-red">
-              <select
-                className="w-full p-2 font-semibold text-center transition-colors duration-700 bg-transparent rounded-t appearance-none rounded-b-xl focus:outline-none hover:bg-tc-red"
-                value={activeYearIndex}
-                onChange={(e) => setActiveYearIndex(e.target.value)}
-                aria-label="Sélecteur d'année scolaire'"
-              >
-                {initialYears.map((year, index) => (
-                  <option key={index} value={index}>
-                    {year.name}
-                  </option>
-                ))}
-              </select>
-            </form>
-            <ul className="w-5/6 mx-auto my-4 space-y-1 lg:w-1/3 md:w-1/2 sm:w-3/4">
-              {initialYears[activeYearIndex].subjects.map((subject, index) => (
-                <li key={index} className="list-inside list-square">
-                  {subject}
-                </li>
-              ))}
-            </ul>
+        <div className="mx-4 md:mx-0">
+          <div className="font-semibold">
+            <p>
+              Deux premières années en formation initiale pour acquérir des
+              bases solides.
+            </p>
+            <p>
+              À partir de la troisième année et jusqu’à la fin du parcours la
+              formation est 100% en alternance (contrat d’apprentissage ou
+              contrat de professionnalisation).
+            </p>
           </div>
-          <div className="mx-4 space-y-3 md:mx-0 md:pl-2 md:space-y-6">
-            <form className="relative w-5/6 mx-auto mb-8 text-xl text-white transition-colors duration-700 rounded-t lg:w-1/3 sm:w-3/4 md:w-1/2 rounded-b-xl bg-tc-blue hover:bg-tc-red">
-              <select
-                className="w-full p-2 font-semibold text-center transition-colors duration-700 bg-transparent rounded-t appearance-none rounded-b-xl focus:outline-none hover:bg-tc-red"
-                value={activeYearIndex}
-                onChange={(e) => setActiveYearIndex(e.target.value)}
-                aria-label="Sélecteur d'année scolaire'"
-              >
-                {releaseYears.map((year, index) => (
-                  <option key={index} value={index}>
-                    {year.name}
-                  </option>
-                ))}
-              </select>
-            </form>
-            <ul className="w-5/6 mx-auto my-4 space-y-1 lg:w-1/3 md:w-1/2 sm:w-3/4">
-              {releaseYears[activeYearIndex].subjects.map((subject, index) => (
-                <li key={index} className="list-inside list-square">
-                  {subject}
-                </li>
-              ))}
-            </ul>
+          <div className="my-6">
+            <LittleTitle children="Cursus 1&2 année :" />
+            <List>
+              <li>
+                Des cours en télé-présentiel du lundi au vendredi avec des
+                professionnels de l’Informatique
+              </li>
+              <li>
+                6 semaines en présentiel avec les trois bivouacs dans l’année
+                (frais compris dans le tarif de la formation).
+                <span className="underline">
+                  <PageLink
+                    id="bivouac"
+                    label="En savoir plus sur le Bivouac"
+                  />
+                </span>
+              </li>
+              <li>
+                Un encadrement personnalisé, et des outils performants qui vous
+                permettront à préparer votre intégration en entreprise dès la 3
+                <sup>ème</sup> année.
+              </li>
+            </List>
+          </div>
+          <div className="w-11/12 mx-auto md:mx-0 md:flex md:flex-nowrap md:justify-center md:items-strech">
+            {initialYears.map((initialYear, index) => (
+              <CardList
+                key={index}
+                title={initialYear.name}
+                items={initialYear.subjects}
+              />
+            ))}
+          </div>
+          <div className="my-6">
+            <LittleTitle children="Cursus à partir de la 3ème année :" />
+            <List>
+              <li>
+                Des cours en télé-présentiel tous les vendredis avec des
+                professionnels de l’Informatique
+              </li>
+              <li>4 jours en entreprise</li>
+              <li>
+                6 semaines en présentiel avec les trois bivouacs dans l’année
+                (frais compris dans le tarif de la formation).
+                <span className="underline">
+                  <PageLink
+                    id="bivouac"
+                    label="En savoir plus sur le Bivouac"
+                  />
+                </span>
+              </li>
+              <li>
+                Vous associez la partie théorique avec la partie pratique. Ces
+                deux phases vous permettront non seulement d’être efficace plus
+                rapidement en entreprise mais également d’être plus compétitif
+                sur le marché du travail après votre formation Tera Campus.
+              </li>
+            </List>
+          </div>
+          <div className="w-11/12 mx-auto md:mx-0 md:flex md:flex-nowrap md:justify-center md:items-strech">
+            {releaseYears.map((releaseYear, index) => (
+              <CardList
+                key={index}
+                title={releaseYear.name}
+                items={releaseYear.subjects}
+              />
+            ))}
           </div>
         </div>
       </div>
