@@ -65,27 +65,29 @@ const Step = ({ description, image, icon, stage }) => {
 
 export default function Registration() {
   return (
-    <div className="my-4 mt-8 md:container lg:mt-12 ">
-      <SubTitle
-        title="&Eacute;tapes d'inscription"
-        iconPicture={{ backgroundImage: "url('computer-graduate.png')" }}
-      />
-      <div>
-        <div className="divide-y divide-dashed divide-tc-red md:divide-y-0 md:flex md:flex-row md:justify-evenly md:mt-4 md:mb-8">
-          {steps.map((step, index) => (
-            <Step
-              key={index}
-              description={step.description}
-              icon={step.icon}
-              image={step.backgroundImage}
-              stage={step.stage}
-            />
-          ))}
+    <section id="registration" className="py-5">
+      <div className="md:container md:mx-auto">
+        <SubTitle
+          title="&Eacute;tapes d'inscription"
+          iconPicture={{ backgroundImage: "url('computer-graduate.png')" }}
+        />
+        <div>
+          <div className="divide-y divide-dashed divide-tc-red md:divide-y-0 md:flex md:flex-row md:justify-evenly md:mt-4 md:mb-8">
+            {steps.map((step, index) => (
+              <Step
+                key={index}
+                description={step.description}
+                icon={step.icon}
+                image={step.backgroundImage}
+                stage={step.stage}
+              />
+            ))}
+          </div>
+          <p className="m-2 text-sm italic md:text-right">
+            Temps de la procédure d'inscription : 1 semaine
+          </p>
         </div>
-        <p className="m-2 text-sm italic md:text-right">
-          Temps de la procédure d'inscription : 1 semaine
-        </p>
       </div>
-    </div>
+    </section>
   )
 }

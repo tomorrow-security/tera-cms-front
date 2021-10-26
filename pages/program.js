@@ -21,11 +21,11 @@ export default function Legal() {
       </Head>
 
       <main>
-        <BlockMethod />
         <BlockProgram />
-        <BlockEval />
         <BlockPrerequisite />
         <Registration />
+        <BlockMethod />
+        <BlockEval />
       </main>
     </>
   )

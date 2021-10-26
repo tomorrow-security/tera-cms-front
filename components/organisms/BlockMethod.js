@@ -1,18 +1,18 @@
 import Image from "next/image"
 
-import BlockTitle from "../atoms/BlockTitle"
-import LittleTitle from "../atoms/LittleTitle"
+import SubTitle from "../atoms/SubTitle"
+// import LittleTitle from "../atoms/LittleTitle"
 
 export default function BlockMethod() {
   return (
     <section id="method" className="pt-10 md:pt-20">
       <div className="md:container md:mx-auto">
-        <BlockTitle
-          title="Notre méthode"
+        <SubTitle
+          title="Les méthodes pédagogiques"
           iconPicture={{ backgroundImage: "url('method.png')" }}
         />
         <div className="flex flex-col">
-          <div className="flex-1 mx-4">
+          {/* <div className="flex-1 mx-4">
             <LittleTitle children="Les plus de Tera Campus" />
             <div className="grid w-full xl:w-3/4 xl:mx-auto grid-programPlusRows grid-programPlusColumns gap-x-6">
               <h2 className="box-border col-start-2 row-start-1 py-2 text-xl font-medium">
@@ -68,12 +68,12 @@ export default function BlockMethod() {
                 simplicité, même en distanciel !
               </p>
             </div>
-          </div>
+          </div> */}
           <div className="flex-1 mx-4">
-            <LittleTitle
+            {/* <LittleTitle
               className="mx-4 "
               children="La méthode de Tera Campus"
-            />
+            /> */}
             <div className="flex flex-col flex-nowrap md:flex-row-reverse md:justify-around md:items-center md:mx-auto md:p-2">
               <div className="flex flex-col p-2 m-4 space-y-4 bg-opacity-25 rounded xl:space-y-5 flex-nowrap bg-tc-blue md:w-1/2">
                 <p>
