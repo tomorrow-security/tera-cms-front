@@ -11,6 +11,7 @@ export default function BlockPrerequisite() {
         />
         <div className="mx-4 ">
           <LittleTitle children="Accès à la formation" />
+          {/* //TODO importer le composant List */}
           <ul className="pl-2 space-y-2 list-inside list-square lg:w-11/12 lg:mx-auto">
             <li>
               Avoir validé une 2ème année (BAC+2) en Informatique ou une
