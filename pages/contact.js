@@ -6,7 +6,7 @@ import { useMutation } from "react-query"
 
 import ButtonSubmit from "../components/atoms/ButtonSubmit"
 import PageLink from "../components/atoms/PageLink"
-import BlockTitle from "../components/atoms/BlockTitle"
+import BlockTitle from "../components/organisms/BlockTitle"
 import SocialNav from "../components/molecules/SocialNav"
 import IconCurvedArrowX from "../components/atoms/IconCurvedArrowX"
 
