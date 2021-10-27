@@ -1,5 +1,6 @@
 import Head from "next/head"
 import BlockCurriculum from "../components/organisms/BlockCurriculum"
+import BlockApproach from "../components/organisms/BlockApproach"
 
 const pageTitle = "Pédagogie - Tera Campus"
 const pageDescription = "Notre pédagogie"
@@ -16,6 +17,7 @@ export default function Bivouacs() {
 
       <main>
         <BlockCurriculum />
+        <BlockApproach />
       </main>
     </>
   )
