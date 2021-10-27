@@ -8,9 +8,9 @@ export default function HeaderSubNav({ pages, title }) {
           {title}
         </h3>
         <div className="hidden group-focus:flex hover:flex">
-          <ul className="absolute top-0 z-30 w-48 mt-2 space-y-2 bg-opacity-75 border rounded lg:w-full2 left-full lg:left-auto lg:top-full bg-tc-blue border-tc-red">
+          <ul className="absolute top-0 z-30 w-48 px-1 mt-2 space-y-2 bg-opacity-75 border rounded lg:w-full3.5 lg:max-w-max  left-full lg:left-auto lg:top-full bg-tc-blue border-tc-red">
             {pages.map(({ id, label }) => (
-              <li key={`${id}`} className="lg:w-full">
+              <li key={`${id}`} className="px-2 text-left lg:w-full">
                 <PageLink id={id} label={label} />
               </li>
             ))}
