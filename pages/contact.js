@@ -25,7 +25,6 @@ export default function Contact() {
 	})
 	const onSubmit = (formData) => mutation.mutate(formData)
 
-  //TODO revoir le layout md
   return (
     <>
       <Head>
