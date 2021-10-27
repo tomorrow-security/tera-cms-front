@@ -22,9 +22,6 @@ export default function Form({ mutation, onSubmit }) {
     reset()
   }, [])
 
-  //TODO voir pkoi le button ne fonctionne plus
-
-  // TODO style au focus du phoneInput border à enlever à l'intérieur
   return (
     <form className="w-full mx-2" onSubmit={handleSubmit(onSubmit)}>
       <div>
@@ -132,7 +129,8 @@ export default function Form({ mutation, onSubmit }) {
                     <label htmlFor="phone" className="w-30%">
                       Téléphone* :
                     </label>
-                    {/* //TODO voir pour retirer le border intern au focus */}
+                    {/* //TODO voir pour retirer le border interne au focus */}
+                    l'intérieur
                     <PhoneInputWithCountry
                       id="phone"
                       name="phone"
@@ -192,6 +190,7 @@ export default function Form({ mutation, onSubmit }) {
         </div>
       </div>
       <div className="flex items-center justify-center my-4 xl:my-20">
+        {/* //TODO voir pkoi le button ne fonctionne plus */}
         <InputButton
           defaultValue="Envoyer"
           loadingValue="En cours d'envoi ..."
