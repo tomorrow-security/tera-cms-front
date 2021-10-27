@@ -174,8 +174,7 @@ export default function Form({ mutation, onSubmit }) {
                           label="politique de confidentialité"
                         />
                       </span>
-                      et j'accepte d'être recontacté par Tera Campus pour
-                      finaliser mon inscription.
+                      et j'accepte d'être recontacté par Tera Campus.
                     </p>
                   </div>
                 </div>
