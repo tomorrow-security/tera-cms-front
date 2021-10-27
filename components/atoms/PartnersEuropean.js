@@ -1,4 +1,3 @@
-// TODO voir pour convertir tous les logo en svg ?
 const partnersEuropean = [
   {
     name: "Stormshield",

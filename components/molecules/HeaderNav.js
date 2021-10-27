@@ -1,7 +1,6 @@
 import PageLink from "../atoms/PageLink"
 import HeaderSubNav from "./HeaderSubNav"
 
-// TODO mettre à jour les routes quand touts les pages et block seront fait
 // TODO rassembler les datas communes au header et au plan
 const ecole = [
   { id: "description", label: "Tera campus c'est quoi ?" },
