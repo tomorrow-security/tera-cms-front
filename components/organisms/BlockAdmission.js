@@ -1,4 +1,3 @@
-import BlockTitle from "../atoms/BlockTitle"
 import LitleTile from "../atoms/LittleTitle"
 import Paragraphe from "../atoms/Paragraphe"
 import Cta from "../atoms/Cta"
@@ -14,10 +13,6 @@ export default function BlockAdmission() {
   return (
     <section id="admission" className="py-5">
       <div className="md:container md:mx-auto">
-        <BlockTitle
-          title="Admission"
-          iconPicture={{ backgroundImage: "url('tente-welcome.png')" }}
-        />
         <div className="mx-4">
           <div className="p-4 text-2xl font-semibold text-center lg:text-4xl md:text-3xl">
             <p>Tera Campus, une école post-bac</p>

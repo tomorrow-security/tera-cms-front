@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-import BlockTitle from "../atoms/BlockTitle"
+import BlockTitle from "../organisms/BlockTitle"
 import Program from "../molecules/Program"
 
 export default function BlockProgramme() {

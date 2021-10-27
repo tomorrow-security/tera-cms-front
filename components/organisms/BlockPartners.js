@@ -1,4 +1,4 @@
-import BlockTitle from "../atoms/BlockTitle"
+import BlockTitle from "../organisms/BlockTitle"
 import PartnersEuropean from "../atoms/PartnersEuropean"
 import PartnersCollaboratives from "../atoms/PartnersCollaboratives"
 import CarouselPartners from "../molecules/CarouselPartners"

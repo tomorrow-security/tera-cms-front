@@ -1,4 +1,4 @@
-import BlockTitle from "../atoms/BlockTitle"
+import SubTitle from "../atoms/SubTitle"
 import SocialNav from "../molecules/SocialNav"
 import EventLive from "../molecules/EventLive"
 

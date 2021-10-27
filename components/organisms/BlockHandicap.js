@@ -1,4 +1,4 @@
-import BlockTitle from "../atoms/BlockTitle"
+import BlockTitle from "../organisms/BlockTitle"
 import Paragraphe from "../atoms/Paragraphe"
 import LittleTitle from "../atoms/LittleTitle"
 import List from "../atoms/List"

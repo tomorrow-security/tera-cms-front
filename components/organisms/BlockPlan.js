@@ -1,4 +1,4 @@
-import BlockTitle from "../atoms/BlockTitle"
+import BlockTitle from "../organisms/BlockTitle"
 import NavList from "../molecules/NavList"
 import PlanLink from "../atoms/PlanLink"
 import SocialNav from "../molecules/SocialNav"

@@ -5,7 +5,7 @@ const titleBorderStyle = "border-b border-tc-red"
 const iconLayoutStyle =
   "w-16 h-16 md:w-20 md:h-20 bg-center bg-contain bg-no-repeat"
 const titleBlock =
-  " mb-8 px-4 pb-8 flex flex-row flex-nowrap justify-center box-border items-center w-full"
+  " my-8 px-4 pb-8 flex flex-row flex-nowrap justify-center box-border items-center w-full"
 
 export default function BlockTitle({ title, iconPicture }) {
   return (

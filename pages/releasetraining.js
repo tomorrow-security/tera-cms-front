@@ -1,4 +1,5 @@
 import Head from "next/head"
+import BlockTitle from "../components/organisms/BlockTitle"
 import BlockRelease from "../components/organisms/BlockRelease"
 import BlockContract from "../components/organisms/BlockContract"
 
@@ -18,8 +19,14 @@ export default function ReleaseTraining() {
       </Head>
 
       <main>
-        <BlockRelease />
-        <BlockContract />
+        <div className="md:container md:mx-auto">
+          <BlockTitle
+            title="L'alternance"
+            iconPicture={{ backgroundImage: "url('alternance.png')" }}
+          />
+          <BlockRelease />
+          <BlockContract />
+        </div>
       </main>
     </>
   )

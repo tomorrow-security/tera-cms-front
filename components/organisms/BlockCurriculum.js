@@ -1,6 +1,6 @@
 import React from "react"
 
-import BlockTitle from "../atoms/BlockTitle"
+import BlockTitle from "../organisms/BlockTitle"
 import PageLink from "../atoms/PageLink"
 import LittleTitle from "../atoms/LittleTitle"
 import List from "../atoms/List"

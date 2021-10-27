@@ -1,4 +1,6 @@
 import Head from "next/head"
+
+import BlockTitle from "../components/organisms/BlockTitle"
 import BlockAdmission from "../components/organisms/BlockAdmission"
 
 const pageTitle = "Admission - Tera Campus"
@@ -17,6 +19,10 @@ export default function admission() {
       </Head>
 
       <main>
+        <BlockTitle
+          title="Admission"
+          iconPicture={{ backgroundImage: "url('tente-welcome.png')" }}
+        />
         <BlockAdmission />
       </main>
     </>

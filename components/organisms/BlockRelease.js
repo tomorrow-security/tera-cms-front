@@ -1,4 +1,3 @@
-import BlockTitle from "../atoms/BlockTitle"
 import LittleTitle from "../atoms/LittleTitle"
 import Paragraphe from "../atoms/Paragraphe"
 import Strong from "../atoms/Strong"
@@ -9,10 +8,6 @@ export default function BlockRelease() {
     <section id="blockrelease" className="py-5">
       <section id="DayReleaseTraining" className="py-5">
         <div className="md:container md:mx-auto">
-          <BlockTitle
-            title="L'alternance"
-            iconPicture={{ backgroundImage: "url('alternance.png')" }}
-          />
           <section className="mt-10 md:flex md:flex-row md:justify-between md:items-center">
             <div className="mx-4 md:w-1/2">
               <LittleTitle children="L'alternance chez TERA CAMPUS" />

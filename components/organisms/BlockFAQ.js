@@ -1,6 +1,6 @@
 import Head from "next/head"
 
-import BlockTitle from "../atoms/BlockTitle"
+import BlockTitle from "../organisms/BlockTitle"
 
 function generateJSONLD(questions) {
   let mainEntity = []
