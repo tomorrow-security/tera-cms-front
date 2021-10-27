@@ -63,7 +63,7 @@ const Step = ({ description, image, icon, stage }) => {
   )
 }
 
-export default function Registration() {
+export default function BlockRegistration() {
   return (
     <section id="registration" className="py-5">
       <div className="md:container md:mx-auto">

@@ -1,6 +1,6 @@
 import Head from "next/head"
 
-import BlockTitle from "../organisms/BlockTitle"
+import SubTitle from "../atoms/SubTitle"
 
 function generateJSONLD(questions) {
   let mainEntity = []
@@ -43,7 +43,7 @@ export default function BlockFaq({ questions }) {
 
       <section id="faq" className="py-10 md:py-20">
         <div className="md:container md:mx-auto">
-          <BlockTitle
+          <SubTitle
             title="FAQ"
             iconPicture={{ backgroundImage: "url('faq.png')" }}
           />

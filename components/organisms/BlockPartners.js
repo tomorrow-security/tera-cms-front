@@ -1,4 +1,3 @@
-import BlockTitle from "../organisms/BlockTitle"
 import PartnersEuropean from "../atoms/PartnersEuropean"
 import PartnersCollaboratives from "../atoms/PartnersCollaboratives"
 import CarouselPartners from "../molecules/CarouselPartners"
@@ -10,10 +9,6 @@ export default function BlockPartners() {
   return (
     <section id="partners" className="py-5">
       <div className="md:container md:mx-auto">
-        <BlockTitle
-          title="Nos partenaires"
-          iconPicture={{ backgroundImage: "url('partenairs.png')" }}
-        />
         <div className="mx-4">
           <Approach />
           <CarouselPartners partners={<PartnersEuropean />} />

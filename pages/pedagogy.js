@@ -1,4 +1,5 @@
 import Head from "next/head"
+import BlockTitle from "../components/organisms/BlockTitle"
 import BlockCurriculum from "../components/organisms/BlockCurriculum"
 import BlockApproach from "../components/organisms/BlockApproach"
 
@@ -16,6 +17,10 @@ export default function Bivouacs() {
       </Head>
 
       <main>
+        <BlockTitle
+          title="Notre pedagogie"
+          iconPicture={{ backgroundImage: "url('montagnard.png')" }}
+        />
         <BlockCurriculum />
         <BlockApproach />
       </main>

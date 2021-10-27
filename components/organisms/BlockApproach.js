@@ -3,7 +3,7 @@ import LittleTitle from "../atoms/LittleTitle"
 export default function BlockApproach() {
   return (
     <section id="approach" className="py-5">
-      <div className="flex-1 mx-4">
+      <div className="mx-4 md:container md:mx-auto">
         <LittleTitle children="Les plus de Tera Campus" />
         <div className="grid w-full xl:w-3/4 xl:mx-auto grid-programPlusRows grid-programPlusColumns gap-x-6">
           <h2 className="box-border col-start-2 row-start-1 py-2 text-xl font-medium">

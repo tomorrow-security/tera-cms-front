@@ -16,8 +16,8 @@ export default function Bivouacs() {
         <meta property="og:description" content={pageDescription} />
       </Head>
 
-      <main className="flex flex-col justify-center w-full h-full text-center">
-        <div className="flex flex-col justify-center w-full h-full align-center flex-nowrap text-tc-blue">
+      <main>
+        <div className="flex flex-col justify-center w-full h-full text-center align-center flex-nowrap text-tc-blue">
           <div className="w-1/4 py-10 mx-auto">
             <IconLogoBig />
             <div className="text-base font-bold tracking-normal normal-case md:text-lg xl:text-2xl">

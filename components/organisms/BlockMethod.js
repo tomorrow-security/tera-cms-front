@@ -1,7 +1,6 @@
 import Image from "next/image"
 
 import SubTitle from "../atoms/SubTitle"
-// import LittleTitle from "../atoms/LittleTitle"
 
 export default function BlockMethod() {
   return (

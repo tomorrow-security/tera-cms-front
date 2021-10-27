@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 
-import BlockTitle from "../organisms/BlockTitle"
 import Paragraphe from "../atoms/Paragraphe"
 import ExternalLink from "../molecules/ExternalLink"
 import LittleTitle from "../atoms/LittleTitle"
@@ -85,10 +84,6 @@ export default function BlockCareer() {
   return (
     <section id="career" className="flex flex-col flex-grow py-5">
       <div className="flex flex-col justify-between flex-grow md:container md:mx-auto">
-        <BlockTitle
-          title="Les carrières"
-          iconPicture={{ backgroundImage: "url('bulb.png')" }}
-        />
         <Paragraphe>
           Après avoir obtenu votre diplôme d’Administrateur Systèmes
           d'Informations, vous pourrez intégrer la 4ème année chez Tera Campus

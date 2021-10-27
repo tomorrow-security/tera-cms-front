@@ -1,4 +1,3 @@
-import BlockTitle from "../organisms/BlockTitle"
 import Paragraphe from "../atoms/Paragraphe"
 import LittleTitle from "../atoms/LittleTitle"
 import List from "../atoms/List"
@@ -7,10 +6,6 @@ export default function BlockHandicap() {
   return (
     <section id="handicap" className="py-5">
       <div className="md:container md:mx-auto">
-        <BlockTitle
-          title="Etudier en situation de handicap"
-          iconPicture={{ backgroundImage: "url('handicap.png')" }}
-        />
         <div className="mx-4">
           <Paragraphe>
             Tera Campus mène une politique d’égalité des chances, et souhaite

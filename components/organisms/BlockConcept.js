@@ -1,4 +1,3 @@
-import PageLink from "../atoms/PageLink"
 import LittleTitle from "../atoms/LittleTitle"
 import Strong from "../atoms/Strong"
 import Paragraphe from "../atoms/Paragraphe"

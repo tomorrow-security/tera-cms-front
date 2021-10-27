@@ -1,6 +1,5 @@
 import React from "react"
 
-import BlockTitle from "../organisms/BlockTitle"
 import PageLink from "../atoms/PageLink"
 import LittleTitle from "../atoms/LittleTitle"
 import List from "../atoms/List"
@@ -93,11 +92,7 @@ export default function BlockCurriculum() {
   return (
     <section id="curriculum" className="py-5">
       <div className="flex flex-col justify-between flex-grow md:container md:mx-auto">
-        <BlockTitle
-          title="Notre pedagogie"
-          iconPicture={{ backgroundImage: "url('montagnard.png')" }}
-        />
-        <div className="mx-4 md:mx-0">
+        <div className="mx-4">
           <div className="font-semibold">
             <p>
               Deux premières années en formation initiale pour acquérir des

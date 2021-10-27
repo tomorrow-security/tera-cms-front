@@ -1,9 +1,10 @@
 import Head from "next/head"
+import BlockTitle from "../components/organisms/BlockTitle"
 import BlockProgram from "../components/organisms/BlockProgram"
 import BlockPrerequisite from "../components/organisms/BlockPrerequisite"
 import BlockMethod from "../components/organisms/BlockMethod"
 import BlockEval from "../components/organisms/BlockEval"
-import Registration from "../components/molecules/Registration"
+import BlockRegistration from "../components/organisms/BlockRegistration"
 
 const pageTitle = "Programme - Tera Campus"
 const pageDescription = "Notre programme"
@@ -21,9 +22,13 @@ export default function Legal() {
       </Head>
 
       <main>
+        <BlockTitle
+          title="BAC+3 Administrateur (rice) des systèmes d’Information"
+          iconPicture={{ backgroundImage: "url('programme.png')" }}
+        />
         <BlockProgram />
         <BlockPrerequisite />
-        <Registration />
+        <BlockRegistration />
         <BlockMethod />
         <BlockEval />
       </main>

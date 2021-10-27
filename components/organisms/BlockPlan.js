@@ -1,4 +1,4 @@
-import BlockTitle from "../organisms/BlockTitle"
+import SubTitle from "../atoms/SubTitle"
 import NavList from "../molecules/NavList"
 import PlanLink from "../atoms/PlanLink"
 import SocialNav from "../molecules/SocialNav"
@@ -41,7 +41,7 @@ export default function BlockPlan({ id, label }) {
   return (
     <section id="plan" className="px-4 pt-4 md:pt-10 md:pb-5">
       <div className="md:container md:mx-auto">
-        <BlockTitle
+        <SubTitle
           title="Plan du site"
           iconPicture={{ backgroundImage: "url('plan.png')" }}
         />

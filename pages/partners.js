@@ -1,11 +1,28 @@
+import Head from "next/head"
+
+import BlockTitle from "../components/organisms/BlockTitle"
 import BlockPartners from "../components/organisms/BlockPartners"
+
+const pageTitle = "Partenaires - Tera Campus"
+const pageDescription = "Nos partenaires"
 
 export default function partners() {
   return (
-    <section id="partners" className="py-5">
-      <div className="md:container md:mx-auto">
+    <>
+      <Head>
+        <title>{pageTitle}</title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content={pageDescription} />
+        <meta property="og:description" content={pageDescription} />
+      </Head>
+
+      <main>
+        <BlockTitle
+          title="Nos partenaires"
+          iconPicture={{ backgroundImage: "url('partenairs.png')" }}
+        />
         <BlockPartners />
-      </div>
-    </section>
+      </main>
+    </>
   )
 }
