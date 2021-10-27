@@ -1,5 +1,6 @@
 import { useEffect } from "react"
 
+//TODO : les états ne fonctionne pas
 export default function InputButton({
   mutation,
   defaultValue,

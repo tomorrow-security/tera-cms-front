@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form"
 
 import PageLink from "../atoms/PageLink"
 
-//TODO le message d'erreur ne fonctionne pas
+//TODO : le message d'erreur ne fonctionne pas
 export default function InputCheckRGPD() {
   const {
     register,

@@ -1,5 +1,5 @@
 import axios from "axios"
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import { useForm } from "react-hook-form"
 import { useMutation } from "react-query"
 
@@ -58,11 +58,12 @@ const TestCreated = ({ applicant, test, uuid, setPageData }) => {
     <div className="mx-4 space-y-8 text-center">
       <div className="space-y-2">
         <p className="font-bold">
-          <span className="capitalize">{applicant}</span>, merci pour ton
+          <span className="capitalize">{applicant}</span>, merci pour votre
           inscription chez Tera Campus !
         </p>
         <p>
-          Dans quelques instants tu pourras démarrer ton test de positionnement.
+          Dans quelques instants vous pourrez démarrer votre test de
+          positionnement.
         </p>
         <p>
           Ce test se présente sous la forme d’un QCM de{" "}
@@ -70,12 +71,13 @@ const TestCreated = ({ applicant, test, uuid, setPageData }) => {
           l’information et de certaines compétences générales.
         </p>
         <p className="underline">
-          Si tu n’as pas les réponses à toutes les questions, pas d’inquiétude !
+          Si vous n’avez pas les réponses à toutes les questions, pas
+          d’inquiétude !
         </p>
         <p>
           Il s’agit d’un test de positionnement qui nous permettra de connaitre
-          ton niveau afin de mieux te préparer à la rentrée scolaire chez Tera
-          Campus !
+          votre niveau afin de mieux vous préparer à la rentrée scolaire chez
+          Tera Campus !
         </p>
         <p>Quelques informations complémentaires :</p>
         <div>
@@ -84,14 +86,14 @@ const TestCreated = ({ applicant, test, uuid, setPageData }) => {
               Une ou plusieurs réponses seront possible selon les questions
             </li>
             <li>
-              Une fois le test lancé, tu auras deux heures pour le valider
+              Une fois le test lancé, vous aurez deux heures pour le valider
             </li>
             <li>
-              Si tu n'as pas le temps maintenant, tu pourras lancer le test via
-              un lien dans le mail que tu vas recevoir
+              Si vous n'avez pas le temps maintenant, vous pourrez lancer le
+              test via un lien dans le mail que vous allez recevoir
             </li>
             <li>
-              Toute réponse est définitive, tu ne pourras plus revenir en
+              Toute réponse est définitive, vous ne pourrez plus revenir en
               arrière
             </li>
           </ul>
@@ -310,11 +312,11 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
           Félicitations {applicant} !
         </div>
         <div className="text-center">
-          Tu as terminé ton test avec {test.score}% de réussite.
+          Vous avez terminé votre test avec {test.score}% de réussite.
         </div>
         <div className="mt-12 text-center">
-          Pour continuer ton inscription, tu dois nous transmettre un document
-          d'indentité ainsi que ton CV à jour :
+          Pour continuer votre inscription, vous devez nous transmettre un
+          document d'indentité ainsi que votre CV à jour :
         </div>
         <form
           onSubmit={handleSubmit(onSubmit)}
@@ -328,6 +330,7 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
               {/* //TODO rendre l'errors fonctionnel */}
               <div className="relative group">
                 <label
+                  // TODO pb de couleur
                   htmlFor="document"
                   // className="absolute p-4 border rounded cursor-pointer bg-tc-blue-xlight border-tc-blue group-hover:border-2"
                   className={`absolute p-4 border rounded cursor-pointer group-hover:border-4 ${

@@ -8,7 +8,8 @@ import PhoneInputWithCountry from "react-phone-number-input/react-hook-form"
 import InputRadio from "./InputRadio"
 import InputButton from "./InputButton"
 import PageLink from "../atoms/PageLink"
-import InputCheckRGPD from "../molecules/InputCheckRGPD"
+// import InputCheckRGPD from "../molecules/InputCheckRGPD"
+// TODO importer la molecule Input quand fonctionnera
 // import Input from '../molecules/Input'
 
 export default function Form({ mutation, onSubmit }) {
@@ -24,7 +25,6 @@ export default function Form({ mutation, onSubmit }) {
     reset()
   }, [])
 
-  //TODO créer et importer une molécule Input
   return (
     <form className="w-full mx-2" onSubmit={handleSubmit(onSubmit)}>
       <div>
@@ -53,8 +53,7 @@ export default function Form({ mutation, onSubmit }) {
                 ) : null}
               </div>
               <div className="space-y-1 xl:w-45%">
-                {/* // TODO importer la molecule Input à la place */}
-                {/* //* Input composant ne fonctionne pas : à revoir */}
+                {/* // TODO importer la molecule Input quand fonctionnera */}
                 <div className="flex items-center">
                   <label htmlFor="email" className="w-30%">
                     E-mail* :
@@ -79,7 +78,7 @@ export default function Form({ mutation, onSubmit }) {
             </div>
             <div className="xl:flex xl:justify-between xl:w-4/5 xl:flex-nowrap">
               <div className="space-y-1 xl:w-45%">
-                {/* // TODO importer la molecule Input à la place */}
+                {/* // TODO importer la molecule Input quand fonctionnera */}
                 <div className="flex items-center">
                   <label htmlFor="lastName" className="w-30%">
                     Nom* :
@@ -102,7 +101,7 @@ export default function Form({ mutation, onSubmit }) {
                 ) : null}
               </div>
               <div className="space-y-1 xl:w-45%">
-                {/* // TODO importer la molecule Input à la place */}
+                {/* // TODO importer la molecule Input quand fonctionnera */}
                 <div className="flex items-center">
                   <label htmlFor="firstName" className="w-30%">
                     Prénom* :
@@ -186,13 +185,13 @@ export default function Form({ mutation, onSubmit }) {
                 </div>
               ) : null}
             </label>
-            {/* // TODO quand le message d'erreur fonctionnera */}
+            {/* // TODO : le message d'erreur ne fonctionne pas */}
             {/* <InputCheckRGPD /> */}
           </div>
         </div>
       </div>
       <div className="flex items-center justify-center my-4 xl:my-20">
-        {/* //TODO voir pourquoi les états du button ne fonctionnent plus */}
+        {/* //TODO : les états du button ne fonctionnent plus */}
         <InputButton
           defaultValue="Envoyer"
           loadingValue="En cours d'envoi ..."
