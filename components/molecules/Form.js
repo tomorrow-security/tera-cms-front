@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import React, { useEffect } from "react"
 import { useForm } from "react-hook-form"
 import "react-phone-number-input/style.css"
 import PhoneInputWithCountry from "react-phone-number-input/react-hook-form"
@@ -8,6 +8,8 @@ import PhoneInputWithCountry from "react-phone-number-input/react-hook-form"
 import InputRadio from "./InputRadio"
 import InputButton from "./InputButton"
 import PageLink from "../atoms/PageLink"
+// import InputCheckRGPD from '../components/molecules/InputCheckRGPD'
+// import Input from '../components/molecules/Input'
 
 export default function Form({ mutation, onSubmit }) {
   const {
@@ -22,6 +24,7 @@ export default function Form({ mutation, onSubmit }) {
     reset()
   }, [])
 
+  //TODO créer et importer une molécule Input
   return (
     <form className="w-full mx-2" onSubmit={handleSubmit(onSubmit)}>
       <div>
@@ -130,7 +133,6 @@ export default function Form({ mutation, onSubmit }) {
                       Téléphone* :
                     </label>
                     {/* //TODO voir pour retirer le border interne au focus */}
-                    l'intérieur
                     <PhoneInputWithCountry
                       id="phone"
                       name="phone"
@@ -164,16 +166,15 @@ export default function Form({ mutation, onSubmit }) {
                 />
                 <div>
                   <div className="box-border flex flex-row flex-wrap items-center max-w-full ml-2 text-xs sm:text-base">
-                    {/* // TODO vérifier alignement des éléments */}
-                    <p className="border-b-2 border-transparent">
-                      J'ai lu et j'accepte la&nbsp;
-                    </p>
-                    <PageLink
-                      id="privacy"
-                      label="politique de confidentialité"
-                    />
-                    <p className="border-b-2 border-transparent">
-                      &nbsp;et j'accepte d'être recontacté par Tera Campus pour
+                    <p>
+                      J'ai lu et j'accepte la
+                      <span className="underline">
+                        <PageLink
+                          id="privacy"
+                          label="politique de confidentialité"
+                        />
+                      </span>
+                      et j'accepte d'être recontacté par Tera Campus pour
                       finaliser mon inscription.
                     </p>
                   </div>
@@ -190,7 +191,7 @@ export default function Form({ mutation, onSubmit }) {
         </div>
       </div>
       <div className="flex items-center justify-center my-4 xl:my-20">
-        {/* //TODO voir pkoi le button ne fonctionne plus */}
+        {/* //TODO voir pourquoi les états du button ne fonctionnent plus */}
         <InputButton
           defaultValue="Envoyer"
           loadingValue="En cours d'envoi ..."
