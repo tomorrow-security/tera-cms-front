@@ -39,7 +39,7 @@ export default function Header() {
             <div
               className={`${
                 !isOpen && "hidden"
-              } lg:block bg-tc-blue text-white`}
+              } lg:block bg-tc-blue text-white uppercase`}
             >
               <Cta id="/admission" title="Admission" />
             </div>
