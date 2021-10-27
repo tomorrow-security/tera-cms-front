@@ -2,35 +2,40 @@ import { useForm } from "react-hook-form"
 
 import PageLink from "../atoms/PageLink"
 
+//TODO le message d'erreur ne fonctionne pas
 export default function InputCheckRGPD() {
-	const {
-		register,
-		formState: { errors },
-	} = useForm()
+  const {
+    register,
+    formState: { errors },
+  } = useForm()
 
-	return (
-		<label className="block">
-			<div className="flex flex-row content-center align-center w-max">
-				<input
-					type="checkbox"
-					name="acceptPrivacyRules"
-					className={`my-auto mr-2 border outline-none ${
-						errors.acceptPrivacyRules ? "border-tc-red" : "border-tc-blue"
-					}`}
-					{...register("acceptPrivacyRules", { required: true })}
-				/>
-				<span className="flex flex-row text-xs flex-nowrap align-items sm:text-base">
-					J'ai lu et j'accepte la&nbsp;
-					<PageLink id="privacy" label="politique de confidentialité" />
-					&nbsp;de Tera Campus.
-				</span>
-			</div>
-			{/* // TODO errors ne fonctionne pas */}
-			{errors.acceptPrivacyRules && (
-				<span className="text-tc-red">
-					Tu dois accepter la politique de confidentialité pour continuer.
-				</span>
-			)}
-		</label>
-	)
+  return (
+    <label className="flex flex-col justify-center space-y-1">
+      <div className="flex flex-row pt-8 mx-auto flex-nowrap w-max-full">
+        <input
+          id="consent"
+          name="consent"
+          type="checkbox"
+          className="w-6 h-6 my-auto rounded border-tc-blue md:w-4 md:h-4 text-tc-blue focus:ring-offset-0"
+          {...register("consent", { required: true })}
+        />
+        <div>
+          <div className="box-border flex flex-row flex-wrap items-center max-w-full ml-2 text-xs sm:text-base">
+            <p>
+              J'ai lu et j'accepte la
+              <span className="underline">
+                <PageLink id="privacy" label="politique de confidentialité" />
+              </span>
+              et j'accepte d'être recontacté par Tera Campus.
+            </p>
+          </div>
+        </div>
+      </div>
+      {errors.consent ? (
+        <div className="text-center text-tc-red">
+          Tu dois accepter la politique de confidentialité pour continuer.
+        </div>
+      ) : null}
+    </label>
+  )
 }

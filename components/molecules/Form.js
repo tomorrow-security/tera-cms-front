@@ -8,8 +8,8 @@ import PhoneInputWithCountry from "react-phone-number-input/react-hook-form"
 import InputRadio from "./InputRadio"
 import InputButton from "./InputButton"
 import PageLink from "../atoms/PageLink"
-// import InputCheckRGPD from '../components/molecules/InputCheckRGPD'
-// import Input from '../components/molecules/Input'
+import InputCheckRGPD from "../molecules/InputCheckRGPD"
+// import Input from '../molecules/Input'
 
 export default function Form({ mutation, onSubmit }) {
   const {
@@ -182,10 +182,12 @@ export default function Form({ mutation, onSubmit }) {
               {errors.consent ? (
                 <div className="text-center text-tc-red">
                   Tu dois accepter la politique de confidentialité pour
-                  continuer ton inscription.
+                  continuer.
                 </div>
               ) : null}
             </label>
+            {/* // TODO quand le message d'erreur fonctionnera */}
+            {/* <InputCheckRGPD /> */}
           </div>
         </div>
       </div>
