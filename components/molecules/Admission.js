@@ -1,6 +1,5 @@
 import Link from "next/link"
 
-// TODO mettre le lien quand page faite
 export default function Admission() {
   return (
     <>

@@ -3,7 +3,6 @@ import NavList from "../molecules/NavList"
 import PlanLink from "../atoms/PlanLink"
 import SocialNav from "../molecules/SocialNav"
 
-// TODO mettre à jour les routes quand touts les pages et block seront fait
 const ecole = [
   { id: "description", label: "Tera campus c'est quoi ?" },
   { id: "pedagogy", label: "Notre pédagogie" },

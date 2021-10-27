@@ -1,6 +1,5 @@
 export default function Hero() {
   return (
-    // TODO dimensionner et placer l'image
     <section
       id="hero"
       style={{ backgroundImage: "url('montagne.jpg')" }}
