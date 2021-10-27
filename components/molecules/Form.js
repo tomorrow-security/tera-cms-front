@@ -1,27 +1,15 @@
-import axios from "axios"
-import Head from "next/head"
-import { useRouter } from "next/router"
-import React, { useEffect } from "react"
+import { useEffect } from "react"
 import { useForm } from "react-hook-form"
-import { useMutation } from "react-query"
 import "react-phone-number-input/style.css"
 import PhoneInputWithCountry from "react-phone-number-input/react-hook-form"
 // TODO faire la validation du numéro avec isPossiblePhoneNumber
 // import { isPossiblePhoneNumber } from 'react-phone-number-input'
 
-import BlockTitle from "../../components/organisms/BlockTitle"
-import InputRadio from "../../components/molecules/InputRadio"
-import InputButton from "../../components/molecules/InputButton"
-// import InputCheckRGPD from '../components/molecules/InputCheckRGPD'
-// import Input from '../components/molecules/Input'
-import PageLink from "../../components/atoms/PageLink"
-import Form from "../../components/molecules/Form"
+import InputRadio from "./InputRadio"
+import InputButton from "./InputButton"
+import PageLink from "../atoms/PageLink"
 
-//TODO importer une molécule Input
-// TODO layout msg d'erreur des checkbox ()
-
-// TODO importer la molecule EnrolmentForm à la place
-const EnrolmentForm = ({ mutation, onSubmit }) => {
+export default function Form({ mutation, onSubmit }) {
   const {
     reset,
     register,
@@ -33,6 +21,8 @@ const EnrolmentForm = ({ mutation, onSubmit }) => {
   useEffect(() => {
     reset()
   }, [])
+
+  //TODO voir pkoi le button ne fonctionne plus
 
   // TODO style au focus du phoneInput border à enlever à l'intérieur
   return (
@@ -210,63 +200,5 @@ const EnrolmentForm = ({ mutation, onSubmit }) => {
         />
       </div>
     </form>
-  )
-}
-
-const pageTitle = "Inscription - Tera Campus"
-const pageDescription = "Inscription"
-const pageUrl = "https://tera-campus.com/enrolment"
-const apiUrl = process.env.NEXT_PUBLIC_ARPETTE_URL
-
-export default function Enrolment() {
-  const router = useRouter()
-
-  const mutation = useMutation(
-    (formData) => {
-      axios
-        .post(`${apiUrl}/enrolment/create`, formData)
-        .then(({ data }) => router.push(`/enrolment/${data.enrolment}`))
-
-        .catch((error) => console.log(error))
-    },
-    { retry: 3 }
-  )
-
-  const onSubmit = (formData) => mutation.mutate(formData)
-  return (
-    <>
-      <Head>
-        <title>{pageTitle}</title>
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="description" content={pageDescription} />
-        <meta property="og:url" content={pageUrl} />
-        <meta property="og:description" content={pageDescription} />
-      </Head>
-
-      <main className="mx-2 md:container md:mx-auto">
-        <section id="enrolment" className="py-10 md:py-20">
-          <div className="flex flex-col justify-between flex-grow md:container md:mx-auto">
-            <BlockTitle
-              title="Inscription"
-              iconPicture={{
-                backgroundImage: "url('inscription-red-into-blue.png')",
-              }}
-            />
-          </div>
-          <div className="xl:my-12">
-            {/* <EnrolmentForm
-              status={mutation.status}
-              onSubmit={onSubmit}
-              mutation={mutation}
-            /> */}
-            <Form
-              status={mutation.status}
-              onSubmit={onSubmit}
-              mutation={mutation}
-            />
-          </div>
-        </section>
-      </main>
-    </>
   )
 }
