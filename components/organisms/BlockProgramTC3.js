@@ -1,11 +1,16 @@
 import Image from "next/image"
+import SubTitle from "../atoms/SubTitle"
 
-import Program from "../molecules/Program"
+import ProgramTC3 from "../molecules/ProgramTC3"
 
-export default function BlockProgramme() {
+export default function BlockProgrammeTC3() {
   return (
-    <section id="program" className="py-5">
+    <section id="programtc3" className="py-5">
       <div className="md:container md:mx-auto">
+        <SubTitle
+          title="BAC+3 Administrateur (rice) des systèmes d’Information"
+          iconPicture={{ backgroundImage: "url('BAC+3.png')" }}
+        />
         <section className="flex flex-col flex-nowrap md:flex-row md:justify-around md:items-center xl:w-9/12 xl:mx-auto">
           <div className="flex flex-col p-2 m-4 space-y-4 text-center text-white rounded xl:mr-12 2xl:mr-20 flex-nowrap bg-tc-blue md:w-1/2">
             <p className="text-xl">BAC+3</p>
@@ -33,7 +38,7 @@ export default function BlockProgramme() {
             />
           </div>
         </section>
-        <Program />
+        <ProgramTC3 />
       </div>
     </section>
   )

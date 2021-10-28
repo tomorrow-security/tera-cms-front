@@ -1,7 +1,7 @@
 import Head from "next/head"
 import BlockTitle from "../components/organisms/BlockTitle"
-import BlockCurriculum from "../components/organisms/BlockCurriculum"
 import BlockApproach from "../components/organisms/BlockApproach"
+import BlockMethod from "../components/organisms/BlockMethod"
 
 const pageTitle = "Pédagogie - Tera Campus"
 const pageDescription = "Notre pédagogie"
@@ -21,8 +21,8 @@ export default function Bivouacs() {
           title="Notre pedagogie"
           iconPicture={{ backgroundImage: "url('montagnard.png')" }}
         />
-        <BlockCurriculum />
         <BlockApproach />
+        <BlockMethod />
       </main>
     </>
   )

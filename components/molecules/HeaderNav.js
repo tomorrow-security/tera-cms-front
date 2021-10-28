@@ -14,17 +14,17 @@ const ecole = [
 
 const program = [
   {
-    id: "program",
+    id: "program/#programtc3",
     label: "BAC+3 Administrateur des systèmes d'information",
   },
   { id: "partners", label: "Les partenaires" },
-  { id: "career", label: "Les carrières" },
+  { id: "program/#career", label: "Les carrières" },
 ]
 
 const alternance = [{ id: "releasetraining", label: "C'est quoi l'alternance" }]
 
 const headernav = [
-  { id: "#agenda", label: "Agenda" },
+  { id: "#agenda", label: "Actualités" },
   { id: "contact", label: "Contact" },
 ]
 
