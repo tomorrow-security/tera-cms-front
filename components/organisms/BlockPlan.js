@@ -25,6 +25,7 @@ const legal = [
   { id: "cgv", label: "CGV - Conditions Générales de Ventes" },
   { id: "legacy", label: "Mentions légales" },
   { id: "studyrules", label: "Règlement des études" },
+  { id: "privacy", label: "Politique de confidentialité" },
 ]
 
 const autre = [
