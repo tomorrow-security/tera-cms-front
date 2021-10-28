@@ -3,7 +3,7 @@ import LittleTitle from "../atoms/LittleTitle"
 const syllabusTC3 = [
   {
     subject: "Administrer la mise en œuvre du projet informatique",
-    duration: 126,
+    duration: 133,
     credits: 20,
     topics: ["Développement Mobile", "Architecture Cloud", "Architeture Cloud"],
     competences: [
@@ -70,27 +70,28 @@ export default function Program({}) {
             key={index}
             className="p-2 md:grid md:grid-cols-1 md:grid-rows-program-domain"
           >
-            <div className="row-start-1">
-              <div className="flex items-center justify-center p-2 text-lg font-semibold bg-opacity-25 rounded-lg md:h-3/4 bg-tc-red">
-                <h3 className="text-center">{domain.subject}</h3>
+            <div className="grid grid-cols-1 p-2 text-lg font-semibold bg-opacity-25 rounded-lg grid-rows-objectif place-content-center md:row-start-1 md:row-end-2 bg-tc-red">
+              <p className="row-start-1 text-center uppercase">Objectif :</p>
+              <div className="flex items-center justify-center row-start-2 text-center">
+                <h3>{domain.subject}</h3>
               </div>
-              <p className="text-sm text-right">
-                {domain.duration} Heures, ECTS {domain.credits}
-              </p>
             </div>
-            <ul className="row-start-2 p-2 space-y-2 list-inside list-square">
+            <p className="row-start-2 text-sm text-right">
+              {domain.duration} Heures, ECTS {domain.credits}
+            </p>
+            <ul className="row-start-3 p-2 space-y-2 list-inside list-square">
               {domain.topics.map((topic, index) => (
                 <li key={`${index}-${topic}`} className="text-sm">
                   {topic}
                 </li>
               ))}
             </ul>
-            <div className="flex items-center justify-center row-start-3 p-2 mx-4 my-2 text-base font-semibold text-center bg-opacity-25 rounded-lg bg-tc-blue">
+            <div className="flex items-center justify-center row-start-4 p-2 mx-4 my-2 text-base font-semibold text-center bg-opacity-25 rounded-lg bg-tc-blue">
               <p className="text-center">
                 Les compétences acquises en fin de cursus :
               </p>
             </div>
-            <ul className="row-start-4 p-2 space-y-2 list-inside list-square md:mt-1">
+            <ul className="row-start-5 p-2 space-y-2 list-inside list-square md:mt-1">
               {domain.competences.map((competence, index) => (
                 <li
                   key={`${index}-${competence}`}
