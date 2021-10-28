@@ -17,7 +17,7 @@ export default function brochure() {
 
       <main>
         <object
-          nam="brochure"
+          name="brochure"
           type="application/pdf"
           data="/public/Brochure.pdf"
         ></object>
