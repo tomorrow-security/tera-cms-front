@@ -20,7 +20,7 @@ export default function description() {
 
       <main>
         <section className="py-5">
-          <div className="mx-4 md:container md:mx-0">
+          <div className="mx-4 md:container md:mx-auto">
             <BlockTitle
               title="A propos de Tera Campus"
               iconPicture={{ backgroundImage: "url('info.png')" }}
