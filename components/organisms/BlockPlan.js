@@ -36,11 +36,11 @@ const autre = [
 
 export default function BlockPlan({ id, label }) {
   return (
-    <section id="plan" className="px-4 pt-4 md:pt-10 md:pb-5">
+    <section id="plan" className="py-2">
       <div className="md:container md:mx-auto">
         <SubTitle
           title="Plan du site"
-          iconPicture={{ backgroundImage: "url('plan.png')" }}
+          iconPicture={{ backgroundImage: "url('plan-red.png')" }}
         />
         <div className="md:relative">
           <div className="flex flex-col mt-2 mb-4 space-y-8 text-sm md:mt-6 md:space-x-2 md:space-y-0 md:flex-row md:flex-wrap md:justify-around">
