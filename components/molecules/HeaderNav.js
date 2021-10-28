@@ -1,20 +1,20 @@
-import PageLink from "../atoms/PageLink";
-import HashLink from "../atoms/HashLink";
+import PageLink from "../atoms/PageLink"
+import HashLink from "../atoms/HashLink"
 
-const links1 = [{ id: "agenda", label: "Agenda" }];
+const links1 = [{ id: "agenda", label: "Agenda" }]
 
-const links2 = [{ id: "faq", label: "Faq" }];
+const links2 = [{ id: "faq", label: "Faq" }]
 
 const pages1 = [
   { id: "career", label: "Carrières" },
   { id: "guides", label: "Nos guides" },
   { id: "program", label: "Programme" },
-  { id: "brochure", label: "Brochure" },
+  { id: "catalog", label: "Brochure" },
   { id: "enrolment", label: "Inscription" },
   { id: "join", label: "Rejoins-nous" },
-];
+]
 
-const pages2 = [{ id: "contact", label: "Contact" }];
+const pages2 = [{ id: "contact", label: "Contact" }]
 
 //TODO revoir les space-y en wiew mobile
 
@@ -66,5 +66,5 @@ export default function HeaderNav({ click }) {
         ))}
       </ul>
     </nav>
-  );
+  )
 }
