@@ -1,95 +1,14 @@
-import axios from "axios"
 import Head from "next/head"
+import BlockTitle from "../components/organisms/BlockTitle"
+import BlockFAQ from "../components/organisms/BlockFAQ"
 
-import BlockAgenda from "../components/organisms/BlockAgenda"
-import BlockConcept from "../components/organisms/BlockConcept"
-import BlockFaq from "../components/organisms/BlockFAQ"
-import Hero from "../components/organisms/Hero"
-
-const pageTitle = "École supérieure d'informatique - Tera Campus"
-const pageDescription =
-  "École supérieure d'informatique, Tera Campus propose des formations diplômantes Bac+3 et Bac+5 en développement informatique et infrastructure."
-const pageUrl = "https://tera-campus.com"
-
-function Index({ agenda }) {
-  return (
-    <>
-      <Head>
-        <title>{pageTitle}</title>
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="description" content={pageDescription} />
-        <meta property="og:url" content={pageUrl} />
-        <meta property="og:description" content={pageDescription} />
-      </Head>
-
-      <main>
-        <Hero />
-        <BlockAgenda events={agenda} />
-        <BlockConcept />
-      </main>
-    </>
-  )
-}
+const pageTitle = "FAQ - Tera Campus"
+const pageDescription = "la FAQ"
+const pageUrl = "https://tera-campus.com/faq"
 
 export async function getServerSideProps() {
-  const getAgenda = async () => {
-    const query = "query{boards(ids: 1201384641){items{name,column_values{id,text}}}}"
-    const response = await axios.post(
-      "https://api.monday.com/v2",
-      JSON.stringify({ query: query }),
-      {
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": process.env.MONDAY_API_KEY,
-        },
-      }
-    )
-    
-    let events = []
-    let items = response.data.data.boards[0].items
-  
-    for (const event of items) {
-    
-      if (events.length < 3) {
-        let eventConfirmed = false
-        let eventDate = null
-        let eventPlatform = null
-        let eventType = null
-  
-        for (const eventDetail of event.column_values) {
-          if (eventDetail.id === 'statut' && eventDetail.text === 'Confirmé') {
-            eventConfirmed = true
-          }
-  
-          if (eventDetail.id === 'date4' && eventDetail.text) {
-            const date = new Date(eventDetail.text)
-            if (date >= new Date()) {
-              eventDate = date
-            }
-          }
-  
-          if (eventDetail.id === 'statut_16' && eventDetail.text) {
-            eventType = eventDetail.text
-          }
-  
-          if (eventDetail.id === 'statut_1' && eventDetail.text) {
-            eventPlatform = eventDetail.text
-          }
-        }
-  
-        if (event.name && eventConfirmed && eventDate && eventType && eventPlatform) {
-          events.push({name: event.name, datetime: `${eventDate}`, description: eventType, platform: eventPlatform})
-        }
-  
-      }
-    }
-  
-    return events
-  }
-  
   return {
     props: {
-      agenda: await getAgenda(),
       questions: [
         {
           name: "Qui peut rejoindre Tera Campus ?",
@@ -120,4 +39,24 @@ export async function getServerSideProps() {
   }
 }
 
-export default Index
+export default function faq({ questions }) {
+  return (
+    <>
+      <Head>
+        <title>{pageTitle}</title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content={pageDescription} />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:description" content={pageDescription} />
+      </Head>
+
+      <main>
+        <BlockTitle
+          title="FAQ"
+          iconPicture={{ backgroundImage: "url('faq.png')" }}
+        />
+        <BlockFAQ questions={questions} />
+      </main>
+    </>
+  )
+}

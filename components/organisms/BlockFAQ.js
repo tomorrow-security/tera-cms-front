@@ -1,6 +1,7 @@
 import Head from "next/head"
 
-import SubTitle from "../atoms/SubTitle"
+import LitleTitle from "../atoms/LittleTitle"
+import Paragraphe from "../atoms/Paragraphe"
 
 function generateJSONLD(questions) {
   let mainEntity = []
@@ -25,8 +26,8 @@ function generateJSONLD(questions) {
 function Item({ question, answer }) {
   return (
     <div>
-      <p className="text-lg font-bold md:text-xl">{question}</p>
-      <p className="mt-3">{answer}</p>
+      <LitleTitle>{question}</LitleTitle>
+      <Paragraphe>{answer}</Paragraphe>
     </div>
   )
 }
@@ -43,10 +44,6 @@ export default function BlockFaq({ questions }) {
 
       <section id="faq" className="py-10 md:py-20">
         <div className="md:container md:mx-auto">
-          <SubTitle
-            title="FAQ"
-            iconPicture={{ backgroundImage: "url('faq.png')" }}
-          />
           <div className="grid grid-cols-1 gap-8 mx-4 lg:grid-cols-2">
             {questions.map((item, index) => (
               <Item key={index} question={item.name} answer={item.text} />
