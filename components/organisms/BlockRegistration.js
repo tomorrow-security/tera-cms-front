@@ -57,7 +57,9 @@ const Step = ({ description, image, icon, stage }) => {
                 md:flex-col-reverse md:text-center bg-white bg-opacity-70 w-full h-full z-10`}
         >
           <div className="z-20 w-12 md:w-8 md:mt-2 text-tc-blue">{icon}</div>
-          <div className="z-20 w-2/3 m-2 md:m-1 md:w-full">{description}</div>
+          <div className="z-20 w-2/3 m-2 md:flex md:h-2/3 md:items-center md:justify-center md:m-1 md:w-full">
+            <p>{description}</p>
+          </div>
         </div>
       </div>
     </div>
