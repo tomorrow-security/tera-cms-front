@@ -78,7 +78,7 @@ export default function BlockContract() {
           </section>
           <LittleTitle children="Aides spécifiques" />
           <div className=" md:flex md:justify-between">
-            <div className="md:w-2/3">
+            <div className="w-5/6 mx-auto md:w-3/4">
               <ParagrapheXl>
                 Des aides spécifiques peuvent également être attribuées aux
                 alternants... (APL, l’aide “Mobili jeune”)

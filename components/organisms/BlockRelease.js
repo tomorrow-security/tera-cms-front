@@ -6,9 +6,9 @@ import ExternalLink from "../molecules/ExternalLink"
 export default function BlockRelease() {
   return (
     <section id="blockrelease" className="py-5">
-      <section id="DayReleaseTraining" className="py-5">
+      <section id="DayReleaseTraining">
         <div className="md:container md:mx-auto">
-          <section className="mt-10 md:flex md:flex-row md:justify-between md:items-center">
+          <section className="md:flex md:flex-row md:justify-between md:items-center">
             <div className="mx-4 md:w-1/2">
               <LittleTitle children="L'alternance chez TERA CAMPUS" />
               <Paragraphe>
@@ -27,7 +27,7 @@ export default function BlockRelease() {
           </section>
         </div>
       </section>
-      <section id="releasetrainingdef" className="py-5">
+      <section id="releasetrainingdef" className="pt-5">
         <div className="md:container md:mx-auto">
           <div className="mx-4">
             <LittleTitle children=" L'alternance c'est quoi ?" />
@@ -60,39 +60,42 @@ export default function BlockRelease() {
                   </Paragraphe>
                 </div>
               </section>
-              <div className="mt-4 md:flex md:flex-row md:justify-between md:items-center">
-                <div
-                  className="w-screen bg-center bg-no-repeat bg-cover h-33vh sm:h-50vh md:bg-contain md:bg-right md:w-1/2"
-                  style={{ backgroundImage: "url('groupe-réunion.jpg')" }}
-                ></div>
-                <div className="md:w-1/2">
-                  <Paragraphe>
-                    Durant cette période, l’alternant suit un ensemble de cours
-                    techniques en télé-présentiel, lui permettant de restituer
-                    son savoir au travers des missions professionnelles qui lui
-                    sont confiées au sein de l’entreprise. Le lien ainsi créé
-                    entre enseignement théorique et application en entreprise,
-                    permet d’exploiter les acquis immédiatement.
-                  </Paragraphe>
-                </div>
-              </div>
-              <div className="p-2 my-2 border border-opacity-50 rounded md:container md:mx-auto lg:text-lg 2xl:text-xl md:bg-tc-blue md:bg-opacity-25 border-tc-blue">
-                <Paragraphe>
-                  Dans cette démarche,&nbsp;
-                  <em className="not-italic font-semibold">
-                    notre école s’engage à aider tous ses étudiants dans leur
-                    recherche d’entreprise
-                  </em>
-                  , et propose deux solutions : le contrat d'apprentissage et le
-                  contrat de professionnalisation.
-                </Paragraphe>
-              </div>
+            </div>
+          </div>
+          <div className="mt-4 md:flex md:flex-row md:justify-between md:items-center">
+            <div
+              className="w-screen bg-center bg-no-repeat bg-cover h-33vh sm:h-50vh md:bg-contain md:bg-right md:w-1/2"
+              style={{ backgroundImage: "url('groupe-réunion.jpg')" }}
+            ></div>
+
+            <div className="mx-4 md:w-1/2">
               <Paragraphe>
-                Connaissez-vous le plan <Strong>“1 jeune, 1 solution” ?</Strong>{" "}
-                Une solution d’Etat pour former, accompagner et faciliter
-                l’insertion professionnelle de tous les jeunes...
+                Durant cette période, l’alternant suit un ensemble de cours
+                techniques en télé-présentiel, lui permettant de restituer son
+                savoir au travers des missions professionnelles qui lui sont
+                confiées au sein de l’entreprise. Le lien ainsi créé entre
+                enseignement théorique et application en entreprise, permet
+                d’exploiter les acquis immédiatement.
               </Paragraphe>
             </div>
+          </div>
+          <div className="mx-4">
+            <div className="p-2 my-2 border border-opacity-50 rounded md:container md:mx-auto lg:text-lg 2xl:text-xl md:bg-tc-blue md:bg-opacity-25 border-tc-blue">
+              <Paragraphe>
+                Dans cette démarche,&nbsp;
+                <em className="not-italic font-semibold">
+                  notre école s’engage à aider tous ses étudiants dans leur
+                  recherche d’entreprise
+                </em>
+                , et propose deux solutions : le contrat d'apprentissage et le
+                contrat de professionnalisation.
+              </Paragraphe>
+            </div>
+            <Paragraphe>
+              Connaissez-vous le plan <Strong>“1 jeune, 1 solution” ?</Strong>{" "}
+              Une solution d’Etat pour former, accompagner et faciliter
+              l’insertion professionnelle de tous les jeunes...
+            </Paragraphe>
             <ExternalLink
               title="#1jeune1solution"
               url="https://www.1jeune1solution.gouv.fr/"
