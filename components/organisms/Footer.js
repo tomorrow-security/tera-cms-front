@@ -11,7 +11,7 @@ export default function Footer() {
           <BlockPlan />
         </div>
       </div>
-      <div className="bg-tc-blue">
+      <div className="border-t-2 bg-tc-blue border-tc-red">
         <div className="relative py-4 mx-2 md:container md:mx-auto md:px-2">
           <div className="flex flex-col items-center justify-between lg:flex-row bg-tc-blue">
             <div className="flex items-center">
