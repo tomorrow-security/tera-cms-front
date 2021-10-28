@@ -1,26 +1,10 @@
-import axios from "axios"
 import Head from "next/head"
-import { useMutation } from "react-query"
-import router from "next/router"
 
-import BlockTitle from "./../components/organisms/BlockTitle"
-import Form from "../components/molecules/Form"
-
-const pageTitle = "Brochure - Tera Campus"
-const pageDescription = "Demande de brochure"
+const pageTitle = "Borchure - Tera Campus"
+const pageDescription = "Notre brochure"
 const pageUrl = "https://tera-campus.com/brochure"
 
-export default function Brochure() {
-  const mutation = useMutation((data) => axios.post("/api/brochure", data), {
-    retryDelay: 30000,
-  });
-
-  const onSubmit = (data) => {
-    mutation.mutate(data),
-      // TODO faire une condition avec le status success pour router.push
-      router.push("/brochuresented")
-  }
-
+export default function brochure() {
   return (
     <>
       <Head>
@@ -31,26 +15,12 @@ export default function Brochure() {
         <meta property="og:description" content={pageDescription} />
       </Head>
 
-      <main className="mx-2 md:container md:mx-auto">
-        <section id="brochure" className="py-10 md:py-20">
-          <div className="flex flex-col justify-between flex-grow md:container md:mx-auto">
-            <BlockTitle
-              title="Demande de brochure"
-              iconPicture={{ backgroundImage: "url('brochure icon-blue.png')" }}
-            />
-          </div>
-          <p className="my-8 text-center ">
-            Veuillez Remplir le formulaire suivant pour recevoir la brochure de
-            Tera Campus par e-mail s'il vous plaît.
-          </p>
-          <div className="xl:my-12">
-            <Form
-              status={mutation.status}
-              onSubmit={onSubmit}
-              mutation={mutation}
-            />
-          </div>
-        </section>
+      <main>
+        <object
+          nam="brochure"
+          type="application/pdf"
+          data="/public/Brochure.pdf"
+        ></object>
       </main>
     </>
   )
