@@ -1,7 +1,9 @@
 import SubTitle from "../atoms/SubTitle"
 import LittleTitle from "../atoms/LittleTitle"
 import Paragraphe from "../atoms/Paragraphe"
+import ParagrapheXl from "../atoms/ParagrapheXl"
 import ExternalLink from "../molecules/ExternalLink"
+import ExternalLink2 from "../molecules/ExternalLink2"
 
 const publics = [
   "Jeunes âgés de 16 à 25 ans révolus en complément de leur formation",
@@ -75,10 +77,21 @@ export default function BlockContract() {
             />
           </section>
           <LittleTitle children="Aides spécifiques" />
-          <Paragraphe>
-            Des aides spécifiques peuvent également être attribuées aux
-            alternants... (APL, l’aide “Mobili jeune”)
-          </Paragraphe>
+          <div className=" md:flex md:justify-between">
+            <div className="md:w-2/3">
+              <ParagrapheXl>
+                Des aides spécifiques peuvent également être attribuées aux
+                alternants... (APL, l’aide “Mobili jeune”)
+              </ParagrapheXl>
+            </div>
+            <div className="flex items-center justify-center">
+              <ExternalLink2
+                title="En savoir plus"
+                url="https://www.mesdroitssociaux.gouv.fr/accueil/"
+                aria="lien vers le site gouvernemental des droits sociaux"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -45,7 +45,7 @@ export default function BlockRelease() {
             <div className="my-2 md:m-6 lg:mx-12">
               <section id="trainingreleasefunding">
                 <div className="p-2 border border-opacity-50 rounded md:container md:mx-auto lg:text-lg 2xl:text-xl md:bg-tc-blue md:bg-opacity-25 border-tc-blue">
-                  <p className="font-semibold">
+                  <p className="font-medium">
                     Le coût total de la formation est pris en charge par
                     l’entreprise.
                   </p>
@@ -56,25 +56,43 @@ export default function BlockRelease() {
                     (rémunération, congés payés, insertion professionnelle).
                   </Paragraphe>
                   <Paragraphe>
-                    Contrats longue durée (de 6 à 24 mois).{" "}
+                    Contrats longue durée (de 6 à 24 mois).
                   </Paragraphe>
                 </div>
               </section>
+              <div className="mt-4 md:flex md:flex-row md:justify-between md:items-center">
+                <div
+                  className="w-screen bg-center bg-no-repeat bg-cover h-33vh sm:h-50vh md:bg-contain md:bg-right md:w-1/2"
+                  style={{ backgroundImage: "url('groupe-réunion.jpg')" }}
+                ></div>
+                <div className="md:w-1/2">
+                  <Paragraphe>
+                    Durant cette période, l’alternant suit un ensemble de cours
+                    techniques en télé-présentiel, lui permettant de restituer
+                    son savoir au travers des missions professionnelles qui lui
+                    sont confiées au sein de l’entreprise. Le lien ainsi créé
+                    entre enseignement théorique et application en entreprise,
+                    permet d’exploiter les acquis immédiatement.
+                  </Paragraphe>
+                </div>
+              </div>
+              <div className="p-2 my-2 border border-opacity-50 rounded md:container md:mx-auto lg:text-lg 2xl:text-xl md:bg-tc-blue md:bg-opacity-25 border-tc-blue">
+                <Paragraphe>
+                  Dans cette démarche,&nbsp;
+                  <em className="not-italic font-semibold">
+                    notre école s’engage à aider tous ses étudiants dans leur
+                    recherche d’entreprise
+                  </em>
+                  , et propose deux solutions : le contrat d'apprentissage et le
+                  contrat de professionnalisation.
+                </Paragraphe>
+              </div>
+              <Paragraphe>
+                Connaissez-vous le plan <Strong>“1 jeune, 1 solution” ?</Strong>{" "}
+                Une solution d’Etat pour former, accompagner et faciliter
+                l’insertion professionnelle de tous les jeunes...
+              </Paragraphe>
             </div>
-            <Paragraphe>
-              Durant cette période, l’alternant suit un ensemble de cours
-              techniques en télé-présentiel, lui permettant de restituer son
-              savoir au travers des missions professionnelles qui lui sont
-              confiées au sein de l’entreprise. Le lien ainsi créé entre
-              enseignement théorique et application en entreprise, permet
-              d’exploiter les acquis immédiatement. Dans cette démarche, notre
-              école s’engage à aider tous ses étudiants dans leur recherche
-              d’entreprise, et propose deux solutions : le contrat
-              d'apprentissage et le contrat de professionnalisation.
-              Connaissez-vous le plan “1 jeune, 1 solution” ? Une solution
-              d’Etat pour former, accompagner et faciliter l’insertion
-              professionnelle de tous les jeunes...
-            </Paragraphe>
             <ExternalLink
               title="#1jeune1solution"
               url="https://www.1jeune1solution.gouv.fr/"
