@@ -1,7 +1,9 @@
 import Head from "next/head"
-import PageLink from "../components/atoms/PageLink"
 
-import IconLogoBig from "../components/atoms/IconLogoBig"
+import BlockTitle from "../components/organisms/BlockTitle"
+import Paragraphe from "../components/atoms/Paragraphe"
+import List from "../components/atoms/List"
+import PageLink from "../components/atoms/PageLink"
 
 const pageTitle = "Description - Tera Campus"
 const pageDescription = "Tera Campus c'est quoi ?"
@@ -16,21 +18,60 @@ export default function description() {
         <meta property="og:description" content={pageDescription} />
       </Head>
 
-      <main className="flex flex-col justify-center w-full h-full text-center">
-        <div className="flex flex-col justify-center w-full h-full align-center flex-nowrap text-tc-blue">
-          <div className="w-1/4 py-10 mx-auto">
-            <IconLogoBig />
-            <div className="text-base font-bold tracking-normal normal-case md:text-lg xl:text-2xl">
-              The future of learning
-            </div>
+      <main>
+        <section className="py-5">
+          <div className="mx-4 md:container md:mx-0">
+            <BlockTitle
+              title="A propos de Tera Campus"
+              iconPicture={{ backgroundImage: "url('info.png')" }}
+            />
+            <Paragraphe>
+              Tera Campus est une école Supérieure d'Informatique en
+              télé-présentiel qui propose des formations allant du BAC+3 au
+              BAC+5.
+            </Paragraphe>
+            <Paragraphe>
+              Nos formations s’adressent aux professionnels en reconversion, aux
+              étudiants autonomes souhaitant de se former à distance, et aux
+              alternants souhaitant effectuer leur contrat d’apprentissage ou de
+              professionnalisation dans une ville correspondante à leurs
+              besoins.
+            </Paragraphe>
+            <Paragraphe>
+              Le programme innovant et polyvalent proposé par Tera Campus permet
+              aux étudiants de développer des compétences techniques mais
+              également des compétences humaines (« soft-skills ») qui sont
+              aujourd’hui indispensables au sein d’une entreprise (3 bivouacs
+              dans l’année).
+            </Paragraphe>
+            <Paragraphe>
+              Tera Campus est constamment à l’écoute du marché afin de garantir
+              aux étudiants un parcours toujours plus adapté et
+              professionnalisant.
+            </Paragraphe>
+            <List>
+              <li>
+                Tera Campus :&nbsp;
+                <span className="font-medium">
+                  Une école engagée pour le développement durable
+                </span>
+                .
+              </li>
+              <li className="font-medium">
+                Une stratégie digitale pour une démarche éco-responsable.
+              </li>
+              <li>
+                Tera Campus travaille uniquement avec des outils digitaux, et
+                tous les supports de formation sont numériques.
+              </li>
+            </List>
+            <Paragraphe>
+              <span className="underline">
+                <PageLink id="program" label="Découvrez nos formations" />
+              </span>
+            </Paragraphe>
           </div>
-          <h1 className="text-3xl font-extrabold text-tc-red">
-            Cette pages est en construction
-          </h1>
-          <div className="px-2 mx-auto text-center w-max">
-            <PageLink id="" label="retour à la page d'accueil" />
-          </div>
-        </div>
+        </section>
       </main>
     </>
   )
