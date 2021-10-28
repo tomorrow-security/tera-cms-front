@@ -21,7 +21,7 @@ const helps = [
 
 export default function BlockContract() {
   return (
-    <section id="contratc" className="py-5">
+    <section id="contract" className="py-5">
       <div className="md:container md:mx-auto">
         <SubTitle
           title="Les types de contrats"
