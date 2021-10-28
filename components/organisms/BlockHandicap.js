@@ -39,7 +39,8 @@ export default function BlockHandicap() {
             assurera un suivi adapté du début jusqu’à la fin de votre formation.
           </Paragraphe>
           <LittleTitle>
-            Comment se passe l’admission pour le public handicapé ?
+            Comment se passe l’admission pour le public en situation de
+            hadicap ?
           </LittleTitle>
           <List>
             <li>
