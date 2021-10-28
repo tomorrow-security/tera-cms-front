@@ -19,7 +19,9 @@ export default function brochure() {
         <object
           name="brochure"
           type="application/pdf"
-          data="/public/Brochure.pdf"
+          data="/Brochure.pdf"
+          width="100%"
+          height="700px"
         ></object>
       </main>
     </>
