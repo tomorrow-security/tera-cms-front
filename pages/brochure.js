@@ -21,7 +21,7 @@ export default function brochure() {
           type="application/pdf"
           data="/Brochure.pdf"
           width="100%"
-          height="700px"
+          height="900px"
         ></object>
       </main>
     </>
