@@ -21,7 +21,7 @@ import PageLink from "../../components/atoms/PageLink"
 // TODO layout msg d'erreur des checkbox ()
 
 // TODO importer la molecule EnrolmentForm à la place
-const EnrolmentForm = ({ mutation, onSubmit }) => {
+const EnrolmentForm = ({ status, mutation, onSubmit }) => {
   const {
     reset,
     register,
@@ -33,6 +33,54 @@ const EnrolmentForm = ({ mutation, onSubmit }) => {
   useEffect(() => {
     reset()
   }, [])
+
+  //* en attendant que l'inputButton fonctionne -------------------------------------------
+  const renderSubmitButton = () => {
+    switch (status) {
+      case "loading":
+        return (
+          <div className="w-auto pt-2 mx-auto group">
+            <div className="relative z-0 px-4 font-bold text-transparent bg-opacity-25 border border-t-0 rounded-t outline-none cursor-pointer w-max rounded-b-xl bg-tc-red border-tc-red-dark">
+              En cours d'envoi ...
+              <input
+                type="submit"
+                value="En cours d'envoi ..."
+                className="absolute top-0 left-0 z-20 px-4 mx-auto font-bold text-white bg-opacity-75 rounded-t outline-none cursor-pointer w-max rounded-b-xl bg-tc-red"
+                disabled
+              />
+            </div>
+          </div>
+        )
+      case "success":
+        return (
+          <div className="w-auto pt-2 mx-auto group">
+            <div className="relative z-0 px-4 font-bold text-transparent bg-opacity-25 border border-t-0 rounded-t outline-none cursor-pointer w-max rounded-b-xl bg-tc-blue border-tc-blue">
+              Envoyé !
+              <input
+                type="submit"
+                value="Envoyé !"
+                className="absolute left-0 z-20 px-4 mx-auto font-bold text-white bg-opacity-75 rounded-t outline-none cursor-pointer bg-tc-blue -top-20/100 w-max rounded-b-xl"
+                disabled
+              />
+            </div>
+          </div>
+        )
+      default:
+        return (
+          <div className="w-auto pt-2 mx-auto group">
+            <div className="relative z-0 px-4 font-bold text-transparent transition-colors duration-700 bg-opacity-50 border rounded-t shadow outline-none cursor-pointer w-max rounded-b-xl bg-tc-blue border-tc-blue-dark group-hover:bg-tc-red group-hover:border-tc-red-dark group-hover:shadow-none">
+              Envoyer
+              <input
+                type="submit"
+                value="Envoyer"
+                className="absolute left-0 z-20 px-4 mx-auto font-bold text-white transition-colors duration-700 transform rounded-t shadow outline-none cursor-pointer -top-15/100 w-max rounded-b-xl bg-tc-blue group-hover:bg-tc-red group-hover:shadow-none group-hover:-top-20/100 active:translate-y-20/100"
+              />
+            </div>
+          </div>
+        )
+    }
+  }
+  //*--------------------------------------
 
   // TODO style au focus du phoneInput border à enlever à l'intérieur
   return (
@@ -202,12 +250,15 @@ const EnrolmentForm = ({ mutation, onSubmit }) => {
         </div>
       </div>
       <div className="flex items-center justify-center my-4 xl:my-20">
-        <InputButton
+        {/* //* en attendant que InputButtonfonctionne-- */}
+        {renderSubmitButton()}
+        {/* //*------------------------------ */}
+        {/* <InputButton
           defaultValue="Envoyer"
           loadingValue="En cours d'envoi' ..."
           successValue="Envoyé"
           mutation={mutation}
-        />
+        /> */}
       </div>
     </form>
   )
