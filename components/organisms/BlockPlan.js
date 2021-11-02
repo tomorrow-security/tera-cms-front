@@ -40,7 +40,7 @@ export default function BlockPlan({ id, label }) {
       <div className="md:container md:mx-auto">
         <SubTitle
           title="Plan du site"
-          iconPicture={{ backgroundImage: "url('plan-red.png')" }}
+          iconPicture={{ backgroundImage: "url('plan-blue.png')" }}
         />
         <div className="md:relative">
           <div className="flex flex-col mt-2 mb-4 space-y-8 text-sm md:mt-6 md:space-x-2 md:space-y-0 md:flex-row md:flex-wrap md:justify-around">
