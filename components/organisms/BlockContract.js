@@ -3,7 +3,6 @@ import LittleTitle from "../atoms/LittleTitle"
 import Paragraphe from "../atoms/Paragraphe"
 import ParagrapheXl from "../atoms/ParagrapheXl"
 import ExternalLink from "../molecules/ExternalLink"
-import ExternalLink2 from "../molecules/ExternalLink2"
 
 const publics = [
   "Jeunes âgés de 16 à 25 ans révolus en complément de leur formation",
@@ -85,7 +84,7 @@ export default function BlockContract() {
               </ParagrapheXl>
             </div>
             <div className="flex items-center justify-center">
-              <ExternalLink2
+              <ExternalLink
                 title="En savoir plus"
                 url="https://www.mesdroitssociaux.gouv.fr/accueil/"
                 aria="lien vers le site gouvernemental des droits sociaux"
