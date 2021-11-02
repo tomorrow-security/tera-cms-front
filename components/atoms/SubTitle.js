@@ -5,9 +5,9 @@ export default function SubTitle({ title, iconPicture }) {
         className="w-10 h-10 bg-center bg-no-repeat bg-contain"
         style={iconPicture}
       ></div>
-      <div className="ml-4 text-lg font-bold text-center md:text-2xl xl:text-3xl text-tc-red">
+      <h2 className="ml-4 text-lg font-bold text-center md:text-2xl xl:text-3xl text-tc-red">
         {title}
-      </div>
+      </h2>
     </div>
   )
 }
