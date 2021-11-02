@@ -4,6 +4,7 @@ import BlockTitle from "../components/organisms/BlockTitle"
 import Paragraphe from "../components/atoms/Paragraphe"
 import List from "../components/atoms/List"
 import PageLink from "../components/atoms/PageLink"
+import BlockGuides from "../components/organisms/BlockGuides"
 
 const pageTitle = "Description - Tera Campus"
 const pageDescription = "Tera Campus c'est quoi ?"
@@ -52,12 +53,12 @@ export default function description() {
             <List>
               <li>
                 Tera Campus :&nbsp;
-                <span className="font-medium">
+                <span className="text-lg font-medium">
                   Une école engagée pour le développement durable
                 </span>
                 .
               </li>
-              <li className="font-medium">
+              <li className="text-lg font-medium">
                 Une stratégie digitale pour une démarche éco-responsable.
               </li>
               <li>
@@ -65,13 +66,14 @@ export default function description() {
                 tous les supports de formation sont numériques.
               </li>
             </List>
-            <Paragraphe>
-              <span className="underline">
-                <PageLink id="program" label="Découvrez nos formations" />
-              </span>
-            </Paragraphe>
           </div>
         </section>
+        <BlockGuides />
+        <Paragraphe>
+          <span className="underline">
+            <PageLink id="program" label="Découvrez nos formations" />
+          </span>
+        </Paragraphe>
       </main>
     </>
   )

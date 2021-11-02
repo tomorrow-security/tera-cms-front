@@ -1,4 +1,4 @@
-import BlockTitle from "../organisms/BlockTitle"
+import SubTitle from "../atoms/SubTitle"
 
 const guides = [
   {
@@ -54,7 +54,7 @@ export default function BlockGuides() {
   return (
     <section id="guides" className="py-10 md:py-20">
       <div className="md:container md:mx-auto">
-        <BlockTitle
+        <SubTitle
           title="Nos guides"
           iconPicture={{ backgroundImage: "url('panneaux-direction.png')" }}
         />
