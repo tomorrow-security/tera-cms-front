@@ -1,4 +1,5 @@
 import LittleTitle from "../atoms/LittleTitle"
+import ExternalLink from "../molecules/ExternalLink"
 
 const syllabusTC3 = [
   {
@@ -104,9 +105,16 @@ export default function Program({}) {
           </div>
         ))}
       </ul>
-      <p className="text-sm italic">
-        La validation peut s’acquérir par bloc de compétences.
-      </p>
+      <div className="flex justify-between">
+        <p className="text-sm italic">
+          La validation peut s’acquérir par bloc de compétences.
+        </p>
+        <ExternalLink
+          title="Fiche officielle"
+          url="https://www.francecompetences.fr/recherche/rncp/34022/#ancre3"
+          arai="Blocs de compétences de la fiche officielle du RNCP"
+        />
+      </div>
     </section>
   )
 }
