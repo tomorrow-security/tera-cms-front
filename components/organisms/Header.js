@@ -32,14 +32,14 @@ export default function Header() {
               {isOpen ? <IconX /> : <IconMenu />}
             </div>
           </div>
-          <div className="flex flex-col ml-1 lg:items-center lg:flex-grow lg:justify-between lg:flex-row lg:ml-5">
+          <div className="flex flex-col ml-1 lg:items-center lg:flex-grow lg:justify-between lg:flex-row lg:ml-0">
             <div className={`${!isOpen && "hidden"} lg:block`}>
               <HeaderNav click={() => setIsOpen(false)} />
             </div>
             <div
               className={`${
                 !isOpen && "hidden"
-              } lg:block bg-tc-blue text-white flex flex-col lg:flex-row uppercase space-y-2 lg:space-y-0 lg:space-x-2`}
+              } lg:block bg-tc-blue text-white flex flex-col lg:flex-row uppercase space-y-2 lg:space-y-0 lg:mr-1 xl:mr-6 lg:space-x-1 xl:space-x-8 2xl:mr-8`}
             >
               <Cta id="/admission" title="Admission" />
               <Cta id="/catalog" title="Brochure" />

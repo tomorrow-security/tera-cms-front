@@ -23,15 +23,12 @@ const program = [
 
 const alternance = [{ id: "releasetraining", label: "C'est quoi l'alternance" }]
 
-const headernav = [
-  { id: "#agenda", label: "Actualités" },
-  // { id: "contact", label: "Contact" },
-]
+const headernav = [{ id: "#agenda", label: "Actualités" }]
 
 export default function HeaderNav() {
   return (
-    <nav className="lg:flex lg:justify-between">
-      <ul className="py-2 space-y-2 lg:mx-4 lg:space-y-0 lg:space-x-4 lg:flex lg:justify-center">
+    <nav className="lg:flex lg:justify-start">
+      <ul className="py-2 space-y-2 lg:space-y-0 xl:space-x-2 lg:mr-2 2xl:ml-10 xl:ml-6 lg:flex ">
         <li className="w-28 lg:text-center lg:mx-auto lg:w-max">
           <HeaderSubNav title="Notre école" pages={ecole} />
         </li>
