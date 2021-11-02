@@ -25,8 +25,10 @@ export default function Enrolment() {
     { retry: 3 }
   )
 
-  const onSubmit = (formData) => {mutation.mutate(formData)console.log("mutation :", mutation)}
-  
+  const onSubmit = (formData) => {
+    mutation.mutate(formData)
+  }
+
   return (
     <>
       <Head>
