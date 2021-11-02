@@ -2,7 +2,7 @@ import Link from "next/link"
 import { useState } from "react"
 
 import HeaderNav from "../molecules/HeaderNav"
-import IconLogo from "../atoms/IconLogo"
+import IconLogoBig from "../atoms/IconLogoBig"
 import IconX from "../atoms/IconX"
 import IconMenu from "../atoms/IconMenu"
 import Cta from "../atoms/Cta"
@@ -17,14 +17,8 @@ export default function Header() {
           <div className="flex items-center justify-between w-full lg:w-max">
             <Link href="/">
               <a className="flex items-center pl-2">
-                <div className="w-12 mr-4">
-                  <IconLogo />
-                </div>
-                <div className="flex flex-col ">
-                  <div className="text-sm font-bold uppercase">Tera Campus</div>
-                  <div className="text-xs">
-                    Ecole Supérieure d&apos;Informatique
-                  </div>
+                <div className="mr-4 w-14">
+                  <IconLogoBig />
                 </div>
               </a>
             </Link>
