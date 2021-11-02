@@ -25,7 +25,7 @@ const alternance = [{ id: "releasetraining", label: "C'est quoi l'alternance" }]
 
 const headernav = [
   { id: "#agenda", label: "Actualités" },
-  { id: "contact", label: "Contact" },
+  // { id: "contact", label: "Contact" },
 ]
 
 export default function HeaderNav() {
