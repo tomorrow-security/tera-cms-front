@@ -2,6 +2,7 @@ import SubTitle from "../atoms/SubTitle"
 import LittleTitle from "../atoms/LittleTitle"
 import List from "../atoms/List"
 
+// TODO  faire une molécule TC3 (en prévision de l'ouverture des autres années) & y mettre le liens vers la fiche RNCP
 export default function BlockPrerequisite() {
   return (
     <section id="prerequis" className="py-5">
