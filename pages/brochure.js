@@ -1,15 +1,15 @@
-import axios from "axios";
-import Head from "next/head";
-import React, { useEffect } from "react";
-import { useForm } from "react-hook-form";
-import { useMutation } from "react-query";
-import "react-phone-number-input/style.css";
-import PhoneInputWithCountry from "react-phone-number-input/react-hook-form";
-import router from "next/router";
+import axios from "axios"
+import Head from "next/head"
+import React, { useEffect } from "react"
+import { useForm } from "react-hook-form"
+import { useMutation } from "react-query"
+import "react-phone-number-input/style.css"
+import PhoneInputWithCountry from "react-phone-number-input/react-hook-form"
+import router from "next/router"
 
-import BlockTitle from "./../components/atoms/BlockTitle";
-import InputRadio from "./../components/molecules/InputRadio";
-import PageLink from "./../components/atoms/PageLink";
+import BlockTitle from "./../components/atoms/BlockTitle"
+import InputRadio from "./../components/molecules/InputRadio"
+import PageLink from "./../components/atoms/PageLink"
 
 // TODO importer la molecule Form à la place (molécule à faire)
 const EnrolmentForm = ({ status, onSubmit }) => {
@@ -19,11 +19,11 @@ const EnrolmentForm = ({ status, onSubmit }) => {
     handleSubmit,
     control,
     formState: { errors },
-  } = useForm();
+  } = useForm()
 
   useEffect(() => {
-    reset();
-  }, []);
+    reset()
+  }, [])
 
   // TODO importer la molecule InputButton à la place
   const renderSubmitButton = () => {
@@ -41,7 +41,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
               />
             </div>
           </div>
-        );
+        )
       case "success":
         return (
           <div className="w-auto pt-2 mx-auto group">
@@ -55,7 +55,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
               />
             </div>
           </div>
-        );
+        )
       default:
         return (
           <div className="w-auto pt-2 mx-auto group">
@@ -68,9 +68,9 @@ const EnrolmentForm = ({ status, onSubmit }) => {
               />
             </div>
           </div>
-        );
+        )
     }
-  };
+  }
 
   return (
     <form className="w-full mx-2" onSubmit={handleSubmit(onSubmit)}>
@@ -205,25 +205,25 @@ const EnrolmentForm = ({ status, onSubmit }) => {
         {renderSubmitButton()}
       </div>
     </form>
-  );
-};
+  )
+}
 
-const pageTitle = "Brochure - Tera Campus";
-const pageDescription = "Demande de brochure";
-const pageUrl = "https://tera-campus.com/brochure";
+const pageTitle = "Brochure - Tera Campus"
+const pageDescription = "Demande de brochure"
+const pageUrl = "https://tera-campus.com/brochure"
 
 export default function Brochure() {
   const mutation = useMutation((data) => axios.post("/api/brochure", data), {
     retry: 3,
-  });
+  })
 
   const onSubmit = (data) => {
     mutation.mutate(data),
       // TODO faire une condition avec le satus success pour router.push
-      router.push("/brochuresented");
+      router.push("/brochuresented")
     //   console.log("data :", data)
     // console.log("mutation :", mutation)
-  };
+  }
 
   return (
     <>
@@ -253,5 +253,5 @@ export default function Brochure() {
         </section>
       </main>
     </>
-  );
+  )
 }

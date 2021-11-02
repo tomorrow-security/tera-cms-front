@@ -18,7 +18,7 @@ export default async (req, res) => {
     data = data + `"text2": "${firstName}",`
     data = data + `"email": {"email": "${email}", "text": "${email}"},`
     data = data + `"phone": {"phone": "${phone}"},`
-    data = data + `"status": {"label": "Brochure"},`
+    data = data + `"status": {"label": "Pré-inscrits"},`
     data = data + `"check": {"checked": "${consent}"}`
     data = data + "}"
 
