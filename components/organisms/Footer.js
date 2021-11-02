@@ -5,15 +5,15 @@ import IconLogo from "../atoms/IconLogo"
 export default function Footer() {
   const today = new Date()
   return (
-    <footer className="py-10">
-      <div className="bg-opacity-90 bg-tc-white">
+    <footer className="pt-10">
+      <div className="bg-white">
         <div className="md:container md:mx-auto md:px-2">
           <BlockPlan />
         </div>
       </div>
       <div className="text-white border-t-2 bg-tc-blue border-tc-red">
         <div className="relative py-4 mx-2 md:container md:mx-auto md:px-2">
-          <div className="flex flex-col items-center justify-between lg:flex-row bg-tc-blue">
+          <div className="flex flex-col items-center justify-between pb-10 lg:flex-row bg-tc-blue">
             <div className="flex items-center">
               <div className="w-10 mr-2">
                 <IconLogo />
