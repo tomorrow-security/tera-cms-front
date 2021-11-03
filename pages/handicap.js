@@ -18,7 +18,7 @@ export default function Handicap() {
 
       <main>
         <BlockTitle
-          title="Etudier en situation de handicap"
+          title="Etudier en situation de handicap chez Tera Campus"
           iconPicture={{ backgroundImage: "url('handicap.png')" }}
         />
         <BlockHandicap />
