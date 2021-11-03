@@ -2,8 +2,10 @@ import React from "react"
 
 import PageLink from "../atoms/PageLink"
 import LittleTitle from "../atoms/LittleTitle"
+import SubTitle from "../atoms/SubTitle"
 import List from "../atoms/List"
 import CardList from "../atoms/CardList"
+import ParagrapheXl from "../atoms/ParagrapheXl"
 
 const initialYears = [
   {
@@ -92,17 +94,21 @@ export default function BlockCurriculum() {
   return (
     <section id="curriculum" className="py-5">
       <div className="flex flex-col justify-between flex-grow md:container md:mx-auto">
+        <SubTitle
+          title="Le programme de Tera Campus"
+          iconPicture={{ backgroundImage: "url('cursus-TC.png')" }}
+        />
         <div className="mx-4">
           <div className="font-semibold">
-            <p>
+            <ParagrapheXl>
               Deux premières années en formation initiale pour acquérir des
               bases solides.
-            </p>
-            <p>
+            </ParagrapheXl>
+            <ParagrapheXl>
               À partir de la troisième année et jusqu’à la fin du parcours la
               formation est 100% en alternance (contrat d’apprentissage ou
               contrat de professionnalisation).
-            </p>
+            </ParagrapheXl>
           </div>
           <div className="my-6">
             <LittleTitle children="Cursus 1&2 année :" />
