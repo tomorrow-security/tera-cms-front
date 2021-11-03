@@ -4,7 +4,6 @@ import IconPlacementTest from "../atoms/IconPlacementTest"
 import IconMagnifyingGlass from "../atoms/IconMagnifyingGlass"
 import IconHandShake from "../atoms/IconHandShake"
 import SubTitle from "../atoms/SubTitle"
-import StartOfTheSchool from "../molecules/StartOfTheSchool"
 
 const steps = [
   {
@@ -89,9 +88,6 @@ export default function BlockRegistration() {
           <p className="m-2 text-sm italic md:text-right">
             Temps de la procédure d'inscription : 1 semaine
           </p>
-        </div>
-        <div className="p-4 mx-auto mt-8 text-xl border rounded w-max border-tc-red bg-tc-red bg-opacity-5">
-          <StartOfTheSchool />
         </div>
       </div>
     </section>
