@@ -1,6 +1,7 @@
 import LitleTile from "../atoms/LittleTitle"
 import Paragraphe from "../atoms/Paragraphe"
 import Cta from "../atoms/Cta"
+import StartOfTheSchool from "../molecules/StartOfTheSchool"
 
 const steps = [
   "Dossier de candidature",
@@ -17,6 +18,9 @@ export default function BlockAdmission() {
           <div className="p-4 text-2xl font-semibold text-center lg:text-4xl md:text-3xl">
             <p>Tera Campus, une école post-bac</p>
             <p>100% en télé-présentiel</p>
+          </div>
+          <div className="p-6 mx-auto my-8 border-2 rounded text-tc-red w-max border-tc-red">
+            <StartOfTheSchool />
           </div>
           <div>
             <LitleTile children="Prérequis" />
