@@ -9,7 +9,6 @@ const ecole = [
   { id: "bivouacs", label: "Bivouac" },
   { id: "schoolboard", label: "Conseil de perfectionnement" },
   { id: "handicap", label: "Etudier en situation de handicap" },
-  { id: "quality", label: "Habilitation qualité" },
   { id: "faq", label: "FAQ" },
 ]
 const program = [
