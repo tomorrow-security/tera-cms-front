@@ -42,7 +42,7 @@ export default function BlockPlan({ id, label }) {
           title="Plan du site"
           iconPicture={{ backgroundImage: "url('plan-blue.png')" }}
         />
-        <div className="md:relative">
+        <div className="mx-4 md:relative">
           <div className="flex flex-col mt-2 mb-4 space-y-8 text-sm md:mt-6 md:space-x-2 md:space-y-0 md:flex-row md:flex-wrap md:justify-around">
             <div className="md:w-1/5">
               <NavList
@@ -87,7 +87,7 @@ export default function BlockPlan({ id, label }) {
             </ul>
           </div>
         </div>
-        <div className="mt-12 lg:mt-20 md:flex md:justify-between md:items-center">
+        <div className="mx-4 mt-12 lg:mt-20 md:flex md:justify-between md:items-center">
           <p className="px-4 mx-auto my-4 text-lg border rounded md:mx-0 border-tc-red text-tc-red">
             Suivez-nous
           </p>
