@@ -7,7 +7,6 @@ const ecole = [
   { id: "description", label: "Tera campus c'est quoi ?" },
   { id: "pedagogy", label: "Notre pédagogie" },
   { id: "bivouacs", label: "Bivouac" },
-  { id: "schoolboard", label: "Conseil de perfectionnement" },
   { id: "handicap", label: "Etudier en situation de handicap" },
   { id: "faq", label: "FAQ" },
 ]
