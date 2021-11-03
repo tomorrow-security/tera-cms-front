@@ -98,7 +98,7 @@ export default function BlockCareer() {
           (BAC+5).
         </Paragraphe>
         <ExternalLink
-          title=" Fiche du titre Bachelor Administrateur Systèmes d'Informations"
+          title=" Titre Bachelor Administrateur Systèmes d'Informations"
           url="https://www.francecompetences.fr/recherche/rncp/34022/"
           aria="lien vers le site France compétence"
         ></ExternalLink>
