@@ -4,7 +4,7 @@ import Image from "next/image"
 import { useForm } from "react-hook-form"
 import { useMutation } from "react-query"
 
-import InputButton from "../components/molecules/InputButton"
+import ButtonSubmit from "../components/atoms/ButtonSubmit"
 import PageLink from "../components/atoms/PageLink"
 import BlockTitle from "../components/atoms/BlockTitle"
 import SocialNav from "../components/molecules/SocialNav"
@@ -151,8 +151,7 @@ export default function Contact() {
 													)}
 												</div>
 												<div className="flex justify-center">
-													{/* // TODO remonter le bouton dans inputButoon (voir avec le nouveau bouton) */}
-													<InputButton mutation={mutation} />
+													<ButtonSubmit status={mutation.status} />
 												</div>
 											</form>
 										</div>
