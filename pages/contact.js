@@ -21,7 +21,7 @@ export default function Contact() {
 		formState: { errors },
 	} = useForm()
 	const mutation = useMutation((data) => axios.post("/api/contact", data), {
-		retry: 3,
+		retryDelay: 30000,
 	})
 	const onSubmit = (formData) => mutation.mutate(formData)
 
@@ -51,8 +51,7 @@ export default function Contact() {
 									</div>
 									<div className="flex flex-col w-11/12">
 										<p className="pt-1 pl-2">
-											Tera Campus répond à toutes tes questions à l'adresse
-											suivante :
+											Tera Campus répond à toutes tes questions à l'adresse suivante :
 										</p>
 										<div className="flex justify-center">
 											<a
@@ -71,8 +70,7 @@ export default function Contact() {
 										</div>
 										<div className="flex flex-col w-11/12">
 											<p className="pt-1 pl-2">
-												Ou bien, tu peux poser directement tes questions via le
-												formulaire ci-dessous :
+												Ou bien, tu peux poser directement tes questions via le formulaire ci-dessous :
 											</p>
 											<div className="m-0.5 animate-bounce">
 												<div className="w-8 h-8 mx-auto transform -rotate-60">
@@ -95,8 +93,7 @@ export default function Contact() {
 													/>
 													{errors.email && (
 														<span className="text-tc-red">
-															Nous avons besoin de ton adresse e-mail afin de
-															pouvoir te répondre.
+															Nous avons besoin de ton adresse e-mail afin de pouvoir te répondre.
 														</span>
 													)}
 													<span className="text-tc-red">
@@ -149,8 +146,7 @@ export default function Contact() {
 													</label>
 													{errors.acceptPrivacyRules && (
 														<span className="text-tc-red">
-															Tu dois accepter la politique de confidentialité
-															pour continuer.
+															Tu dois accepter la politique de confidentialité pour continuer.
 														</span>
 													)}
 												</div>

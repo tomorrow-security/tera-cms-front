@@ -214,7 +214,7 @@ const pageUrl = "https://tera-campus.com/brochure";
 
 export default function Brochure() {
   const mutation = useMutation((data) => axios.post("/api/brochure", data), {
-    retry: 3,
+    retryDelay: 30000,
   });
 
   const onSubmit = (data) => {
