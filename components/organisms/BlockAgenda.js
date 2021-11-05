@@ -26,12 +26,9 @@ export default function BlockAgenda({ events }) {
 									key={index}
 									url={event.url}
 									platform={event.platform}
-									dateTimeDate={event.dateTimeDate}
-									date={event.date}
-									dateTimeTimetable={event.dateTimeTimetable}
-									timetable={event.timetable}
+									datetime={event.datetime}
 									description={event.description}
-									title={event.title}
+									title={event.name}
 								/>
 							))}
 						</ul>
