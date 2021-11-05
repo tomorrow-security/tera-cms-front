@@ -22,11 +22,7 @@ export default async (req, res) => {
     data = data + `"check": {"checked": "${consent}"}`;
     data = data + "}";
 
-    const query = `mutation { create_item (board_id: ${
-      process.env.MONDAY_CRM_STUDENTS_BOARD_ID
-    }, group_id: "topics", item_name: "${firstName} ${lastName}", column_values: ${JSON.stringify(
-      data
-    )}) { id } }`;
+    const query = `mutation { create_item (board_id: 1841855665, group_id: "topics", item_name: "${firstName} ${lastName}", column_values: ${JSON.stringify(data)}) { id } }`;
 
     const response = await axios.post(
       "https://api.monday.com/v2",
