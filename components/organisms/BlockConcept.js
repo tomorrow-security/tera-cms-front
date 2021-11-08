@@ -1,13 +1,38 @@
 import LittleTitle from "../atoms/LittleTitle"
 import Strong from "../atoms/Strong"
 import Paragraphe from "../atoms/Paragraphe"
-import Cta from "../atoms/Cta"
+import SubTitle from "../atoms/SubTitle"
+import ParagrapheXl from "../atoms/ParagrapheXl"
+import ExternalLink from "../molecules/ExternalLink"
 
 export default function BlockConcept() {
   return (
     <section id="concept" className="pt-4 md:py-10 lg:py-20">
       <div className="md:container md:mx-auto">
-        <div className="mx-4 md:mx-0"></div>
+        <SubTitle
+          title="Future Of Learning"
+          iconPicture={{ backgroundImage: "url('book-and-world.png')" }}
+        />
+        <div className="px-4 mb-4 bg-tc-blue bg-opacity-20 md:rounded md:flex md:justify-between md:items-center">
+          <div>
+            <div className="font-bold">
+              <Paragraphe>Alternance pour qui ? Pourquoi ?</Paragraphe>
+            </div>
+            <ParagrapheXl>
+              &#x000C9;tudier gratuitement et avoir un statut de salarié c'est
+              possible !
+            </ParagrapheXl>
+          </div>
+          <div className="pb-1 mx-auto md:pb-0 md:mr-32 w-max ">
+            <div className="bg-white rounded w-max">
+              <ExternalLink
+                title="Fiche officielle"
+                url="https://www.francecompetences.fr/recherche/rncp/34022/#ancre3"
+                arai="Blocs de compétences de la fiche officielle du RNCP"
+              />
+            </div>
+          </div>
+        </div>
         <div className="flex flex-col lg:flex-row">
           <ul className="mx-4 md:mx-0 md:pl-2 lg:w-2/3">
             <li>

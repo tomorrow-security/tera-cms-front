@@ -31,7 +31,7 @@ export default function BlockBachelorPresentation() {
                 au RNCP par décision de France Compétences du 23 mai 2019
               </p>
             </div>
-            <div className="py-4 md:">
+            <div className="py-4">
               <ExternalLink
                 title="Fiche officielle"
                 url="https://www.francecompetences.fr/recherche/rncp/34022/#ancre3"
