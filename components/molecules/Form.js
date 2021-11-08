@@ -47,8 +47,7 @@ export default function Form({ mutation, onSubmit }) {
                 </div>
                 {errors.gender ? (
                   <div className="text-center text-tc-red">
-                    Tu dois cocher la case qui te correspond pour continuer ton
-                    inscription
+                    Vous devez cocher la case qui vous correspond pour continuer
                   </div>
                 ) : null}
               </div>
@@ -71,7 +70,7 @@ export default function Form({ mutation, onSubmit }) {
                 </div>
                 {errors.email ? (
                   <div className="text-center text-tc-red">
-                    Tu dois donner ton email pour continuer ton inscription
+                    Vous devez donner votre email pour continuer
                   </div>
                 ) : null}
               </div>
@@ -96,7 +95,7 @@ export default function Form({ mutation, onSubmit }) {
                 </div>
                 {errors.lastName ? (
                   <div className="text-center text-tc-red">
-                    Tu dois donner ton nom pour continuer ton inscription
+                    Vous devez donner votre nom pour continuer
                   </div>
                 ) : null}
               </div>
@@ -119,7 +118,7 @@ export default function Form({ mutation, onSubmit }) {
                 </div>
                 {errors.firstName ? (
                   <div className="text-center text-tc-red">
-                    Tu dois donner ton prénom pour continuer ton inscription
+                    Vous devez donner votre prénom pour continuer
                   </div>
                 ) : null}
               </div>
@@ -147,8 +146,7 @@ export default function Form({ mutation, onSubmit }) {
                   </div>
                   {errors.phone ? (
                     <div className="text-center text-tc-red">
-                      Tu dois donner ton numéro de téléphone pour continuer ton
-                      inscription
+                      Vous devez donner votre numéro de téléphone pour continuer
                     </div>
                   ) : null}
                 </div>
@@ -180,8 +178,8 @@ export default function Form({ mutation, onSubmit }) {
               </div>
               {errors.consent ? (
                 <div className="text-center text-tc-red">
-                  Tu dois accepter la politique de confidentialité pour
-                  continuer.
+                  Vous devez accepter la politique de confidentialité pour
+                  continuer
                 </div>
               ) : null}
             </label>

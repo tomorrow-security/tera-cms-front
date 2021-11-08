@@ -11,8 +11,8 @@ export default function EnrolmentAppointment() {
   return (
     <>
       <div className="mx-4 mb-4 text-xl text-center md:text-2xl">
-        Pour terminer ton inscription, planifies ton entretien de 15mn avec Tera
-        Campus.
+        Pour terminer votre inscription, planifiez votre entretien de 15mn avec
+        Tera Campus.
       </div>
       <div className="xl:my-12">
         <div
