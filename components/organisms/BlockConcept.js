@@ -7,11 +7,7 @@ export default function BlockConcept() {
   return (
     <section id="concept" className="pt-4 md:py-10 lg:py-20">
       <div className="md:container md:mx-auto">
-        <div className="mx-4 md:mx-0">
-          <div className="flex justify-center py-8 mb-8 text-lg font-bold md:text-xl md:mt-12 bg-tc-blue">
-            <Cta id="/brochure" title="Télécharger la brochure" />
-          </div>
-        </div>
+        <div className="mx-4 md:mx-0"></div>
         <div className="flex flex-col lg:flex-row">
           <ul className="mx-4 md:mx-0 md:pl-2 lg:w-2/3">
             <li>
