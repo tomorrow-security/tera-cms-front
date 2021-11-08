@@ -1,70 +1,50 @@
-import PageLink from "../atoms/PageLink";
-import HashLink from "../atoms/HashLink";
+import PageLink from "../atoms/PageLink"
+import HeaderSubNav from "./HeaderSubNav"
 
-const links1 = [{ id: "agenda", label: "Agenda" }];
+// TODO rassembler les datas communes au header et au plan
+const ecole = [
+  { id: "description", label: "Tera campus c'est quoi ?" },
+  { id: "pedagogy", label: "Notre pédagogie" },
+  { id: "bivouacs", label: "Bivouac" },
+  { id: "handicap", label: "Etudier en situation de handicap" },
+  { id: "faq", label: "FAQ" },
+]
 
-const links2 = [{ id: "faq", label: "Faq" }];
+const program = [
+  {
+    id: "program/#programtc3",
+    label: "BAC+3 Administrateur des systèmes d'information",
+  },
+  { id: "partners", label: "Les partenaires" },
+  { id: "program/#career", label: "Les carrières" },
+]
 
-const pages1 = [
-  { id: "career", label: "Carrières" },
-  { id: "guides", label: "Nos guides" },
-  { id: "program", label: "Programme" },
-  { id: "brochure", label: "Brochure" },
-  { id: "enrolment", label: "Inscription" },
-  { id: "join", label: "Rejoins-nous" },
-];
+const alternance = [{ id: "releasetraining", label: "C'est quoi l'alternance" }]
 
-const pages2 = [{ id: "contact", label: "Contact" }];
+const headernav = [{ id: "#agenda", label: "Actualités" }]
 
-//TODO revoir les space-y en wiew mobile
-
-export default function HeaderNav({ click }) {
+export default function HeaderNav() {
   return (
-    <nav className="pr-2 text-lg text-center lg:text-base xl:text-lg lg:flex lg:justify-between ">
-      <ul className="space-y-2 lg:space-y-0 lg:space-x-4 lg:flex lg:justify-center">
-        {links1.map(({ id, label }) => (
+    <nav className="lg:flex lg:justify-start">
+      <ul className="py-2 space-y-2 lg:space-y-0 xl:space-x-2 lg:mr-2 2xl:ml-10 xl:ml-6 lg:flex ">
+        <li className="w-28 lg:text-center lg:mx-auto lg:w-max">
+          <HeaderSubNav title="Notre école" pages={ecole} />
+        </li>
+        <li className="w-28 lg:text-center lg:mx-auto lg:w-max">
+          <HeaderSubNav title="Le programme" pages={program} />
+        </li>
+        <li className="w-28 lg:text-center lg:mx-auto lg:w-max">
+          <HeaderSubNav title="Alternance" pages={alternance} />
+        </li>
+        {headernav.map(({ id, label }) => (
           <li
-            key={`navmd-${id}`}
-            onClick={click}
-            className="mx-auto text-center w-max"
-          >
-            <HashLink id={id} label={label} />
-          </li>
-        ))}
-      </ul>
-      <ul className="space-y-2 lg:mx-4 lg:space-y-0 lg:space-x-4 lg:flex lg:justify-center">
-        {pages1.map(({ id, label }) => (
-          <li
-            key={`navmd-${id}`}
-            onClick={click}
-            className="mx-auto text-center w-max"
-          >
-            <PageLink id={id} label={label} />
-          </li>
-        ))}
-      </ul>
-      <ul className="space-y-2 lg:space-y-0 lg:space-x-4 lg:flex lg:justify-center">
-        {links2.map(({ id, label }) => (
-          <li
-            key={`navmd-${id}`}
-            onClick={click}
-            className="mx-auto text-center w-max"
-          >
-            <HashLink id={id} label={label} />
-          </li>
-        ))}
-      </ul>
-      <ul className="space-y-2 lg:mx-4 lg:space-y-0 lg:space-x-4 lg:flex lg:justify-center">
-        {pages2.map(({ id, label }) => (
-          <li
-            key={`navmd-${id}`}
-            onClick={click}
-            className="mx-auto text-center w-max"
+            key={`${id}`}
+            className="flex text-center lg:items-center lg:mx-auto lg:w-max"
           >
             <PageLink id={id} label={label} />
           </li>
         ))}
       </ul>
     </nav>
-  );
+  )
 }

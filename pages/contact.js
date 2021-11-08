@@ -6,7 +6,7 @@ import { useMutation } from "react-query"
 
 import ButtonSubmit from "../components/atoms/ButtonSubmit"
 import PageLink from "../components/atoms/PageLink"
-import BlockTitle from "../components/atoms/BlockTitle"
+import BlockTitle from "../components/organisms/BlockTitle"
 import SocialNav from "../components/molecules/SocialNav"
 import IconCurvedArrowX from "../components/atoms/IconCurvedArrowX"
 
@@ -25,15 +25,16 @@ export default function Contact() {
 	})
 	const onSubmit = (formData) => mutation.mutate(formData)
 
-	return (
-		<>
-			<Head>
-				<title>{pageTitle}</title>
-				<link rel="icon" href="/favicon.ico" />
-				<meta name="description" content={pageDescription} />
-				<meta property="og:url" content={pageUrl} />
-				<meta property="og:description" content={pageDescription} />
-			</Head>
+  //TODO vérifier le fonctionnement du InputButton
+  return (
+    <>
+      <Head>
+        <title>{pageTitle}</title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content={pageDescription} />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:description" content={pageDescription} />
+      </Head>
 
 			<main>
 				<section id="contact" className="pt-10 md:py-20">

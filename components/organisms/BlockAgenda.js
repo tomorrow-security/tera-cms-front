@@ -1,4 +1,4 @@
-import BlockTitle from "../atoms/BlockTitle"
+import SubTitle from "../atoms/SubTitle"
 import SocialNav from "../molecules/SocialNav"
 import EventLive from "../molecules/EventLive"
 
@@ -14,7 +14,7 @@ export default function BlockAgenda({ events }) {
 	return (
 		<section id="agenda" className="py-10 lg:py-20">
 			<div className="md:container md:mx-auto">
-				<BlockTitle
+				<SubTitle
 					title="Agenda"
 					iconPicture={{ backgroundImage: "url('pop-corn.png')" }}
 				/>

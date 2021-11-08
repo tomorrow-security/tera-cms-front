@@ -70,6 +70,7 @@ module.exports = {
         scroll: "scroll 40s linear infinite",
       },
       colors: {
+        // TODO revoir les couleurs
         "tc-blue": "#04021D",
         "tc-red": "#E03300",
         "tc-blue-medium": "#2d2966",
@@ -83,27 +84,43 @@ module.exports = {
         "tc-blue-dark": "#01000a",
         "tc-red-dark": "#c92b00",
       },
+      gridRowStart: {
+        8: "8",
+        9: "9",
+        10: "10",
+        11: "11",
+        12: "12",
+        13: "13",
+      },
+      gridTemplateRows: {
+        "program-domain": "1fr 2rem 1fr 1fr 3fr",
+        objectif: "2rem 1fr",
+      },
+      height: {
+        "33vh": "33vh",
+        "1/12": "8.333333%",
+        "7/12": "58.333333%",
+      },
       inset: {
         // TODO vérifier si tous les paramètres sont utilisés
         "12/25": "48%",
         "-20/100": "-20%",
         "-15/100": "-15%",
         "-10/100": "-10%",
-
       },
       keyframes: {
         wiggle: {
           "0%, 100%": { transform: "rotate(-3deg)" },
           "50%": { transform: "rotate(3deg)" },
         },
-        shine: {
-          "0%": { backgroundPosition: "-100%;" },
-          "100%": { backgroundPosition: "100%" },
-        },
         scroll: {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },
         },
+      },
+      // TODO mettre un losange
+      listStyleType: {
+        square: "square",
       },
       padding: {
         4.5: "1.125rem",
@@ -124,6 +141,7 @@ module.exports = {
         "65%": "65%",
         full2: "200%",
         full3: "300%",
+        "full3.5": "350%",
       },
     },
   },
@@ -131,16 +149,19 @@ module.exports = {
     extend: {
       animation: ["group-hover", "hover", "focus", "checked"],
       backgroundColor: ["group-hover", "checked", "disabled"],
-      backgroundImage: ["group-hover", "hover"],
+      backgroundImage: ["group-hover", "group-focus", "hover"],
       borderColor: ["focus", "checked"],
       borderOpacity: ["disabled"],
+      borderRadius: ["group-focus"],
       borderStyle: ["focus"],
       borderWidth: ["group-hover", "hover", "focus"],
+      display: ["group-hover", "hover", "group-focus", "focus", "active"],
       fontWeight: ["hover", "active", "focus"],
       fontSize: ["hover"],
       fontStyle: ["hover", "focus"],
+      justifyContent: ["group-focus"],
       inset: ["group-hover", "hover"],
-      opacity: ["visited", "disabled"],
+      opacity: ["group-focus", "visited", "disabled"],
       padding: ["group-focus"],
       scale: ["group-hover", "group-focus"],
       textOpacity: ["disabled"],
@@ -149,8 +170,8 @@ module.exports = {
       textTransform: ["focus"],
       transform: [
         "group-hover",
-        "hover",
         "group-focus",
+        "hover",
         "focus",
         "active",
         "checked",
@@ -178,7 +199,8 @@ module.exports = {
         "active",
         "checked",
       ],
-      translate: ["group-hover", "active", "group-focus", "checked"],
+      translate: ["group-hover", "group-focus", "active", "checked"],
+      visibility: ["group-hover", "group-focus", "hover", "focus"],
     },
   },
   plugins: [require("@tailwindcss/forms")],
