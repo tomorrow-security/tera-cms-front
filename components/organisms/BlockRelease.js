@@ -94,7 +94,7 @@ export default function BlockRelease() {
                 </Paragraphe>
               </div>
               <ParagrapheXl>
-                Connaissez-vous le plan <Strong>“1 jeune, 1 solution” ?</Strong>{" "}
+                Connaissez-vous le plan <Strong>“1 jeune, 1 solution” ?</Strong>
                 Une solution d’Etat pour former, accompagner et faciliter
                 l’insertion professionnelle de tous les jeunes...
               </ParagrapheXl>
