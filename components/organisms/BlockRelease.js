@@ -101,7 +101,7 @@ export default function BlockRelease() {
               <ExternalLink
                 title="#1jeune1solution"
                 url="https://www.1jeune1solution.gouv.fr/"
-                aria="lien vars le site gouvernemental 1jeune1solution"
+                aria="lien vers le site gouvernemental 1jeune1solution"
               />
             </div>
           </div>
