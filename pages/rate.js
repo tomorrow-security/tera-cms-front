@@ -10,7 +10,7 @@ import ParagrapheXl from "../components/atoms/ParagrapheXl"
 import Strong from "../components/atoms/Strong"
 import ExternalLink from "../components/molecules/ExternalLink"
 
-const pageTitle = "Tairfs - Tera Campus"
+const pageTitle = "Tarifs - Tera Campus"
 const pageDescription = "Les tarifs"
 
 export default function Bivouacs() {
