@@ -24,12 +24,12 @@ export default function Bivouacs() {
       </Head>
 
       <main>
-        <section id="contact" className="pt-10 md:py-20">
+        <section id="contact" className="py5">
+          <BlockTitle
+            title="Tarifs"
+            iconPicture={{ backgroundImage: "url('tarifs.png')" }}
+          />
           <div className="md:container md:mx-auto">
-            <BlockTitle
-              title="Tarifs"
-              iconPicture={{ backgroundImage: "url('tarifs.png')" }}
-            />
             <div className="mx-4">
               <SubTitle
                 title="Formation initiale & alternance"
@@ -39,7 +39,7 @@ export default function Bivouacs() {
                 <div className="font-semibold">
                   <Bullet>Aucun frais à prévoir pour :</Bullet>
                 </div>
-                <div className="ml-12">
+                <div className="ml-12 md:ml-8">
                   <List>
                     <li>le test de positionnement</li>
                     <li>le test de positionnement</li>
