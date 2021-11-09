@@ -1,9 +1,9 @@
 import Head from "next/head"
-import Image from "next/dist/client/image"
 
 import BlockTitle from "../components/organisms/BlockTitle"
 import BlockBivouacPresentation from "../components/organisms/BlockBivouacPresentation"
 import Cta from "../components/atoms/Cta"
+import BlockBivouacMemories from "../components/organisms/BlockBivouacMemories"
 
 const pageTitle = "Bivouacs - Tera Campus"
 const pageDescription = "Nos Bivouacs"
@@ -20,13 +20,11 @@ export default function Bivouacs() {
 
       <main>
         <section className="py-5">
-          <div className="md:container md:mx-auto">
-            <BlockTitle
-              title="Bivouacs"
-              iconPicture={{ backgroundImage: "url('bivouac.png')" }}
-            />
-            <BlockBivouacPresentation />
-          </div>
+          <BlockTitle
+            title="Bivouacs"
+            iconPicture={{ backgroundImage: "url('bivouac.png')" }}
+          />
+          <BlockBivouacPresentation />
           <div
             className="w-full bg-center bg-cover"
             style={{ backgroundImage: "url('vue-ardeche.jpg')" }}
@@ -42,6 +40,7 @@ export default function Bivouacs() {
               </div>
             </div>
           </div>
+          <BlockBivouacMemories />
         </section>
       </main>
     </>
