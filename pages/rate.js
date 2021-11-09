@@ -31,7 +31,7 @@ export default function Bivouacs() {
               iconPicture={{ backgroundImage: "url('tarifs.png')" }}
             />
             <SubTitle
-              title="Formation initial & alternance"
+              title="Formation initiale & alternance"
               iconPicture={{ backgroundImage: "url('tarifs.png')" }}
             />
             <div className="md:w-1/4 md:border md:border-tc-blue md:rounded md:px-6 md:pb-6 md:mx-auto md:my-6">
