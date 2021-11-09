@@ -15,8 +15,8 @@ export default function BlockAgenda({ events }) {
     <section id="agenda" className="py-10 lg:py-20">
       <div className="md:container md:mx-auto">
         <SubTitle
-          title="Agenda"
-          iconPicture={{ backgroundImage: "url('pop-corn.png')" }}
+          title="Actualités"
+          iconPicture={{ backgroundImage: "url('calendrier-blue.png')" }}
         />
         <h3 className="text-2xl text-center md:text-3xl">
           JPO,Thursday Tech Live,coaching alternance…{" "}
