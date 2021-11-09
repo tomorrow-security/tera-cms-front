@@ -44,7 +44,7 @@ export default function Bivouacs() {
                 <li>les frais de dossier</li>
               </List>
             </div>
-            //TODO en attentes des tarifs exacts
+            {/* //TODO en attentes des tarifs exacts */}
             {/* <LitleTitle>Frais de Scolarité 1 & 2 années</LitleTitle> */}
             <LitleTitle>Payer en plusieurs fois :</LitleTitle>
             <div className="md:w-11/12 md:mx-auto">
