@@ -17,7 +17,7 @@ export default function BlockBivouacPresentation() {
           className="w-full h-64 bg-center bg-cover lg:w-1/2 lg:h-auto"
           style={{ backgroundImage: "url('etudiants-ardeche.jpg')" }}
         ></div>
-        <div className="lg:pl-4 lg:w-1/2">
+        <div className="mx-4  lg:pl-4 lg:w-1/2">
           <ParagrapheXl>
             6 semaines en présentiel grâce aux 3 Bivouacs dans l'année!*
           </ParagrapheXl>
