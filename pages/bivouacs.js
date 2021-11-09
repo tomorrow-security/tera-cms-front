@@ -1,7 +1,9 @@
 import Head from "next/head"
-import PageLink from "../components/atoms/PageLink"
 
-import IconLogoBig from "../components/atoms/IconLogoBig"
+import BlockTitle from "../components/organisms/BlockTitle"
+import BlockBivouacPresentation from "../components/organisms/BlockBivouacPresentation"
+import Cta from "../components/atoms/Cta"
+import BlockBivouacMemories from "../components/organisms/BlockBivouacMemories"
 
 const pageTitle = "Bivouacs - Tera Campus"
 const pageDescription = "Nos Bivouacs"
@@ -17,20 +19,29 @@ export default function Bivouacs() {
       </Head>
 
       <main>
-        <div className="flex flex-col justify-center w-full h-full text-center align-center flex-nowrap text-tc-blue">
-          <div className="w-1/4 py-10 mx-auto">
-            <IconLogoBig />
-            <div className="text-base font-bold tracking-normal normal-case md:text-lg xl:text-2xl">
-              The future of learning
+        <section className="py-5">
+          <BlockTitle
+            title="Bivouacs"
+            iconPicture={{ backgroundImage: "url('bivouac.png')" }}
+          />
+          <BlockBivouacPresentation />
+          <div
+            className="w-full bg-center bg-cover"
+            style={{ backgroundImage: "url('vue-ardeche.jpg')" }}
+          >
+            <div className="flex flex-col justify-center h-64 mx-4 sm:h-96 lg:h-screen md:mx-8 lg:mx-24 ">
+              <div className="space-y-2 text-2xl font-medium text-white lg:text-4xl">
+                <p>S'unir pour mieux</p>
+                <p>réussir...</p>
+              </div>
+              <div className="my-6">
+                {/* // TODO changement pour choix des couleur et weight du CTA */}
+                <Cta title="Brochure" id="/catalog" />
+              </div>
             </div>
           </div>
-          <h1 className="text-3xl font-extrabold text-tc-red">
-            Cette pages est en construction
-          </h1>
-          <div className="px-2 mx-auto text-center w-max">
-            <PageLink id="" label="retour à la page d'accueil" />
-          </div>
-        </div>
+          <BlockBivouacMemories />
+        </section>
       </main>
     </>
   )
