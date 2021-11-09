@@ -67,7 +67,7 @@ export default function Bivouacs() {
               </Paragraphe>
             </div>
             <ExternalLink
-              title="l'alternance"
+              title="L'alternance"
               url="https://www.alternance.emploi.gouv.fr/accueil"
               aria="lien vers le site gouvernemental de l'alternance"
             />
