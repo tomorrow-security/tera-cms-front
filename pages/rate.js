@@ -62,7 +62,7 @@ export default function Bivouacs() {
               <Paragraphe>
                 Le choix du télé-présentiel, couplé au financement de ta
                 formation par l'entreprise, te permettra donc d'entamer ta
-                carrière sereinement, et <Strong>sans aucune dettes</Stron> !
+                carrière sereinement, et <Strong>sans aucune dettes</Strong> !
               </Paragraphe>
             </div>
             <ExternalLink
