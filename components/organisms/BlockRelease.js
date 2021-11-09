@@ -94,14 +94,14 @@ export default function BlockRelease() {
                 </Paragraphe>
               </div>
               <ParagrapheXl>
-                Connaissez-vous le plan <Strong>“1 jeune, 1 solution” ?</Strong>{" "}
+                Connaissez-vous le plan <Strong>“1 jeune, 1 solution” ?</Strong>
                 Une solution d’Etat pour former, accompagner et faciliter
                 l’insertion professionnelle de tous les jeunes...
               </ParagrapheXl>
               <ExternalLink
                 title="#1jeune1solution"
                 url="https://www.1jeune1solution.gouv.fr/"
-                aria="lien vars le site gouvernemental 1jeune1solution"
+                aria="lien vers le site gouvernemental 1jeune1solution"
               />
             </div>
           </div>
