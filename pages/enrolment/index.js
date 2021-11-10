@@ -41,14 +41,12 @@ export default function Enrolment() {
 
       <main className="md:container md:mx-auto">
         <section id="enrolment" className="py-10">
-          <div className="flex flex-col justify-between flex-grow md:container md:mx-auto">
-            <BlockTitle
-              title="Inscription"
-              iconPicture={{
-                backgroundImage: "url('inscription-red-into-blue.png')",
-              }}
-            />
-          </div>
+          <BlockTitle
+            title="Inscription"
+            iconPicture={{
+              backgroundImage: "url('inscription-red-into-blue.png')",
+            }}
+          />
           <div className="mx-4 xl:my-12">
             <Form
               status={mutation.status}
