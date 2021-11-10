@@ -49,17 +49,15 @@ export default function EnrolmentProcess({ initialPageData, uuid }) {
         <meta property="og:description" content={pageDescription} />
       </Head>
 
-      <main className="mx-2 md:container md:mx-auto">
-        <section id="test" className="py-10 md:py-20">
-          <div className="flex flex-col justify-between flex-grow md:container md:mx-auto">
-            <BlockTitle
-              title={pageDescription}
-              iconPicture={{
-                backgroundImage: "url('/inscription-red-into-blue.png')",
-              }}
-            />
-          </div>
-          <div className="xl:my-12">{renderBody()}</div>
+      <main className="md:container md:mx-auto">
+        <section id="test" className="py-10">
+          <BlockTitle
+            title={pageDescription}
+            iconPicture={{
+              backgroundImage: "url('/inscription-red-into-blue.png')",
+            }}
+          />
+          <div className="mx-4 xl:my-12">{renderBody()}</div>
         </section>
       </main>
     </>
