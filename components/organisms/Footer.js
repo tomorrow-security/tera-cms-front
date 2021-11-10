@@ -1,14 +1,13 @@
-// import FooterNav from "../molecules/FooterNav"
-import BlockPlan from "./BlockPlan"
+import Plan from "../molecules/Plan"
 import IconLogo from "../atoms/IconLogo"
 
 export default function Footer() {
   const today = new Date()
   return (
-    <footer className="pt-10">
+    <footer className="pt-5">
       <div className="bg-white">
-        <div className="md:container md:mx-auto md:px-2">
-          <BlockPlan />
+        <div className="md:container md:mx-auto">
+          <Plan />
         </div>
       </div>
       <div className="text-white border-t-2 bg-tc-blue border-tc-red">
