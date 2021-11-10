@@ -18,12 +18,10 @@ export default function Registration() {
       </Head>
 
       <main>
-        <div>
-          <Frame
-            name="registrationLive"
-            url="https://forms.monday.com/forms/embed/1a541465c5a732368f2738369e871b14?r=use1"
-          />
-        </div>
+        <Frame
+          name="registrationLive"
+          url="https://forms.monday.com/forms/embed/1a541465c5a732368f2738369e871b14?r=use1"
+        />
       </main>
     </>
   )
