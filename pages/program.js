@@ -12,7 +12,7 @@ const pageTitle = "Programme - Tera Campus"
 const pageDescription = "Notre programme"
 const pageUrl = "https://tera-campus.com/program"
 
-export default function Legal() {
+export default function Program() {
   return (
     <>
       <Head>
@@ -23,18 +23,20 @@ export default function Legal() {
         <meta property="og:description" content={pageDescription} />
       </Head>
 
-      <main>
-        <BlockTitle
-          title="Programme"
-          iconPicture={{ backgroundImage: "url('programme.png')" }}
-        />
-        <BlockCurriculum />
-        <BlockProgramTC3 />
-        <BlockPrerequisite />
-        <BlockRegistration />
-        <BlockEval />
-        <BlockMethod />
-        <BlockCareer />
+      <main className="md:container md:mx-auto">
+        <section className="py-10">
+          <BlockTitle
+            title="Programme"
+            iconPicture={{ backgroundImage: "url('programme.png')" }}
+          />
+          <BlockCurriculum />
+          <BlockProgramTC3 />
+          <BlockPrerequisite />
+          <BlockRegistration />
+          <BlockEval />
+          <BlockMethod />
+          <BlockCareer />
+        </section>
       </main>
     </>
   )
