@@ -1,6 +1,6 @@
 import Image from "next/image"
-import SubTitle from "../atoms/SubTitle"
 
+import SubTitle from "../atoms/SubTitle"
 import ProgramTC3 from "../molecules/ProgramTC3"
 
 export default function BlockProgrammeTC3() {
