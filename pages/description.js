@@ -19,13 +19,13 @@ export default function description() {
         <meta property="og:description" content={pageDescription} />
       </Head>
 
-      <main>
-        <section className="py-5">
-          <div className="mx-4 md:container md:mx-auto">
-            <BlockTitle
-              title="A propos de Tera Campus"
-              iconPicture={{ backgroundImage: "url('info.png')" }}
-            />
+      <main className="md:container md:mx-auto">
+        <section className="py-10">
+          <BlockTitle
+            title="A propos de Tera Campus"
+            iconPicture={{ backgroundImage: "url('info.png')" }}
+          />
+          <div className="mx-4">
             <Paragraphe>
               Tera Campus est une école Supérieure d'Informatique en
               télé-présentiel qui propose des formations allant du BAC+3 au
@@ -67,13 +67,15 @@ export default function description() {
               </li>
             </List>
           </div>
+          <BlockGuides />
+          <div className="mx-4">
+            <Paragraphe>
+              <span className="underline">
+                <PageLink id="program" label="Découvrez nos formations" />
+              </span>
+            </Paragraphe>
+          </div>
         </section>
-        <BlockGuides />
-        <Paragraphe>
-          <span className="underline">
-            <PageLink id="program" label="Découvrez nos formations" />
-          </span>
-        </Paragraphe>
       </main>
     </>
   )
