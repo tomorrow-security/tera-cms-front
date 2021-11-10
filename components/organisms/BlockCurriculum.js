@@ -93,12 +93,12 @@ const releaseYears = [
 export default function BlockCurriculum() {
   return (
     <section id="curriculum" className="py-5">
-      <div className="flex flex-col justify-between flex-grow md:container md:mx-auto">
-        <SubTitle
-          title="Le programme de Tera Campus"
-          iconPicture={{ backgroundImage: "url('cursus-TC.png')" }}
-        />
+      <div className="flex flex-col justify-between flex-grow">
         <div className="mx-4">
+          <SubTitle
+            title="Le programme de Tera Campus"
+            iconPicture={{ backgroundImage: "url('cursus-TC.png')" }}
+          />
           <div className="font-semibold">
             <ParagrapheXl>
               Deux premières années en formation initiale pour acquérir des
