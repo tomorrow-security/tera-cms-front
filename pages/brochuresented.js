@@ -1,10 +1,10 @@
-import Head from "next/head";
+import Head from "next/head"
 
-import PageLink from "../components/atoms/PageLink";
+import PageLink from "../components/atoms/PageLink"
 
-const pageTitle = "Brochure envoyée - Tera Campus";
-const pageDescription = "Confirmation d'envoie de la brochure";
-const pageUrl = "https://tera-campus.com/brochuresent";
+const pageTitle = "Brochure envoyée - Tera Campus"
+const pageDescription = "Confirmation d'envoie de la brochure"
+const pageUrl = "https://tera-campus.com/brochuresent"
 
 export default function brochureSented() {
   return (
@@ -17,7 +17,7 @@ export default function brochureSented() {
         <meta property="og:description" content={pageDescription} />
       </Head>
 
-      <main>
+      <main className="mx-4 md:container md:mx-auto">
         <div className="flex flex-col items-center justify-center my-12 space-y-6 text-xl font bold">
           <p className="mt-8 text-center">
             Tera Campus vous remercie d'avoir demandé la brochure.
@@ -31,5 +31,5 @@ export default function brochureSented() {
         </div>
       </main>
     </>
-  );
+  )
 }
