@@ -42,13 +42,11 @@ export default function BlockFaq({ questions }) {
         />
       </Head>
 
-      <section id="faq" className="py-10 md:py-20">
-        <div className="md:container md:mx-auto">
-          <div className="grid grid-cols-1 gap-8 mx-4 lg:grid-cols-2">
-            {questions.map((item, index) => (
-              <Item key={index} question={item.name} answer={item.text} />
-            ))}
-          </div>
+      <section id="faq" className="py-5">
+        <div className="grid grid-cols-1 mx-4 lg:grid-cols-2">
+          {questions.map((item, index) => (
+            <Item key={index} question={item.name} answer={item.text} />
+          ))}
         </div>
       </section>
     </>
