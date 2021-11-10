@@ -18,15 +18,15 @@ export default function ReleaseTraining() {
         <meta property="og:description" content={pageDescription} />
       </Head>
 
-      <main>
-        <div className="md:container md:mx-auto">
+      <main className="md:container md:mx-auto">
+        <section className="py-10">
           <BlockTitle
             title="L'alternance"
             iconPicture={{ backgroundImage: "url('alternance.png')" }}
           />
           <BlockRelease />
           <BlockContract />
-        </div>
+        </section>
       </main>
     </>
   )
