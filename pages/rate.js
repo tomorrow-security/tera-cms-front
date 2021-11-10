@@ -24,53 +24,57 @@ export default function Bivouacs() {
       </Head>
 
       <main>
-        <section id="contact" className="pt-10 md:py-20">
+        <section id="contact" className="py5">
+          <BlockTitle
+            title="Tarifs"
+            iconPicture={{ backgroundImage: "url('tarifs.png')" }}
+          />
           <div className="md:container md:mx-auto">
-            <BlockTitle
-              title="Tarifs"
-              iconPicture={{ backgroundImage: "url('tarifs.png')" }}
-            />
-            <SubTitle
-              title="Formation initiale & alternance"
-              iconPicture={{ backgroundImage: "url('dossier.png')" }}
-            />
-            <div className="md:w-1/4 md:border md:border-tc-blue md:rounded md:px-6 md:pb-6 md:mx-auto md:my-6">
-              <div className="font-semibold">
-                <Bullet>Aucun frais à prévoir pour :</Bullet>
+            <div className="mx-4">
+              <SubTitle
+                title="Formation initiale & alternance"
+                iconPicture={{ backgroundImage: "url('dossier.png')" }}
+              />
+              <div className="md:w-1/4 md:border md:border-tc-blue md:rounded md:px-6 md:pb-6 md:mx-auto md:my-6">
+                <div className="font-semibold">
+                  <Bullet>Aucun frais à prévoir pour :</Bullet>
+                </div>
+                <div className="ml-12 md:ml-8">
+                  <List>
+                    <li>le test de positionnement</li>
+                    <li>le test de positionnement</li>
+                    <li>les frais de dossier</li>
+                  </List>
+                </div>
               </div>
-              <List>
-                <li>le test de positionnement</li>
-                <li>le test de positionnement</li>
-                <li>les frais de dossier</li>
-              </List>
+              {/* //TODO en attentes des tarifs exacts */}
+              {/* <LitleTitle>Frais de Scolarité 1 & 2 années</LitleTitle> */}
+              <LitleTitle>Payer en plusieurs fois :</LitleTitle>
+              <div className="md:w-11/12 md:mx-auto">
+                <Bullet>Alternance à partir de la 3ème année :</Bullet>
+                <Paragraphe>
+                  Les 3 années de formation en alternance seront entièrement
+                  financées par votre entreprise d’accueil !
+                </Paragraphe>
+                <ParagrapheXl>
+                  Le reste à charge sera donc de 0 euro.
+                </ParagrapheXl>
+                <Paragraphe>
+                  Tu seras en plus <Strong>rémunéré(e) mensuellement</Strong>{" "}
+                  pour ton travail et en fonction de ta situation
+                </Paragraphe>
+                <Paragraphe>
+                  Le choix du télé-présentiel, couplé au financement de ta
+                  formation par l'entreprise, te permettra donc d'entamer ta
+                  carrière sereinement, et <Strong>sans aucune dettes</Strong> !
+                </Paragraphe>
+              </div>
+              <ExternalLink
+                title="L'alternance"
+                url="https://www.alternance.emploi.gouv.fr/accueil"
+                aria="lien vers le site gouvernemental de l'alternance"
+              />
             </div>
-            {/* //TODO en attentes des tarifs exacts */}
-            {/* <LitleTitle>Frais de Scolarité 1 & 2 années</LitleTitle> */}
-            <LitleTitle>Payer en plusieurs fois :</LitleTitle>
-            <div className="md:w-11/12 md:mx-auto">
-              <Bullet>Alternance à partir de la 3ème année :</Bullet>
-              <Paragraphe>
-                Les 3 années de formation en alternance seront entièrement
-                financées par votre entreprise d’accueil !
-              </Paragraphe>
-              <ParagrapheXl>
-                Le reste à charge sera donc de 0 euro.
-              </ParagrapheXl>
-              <Paragraphe>
-                Tu seras en plus <Strong>rémunéré(e) mensuellement</Strong> pour
-                ton travail et en fonction de ta situation
-              </Paragraphe>
-              <Paragraphe>
-                Le choix du télé-présentiel, couplé au financement de ta
-                formation par l'entreprise, te permettra donc d'entamer ta
-                carrière sereinement, et <Strong>sans aucune dettes</Strong> !
-              </Paragraphe>
-            </div>
-            <ExternalLink
-              title="L'alternance"
-              url="https://www.alternance.emploi.gouv.fr/accueil"
-              aria="lien vers le site gouvernemental de l'alternance"
-            />
           </div>
         </section>
       </main>
