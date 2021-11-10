@@ -1,5 +1,5 @@
 import axios from "axios"
-import { useEffect } from "react"
+import { useState, useEffect } from "react"
 import { useForm } from "react-hook-form"
 import { useMutation } from "react-query"
 
@@ -330,7 +330,6 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
               {/* //TODO rendre l'errors fonctionnel */}
               <div className="relative group">
                 <label
-                  // TODO pb de couleur
                   htmlFor="document"
                   className={`absolute p-4 border rounded cursor-pointer group-hover:border-4 ${
                     errors.document
