@@ -31,24 +31,24 @@ export default function Catalog() {
         <meta property="og:description" content={pageDescription} />
       </Head>
 
-      <main className="mx-2 md:container md:mx-auto">
-        <section id="brochure" className="py-10 md:py-20">
-          <div className="flex flex-col justify-between flex-grow md:container md:mx-auto">
-            <BlockTitle
-              title="Demande de brochure"
-              iconPicture={{ backgroundImage: "url('brochure icon-blue.png')" }}
-            />
-          </div>
-          <p className="my-8 text-center ">
-            Veuillez Remplir le formulaire suivant pour recevoir la brochure de
-            Tera Campus par e-mail s'il vous plaît.
-          </p>
-          <div className="xl:my-12">
-            <Form
-              status={mutation.status}
-              onSubmit={onSubmit}
-              mutation={mutation}
-            />
+      <main className="md:container md:mx-auto">
+        <section id="brochure" className="py-10">
+          <BlockTitle
+            title="Demande de brochure"
+            iconPicture={{ backgroundImage: "url('brochure icon-blue.png')" }}
+          />
+          <div className="mx-4">
+            <p className="my-8 text-center ">
+              Veuillez Remplir le formulaire suivant pour recevoir la brochure
+              de Tera Campus par e-mail s'il vous plaît.
+            </p>
+            <div className="xl:my-12">
+              <Form
+                status={mutation.status}
+                onSubmit={onSubmit}
+                mutation={mutation}
+              />
+            </div>
           </div>
         </section>
       </main>
