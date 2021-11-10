@@ -8,9 +8,6 @@ import PhoneInputWithCountry from "react-phone-number-input/react-hook-form"
 import InputRadio from "./InputRadio"
 import InputButton from "./InputButton"
 import PageLink from "../atoms/PageLink"
-// import InputCheckRGPD from "../molecules/InputCheckRGPD"
-// TODO importer la molecule Input quand fonctionnera
-// import Input from '../molecules/Input'
 
 export default function Form({ mutation, onSubmit }) {
   const {
