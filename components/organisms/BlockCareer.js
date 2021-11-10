@@ -4,6 +4,7 @@ import Paragraphe from "../atoms/Paragraphe"
 import ExternalLink from "../molecules/ExternalLink"
 import LittleTitle from "../atoms/LittleTitle"
 import SubTitle from "../atoms/SubTitle"
+import Strong from "../atoms/Strong"
 
 const jobs = [
   {
@@ -83,8 +84,8 @@ export default function BlockCareer() {
   const vowel = /[aeiouy]/i
   const isAVowel = firstLetter.match(vowel) !== null ?? true
   return (
-    <section id="career" className="flex flex-col flex-grow py-5">
-      <div className="flex flex-col justify-between flex-grow md:container md:mx-auto">
+    <section id="career" className="py-5 ">
+      <div className="mx-4">
         <SubTitle
           title="Les carrières"
           iconPicture={{ backgroundImage: "url('bulb.png')" }}
@@ -106,46 +107,44 @@ export default function BlockCareer() {
           Si vous faites le choix d’arrêter vos études vous pourrez également
           rejoindre une entreprise.
         </Paragraphe>
+      </div>
+      <div className="mx-4">
         <LittleTitle children="Quels débouchés après les études chez Tera Campus ?" />
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          <div className="mx-4 space-y-3 md:mx-0 md:pl-2 md:space-y-6">
-            <form className="relative w-4/5 mx-auto mb-8 text-xl text-white transition-colors duration-700 rounded-t texte-center rounded-b-xl bg-tc-blue hover:bg-tc-red">
-              <select
-                className="w-full p-2 transition-colors duration-700 bg-transparent rounded-t appearance-none rounded-b-xl focus:outline-none hover:bg-tc-red"
-                value={activeJobIndex}
-                onChange={(e) => setActiveJobIndex(e.target.value)}
-                aria-label="Sélecteur de carrière"
-              >
-                {jobs.map((job, index) => (
-                  <option key={index} value={index}>
-                    {job.name}
-                  </option>
-                ))}
-              </select>
-            </form>
-            <div className="my-4">
-              <p>
-                {isAVowel ? "L'" : "Le"}
-                <span className="text-tc-red">
-                  &nbsp;{jobs[activeJobIndex].name}&nbsp;
-                </span>
-                {jobs[activeJobIndex].description}
-              </p>
-              <p className="my-4 font-bold">
-                <span>Rémunération moyenne :</span>{" "}
-                {jobs[activeJobIndex].salary}
-              </p>
-              <p className="my-4 font-bold">
-                <span>Durée de formation :</span>{" "}
-                {jobs[activeJobIndex].training}
-              </p>
-            </div>
+      </div>
+      <div className="md:flex md:mx-4 md:space-x-4">
+        <div className="mx-4 space-y-3 md:mx-0 md:space-y-6 md:w-1/2">
+          <form className="relative w-4/5 mx-auto mb-8 text-xl text-white transition-colors duration-700 rounded-t texte-center rounded-b-xl bg-tc-blue hover:bg-tc-red">
+            <select
+              className="w-full p-2 transition-colors duration-700 bg-transparent rounded-t appearance-none rounded-b-xl focus:outline-none hover:bg-tc-red"
+              value={activeJobIndex}
+              onChange={(e) => setActiveJobIndex(e.target.value)}
+              aria-label="Sélecteur de carrière"
+            >
+              {jobs.map((job, index) => (
+                <option key={index} value={index}>
+                  {job.name}
+                </option>
+              ))}
+            </select>
+          </form>
+          <div className="my-4">
+            <Paragraphe>
+              {isAVowel ? "L'" : "Le"}
+              <Strong>&nbsp;{jobs[activeJobIndex].name}&nbsp;</Strong>
+              {jobs[activeJobIndex].description}
+            </Paragraphe>
+            <Paragraphe className="my-4 font-bold">
+              <span>Rémunération moyenne :</span> {jobs[activeJobIndex].salary}
+            </Paragraphe>
+            <Paragraphe className="my-4 font-bold">
+              <span>Durée de formation :</span> {jobs[activeJobIndex].training}
+            </Paragraphe>
           </div>
-          <div
-            className="w-full h-64 bg-center bg-cover md:h-full"
-            style={{ backgroundImage: `url(${jobs[activeJobIndex].imageUrl})` }}
-          />
         </div>
+        <div
+          className="w-full h-64 bg-center bg-cover md:w-1/2 md:h-auto"
+          style={{ backgroundImage: `url(${jobs[activeJobIndex].imageUrl})` }}
+        />
       </div>
     </section>
   )
