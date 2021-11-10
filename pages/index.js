@@ -24,9 +24,11 @@ function Index({ agenda }) {
 
       <main>
         <Hero />
-        <BlockAgenda events={agenda} />
-        <BlockBachelorPresentation />
-        <BlockConcept />
+        <section className="md:container md:mx-auto">
+          <BlockAgenda events={agenda} />
+          <BlockBachelorPresentation />
+          <BlockConcept />
+        </section>
       </main>
     </>
   )
