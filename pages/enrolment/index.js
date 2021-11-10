@@ -39,8 +39,8 @@ export default function Enrolment() {
         <meta property="og:description" content={pageDescription} />
       </Head>
 
-      <main className="mx-2 md:container md:mx-auto">
-        <section id="enrolment" className="py-10 md:py-20">
+      <main className="md:container md:mx-auto">
+        <section id="enrolment" className="py-10">
           <div className="flex flex-col justify-between flex-grow md:container md:mx-auto">
             <BlockTitle
               title="Inscription"
@@ -49,7 +49,7 @@ export default function Enrolment() {
               }}
             />
           </div>
-          <div className="xl:my-12">
+          <div className="mx-4 xl:my-12">
             <Form
               status={mutation.status}
               onSubmit={onSubmit}
