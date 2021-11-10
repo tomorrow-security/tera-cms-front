@@ -16,9 +16,7 @@ export default function Catalog() {
   })
 
   const onSubmit = (data) => {
-    mutation.mutate(data),
-      // TODO faire une condition avec le status success pour router.push
-      router.push("/brochuresented")
+    mutation.mutate(data), router.push("/brochuresented")
   }
 
   return (
