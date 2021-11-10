@@ -3,7 +3,6 @@ import BlockTitle from "../components/organisms/BlockTitle"
 import BlockProgramTC3 from "../components/organisms/BlockProgramTC3"
 import BlockPrerequisite from "../components/organisms/BlockPrerequisite"
 import BlockMethod from "../components/organisms/BlockMethod"
-import BlockEval from "../components/organisms/BlockEval"
 import BlockRegistration from "../components/organisms/BlockRegistration"
 import BlockCurriculum from "../components/organisms/BlockCurriculum"
 import BlockCareer from "../components/organisms/BlockCareer"
@@ -33,7 +32,6 @@ export default function Program() {
           <BlockProgramTC3 />
           <BlockPrerequisite />
           <BlockRegistration />
-          <BlockEval />
           <BlockMethod />
           <BlockCareer />
         </section>
