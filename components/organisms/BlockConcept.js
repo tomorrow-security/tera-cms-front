@@ -48,7 +48,7 @@ export default function BlockConcept() {
               validées par un agrément officiel d'Etat (RNPC niveau 6 et 7). Nos
               cursus de 3 à 5 années (BAC+3 et BAC+5) orientés sur les
               technologies de l'information, réalisés et validés par des
-              professionnels du secteur te permettront d'acquérir non seulement
+              professionnels du secteurvous permettront d'acquérir non seulement
               de fortes compétences techniques, mais aussi des méthodes
               d'organisation, de collaboration et de communication
               indispensables à toute carrière professionnelle !
