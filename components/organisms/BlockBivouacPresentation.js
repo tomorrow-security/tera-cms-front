@@ -1,7 +1,7 @@
 import ParagrapheXl from "../atoms/ParagrapheXl"
 import Paragraphe from "../atoms/Paragraphe"
 import Bullet from "../atoms/Bullet"
-import ListUl from "../atoms/ListUL"
+import ListUl from "../atoms/ListUl"
 import Cta from "../atoms/Cta"
 
 export default function BlockBivouacPresentation() {
