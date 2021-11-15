@@ -8,7 +8,7 @@ import List from "../components/atoms/List"
 import Paragraphe from "../components/atoms/Paragraphe"
 import ParagrapheXl from "../components/atoms/ParagrapheXl"
 import Strong from "../components/atoms/Strong"
-import ExternalLink from "../components/molecules/ExternalLink"
+import CtaBand from "../components/molecules/CtaBand"
 
 const pageTitle = "Tarifs - Tera Campus"
 const pageDescription = "Les tarifs"
@@ -64,6 +64,7 @@ export default function Bivouacs() {
                 carrière sereinement, et <Strong>sans aucune dettes</Strong> !
               </Paragraphe>
             </div>
+            <CtaBand />
           </div>
         </section>
       </main>
