@@ -1,6 +1,6 @@
 import Paragraphe from "../atoms/Paragraphe"
 import LittleTitle from "../atoms/LittleTitle"
-import List from "../atoms/List"
+import ListUl from "../atoms/ListUl"
 
 export default function BlockHandicap() {
   return (
@@ -17,7 +17,7 @@ export default function BlockHandicap() {
           Si vous êtes en situation d’handicap temporaire ou permanent, notre
           référant handicap est à votre disposition pour :
         </LittleTitle>
-        <List>
+        <ListUl>
           <li>
             Vous accompagner dans toutes vos démarches, qu’elles soient internes
             ou externes (Agefipph, MDPH…)
@@ -32,15 +32,15 @@ export default function BlockHandicap() {
             Accompagner au mieux et de façon personnalisée pour suivre la
             formation Tera Campus et passer les examens
           </li>
-        </List>
+        </ListUl>
         <Paragraphe>
           Notre référent handicap sera votre interlocuteur privilégié, et vous
           assurera un suivi adapté du début jusqu’à la fin de votre formation.
         </Paragraphe>
         <LittleTitle>
-          Comment se passe l’admission pour le public en situation de hadicap ?
+          Comment se passe l’admission pour le public en situation de handicap ?
         </LittleTitle>
-        <List>
+        <ListUl>
           <li>
             Envoyez un e-mail à&nbsp;
             <a
@@ -52,7 +52,7 @@ export default function BlockHandicap() {
             &nbsp;en expliquant votre situation
           </li>
           <li>
-            Notre référent reviendra vers-vous par téléphone ou par mail pour
+            Notre référent reviendra vers vous par téléphone ou par mail pour
             fixer un rendez-vous afin d’étudier en détail vos possibilités
             d’intégration
           </li>
@@ -60,7 +60,7 @@ export default function BlockHandicap() {
             A l’issue de cet entretien, vous aurez tous les éléments nécessaires
             à votre éventuelle admission au sein de notre école
           </li>
-        </List>
+        </ListUl>
         <Paragraphe>
           Pour toute autre question n’hésitez pas à nous contacter via :&nbsp;
           <a

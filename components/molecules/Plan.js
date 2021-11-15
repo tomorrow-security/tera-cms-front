@@ -4,13 +4,15 @@ import PlanLink from "../atoms/PlanLink"
 import SocialNav from "./SocialNav"
 
 const ecole = [
-  { id: "description", label: "Tera campus c'est quoi ?" },
+  { id: "description", label: "A propos de Tera Campus" },
   { id: "pedagogy", label: "Notre pédagogie" },
   { id: "bivouacs", label: "Bivouac" },
   { id: "handicap", label: "Etudier en situation de handicap" },
+  { id: "rate", label: "Tarifs" },
   { id: "faq", label: "FAQ" },
 ]
 const program = [
+  { id: "program", label: "Programme général" },
   {
     id: "program/#programtc3",
     label: "BAC+3 Administrateur des systèmes d'information",
@@ -24,7 +26,6 @@ const legal = [
   { id: "legal", label: "Mentions légales" },
   { id: "studyrules", label: "Règlement des études" },
   { id: "privacy", label: "Politique de confidentialité" },
-  { id: "rate", label: "Tarifs" },
 ]
 
 const autre = [

@@ -1,7 +1,7 @@
 import LitleTile from "../atoms/LittleTitle"
 import Paragraphe from "../atoms/Paragraphe"
-import Cta from "../atoms/Cta"
 import StartOfTheSchool from "../molecules/StartOfTheSchool"
+import CtaBand from "../molecules/CtaBand"
 
 const steps = [
   "Dossier de candidature",
@@ -18,7 +18,7 @@ export default function BlockAdmission() {
           <p>Tera Campus, une école post-bac</p>
           <p>100% en télé-présentiel</p>
         </div>
-        <div className="p-6 mx-auto my-8 border-2 rounded text-tc-red w-max border-tc-red">
+        <div className="p-6 mx-auto my-8 text-xl border-2 rounded lg:text-2xl xl:text-3xl text-tc-red w-max border-tc-red">
           <StartOfTheSchool />
         </div>
         <div>
@@ -46,10 +46,7 @@ export default function BlockAdmission() {
           </Paragraphe>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center p-6 mb-8 space-y-4 md:space-y-0 md:flex-row md:justify-around bg-tc-blue">
-        <Cta title="Candidature en ligne" id="/enrolment" />
-        <Cta title="Télécharger la brochure" id="/catalog" />
-      </div>
+      <CtaBand />
     </section>
   )
 }

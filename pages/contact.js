@@ -45,7 +45,7 @@ export default function Contact() {
           <div className="flex flex-col flex-nowrap md:flex-row-reverse md:justify-around md:items-center">
             <div className="flex flex-col mx-4 md:w-1/2">
               <Bullet>
-                Tera Campus répond à toutes tes questions à l'adresse suivante :
+                Tera Campus répond à toutes vos questions à l'adresse suivante :
               </Bullet>
               <a
                 href="mailto:contact@tera-campus.com"
@@ -54,7 +54,7 @@ export default function Contact() {
                 &#x1F4E7;contact@tera-campus.com
               </a>
               <Bullet>
-                Ou bien, tu peux poser directement tes questions via le
+                Ou bien, vous pouvez poser directement vos questions via le
                 formulaire ci-dessous :
               </Bullet>
               <div className="my-0.5 animate-bounce mx-auto">
@@ -111,16 +111,12 @@ export default function Contact() {
                         })}
                       />
                       <div className="flex flex-row flex-wrap items-center max-w-full text-xs sm:text-base">
-                        <p className="border-b-2 border-transparent">
-                          J'ai lu et j'accepte la&nbsp;
-                        </p>
+                        <p>J'ai lu et j'accepte la</p>
                         <PageLink
                           id="privacy"
                           label="politique de confidentialité"
                         />
-                        <p className="border-b-2 border-transparent">
-                          &nbsp;de Tera Campus.
-                        </p>
+                        <p>de Tera Campus.</p>
                       </div>
                     </div>
                   </label>
@@ -136,7 +132,7 @@ export default function Contact() {
                 </div>
               </form>
               <Bullet>
-                Et tu peux aussi joindre Tera Campus à ce numéro :
+                Et vous pouvez aussi joindre Tera Campus à ce numéro :
               </Bullet>
               <a
                 href="tel:+33469960065"

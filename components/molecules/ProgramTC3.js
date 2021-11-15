@@ -105,15 +105,10 @@ export default function Program({}) {
           </div>
         ))}
       </ul>
-      <div className="md:flex md:justify-between">
+      <div className="md:flex md:justify-end">
         <p className="text-sm italic">
           La validation peut s’acquérir par bloc de compétences.
         </p>
-        <ExternalLink
-          title="Fiche officielle"
-          url="https://www.francecompetences.fr/recherche/rncp/34022/#ancre3"
-          arai="Blocs de compétences de la fiche officielle du RNCP"
-        />
       </div>
     </section>
   )

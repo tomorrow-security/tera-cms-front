@@ -12,7 +12,7 @@ export default function BlockPartners() {
         <Approach />
         <CarouselPartners partners={<PartnersEuropean />} />
         <Paragraphe>
-          A travers ses partenaires,&nbsp; Tera Campus veut te donner
+          A travers ses partenaires,&nbsp; Tera Campus veut vous donner
           l&apos;opportunité d&apos;apprendre de tous les acteurs du
           marché.&nbsp; Notre approche est conceptuelle :&nbsp;
           <Strong>

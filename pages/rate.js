@@ -4,11 +4,11 @@ import BlockTitle from "../components/organisms/BlockTitle"
 import SubTitle from "../components/atoms/SubTitle"
 import LitleTitle from "../components/atoms/LittleTitle"
 import Bullet from "../components/atoms/Bullet"
-import List from "../components/atoms/List"
+import ListUl from "../components/atoms/ListUl"
 import Paragraphe from "../components/atoms/Paragraphe"
 import ParagrapheXl from "../components/atoms/ParagrapheXl"
 import Strong from "../components/atoms/Strong"
-import ExternalLink from "../components/molecules/ExternalLink"
+import CtaBand from "../components/molecules/CtaBand"
 
 const pageTitle = "Tarifs - Tera Campus"
 const pageDescription = "Les tarifs"
@@ -34,17 +34,13 @@ export default function Bivouacs() {
               title="Formation initiale & alternance"
               iconPicture={{ backgroundImage: "url('dossier.png')" }}
             />
-            <div className="md:w-1/4 md:border md:border-tc-blue md:rounded md:px-6 md:pb-6 md:mx-auto md:my-6">
-              <div className="font-semibold">
-                <Bullet>Aucun frais à prévoir pour :</Bullet>
-              </div>
-              <div className="ml-12 md:ml-8">
-                <List>
-                  <li>le test de positionnement</li>
-                  <li>le test de positionnement</li>
-                  <li>les frais de dossier</li>
-                </List>
-              </div>
+            <LitleTitle>Aucun frais à prévoir pour :</LitleTitle>
+            <div className="ml-12 md:ml-8">
+              <ListUl>
+                <li>le test de positionnement</li>
+                <li>le test de positionnement</li>
+                <li>les frais de dossier</li>
+              </ListUl>
             </div>
             {/* //TODO en attentes des tarifs exacts */}
             {/* <LitleTitle>Frais de Scolarité 1 & 2 années</LitleTitle> */}
@@ -59,20 +55,16 @@ export default function Bivouacs() {
                 Le reste à charge sera donc de 0 euro.
               </ParagrapheXl>
               <Paragraphe>
-                Tu seras en plus <Strong>rémunéré(e) mensuellement</Strong> pour
-                ton travail et en fonction de ta situation
+                Vous serez en plus <Strong>rémunéré mensuellement</Strong> pour
+                votre travail et en fonction de votre situation
               </Paragraphe>
               <Paragraphe>
-                Le choix du télé-présentiel, couplé au financement de ta
-                formation par l'entreprise, te permettra donc d'entamer ta
+                Le choix du télé-présentiel, couplé au financement de votre
+                formation par l'entreprise, vous permettra donc d'entamer votre
                 carrière sereinement, et <Strong>sans aucune dettes</Strong> !
               </Paragraphe>
             </div>
-            <ExternalLink
-              title="L'alternance"
-              url="https://www.alternance.emploi.gouv.fr/accueil"
-              aria="lien vers le site gouvernemental de l'alternance"
-            />
+            <CtaBand />
           </div>
         </section>
       </main>
