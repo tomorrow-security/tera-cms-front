@@ -3,6 +3,7 @@ import Strong from "../atoms/Strong"
 import Paragraphe from "../atoms/Paragraphe"
 import SubTitle from "../atoms/SubTitle"
 import ParagrapheXl from "../atoms/ParagrapheXl"
+import InternalLink from "../molecules/InternalLink"
 import ExternalLink from "../molecules/ExternalLink"
 
 export default function BlockConcept() {
@@ -22,14 +23,12 @@ export default function BlockConcept() {
             possible !
           </ParagrapheXl>
         </div>
-        <div className="pb-1 mx-auto md:pb-0 md:mr-32 w-max ">
-          <div className="bg-white rounded w-max">
-            <ExternalLink
-              title="Fiche officielle"
-              url="https://www.francecompetences.fr/recherche/rncp/34022/#ancre3"
-              arai="Blocs de compétences de la fiche officielle du RNCP"
-            />
-          </div>
+        <div className="pb-1 mx-auto md:pb-0 md:mr-32 w-max">
+          <InternalLink
+            label="Je me renseigne"
+            id="releasetraining"
+            background="white"
+          />
         </div>
       </div>
       <div className="flex flex-col lg:flex-row">
