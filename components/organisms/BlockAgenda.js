@@ -37,9 +37,9 @@ export default function BlockAgenda({ events }) {
         </div>
         <div className="flex flex-col justify-center mt-8 space-y-10">
           <p className="flex flex-col justify-center mx-auto space-y-2 font-bold text-center lg:text-2xl">
-            <span className="animate-wiggle">Abonne toi&nbsp;</span>
+            <span className="animate-wiggle">Abonnez vous&nbsp;</span>
             <span>et&nbsp;</span>
-            <span>suis en direct toutes nos actualités :</span>
+            <span>suivez en direct toutes nos actualités :</span>
           </p>
           <SocialNav />
         </div>
