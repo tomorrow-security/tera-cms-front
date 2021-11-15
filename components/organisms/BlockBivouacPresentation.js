@@ -1,7 +1,7 @@
 import ParagrapheXl from "../atoms/ParagrapheXl"
 import Paragraphe from "../atoms/Paragraphe"
 import Bullet from "../atoms/Bullet"
-import List from "../atoms/List"
+import ListUl from "../atoms/ListUL"
 import Cta from "../atoms/Cta"
 
 export default function BlockBivouacPresentation() {
@@ -21,13 +21,13 @@ export default function BlockBivouacPresentation() {
             mois de février et au mois de mai.
           </Paragraphe>
           <Bullet>Objectifs :</Bullet>
-          <List>
+          <ListUl>
             <li>Instaurer un esprit d'équipe,</li>
             <li>Créer des synergies</li>
             <li>Acquérir des compétences managériales et comportementales.</li>
-          </List>
+          </ListUl>
           <Paragraphe>
-            Les lieux de rendez-vous des séminaires sont définit par Tera Campus
+            Les lieux de rendez-vous des séminaires sont définis par Tera Campus
             à l'avance, et ils sont entièrement financés par l'école.
           </Paragraphe>
           <i>*frais inclus dans le prix de la formation</i>
