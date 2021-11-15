@@ -9,9 +9,9 @@ export default function ExternalLink({ title, url, aria }) {
         target="_blank"
         rel="noreferrer"
         aria-label={aria}
-        className="border rounded border-tc-red"
+        className="px-6 py-2 border rounded border-tc-red text-tc-red"
       >
-        <p className="px-6 py-2 text-tc-red">{title}</p>
+        {title}
       </a>
     </div>
   )
