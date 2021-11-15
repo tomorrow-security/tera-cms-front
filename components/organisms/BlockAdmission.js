@@ -19,7 +19,7 @@ export default function BlockAdmission() {
           <p>Tera Campus, une école post-bac</p>
           <p>100% en télé-présentiel</p>
         </div>
-        <div className="p-6 mx-auto my-8 border-2 rounded text-tc-red w-max border-tc-red">
+        <div className="p-6 mx-auto my-8 text-xl border-2 rounded lg:text-2xl xl:text-3xl text-tc-red w-max border-tc-red">
           <StartOfTheSchool />
         </div>
         <div>
