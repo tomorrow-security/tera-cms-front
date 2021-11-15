@@ -3,7 +3,6 @@ import Head from "next/head"
 import BlockTitle from "../components/organisms/BlockTitle"
 import Paragraphe from "../components/atoms/Paragraphe"
 import ListOl from "../components/atoms/ListOl"
-import Strong from "../components/atoms/Strong"
 
 const pageTitle = "Politique de confidentialité - Tera Campus"
 const pageDescription = "Politique de confidentialité"
