@@ -4,7 +4,6 @@ import Paragraphe from "../atoms/Paragraphe"
 import SubTitle from "../atoms/SubTitle"
 import ParagrapheXl from "../atoms/ParagrapheXl"
 import InternalLink from "../molecules/InternalLink"
-import ExternalLink from "../molecules/ExternalLink"
 
 export default function BlockConcept() {
   return (

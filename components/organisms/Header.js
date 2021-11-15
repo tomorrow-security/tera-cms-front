@@ -35,7 +35,7 @@ export default function Header() {
                 !isOpen && "hidden"
               } lg:block bg-tc-blue text-white flex flex-col lg:flex-row uppercase space-y-2 lg:space-y-0 lg:mr-1 xl:mr-6 lg:space-x-1 xl:space-x-8 2xl:mr-8`}
             >
-              <Cta id="/admission" title="Admission" />
+              <Cta id="/admission" title="Admission" color="white" />
               <Cta id="/catalog" title="Brochure" />
               <Cta id="/contact" title="Contact" />
             </div>

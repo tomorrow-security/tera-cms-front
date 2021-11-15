@@ -1,6 +1,5 @@
 import SubTitle from "../atoms/SubTitle"
 import ExternalLink from "../molecules/ExternalLink"
-import InternalLink from "../molecules/InternalLink"
 
 export default function BlockBachelorPresentation() {
   return (
