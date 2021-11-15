@@ -20,7 +20,7 @@ export default function Footer() {
               <div>
                 <div className="text-xl">Tera Campus</div>
                 <a href="tel:+33469960065" className="text-sm">
-                  04.69.96.00.65
+                  &#9742; 04.69.96.00.65
                 </a>
               </div>
             </div>
