@@ -3,7 +3,7 @@ import Image from "next/image"
 import Eval from "../molecules/Eval"
 import SubTitle from "../atoms/SubTitle"
 import LittleTitle from "../atoms/LittleTitle"
-import List from "../atoms/List"
+import ListUl from "../atoms/ListUl"
 
 export default function BlockMethod() {
   return (
@@ -20,7 +20,7 @@ export default function BlockMethod() {
                 <LittleTitle>
                   Comment se déroule une année chez Tera Campus ?
                 </LittleTitle>
-                <List>
+                <ListUl>
                   <li>
                     Cours théoriques et exercices d'application en face à face
                     pédagogique en télé-présentiel, dispensés par des
@@ -34,7 +34,7 @@ export default function BlockMethod() {
                     hackathons, ...)
                   </li>
                   <li>Périodes professionnelles en entreprises (alternance)</li>
-                </List>
+                </ListUl>
                 <Eval />
               </div>
               <div className="h-auto md:w-1/2">
