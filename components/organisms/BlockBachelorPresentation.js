@@ -1,5 +1,5 @@
 import SubTitle from "../atoms/SubTitle"
-import ExternalLink from "../molecules/ExternalLink"
+import InternalLink from "../molecules/InternalLink"
 
 export default function BlockBachelorPresentation() {
   return (
@@ -28,12 +28,8 @@ export default function BlockBachelorPresentation() {
               RNCP par décision de France Compétences du 23 mai 2019
             </p>
           </div>
-          <div className="py-4">
-            <ExternalLink
-              title="Fiche officielle"
-              url="https://www.francecompetences.fr/recherche/rncp/34022/#ancre3"
-              arai="Blocs de compétences de la fiche officielle du RNCP"
-            />
+          <div className="flex justify-end">
+            <InternalLink label="Je me renseigne" id="releasetraining" />
           </div>
         </div>
         <div
