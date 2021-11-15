@@ -1,5 +1,5 @@
 import LittleTitle from "../atoms/LittleTitle"
-import List from "../atoms/List"
+import ListUl from "../atoms/ListUl"
 
 const modes = [
   "Travaux de groupe ou individuels",
@@ -13,11 +13,11 @@ export default function Eval() {
   return (
     <section className="py-2">
       <LittleTitle children="Les modalités d'évaluation" />
-      <List>
+      <ListUl>
         {modes.map((mode, index) => (
           <li key={index}>{mode}</li>
         ))}
-      </List>
+      </ListUl>
     </section>
   )
 }

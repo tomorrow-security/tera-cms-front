@@ -67,7 +67,7 @@ export default function Form({ mutation, onSubmit }) {
                 </div>
                 {errors.email ? (
                   <div className="text-center text-tc-red">
-                    Vous devez donner votre email pour continuer
+                    Vous devez renseigner votre email pour continuer
                   </div>
                 ) : null}
               </div>
@@ -92,7 +92,7 @@ export default function Form({ mutation, onSubmit }) {
                 </div>
                 {errors.lastName ? (
                   <div className="text-center text-tc-red">
-                    Vous devez donner votre nom pour continuer
+                    Vous devez renseigner votre nom pour continuer
                   </div>
                 ) : null}
               </div>
@@ -115,7 +115,7 @@ export default function Form({ mutation, onSubmit }) {
                 </div>
                 {errors.firstName ? (
                   <div className="text-center text-tc-red">
-                    Vous devez donner votre prénom pour continuer
+                    Vous devez renseigner votre prénom pour continuer
                   </div>
                 ) : null}
               </div>
@@ -143,7 +143,8 @@ export default function Form({ mutation, onSubmit }) {
                   </div>
                   {errors.phone ? (
                     <div className="text-center text-tc-red">
-                      Vous devez donner votre numéro de téléphone pour continuer
+                      Vous devez renseigner votre numéro de téléphone pour
+                      continuer
                     </div>
                   ) : null}
                 </div>
