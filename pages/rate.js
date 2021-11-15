@@ -55,20 +55,15 @@ export default function Bivouacs() {
                 Le reste à charge sera donc de 0 euro.
               </ParagrapheXl>
               <Paragraphe>
-                Tu seras en plus <Strong>rémunéré(e) mensuellement</Strong> pour
-                ton travail et en fonction de ta situation
+                Vous serez en plus <Strong>rémunéré mensuellement</Strong> pour
+                votre travail et en fonction de votre situation
               </Paragraphe>
               <Paragraphe>
-                Le choix du télé-présentiel, couplé au financement de ta
-                formation par l'entreprise, te permettra donc d'entamer ta
+                Le choix du télé-présentiel, couplé au financement de votre
+                formation par l'entreprise, vous permettra donc d'entamer votre
                 carrière sereinement, et <Strong>sans aucune dettes</Strong> !
               </Paragraphe>
             </div>
-            <ExternalLink
-              title="L'alternance"
-              url="https://www.alternance.emploi.gouv.fr/accueil"
-              aria="lien vers le site gouvernemental de l'alternance"
-            />
           </div>
         </section>
       </main>
