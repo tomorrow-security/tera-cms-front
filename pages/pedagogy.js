@@ -30,8 +30,8 @@ export default function Bivouacs() {
               entreprises et adapte une pédagogie en mode « projet ».
             </Paragraphe>
           </div>
-          <BlockApproach />
           <BlockMethod />
+          <BlockApproach />
         </section>
       </main>
     </>
