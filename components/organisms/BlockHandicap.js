@@ -52,7 +52,7 @@ export default function BlockHandicap() {
             &nbsp;en expliquant votre situation
           </li>
           <li>
-            Notre référent reviendra vers-vous par téléphone ou par mail pour
+            Notre référent reviendra vers vous par téléphone ou par mail pour
             fixer un rendez-vous afin d’étudier en détail vos possibilités
             d’intégration
           </li>
