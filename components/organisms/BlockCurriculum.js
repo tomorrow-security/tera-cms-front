@@ -3,7 +3,7 @@ import React from "react"
 import PageLink from "../atoms/PageLink"
 import LittleTitle from "../atoms/LittleTitle"
 import SubTitle from "../atoms/SubTitle"
-import List from "../atoms/List"
+import ListUl from "../atoms/ListUl"
 import CardList from "../atoms/CardList"
 import ParagrapheXl from "../atoms/ParagrapheXl"
 
@@ -112,7 +112,7 @@ export default function BlockCurriculum() {
           </div>
           <div className="my-6">
             <LittleTitle children="Cursus 1&2 année :" />
-            <List>
+            <ListUl>
               <li>
                 Des cours en télé-présentiel du lundi au vendredi avec des
                 professionnels de l’Informatique
@@ -132,7 +132,7 @@ export default function BlockCurriculum() {
                 permettront à préparer votre intégration en entreprise dès la 3
                 <sup>ème</sup> année.
               </li>
-            </List>
+            </ListUl>
           </div>
           <div className="w-11/12 mx-auto md:mx-0 md:flex md:flex-nowrap md:justify-center md:items-strech">
             {initialYears.map((initialYear, index) => (
@@ -145,7 +145,7 @@ export default function BlockCurriculum() {
           </div>
           <div className="my-6">
             <LittleTitle children="Cursus à partir de la 3ème année :" />
-            <List>
+            <ListUl>
               <li>
                 Des cours en télé-présentiel tous les vendredis avec des
                 professionnels de l’Informatique
@@ -167,7 +167,7 @@ export default function BlockCurriculum() {
                 rapidement en entreprise mais également d’être plus compétitif
                 sur le marché du travail après votre formation Tera Campus.
               </li>
-            </List>
+            </ListUl>
           </div>
           <div className="w-11/12 mx-auto md:mx-0 md:flex md:flex-nowrap md:justify-center md:items-strech">
             {releaseYears.map((releaseYear, index) => (
