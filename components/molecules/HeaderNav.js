@@ -3,7 +3,7 @@ import HeaderSubNav from "./HeaderSubNav"
 
 // TODO rassembler les datas communes au header et au plan
 const ecole = [
-  { id: "description", label: "Tera campus c'est quoi ?" },
+  { id: "description", label: "A propos de Tera Campus" },
   { id: "pedagogy", label: "Notre pédagogie" },
   { id: "bivouacs", label: "Bivouac" },
   { id: "handicap", label: "Etudier en situation de handicap" },
