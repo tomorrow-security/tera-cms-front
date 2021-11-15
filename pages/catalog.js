@@ -37,8 +37,8 @@ export default function Catalog() {
           />
           <div className="mx-4">
             <p className="my-8 text-center ">
-              Veuillez Remplir le formulaire suivant pour recevoir la brochure
-              de Tera Campus par e-mail s'il vous plaît.
+              Veuillez Remplir le formulaire suivant pour obtenir la brochure de
+              Tera Campus.
             </p>
             <div className="xl:my-12">
               <Form
