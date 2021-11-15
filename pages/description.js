@@ -2,8 +2,7 @@ import Head from "next/head"
 
 import BlockTitle from "../components/organisms/BlockTitle"
 import Paragraphe from "../components/atoms/Paragraphe"
-import List from "../components/atoms/List"
-import PageLink from "../components/atoms/PageLink"
+import ListUl from "../components/atoms/ListUl"
 import BlockGuides from "../components/organisms/BlockGuides"
 import InternalLink from "../components/molecules/InternalLink"
 
@@ -51,7 +50,7 @@ export default function description() {
               aux étudiants un parcours toujours plus adapté et
               professionnalisant.
             </Paragraphe>
-            <List>
+            <ListUl>
               <li>
                 Tera Campus :&nbsp;
                 <span className="text-lg font-medium">
@@ -66,7 +65,7 @@ export default function description() {
                 Tera Campus travaille uniquement avec des outils digitaux, et
                 tous les supports de formation sont numériques.
               </li>
-            </List>
+            </ListUl>
           </div>
           <BlockGuides />
           <InternalLink id="program" label="Découvrez nos formations" />
