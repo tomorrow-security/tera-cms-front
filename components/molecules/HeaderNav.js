@@ -7,6 +7,7 @@ const ecole = [
   { id: "pedagogy", label: "Notre pédagogie" },
   { id: "bivouacs", label: "Bivouac" },
   { id: "handicap", label: "Etudier en situation de handicap" },
+  { id: "rate", label: "Tarifs" },
   { id: "faq", label: "FAQ" },
 ]
 

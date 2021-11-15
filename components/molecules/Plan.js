@@ -8,6 +8,7 @@ const ecole = [
   { id: "pedagogy", label: "Notre pédagogie" },
   { id: "bivouacs", label: "Bivouac" },
   { id: "handicap", label: "Etudier en situation de handicap" },
+  { id: "rate", label: "Tarifs" },
   { id: "faq", label: "FAQ" },
 ]
 const program = [
@@ -24,7 +25,6 @@ const legal = [
   { id: "legal", label: "Mentions légales" },
   { id: "studyrules", label: "Règlement des études" },
   { id: "privacy", label: "Politique de confidentialité" },
-  { id: "rate", label: "Tarifs" },
 ]
 
 const autre = [
