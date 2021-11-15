@@ -1,6 +1,5 @@
 import LitleTile from "../atoms/LittleTitle"
 import Paragraphe from "../atoms/Paragraphe"
-import Cta from "../atoms/Cta"
 import StartOfTheSchool from "../molecules/StartOfTheSchool"
 import CtaBand from "../molecules/CtaBand"
 
