@@ -62,16 +62,16 @@ export default function Privacy() {
               suivants :
             </Paragraphe>
             <ListOl>
-              <li>
-                <Strong>Identité du responsable du traitement</Strong>
+              <li className="text-2xl md:text-3xl">
+                Identité du responsable du traitement
                 <Paragraphe>
                   Le responsable du traitement des données est la société
                   Tomorrow Security, vous pouvez retrouver ses informations de
                   contact dans les mentions légales.
                 </Paragraphe>
               </li>
-              <li>
-                <Strong>Finalités du traitement</Strong>
+              <li className="text-2xl md:text-3xl">
+                Finalités du traitement
                 <Paragraphe>
                   Tomorrow Security est susceptible de traiter vos informations
                   personnelles aux fins de vous fournir les informations ou les
@@ -81,8 +81,8 @@ export default function Privacy() {
                   formations Tera Campus).
                 </Paragraphe>
               </li>
-              <li>
-                <Strong>Durée de conservation</Strong>
+              <li className="text-2xl md:text-3xl">
+                Durée de conservation
                 <Paragraphe>
                   Les données personnelles que nous collectons et traitons ne
                   sont conservées que pour la durée strictement nécessaire au
@@ -93,8 +93,8 @@ export default function Privacy() {
                   conservées pour une durée maximum de 6 mois.
                 </Paragraphe>
               </li>
-              <li>
-                <Strong>Accès et modification de vos données</Strong>
+              <li className="text-2xl md:text-3xl">
+                Accès et modification de vos données
                 <Paragraphe>
                   Vous pouvez nous faire une demande par mail à
                   <a
@@ -113,19 +113,17 @@ export default function Privacy() {
                   réception de votre demande.
                 </Paragraphe>
               </li>
-              <li>
-                <Strong>
-                  Prestataires utilisés dans le cadre de la collecte de vos
-                  données
-                </Strong>
+              <li className="text-2xl md:text-3xl">
+                Prestataires utilisés dans le cadre de la collecte de vos
+                données
                 <Paragraphe>
                   Tomorrow Security ne s&apos;appuie sur aucun prestataire pour
                   le traitement de vos données personnelles, à l&apos;exception
                   de l&apos;hébergeur spécifié dans les mentions légales.
                 </Paragraphe>
               </li>
-              <li>
-                <Strong>Cookies</Strong>
+              <li className="text-2xl md:text-3xl">
+                Cookies
                 <Paragraphe>
                   Tera Campus n&apos;utilise pas de cookies.
                 </Paragraphe>
