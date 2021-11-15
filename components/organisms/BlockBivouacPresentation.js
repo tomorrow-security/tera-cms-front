@@ -1,4 +1,3 @@
-import SubTitle from "../atoms/SubTitle"
 import ParagrapheXl from "../atoms/ParagrapheXl"
 import Paragraphe from "../atoms/Paragraphe"
 import Bullet from "../atoms/Bullet"
@@ -8,10 +7,6 @@ import Cta from "../atoms/Cta"
 export default function BlockBivouacPresentation() {
   return (
     <section id="bivouacpresentation" className="py-5">
-      <SubTitle
-        title="Présentation des bivouacs"
-        iconPicture={{ backgroundImage: "url('feu-de-camp.png')" }}
-      />
       <div className="flex flex-col lg:flex-row">
         <div
           className="w-full h-64 bg-center bg-cover lg:w-1/2 lg:h-auto"
