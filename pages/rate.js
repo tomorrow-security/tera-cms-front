@@ -34,17 +34,13 @@ export default function Bivouacs() {
               title="Formation initiale & alternance"
               iconPicture={{ backgroundImage: "url('dossier.png')" }}
             />
-            <div className="md:w-1/4 md:border md:border-tc-blue md:rounded md:px-6 md:pb-6 md:mx-auto md:my-6">
-              <div className="font-semibold">
-                <Bullet>Aucun frais à prévoir pour :</Bullet>
-              </div>
-              <div className="ml-12 md:ml-8">
-                <List>
-                  <li>le test de positionnement</li>
-                  <li>le test de positionnement</li>
-                  <li>les frais de dossier</li>
-                </List>
-              </div>
+            <LitleTitle>Aucun frais à prévoir pour :</LitleTitle>
+            <div className="ml-12 md:ml-8">
+              <List>
+                <li>le test de positionnement</li>
+                <li>le test de positionnement</li>
+                <li>les frais de dossier</li>
+              </List>
             </div>
             {/* //TODO en attentes des tarifs exacts */}
             {/* <LitleTitle>Frais de Scolarité 1 & 2 années</LitleTitle> */}
