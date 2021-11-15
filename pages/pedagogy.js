@@ -17,20 +17,22 @@ export default function Bivouacs() {
         <meta property="og:description" content={pageDescription} />
       </Head>
 
-      <main>
-        <BlockTitle
-          title="Notre pedagogie"
-          iconPicture={{ backgroundImage: "url('montagnard.png')" }}
-        />
-        <div className="mx-4 md:container md:mx-auto">
-          <Paragraphe>
-            À travers une pédagogie active, et innovante Tera Campus confronte
-            ses étudiants aux problématiques réelles rencontrées dans les
-            entreprises et adapte une pédagogie en mode « projet ».
-          </Paragraphe>
-        </div>
-        <BlockApproach />
-        <BlockMethod />
+      <main className="md:container md:mx-auto">
+        <section className="py-10">
+          <BlockTitle
+            title="Notre pedagogie"
+            iconPicture={{ backgroundImage: "url('montagnard.png')" }}
+          />
+          <div className="mx-4">
+            <Paragraphe>
+              À travers une pédagogie active, et innovante Tera Campus confronte
+              ses étudiants aux problématiques réelles rencontrées dans les
+              entreprises et adapte une pédagogie en mode « projet ».
+            </Paragraphe>
+          </div>
+          <BlockApproach />
+          <BlockMethod />
+        </section>
       </main>
     </>
   )

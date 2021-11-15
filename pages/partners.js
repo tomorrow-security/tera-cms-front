@@ -16,12 +16,14 @@ export default function partners() {
         <meta property="og:description" content={pageDescription} />
       </Head>
 
-      <main>
-        <BlockTitle
-          title="Nos partenaires"
-          iconPicture={{ backgroundImage: "url('partenairs.png')" }}
-        />
-        <BlockPartners />
+      <main className="md:container md:mx-auto">
+        <section className="py-10">
+          <BlockTitle
+            title="Nos partenaires"
+            iconPicture={{ backgroundImage: "url('partenairs.png')" }}
+          />
+          <BlockPartners />
+        </section>
       </main>
     </>
   )

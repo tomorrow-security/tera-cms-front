@@ -18,8 +18,8 @@ export default function Bivouacs() {
         <meta property="og:description" content={pageDescription} />
       </Head>
 
-      <main>
-        <section className="py-5">
+      <main className="md:container md:mx-auto">
+        <section className="py-10">
           <BlockTitle
             title="Bivouacs"
             iconPicture={{ backgroundImage: "url('bivouac.png')" }}

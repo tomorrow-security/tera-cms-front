@@ -16,12 +16,14 @@ export default function Handicap() {
         <meta property="og:description" content={pageDescription} />
       </Head>
 
-      <main>
-        <BlockTitle
-          title="Etudier en situation de handicap chez Tera Campus"
-          iconPicture={{ backgroundImage: "url('handicap.png')" }}
-        />
-        <BlockHandicap />
+      <main className="md:container md:mx-auto">
+        <section className="py-10">
+          <BlockTitle
+            title="Etudier en situation de handicap chez Tera Campus"
+            iconPicture={{ backgroundImage: "url('handicap.png')" }}
+          />
+          <BlockHandicap />
+        </section>
       </main>
     </>
   )

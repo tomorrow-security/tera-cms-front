@@ -1,5 +1,5 @@
 import axios from "axios"
-import { useEffect } from "react"
+import { useState, useEffect } from "react"
 import { useForm } from "react-hook-form"
 import { useMutation } from "react-query"
 
@@ -330,13 +330,11 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
               {/* //TODO rendre l'errors fonctionnel */}
               <div className="relative group">
                 <label
-                  // TODO pb de couleur
                   htmlFor="document"
-                  // className="absolute p-4 border rounded cursor-pointer bg-tc-blue-xlight border-tc-blue group-hover:border-2"
                   className={`absolute p-4 border rounded cursor-pointer group-hover:border-4 ${
                     errors.document
-                      ? "border-tc-red bg-tc-red-xlight"
-                      : "border-tc-blue bg-tc-blue-xlight"
+                      ? "border-tc-red bg-tc-red bg-opacity-20"
+                      : "border-tc-blue bg-tc-blue bg-opacity-20"
                   }`}
                 >
                   {identityValue}
@@ -360,11 +358,10 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
               <div className="relative group">
                 <label
                   htmlFor="resume"
-                  // className="absolute p-4 border rounded cursor-pointer bg-tc-blue-xlight border-tc-blue group-hover:border-2"
                   className={`absolute p-4 border rounded cursor-pointer group-hover:border-4 ${
                     errors.resume
-                      ? "border-tc-red bg-tc-red-xlight"
-                      : "border-tc-blue bg-tc-blue-xlight"
+                      ? "border-tc-red bg-tc-red bg-opacity-20"
+                      : "border-tc-blue bg-tc-blue bg-opacity-20"
                   }`}
                 >
                   {resumeValue}

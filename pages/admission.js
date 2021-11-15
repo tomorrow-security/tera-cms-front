@@ -18,12 +18,14 @@ export default function admission() {
         <meta property="og:description" content={pageDescription} />
       </Head>
 
-      <main>
-        <BlockTitle
-          title="Admission"
-          iconPicture={{ backgroundImage: "url('tente-welcome.png')" }}
-        />
-        <BlockAdmission />
+      <main className="md:container md:mx-auto">
+        <section className="py-10">
+          <BlockTitle
+            title="Admission"
+            iconPicture={{ backgroundImage: "url('tente-welcome.png')" }}
+          />
+          <BlockAdmission />
+        </section>
       </main>
     </>
   )

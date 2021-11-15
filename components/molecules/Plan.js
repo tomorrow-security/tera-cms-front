@@ -1,7 +1,7 @@
 import SubTitle from "../atoms/SubTitle"
-import NavList from "../molecules/NavList"
+import NavList from "./NavList"
 import PlanLink from "../atoms/PlanLink"
-import SocialNav from "../molecules/SocialNav"
+import SocialNav from "./SocialNav"
 
 const ecole = [
   { id: "description", label: "Tera campus c'est quoi ?" },
@@ -33,15 +33,15 @@ const autre = [
   { id: "contact", label: "contact" },
 ]
 
-export default function BlockPlan({ id, label }) {
+export default function Plan({ id, label }) {
   return (
-    <section id="plan" className="py-2">
-      <div className="md:container md:mx-auto">
+    <section id="plan" className="py-3">
+      <div className="mx-4">
         <SubTitle
           title="Plan du site"
           iconPicture={{ backgroundImage: "url('plan-blue.png')" }}
         />
-        <div className="mx-4 md:relative">
+        <div className="md:relative">
           <div className="flex flex-col mt-2 mb-4 space-y-8 text-sm md:mt-6 md:space-x-2 md:space-y-0 md:flex-row md:flex-wrap md:justify-around">
             <div className="md:w-1/5">
               <NavList
@@ -87,7 +87,7 @@ export default function BlockPlan({ id, label }) {
           </div>
         </div>
         <div className="mx-4 mt-12 lg:mt-20 md:flex md:justify-between md:items-center">
-          <p className="px-4 mx-auto my-4 text-lg border rounded md:mx-0 border-tc-red text-tc-red">
+          <p className="px-4 mx-auto my-4 text-lg text-center border rounded md:mx-0 border-tc-red text-tc-red">
             Suivez-nous
           </p>
           <div className="flex-grow">

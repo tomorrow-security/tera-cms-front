@@ -1,4 +1,4 @@
-export default function ExternalLink2({ title, url, aria }) {
+export default function ExternalLink({ title, url, aria }) {
   return (
     <div className="flex justify-center my-4">
       {/* 

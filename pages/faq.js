@@ -50,12 +50,14 @@ export default function faq({ questions }) {
         <meta property="og:description" content={pageDescription} />
       </Head>
 
-      <main>
-        <BlockTitle
-          title="FAQ"
-          iconPicture={{ backgroundImage: "url('faq.png')" }}
-        />
-        <BlockFAQ questions={questions} />
+      <main className="md:container md:mx-auto">
+        <section className="py-10">
+          <BlockTitle
+            title="FAQ"
+            iconPicture={{ backgroundImage: "url('faq.png')" }}
+          />
+          <BlockFAQ questions={questions} />
+        </section>
       </main>
     </>
   )

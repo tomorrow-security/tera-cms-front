@@ -63,7 +63,7 @@ const syllabusTC3 = [
 
 export default function Program({}) {
   return (
-    <section className="mx-4">
+    <section className="py-3">
       <LittleTitle children="Programme détaillé :" />
       <ul className="p-4 space-y-2 divide-y rounded shadow md:grid md:grid-cols-3 md:space-y-0 md:divide-y-0 md:divide-x divide-tc-red md:space-x-2">
         {syllabusTC3.map((domain, index) => (
@@ -105,7 +105,7 @@ export default function Program({}) {
           </div>
         ))}
       </ul>
-      <div className="flex justify-between">
+      <div className="md:flex md:justify-between">
         <p className="text-sm italic">
           La validation peut s’acquérir par bloc de compétences.
         </p>

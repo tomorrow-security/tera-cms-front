@@ -68,28 +68,26 @@ const Step = ({ description, image, icon, stage }) => {
 export default function BlockRegistration() {
   return (
     <section id="registration" className="py-5">
-      <div className="md:container md:mx-auto">
+      <div className="mx-4">
         <SubTitle
           title="&Eacute;tapes d'inscription"
           iconPicture={{ backgroundImage: "url('computer-graduate.png')" }}
         />
-        <div>
-          <div className="my-4 divide-y divide-dashed divide-tc-red md:divide-y-0 md:flex md:flex-row md:justify-evenly md:my-8">
-            {steps.map((step, index) => (
-              <Step
-                key={index}
-                description={step.description}
-                icon={step.icon}
-                image={step.backgroundImage}
-                stage={step.stage}
-              />
-            ))}
-          </div>
-          <p className="m-2 text-sm italic md:text-right">
-            Temps de la procédure d'inscription : 1 semaine
-          </p>
-        </div>
       </div>
+      <div className="my-4 divide-y divide-dashed divide-tc-red md:divide-y-0 md:flex md:flex-row md:justify-evenly md:my-8">
+        {steps.map((step, index) => (
+          <Step
+            key={index}
+            description={step.description}
+            icon={step.icon}
+            image={step.backgroundImage}
+            stage={step.stage}
+          />
+        ))}
+      </div>
+      {/* <p className="m-2 text-sm italic md:text-right">
+        Temps de la procédure d'inscription : 1 semaine
+      </p> */}
     </section>
   )
 }

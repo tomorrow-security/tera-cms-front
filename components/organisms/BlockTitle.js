@@ -11,7 +11,7 @@ export default function BlockTitle({ title, iconPicture }) {
   return (
     <div className={`${titleBorderStyle} ${titleBlock}`}>
       <div style={iconPicture} className={`${iconLayoutStyle}`}></div>
-      <h2 className={`${titleLayoutStyle} ${titleTextStyle}`}>{title}</h2>
+      <h1 className={`${titleLayoutStyle} ${titleTextStyle}`}>{title}</h1>
     </div>
   )
 }
