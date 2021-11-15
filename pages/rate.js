@@ -4,7 +4,7 @@ import BlockTitle from "../components/organisms/BlockTitle"
 import SubTitle from "../components/atoms/SubTitle"
 import LitleTitle from "../components/atoms/LittleTitle"
 import Bullet from "../components/atoms/Bullet"
-import List from "../components/atoms/List"
+import ListUl from "../components/atoms/ListUl"
 import Paragraphe from "../components/atoms/Paragraphe"
 import ParagrapheXl from "../components/atoms/ParagrapheXl"
 import Strong from "../components/atoms/Strong"
@@ -36,11 +36,11 @@ export default function Bivouacs() {
             />
             <LitleTitle>Aucun frais à prévoir pour :</LitleTitle>
             <div className="ml-12 md:ml-8">
-              <List>
+              <ListUl>
                 <li>le test de positionnement</li>
                 <li>le test de positionnement</li>
                 <li>les frais de dossier</li>
-              </List>
+              </ListUl>
             </div>
             {/* //TODO en attentes des tarifs exacts */}
             {/* <LitleTitle>Frais de Scolarité 1 & 2 années</LitleTitle> */}
