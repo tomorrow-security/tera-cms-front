@@ -36,7 +36,7 @@ export default function Bivouacs() {
               </div>
               <div className="my-6">
                 {/* // TODO changement pour choix des couleur et weight du CTA */}
-                <Cta title="Télécharger la brochure" id="/catalog" />
+                <Cta red title="Télécharger la brochure" id="/catalog" />
               </div>
             </div>
           </div>

@@ -31,8 +31,8 @@ export default function BlockBivouacPresentation() {
             à l'avance, et ils sont entièrement financés par l'école.
           </Paragraphe>
           <i>*frais inclus dans le prix de la formation</i>
-          <div className="m-4 mx-auto border-2 rounded w-max border-tc-blue">
-            <Cta title="Candidature" id="/enrolment" />
+          <div className="flex justify-center my-4">
+            <Cta red title="Candidature" id="/enrolment" />
           </div>
         </div>
       </div>
