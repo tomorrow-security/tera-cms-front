@@ -43,6 +43,7 @@ export default function BlockContract() {
             collectifs préalables.
           </Paragraphe>
           <ExternalLink
+            whiteR
             title="Le contrat d'apprentissage"
             url="https://travail-emploi.gouv.fr/formation-professionnelle/formation-en-alternance-10751/apprentissage/contrat-apprentissage"
             aria="lien vers le site gouvernemental travail emploi"
@@ -68,6 +69,7 @@ export default function BlockContract() {
             </ul>
           </Paragraphe>
           <ExternalLink
+            whiteR
             title="Le contrat de professionnalisation"
             url="https://travail-emploi.gouv.fr/formation-professionnelle/formation-en-alternance-10751/contrat-de-professionnalisation"
             aria="lien vers le site gouvernemental travail emploi"
@@ -84,6 +86,7 @@ export default function BlockContract() {
             </div>
             <div className="flex items-center justify-center">
               <ExternalLink
+                red
                 title="En savoir plus"
                 url="https://www.mesdroitssociaux.gouv.fr/accueil/"
                 aria="lien vers le site gouvernemental des droits sociaux"

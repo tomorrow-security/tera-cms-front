@@ -24,6 +24,7 @@ export default function BlockConcept() {
         </div>
         <div className="pb-1 mx-auto md:pb-0 md:mr-32 w-max">
           <InternalLink
+            whiteR
             label="Je me renseigne"
             id="releasetraining"
             background="white"

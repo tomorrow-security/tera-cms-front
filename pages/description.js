@@ -68,7 +68,7 @@ export default function description() {
             </ListUl>
           </div>
           <BlockGuides />
-          <InternalLink id="program" label="Découvrez nos formations" />
+          <InternalLink blue id="program" label="Découvrez nos formations" />
         </section>
       </main>
     </>
