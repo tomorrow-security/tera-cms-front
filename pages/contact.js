@@ -67,7 +67,7 @@ export default function Contact() {
                 onSubmit={handleSubmit(onSubmit)}
               >
                 <label className="block">
-                  <span>Ton adresse e-mail :</span>
+                  <span>Votre adresse e-mail :</span>
                   <input
                     type="email"
                     placeholder="thomas.anderson@tera-campus.com"
@@ -78,14 +78,14 @@ export default function Contact() {
                   />
                   {errors.email && (
                     <span className="text-tc-red">
-                      Nous avons besoin de ton adresse e-mail afin de pouvoir te
-                      répondre.
+                      Nous avons besoin de votre adresse e-mail afin de pouvoir
+                      vous répondre.
                     </span>
                   )}
                   <span className="text-tc-red">{errors?.email?.message}</span>
                 </label>
                 <label className="block">
-                  <span>Ton message :</span>
+                  <span>Votre message :</span>
                   <textarea
                     placeholder="message"
                     className={`block mt-1 w-full p-2 border ${
@@ -96,7 +96,7 @@ export default function Contact() {
                   />
                   {errors.message && (
                     <span className="text-tc-red">
-                      As-tu oublié ce que tu souhaites nous dire ?
+                      Avez-vous oublié ce que vous souhaitiez nous dire ?
                     </span>
                   )}
                 </label>
