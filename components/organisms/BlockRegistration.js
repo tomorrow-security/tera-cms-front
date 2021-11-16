@@ -4,6 +4,7 @@ import IconPlacementTest from "../atoms/IconPlacementTest"
 import IconMagnifyingGlass from "../atoms/IconMagnifyingGlass"
 import IconHandShake from "../atoms/IconHandShake"
 import SubTitle from "../atoms/SubTitle"
+import Paragraphe from "../atoms/Paragraphe"
 
 const steps = [
   {
@@ -14,7 +15,7 @@ const steps = [
   },
   {
     description:
-      "Test de positionnement (valide 1 semaine après l'inscription, prévoir minimum 1H, résultats disponibles à la fin du test)",
+      "Test de positionnement (valide 1 semaine après l'envoi de la candidature, prévoir minimum 1H, résultats disponibles à la fin du test)",
     backgroundImage: "etape2.png",
     icon: <IconPhonebook />,
     stage: 2,
@@ -85,9 +86,7 @@ export default function BlockRegistration() {
           />
         ))}
       </div>
-      {/* <p className="m-2 text-sm italic md:text-right">
-        Temps de la procédure d'inscription : 1 semaine
-      </p> */}
+      <Paragraphe>Temps de traitement : 2 semaines</Paragraphe>
     </section>
   )
 }

@@ -44,6 +44,7 @@ export default function BlockAdmission() {
               ))}
             </ol>
           </Paragraphe>
+          <Paragraphe>Temps de traitement : 2 semaines</Paragraphe>
         </div>
       </div>
       <CtaBand />
