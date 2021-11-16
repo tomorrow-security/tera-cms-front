@@ -29,11 +29,11 @@ export default function BlockAdmission() {
             connexion à Internet
           </Paragraphe>
         </div>
-        <div className="p-2 text-2xl text-center lg:text-4xl md:text-3xl">
-          <p>Vous pouvez candidater gratuitement dès maintenant</p>
-          <p className="text-lg lg:text-2xl md:text-xl">
-            (hors procédure Parcoursup)
-          </p>
+        <div className="p-2 text-center">
+          <Paragraphe xl>
+            Vous pouvez candidater gratuitement dès maintenant
+          </Paragraphe>
+          <Paragraphe xl>(hors procédure Parcoursup)</Paragraphe>
         </div>
         <div className="py-2">
           <LitleTile children="Procédure d'inscription" />

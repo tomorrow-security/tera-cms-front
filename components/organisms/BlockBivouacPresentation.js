@@ -1,4 +1,3 @@
-import ParagrapheXl from "../atoms/ParagrapheXl"
 import Paragraphe from "../atoms/Paragraphe"
 import Bullet from "../atoms/Bullet"
 import ListUl from "../atoms/ListUl"
@@ -13,9 +12,9 @@ export default function BlockBivouacPresentation() {
           style={{ backgroundImage: "url('etudiants-ardeche.jpg')" }}
         ></div>
         <div className="mx-4 lg:pl-4 lg:w-1/2">
-          <ParagrapheXl>
+          <Paragraphe lg>
             6 semaines en présentiel grâce aux 3 Bivouacs dans l'année!*
-          </ParagrapheXl>
+          </Paragraphe>
           <Paragraphe>
             Avec Tera Campus vous partirez en aventure au moins d'octobre, au
             mois de février et au mois de mai.

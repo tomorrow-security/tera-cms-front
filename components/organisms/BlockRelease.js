@@ -1,6 +1,5 @@
 import LittleTitle from "../atoms/LittleTitle"
 import Paragraphe from "../atoms/Paragraphe"
-import ParagrapheXl from "../atoms/ParagrapheXl"
 import Strong from "../atoms/Strong"
 import ExternalLink from "../molecules/ExternalLink"
 
@@ -88,7 +87,7 @@ export default function BlockRelease() {
                 contrat de professionnalisation.
               </Paragraphe>
             </div>
-            <ParagrapheXl>
+            <Paragraphe lg>
               <div className="md:flex md:items-center md:justify-center">
                 <p>
                   Connaissez-vous le plan{" "}
@@ -103,7 +102,7 @@ export default function BlockRelease() {
                   aria="lien vers le site gouvernemental 1jeune1solution"
                 />
               </div>
-            </ParagrapheXl>
+            </Paragraphe>
           </div>
         </div>
       </section>

@@ -1,7 +1,6 @@
 import SubTitle from "../atoms/SubTitle"
 import LittleTitle from "../atoms/LittleTitle"
 import Paragraphe from "../atoms/Paragraphe"
-import ParagrapheXl from "../atoms/ParagrapheXl"
 import ExternalLink from "../molecules/ExternalLink"
 
 const publics = [
@@ -79,10 +78,10 @@ export default function BlockContract() {
           <LittleTitle children="Aides spécifiques" />
           <div className=" md:flex md:justify-between">
             <div className="w-5/6 mx-auto md:w-3/4">
-              <ParagrapheXl>
+              <Paragraphe lg>
                 Des aides spécifiques peuvent également être attribuées aux
                 alternants... (APL, l’aide “Mobili jeune”)
-              </ParagrapheXl>
+              </Paragraphe>
             </div>
             <div className="flex items-center justify-center">
               <ExternalLink

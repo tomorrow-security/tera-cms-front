@@ -2,7 +2,6 @@ import LittleTitle from "../atoms/LittleTitle"
 import Strong from "../atoms/Strong"
 import Paragraphe from "../atoms/Paragraphe"
 import SubTitle from "../atoms/SubTitle"
-import ParagrapheXl from "../atoms/ParagrapheXl"
 import InternalLink from "../molecules/InternalLink"
 
 export default function BlockConcept() {
@@ -12,24 +11,22 @@ export default function BlockConcept() {
         title="Future Of Learning"
         iconPicture={{ backgroundImage: "url('book-and-world.png')" }}
       />
-      <div className="px-4 mb-4 bg-tc-blue bg-opacity-20 md:rounded md:flex md:justify-between md:items-center">
+      <div className="flex flex-col items-center p-4 mb-4 bg-tc-blue bg-opacity-20 lg:rounded lg:flex-row justify-evenly">
         <div>
           <div className="font-bold">
             <Paragraphe>Alternance pour qui ? Pourquoi ?</Paragraphe>
           </div>
-          <ParagrapheXl>
+          <Paragraphe xl>
             &#x000C9;tudier gratuitement et avoir un statut de salarié c'est
             possible !
-          </ParagrapheXl>
+          </Paragraphe>
         </div>
-        <div className="pb-1 mx-auto md:pb-0 md:mr-32 w-max">
-          <InternalLink
-            whiteR
-            label="Je me renseigne"
-            id="releasetraining"
-            background="white"
-          />
-        </div>
+        <InternalLink
+          whiteR
+          label="Je me renseigne"
+          id="releasetraining"
+          background="white"
+        />
       </div>
       <div className="flex flex-col lg:flex-row">
         <ul className="mx-4 lg:w-3/4">
