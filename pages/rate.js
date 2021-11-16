@@ -52,13 +52,14 @@ export default function Bivouacs() {
               </Paragraphe>
               <Paragraphe lg>Le reste à charge sera donc de 0 euro.</Paragraphe>
               <Paragraphe>
-                Vous serez en plus <Strong>rémunéré mensuellement</Strong> pour
-                votre travail et en fonction de votre situation
+                Vous serez en plus <Strong red>rémunéré mensuellement</Strong>{" "}
+                pour votre travail et en fonction de votre situation
               </Paragraphe>
               <Paragraphe>
                 Le choix du télé-présentiel, couplé au financement de votre
                 formation par l'entreprise, vous permettra donc d'entamer votre
-                carrière sereinement, et <Strong>sans aucune dettes</Strong> !
+                carrière sereinement, et <Strong red>sans aucune dettes</Strong>{" "}
+                !
               </Paragraphe>
             </div>
             <CtaBand />

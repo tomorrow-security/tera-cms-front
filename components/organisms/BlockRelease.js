@@ -34,7 +34,7 @@ export default function BlockRelease() {
             phase théorique qui alternent, permettant de se préparer plus
             efficacement à un métier.
             <div>
-              <Strong>
+              <Strong red>
                 Étudier gratuitement tout en étant salarié : la vraie force de
                 l’alternance !
               </Strong>
@@ -79,10 +79,10 @@ export default function BlockRelease() {
             <div className="p-2 my-2 border border-opacity-50 rounded md:container md:mx-auto lg:text-lg 2xl:text-xl md:bg-tc-blue md:bg-opacity-25 border-tc-blue">
               <Paragraphe>
                 Dans cette démarche,&nbsp;
-                <em className="not-italic font-semibold">
+                <Strong>
                   notre école s’engage à aider tous ses étudiants dans leur
                   recherche d’entreprise
-                </em>
+                </Strong>
                 , et propose deux solutions : le contrat d'apprentissage et le
                 contrat de professionnalisation.
               </Paragraphe>

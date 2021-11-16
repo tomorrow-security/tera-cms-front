@@ -33,7 +33,7 @@ export default function BlockConcept() {
           <li>
             <LittleTitle>Tera Campus c'est quoi ?</LittleTitle>
             <Paragraphe>
-              <Strong>
+              <Strong red>
                 Tera Campus est une école Supérieure d'Informatique en
                 télé-présentiel,&nbsp;
               </Strong>
@@ -53,7 +53,7 @@ export default function BlockConcept() {
           <li>
             <LittleTitle>Comment étudier avec Tera Campus ?</LittleTitle>
             <Paragraphe>
-              <Strong>
+              <Strong red>
                 La formation chez Tera Campus s'adresse avant tout à des
                 personnes motivées.&nbsp;
               </Strong>
@@ -65,7 +65,7 @@ export default function BlockConcept() {
             <Paragraphe>
               Tout au long de l'année, Tera Campus organise trois Bivouacs de
               deux semaines complètes.&nbsp;
-              <Strong>
+              <Strong red>
                 En octobre, en janvier puis en mai, vous rejoindrez les autres
                 étudiants de Tera Campus pour partager, créer et construire un
                 esprit d'équipe au travers d'exercices de team building et de

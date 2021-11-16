@@ -130,7 +130,7 @@ export default function BlockCareer() {
           <div className="my-4">
             <Paragraphe>
               {isAVowel ? "L'" : "Le"}
-              <Strong>&nbsp;{jobs[activeJobIndex].name}&nbsp;</Strong>
+              <Strong red>&nbsp;{jobs[activeJobIndex].name}&nbsp;</Strong>
               {jobs[activeJobIndex].description}
             </Paragraphe>
             <Paragraphe className="my-4 font-bold">

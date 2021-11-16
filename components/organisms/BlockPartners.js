@@ -15,7 +15,7 @@ export default function BlockPartners() {
           A travers ses partenaires,&nbsp; Tera Campus veut vous donner
           l&apos;opportunité d&apos;apprendre de tous les acteurs du
           marché.&nbsp; Notre approche est conceptuelle :&nbsp;
-          <Strong>
+          <Strong red>
             nous ne nous focalisons pas sur des technologies
             spécifiques,&nbsp;mais formons nos étudiants à savoir s&apos;adapter
             à n&apos;importe laquelle.
