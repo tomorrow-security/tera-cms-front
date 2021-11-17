@@ -34,7 +34,6 @@ const socialNetworks = [
 ]
 
 export default function SocialNav() {
-// { color }
   return (
     <ul className="flex flex-row justify-around m-2 flex-nowrap justify-items-center">
       {socialNetworks.map((socialNetwork) => (
@@ -43,7 +42,6 @@ export default function SocialNav() {
             name={socialNetwork.label}
             url={socialNetwork.url}
             logo={socialNetwork.logo}
-            // color={color}
           />
         </li>
       ))}
