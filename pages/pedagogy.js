@@ -23,7 +23,7 @@ export default function Bivouacs() {
             title="Notre pedagogie"
             iconPicture={{ backgroundImage: "url('montagnard.png')" }}
           />
-          <div className="mx-4">
+          <div className="mx-4 text-center md:text-left">
             <Paragraphe>
               À travers une pédagogie active, et innovante Tera Campus confronte
               ses étudiants aux problématiques réelles rencontrées dans les
