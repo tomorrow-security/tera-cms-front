@@ -86,7 +86,9 @@ export default function BlockRegistration() {
           />
         ))}
       </div>
-      <Paragraphe>Temps de traitement : 2 semaines</Paragraphe>
+      <div className="mx-4">
+        <Paragraphe>Temps de traitement : 2 semaines</Paragraphe>
+      </div>
     </section>
   )
 }

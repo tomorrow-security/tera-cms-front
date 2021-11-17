@@ -21,21 +21,23 @@ const guides = [
 
 const Guide = ({ name, description, imageUrl, reverse }) => (
   <div
-    className={`flex ${
-      reverse ? "flex-row-reverse" : "flex-row"
-    } justify-center items-center lg:py-8`}
+    className={`md:flex ${
+      reverse ? "md:flex-row-reverse" : "md:flex-row"
+    } md:justify-center md:items-center lg:py-8 my-4`}
   >
-    <div className="rounded-full border-1 lg:border-2 borde-solid border-tc-blue">
+    <div className="border-2 rounded-full borde-solid border-tc-blue">
       <div className="border-2 border-solid rounded-full lg:border-4 border-tc-red">
         <img
-          className="border-opacity-50 border-solid rounded-full w-96 lg:w-auto lg:h-full border-1 lg:border-2 border-tc-blue"
+          className="border-2 border-opacity-50 border-solid rounded-full w-52 lg:w-auto lg:h-full border-tc-blue"
           src={imageUrl}
           alt="Guide figure"
           loading="lazy"
         />
       </div>
     </div>
-    <div className={` flex flex-col ${reverse ? "mr-8" : "ml-8"} lg:w-2/3`}>
+    <div
+      className={` flex flex-col ${reverse ? "md:mr-8" : "md:ml-8"} lg:w-2/3`}
+    >
       <div
         className={`text-center ${
           reverse ? "lg:text-right" : "lg:text-left"

@@ -6,15 +6,17 @@ import Cta from "../atoms/Cta"
 export default function BlockBivouacPresentation() {
   return (
     <section id="bivouacpresentation" className="py-5">
-      <div className="flex flex-col lg:flex-row">
-        <div
-          className="w-full h-64 bg-center bg-cover lg:w-1/2 lg:h-auto"
-          style={{ backgroundImage: "url('etudiants-ardeche.jpg')" }}
-        ></div>
-        <div className="mx-4 lg:pl-4 lg:w-1/2">
+      <div className="lg:grid lg:grid-rows-bivouac lg:grid-cols-bivouac">
+        <div className="mx-4 lg:col-start-2">
           <Paragraphe lg>
             6 semaines en présentiel grâce aux 3 Bivouacs dans l'année!*
           </Paragraphe>
+        </div>
+        <div
+          className="h-64 bg-center bg-cover lg:h-auto lg:row-span-3 lg:row-start-1"
+          style={{ backgroundImage: "url('etudiants-ardeche.jpg')" }}
+        ></div>
+        <div className="mx-4 lg:row-start-2 lg:col-start-2 lg:row-span-2">
           <Paragraphe>
             Avec Tera Campus vous partirez en aventure au moins d'octobre, au
             mois de février et au mois de mai.

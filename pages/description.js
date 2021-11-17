@@ -68,7 +68,9 @@ export default function description() {
             </ListUl>
           </div>
           <BlockGuides />
-          <InternalLink blue id="program" label="Découvrez nos formations" />
+          <div className="flex justify-center lg:block">
+            <InternalLink blue id="program" label="Découvrez nos formations" />
+          </div>
         </section>
       </main>
     </>

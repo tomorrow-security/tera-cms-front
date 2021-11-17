@@ -41,12 +41,14 @@ export default function BlockContract() {
             nature des qualifications sont obligatoirement définis par accords
             collectifs préalables.
           </Paragraphe>
-          <ExternalLink
-            whiteR
-            title="Le contrat d'apprentissage"
-            url="https://travail-emploi.gouv.fr/formation-professionnelle/formation-en-alternance-10751/apprentissage/contrat-apprentissage"
-            aria="lien vers le site gouvernemental travail emploi"
-          />
+          <div className="mx-auto w-max">
+            <ExternalLink
+              whiteR
+              title="Le contrat d'apprentissage"
+              url="https://travail-emploi.gouv.fr/formation-professionnelle/formation-en-alternance-10751/apprentissage/contrat-apprentissage"
+              aria="lien vers le site gouvernemental travail emploi"
+            />
+          </div>
         </section>
         <section id="professionalization">
           <LittleTitle children="Le contrat de professionnalisation" />
@@ -67,12 +69,14 @@ export default function BlockContract() {
               ))}
             </ul>
           </Paragraphe>
-          <ExternalLink
-            whiteR
-            title="Le contrat de professionnalisation"
-            url="https://travail-emploi.gouv.fr/formation-professionnelle/formation-en-alternance-10751/contrat-de-professionnalisation"
-            aria="lien vers le site gouvernemental travail emploi"
-          />
+          <div className="mx-auto w-max">
+            <ExternalLink
+              whiteR
+              title="Le contrat de professionnalisation"
+              url="https://travail-emploi.gouv.fr/formation-professionnelle/formation-en-alternance-10751/contrat-de-professionnalisation"
+              aria="lien vers le site gouvernemental travail emploi"
+            />
+          </div>
         </section>
         <section id="financialhelp">
           <LittleTitle children="Aides spécifiques" />

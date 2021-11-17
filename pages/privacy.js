@@ -63,70 +63,64 @@ export default function Privacy() {
             <ListOl>
               <li className="text-2xl md:text-3xl">
                 Identité du responsable du traitement
-                <Paragraphe>
-                  Le responsable du traitement des données est la société
-                  Tomorrow Security, vous pouvez retrouver ses informations de
-                  contact dans les mentions légales.
-                </Paragraphe>
               </li>
-              <li className="text-2xl md:text-3xl">
-                Finalités du traitement
-                <Paragraphe>
-                  Tomorrow Security est susceptible de traiter vos informations
-                  personnelles aux fins de vous fournir les informations ou les
-                  services que vous avez demandés (notamment : l&apos;envoi de
-                  la newsletter, demande d&apos;inscription à une formation Tera
-                  Campus, demande d&apos;informations commerciales à propos des
-                  formations Tera Campus).
-                </Paragraphe>
-              </li>
-              <li className="text-2xl md:text-3xl">
-                Durée de conservation
-                <Paragraphe>
-                  Les données personnelles que nous collectons et traitons ne
-                  sont conservées que pour la durée strictement nécessaire au
-                  regard des finalités précédemment exposées. Les dossiers
-                  d&apos;inscription seront conservés pour une durée maximum de
-                  24 mois à partir du dépôt de celui-ci. Les données
-                  personnelles liées à une demande d&apos;information seront
-                  conservées pour une durée maximum de 6 mois.
-                </Paragraphe>
-              </li>
+              <Paragraphe>
+                Le responsable du traitement des données est la société Tomorrow
+                Security, vous pouvez retrouver ses informations de contact dans
+                les mentions légales.
+              </Paragraphe>
+              <li className="text-2xl md:text-3xl">Finalités du traitement</li>
+              <Paragraphe>
+                Tomorrow Security est susceptible de traiter vos informations
+                personnelles aux fins de vous fournir les informations ou les
+                services que vous avez demandés (notamment : l&apos;envoi de la
+                newsletter, demande d&apos;inscription à une formation Tera
+                Campus, demande d&apos;informations commerciales à propos des
+                formations Tera Campus).
+              </Paragraphe>
+              <li className="text-2xl md:text-3xl">Durée de conservation</li>
+              <Paragraphe>
+                Les données personnelles que nous collectons et traitons ne sont
+                conservées que pour la durée strictement nécessaire au regard
+                des finalités précédemment exposées. Les dossiers
+                d&apos;inscription seront conservés pour une durée maximum de 24
+                mois à partir du dépôt de celui-ci. Les données personnelles
+                liées à une demande d&apos;information seront conservées pour
+                une durée maximum de 6 mois.
+              </Paragraphe>
               <li className="text-2xl md:text-3xl">
                 Accès et modification de vos données
-                <Paragraphe>
-                  Vous pouvez nous faire une demande par mail à
-                  <a
-                    className="p-2 mx-auto text-sm text-center w-max md:text-lg hover:text-tc-red"
-                    href="mailto:dpo@tomorrow-security.com"
-                  >
-                    dpo@tomorrow-security.com
-                  </a>
-                  pour connaître les données vous concernant, les modifier ou
-                  les supprimer. Dans le cas d&apos;une demande par mail, nous
-                  pourrons vous demander une preuve de votre identité. Tomorrow
-                  Security s&apos;engage à répondre à votre demande
-                  d&apos;accès, de rectification ou d&apos;opposition ou toute
-                  autre demande complémentaire d&apos;informations dans un délai
-                  raisonnable qui ne saurait dépasser 1 mois à compter de la
-                  réception de votre demande.
-                </Paragraphe>
               </li>
+              <Paragraphe>
+                Vous pouvez nous faire une demande par mail à
+                <a
+                  className="p-2 mx-auto text-sm text-center w-max md:text-lg hover:text-tc-red"
+                  href="mailto:dpo@tomorrow-security.com"
+                >
+                  dpo@tomorrow-security.com
+                </a>
+                pour connaître les données vous concernant, les modifier ou les
+                supprimer. Dans le cas d&apos;une demande par mail, nous
+                pourrons vous demander une preuve de votre identité. Tomorrow
+                Security s&apos;engage à répondre à votre demande d&apos;accès,
+                de rectification ou d&apos;opposition ou toute autre demande
+                complémentaire d&apos;informations dans un délai raisonnable qui
+                ne saurait dépasser 1 mois à compter de la réception de votre
+                demande.
+              </Paragraphe>
               <li className="text-2xl md:text-3xl">
                 Prestataires utilisés dans le cadre de la collecte de vos
                 données
-                <Paragraphe>
-                  Tomorrow Security ne s&apos;appuie sur aucun prestataire pour
-                  le traitement de vos données personnelles, à l&apos;exception
-                  de l&apos;hébergeur spécifié dans les mentions légales.
-                </Paragraphe>
               </li>
-              <li className="text-2xl md:text-3xl">
-                Cookies
-                <Paragraphe>
-                  Tera Campus n&apos;utilise pas de cookies.
-                </Paragraphe>
-              </li>
+              <Paragraphe>
+                Tomorrow Security ne s&apos;appuie sur aucun prestataire pour le
+                traitement de vos données personnelles, à l&apos;exception de
+                l&apos;hébergeur spécifié dans les mentions légales.
+              </Paragraphe>
+              <li className="text-2xl md:text-3xl">Cookies</li>
+              <Paragraphe>
+                Tera Campus n&apos;utilise pas de cookies.
+              </Paragraphe>
             </ListOl>
           </div>
         </section>

@@ -88,7 +88,7 @@ export default function BlockRelease() {
               </Paragraphe>
             </div>
             <Paragraphe lg>
-              <div className="md:flex md:items-center md:justify-center">
+              <div className="flex flex-col items-center justify-center md:flex-row">
                 <p>
                   Connaissez-vous le plan{" "}
                   <Strong>“1 jeune, 1 solution” ?</Strong>
