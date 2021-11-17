@@ -5,7 +5,7 @@ export default function Footer() {
   const today = new Date()
   return (
     <footer className="pt-5">
-      <div className="bg-white">
+      <div className="bg-opacity-90 bg-tc-blue">
         <div className="md:container md:mx-auto">
           <Plan />
         </div>

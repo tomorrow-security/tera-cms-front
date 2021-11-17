@@ -38,9 +38,9 @@ export default function Plan({ id, label }) {
       <div className="mx-4">
         <SubTitle
           title="Plan du site"
-          iconPicture={{ backgroundImage: "url('plan-blue.png')" }}
+          iconPicture={{ backgroundImage: "url('plan-red.png')" }}
         />
-        <div className="md:relative">
+        <div className="text-white md:relative">
           <div className="flex flex-col mt-2 mb-4 space-y-8 text-sm md:mt-6 md:space-x-2 md:space-y-0 md:flex-row md:flex-wrap md:justify-around">
             <div className="md:w-1/5">
               <NavList
@@ -90,7 +90,9 @@ export default function Plan({ id, label }) {
             Suivez-nous
           </p>
           <div className="flex-grow">
-            <SocialNav />
+            <SocialNav
+            // color="red"
+            />
           </div>
         </div>
       </div>
