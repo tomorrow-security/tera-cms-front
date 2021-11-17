@@ -52,86 +52,74 @@ export default function Legal() {
                   75366 PARIS CEDEX 08 FRANCE.
                 </li>
               </ListUl>
-              <li className="text-2xl md:text-3xl">
-                Déclaration CNIL
-                <Paragraphe>
-                  Les informations collectées sur Tera Campus sont utilisées
-                  uniquement dans le cadre légal prévu en France pour le respect
-                  de la vie privée. La société Tomorrow Security est le
-                  destinataire des données. Conformément à la loi « informatique
-                  et libertés » du 6 janvier 1978, vous bénéficiez d&apos;un
-                  droit d&apos;accès, de rectification, de suppression des
-                  informations qui vous concernent, que vous pouvez exercer en
-                  vous adressant à{" "}
-                  <a href="mailto:dpo@tomorrow-security.com">
-                    dpo@tomorrow-security.com
-                  </a>
-                  .
-                </Paragraphe>
-                <Paragraphe>
-                  Plus d&apos;informations sur :{" "}
-                  <a
-                    href="https://www.cnil.fr"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    https://www.cnil.fr
-                  </a>
-                  .
-                </Paragraphe>
-              </li>
-              <li className="text-2xl md:text-3xl">
-                Propriété
-                <Paragraphe>
-                  L&apos;ensemble de ce site est régi par la législation
-                  française sur le droit d&apos;auteur et la propriété
-                  intellectuelle. Le contenu du site, incluant, de façon non
-                  limitative, les images, graphismes, textes, vidéos, logos, et
-                  icônes sont la propriété exclusive de la société Tomorrow
-                  Security à l&apos;exception des marques, logos ou contenus
-                  appartenant à d&apos;autres sociétés partenaires ou auteurs.
-                </Paragraphe>
-                <Paragraphe>
-                  La reproduction, la représentation, le transfert, la
-                  distribution, ou l&apos;enregistrement de tout ou partie de
-                  ces éléments est formellement interdite sans
-                  l&apos;autorisation expresse de la société Tomorrow Security.
-                </Paragraphe>
-              </li>
-              <li className="text-2xl md:text-3xl">
-                Responsabilité
-                <Paragraphe>
-                  Tera Campus comporte des informations mises à disposition par
-                  des personnes physiques et/ou morales externes ou encore des
-                  liens hypertextes vers d&apos;autres sites Internet ou blogs
-                  qui n&apos;ont pas été développés par la société Tomorrow
-                  Security. Le contenu mis à disposition sur Tera Campus est
-                  fourni à titre informatif. L&apos;existence d&apos;un lien de
-                  ce site vers un autre site Internet ne constitue pas une
-                  validation de ce site Internet ou de son contenu. Il
-                  appartient à l&apos;internaute d&apos;utiliser ces
-                  informations avec discernement et esprit critique. La
-                  responsabilité de Tomorrow Security ne saurait être engagée du
-                  fait des informations, des opinions et des recommandations
-                  formulées par des tiers.
-                </Paragraphe>
-                <Paragraphe>
-                  L&apos;utilisation du site se fait à vos propres risques. Bien
-                  que Tomorrow Security s&apos;efforce d&apos;assurer au mieux
-                  l&apos;exactitude des informations diffusées, Tomorrow
-                  Security ne peut garantir l&apos;exactitude, la véracité ou la
-                  complétude des informations postées sur le site et/ou à propos
-                  des commentaires que ces informations peuvent susciter.
-                </Paragraphe>
-                <Paragraphe>
-                  Par conséquent, la société Tomorrow Security exclut toute
-                  responsabilité pour n&apos;importe quel préjudice causé
-                  directement et/ou indirectement, de quelque façon que ce soit,
-                  du fait de l&apos;utilisation du site. Notamment, Tomorrow
-                  Security ne sera en aucun cas responsable d&apos;un quelconque
-                  préjudice, causé par :
-                </Paragraphe>
-              </li>
+              <li className="text-2xl md:text-3xl">Déclaration CNIL</li>
+              <Paragraphe>
+                Les informations collectées sur Tera Campus sont utilisées
+                uniquement dans le cadre légal prévu en France pour le respect
+                de la vie privée. La société Tomorrow Security est le
+                destinataire des données. Conformément à la loi « informatique
+                et libertés » du 6 janvier 1978, vous bénéficiez d&apos;un droit
+                d&apos;accès, de rectification, de suppression des informations
+                qui vous concernent, que vous pouvez exercer en vous adressant à{" "}
+                <a href="mailto:dpo@tomorrow-security.com">
+                  dpo@tomorrow-security.com
+                </a>
+                .
+              </Paragraphe>
+              <Paragraphe>
+                Plus d&apos;informations sur :{" "}
+                <a href="https://www.cnil.fr" target="_blank" rel="noreferrer">
+                  https://www.cnil.fr
+                </a>
+                .
+              </Paragraphe>
+              <li className="text-2xl md:text-3xl">Propriété</li>
+              <Paragraphe>
+                L&apos;ensemble de ce site est régi par la législation française
+                sur le droit d&apos;auteur et la propriété intellectuelle. Le
+                contenu du site, incluant, de façon non limitative, les images,
+                graphismes, textes, vidéos, logos, et icônes sont la propriété
+                exclusive de la société Tomorrow Security à l&apos;exception des
+                marques, logos ou contenus appartenant à d&apos;autres sociétés
+                partenaires ou auteurs.
+              </Paragraphe>
+              <Paragraphe>
+                La reproduction, la représentation, le transfert, la
+                distribution, ou l&apos;enregistrement de tout ou partie de ces
+                éléments est formellement interdite sans l&apos;autorisation
+                expresse de la société Tomorrow Security.
+              </Paragraphe>
+              <li className="text-2xl md:text-3xl">Responsabilité</li>
+              <Paragraphe>
+                Tera Campus comporte des informations mises à disposition par
+                des personnes physiques et/ou morales externes ou encore des
+                liens hypertextes vers d&apos;autres sites Internet ou blogs qui
+                n&apos;ont pas été développés par la société Tomorrow Security.
+                Le contenu mis à disposition sur Tera Campus est fourni à titre
+                informatif. L&apos;existence d&apos;un lien de ce site vers un
+                autre site Internet ne constitue pas une validation de ce site
+                Internet ou de son contenu. Il appartient à l&apos;internaute
+                d&apos;utiliser ces informations avec discernement et esprit
+                critique. La responsabilité de Tomorrow Security ne saurait être
+                engagée du fait des informations, des opinions et des
+                recommandations formulées par des tiers.
+              </Paragraphe>
+              <Paragraphe>
+                L&apos;utilisation du site se fait à vos propres risques. Bien
+                que Tomorrow Security s&apos;efforce d&apos;assurer au mieux
+                l&apos;exactitude des informations diffusées, Tomorrow Security
+                ne peut garantir l&apos;exactitude, la véracité ou la complétude
+                des informations postées sur le site et/ou à propos des
+                commentaires que ces informations peuvent susciter.
+              </Paragraphe>
+              <Paragraphe>
+                Par conséquent, la société Tomorrow Security exclut toute
+                responsabilité pour n&apos;importe quel préjudice causé
+                directement et/ou indirectement, de quelque façon que ce soit,
+                du fait de l&apos;utilisation du site. Notamment, Tomorrow
+                Security ne sera en aucun cas responsable d&apos;un quelconque
+                préjudice, causé par :
+              </Paragraphe>
               <ListUl>
                 <li>des faits et actions des tiers ;</li>
                 <li>l&apos;impossibilité d&apos;utiliser le site ;</li>
