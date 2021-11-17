@@ -70,19 +70,11 @@ module.exports = {
         scroll: "scroll 40s linear infinite",
       },
       colors: {
-        // TODO revoir les couleurs
         "tc-blue": "#04021D",
         "tc-red": "#E03300",
-        "tc-blue-medium": "#2d2966",
-        "tc-red-medium": "#dd522c",
-        "tc-blue-light": "#4f4b89",
-        "tc-red-light": "#dd603e",
-        "tc-blue-xlight": "#7875aa",
-        "tc-red-xlight": "#dd795d",
-        "tc-blue-bright": "#08043f",
-        "tc-red-bright": "#f93600",
-        "tc-blue-dark": "#01000a",
-        "tc-red-dark": "#c92b00",
+      },
+      gridTemplateColumns: {
+        bivouac: "4fr 3fr",
       },
       gridRowStart: {
         8: "8",
@@ -93,6 +85,7 @@ module.exports = {
         13: "13",
       },
       gridTemplateRows: {
+        bivouac: "1fr 2fr 2fr",
         "program-domain": "1fr 2rem 1fr 1fr 3fr",
         objectif: "2rem 1fr",
       },
