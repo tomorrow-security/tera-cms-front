@@ -1,5 +1,12 @@
 import Plan from "../molecules/Plan"
 import IconLogo from "../atoms/IconLogo"
+import PlanLink from "../atoms/PlanLink"
+
+const pages = [
+  { id: "#agenda", label: "actualités" },
+  { id: "enrolment", label: "admission" },
+  { id: "contact", label: "contact" },
+]
 
 export default function Footer() {
   const today = new Date()
@@ -24,6 +31,13 @@ export default function Footer() {
                 </a>
               </div>
             </div>
+            <ul className="space-y-2 font-semibold uppercase md:space-y-0 md:flex md:flex-1 md:text-center md:justify-evenly md:items-stretch">
+              {pages.map(({ id, label }) => (
+                <li key={`${id}`} className="p-1 border border-white rounded">
+                  <PlanLink id={id} label={label} />
+                </li>
+              ))}
+            </ul>
             <div className="text-center">
               © 2020-{today.getFullYear()} Tera Campus
             </div>
