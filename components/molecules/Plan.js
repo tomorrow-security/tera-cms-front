@@ -37,8 +37,9 @@ export default function Plan({ id, label }) {
     <section id="plan" className="py-3">
       <div className="mx-4">
         <SubTitle
+          white
           title="Plan du site"
-          iconPicture={{ backgroundImage: "url('plan-red.png')" }}
+          iconPicture={{ backgroundImage: "url('plan.png')" }}
         />
         <div className="text-white md:relative">
           <div className="flex flex-col mt-2 mb-4 space-y-8 text-sm md:mt-6 md:space-x-2 md:space-y-0 md:flex-row md:flex-wrap md:justify-around">
@@ -75,18 +76,18 @@ export default function Plan({ id, label }) {
               />
             </div>
           </div>
-          <div className="md:bottom-6 lg:bottom-2 md:absolute md:mx-auto md:w-1/2 md:inset-x-0">
-            <ul className="space-y-2 font-semibold uppercase md:space-y-0 md:flex md:w-max-content md:text-center md:justify-evenly">
-              {autre.map(({ id, label }) => (
-                <li key={`${id}`}>
-                  <PlanLink id={id} label={label} />
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* <div className="md:bottom-6 lg:bottom-2 md:absolute md:mx-auto md:w-1/2 md:inset-x-0"> */}
+          <ul className="space-y-2 font-semibold uppercase md:space-y-0 md:flex md:w-max-content md:text-center md:justify-evenly">
+            {autre.map(({ id, label }) => (
+              <li key={`${id}`} className="p-1 border border-white rounded">
+                <PlanLink id={id} label={label} />
+              </li>
+            ))}
+          </ul>
+          {/* </div> */}
         </div>
         <div className="mx-4 mt-12 lg:mt-20 md:flex md:justify-between md:items-center">
-          <p className="px-4 mx-auto my-4 text-lg text-center border rounded cursor-default md:mx-0 border-tc-red text-tc-red">
+          <p className="px-4 mx-auto my-4 text-lg text-center text-white cursor-default md:mx-0">
             Suivez-nous
           </p>
           <div className="flex-grow">
