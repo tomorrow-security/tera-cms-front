@@ -10,7 +10,7 @@ export default function ExternalLink({
   whiteB,
 }) {
   return (
-    <div className="flex justify-center my-4">
+    <div className="flex justify-center my-4 w-max">
       <a
         href={url}
         target="_blank"

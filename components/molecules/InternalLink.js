@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export default function InternalLink({ id, label, red, blue, whiteR, whiteB }) {
   return (
-    <Link className="flex justify-center my-4 " href={`/${id}`}>
+    <Link className="flex justify-center my-4 w-max" href={`/${id}`}>
       <a
         className={`px-6 py-2 transition-colors duration-700 ease-in-out ${
           whiteR
