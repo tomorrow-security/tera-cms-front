@@ -20,7 +20,7 @@ export async function getServerSideProps() {
         },
         {
           name: "Quelle est la durée de la formation ?",
-          text: "Le cursus complet se déroule sur 5 années et se décompose en deux périodes distinctes. La première période commence par 2 ans de formation en contiue puis 1 an de formation en alternance sanctionné par un diplôme de niveau 5 (BAC+3). La deuxième période se déroule sur 2 ans, sous contrat d'alternance et intégralement en anglais. Ces deux années vous permettront de valider un titre RNCP de niveau 7 (BAC+5).",
+          text: "Le cursus complet se déroule sur 5 années et se décompose en deux périodes distinctes. La première période commence par 2 ans de formation en contiue puis 1 an de formation en alternance sanctionné par un diplôme de niveau 5 (BAC+3). La deuxième période se déroule sur 2 ans, sous contrat d'alternance avec des cours intégralement en anglais. Ces deux années vous permettront de valider un titre RNCP de niveau 7 (BAC+5).",
         },
         {
           name: "Quel est le coût de la formation ?",
