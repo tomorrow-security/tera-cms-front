@@ -6,7 +6,6 @@ import LitleTitle from "../components/atoms/LittleTitle"
 import Bullet from "../components/atoms/Bullet"
 import ListUl from "../components/atoms/ListUl"
 import Paragraphe from "../components/atoms/Paragraphe"
-import ParagrapheXl from "../components/atoms/ParagrapheXl"
 import Strong from "../components/atoms/Strong"
 import CtaBand from "../components/molecules/CtaBand"
 
@@ -51,17 +50,16 @@ export default function Bivouacs() {
                 Les 3 années de formation en alternance seront entièrement
                 financées par votre entreprise d’accueil !
               </Paragraphe>
-              <ParagrapheXl>
-                Le reste à charge sera donc de 0 euro.
-              </ParagrapheXl>
+              <Paragraphe lg>Le reste à charge sera donc de 0 euro.</Paragraphe>
               <Paragraphe>
-                Vous serez en plus <Strong>rémunéré mensuellement</Strong> pour
-                votre travail et en fonction de votre situation
+                Vous serez en plus <Strong red>rémunéré mensuellement</Strong>{" "}
+                pour votre travail et en fonction de votre situation
               </Paragraphe>
               <Paragraphe>
                 Le choix du télé-présentiel, couplé au financement de votre
                 formation par l'entreprise, vous permettra donc d'entamer votre
-                carrière sereinement, et <Strong>sans aucune dettes</Strong> !
+                carrière sereinement, et <Strong red>sans aucune dettes</Strong>{" "}
+                !
               </Paragraphe>
             </div>
             <CtaBand />

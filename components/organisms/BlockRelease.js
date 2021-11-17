@@ -1,6 +1,5 @@
 import LittleTitle from "../atoms/LittleTitle"
 import Paragraphe from "../atoms/Paragraphe"
-import ParagrapheXl from "../atoms/ParagrapheXl"
 import Strong from "../atoms/Strong"
 import ExternalLink from "../molecules/ExternalLink"
 
@@ -35,13 +34,13 @@ export default function BlockRelease() {
             phase théorique qui alternent, permettant de se préparer plus
             efficacement à un métier.
             <div>
-              <Strong>
+              <Strong red>
                 Étudier gratuitement tout en étant salarié : la vraie force de
                 l’alternance !
               </Strong>
             </div>
           </Paragraphe>
-          <div className="my-2 md:m-6 lg:mx-12">
+          <div className="my-2 md:m-6">
             <section id="trainingreleasefunding">
               <div className="p-2 border border-opacity-50 rounded md:container md:mx-auto lg:text-lg 2xl:text-xl md:bg-tc-blue md:bg-opacity-25 border-tc-blue">
                 <h4 className="font-medium">
@@ -64,7 +63,6 @@ export default function BlockRelease() {
             className="w-screen bg-center bg-no-repeat bg-cover h-33vh sm:h-50vh md:bg-contain md:bg-right md:w-1/2"
             style={{ backgroundImage: "url('groupe-réunion.jpg')" }}
           ></div>
-
           <div className="mx-4 md:mx-0 md:w-1/2">
             <Paragraphe>
               Durant cette période, l’alternant suit un ensemble de cours
@@ -77,28 +75,34 @@ export default function BlockRelease() {
           </div>
         </div>
         <div className="mx-4">
-          <div className="my-2 md:m-6 lg:mx-12">
+          <div className="my-2 md:m-6">
             <div className="p-2 my-2 border border-opacity-50 rounded md:container md:mx-auto lg:text-lg 2xl:text-xl md:bg-tc-blue md:bg-opacity-25 border-tc-blue">
               <Paragraphe>
                 Dans cette démarche,&nbsp;
-                <em className="not-italic font-semibold">
+                <Strong>
                   notre école s’engage à aider tous ses étudiants dans leur
                   recherche d’entreprise
-                </em>
+                </Strong>
                 , et propose deux solutions : le contrat d'apprentissage et le
                 contrat de professionnalisation.
               </Paragraphe>
             </div>
-            <ParagrapheXl>
-              Connaissez-vous le plan <Strong>“1 jeune, 1 solution” ?</Strong>
-              Une solution d’Etat pour former, accompagner et faciliter
-              l’insertion professionnelle de tous les jeunes...
-            </ParagrapheXl>
-            <ExternalLink
-              title="#1jeune1solution"
-              url="https://www.1jeune1solution.gouv.fr/"
-              aria="lien vers le site gouvernemental 1jeune1solution"
-            />
+            <Paragraphe lg>
+              <div className="md:flex md:items-center md:justify-center">
+                <p>
+                  Connaissez-vous le plan{" "}
+                  <Strong>“1 jeune, 1 solution” ?</Strong>
+                  Une solution d’Etat pour former, accompagner et faciliter
+                  l’insertion professionnelle de tous les jeunes...
+                </p>
+                <ExternalLink
+                  whiteR
+                  title="#1jeune1solution"
+                  url="https://www.1jeune1solution.gouv.fr/"
+                  aria="lien vers le site gouvernemental 1jeune1solution"
+                />
+              </div>
+            </Paragraphe>
           </div>
         </div>
       </section>

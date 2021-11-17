@@ -1,3 +1,5 @@
-export default function Strong({ children }) {
-  return <strong className="font-bold text-tc-red">{children}</strong>
+export default function Strong({ children, red }) {
+  return (
+    <strong className={`font-bold ${red && "text-tc-red"}`}>{children}</strong>
+  )
 }

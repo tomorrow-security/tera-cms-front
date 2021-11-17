@@ -1,5 +1,4 @@
 import LittleTitle from "../atoms/LittleTitle"
-import ExternalLink from "../molecules/ExternalLink"
 
 const syllabusTC3 = [
   {

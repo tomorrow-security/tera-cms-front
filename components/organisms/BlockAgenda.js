@@ -18,7 +18,7 @@ export default function BlockAgenda({ events }) {
         iconPicture={{ backgroundImage: "url('calendrier-blue.png')" }}
       />
       <h3 className="text-2xl text-center md:text-3xl">
-        JPO,Thursday Tech Live,coaching alternance…{" "}
+        JPO,Thursday Tech Live,coaching alternance…
       </h3>
       <div className="my-2 lg:flex lg:flex-row lg:flex-nowrap lg:justify-around lg:items-center lg:text-xl">
         <div className={`w-full lg:w-1/2 ${invisible}`}>

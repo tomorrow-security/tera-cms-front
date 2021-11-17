@@ -2,9 +2,7 @@ import LittleTitle from "../atoms/LittleTitle"
 import Strong from "../atoms/Strong"
 import Paragraphe from "../atoms/Paragraphe"
 import SubTitle from "../atoms/SubTitle"
-import ParagrapheXl from "../atoms/ParagrapheXl"
 import InternalLink from "../molecules/InternalLink"
-import ExternalLink from "../molecules/ExternalLink"
 
 export default function BlockConcept() {
   return (
@@ -13,30 +11,29 @@ export default function BlockConcept() {
         title="Future Of Learning"
         iconPicture={{ backgroundImage: "url('book-and-world.png')" }}
       />
-      <div className="px-4 mb-4 bg-tc-blue bg-opacity-20 md:rounded md:flex md:justify-between md:items-center">
+      <div className="flex flex-col items-center p-4 mb-4 bg-tc-blue bg-opacity-20 lg:rounded lg:flex-row justify-evenly">
         <div>
           <div className="font-bold">
             <Paragraphe>Alternance pour qui ? Pourquoi ?</Paragraphe>
           </div>
-          <ParagrapheXl>
+          <Paragraphe xl>
             &#x000C9;tudier gratuitement et avoir un statut de salarié c'est
             possible !
-          </ParagrapheXl>
+          </Paragraphe>
         </div>
-        <div className="pb-1 mx-auto md:pb-0 md:mr-32 w-max">
-          <InternalLink
-            label="Je me renseigne"
-            id="releasetraining"
-            background="white"
-          />
-        </div>
+        <InternalLink
+          whiteR
+          label="Je me renseigne"
+          id="releasetraining"
+          background="white"
+        />
       </div>
       <div className="flex flex-col lg:flex-row">
         <ul className="mx-4 lg:w-3/4">
           <li>
             <LittleTitle>Tera Campus c'est quoi ?</LittleTitle>
             <Paragraphe>
-              <Strong>
+              <Strong red>
                 Tera Campus est une école Supérieure d'Informatique en
                 télé-présentiel,&nbsp;
               </Strong>
@@ -56,7 +53,7 @@ export default function BlockConcept() {
           <li>
             <LittleTitle>Comment étudier avec Tera Campus ?</LittleTitle>
             <Paragraphe>
-              <Strong>
+              <Strong red>
                 La formation chez Tera Campus s'adresse avant tout à des
                 personnes motivées.&nbsp;
               </Strong>
@@ -68,7 +65,7 @@ export default function BlockConcept() {
             <Paragraphe>
               Tout au long de l'année, Tera Campus organise trois Bivouacs de
               deux semaines complètes.&nbsp;
-              <Strong>
+              <Strong red>
                 En octobre, en janvier puis en mai, vous rejoindrez les autres
                 étudiants de Tera Campus pour partager, créer et construire un
                 esprit d'équipe au travers d'exercices de team building et de

@@ -1,7 +1,6 @@
 import SubTitle from "../atoms/SubTitle"
 import LittleTitle from "../atoms/LittleTitle"
 import Paragraphe from "../atoms/Paragraphe"
-import ParagrapheXl from "../atoms/ParagrapheXl"
 import ExternalLink from "../molecules/ExternalLink"
 
 const publics = [
@@ -43,6 +42,7 @@ export default function BlockContract() {
             collectifs préalables.
           </Paragraphe>
           <ExternalLink
+            whiteR
             title="Le contrat d'apprentissage"
             url="https://travail-emploi.gouv.fr/formation-professionnelle/formation-en-alternance-10751/apprentissage/contrat-apprentissage"
             aria="lien vers le site gouvernemental travail emploi"
@@ -68,6 +68,7 @@ export default function BlockContract() {
             </ul>
           </Paragraphe>
           <ExternalLink
+            whiteR
             title="Le contrat de professionnalisation"
             url="https://travail-emploi.gouv.fr/formation-professionnelle/formation-en-alternance-10751/contrat-de-professionnalisation"
             aria="lien vers le site gouvernemental travail emploi"
@@ -77,13 +78,14 @@ export default function BlockContract() {
           <LittleTitle children="Aides spécifiques" />
           <div className=" md:flex md:justify-between">
             <div className="w-5/6 mx-auto md:w-3/4">
-              <ParagrapheXl>
+              <Paragraphe lg>
                 Des aides spécifiques peuvent également être attribuées aux
                 alternants... (APL, l’aide “Mobili jeune”)
-              </ParagrapheXl>
+              </Paragraphe>
             </div>
             <div className="flex items-center justify-center">
               <ExternalLink
+                red
                 title="En savoir plus"
                 url="https://www.mesdroitssociaux.gouv.fr/accueil/"
                 aria="lien vers le site gouvernemental des droits sociaux"

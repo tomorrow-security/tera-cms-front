@@ -1,3 +1,4 @@
+import Paragraphe from "../atoms/Paragraphe"
 import Strong from "../atoms/Strong"
 
 const axes = ["La technique", "Les soft skills", "La collaboration"]
@@ -6,10 +7,12 @@ export default function Approach() {
   return (
     <div>
       <div className="text-lg text-center">
-        <Strong>
-          Le programme Tera Campus s&apos;articule sur trois principaux axes de
-          développement :
-        </Strong>
+        <Paragraphe lg>
+          <Strong>
+            Le programme Tera Campus s&apos;articule sur trois principaux axes
+            de développement :
+          </Strong>
+        </Paragraphe>
       </div>
       <ul className="w-full my-12 md:my-14">
         {axes.map((axe, index) => (

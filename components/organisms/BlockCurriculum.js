@@ -5,7 +5,7 @@ import LittleTitle from "../atoms/LittleTitle"
 import SubTitle from "../atoms/SubTitle"
 import ListUl from "../atoms/ListUl"
 import CardList from "../atoms/CardList"
-import ParagrapheXl from "../atoms/ParagrapheXl"
+import Paragraphe from "../atoms/Paragraphe"
 
 const initialYears = [
   {
@@ -100,15 +100,15 @@ export default function BlockCurriculum() {
             iconPicture={{ backgroundImage: "url('cursus-TC.png')" }}
           />
           <div className="font-semibold">
-            <ParagrapheXl>
+            <Paragraphe lg>
               Deux premières années en formation initiale pour acquérir des
               bases solides.
-            </ParagrapheXl>
-            <ParagrapheXl>
+            </Paragraphe>
+            <Paragraphe lg>
               À partir de la troisième année et jusqu’à la fin du parcours la
               formation est 100% en alternance (contrat d’apprentissage ou
               contrat de professionnalisation).
-            </ParagrapheXl>
+            </Paragraphe>
           </div>
           <div className="my-6">
             <LittleTitle children="Cursus 1&2 année :" />

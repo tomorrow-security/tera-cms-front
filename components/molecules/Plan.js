@@ -87,7 +87,7 @@ export default function Plan({ id, label }) {
           </div>
         </div>
         <div className="mx-4 mt-12 lg:mt-20 md:flex md:justify-between md:items-center">
-          <p className="px-4 mx-auto my-4 text-lg text-center border rounded md:mx-0 border-tc-red text-tc-red">
+          <p className="px-4 mx-auto my-4 text-lg text-center border rounded cursor-default md:mx-0 border-tc-red text-tc-red">
             Suivez-nous
           </p>
           <div className="flex-grow">
