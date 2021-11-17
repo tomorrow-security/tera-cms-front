@@ -22,7 +22,6 @@ const program = [
 ]
 const alternance = [{ id: "releasetraining", label: "C'est quoi l'alternance" }]
 const legal = [
-  { id: "cgv", label: "CGV - Conditions Générales de Ventes" },
   { id: "legal", label: "Mentions légales" },
   { id: "privacy", label: "Politique de confidentialité" },
 ]
