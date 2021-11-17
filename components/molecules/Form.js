@@ -27,7 +27,7 @@ export default function Form({ mutation, onSubmit }) {
       <div>
         <div>
           <div className="space-y-1 xl:space-y-8 xl:flex xl:flex-col xl:items-center ">
-            <div className="space-y-1 xl:flex xl:justify-between xl:w-4/5 xl:flex-nowrap">
+            <div className="space-y-1 md:space-y-0 xl:flex xl:justify-between xl:w-4/5 xl:flex-nowrap">
               <div className="xl:w-45% space-y-1">
                 <div className="flex items-center">
                   <div className="w-30%">
@@ -72,7 +72,7 @@ export default function Form({ mutation, onSubmit }) {
                 ) : null}
               </div>
             </div>
-            <div className="xl:flex xl:justify-between xl:w-4/5 xl:flex-nowrap">
+            <div className="space-y-1 xl:flex xl:justify-between md:space-y-0 xl:w-4/5 xl:flex-nowrap">
               <div className="space-y-1 xl:w-45%">
                 {/* // TODO importer la molecule Input quand fonctionnera */}
                 <div className="flex items-center">
