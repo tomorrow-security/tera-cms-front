@@ -37,7 +37,7 @@ export default function Bivouacs() {
             <div className="ml-12 md:ml-8">
               <ListUl>
                 <li>le test de positionnement</li>
-                <li>le test de positionnement</li>
+                <li>les entretiens</li>
                 <li>les frais de dossier</li>
               </ListUl>
             </div>
