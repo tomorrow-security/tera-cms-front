@@ -53,47 +53,51 @@ export async function getServerSideProps() {
     let items = response.data.data.boards[0].items
 
     for (const event of items) {
+    
       if (events.length < 3) {
         let eventConfirmed = false
-        let eventDate = null
+        let eventStartDate = null
+        let eventEndDate = null
         let eventPlatform = null
         let eventType = null
-
+        let eventUrl = null
+  
         for (const eventDetail of event.column_values) {
-          if (eventDetail.id === "statut" && eventDetail.text === "Confirmé") {
+          if (eventDetail.id === 'statut' && eventDetail.text === 'Confirmé') {
             eventConfirmed = true
           }
-
-          if (eventDetail.id === "date4" && eventDetail.text) {
+  
+          if (eventDetail.id === 'date4' && eventDetail.text) {
             const date = new Date(eventDetail.text)
             if (date >= new Date()) {
-              eventDate = date
+              eventStartDate = date
             }
           }
 
-          if (eventDetail.id === "statut_16" && eventDetail.text) {
+          if (eventDetail.id === 'date' && eventDetail.text) {
+            const date = new Date(eventDetail.text)
+            if (date >= new Date()) {
+              eventEndDate = date
+            }
+          }
+  
+          if (eventDetail.id === 'statut_16' && eventDetail.text) {
             eventType = eventDetail.text
           }
-
-          if (eventDetail.id === "statut_1" && eventDetail.text) {
+  
+          if (eventDetail.id === 'statut_1' && eventDetail.text) {
             eventPlatform = eventDetail.text
           }
-        }
 
-        if (
-          event.name &&
-          eventConfirmed &&
-          eventDate &&
-          eventType &&
-          eventPlatform
-        ) {
-          events.push({
-            name: event.name,
-            datetime: `${eventDate}`,
-            description: eventType,
-            platform: eventPlatform,
-          })
+          if (eventDetail.id === 'lien_internet' && eventDetail.text) {
+            eventUrl = eventDetail.text
+          }
         }
+  
+        if (event.name && eventConfirmed && eventStartDate && eventEndDate && eventType && eventPlatform) {
+          events.push({name: event.name, startDate: `${eventStartDate}`, endDate: `${eventEndDate}`, description: eventType, platform: eventPlatform, url: eventUrl})
+        }
+  
       }
     }
 
