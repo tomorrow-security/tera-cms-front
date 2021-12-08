@@ -15,7 +15,7 @@ export default function BlockAgenda({ events }) {
 		<section id="agenda" className="py-10 lg:py-20">
 			<div className="md:container md:mx-auto">
 				<BlockTitle
-					title="Agenda"
+					title="Actualités"
 					iconPicture={{ backgroundImage: "url('pop-corn.png')" }}
 				/>
 				<div className="lg:flex lg:flex-row lg:flex-nowrap lg:justify-around lg:items-center lg:text-xl">
@@ -26,7 +26,8 @@ export default function BlockAgenda({ events }) {
 									key={index}
 									url={event.url}
 									platform={event.platform}
-									datetime={event.datetime}
+									startDate={event.startDate}
+									endDate={event.endDate}
 									description={event.description}
 									title={event.name}
 								/>
