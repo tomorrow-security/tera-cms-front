@@ -71,6 +71,7 @@ module.exports = {
       },
       colors: {
         "tc-blue": "#04021D",
+        "tc-blue-navy": "#10097d",
         "tc-red": "#E03300",
         "tc-blue-medium": "#2d2966",
         "tc-red-medium": "#dd522c",
@@ -136,6 +137,7 @@ module.exports = {
       borderOpacity: ["disabled"],
       borderStyle: ["focus"],
       borderWidth: ["group-hover", "hover", "focus"],
+      display: ["group-hover"],
       fontWeight: ["hover", "active", "focus"],
       fontSize: ["hover"],
       fontStyle: ["hover", "focus"],

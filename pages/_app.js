@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }) {
 				</Head>
 				<div className="flex flex-col min-h-screen">
 					<Header />
-					<div className="flex-grow">
+					<div className="flex-grow z-0">
 						<Component {...pageProps} />
 					</div>
 					<Footer />
