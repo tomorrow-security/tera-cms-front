@@ -16,7 +16,7 @@ export default function Hero() {
 						<IconLogoBig />
 					</div>
 					<div className="mt-24 font-semibold text-center">
-						<Link href="/program">
+						<Link href="/brochure">
 							<a className="text-base font-bold uppercase align-text-top md:text-2xl animate-pulse">
 								<div className="box-border w-4/5 p-4 mx-auto mt-8 tracking-normal text-white transition-colors duration-700 rounded-full group 2xl:w-9/12 xl:mb-12 md:mt-0 lg:mt-20 xl:mt-10 2xl:mt-40 bg-tc-blue hover:bg-tc-blue-navy">
 									<div className="flex items-center justify-evenly animate-pulse group-hover:animate-none">
