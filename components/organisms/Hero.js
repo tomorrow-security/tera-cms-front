@@ -1,3 +1,4 @@
+import { ArrowSmRightIcon } from '@heroicons/react/outline'
 import Link from "next/link"
 
 import IconLogoBig from "../atoms/IconLogoBig"
@@ -17,7 +18,7 @@ export default function Hero() {
 					<a className="group p-4 bg-tc-blue hover:bg-tc-blue-navy rounded-full">
 						<div className="flex items-center justify-evenly text-center md:text-2xl text-white font-bold uppercase animate-pulse hover:animate-none transition-colors duration-700">
 							<p>Découvrez nos formations hybrides en informatique</p>
-							<span className="pl-2 sm:pl-4 md:pl-6 text-2xl sm:text-4xl md:text-5xl">&rarr;</span>
+							<ArrowSmRightIcon className="w-10 h-10" />
 						</div>
 					</a>
 				</Link>
