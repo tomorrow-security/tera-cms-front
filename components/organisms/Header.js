@@ -120,7 +120,7 @@ export default function Header() {
 
 	return (
 		<header className="text-white bg-tc-blue border-b-2 border-tc-red">
-			<div className="md:container md:mx-auto">
+			<div className="xl:container xl:mx-auto">
 				<div className="relative flex flex-col xl:flex-row items-center justify-between">
 
 					{/* Logo and Mobile button */}
