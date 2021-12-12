@@ -70,7 +70,8 @@ module.exports = {
         scroll: "scroll 40s linear infinite",
       },
       colors: {
-        "tc-blue": "#04021D",
+        "tc-lavender": "#F5F5FE",
+        "tc-blue": "#04021d",
         "tc-blue-navy": "#10097d",
         "tc-red": "#E03300",
         "tc-blue-medium": "#2d2966",
