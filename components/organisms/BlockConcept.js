@@ -43,7 +43,7 @@ export default function BlockConcept() {
                 validées par un agrément officiel d'Etat (RNPC niveau 6 et 7).
                 Nos cursus de 3 à 5 années (BAC+3 et BAC+5) orientés sur les
                 technologies de l'information, réalisés et validés par des
-                professionnels du secteur te permettront d'acquérir non
+                professionnels du secteur vous permettront d'acquérir non
                 seulement de fortes compétences techniques, mais aussi des
                 méthodes d'organisation, de collaboration et de communication
                 indispensables à toute carrière professionnelle !
@@ -54,11 +54,11 @@ export default function BlockConcept() {
               <Paragraph gutterBottom>
                 <Strong>
                   La formation Tera Campus peut être suivie de n'importe où avec
-                  un seul pré-requis : un ordinateur et une connexion
+                  un seul pré-requis : un ordinateur, une webcam et une connexion
                   internet.&nbsp;
                 </Strong>
-                Tous les cours seront animés par un formateur qualifié. Oublie
-                les déplacements, cette fois-ci c'est l'école qui vient à toi !
+                Tous les cours seront animés par un formateur qualifié. Oubliez
+                les déplacements, cette fois-ci c'est l'école qui vient à vous !
               </Paragraph>
             </li>
             <li>
@@ -67,13 +67,13 @@ export default function BlockConcept() {
                 Tout au long de l'année, Tera Campus organise trois Bivouacs de
                 deux semaines complètes.&nbsp;
                 <Strong>
-                  En octobre, en février puis en mai, tu rejoindras les autres
+                  En octobre, en janvier puis en mai, vous rejoindrez les autres
                   étudiants de Tera Campus pour partager, créer et construire un
                   esprit d'équipe au travers d'exercices de team building et de
                   Hackathons.&nbsp;
                 </Strong>
-                En améliorant la cohésion de groupe, nous améliorons aussi ton
-                apprentissage pour mieux t'intégrer dans le monde professionnel.
+                En améliorant la cohésion de groupe, nous améliorons aussi votre
+                apprentissage pour mieux vous intégrer dans le monde professionnel.
               </Paragraph>
             </li>
           </ul>
