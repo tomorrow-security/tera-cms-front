@@ -41,7 +41,7 @@ const menu = [
 		url: '/#agenda',
 	},
 	{
-		label: 'Rejoins-nous',
+		label: 'Rejoignez nous',
 		url: '/join',
 	},
 ]
