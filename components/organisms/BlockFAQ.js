@@ -44,7 +44,7 @@ export default function BlockFaq({ questions }) {
 			<section id="faq" className="py-10 md:py-20">
 				<div className="md:container md:mx-auto">
 					<BlockTitle
-						title="Les réponses à tes questions"
+						title="Les réponses à vos questions"
 						iconPicture={{ backgroundImage: "url('faq.png')" }}
 					/>
 					<div className="grid grid-cols-1 gap-8 mx-4 lg:grid-cols-2">
