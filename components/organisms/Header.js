@@ -13,6 +13,10 @@ const menu = [
 				url: '/#concept',
 			},
 			{
+				label: 'Nos guides',
+				url: '/guides',
+			},
+			{
 				label: 'FAQ',
 				url: '/#faq',
 			},
@@ -35,10 +39,6 @@ const menu = [
 	{
 		label: 'Actualités',
 		url: '/#agenda',
-	},
-	{
-		label: 'Nos guides',
-		url: '/guides',
 	},
 	{
 		label: 'Rejoins-nous',
