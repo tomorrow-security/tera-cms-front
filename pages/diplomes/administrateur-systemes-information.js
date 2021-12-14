@@ -29,7 +29,7 @@ export default function AdministrateurSystemesInformation() {
                 <span>Titre RNCP de niveau 6</span>
               </div>
             </div>
-            <h1 className="my-8 text-center text-3xl lg:text-5xl font-bold">Administrateur des Systèmes d{"'"}Information</h1>
+            <h1 className="my-8 text-center text-2xl lg:text-4xl font-bold">Administrateur des Systèmes d{"'"}Information</h1>
             <div className="mt-8 mb-4 p-4 flex flex-col bg-tc-lavender rounded text-center">
               <p className="md:text-xl">
                 Cursus en initial et formation en alternance la 3ème année :
@@ -47,6 +47,75 @@ export default function AdministrateurSystemesInformation() {
         <div className="bg-tc-blue-navy">
           <div className="md:container md:mx-auto py-4 md:py-8">
               <p className="text-center text-white text-xl md:text-3xl font-bold">Objectifs de compétences en fin de cursus</p>
+          </div>
+        </div>
+
+        <div className="pt-4 md:pt-8 lg:py-20">
+          <div className="md:container md:mx-auto">
+            <div className="flex flex-col lg:flex-row gap-4">
+              <div className="px-8 lg:w-1/2 flex flex-col justify-center">
+                <span className="text-lg md:text-2xl font-bold">Administrer la mise en œuvre du projet informatique</span>
+                <ul className="mt-4 md:mt-8 list-disc text-sm md:text-base">
+                  <li>Prévention des problèmes</li>
+                  <li>Gestion des erreurs informatiques</li>
+                  <li>Pilotage du support utilisateur</li>
+                  <li>Définition du processus d{"'"}assistance</li>
+                  <li>Mobilisation des compétences informatiques nécessaires</li>
+                  <li>Préparation des tests d'acceptation</li>
+                  <li>Validation et tests</li>
+                  <li>Préparation des documents supports</li>
+                  <li>Conduite des changements</li>
+                  <li>Formation des équipes</li>
+                  <li>Automatisation</li>
+                  <li>Fiabilisation du système informatique</li>
+                </ul>
+              </div>
+              <div
+                className="lg:w-1/2 h-48 md:h-96 bg-center bg-cover lg:rounded-3xl lg:shadow-lg"
+                style={{ backgroundImage: "url('https://source.unsplash.com/random/350x350?animal')" }}
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-4 md:pt-8 lg:py-20 md:bg-tc-lavender">
+          <div className="md:container md:mx-auto">
+            <div className="flex flex-col lg:flex-row-reverse gap-4">
+              <div className="px-8 lg:w-1/2 flex flex-col justify-center">
+                <span className="text-lg md:text-2xl font-bold">Maintenir le système informatique en condition opérationnelle optimale</span>
+                <ul className="mt-4 md:mt-8 list-disc text-sm md:text-base">
+                  <li>Prévention des risques informatiques</li>
+                  <li>Gestion de la sécurité de l{"'"}information</li>
+                  <li>Veille de la fiabilité du système informatique</li>
+                  <li>Gestion de l{"'"}information et de la connaissance</li>
+                  <li>Mise en place des ressources informatiques</li>
+                </ul>
+              </div>
+              <div
+                className="lg:w-1/2 h-48 md:h-96 bg-center bg-cover lg:rounded-3xl lg:shadow-lg"
+                style={{ backgroundImage: "url('https://source.unsplash.com/random/350x350?animal')" }}
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-4 md:pt-8 lg:py-20">
+          <div className="md:container md:mx-auto">
+            <div className="flex flex-col lg:flex-row gap-4">
+              <div className="px-8 lg:w-1/2 flex flex-col justify-center">
+                <span className="text-lg md:text-2xl font-bold">Faire évoluer le système informatique</span>
+                <ul className="mt-4 md:mt-8 list-disc text-sm md:text-base">
+                  <li>Veille technologique</li>
+                  <li>Gestion de projet</li>
+                  <li>Planification des opérations de maintenance informatiques</li>
+                  <li>Pilotage du respect des délais du projet informatique</li>
+                </ul>
+              </div>
+              <div
+                className="lg:w-1/2 h-48 md:h-96 bg-center bg-cover lg:rounded-3xl lg:shadow-lg"
+                style={{ backgroundImage: "url('https://source.unsplash.com/random/350x350?animal')" }}
+              />
+            </div>
           </div>
         </div>
 
