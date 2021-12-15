@@ -34,10 +34,6 @@ const menu = [
 				label: "Bac +3",
 				url: '/diplomes/administrateur-systemes-information',
 			},
-			{
-				label: 'Les carrières',
-				url: '/career',
-			},
 		]
 	},
 	{
