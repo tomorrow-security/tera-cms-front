@@ -58,7 +58,7 @@ export default function AdministrateurSystemesInformation() {
               La validation peut s'acquérir par bloc de compétences.
             </p>
 
-            <div className="mt-8 grid lg:grid-cols-3 gap-4">
+            <div className="mt-8 grid lg:grid-cols-3 gap-8 lg:gap-4">
 
               <div className="p-2 flex flex-col flex-grow bg-tc-lavender rounded">
                 <span className="text-xs">133 heures, 20 crédits ECTS</span>
@@ -135,7 +135,65 @@ export default function AdministrateurSystemesInformation() {
           </div>
         </div>
 
+        <div className="bg-tc-blue-navy">
+          <div className="md:container md:mx-auto py-4 md:py-8">
+              <p className="text-center text-white text-xl md:text-3xl font-bold">Déroulement</p>
+          </div>
+        </div>
+
+        <div className="py-4 md:py-8 lg:py-20">
+          <div className="md:container md:mx-auto px-4">
+            <div className="flex flex-col lg:flex-row gap-8 lg:gap-4">
+              <div className="lg:w-1/3">
+                <Cardibee
+                  title="Prérequis"
+                  items={[
+                    "Avoir validé une 2ème année (BAC+2) en informatique ou une formation équivalente en France ou à l'international",
+                    "Avoir un BAC et une expérience professionnelle à l'appui en informatique (après étude du dossier par la Direction Pédagogique)",
+                  ]}
+                />
+              </div>
+              <div className="lg:w-1/3">
+                <Cardibee
+                  title="Méthodes pédagogiques"
+                  items={[
+                    "Cours théoriques et exercices d'application en face à face pédagogique en télé-présentiel, dispensés par des consultants qui exercent en entreprise",
+                    "Projets collaboratifs supervisés par l'équipe pédagogique",
+                    "Périodes d'immersion technologique (bivouacs, projets, hackathons, ...)",
+                    "Périodes professionnelles en entreprises",
+                  ]}
+                />
+              </div>
+              <div className="lg:w-1/3">
+                <Cardibee
+                  title="Modalités d'évaluation"
+                  items={[
+                    "Travaux de groupe ou individuels",
+                    "Projets techniques",
+                    "Projets inter-matières",
+                    "Hackathons",
+                    "Projets professionnels"
+                  ]}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
       </main>
     </>
   )
 }
+
+const Cardibee = ({ title, items }) => (
+  <div className="">
+    <div className="text-xl font-bold">{title}</div>
+    <ul className="mt-4 px-4 list-disc">
+      {
+        items.map(item => (
+          <li key={`list-${item}`}>{item}</li>
+        ))
+      }
+    </ul>
+  </div>
+)
