@@ -50,13 +50,23 @@ export default function AdministrateurSystemesInformation() {
           </div>
         </div>
 
-        <div className="pt-4 md:pt-8 lg:py-20">
-          <div className="md:container md:mx-auto">
-            <div className="flex flex-col lg:flex-row gap-4">
-              <div className="px-8 lg:w-1/2 flex flex-col justify-center">
-                <span className="text-lg md:text-2xl font-bold">Administrer la mise en œuvre du projet informatique</span>
-                <ul className="mt-4 md:mt-8 list-disc text-sm md:text-base">
-                  <li>Prévention des problèmes</li>
+        <div className="py-4 md:py-8 lg:py-20">
+          <div className="md:container md:mx-auto px-4">
+            <p className="text-justify">
+              Le titre Administrateur des Systèmes d{"'"}Information se compose de trois blocs d'activités types,
+              appelés "blocs de compétences". Ces blocs détaillent les compétences nécessaires à la validation du titre.
+              La validation peut s'acquérir par bloc de compétences.
+            </p>
+
+            <div className="mt-8 grid lg:grid-cols-3 gap-4">
+
+              <div className="p-2 flex flex-col flex-grow bg-tc-lavender rounded">
+                <span className="text-xs">133 heures, 20 crédits ECTS</span>
+                <span className="mt-4 text-xl font-bold">Administrer la mise en œuvre du projet informatique</span>
+              </div>
+
+              <div className="lg:row-start-2 flex flex-col gap-4">
+                <ul className="px-4 list-disc">
                   <li>Gestion des erreurs informatiques</li>
                   <li>Pilotage du support utilisateur</li>
                   <li>Définition du processus d{"'"}assistance</li>
@@ -69,53 +79,59 @@ export default function AdministrateurSystemesInformation() {
                   <li>Automatisation</li>
                   <li>Fiabilisation du système informatique</li>
                 </ul>
+                <div className="text-md font-bold">Modules enseignés :</div>
+                <ul className="px-4 list-disc">
+                  <li>Développement mobile</li>
+                  <li>Architecture Cloud</li>
+                  <li>Projet professionnel</li>
+                </ul>
               </div>
-              <div
-                className="lg:w-1/2 h-48 md:h-96 bg-center bg-cover lg:rounded-3xl lg:shadow-lg"
-                style={{ backgroundImage: "url('https://source.unsplash.com/random/350x350?animal')" }}
-              />
-            </div>
-          </div>
-        </div>
 
-        <div className="pt-4 md:pt-8 lg:py-20 md:bg-tc-lavender">
-          <div className="md:container md:mx-auto">
-            <div className="flex flex-col lg:flex-row-reverse gap-4">
-              <div className="px-8 lg:w-1/2 flex flex-col justify-center">
-                <span className="text-lg md:text-2xl font-bold">Maintenir le système informatique en condition opérationnelle optimale</span>
-                <ul className="mt-4 md:mt-8 list-disc text-sm md:text-base">
-                  <li>Prévention des risques informatiques</li>
+              <div className="p-2 flex flex-col flex-grow bg-tc-lavender rounded">
+                <span className="text-xs">252 heures, 20 crédits ECTS</span>
+                <span className="mt-4 text-xl font-bold">Maintenir le système informatique en condition opérationnelle optimale</span>
+              </div>
+
+              <div className="lg:row-start-2 flex flex-col gap-4">
+                <ul className="px-4 list-disc">
+                 <li>Prévention des risques informatiques</li>
                   <li>Gestion de la sécurité de l{"'"}information</li>
                   <li>Veille de la fiabilité du système informatique</li>
                   <li>Gestion de l{"'"}information et de la connaissance</li>
                   <li>Mise en place des ressources informatiques</li>
                 </ul>
+                <div className="text-md font-bold">Modules enseignés :</div>
+                <ul className="px-4 list-disc">
+                  <li>Bases de Données Avancées</li>
+                  <li>Architecture réseau</li>
+                  <li>Expertise serveur</li>
+                  <li>Cyber sécurité : Defense in depth</li>
+                </ul>
               </div>
-              <div
-                className="lg:w-1/2 h-48 md:h-96 bg-center bg-cover lg:rounded-3xl lg:shadow-lg"
-                style={{ backgroundImage: "url('https://source.unsplash.com/random/350x350?animal')" }}
-              />
-            </div>
-          </div>
-        </div>
 
-        <div className="pt-4 md:pt-8 lg:py-20">
-          <div className="md:container md:mx-auto">
-            <div className="flex flex-col lg:flex-row gap-4">
-              <div className="px-8 lg:w-1/2 flex flex-col justify-center">
-                <span className="text-lg md:text-2xl font-bold">Faire évoluer le système informatique</span>
-                <ul className="mt-4 md:mt-8 list-disc text-sm md:text-base">
+              <div className="p-2 flex flex-col flex-grow bg-tc-lavender rounded">
+                <span className="text-xs">252 heures, 20 crédits ECTS</span>
+                <span className="mt-4 text-xl font-bold">Faire évoluer le système informatique</span>
+              </div>
+
+              <div className="lg:row-start-2 flex flex-col gap-4">
+                <ul className="px-4 list-disc">
                   <li>Veille technologique</li>
                   <li>Gestion de projet</li>
                   <li>Planification des opérations de maintenance informatiques</li>
                   <li>Pilotage du respect des délais du projet informatique</li>
                 </ul>
+                <div className="text-md font-bold">Modules enseignés :</div>
+                <ul className="px-4 list-disc">
+                  <li>Data Science : Intelligence Artificielle</li>
+                  <li>Savoir-être {"&"} Intelligence Emotionnelle</li>
+                  <li>Gestion de projets</li>
+                  <li>Anglais</li>
+                </ul>
               </div>
-              <div
-                className="lg:w-1/2 h-48 md:h-96 bg-center bg-cover lg:rounded-3xl lg:shadow-lg"
-                style={{ backgroundImage: "url('https://source.unsplash.com/random/350x350?animal')" }}
-              />
+
             </div>
+
           </div>
         </div>
 
