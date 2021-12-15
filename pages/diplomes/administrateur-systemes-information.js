@@ -14,6 +14,14 @@ const Cardibee = ({ title, items }) => (
   </div>
 )
 
+const SeparatorWithTitle = ({ title }) => (
+  <div className="bg-tc-blue-navy">
+    <div className="md:container md:mx-auto py-4 md:py-8">
+        <p className="text-center text-white text-xl md:text-3xl font-bold">{title}</p>
+    </div>
+  </div>
+)
+
 const pageTitle = "Administrateur des Systèmes d'Information - Tera Campus"
 const pageDescription = "Diplôme BAC+3 administrateur des systèmes d'information"
 const pageUrl = "https://tera-campus.com/diplomes/administrateur-systemes-information"
@@ -33,7 +41,7 @@ export default function AdministrateurSystemesInformation() {
 
         <img src="https://res.cloudinary.com/teracampus/image/upload/q_auto:low/v1638972870/cms/datacenter_p6szin" className="w-full h-96 object-cover object-center" />
 
-				<div className="md:container md:mx-auto md:py-10 flex justify-center">
+				<div className="md:container md:mx-auto md:py-16 flex justify-center">
           <div className="w-max md:mx-4 p-4 lg:p-8 md:border md:shadow-lg rounded">
             <div className="relative mt-8 mb-8 lg:mb-16 flex items-center">
               <AcademicCapIcon className="absolute left-0 right-0 lg:m-auto w-16 lg:w-20 h-16 lg:h-20 p-2 text-tc-blue-navy border-2 border-tc-blue-navy rounded-full" />
@@ -57,13 +65,9 @@ export default function AdministrateurSystemesInformation() {
           </div>
         </div>
 
-        <div className="bg-tc-blue-navy">
-          <div className="md:container md:mx-auto py-4 md:py-8">
-              <p className="text-center text-white text-xl md:text-3xl font-bold">Objectifs de compétences en fin de cursus</p>
-          </div>
-        </div>
+        <SeparatorWithTitle title="Objectifs de compétences en fin de cursus" />
 
-        <div className="py-4 md:py-8 lg:py-20">
+        <div className="py-8 md:py-16">
           <div className="md:container md:mx-auto px-4">
             <p className="text-justify">
               Le titre Administrateur des Systèmes d{"'"}Information se compose de trois blocs d'activités types,
@@ -148,13 +152,9 @@ export default function AdministrateurSystemesInformation() {
           </div>
         </div>
 
-        <div className="bg-tc-blue-navy">
-          <div className="md:container md:mx-auto py-4 md:py-8">
-              <p className="text-center text-white text-xl md:text-3xl font-bold">Déroulement</p>
-          </div>
-        </div>
+        <SeparatorWithTitle title="Déroulement" />
 
-        <div className="py-4 md:py-8 lg:py-20">
+        <div className="py-8 md:py-16">
           <div className="md:container md:mx-auto px-4">
             <div className="flex flex-col lg:flex-row gap-8 lg:gap-4">
               <div className="lg:w-1/3">
@@ -193,13 +193,9 @@ export default function AdministrateurSystemesInformation() {
           </div>
         </div>
 
-        <div className="bg-tc-blue-navy">
-          <div className="md:container md:mx-auto py-4 md:py-8">
-              <p className="text-center text-white text-xl md:text-3xl font-bold">Carrières</p>
-          </div>
-        </div>
+        <SeparatorWithTitle title="Carrières" />
 
-        <div className="py-4 md:py-8 lg:py-20">
+        <div className="py-8 md:py-16">
           <div className="md:container md:mx-auto px-4">
             <div className="flex flex-col lg:flex-row gap-4">
               <div className="lg:w-1/2 flex flex-col justify-center">
