@@ -1,6 +1,19 @@
 import { AcademicCapIcon } from '@heroicons/react/outline'
 import Head from 'next/head'
 
+const Cardibee = ({ title, items }) => (
+  <div className="">
+    <div className="text-xl font-bold">{title}</div>
+    <ul className="mt-4 px-4 list-disc">
+      {
+        items.map(item => (
+          <li key={`list-${item}`}>{item}</li>
+        ))
+      }
+    </ul>
+  </div>
+)
+
 const pageTitle = "Administrateur des Systèmes d'Information - Tera Campus"
 const pageDescription = "Diplôme BAC+3 administrateur des systèmes d'information"
 const pageUrl = "https://tera-campus.com/diplomes/administrateur-systemes-information"
@@ -180,20 +193,134 @@ export default function AdministrateurSystemesInformation() {
           </div>
         </div>
 
+        <div className="bg-tc-blue-navy">
+          <div className="md:container md:mx-auto py-4 md:py-8">
+              <p className="text-center text-white text-xl md:text-3xl font-bold">Carrières</p>
+          </div>
+        </div>
+
+        <div className="py-4 md:py-8 lg:py-20">
+          <div className="md:container md:mx-auto px-4">
+            <div className="flex flex-col lg:flex-row gap-4">
+              <div className="lg:w-1/2 flex flex-col justify-center">
+                <span className="text-lg md:text-2xl font-bold">Développeur web</span>
+                <div className="mt-4 md:mt-8 text-justify">
+                  <p>
+                    Le Développeur web est en charge du développement informatique de sites, plateformes web et applications.
+                    A la demande d'un client ou d'une entreprise, il conçoit des sites sur mesure et adapte des solutions techniques
+                    tout en se basant sur un cahier des charges. Afin d'être apte à réaliser ces missions, le Développeur Web devra
+                    parfaitement connaître les langages fondamentaux tels que Html, CSS, Javascript, Python, PHP et savoir utiliser
+                    et gérer des bases de données. Le monde du web évolue constamment, le Développeur Web devra sans cesse s'adapter
+                    aux nouvelles techniques et aux besoins spécifiques de sa clientèle.
+                  </p>
+                  <p className="mt-4">
+                    Rémunération moyenne : À partir de 36k€ pour un débutant et 65k€ pour un profil senior
+                  </p>
+                  <p>
+                    Durée de formation : 3 ans minimum (BAC+3)
+                  </p>
+                </div>
+                  
+              </div>
+              <div
+                className="lg:w-1/2 h-48 md:h-96 bg-center bg-cover rounded-lg shadow-lg"
+                style={{ backgroundImage: "url('https://source.unsplash.com/random/350x350?pig')" }}
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="py-4 md:py-8 lg:py-20 bg-tc-lavender">
+          <div className="md:container md:mx-auto px-4">
+            <div className="flex flex-col lg:flex-row-reverse gap-4">
+              <div className="lg:w-1/2 flex flex-col justify-center">
+                <span className="text-lg md:text-2xl font-bold">Administrateur Cloud</span>
+                <div className="mt-4 md:mt-8 text-justify">
+                  <p>
+                    L'Administrateur Cloud est responsable de la configuration et de l'administration des systèmes et réseaux dans une
+                    entreprise, c'est un spécialiste de la technique. Avec ses connaissances, il est en capacité de gérer des serveurs,
+                    de construire et maintenir les réseaux de l'entreprise. Un Administrateur Cloud aime travailler en équipe et communique
+                    facilement avec les utilisateurs et les clients. Il s'agit d'une personne polyvalente et rigoureuse qui saura également
+                    résoudre des incidents pour optimiser le fonctionnement des infrastructures.
+                  </p>
+                  <p className="mt-4">
+                    Rémunération moyenne : À partir de 36k€ pour un débutant et 50k€ pour un profil senior
+                  </p>
+                  <p>
+                    Durée de formation : 3 ans minimum (BAC+3)
+                  </p>
+                </div>
+                  
+              </div>
+              <div
+                className="lg:w-1/2 h-48 md:h-96 bg-center bg-cover rounded-lg shadow-lg"
+                style={{ backgroundImage: "url('https://source.unsplash.com/random/350x350?sheep')" }}
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="py-4 md:py-8 lg:py-20">
+          <div className="md:container md:mx-auto px-4">
+            <div className="flex flex-col lg:flex-row gap-4">
+              <div className="lg:w-1/2 flex flex-col justify-center">
+                <span className="text-lg md:text-2xl font-bold">Product Owner</span>
+                <div className="mt-4 md:mt-8 text-justify">
+                  <p>
+                    Le Product Owner est le responsable de la définition et de la conception d'un produit. Il joue un rôle essentiel depuis la
+                    définition jusqu'au lancement du produit tout en passant par son amélioration. Le Product Owner se base sur plusieurs méthodologies
+                    qui permettent une gestion de projet évolutive et adaptative ainsi que la possibilité de faire face aux imprévus. Afin de concevoir
+                    le produit, il doit en outre posséder une compréhension technique. Il s'agit d'un véritable Chef d'orchestre qui coordonne la partie
+                    technique avec les équipes et les échanges clients.
+                  </p>
+                  <p className="mt-4">
+                    Rémunération moyenne : À partir de 40k€ pour un débutant et 65k€ pour un profil senior
+                  </p>
+                  <p>
+                    Durée de formation : 3 ans minimum (BAC+3)
+                  </p>
+                </div>
+                  
+              </div>
+              <div
+                className="lg:w-1/2 h-48 md:h-96 bg-center bg-cover rounded-lg shadow-lg"
+                style={{ backgroundImage: "url('https://source.unsplash.com/random/350x350?cat')" }}
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="py-4 md:py-8 lg:py-20 bg-tc-lavender">
+          <div className="md:container md:mx-auto px-4">
+            <div className="flex flex-col lg:flex-row-reverse gap-4">
+              <div className="lg:w-1/2 flex flex-col justify-center">
+                <span className="text-lg md:text-2xl font-bold">Chef de projet</span>
+                <div className="mt-4 md:mt-8 text-justify">
+                  <p>
+                    Le Chef de projet a la responsabilité de coordonner et de diriger un projet du début à la fin. Il doit veiller au budget mais aussi
+                    au respect des délais. Son rôle est ainsi à la fois stratégique et opérationnel. Pour piloter le projet et atteindre les objectifs
+                    visés, le Chef de Projet devra être organisé et très communicatif. La coordination, la délégation et le relationnel sont des atouts
+                    indispensables pour ce métier. En ayant ces qualités, le Chef de Projet sera en capacité d'animer une équipe, de dialoguer avec les
+                    clients et de mener à bien sa mission.
+                  </p>
+                  <p className="mt-4">
+                    Rémunération moyenne : À partir de 40k€ pour un débutant et 55k€ pour un profil senior
+                  </p>
+                  <p>
+                    Durée de formation : 3 ans minimum (BAC+3)
+                  </p>
+                </div>
+                  
+              </div>
+              <div
+                className="lg:w-1/2 h-48 md:h-96 bg-center bg-cover rounded-lg shadow-lg"
+                style={{ backgroundImage: "url('https://source.unsplash.com/random/350x350?dog')" }}
+              />
+            </div>
+          </div>
+        </div>
+
       </main>
     </>
   )
 }
-
-const Cardibee = ({ title, items }) => (
-  <div className="">
-    <div className="text-xl font-bold">{title}</div>
-    <ul className="mt-4 px-4 list-disc">
-      {
-        items.map(item => (
-          <li key={`list-${item}`}>{item}</li>
-        ))
-      }
-    </ul>
-  </div>
-)
