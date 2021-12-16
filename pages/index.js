@@ -7,31 +7,31 @@ import BlockConcept from "../components/organisms/BlockConcept"
 import BlockFaq from "../components/organisms/BlockFAQ"
 import Hero from "../components/organisms/Hero"
 
-const pageTitle = "École supérieure d'informatique - Tera Campus"
+const pageTitle = "École hybride supérieure d'informatique - Tera Campus"
 const pageDescription =
-  "École supérieure d'informatique, Tera Campus propose des formations diplômantes Bac+3 et Bac+5 en développement informatique et infrastructure."
+  "École hybride supérieure d'informatique, Tera Campus propose des formations diplômantes Bac+3 et Bac+5 en développement informatique et infrastructure."
 const pageUrl = "https://tera-campus.com"
 
-function Card({ title, content }) {
+function Card({ title, content, imageUrl }) {
   return (
     <div className="w-full bg-white rounded-3xl shadow-lg overflow-hidden">
-      <img src="https://source.unsplash.com/random/800x800?landscape" className="h-96 sm:rounded-t-3xl object-cover object-center w-full" />
+      <img src={imageUrl} className="h-96 sm:rounded-t-3xl object-cover object-center w-full" />
       <div className="p-4">
-        <h5 className="text-xl font-semibold mb-2">{title}</h5>
-        <p className="mb-4 text-justify">{content}</p>
+        <h5 className="text-lg md:text-xl font-semibold mb-2">{title}</h5>
+        <p className="mb-4 text-sm md:text-base text-justify">{content}</p>
       </div>
     </div>
   )
 }
 
-function CardOverImage({ imageUrl, imageAlt, chipPrimary, chipSecondary, title, content }) {
+function CardOverImage({ imageUrl, imageAlt, chipPrimary, chipSecondary, title, content, cta }) {
   return (
     <div className="antialiased text-gray-900">
       <div>
         <img
           src={imageUrl}
           alt={imageAlt}
-          className="w-full h-72 lg:rounded-lg lg:shadow-md object-cover object-center"
+          className="w-full h-72 object-cover object-center lg:rounded-lg"
         />
         <div className="relative px-4 -mt-16">
           <div className="bg-white p-6 rounded-lg shadow-lg">
@@ -46,15 +46,26 @@ function CardOverImage({ imageUrl, imageAlt, chipPrimary, chipSecondary, title, 
             <h4 className="mt-8 text-center text-xl font-bold uppercase leading-tight">
               { title }
             </h4>
-            <p className="mt-8 text-center truncate">
+            <p className="mt-8 text-center">
               { content }
             </p>
+            <div className="flex justify-center">
+              { cta }
+            </div>
           </div>
         </div>
       </div>
     </div>
   )
 }
+
+const SeparatorWithTitle = ({ title }) => (
+  <div className="bg-tc-blue-navy">
+    <div className="md:container md:mx-auto py-4 md:py-8">
+        <p className="text-center text-white text-xl sm:text-2xl md:text-4xl font-bold">{title}</p>
+    </div>
+  </div>
+)
 
 function Index({ agenda, questions }) {
   return (
@@ -77,55 +88,74 @@ function Index({ agenda, questions }) {
             <div className="flex flex-col lg:flex-row gap-8">
               <div className="w-full lg:w-1/2">
                 <CardOverImage
-                  imageUrl="https://source.unsplash.com/random/350x350?fuit"
+                  imageUrl="https://res.cloudinary.com/teracampus/image/upload/q_auto:low/v1638972870/cms/man-working_ltmrf6"
                   imageAlt="random image"
                   chipPrimary="Bac +3"
                   chipSecondary="Titre RNCP de niveau 6"
                   title="Administrateur des Systèmes d'Information"
-                  content="Parcours en alternance"
+                  content="Donnez de la hauteur à vos ambitions en devenant un administrateur polyvalent et reconnu du monde de la tech grâce au Bachelor ASI."
+                  cta={
+                    <Link href="/diplomes/administrateur-systemes-information">
+                      <a className="mt-8 p-4 text-center font-semibold bg-yellow-300 rounded shadow-lg">
+                        En savoir plus
+                      </a>
+                    </Link>
+                  }
                 />
               </div>
-              <div className="w-full lg:w-1/2">
+              <div className="relative w-full lg:w-1/2">
                 <CardOverImage
-                  imageUrl="https://source.unsplash.com/random/350x350?animal"
+                  imageUrl="https://res.cloudinary.com/teracampus/image/upload/q_auto:low/v1638972870/cms/woman-in-datacenter_cgxeck"
                   imageAlt="random image"
                   chipPrimary="Bac +5"
                   chipSecondary="Titre RNCP de niveau 7"
                   title="Expert des Systèmes d'Information"
-                  content="Parcours en alternance"
+                  content="Atteignez le sommet de votre potentiel en acquérant les compétences d'encadrement et d'expertise informatique dispensés dans le cursus ESI."
+                  cta={
+                    <div className="mt-8 p-4 text-center font-semibold bg-red-300 rounded cursor-default">
+                      Ouverture en 2022
+                    </div>
+                  }
                 />
               </div>
             </div>
           </div>
         </section>
 
-        <section className="bg-tc-blue-navy">
-          <div className="py-24 md:container md:mx-auto">
-            <div className="text-center text-white">
-              <p className="mb-8 text-4xl font-bold">Avec l'alternance, étudier et être salarié c'est possible !</p>
-              <Link href="#">
-                <a className="p-4 border border-white rounded bg-white text-tc-blue-navy hover:bg-tc-blue-navy hover:text-white font-bold">Je me renseigne</a>
-              </Link>
-            </div>
-          </div>
-        </section>
+        <SeparatorWithTitle title="Avec l'alternance, étudier et être salarié c'est possible !" />
 
         <section id="bivouacs" className="py-4 md:py-10 lg:py-20 bg-tc-lavender">
           <div className="md:container md:mx-auto">
-            <div className="p-4 lg:p-0 flex flex-col lg:flex-row-reverse gap-8">
+            <div className="mx-4 py-4 lg:py-0 flex flex-col lg:flex-row-reverse gap-4 md:gap-0">
               {/* Left */}
               <div className="w-full lg:w-1/2 flex flex-col justify-center text-justify lg:text-left">
                 <div className="text-lg lg:text-xl font-bold text-tc-red uppercase">Bivouacs</div>
-                <div className="mt-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">6 semaines complètes en présentiel</div>
-                <p className="mt-8">Avec Tera Campus vous partirez en aventure au mois d'octobre, janvier et mai. Ces séminaires sont entièrement financés par l'école.</p>
-                <p className="mt-4">Les lieux de rendez-vous des séminaires sont définis par Tera Campus à l'avance, et sont entièrement financés par l'école.</p>
+                <div className="mt-2 text-xl sm:text-2xl md:text-4xl font-bold">6 semaines complètes en présentiel</div>
+                <p className="mt-4 md:mt-8 text-justify">
+                  Tera Campus vous fait partir à l'aventure lors de périodes complètes en présentiel nommées
+                  "bivouacs". L'objectif premier de ces périodes est de permettre aux étudiants de se rencontrer et de développer leurs
+                  "soft-skills", tout en échangeant et en travaillant sur des projets professionnels communs.
+                </p>
+                <p className="mt-4 text-justify">
+                  Les Bivouacs Tera Campus sont au nombre de trois pour une durée de 2 semaines chacun :
+                  <ul className="list-disc list-inside">
+                    <li>Au mois d'octobre, afin de bien entamer l'année</li>
+                    <li>Au mois de janvier, pour faire le point sur les projets</li>
+                    <li>Au mois de mai, afin de préparer la dernière ligne droite</li>
+                  </ul>
+                </p>
+                <p className="mt-4 text-justify">
+                  Le lieu de chaque Bivouac est défini à l'avance par l'équipe de Tera Campus. Ces séminaires font partie intégrante du
+                  programme et ne requièrent aucun coût supplémentaire.
+                </p>
               </div>
               {/* Left End */}
               {/* Right */}
               <div className="w-full lg:w-1/2 lg:px-16 xl:px-32 flex justify-center">
                 <Card
                   title={`Souvenir d'un bivouac en Ardèche`}
-                  content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure sequi tenetur, voluptatibus harum consequuntur alias quaerat excepturi temporibus nisi commodi, ex, ratione quae soluta! Saepe alias dolores dolorem assumenda totam."
+                  content="Pour notre premier Bivouac de l'année 2021-2022, l'ensemble des étudiants et de l'équipe pédagogique de Tera Campus se sont retrouvés au sein d'un gîte ardéchois, le Mas de la Sardèche. L'environnement préservé et l'authenticité du lieu ont permis de créer des liens et une synergie forte entre les étudiants au travers des projets et expériences proposés tout au long de ces deux semaines en immersion. Un souvenir gravé, et une année bien entamée chez Tera Campus !"
+                  imageUrl="https://res.cloudinary.com/teracampus/image/upload/q_auto:low/v1638972870/cms/IMG_9209_rq1cyl"
                 />
               </div>
               {/* Right End */}
@@ -134,6 +164,8 @@ function Index({ agenda, questions }) {
         </section>
 
         <BlockConcept />
+
+        <SeparatorWithTitle title="Les réponses à vos questions" />
 
         <BlockFaq questions={questions} />
       </main>
@@ -228,7 +260,7 @@ export async function getServerSideProps() {
         },
         {
           name: "Quel est le coût de la formation ?",
-          text: "Chez Tera Campus, nous avons souhaité faire une proposition simple et accessible à 6500€ par année en formation initiale. Le cursus intégral ne vous coûtera qu'un maximum de deux années (1ère et 2ème année), soit 13000€, puisque le coût de ta formation sera ensuite prise en charge par votre contrat d'alternance.",
+          text: "Chez Tera Campus, nous avons souhaité faire une proposition simple et accessible à 6500€ par année en formation initiale. Le cursus intégral ne vous coûtera qu'un maximum de deux années (1ère et 2ème année), soit 13000€, puisque le coût de votre formation sera ensuite prise en charge par votre contrat d'alternance.",
         },
         {
           name: "Comment se déroule l'inscription ?",

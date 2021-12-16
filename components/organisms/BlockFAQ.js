@@ -41,12 +41,8 @@ export default function BlockFaq({ questions }) {
 				/>
 			</Head>
 
-			<section id="faq" className="py-10 md:py-20">
+			<section id="faq" className="py-10 md:py-20 bg-tc-lavender">
 				<div className="md:container md:mx-auto">
-					<BlockTitle
-						title="Les réponses à vos questions"
-						iconPicture={{ backgroundImage: "url('faq.png')" }}
-					/>
 					<div className="grid grid-cols-1 gap-8 mx-4 lg:grid-cols-2">
 						{questions.map((item, index) => (
 							<Item key={index} question={item.name} answer={item.text} />
