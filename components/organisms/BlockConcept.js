@@ -9,7 +9,7 @@ const Paragraph = ({ bold, gutterBottom, children }) => (
 const LittleTitle = ({ children }) => (
   <div className="flex flex-row items-center my-2">
     <div className="w-5 h-5 mr-4 transform rotate-45 bg-tc-red"></div>
-    <h2 className="w-3/4 text-lg xl:text-2xl font-bold">
+    <h2 className="text-lg xl:text-2xl font-bold">
       {children}
     </h2>
   </div>
@@ -22,7 +22,7 @@ export default function BlockConcept() {
         <div className="mx-4 flex flex-col lg:flex-row gap-4 md:gap-8">
           <ul className="md:pl-2 lg:w-2/3">
             <li>
-              <LittleTitle>Tera Campus c'est quoi ?</LittleTitle>
+              <LittleTitle>Tera Campus : un parcours professionnalisant et diplômant</LittleTitle>
               <Paragraph>
                 Tera Campus est une école hybride supérieure d'informatique,
                 et propose des formations diplômantes (en initial et en alternance)
@@ -38,14 +38,14 @@ export default function BlockConcept() {
               </Paragraph>
             </li>
             <li>
-              <LittleTitle>Comment étudier avec Tera Campus ?</LittleTitle>
+              <LittleTitle>Un apprentissage hybride, depuis chez vous</LittleTitle>
               <Paragraph gutterBottom>
                 La formation chez Tera Campus s'adresse avant tout à des personnes motivées.
                 Les seuls prérequis sont un ordinateur, une webcam et une connexion internet.
               </Paragraph>
             </li>
             <li>
-              <LittleTitle>Vais-je rencontrer les étudiants ?</LittleTitle>
+              <LittleTitle>À distance et tous ensemble, c'est possible !</LittleTitle>
               <Paragraph>
                 Tout au long de l'année, Tera Campus organise trois Bivouacs de
                 deux semaines complètes.
