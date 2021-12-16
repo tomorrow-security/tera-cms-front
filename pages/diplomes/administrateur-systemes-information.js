@@ -220,7 +220,7 @@ export default function AdministrateurSystemesInformation() {
               </div>
               <div
                 className="lg:w-1/2 h-48 md:h-96 bg-center bg-cover rounded-lg shadow-lg"
-                style={{ backgroundImage: "url('https://source.unsplash.com/random/350x350?pig')" }}
+                style={{ backgroundImage: "url('https://res.cloudinary.com/teracampus/image/upload/q_auto:low/v1638972870/cms/web-developer_kfzlct')" }}
               />
             </div>
           </div>
@@ -250,7 +250,7 @@ export default function AdministrateurSystemesInformation() {
               </div>
               <div
                 className="lg:w-1/2 h-48 md:h-96 bg-center bg-cover rounded-lg shadow-lg"
-                style={{ backgroundImage: "url('https://source.unsplash.com/random/350x350?sheep')" }}
+                style={{ backgroundImage: "url('https://res.cloudinary.com/teracampus/image/upload/q_auto:low/v1638972870/cms/sysadmin_mncego')" }}
               />
             </div>
           </div>
@@ -280,7 +280,7 @@ export default function AdministrateurSystemesInformation() {
               </div>
               <div
                 className="lg:w-1/2 h-48 md:h-96 bg-center bg-cover rounded-lg shadow-lg"
-                style={{ backgroundImage: "url('https://source.unsplash.com/random/350x350?cat')" }}
+                style={{ backgroundImage: "url('https://res.cloudinary.com/teracampus/image/upload/q_auto:low/v1638972870/cms/product-owner_mahx3t')" }}
               />
             </div>
           </div>
@@ -310,7 +310,7 @@ export default function AdministrateurSystemesInformation() {
               </div>
               <div
                 className="lg:w-1/2 h-48 md:h-96 bg-center bg-cover rounded-lg shadow-lg"
-                style={{ backgroundImage: "url('https://source.unsplash.com/random/350x350?dog')" }}
+                style={{ backgroundImage: "url('https://res.cloudinary.com/teracampus/image/upload/q_auto:low/v1638972870/cms/project-manager_gp8p4k')" }}
               />
             </div>
           </div>
