@@ -39,7 +39,7 @@ export default function AdministrateurSystemesInformation() {
 
       <main>
 
-        <img src="https://res.cloudinary.com/teracampus/image/upload/q_auto:low/v1638972870/cms/datacenter_p6szin" className="w-full h-96 object-cover object-center" />
+        <img src="https://res.cloudinary.com/teracampus/image/upload/q_auto:low/v1638972870/cms/datacenter_p6szin" className="w-full h-48 md:h-96 object-cover object-center" />
 
 				<div className="md:container md:mx-auto md:py-16 flex justify-center">
           <div className="w-max md:mx-4 p-4 lg:p-8 md:border md:shadow-lg rounded">
