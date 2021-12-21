@@ -6,7 +6,7 @@ const pageDescription = "Les tarifs de l'école Tera Campus"
 const pageUrl = "https://tera-campus.com/tarifs"
 
 const PricingCard = ({ label, children }) => (
-  <div className="h-full bg-white border-t-4 border-tc-red rounded-lg shadow-lg flex flex-col">
+  <div className="h-full bg-white border-t-4 border-tc-red rounded-lg shadow-2xl flex flex-col">
     <div className="mt-4 px-4 text-center">
       <div className="text-lg uppercase font-bold">{label}</div>
       <div className="mt-4 text-4xl uppercase font-bold ">9500 €</div>
@@ -43,7 +43,7 @@ export default function Tarifs() {
 
         <img src="https://res.cloudinary.com/teracampus/image/upload/q_auto:low/v1638972870/cms/adventure-begins_mmpz2f" className="w-full h-48 md:h-96 object-cover object-center" />
 
-        <div class="py-4 md:py-10 bg-tc-lavender">
+        <div class="py-4 md:py-10">
           <div className="md:container md:mx-auto">	
             <div className="mx-4 lg:mx-0 grid grid-cols-1 lg:grid-cols-3 gap-8">
               <PricingCard label="Cycle préparatoire">
