@@ -17,6 +17,10 @@ const menu = [
 				url: '/guides',
 			},
 			{
+				label: "Tarifs",
+				url: '/tarifs',
+			},
+			{
 				label: 'FAQ',
 				url: '/#faq',
 			},

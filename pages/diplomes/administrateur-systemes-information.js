@@ -41,7 +41,7 @@ export default function AdministrateurSystemesInformation() {
 
         <img src="https://res.cloudinary.com/teracampus/image/upload/q_auto:low/v1638972870/cms/datacenter_p6szin" className="w-full h-48 md:h-96 object-cover object-center" />
 
-				<div className="md:container md:mx-auto md:py-16 flex justify-center">
+				<div className="md:container md:mx-auto md:py-8 flex justify-center">
           <div className="w-max md:mx-4 p-4 lg:p-8 md:border md:shadow-lg rounded">
             <div className="relative mt-8 mb-8 lg:mb-16 flex items-center">
               <AcademicCapIcon className="absolute left-0 right-0 lg:m-auto w-16 lg:w-20 h-16 lg:h-20 p-2 text-tc-blue-navy border-2 border-tc-blue-navy rounded-full" />
