@@ -59,7 +59,7 @@ function CardOverImage({ imageUrl, imageAlt, chipPrimary, chipSecondary, title, 
   )
 }
 
-const SeparatorWithTitle = ({ title }) => (
+export const SeparatorWithTitle = ({ title }) => (
   <div className="bg-tc-blue-navy">
     <div className="md:container md:mx-auto py-4 md:py-8">
         <p className="text-center text-white text-xl sm:text-2xl md:text-4xl font-bold">{title}</p>
