@@ -28,15 +28,14 @@ const menu = [
 	},
 	{
 		label: 'Le programme',
-		url: '/program',
 		children: [
+			{
+				label: "Notre Bachelor",
+				url: '/diplomes/administrateur-systemes-information',
+			},
 			{
 				label: 'Programme général',
 				url: '/program',
-			},
-			{
-				label: "Bac +3",
-				url: '/diplomes/administrateur-systemes-information',
 			},
 		]
 	},
