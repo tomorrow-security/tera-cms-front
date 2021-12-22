@@ -1,5 +1,5 @@
 import Head from "next/head"
-import BlockJoin from "../components/organisms/BlockJoin"
+import BlockJoin from "../componentsDraft/organisms/BlockJoin"
 
 const pageTitle = "Nous rejoindre - Tera Campus"
 const pageDescription = "Nous rejoindre"

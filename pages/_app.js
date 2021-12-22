@@ -2,9 +2,9 @@ import "tailwindcss/tailwind.css"
 import Head from "next/head"
 import { QueryClient, QueryClientProvider } from "react-query"
 
-import Analytics from "../components/atoms/Analytics"
-import Footer from "../components/organisms/Footer"
-import Header from "../components/organisms/Header"
+import Analytics from "../componentsDraft/atoms/Analytics"
+import Footer from "../componentsDraft/organisms/Footer"
+import Header from "../componentsDraft/organisms/Header"
 
 const queryClient = new QueryClient()
 

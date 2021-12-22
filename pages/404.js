@@ -1,7 +1,7 @@
 import Head from "next/head"
-import PageLink from "../components/atoms/PageLink"
+import PageLink from "../componentsDraft/atoms/PageLink"
 
-import IconLogoBig from "../components/atoms/IconLogoBig"
+import IconLogoBig from "../componentsDraft/atoms/IconLogoBig"
 
 const pageTitle = "Page non trouvée - Tera Campus"
 const pageDescription = "Page non trouvée"

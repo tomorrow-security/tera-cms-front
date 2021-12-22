@@ -1,9 +1,9 @@
 import Head from "next/head"
 import { useState } from "react"
 
-import BlockTitle from "../../components/atoms/BlockTitle"
-import EnrolmentAppointment from "../../components/organisms/EnrolmentAppointment"
-import EnrolmentTest from "../../components/organisms/EnrolmentTest"
+import BlockTitle from "../../componentsDraft/atoms/BlockTitle"
+import EnrolmentAppointment from "../../componentsDraft/organisms/EnrolmentAppointment"
+import EnrolmentTest from "../../componentsDraft/organisms/EnrolmentTest"
 
 const apiUrl = process.env.NEXT_PUBLIC_ARPETTE_URL
 

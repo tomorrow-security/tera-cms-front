@@ -1,6 +1,8 @@
 import Head from "next/head"
 import Link from "next/link"
 
+import Button from "../components/atoms/Button"
+
 const pageTitle = "Tarifs - Tera Campus"
 const pageDescription = "Les tarifs de l'école Tera Campus"
 const pageUrl = "https://tera-campus.com/tarifs"
@@ -20,7 +22,9 @@ const PricingCard = ({ label, children }) => (
     <div className="mb-4 flex-grow flex items-end justify-center">
       <div className="flex flex-col items-center">
         <Link href="/enrolment">
-          <a className="p-4 w-max text-center font-semibold bg-yellow-300 rounded shadow-lg">Je m'inscris</a>
+          <a>
+            <Button label="Je m'inscris" />
+          </a>
         </Link>
         <span className="mt-2 text-sm italic text-gray-500">Inscription gratuite, sans frais de dossier !</span>
       </div>

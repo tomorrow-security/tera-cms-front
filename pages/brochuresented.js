@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import PageLink from "../components/atoms/PageLink";
+import PageLink from "../componentsDraft/atoms/PageLink";
 
 const pageTitle = "Brochure envoyée - Tera Campus";
 const pageDescription = "Confirmation d'envoie de la brochure";

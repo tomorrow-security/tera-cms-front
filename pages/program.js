@@ -1,5 +1,5 @@
 import Head from "next/head"
-import BlockProgram from "../components/organisms/BlockProgram"
+import BlockProgram from "../componentsDraft/organisms/BlockProgram"
 
 const pageTitle = "Programme - Tera Campus"
 const pageDescription = "Notre programme"

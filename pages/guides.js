@@ -1,5 +1,5 @@
 import Head from "next/head"
-import BlockGuides from "../components/organisms/BlockGuides"
+import BlockGuides from "../componentsDraft/organisms/BlockGuides"
 
 const pageTitle = "Guides - Tera Campus"
 const pageDescription = "Nos guides"

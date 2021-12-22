@@ -2,10 +2,10 @@ import axios from "axios"
 import Head from "next/head"
 import Link from "next/link"
 
-import BlockAgenda from "../components/organisms/BlockAgenda"
-import BlockConcept from "../components/organisms/BlockConcept"
-import BlockFaq from "../components/organisms/BlockFAQ"
-import Hero from "../components/organisms/Hero"
+import BlockAgenda from "../componentsDraft/organisms/BlockAgenda"
+import BlockConcept from "../componentsDraft/organisms/BlockConcept"
+import BlockFaq from "../componentsDraft/organisms/BlockFAQ"
+import Hero from "../componentsDraft/organisms/Hero"
 
 const pageTitle = "École hybride supérieure d'informatique - Tera Campus"
 const pageDescription =

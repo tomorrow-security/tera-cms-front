@@ -7,9 +7,9 @@ import "react-phone-number-input/style.css";
 import PhoneInputWithCountry from "react-phone-number-input/react-hook-form";
 import router from "next/router";
 
-import BlockTitle from "./../components/atoms/BlockTitle";
-import InputRadio from "./../components/molecules/InputRadio";
-import PageLink from "./../components/atoms/PageLink";
+import BlockTitle from "./../componentsDraft/atoms/BlockTitle";
+import InputRadio from "./../componentsDraft/molecules/InputRadio";
+import PageLink from "./../componentsDraft/atoms/PageLink";
 
 // TODO importer la molecule Form à la place (molécule à faire)
 const EnrolmentForm = ({ status, onSubmit }) => {

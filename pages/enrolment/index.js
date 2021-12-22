@@ -9,12 +9,12 @@ import PhoneInputWithCountry from "react-phone-number-input/react-hook-form"
 // TODO faire la validation du numéro avec isPossiblePhoneNumber
 // import { isPossiblePhoneNumber } from 'react-phone-number-input'
 
-import BlockTitle from "../../components/atoms/BlockTitle"
-import InputRadio from "../../components/molecules/InputRadio"
-import InputButton from "../../components/molecules/InputButton"
-// import InputCheckRGPD from '../components/molecules/InputCheckRGPD'
-// import Input from '../components/molecules/Input'
-import PageLink from "../../components/atoms/PageLink"
+import BlockTitle from "../../componentsDraft/atoms/BlockTitle"
+import InputRadio from "../../componentsDraft/molecules/InputRadio"
+import InputButton from "../../componentsDraft/molecules/InputButton"
+// import InputCheckRGPD from '../componentsDraft/molecules/InputCheckRGPD'
+// import Input from '../componentsDraft/molecules/Input'
+import PageLink from "../../componentsDraft/atoms/PageLink"
 
 //TODO importer une molécule Input
 //TODO descendre un peu le submit en view desktop

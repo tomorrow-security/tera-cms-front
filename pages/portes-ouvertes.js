@@ -1,6 +1,6 @@
 import Head from "next/head"
 
-import ExternalQuestionnaire from "../components/molecules/ExternalQuestionnaire"
+import ExternalQuestionnaire from "../componentsDraft/molecules/ExternalQuestionnaire"
 
 const pageTitle = "Inscription aux portes ouvertes - Tera Campus"
 const pageDescription = "Inscription aux portes ouvertes de Tera Campus"
