@@ -88,7 +88,7 @@ export default function Tarifs() {
                 <ul className="p-4 text-center text-sm">
                   <li className="my-2 font-bold">Titre RNCP de niveau 7 (BAC+5) "Expert des systèmes d'information"</li>
                   <li className="my-2">637 heures de formation</li>
-                  <li className="my-2">1 année de formation en alternance</li>
+                  <li className="my-2">2 années de formation en alternance</li>
                   <li className="my-2">Possible en contrat d'apprentissage</li>
                   <li className="my-2">Possible en contrat de professionalisation</li>
                 </ul>
