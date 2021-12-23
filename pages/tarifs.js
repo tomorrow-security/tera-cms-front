@@ -104,46 +104,47 @@ export default function Tarifs() {
             <div>
               <div className="font-bold text-xl">Tarif de l'année de formation</div>
               <p className="mt-2 text-justify">
-                L'année de formation chez Tera Campus coûte 9500€. Il est possible de financer soit même la formation sans
-                faire de contrat d'alternance.
+                Une année de formation chez Tera Campus coûte 9500€. Ce tarif passe à 6500€ (soit une remise de 3000€) en cas
+                d'inscription anticipée avant le 30 juin de l'année de démarrage de la formation.
               </p>
             </div>
             <div>
               <div className="font-bold text-xl">Financement par le dispositif d'alternance</div>
               <p className="mt-2 text-justify">
-                À partir du cycle Bachelor, vous avez la possibilité de réaliser un contrat de professionnalisation.
-                Ce type de contrat vous permet d'être en alternance dans une entreprise, en tant que salarié. Vous serez donc
-                rémunéré mensuellement et vos frais de scolarité seront intégralement pris en charge par la société qui vous
-                accueille.
+                À partir du cycle Bachelor (BAC+3), vous avez la possibilité d'effectuer votre année de formation en alternance via
+                un contrat d'apprentissage ou de professionnalisation. Ce type de contrat vous permet alors de suivre la formation
+                tout en étant salarié d'une entreprise. Vous serez rémunéré mensuellement et vos frais de scolarité seront
+                intégralement pris en charge par la société qui vous accueille.
               </p>
             </div>
             <div>
               <div className="font-bold text-xl">Compte Personnel de Formation (CPF)</div>
               <p className="mt-2 text-justify">
-                La formation Tera Campus est reconnue par l'État et est éligible au Compte Personnel de Formation. Les étudiants
-                ayant déjà travaillé peuvent utiliser leur CPF pour financer une partie de leur formation. En vous connectant
-                sur <Link href="https://www.moncompteformation.gouv.fr/espace-prive/html/#/">
-                <a className="underline text-blue-500">Mon Compte Formation</a>
-                </Link>, vous pourrez consulter vos droits CPF.
+                La formation Tera Campus est reconnue par l'État et est éligible au Compte Personnel de Formation. Les futurs étudiants
+                ayant déjà travaillé peuvent donc utiliser leur CPF pour financer tout ou partie de leur formation. Vous pourrez consulter
+                vos droits CPF en vous connectant sur <Link href="https://www.moncompteformation.gouv.fr/espace-prive/html/#/">
+                <a className="underline text-blue-500">Mon Compte Formation</a></Link>.
               </p>
             </div>
             <div>
               <div className="font-bold text-xl">Échelonnement du paiement</div>
               <p className="mt-2 text-justify">
-                Dans le cas d'un autofinancement, vous avez la possibilité de régler en 10 fois sans frais.
+                Dans le cas d'un autofinancement, vous avez la possibilité de régler en 10 fois sans frais après un premier acompte de
+                validation de votre inscription.
               </p>
             </div>
             <div>
               <div className="font-bold text-xl">Financement par prêt étudiant</div>
               <p className="mt-2 text-justify">
-                Tera Campus est partenaire de Qonto. À ce titre, nos étudiants bénéficient de prêts étudiants à des conditions tarifaires
-                préférentielles, taux à 1% (selon conditions consultables en agence).
+                Emprunter de l'argent pour financer ses études peut également être une option. L'Etat peut se porter garant de votre prêt, afin
+                de faciliter son obtention. Retrouvez plus d'informations sur <Link href="https://www.etudiant.gouv.fr/fr/pret-etudiant-garanti-par-l-etat-1723">
+                <a className="underline text-blue-500">https://www.etudiant.gouv.fr/</a></Link>.
               </p>
             </div>
             <div>
               <div className="font-bold text-xl">Puis-je rejoindre les cycles Bachelor et Expert en formation initiale ?</div>
               <p className="mt-2 text-justify">
-                Oui.
+                Oui, il est tout à fait possible de suivre l'intégralité des cursus de Tera Campus en formation initiale.
               </p>
             </div>
           </div>
