@@ -2,6 +2,8 @@ import axios from "axios"
 import Head from "next/head"
 import Link from "next/link"
 
+import Block from "../components/atoms/Block"
+
 import BlockAgenda from "../componentsDraft/organisms/BlockAgenda"
 import BlockConcept from "../componentsDraft/organisms/BlockConcept"
 import BlockFaq from "../componentsDraft/organisms/BlockFAQ"
@@ -31,10 +33,10 @@ function CardOverImage({ imageUrl, imageAlt, chipPrimary, chipSecondary, title, 
         <img
           src={imageUrl}
           alt={imageAlt}
-          className="w-full h-72 object-cover object-center lg:rounded-lg"
+          className="w-full h-72 object-cover object-center rounded-lg"
         />
         <div className="relative px-4 -mt-16">
-          <div className="bg-white p-6 rounded-lg shadow-lg">
+          <div className="bg-white px-2 py-4 lg:p-6 rounded-lg shadow-lg">
             <div className="flex justify-between items-baseline">
               <span className="px-4 py-2 bg-tc-blue-navy text-white text-xs md:text-sm inline-block rounded-full uppercase font-semibold tracking-wide">
                 { chipPrimary }
@@ -43,13 +45,13 @@ function CardOverImage({ imageUrl, imageAlt, chipPrimary, chipSecondary, title, 
                 { chipSecondary }
               </div>
             </div>
-            <h4 className="mt-8 text-center text-xl font-bold uppercase leading-tight">
+            <h4 className="mt-4 lg:mt-8 text-center text-xl font-bold uppercase leading-tight">
               { title }
             </h4>
-            <p className="mt-8 text-center">
+            <p className="mt-2 lg:mt-8 text-center">
               { content }
             </p>
-            <div className="flex justify-center">
+            <div className="mt-4 lg:mt-8 flex justify-center">
               { cta }
             </div>
           </div>
@@ -83,8 +85,8 @@ function Index({ agenda, questions }) {
 
         <BlockAgenda events={agenda} />
 
-        <section id="concept" className="pb-8 md:py-10 lg:py-20 bg-tc-lavender">
-          <div className="md:container md:mx-auto">
+        <section id="concept">
+          <Block darken>
             <div className="flex flex-col lg:flex-row gap-8">
               <div className="w-full lg:w-1/2">
                 <CardOverImage
@@ -96,7 +98,7 @@ function Index({ agenda, questions }) {
                   content="Donnez de la hauteur à vos ambitions en devenant un administrateur polyvalent et reconnu du monde de la tech grâce au Bachelor ASI."
                   cta={
                     <Link href="/diplomes/administrateur-systemes-information">
-                      <a className="mt-8 p-4 text-center font-semibold bg-yellow-300 rounded shadow-lg">
+                      <a className="p-4 text-center font-semibold bg-yellow-300 rounded shadow-lg">
                         En savoir plus
                       </a>
                     </Link>
@@ -112,14 +114,14 @@ function Index({ agenda, questions }) {
                   title="Expert des Systèmes d'Information"
                   content="Atteignez le sommet de votre potentiel en acquérant les compétences d'encadrement et d'expertise informatique dispensés dans le cursus ESI."
                   cta={
-                    <div className="mt-8 p-4 text-center font-semibold bg-red-300 rounded cursor-default">
+                    <div className="p-4 text-center font-semibold bg-red-300 rounded cursor-default">
                       Ouverture en 2022
                     </div>
                   }
                 />
               </div>
             </div>
-          </div>
+            </Block>
         </section>
 
         <SeparatorWithTitle title="Avec l'alternance, étudier et être salarié c'est possible !" />
