@@ -26,7 +26,7 @@ function Card({ title, content, imageUrl }) {
   )
 }
 
-function CardOverImage({ imageUrl, imageAlt, chipPrimary, chipSecondary, title, content, cta }) {
+export function CardOverImage({ imageUrl, imageAlt, chipPrimary, chipSecondary, title, content, cta }) {
   return (
     <div className="antialiased text-gray-900">
       <div>
@@ -51,9 +51,9 @@ function CardOverImage({ imageUrl, imageAlt, chipPrimary, chipSecondary, title, 
             <p className="mt-2 lg:mt-8 text-center">
               { content }
             </p>
-            <div className="mt-4 lg:mt-8 flex justify-center">
-              { cta }
-            </div>
+            {
+              cta ? (<div className="mt-4 lg:mt-8 flex justify-center">{ cta }</div>) : null
+            }
           </div>
         </div>
       </div>
@@ -63,8 +63,8 @@ function CardOverImage({ imageUrl, imageAlt, chipPrimary, chipSecondary, title, 
 
 export const SeparatorWithTitle = ({ title }) => (
   <div className="bg-tc-blue-navy">
-    <div className="md:container md:mx-auto py-4 md:py-8">
-        <p className="text-center text-white text-xl sm:text-2xl md:text-4xl font-bold">{title}</p>
+    <div className="container mx-auto p-4 lg:py-8">
+        <p className="text-center text-white text-2xl sm:text-2xl md:text-4xl font-bold">{title}</p>
     </div>
   </div>
 )
