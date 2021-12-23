@@ -104,73 +104,46 @@ export default function Tarifs() {
             <div>
               <div className="font-bold text-xl">Tarif de l'année de formation</div>
               <p className="mt-2 text-justify">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dictum congue ex, at pretium dui bibendum ut.
-                Duis risus lacus, auctor id sodales nec, consectetur quis lacus. Mauris rutrum nulla eu neque rutrum rutrum.
-                Donec eget nibh in erat commodo finibus. Praesent felis urna, tincidunt sed pharetra sed, consequat eget
-                nisi. Phasellus congue neque elit. Mauris sagittis sem nec viverra pellentesque. Praesent pharetra tincidunt
-                elit, non sollicitudin turpis malesuada in. Curabitur et malesuada sem. Nullam eu nisl id odio bibendum
-                scelerisque. Aenean at dolor eget quam tincidunt gravida id vel nulla. In dapibus est ut velit rutrum, eu
-                semper mauris efficitur. Vivamus rhoncus leo sapien, in viverra ante lobortis nec.
+                L'année de formation chez Tera Campus coûte 9500€. Il est possible de financer soit même la formation sans
+                faire de contrat d'alternance.
               </p>
             </div>
             <div>
               <div className="font-bold text-xl">Financement par le dispositif d'alternance</div>
               <p className="mt-2 text-justify">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dictum congue ex, at pretium dui bibendum ut.
-                Duis risus lacus, auctor id sodales nec, consectetur quis lacus. Mauris rutrum nulla eu neque rutrum rutrum.
-                Donec eget nibh in erat commodo finibus. Praesent felis urna, tincidunt sed pharetra sed, consequat eget
-                nisi. Phasellus congue neque elit. Mauris sagittis sem nec viverra pellentesque. Praesent pharetra tincidunt
-                elit, non sollicitudin turpis malesuada in. Curabitur et malesuada sem. Nullam eu nisl id odio bibendum
-                scelerisque. Aenean at dolor eget quam tincidunt gravida id vel nulla. In dapibus est ut velit rutrum, eu
-                semper mauris efficitur. Vivamus rhoncus leo sapien, in viverra ante lobortis nec.
+                À partir du cycle Bachelor, vous avez la possibilité de réaliser un contrat de professionnalisation.
+                Ce type de contrat vous permet d'être en alternance dans une entreprise, en tant que salarié. Vous serez donc
+                rémunéré mensuellement et vos frais de scolarité seront intégralement pris en charge par la société qui vous
+                accueille.
               </p>
             </div>
             <div>
-              <div className="font-bold text-xl">Mon compte formation (CPF)</div>
+              <div className="font-bold text-xl">Compte Personnel de Formation (CPF)</div>
               <p className="mt-2 text-justify">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dictum congue ex, at pretium dui bibendum ut.
-                Duis risus lacus, auctor id sodales nec, consectetur quis lacus. Mauris rutrum nulla eu neque rutrum rutrum.
-                Donec eget nibh in erat commodo finibus. Praesent felis urna, tincidunt sed pharetra sed, consequat eget
-                nisi. Phasellus congue neque elit. Mauris sagittis sem nec viverra pellentesque. Praesent pharetra tincidunt
-                elit, non sollicitudin turpis malesuada in. Curabitur et malesuada sem. Nullam eu nisl id odio bibendum
-                scelerisque. Aenean at dolor eget quam tincidunt gravida id vel nulla. In dapibus est ut velit rutrum, eu
-                semper mauris efficitur. Vivamus rhoncus leo sapien, in viverra ante lobortis nec.
+                La formation Tera Campus est reconnue par l'État et est éligible au Compte Personnel de Formation. Les étudiants
+                ayant déjà travaillé peuvent utiliser leur CPF pour financer une partie de leur formation. En vous connectant
+                sur <Link href="https://www.moncompteformation.gouv.fr/espace-prive/html/#/">
+                <a className="underline text-blue-500">Mon Compte Formation</a>
+                </Link>, vous pourrez consulter vos droits CPF.
               </p>
             </div>
             <div>
               <div className="font-bold text-xl">Échelonnement du paiement</div>
               <p className="mt-2 text-justify">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dictum congue ex, at pretium dui bibendum ut.
-                Duis risus lacus, auctor id sodales nec, consectetur quis lacus. Mauris rutrum nulla eu neque rutrum rutrum.
-                Donec eget nibh in erat commodo finibus. Praesent felis urna, tincidunt sed pharetra sed, consequat eget
-                nisi. Phasellus congue neque elit. Mauris sagittis sem nec viverra pellentesque. Praesent pharetra tincidunt
-                elit, non sollicitudin turpis malesuada in. Curabitur et malesuada sem. Nullam eu nisl id odio bibendum
-                scelerisque. Aenean at dolor eget quam tincidunt gravida id vel nulla. In dapibus est ut velit rutrum, eu
-                semper mauris efficitur. Vivamus rhoncus leo sapien, in viverra ante lobortis nec.
+                Dans le cas d'un autofinancement, vous avez la possibilité de régler en 10 fois sans frais.
               </p>
             </div>
             <div>
               <div className="font-bold text-xl">Financement par prêt étudiant</div>
               <p className="mt-2 text-justify">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dictum congue ex, at pretium dui bibendum ut.
-                Duis risus lacus, auctor id sodales nec, consectetur quis lacus. Mauris rutrum nulla eu neque rutrum rutrum.
-                Donec eget nibh in erat commodo finibus. Praesent felis urna, tincidunt sed pharetra sed, consequat eget
-                nisi. Phasellus congue neque elit. Mauris sagittis sem nec viverra pellentesque. Praesent pharetra tincidunt
-                elit, non sollicitudin turpis malesuada in. Curabitur et malesuada sem. Nullam eu nisl id odio bibendum
-                scelerisque. Aenean at dolor eget quam tincidunt gravida id vel nulla. In dapibus est ut velit rutrum, eu
-                semper mauris efficitur. Vivamus rhoncus leo sapien, in viverra ante lobortis nec.
+                Tera Campus est partenaire de Qonto. À ce titre, nos étudiants bénéficient de prêts étudiants à des conditions tarifaires
+                préférentielles, taux à 1% (selon conditions consultables en agence).
               </p>
             </div>
             <div>
               <div className="font-bold text-xl">Puis-je rejoindre les cycles Bachelor et Expert en formation initiale ?</div>
               <p className="mt-2 text-justify">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dictum congue ex, at pretium dui bibendum ut.
-                Duis risus lacus, auctor id sodales nec, consectetur quis lacus. Mauris rutrum nulla eu neque rutrum rutrum.
-                Donec eget nibh in erat commodo finibus. Praesent felis urna, tincidunt sed pharetra sed, consequat eget
-                nisi. Phasellus congue neque elit. Mauris sagittis sem nec viverra pellentesque. Praesent pharetra tincidunt
-                elit, non sollicitudin turpis malesuada in. Curabitur et malesuada sem. Nullam eu nisl id odio bibendum
-                scelerisque. Aenean at dolor eget quam tincidunt gravida id vel nulla. In dapibus est ut velit rutrum, eu
-                semper mauris efficitur. Vivamus rhoncus leo sapien, in viverra ante lobortis nec.
+                Oui.
               </p>
             </div>
           </div>
