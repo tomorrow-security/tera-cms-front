@@ -1,4 +1,3 @@
-import { LocationMarkerIcon } from "@heroicons/react/outline"
 import Head from "next/head"
 import Block from "../components/atoms/Block"
 
