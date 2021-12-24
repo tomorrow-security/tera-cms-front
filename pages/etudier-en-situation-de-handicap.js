@@ -29,7 +29,7 @@ export default function Handicap() {
 					</p>
 					<div className="mb-10">
 						<div className="font-bold text-xl">
-							<AcademicCapIcon className="inline-block -ml-1 mr-2 w-max h-8 text-red-500" />
+							<AcademicCapIcon className="inline -ml-1 mr-2 h-8 text-red-500" />
 							<span>Si vous êtes en situation de handicap temporaire ou permanent, notre référant handicap est à votre disposition pour :</span>
 						</div>
 						<ul className="my-2 list-disc list-inside">
@@ -43,7 +43,7 @@ export default function Handicap() {
 					</div>
 					<div className="">
 						<div className="font-bold text-xl">
-							<AcademicCapIcon className="inline-block -ml-1 mr-2 w-max h-8 text-red-500" />
+							<AcademicCapIcon className="inline -ml-1 mr-2 h-8 text-red-500" />
 							<span>Comment se passe l'admission pour le public en situation de handicap ?</span>
 						</div>
 						<ul className="my-2 list-disc list-inside">
