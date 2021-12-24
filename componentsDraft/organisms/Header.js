@@ -21,6 +21,10 @@ const menu = [
 				url: '/tarifs',
 			},
 			{
+				label: "Étudier en situation de handicap",
+				url: "/etudier-en-situation-de-handicap",
+			},
+			{
 				label: 'FAQ',
 				url: '/#faq',
 			},
