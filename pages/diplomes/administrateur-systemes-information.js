@@ -1,5 +1,8 @@
 import { AcademicCapIcon } from '@heroicons/react/outline'
 import Head from 'next/head'
+import Link from 'next/link'
+
+import Button from "../../components/atoms/Button"
 
 const Cardibee = ({ title, items }) => (
   <div className="">
@@ -188,6 +191,16 @@ export default function AdministrateurSystemesInformation() {
                     "Projets professionnels"
                   ]}
                 />
+              </div>
+            </div>
+            <div className="mt-8 md:mt-10 lg:mt-16 flex-grow flex items-end justify-center">
+              <div className="flex flex-col items-center">
+                <Link href="/enrolment">
+                  <a>
+                    <Button label="Je m'inscris" />
+                  </a>
+                </Link>
+                <span className="mt-2 text-sm italic text-gray-500">Délai d'accès : environ 7 jours.</span>
               </div>
             </div>
           </div>
