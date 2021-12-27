@@ -218,7 +218,7 @@ export default function AdministrateurSystemesInformation() {
                     Le Développeur web est en charge du développement informatique de sites, plateformes web et applications.
                     A la demande d'un client ou d'une entreprise, il conçoit des sites sur mesure et adapte des solutions techniques
                     tout en se basant sur un cahier des charges. Afin d'être apte à réaliser ces missions, le Développeur Web devra
-                    parfaitement connaître les langages fondamentaux tels que Html, CSS, Javascript, Python, PHP et savoir utiliser
+                    parfaitement connaître les langages fondamentaux tels que HTML, CSS, Javascript, Python, PHP et savoir utiliser
                     et gérer des bases de données. Le monde du web évolue constamment, le Développeur Web devra sans cesse s'adapter
                     aux nouvelles techniques et aux besoins spécifiques de sa clientèle.
                   </p>
