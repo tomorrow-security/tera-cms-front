@@ -105,7 +105,7 @@ export default function Enrolment() {
                     withCountryCallingCode={true}
                     control={control}
                     rules={{ required: true }}
-                    className="px-2 bg-white rounded"
+                    className="p-2 bg-white rounded"
                   />
                 </div>
                 {errors.phone ? (<div className="text-tc-red">Requis</div>) : null}
