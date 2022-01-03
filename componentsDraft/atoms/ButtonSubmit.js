@@ -2,12 +2,12 @@ const params = {
   idle: {
     label: 'Envoyer',
     disabled: false,
-    classname: 'bg-tc-blue cursor-pointer'
+    classname: 'bg-yellow-300 cursor-pointer'
   },
   loading: {
     label: 'En cours d\'envoi ...',
     disabled: true,
-    classname: 'bg-tc-blue opacity-50 cursor-not-allowed'
+    classname: 'bg-gray-400 opacity-50 cursor-not-allowed'
   },
   error: {
     label: 'Erreur',
@@ -25,7 +25,7 @@ export default function ButtonSubmit ({ status = 'idle' }) {
   return (
     <input
       type="submit"
-      className={`py-2 px-4 rounded font-bold text-white ${params[status].classname}`}
+      className={`p-4 w-full text-center font-semibold rounded shadow-lg ${params[status].classname}`}
       disabled={params[status].disabled}
       value={params[status].label}
     />

@@ -1,9 +1,11 @@
 import Head from "next/head"
 import { useState } from "react"
 
-import BlockTitle from "../../componentsDraft/atoms/BlockTitle"
 import EnrolmentAppointment from "../../componentsDraft/organisms/EnrolmentAppointment"
 import EnrolmentTest from "../../componentsDraft/organisms/EnrolmentTest"
+
+import Block from "../../components/atoms/Block"
+import Stepper from "../../components/organisms/Stepper"
 
 const apiUrl = process.env.NEXT_PUBLIC_ARPETTE_URL
 
@@ -50,17 +52,13 @@ export default function EnrolmentProcess({ initialPageData, uuid }) {
 			</Head>
 
 			<main className="mx-2 md:container md:mx-auto">
-				<section id="test" className="py-10 md:py-20">
-					<div className="flex flex-col justify-between flex-grow md:container md:mx-auto">
-						<BlockTitle
-							title={pageDescription}
-							iconPicture={{
-								backgroundImage: "url('/inscription-red-into-blue.png')",
-							}}
-						/>
-					</div>
+
+				<Stepper />
+
+				<Block>
 					<div className="xl:my-12">{renderBody()}</div>
-				</section>
+				</Block>
+
 			</main>
 		</>
 	)

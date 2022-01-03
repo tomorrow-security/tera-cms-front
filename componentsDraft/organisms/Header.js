@@ -47,10 +47,6 @@ const menu = [
 		label: 'Actualités',
 		url: '/#agenda',
 	},
-	{
-		label: 'Rejoignez nous',
-		url: '/join',
-	},
 ]
 
 const FirstLevelLink = ({ label, url, isDropdown, closeMenu }) => {

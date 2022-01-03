@@ -58,41 +58,36 @@ const TestCreated = ({ applicant, test, uuid, setPageData }) => {
     <div className="mx-4 space-y-8 text-center">
       <div className="space-y-2">
         <p className="font-bold">
-          <span className="capitalize">{applicant}</span>, merci pour ton
-          inscription chez Tera Campus !
+          <span className="capitalize">{applicant}</span>, merci pour votre inscription chez Tera Campus !
         </p>
         <p>
-          Dans quelques instants tu pourras démarrer ton test de positionnement.
+          Dans quelques instants vous pourrez démarrer votre test de positionnement.
         </p>
         <p>
-          Ce test se présente sous la forme d’un QCM de{" "}
-          {test.remainingQuestions} questions autour des technologies de
-          l’information et de certaines compétences générales.
+          Ce test se présente sous la forme d'un QCM de{" "}{test.remainingQuestions} questions autour des
+          technologies de l'information et de certaines compétences générales.
         </p>
         <p className="underline">
-          Si tu n’as pas les réponses à toutes les questions, pas d’inquiétude !
+          Si vous n'avez pas les réponses à toutes les questions, pas d'inquiétude !
         </p>
         <p>
-          Il s’agit d’un test de positionnement qui nous permettra de connaitre
-          ton niveau afin de mieux te préparer à la rentrée scolaire chez Tera
-          Campus !
+          Il s'agit d'un test de positionnement qui nous permettra de connaitre votre niveau afin de mieux
+          vous préparer à la rentrée scolaire chez Tera Campus !
         </p>
-        <p>Quelques informations complémentaires :</p>
+        <p>Quelques informations complémentaires :</p>
         <div>
           <ul className="list-disc list-inside">
             <li>
               Une ou plusieurs réponses seront possible selon les questions
             </li>
             <li>
-              Une fois le test lancé, tu auras deux heures pour le valider
+              Une fois le test lancé, vous aurez <span className="text-red-600 font-semibold">2 heures</span> pour le valider
             </li>
             <li>
-              Si tu n'as pas le temps maintenant, tu pourras lancer le test via
-              un lien dans le mail que tu vas recevoir
+              Si vous n'avez pas le temps maintenant, vous pourrez lancer le test via un lien dans le mail que vous allez recevoir
             </li>
             <li>
-              Toute réponse est définitive, tu ne pourras plus revenir en
-              arrière
+              Toute réponse à chaque est définitive, vous ne pourrez plus revenir en arrière
             </li>
           </ul>
         </div>
@@ -100,7 +95,7 @@ const TestCreated = ({ applicant, test, uuid, setPageData }) => {
       </div>
       <div className="flex flex-row justify-center">
         <InputButton
-          defaultValue="Démarrer de le test"
+          defaultValue="Démarrer le test"
           loadingValue="Test en cours de chargement ..."
           successValue="Test chargé"
           mutation={mutation}

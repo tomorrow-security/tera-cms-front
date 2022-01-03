@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type="radio"]:checked+label {
+  background-color: #C7D2FE;
+  border-color: #C7D2FE;
+}
+
+.PhoneInputInput {
+  border: 0;
+}
+
+.PhoneInputInput:focus {
+  border-color: inherit;
+  outline: none;
+  box-shadow: none;
+}
