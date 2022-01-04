@@ -10,7 +10,7 @@ export default function Hero() {
 			style={{ backgroundImage: "url('https://res.cloudinary.com/teracampus/image/upload/q_auto:low/v1638972870/cms/tera-campeur_mf59vj')" }}
 			className="relative px-4 py-8 w-full bg-center bg-no-repeat bg-cover"
 		>
-			<div className="flex flex-col justify-between items-center gap-16 md:gap-40 lg:gap-96">
+			<div className="flex flex-col justify-between items-center space-y-16 lg:space-y-40">
 				<div className="w-48 md:w-60 lg:w-80">
 					<IconLogoBig />
 				</div>
