@@ -14,7 +14,7 @@ export default function Hero() {
 				<div className="w-48 md:w-60 lg:w-80">
 					<IconLogoBig />
 				</div>
-				<Link href="/brochure">
+				<Link href="/diplomes/administrateur-systemes-information">
 					<a className="group p-4 bg-tc-blue hover:bg-tc-blue-navy rounded-full">
 						<div className="flex items-center justify-evenly text-center md:text-2xl text-white font-bold uppercase animate-pulse hover:animate-none transition-colors duration-700">
 							<p>Découvrez nos formations hybrides en informatique</p>
