@@ -17,7 +17,7 @@ export default function EnrolmentAppointment() {
 			<div className="xl:my-12">
 				<div
 					className="max-w-full min-h-full calendly-inline-widget"
-					data-url="https://calendly.com/lilian-simon/ton-entretien-personnalise-avec-tera-campus?text_color=000000&hide_event_type_details=1"
+					data-url="https://calendly.com/brice-tera-campus/meet?text_color=000000&hide_event_type_details=1&month=2022-01"
 					style={{ minWidth: "320px", height: "650px" }}
 				/>
 			</div>
