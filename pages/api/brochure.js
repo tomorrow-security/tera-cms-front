@@ -19,7 +19,8 @@ export default async (req, res) => {
     data = data + `"email": {"email": "${email}", "text": "${email}"},`;
     data = data + `"phone": {"phone": "${phone}"},`;
     data = data + `"status": {"label": "Brochure"},`;
-    data = data + `"check": {"checked": "${consent}"}`;
+    data = data + `"check": {"checked": "${consent}"},`;
+    data = data + `"dropdown": "Brochure"`;
     data = data + "}";
 
     const query = `mutation { create_item (board_id: 1841855665, group_id: "topics", item_name: "${firstName} ${lastName}", column_values: ${JSON.stringify(data)}) { id } }`;
