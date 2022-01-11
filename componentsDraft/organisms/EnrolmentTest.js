@@ -81,17 +81,14 @@ const TestCreated = ({ applicant, test, uuid, setPageData }) => {
               Une ou plusieurs réponses seront possible selon les questions
             </li>
             <li>
-              Une fois le test lancé, vous aurez <span className="text-red-600 font-semibold">2 heures</span> pour le valider
-            </li>
-            <li>
               Si vous n'avez pas le temps maintenant, vous pourrez lancer le test via un lien dans le mail que vous allez recevoir
             </li>
             <li>
-              Toute réponse à chaque est définitive, vous ne pourrez plus revenir en arrière
+              Toute réponse à chaque question est définitive, vous ne pourrez plus revenir en arrière
             </li>
           </ul>
         </div>
-        <p>Bon courage et à très vite !</p>
+        <p>Bon courage et à très vite !</p>
       </div>
       <div className="flex flex-row justify-center">
         <InputButton
