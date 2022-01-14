@@ -197,7 +197,7 @@ export default function AdministrateurSystemesInformation() {
               <div className="flex flex-col items-center">
                 <Link href="/enrolment">
                   <a>
-                    <Button label="Je m'inscris" />
+                    <Button label="Candidater" />
                   </a>
                 </Link>
                 <span className="mt-2 text-sm italic text-gray-500">Délai d'accès : environ 7 jours.</span>

@@ -9,27 +9,29 @@ const pageTitle = "Tarifs - Tera Campus"
 const pageDescription = "Les tarifs de l'école Tera Campus"
 const pageUrl = "https://tera-campus.com/tarifs"
 
-const PricingCard = ({ children, highlight, label, yearlyPrice }) => (
+const PricingCard = ({ children, cycleURL, highlight, label, yearlyPrice }) => (
   <div className="h-full bg-white border-t-4 border-tc-red rounded-lg shadow-2xl flex flex-col">
     <div className="mt-4 px-4 text-center">
       <div className="text-lg uppercase font-bold">{label}</div>
       <div className="mt-4 text-4xl uppercase font-bold ">{yearlyPrice} €</div>
       <div className="text-lg uppercase font-bold text-gray-400">par an</div>
+      <span className="mt-2 text-sm italic text-gray-500">Inscription gratuite, sans frais de dossier !</span>
       <div className="mt-4 p-2 bg-tc-blue-navy text-white rounded flex items-center justify-center">
         <p className="my-2 font-semibold">{highlight}</p>
       </div>
     </div>
     <div>{children}</div>
-    <div className="mb-4 flex-grow flex items-end justify-center">
+    {cycleURL && (
+      <div className="mb-8 flex-grow flex items-end justify-center">
       <div className="flex flex-col items-center">
         <Link href="/enrolment">
           <a>
-            <Button label="Je m'inscris" />
+            <Button label="Voir le programme" />
           </a>
         </Link>
-        <span className="mt-2 text-sm italic text-gray-500">Inscription gratuite, sans frais de dossier !</span>
       </div>
     </div>
+    )}
   </div>
 )
 
@@ -65,15 +67,11 @@ export default function Tarifs() {
               label="Cycle Bachelor"
               yearlyPrice="0"
               highlight="Avec un contrat d'alternance"
+              cycleURL="/diplomes/administrateur-systemes-information"
             >
               <ul className="p-4 text-center text-sm">
                 <li className="my-2 font-bold">
                   Titre RNCP de niveau 6 (BAC+3) "Administrateur des systèmes d'information".{" "}
-                  <Link href="/diplomes/administrateur-systemes-information">
-                    <a className="underline italic text-blue-500">
-                      En savoir plus ...
-                    </a>
-                  </Link>
                 </li>
                 <li className="my-2">637 heures de formation</li>
                 <li className="my-2">1 année de formation en alternance</li>
@@ -147,6 +145,18 @@ export default function Tarifs() {
                 Oui, il est tout à fait possible de suivre l'intégralité des cursus de Tera Campus en formation initiale.
               </p>
             </div>
+          </div>
+          <div className="mt-8 flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
+            <Link href="/brochure">
+              <a>
+                <Button label="Télécharger la brochure" />
+              </a>
+            </Link>
+            <Link href="/enrolment">
+              <a>
+                <Button label="Candidater" />
+              </a>
+            </Link>
           </div>
         </Block>
 

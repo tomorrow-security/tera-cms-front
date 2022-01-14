@@ -1,8 +1,10 @@
 import { LocationMarkerIcon } from '@heroicons/react/outline'
 import { format } from 'date-fns'
+import Link from "next/link"
+
+import Button from "../../components/atoms/Button"
 
 import LiveLink from "../atoms/LiveLink"
-import LinkButton from "../atoms/LinkButton"
 import IconFacebook from "../atoms/IconFacebook"
 import IconInstagram from "../atoms/IconInstagram"
 import IconLinkedin from "../atoms/IconLinkedin"
@@ -45,9 +47,9 @@ export default function EventLive({
 
 	let link
 	if (url) {
-		link = <LinkButton url={url} label="Je m'inscris" />
+		link = <Link href={url}><a><Button label="Participer" /></a></Link>
 	} else {
-		link = <LinkButton url="/registration" label="Je m'inscris" />
+		link = <Link href="/registration"><a><Button label="Participer" /></a></Link>
 	}
 
 	let icon

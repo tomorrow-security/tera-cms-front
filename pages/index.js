@@ -3,6 +3,7 @@ import Head from "next/head"
 import Link from "next/link"
 
 import Block from "../components/atoms/Block"
+import Button from "../components/atoms/Button"
 
 import BlockAgenda from "../componentsDraft/organisms/BlockAgenda"
 import BlockConcept from "../componentsDraft/organisms/BlockConcept"
@@ -97,11 +98,7 @@ function Index({ agenda, questions }) {
                   title="Administrateur des Systèmes d'Information"
                   content="Donnez de la hauteur à vos ambitions en devenant un administrateur polyvalent et reconnu du monde de la tech grâce au Bachelor ASI."
                   cta={
-                    <Link href="/diplomes/administrateur-systemes-information">
-                      <a className="p-4 text-center font-semibold bg-yellow-300 rounded shadow-lg">
-                        En savoir plus
-                      </a>
-                    </Link>
+                    <Link href="/diplomes/administrateur-systemes-information"><a><Button label="En savoir plus" /></a></Link>
                   }
                 />
               </div>
