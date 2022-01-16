@@ -30,16 +30,16 @@ const menu = [
 		label: 'Le programme',
 		children: [
 			{
+				label: "Cycle Préparatoire",
+				url: '/diplomes/cycle-preparatoire',
+			},
+			{
 				label: "Cycle Bachelor",
 				url: '/diplomes/administrateur-systemes-information',
 			},
 			{
 				label: "Cycle Expert",
 				url: '/diplomes/expert-systemes-information',
-			},
-			{
-				label: 'Programme général',
-				url: '/program',
 			},
 		]
 	},

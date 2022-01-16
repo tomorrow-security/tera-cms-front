@@ -111,9 +111,7 @@ function Index({ agenda, questions }) {
                   title="Expert des Systèmes d'Information"
                   content="Atteignez le sommet de votre potentiel en acquérant les compétences d'encadrement et d'expertise informatique dispensés dans le cursus ESI."
                   cta={
-                    <div className="p-4 text-center font-semibold bg-red-300 rounded cursor-default">
-                      Ouverture en 2022
-                    </div>
+                    <Link href="/diplomes/expert-systemes-information"><a><Button label="En savoir plus" /></a></Link>
                   }
                 />
               </div>
