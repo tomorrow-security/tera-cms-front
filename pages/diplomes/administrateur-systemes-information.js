@@ -62,9 +62,14 @@ export default function AdministrateurSystemesInformation() {
                 4 jours par semaine en entreprise, 1 jour à l'école
               </p>
             </div>
-            <div className="flex justify-center">
+            <div className="mb-4 flex justify-center">
               <img src="https://upload.wikimedia.org/wikipedia/fr/e/e0/FC_Certification_RNCP_Bleu.svg" className="w-2/3 md:w-1/2 lg:w-1/3" />
             </div>
+            <Link href="/enrolment">
+              <a>
+                <Button label="Candidater" fullWidth />
+              </a>
+            </Link>
           </div>
         </div>
 

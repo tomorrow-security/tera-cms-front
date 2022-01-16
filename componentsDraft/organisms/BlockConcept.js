@@ -1,5 +1,7 @@
 import Link from "next/link"
 
+import Button from "../../components/atoms/Button"
+
 const Paragraph = ({ bold, gutterBottom, children }) => (
   <p className={`${gutterBottom ? "mb-4 md:mb-8" : "mb-2"} text-justify ${bold && "font-bold"}`}>
     {children}
@@ -65,10 +67,10 @@ export default function BlockConcept() {
         </div>
         <div className="mx-auto mt-8 md:mt-12 w-max">
           <Link href="/brochure">
-            <a className="p-4 text-center text-lg md:text-xl font-semibold bg-yellow-300 rounded shadow-lg">
-              Télécharger la brochure
-            </a>
-          </Link>
+              <a>
+                <Button label="Télécharger la brochure" />
+              </a>
+            </Link>
         </div>
       </div>
     </section>
