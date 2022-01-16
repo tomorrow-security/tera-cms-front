@@ -78,7 +78,7 @@ export default function AdministrateurSystemesInformation() {
         <div className="py-8 md:py-16">
           <div className="md:container md:mx-auto px-4">
             <p className="text-justify">
-              Le titre Administrateur des Systèmes d{"'"}Information se compose de trois blocs d'activités types,
+              Le titre Administrateur des Systèmes d'Information se compose de trois blocs d'activités types,
               appelés "blocs de compétences". Ces blocs détaillent les compétences nécessaires à la validation du titre.
               La validation peut s'acquérir par bloc de compétences.
             </p>
@@ -119,7 +119,7 @@ export default function AdministrateurSystemesInformation() {
 
               <div className="lg:row-start-2 flex flex-col gap-4">
                 <ul className="px-4 list-disc">
-                 <li>Prévention des risques informatiques</li>
+                  <li>Prévention des risques informatiques</li>
                   <li>Gestion de la sécurité de l{"'"}information</li>
                   <li>Veille de la fiabilité du système informatique</li>
                   <li>Gestion de l{"'"}information et de la connaissance</li>
@@ -230,11 +230,7 @@ export default function AdministrateurSystemesInformation() {
                   <p className="mt-4">
                     Rémunération moyenne : À partir de 36k€ pour un débutant et 65k€ pour un profil senior
                   </p>
-                  <p>
-                    Durée de formation : 3 ans minimum (BAC+3)
-                  </p>
                 </div>
-                  
               </div>
               <div
                 className="lg:w-1/2 h-48 md:h-96 bg-center bg-cover rounded-lg shadow-lg"
@@ -260,9 +256,6 @@ export default function AdministrateurSystemesInformation() {
                   <p className="mt-4">
                     Rémunération moyenne : À partir de 36k€ pour un débutant et 50k€ pour un profil senior
                   </p>
-                  <p>
-                    Durée de formation : 3 ans minimum (BAC+3)
-                  </p>
                 </div>
                   
               </div>
@@ -278,36 +271,6 @@ export default function AdministrateurSystemesInformation() {
           <div className="md:container md:mx-auto px-4">
             <div className="flex flex-col lg:flex-row gap-4">
               <div className="lg:w-1/2 flex flex-col justify-center">
-                <span className="text-lg md:text-2xl font-bold">Product Owner</span>
-                <div className="mt-4 md:mt-8 text-justify">
-                  <p>
-                    Le Product Owner est le responsable de la définition et de la conception d'un produit. Il joue un rôle essentiel depuis la
-                    définition jusqu'au lancement du produit tout en passant par son amélioration. Le Product Owner se base sur plusieurs méthodologies
-                    qui permettent une gestion de projet évolutive et adaptative ainsi que la possibilité de faire face aux imprévus. Afin de concevoir
-                    le produit, il doit en outre posséder une compréhension technique. Il s'agit d'un véritable Chef d'orchestre qui coordonne la partie
-                    technique avec les équipes et les échanges clients.
-                  </p>
-                  <p className="mt-4">
-                    Rémunération moyenne : À partir de 40k€ pour un débutant et 65k€ pour un profil senior
-                  </p>
-                  <p>
-                    Durée de formation : 3 ans minimum (BAC+3)
-                  </p>
-                </div>
-                  
-              </div>
-              <div
-                className="lg:w-1/2 h-48 md:h-96 bg-center bg-cover rounded-lg shadow-lg"
-                style={{ backgroundImage: "url('https://res.cloudinary.com/teracampus/image/upload/q_auto:low/v1638972870/cms/product-owner_mahx3t')" }}
-              />
-            </div>
-          </div>
-        </div>
-
-        <div className="py-4 md:py-8 lg:py-20 bg-tc-lavender">
-          <div className="md:container md:mx-auto px-4">
-            <div className="flex flex-col lg:flex-row-reverse gap-4">
-              <div className="lg:w-1/2 flex flex-col justify-center">
                 <span className="text-lg md:text-2xl font-bold">Chef de projet</span>
                 <div className="mt-4 md:mt-8 text-justify">
                   <p>
@@ -320,11 +283,7 @@ export default function AdministrateurSystemesInformation() {
                   <p className="mt-4">
                     Rémunération moyenne : À partir de 40k€ pour un débutant et 55k€ pour un profil senior
                   </p>
-                  <p>
-                    Durée de formation : 3 ans minimum (BAC+3)
-                  </p>
                 </div>
-                  
               </div>
               <div
                 className="lg:w-1/2 h-48 md:h-96 bg-center bg-cover rounded-lg shadow-lg"

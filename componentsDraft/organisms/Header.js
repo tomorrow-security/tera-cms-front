@@ -30,8 +30,12 @@ const menu = [
 		label: 'Le programme',
 		children: [
 			{
-				label: "Notre Bachelor",
+				label: "Cycle Bachelor",
 				url: '/diplomes/administrateur-systemes-information',
+			},
+			{
+				label: "Cycle Expert",
+				url: '/diplomes/expert-systemes-information',
 			},
 			{
 				label: 'Programme général',
