@@ -1,11 +1,9 @@
-import axios from "axios"
 import Head from "next/head"
 import Link from "next/link"
 
 import Block from "../components/atoms/Block"
 import Button from "../components/atoms/Button"
 
-import BlockAgenda from "../componentsDraft/organisms/BlockAgenda"
 import BlockConcept from "../componentsDraft/organisms/BlockConcept"
 import BlockFaq from "../componentsDraft/organisms/BlockFAQ"
 import Hero from "../componentsDraft/organisms/Hero"
@@ -70,7 +68,7 @@ export const SeparatorWithTitle = ({ title }) => (
   </div>
 )
 
-function Index({ agenda, questions }) {
+function Index({ questions }) {
   return (
     <>
       <Head>
@@ -83,8 +81,6 @@ function Index({ agenda, questions }) {
 
       <main>
         <Hero />
-
-        <BlockAgenda events={agenda} />
 
         <section id="concept">
           <Block darken>
@@ -171,77 +167,8 @@ function Index({ agenda, questions }) {
 }
 
 export async function getServerSideProps() {
-  const getAgenda = async () => {
-    const query = "query{boards(ids: 1201384641){items{name,column_values{id,text}}}}"
-    const response = await axios.post(
-      "https://api.monday.com/v2",
-      JSON.stringify({ query: query }),
-      {
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": process.env.MONDAY_API_KEY,
-        },
-      }
-    )
-    
-    let events = []
-    let items = response.data.data.boards[0].items
-  
-    for (const event of items) {
-    
-      if (events.length < 3) {
-        let eventConfirmed = false
-        let eventStartDate = null
-        let eventEndDate = null
-        let eventPlatform = null
-        let eventType = null
-        let eventUrl = null
-  
-        for (const eventDetail of event.column_values) {
-          if (eventDetail.id === 'statut' && eventDetail.text === 'Confirmé') {
-            eventConfirmed = true
-          }
-  
-          if (eventDetail.id === 'date4' && eventDetail.text) {
-            const date = new Date(eventDetail.text)
-            if (date >= new Date()) {
-              eventStartDate = date
-            }
-          }
-
-          if (eventDetail.id === 'date' && eventDetail.text) {
-            const date = new Date(eventDetail.text)
-            if (date >= new Date()) {
-              eventEndDate = date
-            }
-          }
-  
-          if (eventDetail.id === 'statut_16' && eventDetail.text) {
-            eventType = eventDetail.text
-          }
-  
-          if (eventDetail.id === 'statut_1' && eventDetail.text) {
-            eventPlatform = eventDetail.text
-          }
-
-          if (eventDetail.id === 'lien_internet' && eventDetail.text) {
-            eventUrl = eventDetail.text
-          }
-        }
-  
-        if (event.name && eventConfirmed && eventStartDate && eventEndDate && eventType && eventPlatform) {
-          events.push({name: event.name, startDate: `${eventStartDate}`, endDate: `${eventEndDate}`, description: eventType, platform: eventPlatform, url: eventUrl})
-        }
-  
-      }
-    }
-  
-    return events
-  }
-  
   return {
     props: {
-      agenda: await getAgenda(),
       questions: [
         {
           name: "Qui peut rejoindre Tera Campus ?",
