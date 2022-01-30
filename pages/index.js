@@ -6,7 +6,7 @@ import Button from "../components/atoms/Button"
 
 import BlockConcept from "../componentsDraft/organisms/BlockConcept"
 import BlockFaq from "../componentsDraft/organisms/BlockFAQ"
-import Hero from "../componentsDraft/organisms/Hero"
+import HeroWithSlider from "../componentsDraft/organisms/HeroWithSlider"
 
 const pageTitle = "École hybride supérieure d'informatique - Tera Campus"
 const pageDescription =
@@ -80,7 +80,7 @@ function Index({ questions }) {
       </Head>
 
       <main>
-        <Hero />
+        <HeroWithSlider />
 
         <section id="concept">
           <Block darken>
@@ -129,14 +129,14 @@ function Index({ questions }) {
                   "bivouacs". L'objectif premier de ces périodes est de permettre aux étudiants de se rencontrer et de développer leurs
                   "soft-skills", tout en échangeant et en travaillant sur des projets professionnels communs.
                 </p>
-                <p className="mt-4 text-justify">
+                <div className="mt-4 text-justify">
                   Les Bivouacs Tera Campus sont au nombre de trois pour une durée de 2 semaines chacun :
                   <ul className="list-disc list-inside">
                     <li>Au mois d'octobre, afin de bien entamer l'année</li>
                     <li>Au mois de janvier, pour faire le point sur les projets</li>
                     <li>Au mois de mai, afin de préparer la dernière ligne droite</li>
                   </ul>
-                </p>
+                </div>
                 <p className="mt-4 text-justify">
                   Le lieu de chaque Bivouac est défini à l'avance par l'équipe de Tera Campus. Ces séminaires font partie intégrante du
                   programme et ne requièrent aucun coût supplémentaire.
