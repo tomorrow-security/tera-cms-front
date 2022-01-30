@@ -10,8 +10,6 @@ const slides = [
 		title: "La formation hybride ce n'est pas le futur, c'est le présent !",
 		subtitle: "Prenez votre carrière en main et formez-vous aux métiers du numérique.",
 		body: "Formations certifiantes BAC+3 et BAC+5.",
-		btnLabel: "Nos formations",
-		btnUrl: "#",
 		image: "tera-campeur_mf59vj",
 	},
 	{
