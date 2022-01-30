@@ -26,7 +26,7 @@ export default function BlockConcept() {
             <li>
               <LittleTitle>Tera Campus : un parcours professionnalisant et diplômant</LittleTitle>
               <Paragraph>
-                Tera Campus est une école hybride supérieure d'informatique,
+                Tera Campus est une école hybride d'informatique,
                 et propose des formations diplômantes (en initial et en alternance)
                 validées par un agrément officiel d'Etat (RNCP niveau 6 et 7).
               </Paragraph>

@@ -8,9 +8,9 @@ import BlockConcept from "../componentsDraft/organisms/BlockConcept"
 import BlockFaq from "../componentsDraft/organisms/BlockFAQ"
 import HeroWithSlider from "../componentsDraft/organisms/HeroWithSlider"
 
-const pageTitle = "École hybride supérieure d'informatique - Tera Campus"
+const pageTitle = "École hybride d'informatique - Tera Campus"
 const pageDescription =
-  "École hybride supérieure d'informatique, Tera Campus propose des formations diplômantes Bac+3 et Bac+5 en développement informatique et infrastructure."
+  "École hybride d'informatique, Tera Campus propose des formations diplômantes Bac+3 et Bac+5 en développement informatique et infrastructure."
 const pageUrl = "https://tera-campus.com"
 
 function Card({ title, content, imageUrl }) {
