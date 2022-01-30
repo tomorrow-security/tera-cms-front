@@ -12,6 +12,7 @@ const pageTitle = "École hybride d'informatique - Tera Campus"
 const pageDescription =
   "École hybride d'informatique, Tera Campus propose des formations diplômantes Bac+3 et Bac+5 en développement informatique et infrastructure."
 const pageUrl = "https://tera-campus.com"
+const pageImage = "https://res.cloudinary.com/teracampus/image/upload/q_auto:low/v1638972870/cms/tera-campeur_mf59vj"
 
 function Card({ title, content, imageUrl }) {
   return (
@@ -77,6 +78,7 @@ function Index({ questions }) {
         <meta name="description" content={pageDescription} />
         <meta property="og:url" content={pageUrl} />
         <meta property="og:description" content={pageDescription} />
+        { pageImage ? <meta property="og:image" content={pageImage} /> : null }
       </Head>
 
       <main>
