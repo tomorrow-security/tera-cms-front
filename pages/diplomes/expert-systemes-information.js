@@ -56,7 +56,7 @@ export default function ExpertSystemesInformation() {
             <h1 className="my-8 text-center text-2xl lg:text-4xl font-bold">Expert des Systèmes d{"'"}Information</h1>
             <div className="mt-8 mb-4 p-4 flex flex-col bg-tc-lavender rounded text-center">
               <p className="md:text-xl">
-                Cursus en initial et formation en alternance la 3ème année :
+                Formation en alternance les 4èmes et 5èmes années :
               </p>
               <p className="md:text-xl">
                 4 jours par semaine en entreprise, 1 jour à l'école
