@@ -24,23 +24,23 @@ const slides = [
 ]
 
 const Slide = ({title, subtitle, body, btnLabel, btnUrl, btnExternal, additional, image}) => (
-	<div className="flex md:gap-x-8">
-		<div className="w-full md:w-1/2 h-96 p-4 flex bg-white rounded">
+	<div className="flex flex-col lg:flex-row lg:gap-x-8 gap-y-4 lg:gap-y-0">
+		<div className="h-96 w-full lg:w-1/3 p-4 flex bg-white rounded">
 			<div className="p-4 flex-grow border">
-				{ title ? <div className="mb-4 text-xl md:text-4xl font-bold">{title}</div> : null }
-				{ subtitle ? <div className="mb-4 md:text-xl font-semibold">{subtitle}</div> : null }
+				{ title ? <div className="mb-4 text-xl lg:text-2xl font-bold">{title}</div> : null }
+				{ subtitle ? <div className="mb-4 lg:text-lg font-semibold">{subtitle}</div> : null }
 				{ body ? <div className="mb-4">{body}</div> : null }
 				{ btnLabel && btnUrl
 					? btnExternal
-						? <div className="mb-4 w-full md:w-max"><a href={btnUrl} target="_blank" rel="noopener noreferrer"><Button label={btnLabel} fullWidth /></a></div>
-						: <div className="mb-4 w-full md:w-max"><Link href={btnUrl}><a><Button label={btnLabel} fullWidth /></a></Link></div> 
+						? <div className="mb-4 w-full lg:w-max"><a href={btnUrl} target="_blank" rel="noopener noreferrer"><Button label={btnLabel} fullWidth /></a></div>
+						: <div className="mb-4 w-full lg:w-max"><Link href={btnUrl}><a><Button label={btnLabel} fullWidth /></a></Link></div> 
 					: null
 				}
 				{ additional ? <div className="text-sm font-bold">{additional}</div> : null }
 			</div>
 		</div>
 		<div
-			className="hidden md:block w-1/2 bg-center bg-no-repeat bg-cover rounded"
+			className="h-96 w-full lg:w-2/3 bg-center bg-no-repeat bg-cover rounded"
 			style={{ backgroundImage: `url('https://res.cloudinary.com/teracampus/image/upload/q_auto:low/v1638972870/cms/${image}')` }}
 		/>
 	</div>
@@ -51,7 +51,7 @@ const Slider = () => {
 
 	return (
 		<div className="rounded-lg">
-			<Swiper cssMode={true} centeredSlides={true} autoplay={{delay: 7000, disableOnInteraction: false, pauseOnMouseEnter: true}}>
+			<Swiper cssMode={true} centeredSlides={true} spaceBetween={30} autoplay={{delay: 7000, disableOnInteraction: false, pauseOnMouseEnter: true}}>
 				{
 					slides.map((slide, index) => (
 						<SwiperSlide key={`slide${index}`}>
