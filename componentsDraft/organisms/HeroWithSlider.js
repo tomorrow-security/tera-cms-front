@@ -10,6 +10,8 @@ const slides = [
 		title: "La formation hybride ce n'est pas le futur, c'est le présent !",
 		subtitle: "Prenez votre carrière en main et formez-vous aux métiers du numérique.",
 		body: "Formations certifiantes BAC+3 et BAC+5.",
+		btnLabel: "Notre bachelor",
+		btnUrl: "/diplomes/administrateur-systemes-information",
 		image: "tera-campeur_mf59vj",
 	},
 	{
