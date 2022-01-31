@@ -18,18 +18,24 @@ const slides = [
 		body: "Découvrez notre école et nos formations hybrides avec l'un de nos Guides.",
 		btnLabel: "Inscription gratuite",
 		btnUrl: "https://www.studyrama.com/salons/salon-studyrama-des-etudes-superieures-et-de-l-140",
+		btnExternal: true,
 		image: "centre-congres-reims_uibcst",
 	},
 ]
 
-const Slide = ({title, subtitle, body, btnLabel, btnUrl, additional, image}) => (
+const Slide = ({title, subtitle, body, btnLabel, btnUrl, btnExternal, additional, image}) => (
 	<div className="flex md:gap-x-8">
 		<div className="w-full md:w-1/2 h-96 p-4 flex bg-white rounded">
 			<div className="p-4 flex-grow border">
 				{ title ? <div className="mb-4 text-xl md:text-4xl font-bold">{title}</div> : null }
 				{ subtitle ? <div className="mb-4 md:text-xl font-semibold">{subtitle}</div> : null }
 				{ body ? <div className="mb-4">{body}</div> : null }
-				{ btnLabel && btnUrl ? <div className="mb-4 w-full md:w-max"><Link href={btnUrl}><a><Button label={btnLabel} fullWidth /></a></Link></div> : null }
+				{ btnLabel && btnUrl
+					? btnExternal
+						? <div className="mb-4 w-full md:w-max"><a href={btnUrl} target="_blank" rel="noopener noreferrer"><Button label={btnLabel} fullWidth /></a></div>
+						: <div className="mb-4 w-full md:w-max"><Link href={btnUrl}><a><Button label={btnLabel} fullWidth /></a></Link></div> 
+					: null
+				}
 				{ additional ? <div className="text-sm font-bold">{additional}</div> : null }
 			</div>
 		</div>
@@ -55,6 +61,7 @@ const Slider = () => {
 								body={slide.body}
 								btnLabel={slide.btnLabel}
 								btnUrl={slide.btnUrl}
+								btnExternal={slide.btnExternal}
 								additional={slide.additional}
 								image={slide.image}
 							/>
