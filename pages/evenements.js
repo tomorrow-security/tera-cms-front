@@ -23,29 +23,29 @@ export default function Registration() {
 				<Block darken>
 					<div className="flex flex-col lg:flex-row gap-8">
 						<div className="w-full lg:w-1/2">
-							<CardOverImage
-								imageUrl="https://res.cloudinary.com/teracampus/image/upload/q_auto:low/v1638972870/cms/immersion_nxuldw"
+						<CardOverImage
+								imageUrl="https://res.cloudinary.com/teracampus/image/upload/q_auto:low/v1638972870/cms/AdobeStock_298275555_dnkpsx"
 								imageAlt="random image"
-								chipPrimary="Du 11/01 au 13/01"
-								chipSecondary="Colmar, Alsace"
-								title="Immersion dans notre projet fil rouge"
-								content="Participez au projet fil rouge avec nos étudiants durant une journée entière pour découvrir la méthodologie de projet au coeur de nos Bivouacs."
+								chipPrimary="Mardi 15 février à 10h00"
+								chipSecondary="En ligne"
+								title="Coffee Break"
+								content="Focus sur les jobs de l'informatique qui recrutent."
 							/>
 						</div>
 						<div className="w-full lg:w-1/2">
-						<CardOverImage
-								imageUrl="https://res.cloudinary.com/teracampus/image/upload/q_auto:low/v1638972870/cms/switch_oo7lkj"
+							<CardOverImage
+								imageUrl="https://res.cloudinary.com/teracampus/image/upload/q_auto:low/v1638972870/cms/AdobeStock_387443025_agtvgs"
 								imageAlt="random image"
-								chipPrimary="Le 20/01/2022"
-								chipSecondary="Colmar, Alsace"
-								title="Découvrez les réseaux informatiques"
-								content="Découvrez la pédagogie Tera Campus et apprenez les bases du réseau informatique durant une journée entière avec nos étudiants."
+								chipPrimary="Jeudi 24 février à 18h00"
+								chipSecondary="En ligne"
+								title="Réunion d'information"
+								content="Découvrez notre école et nos formations hybrides avec l'un de nos guides."
 							/>
 						</div>
 					</div>
 				</Block>
 
-				<SeparatorWithTitle title={"Découvrez gratuitement Tera Campus pendant nos Portes Ouvertes à Colmar"} />
+				<SeparatorWithTitle title={"Je m'inscris à un évènement"} />
 
 				<iframe
 					id="registrationJPO"

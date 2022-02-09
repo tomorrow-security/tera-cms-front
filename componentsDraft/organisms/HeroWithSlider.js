@@ -7,21 +7,28 @@ import Button from "../../components/atoms/Button"
 
 const slides = [
 	{
-		title: "La formation hybride ce n'est pas le futur, c'est le présent !",
+		title: "Votre formation hybride commence ici.",
 		subtitle: "Prenez votre carrière en main et formez-vous aux métiers du numérique.",
 		body: "Formations certifiantes BAC+3 et BAC+5.",
-		btnLabel: "Notre bachelor",
+		btnLabel: "Découvrir notre bachelor",
 		btnUrl: "/diplomes/administrateur-systemes-information",
-		image: "tera-campeur_mf59vj",
+		image: "AdobeStock_198098295_iwchao",
 	},
 	{
-		title: "Venez nous rencontrer au salon des études supérieures et de l'alternance",
-		subtitle: "Le samedi 05 février à Reims",
-		body: "Découvrez notre école et nos formations hybrides avec l'un de nos Guides.",
-		btnLabel: "Inscription gratuite",
-		btnUrl: "https://www.studyrama.com/salons/salon-studyrama-des-etudes-superieures-et-de-l-140",
-		btnExternal: true,
-		image: "centre-congres-reims_uibcst",
+		title: "Coffee Break",
+		subtitle: "Focus sur les jobs de l'informatique qui recrutent.",
+		body: "Mardi 15 février à 10h00",
+		btnLabel: "Participer",
+		btnUrl: "/evenements",
+		image: "AdobeStock_50997777_p6gdfm",
+	},
+	{
+		title: "Réunion d'information",
+		subtitle: "Découvrez notre école et nos formations hybrides avec l'un de nos guides.",
+		body: "Jeudi 24 février à 18h00",
+		btnLabel: "Participer",
+		btnUrl: "/evenements",
+		image: "AdobeStock_387443025_agtvgs",
 	},
 ]
 
@@ -53,7 +60,7 @@ const Slider = () => {
 
 	return (
 		<div className="rounded-lg">
-			<Swiper cssMode={true} centeredSlides={true} spaceBetween={30} autoplay={{delay: 7000, disableOnInteraction: false, pauseOnMouseEnter: true}}>
+			<Swiper cssMode={true} centeredSlides={true} spaceBetween={30} autoplay={{delay: 3500, disableOnInteraction: false, pauseOnMouseEnter: true}}>
 				{
 					slides.map((slide, index) => (
 						<SwiperSlide key={`slide${index}`}>
