@@ -94,58 +94,6 @@ const EnrolmentForm = ({ status, onSubmit }) => {
                 />
                 <span className="text-tc-red">{errors?.email?.message}</span>
               </div>
-              <div className="flex items-center space-y-1 xl:w-45%">
-                <label htmlFor="gender" className="w-30%">
-                  Civilité* :
-                </label>
-                <InputRadio
-                  name="gender"
-                  control={control}
-                  choices={[
-                    { label: "Mme", value: "F" },
-                    { label: "M.", value: "M" },
-                  ]}
-                />
-                <span className=" text-tc-red">{errors?.gender?.message}</span>
-              </div>
-            </div>
-            <div className="xl:flex xl:justify-between xl:w-4/5 xl:flex-nowrap">
-              <div className="flex items-center space-y-1 xl:w-45%">
-                <label htmlFor="lastName" className="w-30%">
-                  Nom* :
-                </label>
-                <input
-                  id="lastName"
-                  name="lastName"
-                  type="text"
-                  placeholder="Anderson"
-                  className={`mx-2 p-2 flex-1 border rounded outline-none ${
-                    errors.lastName ? "border-tc-red" : "border-tc-blue"
-                  }`}
-                  {...register("lastName", { required: true })}
-                />
-                <span className="text-tc-red">{errors?.lastName?.message}</span>
-              </div>
-              <div className="flex items-center space-y-1 xl:w-45%">
-                <label htmlFor="firstName" className="w-30%">
-                  Prénom* :
-                </label>
-                <input
-                  id="firstName"
-                  name="firstName"
-                  type="text"
-                  placeholder="Thomas"
-                  className={`mx-2 p-2 flex-1 border rounded outline-none ${
-                    errors.firstName ? "border-tc-red" : "border-tc-blue"
-                  }`}
-                  {...register("firstName", { required: true })}
-                />
-                <span className="text-tc-red">
-                  {errors?.firstName?.message}
-                </span>
-              </div>
-            </div>
-            <div className="xl:flex xl:justify-between xl:w-4/5 xl:flex-nowrap">
               <div className="space-y-1 xl:w-45%">
                 <div className="flex items-center ">
                   <label htmlFor="phone" className="w-30%">
@@ -193,7 +141,7 @@ const EnrolmentForm = ({ status, onSubmit }) => {
               </div>
               {errors.consent ? (
                 <span className="text-center text-tc-red">
-                  Tu dois accepter la politique de confidentialité pour recevoir
+                  Vous devez accepter la politique de confidentialité pour recevoir
                   la brochure.
                 </span>
               ) : null}
@@ -219,10 +167,7 @@ export default function Brochure() {
 
   const onSubmit = (data) => {
     mutation.mutate(data),
-      // TODO faire une condition avec le satus success pour router.push
       router.push("/brochuresented");
-    //   console.log("data :", data)
-    // console.log("mutation :", mutation)
   };
 
   return (
