@@ -36,19 +36,6 @@ export default function IdentityForm({}) {
 				</div>
 				<div>
 					<div className="m-2">
-						<InputRadio
-							name="gender"
-							control={control}
-							choices={[
-								{ label: "Mme", value: "F" },
-								{ label: "M.", value: "M" },
-							]}
-						/>
-						<span className="col-span-2 text-tc-red">
-							{errors?.gender?.message}
-						</span>
-					</div>
-					<div className="m-2">
 						<Input
 							id="lastName"
 							type="text"

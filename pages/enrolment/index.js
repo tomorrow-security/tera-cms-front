@@ -25,7 +25,6 @@ const apiUrl = process.env.NEXT_PUBLIC_ARPETTE_URL
 const requiredErrorMessage = 'Ce champs est requis.'
 
 const schema = yup.object({
-  gender: yup.string().required(requiredErrorMessage).matches(/(M|F)/).nullable(),
   firstName: yup.string().required(requiredErrorMessage),
   lastName: yup.string().required(requiredErrorMessage),
   email: yup.string().email('E-mail invalide.').required(requiredErrorMessage),
@@ -96,18 +95,6 @@ export default function Enrolment() {
 
             <div className="px-8 py-16 bg-tc-blue-navy rounded-r">
               <form method="post" onSubmit={handleSubmit(onSubmit)}>
-
-                <div className="flex space-x-2">
-                  <div className="w-1/2 flex">
-                    <input type="radio" name="gender" id="gender-f" value="F" className="hidden" {...register("gender")} />
-                    <label htmlFor="gender-f" className="p-2 w-full bg-white rounded text-center cursor-pointer">Mme</label>
-                  </div>
-                  <div className="w-1/2 flex">
-                    <input type="radio" name="gender" id="gender-m" value="M" className="hidden" {...register("gender")} />
-                    <label htmlFor="gender-m" className="p-2 w-full bg-white rounded text-center cursor-pointer">M.</label>
-                  </div>
-                </div>
-                {errors.gender ? (<div className="text-tc-red">{errors.gender?.message}</div>) : null}
 
                 <div className="mt-4">
                   <input name="firstName" type="text" placeholder="Prénom" className="p-2 w-full rounded" {...register("firstName")} />
