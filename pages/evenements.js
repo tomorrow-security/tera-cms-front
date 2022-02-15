@@ -23,16 +23,6 @@ export default function Registration() {
 				<Block darken>
 					<div className="flex flex-col lg:flex-row gap-8">
 						<div className="w-full lg:w-1/2">
-						<CardOverImage
-								imageUrl="https://res.cloudinary.com/teracampus/image/upload/q_auto:low/v1638972870/cms/AdobeStock_298275555_dnkpsx"
-								imageAlt="random image"
-								chipPrimary="Mardi 15 février à 10h00"
-								chipSecondary="En ligne"
-								title="Coffee Break"
-								content="Focus sur les jobs de l'informatique qui recrutent."
-							/>
-						</div>
-						<div className="w-full lg:w-1/2">
 							<CardOverImage
 								imageUrl="https://res.cloudinary.com/teracampus/image/upload/q_auto:low/v1638972870/cms/AdobeStock_387443025_agtvgs"
 								imageAlt="random image"
@@ -40,6 +30,16 @@ export default function Registration() {
 								chipSecondary="En ligne"
 								title="Réunion d'information"
 								content="Découvrez notre école et nos formations hybrides avec l'un de nos guides."
+							/>
+						</div>
+						<div className="w-full lg:w-1/2">
+							<CardOverImage
+								imageUrl="https://res.cloudinary.com/teracampus/image/upload/q_auto:low/v1638972870/cms/AdobeStock_298275555_dnkpsx"
+								imageAlt="random image"
+								chipPrimary="Mardi 22 mars à 10h00"
+								chipSecondary="En ligne"
+								title="Coffee Break"
+								content="L'organisation des études à distance."
 							/>
 						</div>
 					</div>
