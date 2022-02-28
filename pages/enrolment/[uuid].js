@@ -10,8 +10,8 @@ const apiUrl = process.env.NEXT_PUBLIC_ARPETTE_URL
 
 export async function getServerSideProps(context) {
 	const res = await fetch(`${apiUrl}/enrolment/${context.query.uuid}`)
+	if (res.status !== 200) return { notFound: true }
 	const data = await res.json()
-	if (!data.step) return { notFound: true }
 	return { props: { uuid: context.query.uuid, initialPageData: data } }
 }
 
