@@ -1,6 +1,5 @@
 import '../styles/globals.css'
 
-import cookies from "cookie-cutter"
 import Head from "next/head"
 import { useRouter } from 'next/router'
 import { useEffect } from "react"
@@ -16,9 +15,9 @@ function MyApp({ Component, pageProps }) {
 	const router = useRouter()
 
 	useEffect(() => {
-		if (!cookies.get('tc_ft_source')) cookies.set('tc_ft_source', router.query.utm_source || 'direct')
-		if (!cookies.get('tc_ft_medium')) cookies.set('tc_ft_medium', router.query.utm_medium || 'site-web')
-		if (!cookies.get('tc_ft_campaign')) cookies.set('tc_ft_campaign', router.query.utm_campaign || 'none')
+		if (!localStorage.getItem('tc_ft_source')) localStorage.setItem('tc_ft_source', router.query.utm_source || 'direct')
+		if (!localStorage.getItem('tc_ft_medium')) localStorage.setItem('tc_ft_medium', router.query.utm_medium || 'site-web')
+		if (!localStorage.getItem('tc_ft_campaign')) localStorage.setItem('tc_ft_campaign', router.query.utm_campaign || 'none')
 	}, [])
 
 	return (

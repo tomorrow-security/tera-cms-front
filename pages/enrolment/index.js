@@ -1,7 +1,6 @@
 import "react-phone-number-input/style.css"
 
 import axios from "axios"
-import cookies from "cookie-cutter"
 import { format } from 'date-fns'
 import Head from "next/head"
 import Link from "next/link"
@@ -74,7 +73,7 @@ export default function Enrolment() {
     formData.birth_date = format(formData.birth_date, 'yyyy-MM-dd')
     formData.phone = formatPhoneNumberIntl(formData.phone).replaceAll(/\s/g,'')
     formData.resume = formData.resume[0]
-    formData.source = cookies.get('tc_ft_medium') ? cookies.get('tc_ft_medium') : 'undefined'
+    formData.source = localStorage.getItem('tc_ft_medium') ? localStorage.getItem('tc_ft_medium') : 'undefined'
     let data = new FormData()
     for (const [key, value] of Object.entries(formData)) {
       data.append(key, value)
