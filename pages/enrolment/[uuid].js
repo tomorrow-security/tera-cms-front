@@ -1,7 +1,6 @@
 import Head from "next/head"
 import { useState } from "react"
 
-import EnrolmentAppointment from "../../componentsDraft/organisms/EnrolmentAppointment"
 import EnrolmentTest from "../../componentsDraft/organisms/EnrolmentTest"
 
 import Block from "../../components/atoms/Block"
@@ -23,24 +22,6 @@ export default function EnrolmentProcess({ initialPageData, uuid }) {
 
 	const [pageData, setPageData] = useState(initialPageData)
 
-	const renderBody = () => {
-		switch (pageData.step) {
-			case 1:
-			case 2:
-			case 3:
-				return (
-					<EnrolmentTest
-						applicant={pageData.applicant}
-						test={pageData.test}
-						uuid={uuid}
-						setPageData={setPageData}
-					/>
-				)
-			case 4:
-				return <EnrolmentAppointment />
-		}
-	}
-
 	return (
 		<>
 			<Head>
@@ -56,7 +37,14 @@ export default function EnrolmentProcess({ initialPageData, uuid }) {
 				<Stepper />
 
 				<Block>
-					<div className="xl:my-12">{renderBody()}</div>
+					<div className="xl:my-12">
+						<EnrolmentTest
+							applicant={pageData.applicant}
+							test={pageData.test}
+							uuid={uuid}
+							setPageData={setPageData}
+						/>
+					</div>
 				</Block>
 
 			</main>

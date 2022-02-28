@@ -1,5 +1,5 @@
 import axios from "axios"
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import { useForm } from "react-hook-form"
 import { useMutation } from "react-query"
 
@@ -256,45 +256,7 @@ const MultipleChoicesForm = ({ question, onSubmit, mutation }) => {
   )
 }
 
-const TestEnded = ({ applicant, test, uuid, setPageData }) => {
-  const {
-    reset,
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm()
-
-  useEffect(() => {
-    reset()
-  }, [])
-
-  const mutation = useMutation((data) =>
-    axios
-      .post(`${apiUrl}/enrolment/${uuid}/save-files`, data, {
-        headers: { "Content-Type": "multipart/form-data" },
-      })
-      .then(({ data }) => setPageData(data))
-  )
-
-  const onSubmit = ({ document, resume }) => {
-    let formData = new FormData()
-    formData.append("resume", resume[0])
-    formData.append("document", document[0])
-    mutation.mutate(formData)
-  }
-
-  const uploaded = "1 document chargé"
-
-  const [resumeValue, setResumeValue] = useState("Ajouter mon CV")
-  const onChangeResume = (event) => {
-    setResumeValue(uploaded)
-  }
-
-  const [identityValue, setIdentityValue] = useState("Ajouter mon identité")
-  const onChangeIdentity = (event) => {
-    setIdentityValue(uploaded)
-  }
-
+const TestEnded = ({ applicant, test }) => {
   return (
     <>
       <div className="flex flex-col items-stretch mx-4">
@@ -302,83 +264,13 @@ const TestEnded = ({ applicant, test, uuid, setPageData }) => {
           Félicitations {applicant} !
         </div>
         <div className="text-center">
-          Tu as terminé ton test avec {test.score}% de réussite.
+          Vous avez terminé(e) le test avec {test.score}% de réussite.
         </div>
         <div className="mt-12 text-center">
-          Pour continuer ton inscription, tu dois nous transmettre un document
-          d'indentité ainsi que ton CV à jour :
+          L'équipe pédagogique de Tera Campus va maintenant étudier votre dossier,<br/>
+          et reviendra vers vous par e-mail sous 48H afin de programmer un court entretien
+          sur votre motivation avec l'un de nos guides.
         </div>
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col items-center justify-center"
-        >
-          <div className="flex flex-col items-center justify-center w-full mx-auto my-4 lg:flex-row lg:justify-around 2xl:justify-evenly">
-            <div className="flex flex-col justify-center w-3/4 my-8 space-y-2 md:w-2/3 lg:w-1/4 xl:w-1/5 2xl:w-2/12">
-              <label htmlFor="document" className="cursor-pointer">
-                Document d'identité* :
-              </label>
-              {/* //TODO rendre l'errors fonctionnel */}
-              <div className="relative group">
-                <label
-                  htmlFor="document"
-                  // className="absolute p-4 border rounded cursor-pointer bg-tc-blue-xlight border-tc-blue group-hover:border-2"
-                  className={`absolute p-4 border rounded cursor-pointer group-hover:border-4 ${
-                    errors.document
-                      ? "border-tc-red bg-tc-red-xlight"
-                      : "border-tc-blue bg-tc-blue-xlight"
-                  }`}
-                >
-                  {identityValue}
-                </label>
-                <input
-                  type="file"
-                  name="document"
-                  id="document"
-                  accept="application/pdf"
-                  {...register("document", { required: true })}
-                  className="absolute opacity-0"
-                  onChange={onChangeIdentity}
-                />
-              </div>
-            </div>
-
-            <div className="flex flex-col justify-center w-3/4 my-8 space-y-2 md:w-2/3 lg:w-1/4 xl:w-1/5 2xl:w-2/12">
-              <label htmlFor="resume" className="cursor-pointer">
-                CV* :
-              </label>
-              <div className="relative group">
-                <label
-                  htmlFor="resume"
-                  // className="absolute p-4 border rounded cursor-pointer bg-tc-blue-xlight border-tc-blue group-hover:border-2"
-                  className={`absolute p-4 border rounded cursor-pointer group-hover:border-4 ${
-                    errors.resume
-                      ? "border-tc-red bg-tc-red-xlight"
-                      : "border-tc-blue bg-tc-blue-xlight"
-                  }`}
-                >
-                  {resumeValue}
-                </label>
-                <input
-                  type="file"
-                  name="resume"
-                  id="resume"
-                  accept="application/pdf"
-                  {...register("resume", { required: true })}
-                  className="absolute opacity-0"
-                  onChange={onChangeResume}
-                />
-              </div>
-            </div>
-          </div>
-          <div className="mt-12">
-            <InputButton
-              defaultValue="Envoyer"
-              loadingValue="En cours d'envoi ..."
-              successValue="Envoyé"
-              mutation={mutation}
-            />
-          </div>
-        </form>
       </div>
     </>
   )
