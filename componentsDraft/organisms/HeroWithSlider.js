@@ -17,7 +17,7 @@ const slides = [
 	{
 		title: "Réunion d'information",
 		subtitle: "Découvrez notre école et nos formations hybrides avec l'un de nos guides.",
-		body: "Jeudi 24 février à 18h00",
+		body: "Jeudi 24 février à 18h00.",
 		btnLabel: "Participer",
 		btnUrl: "/evenements",
 		image: "AdobeStock_387443025_agtvgs",
@@ -25,7 +25,7 @@ const slides = [
 	{
 		title: "Coffee Break",
 		subtitle: "L'organisation des études à distance.",
-		body: "Mardi 22 mars à 10h00",
+		body: "Mardi 22 mars à 10h00.",
 		btnLabel: "Participer",
 		btnUrl: "/evenements",
 		image: "AdobeStock_50997777_p6gdfm",
@@ -34,15 +34,15 @@ const slides = [
 
 const Slide = ({title, subtitle, body, btnLabel, btnUrl, btnExternal, additional, image}) => (
 	<div className="flex flex-col lg:flex-row lg:gap-x-8 gap-y-4 lg:gap-y-0">
-		<div className="h-96 w-full lg:w-1/3 p-4 flex bg-white rounded">
-			<div className="p-4 flex-grow border">
-				{ title ? <div className="mb-4 text-xl lg:text-2xl font-bold">{title}</div> : null }
-				{ subtitle ? <div className="mb-4 lg:text-lg font-semibold">{subtitle}</div> : null }
-				{ body ? <div className="mb-4">{body}</div> : null }
+		<div className="h-96 w-full lg:w-1/3 flex bg-white rounded">
+			<div className="py-4 flex-grow">
+				{ title ? <div className="px-4 py-8 text-xl lg:text-2xl font-bold text-white bg-tc-blue-navy">{title}</div> : null }
+				{ subtitle ? <div className="p-4 lg:text-lg font-semibold">{subtitle}</div> : null }
+				{ body ? <div className="mb-8 px-4">{body}</div> : null }
 				{ btnLabel && btnUrl
 					? btnExternal
-						? <div className="mb-4 w-full lg:w-max"><a href={btnUrl} target="_blank" rel="noopener noreferrer"><Button label={btnLabel} fullWidth /></a></div>
-						: <div className="mb-4 w-full lg:w-max"><Link href={btnUrl}><a><Button label={btnLabel} fullWidth /></a></Link></div> 
+						? <div className="mb-4 px-4 w-full lg:w-max"><a href={btnUrl} target="_blank" rel="noopener noreferrer"><Button label={btnLabel} fullWidth /></a></div>
+						: <div className="mb-4 px-4 w-full flex justify-center"><div className="w-full lg:w-max"><Link href={btnUrl}><a><Button label={btnLabel} fullWidth /></a></Link></div></div> 
 					: null
 				}
 				{ additional ? <div className="text-sm font-bold">{additional}</div> : null }
