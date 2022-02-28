@@ -84,6 +84,8 @@ function Index({ questions }) {
       <main>
         <HeroWithSlider />
 
+        <SeparatorWithTitle title="Prochaine rentrée le lundi 03 Octobre 2022" />
+
         <section id="concept">
           <Block darken>
             <div className="flex flex-col lg:flex-row gap-8">
