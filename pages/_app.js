@@ -15,10 +15,12 @@ function MyApp({ Component, pageProps }) {
 	const router = useRouter()
 
 	useEffect(() => {
-		if (!localStorage.getItem('tc_ft_source')) localStorage.setItem('tc_ft_source', router.query.utm_source || 'direct')
-		if (!localStorage.getItem('tc_ft_medium')) localStorage.setItem('tc_ft_medium', router.query.utm_medium || 'site-web')
-		if (!localStorage.getItem('tc_ft_campaign')) localStorage.setItem('tc_ft_campaign', router.query.utm_campaign || 'none')
-	}, [])
+		if (router.isReady){
+			if (!localStorage.getItem('tc_ft_source')) localStorage.setItem('tc_ft_source', router.query.utm_source || 'direct')
+			if (!localStorage.getItem('tc_ft_medium')) localStorage.setItem('tc_ft_medium', router.query.utm_medium || 'site-web')
+			if (!localStorage.getItem('tc_ft_campaign')) localStorage.setItem('tc_ft_campaign', router.query.utm_campaign || 'none')
+		}
+	}, [router.isReady])
 
 	return (
 		<QueryClientProvider client={queryClient}>
