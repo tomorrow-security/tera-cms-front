@@ -176,11 +176,11 @@ export default function Enrolment() {
                 {errors.current_situation ? (<div className="text-tc-red">{errors.current_situation?.message}</div>) : null}
 
                 <div className="mt-4">
-                  <p className="text-white">Je souhaite m'inscrire en :</p>
+                  <p className="text-white">Je souhaite rejoindre Tera Campus en :</p>
                   <select name="desired_situation" className="p-2 w-full rounded" {...register("desired_situation")}>
                     <option value="FIRST_YEAR">Cycle Préparatoire</option>
-                    <option value="THIRD_YEAR">Cycle Bachelor</option>
-                    <option value="FOURTH_YEAR">Cycle Master</option>
+                    <option value="THIRD_YEAR">BAC+3 en alternance</option>
+                    <option value="FOURTH_YEAR">BAC+4 en alternance</option>
                   </select>
                 </div>
                 {errors.desired_situation ? (<div className="text-tc-red">{errors.desired_situation?.message}</div>) : null}
