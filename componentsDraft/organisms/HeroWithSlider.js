@@ -15,20 +15,20 @@ const slides = [
 		image: "AdobeStock_198098295_iwchao",
 	},
 	{
-		title: "Réunion d'information",
-		subtitle: "Découvrez notre école et nos formations hybrides avec l'un de nos guides.",
-		body: "Jeudi 24 février à 18h00.",
-		btnLabel: "Participer",
-		btnUrl: "/evenements",
-		image: "AdobeStock_387443025_agtvgs",
-	},
-	{
 		title: "Coffee Break",
 		subtitle: "L'organisation des études à distance.",
 		body: "Mardi 22 mars à 10h00.",
 		btnLabel: "Participer",
 		btnUrl: "/evenements",
 		image: "AdobeStock_50997777_p6gdfm",
+	},
+	{
+		title: "Réunion d'information",
+		subtitle: "Découvrez notre école et nos formations hybrides avec l'un de nos guides.",
+		body: "Jeudi 24 mars à 18h00.",
+		btnLabel: "Participer",
+		btnUrl: "/evenements",
+		image: "AdobeStock_387443025_agtvgs",
 	},
 ]
 
