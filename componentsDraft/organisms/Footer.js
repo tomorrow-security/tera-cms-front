@@ -23,6 +23,9 @@ export default function Footer() {
 						© 2020-{today.getFullYear()} Tera Campus
 					</div>
 				</div>
+				<div className="mt-4 flex justify-center">
+					<img src="https://res.cloudinary.com/teracampus/image/upload/q_auto:low/v1638972870/cms/logo-qualiopi_bjqgit" className="w-1/3 md:w-1/6 xl:w-1/12" />
+				</div>
 			</div>
 		</footer>
 	)
