@@ -51,7 +51,7 @@ export default function Contact() {
 									</div>
 									<div className="flex flex-col w-11/12">
 										<p className="pt-1 pl-2">
-											Tera Campus répond à toutes tes questions à l'adresse suivante :
+											Tera Campus répond à toutes vos questions à l'adresse suivante :
 										</p>
 										<div className="flex justify-center">
 											<a
@@ -70,7 +70,7 @@ export default function Contact() {
 										</div>
 										<div className="flex flex-col w-11/12">
 											<p className="pt-1 pl-2">
-												Ou bien, tu peux poser directement tes questions via le formulaire ci-dessous :
+												Ou bien, vous pouvez poser directement vos questions via le formulaire ci-dessous :
 											</p>
 											<div className="m-0.5 animate-bounce">
 												<div className="w-8 h-8 mx-auto transform -rotate-60">
@@ -82,7 +82,7 @@ export default function Contact() {
 												onSubmit={handleSubmit(onSubmit)}
 											>
 												<label className="block">
-													<span>Ton adresse e-mail :</span>
+													<span>Votre adresse e-mail :</span>
 													<input
 														type="email"
 														placeholder="thomas.anderson@tera-campus.com"
@@ -93,7 +93,7 @@ export default function Contact() {
 													/>
 													{errors.email && (
 														<span className="text-tc-red">
-															Nous avons besoin de ton adresse e-mail afin de pouvoir te répondre.
+															Nous avons besoin de votre adresse e-mail afin de pouvoir vous répondre.
 														</span>
 													)}
 													<span className="text-tc-red">
@@ -101,7 +101,7 @@ export default function Contact() {
 													</span>
 												</label>
 												<label className="block">
-													<span>Ton message :</span>
+													<span>Votre message :</span>
 													<textarea
 														placeholder="message"
 														className={`block mt-1 w-full p-2 border ${
@@ -114,7 +114,7 @@ export default function Contact() {
 													/>
 													{errors.message && (
 														<span className="text-tc-red">
-															As-tu oublié ce que tu souhaites nous dire ?
+															Avez-vous oublié ce que vous souhaitez nous dire ?
 														</span>
 													)}
 												</label>
@@ -146,7 +146,7 @@ export default function Contact() {
 													</label>
 													{errors.acceptPrivacyRules && (
 														<span className="text-tc-red">
-															Tu dois accepter la politique de confidentialité pour continuer.
+															Vous devez accepter la politique de confidentialité pour continuer.
 														</span>
 													)}
 												</div>
@@ -163,7 +163,7 @@ export default function Contact() {
 									</div>
 									<div className="flex flex-col w-11/12 ">
 										<p className="pt-1 pl-2 pr-4 md:pr-0">
-											Et tu peux aussi joindre Tera Campus à ce numéro :
+											Vous pouvez aussi joindre Tera Campus à ce numéro :
 										</p>
 										<div className="flex justify-center">
 											<a

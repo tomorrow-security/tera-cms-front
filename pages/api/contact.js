@@ -18,7 +18,7 @@ export default (req, res) => {
 						Name: "Tera Campus",
 					},
 				],
-				Subject: "Demande d'informations à propos de Tera Campus",
+				Subject: `Demande d'informations à propos de Tera Campus - ${req.body.email}`,
 				TextPart: req.body.message,
 			},
 		],
