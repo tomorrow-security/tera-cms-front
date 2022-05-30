@@ -14,14 +14,14 @@ const slides = [
 		btnUrl: "/diplomes/administrateur-systemes-information",
 		image: "AdobeStock_198098295_iwchao",
 	},
-	{
-		title: "Réunion d'information",
-		subtitle: "Découvrez notre école et nos formations hybrides avec l'un de nos guides.",
-		body: "Jeudi 28 avril à 18h00.",
-		btnLabel: "Participer",
-		btnUrl: "/evenements",
-		image: "AdobeStock_387443025_agtvgs",
-	},
+	// {
+	// 	title: "Réunion d'information",
+	// 	subtitle: "Découvrez notre école et nos formations hybrides avec l'un de nos guides.",
+	// 	body: "Jeudi 28 avril à 18h00.",
+	// 	btnLabel: "Participer",
+	// 	btnUrl: "/evenements",
+	// 	image: "AdobeStock_387443025_agtvgs",
+	// },
 ]
 
 const Slide = ({title, subtitle, body, btnLabel, btnUrl, btnExternal, additional, image}) => (

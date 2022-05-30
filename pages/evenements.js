@@ -20,7 +20,7 @@ export default function Registration() {
 
 			<main>
 
-				<Block darken>
+				{/* <Block darken>
 					<div className="flex flex-col lg:flex-row justify-center gap-8">
 						<div className="w-full lg:w-1/2">
 							<CardOverImage
@@ -32,7 +32,7 @@ export default function Registration() {
 								content="Découvrez notre école et nos formations hybrides avec l'un de nos guides."
 							/>
 						</div>
-						{/* <div className="w-full lg:w-1/2">
+						<div className="w-full lg:w-1/2">
 							<CardOverImage
 								imageUrl="https://res.cloudinary.com/teracampus/image/upload/q_auto:low/v1638972870/cms/AdobeStock_298275555_dnkpsx"
 								imageAlt="random image"
@@ -41,9 +41,9 @@ export default function Registration() {
 								title="Coffee Break"
 								content="L'organisation des études à distance."
 							/>
-						</div> */}
+						</div>
 					</div>
-				</Block>
+				</Block> */}
 
 				<SeparatorWithTitle title={"Je m'inscris à un évènement"} />
 
