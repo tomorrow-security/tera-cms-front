@@ -51,18 +51,7 @@ export default function Tarifs() {
         <img src="https://res.cloudinary.com/teracampus/image/upload/q_auto:low/v1638972870/cms/adventure-begins_mmpz2f" className="w-full h-48 md:h-96 object-cover object-center" />
 
         <Block darken>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-10">
-            <PricingCard
-              label="Cycle préparatoire"
-              yearlyPrice="6500"
-              highlight={`Pour une inscription finalisée avant le 30 juin`} 
-            >
-              <ul className="p-4 text-center text-sm">
-                <li className="my-2">Préparation à l'entrée au cycle Bachelor</li>
-                <li className="my-2">805 heures de formation par année</li>
-                <li className="my-2">2 années en formation initiale</li>
-              </ul>
-            </PricingCard>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-10">
             <PricingCard
               label="Cycle Bachelor"
               yearlyPrice="0"

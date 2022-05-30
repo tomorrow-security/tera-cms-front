@@ -178,7 +178,6 @@ export default function Enrolment() {
                 <div className="mt-4">
                   <p className="text-white">Je souhaite rejoindre Tera Campus en :</p>
                   <select name="desired_situation" className="p-2 w-full rounded" {...register("desired_situation")}>
-                    <option value="FIRST_YEAR">Cycle Préparatoire</option>
                     <option value="THIRD_YEAR">BAC+3 en alternance</option>
                     <option value="FOURTH_YEAR">BAC+4 en alternance</option>
                   </select>
