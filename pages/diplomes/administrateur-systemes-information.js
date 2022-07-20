@@ -50,7 +50,13 @@ export default function AdministrateurSystemesInformation() {
               <AcademicCapIcon className="absolute left-0 right-0 lg:m-auto w-16 lg:w-20 h-16 lg:h-20 p-2 text-tc-blue-navy border-2 border-tc-blue-navy rounded-full" />
               <div className="ml-20 lg:ml-0 w-full flex flex-col lg:flex-row justify-center lg:justify-between items-start lg:items-center lg:text-xl font-bold">
                 <span>Bac +3</span>
-                <span>Titre RNCP de niveau 6</span>
+                <div className="flex flex-col">
+                  <span>Titre certifié de niveau 6</span>
+                  <span className="text-xs font-normal italic">Délivré par SUP DE VINCI</span>
+                  <span className="text-xs font-normal italic">NSF : 326 / RNCP34022</span>
+                  <span className="text-xs font-normal italic">Enregistré au RNCP par décision</span>
+                  <span className="text-xs font-normal italic">de France Compétences du 24-05-2019</span>
+                </div>
               </div>
             </div>
             <h1 className="my-8 text-center text-2xl lg:text-4xl font-bold">Administrateur des Systèmes d{"'"}Information</h1>
