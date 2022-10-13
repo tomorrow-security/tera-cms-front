@@ -84,7 +84,7 @@ function Index({ questions }) {
       <main>
         <HeroWithSlider />
 
-        <SeparatorWithTitle title="Prochaine rentrée le lundi 03 Octobre 2022" />
+        <SeparatorWithTitle title="Prochaine rentrée le lundi 30 janvier 2023" />
 
         <section id="concept">
           <Block darken>
