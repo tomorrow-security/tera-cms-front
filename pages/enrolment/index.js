@@ -73,7 +73,9 @@ export default function Enrolment() {
     formData.birth_date = format(formData.birth_date, 'yyyy-MM-dd')
     formData.phone = formatPhoneNumberIntl(formData.phone).replaceAll(/\s/g,'')
     formData.resume = formData.resume[0]
-    formData.source = localStorage.getItem('tc_ft_medium') ? localStorage.getItem('tc_ft_medium') : 'undefined'
+    formData.utm_source = localStorage.getItem('tc_ft_source') ? localStorage.getItem('tc_ft_source') : 'undefined'
+    formData.utm_medium = localStorage.getItem('tc_ft_medium') ? localStorage.getItem('tc_ft_medium') : 'undefined'
+    formData.utm_campaign = localStorage.getItem('tc_ft_campaign') ? localStorage.getItem('tc_ft_campaign') : 'undefined'
     let data = new FormData()
     for (const [key, value] of Object.entries(formData)) {
       data.append(key, value)
