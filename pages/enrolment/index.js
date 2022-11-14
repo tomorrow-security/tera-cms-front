@@ -32,7 +32,6 @@ const schema = yup.object({
   birth_date: yup.date().required(requiredErrorMessage),
   email: yup.string().email('E-mail invalide.').required(requiredErrorMessage),
   phone: yup.string().required(requiredErrorMessage),
-  current_situation: yup.string().required(requiredErrorMessage),
   desired_situation: yup.string().required(requiredErrorMessage),
   desired_start: yup.string().required(requiredErrorMessage),
   motivation: yup.bool().oneOf([true], requiredErrorMessage),
@@ -162,17 +161,6 @@ export default function Enrolment() {
                   />
                 </div>
                 {errors.phone ? (<div className="text-tc-red">{errors.phone?.message}</div>) : null}
-
-                <div className="mt-4">
-                  <p className="text-white">Actuellement :</p>
-                  <select name="current_situation" className="p-2 w-full rounded" {...register("current_situation")}>
-                    <option value="HIGH_SCHOOL">BAC</option>
-                    <option value="BAC2">BAC+2</option>
-                    <option value="BAC3">BAC+3</option>
-                    <option value="PROFESSIONAL_RETRAINING">Reconversion professionnelle</option>
-                  </select>
-                </div>
-                {errors.current_situation ? (<div className="text-tc-red">{errors.current_situation?.message}</div>) : null}
 
                 <div className="mt-4">
                   <p className="text-white">Je souhaite rejoindre Tera Campus en :</p>
