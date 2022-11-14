@@ -165,8 +165,9 @@ export default function Enrolment() {
                 <div className="mt-4">
                   <p className="text-white">Je souhaite rejoindre Tera Campus en :</p>
                   <select name="desired_situation" className="p-2 w-full rounded" {...register("desired_situation")}>
-                    <option value="THIRD_YEAR">BAC+3 en alternance</option>
-                    <option value="FOURTH_YEAR">BAC+4 en alternance</option>
+                    <option value="B_ASI">Bachelor</option>
+                    <option value="M_CLOUD">Master Cloud</option>
+                    <option value="M_CYBERSEC">Master Cybersecurity</option>
                   </select>
                 </div>
                 {errors.desired_situation ? (<div className="text-tc-red">{errors.desired_situation?.message}</div>) : null}
