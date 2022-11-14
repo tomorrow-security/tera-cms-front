@@ -34,9 +34,6 @@ const schema = yup.object({
   phone: yup.string().required(requiredErrorMessage),
   current_situation: yup.string().required(requiredErrorMessage),
   desired_situation: yup.string().required(requiredErrorMessage),
-  resume: yup.mixed()
-    .test("FILE_PRESENCE", requiredErrorMessage, file => file[0] && file[0].size)
-    .test("FILE_SIZE", "Ce fichier est trop gros.", file => file[0].size <= (2*1024*1024)),
   motivation: yup.bool().oneOf([true], requiredErrorMessage),
   consent: yup.bool().oneOf([true], 'Vous devez accepter notre politique de confidentialité pour continuer.'),
 }).required()
@@ -72,7 +69,6 @@ export default function Enrolment() {
   const onSubmit = (formData) => {
     formData.birth_date = format(formData.birth_date, 'yyyy-MM-dd')
     formData.phone = formatPhoneNumberIntl(formData.phone).replaceAll(/\s/g,'')
-    formData.resume = formData.resume[0]
     formData.utm_source = localStorage.getItem('tc_ft_source') ? localStorage.getItem('tc_ft_source') : 'undefined'
     formData.utm_medium = localStorage.getItem('tc_ft_medium') ? localStorage.getItem('tc_ft_medium') : 'undefined'
     formData.utm_campaign = localStorage.getItem('tc_ft_campaign') ? localStorage.getItem('tc_ft_campaign') : 'undefined'
@@ -185,19 +181,6 @@ export default function Enrolment() {
                   </select>
                 </div>
                 {errors.desired_situation ? (<div className="text-tc-red">{errors.desired_situation?.message}</div>) : null}
-
-                <div className="mt-4">
-                  <p className="text-white">Mon CV (au format PDF, 2Mo maximum) :</p>
-                  <div className="p-2 w-full bg-white rounded">
-                    <input
-                      type="file"
-                      name="resume"
-                      accept="application/pdf"
-                      {...register("resume", { required: true })}
-                    />
-                  </div>
-                </div>
-                {errors.resume ? (<div className="text-tc-red">{errors.resume?.message}</div>) : null}
 
                 <div className="mt-4">
                   <input type="checkbox" name="motivation" className="mr-2 -mt-1 appearance-none outline-none h-5 w-5 rounded-md border-transparent" {...register("motivation")} />
