@@ -8,7 +8,6 @@ import PhoneInputWithCountry from "react-phone-number-input/react-hook-form";
 import router from "next/router";
 
 import BlockTitle from "./../componentsDraft/atoms/BlockTitle";
-import InputRadio from "./../componentsDraft/molecules/InputRadio";
 import PageLink from "./../componentsDraft/atoms/PageLink";
 
 // TODO importer la molecule Form à la place (molécule à faire)
@@ -77,6 +76,41 @@ const EnrolmentForm = ({ status, onSubmit }) => {
       <div>
         <div>
           <div className="space-y-1 xl:space-y-8 xl:flex xl:flex-col xl:items-center ">
+            <div className="xl:flex xl:justify-between xl:w-4/5 xl:flex-nowrap">
+              <div className="flex items-center space-y-1 xl:w-45%">
+                <label htmlFor="firstname" className="w-30%">
+                  Prénom* :
+                </label>
+                <input
+                  id="firstname"
+                  name="firstname"
+                  type="text"
+                  placeholder="Thomas"
+                  className={`p-2 flex-1 border rounded mx-2 outline-none ${
+                    errors.firstname ? "border-tc-red" : "border-tc-blue"
+                  }`}
+                  {...register("firstname", { required: true })}
+                />
+                <span className="text-tc-red">{errors?.firstname?.message}</span>
+              </div>
+              <div className="space-y-1 xl:w-45%">
+                <div className="flex items-center ">
+                  <label htmlFor="lastname" className="w-30%">
+                    Nom* :
+                  </label>
+                  <input
+                    id="lastname"
+                    name="lastname"
+                    type="text"
+                    placeholder="ANDERSON"
+                    className={`p-2 flex-1 border rounded mx-2 outline-none ${
+                      errors.lastname ? "border-tc-red" : "border-tc-blue"
+                    }`}
+                    {...register("lastname", { required: true })}
+                  />
+                </div>
+              </div>
+            </div>
             <div className="xl:flex xl:justify-between xl:w-4/5 xl:flex-nowrap">
               <div className="flex items-center space-y-1 xl:w-45%">
                 <label htmlFor="email" className="w-30%">
@@ -165,9 +199,12 @@ export default function Brochure() {
     retryDelay: 30000,
   });
 
-  const onSubmit = (data) => {
-    mutation.mutate(data),
-      router.push("/brochuresented");
+  const onSubmit = (formData) => {
+    formData.utm_source = localStorage.getItem('tc_ft_source') ? localStorage.getItem('tc_ft_source') : undefined
+    formData.utm_medium = localStorage.getItem('tc_ft_medium') ? localStorage.getItem('tc_ft_medium') : undefined
+    formData.utm_campaign = localStorage.getItem('tc_ft_campaign') ? localStorage.getItem('tc_ft_campaign') : undefined
+    mutation.mutate(formData)
+    router.push("/brochuresented");
   };
 
   return (
