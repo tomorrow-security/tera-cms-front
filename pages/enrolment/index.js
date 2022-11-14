@@ -34,6 +34,7 @@ const schema = yup.object({
   phone: yup.string().required(requiredErrorMessage),
   current_situation: yup.string().required(requiredErrorMessage),
   desired_situation: yup.string().required(requiredErrorMessage),
+  desired_start: yup.string().required(requiredErrorMessage),
   motivation: yup.bool().oneOf([true], requiredErrorMessage),
   consent: yup.bool().oneOf([true], 'Vous devez accepter notre politique de confidentialité pour continuer.'),
 }).required()
@@ -181,6 +182,17 @@ export default function Enrolment() {
                   </select>
                 </div>
                 {errors.desired_situation ? (<div className="text-tc-red">{errors.desired_situation?.message}</div>) : null}
+
+                <div className="mt-4">
+                  <p className="text-white">Je souhaite rejoindre Tera Campus à la rentrée du :</p>
+                  <select name="desired_start" className="p-2 w-full rounded" {...register("desired_start")}>
+                    <option value="E23">30 janvier 2023</option>
+                    <option value="M23">29 mai 2023</option>
+                    <option value="L23">25 septembre 2023</option>
+                    <option value="E24">22 janvier 2024</option>
+                  </select>
+                </div>
+                {errors.desired_start ? (<div className="text-tc-red">{errors.desired_start?.message}</div>) : null}
 
                 <div className="mt-4">
                   <input type="checkbox" name="motivation" className="mr-2 -mt-1 appearance-none outline-none h-5 w-5 rounded-md border-transparent" {...register("motivation")} />
