@@ -12,29 +12,36 @@ export default async (req, res) => {
     const utmMedium = req.body.utm_medium;
     const utmCampaign = req.body.utm_campaign;
 
-    // Create a contact in Pipedrive
+    // Get an existing or create a new contact in Pipedrive
 
-    const contactData = {
-      "name": `${capitalize(firstname)} ${uppercase(lastname)}`,
-      "owner_id": process.env.PIPEDRIVE_OWNER_ID,
-      "email": [
-          {
-              "value": email,
-              "primary": "true",
-          }
-      ],
-      "phone": phone,
-      "visible_to": "3",
-    };
+    let contactId = null;
 
-    const contactResponse = await axios.post(
-      `https://${process.env.PIPEDRIVE_DOMAIN}.pipedrive.com/api/v1/persons?api_token=${process.env.PIPEDRIVE_API_KEY}`,
-      contactData,
+    const checkContactResponse = await axios.get(
+      `${process.env.PIPEDRIVE_URL}/persons/search?api_token=${process.env.PIPEDRIVE_API_KEY}&term=${encodeURIComponent(email)}&fields=email`,
     );
 
-    const contactId = contactResponse.data.data.id;
+    if (checkContactResponse.data.data.items.length > 0) {
+      contactId = checkContactResponse.data.data.items[0].item.id;
+    };
 
-    // Create a lead in Pipedrive
+    if (!contactId) {
+      const contactData = {
+        "name": `${capitalize(firstname)} ${uppercase(lastname)}`,
+        "owner_id": process.env.PIPEDRIVE_OWNER_ID,
+        "email": [{ "value": email, "primary": "true" }],
+        "phone": phone,
+        "visible_to": "3",
+      };
+  
+      const contactResponse = await axios.post(
+        `${process.env.PIPEDRIVE_URL}/persons?api_token=${process.env.PIPEDRIVE_API_KEY}`,
+        contactData,
+      );
+  
+      contactId = contactResponse.data.data.id;
+    }
+
+    // Create a new lead in Pipedrive
 
     const leadData = {
       "title": `Lead - ${capitalize(firstname)} ${uppercase(lastname)}`,
@@ -49,7 +56,7 @@ export default async (req, res) => {
     if (utmCampaign) { leadData["4ebadfc2898cf660aac89026d57a588dd27a9007"] = utmCampaign };
 
     const leadResponse = await axios.post(
-      `https://${process.env.PIPEDRIVE_DOMAIN}.pipedrive.com/api/v1/leads?api_token=${process.env.PIPEDRIVE_API_KEY}`,
+      `${process.env.PIPEDRIVE_URL}/leads?api_token=${process.env.PIPEDRIVE_API_KEY}`,
       leadData,
     );
 
