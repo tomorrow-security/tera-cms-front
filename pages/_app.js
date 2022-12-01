@@ -5,7 +5,6 @@ import { useRouter } from 'next/router'
 import { useEffect } from "react"
 import { QueryClient, QueryClientProvider } from "react-query"
 
-import Analytics from "../componentsDraft/atoms/Analytics"
 import Footer from "../componentsDraft/organisms/Footer"
 import Header from "../componentsDraft/organisms/Header"
 
@@ -24,18 +23,18 @@ function MyApp({ Component, pageProps }) {
 
 	return (
 		<QueryClientProvider client={queryClient}>
-			<Analytics>
-				<Head>
-					<meta name="viewport" content="width=device-width, initial-scale=1" />
-				</Head>
-				<div className="flex flex-col min-h-screen">
-					<Header />
-					<div className="flex-grow z-0">
-						<Component {...pageProps} />
-					</div>
-					<Footer />
+			<Head>
+				<title>École hybride d'informatique - Tera Campus</title>
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<link rel="icon" href="/favicon.ico" />
+			</Head>
+			<div className="flex flex-col min-h-screen">
+				<Header />
+				<div className="flex-grow z-0">
+					<Component {...pageProps} />
 				</div>
-			</Analytics>
+				<Footer />
+			</div>
 		</QueryClientProvider>
 	)
 }

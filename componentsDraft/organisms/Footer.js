@@ -1,4 +1,3 @@
-import FooterNav from "../molecules/FooterNav"
 import IconLogo from "../atoms/IconLogo"
 
 export default function Footer() {
@@ -18,9 +17,9 @@ export default function Footer() {
 							</a>
 						</div>
 					</div>
-					<FooterNav />
+					<a href="https://www.tera-campus.com/politique-de-confidentialite/" target="_blank" className="underline">Mentions légales et confidentialité</a>
 					<div className="text-center">
-						© 2020-{today.getFullYear()} Tera Campus
+						© {today.getFullYear()}-{today.getFullYear()+1} Tera Campus
 					</div>
 				</div>
 				<div className="mt-4 flex justify-center">
