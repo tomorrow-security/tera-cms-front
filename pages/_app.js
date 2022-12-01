@@ -1,25 +1,25 @@
-import '../styles/globals.css'
+import '../styles/globals.css';
 
-import Head from "next/head"
-import { useRouter } from 'next/router'
-import { useEffect } from "react"
-import { QueryClient, QueryClientProvider } from "react-query"
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
+import { QueryClient, QueryClientProvider } from 'react-query';
 
-import Footer from "../componentsDraft/organisms/Footer"
-import Header from "../componentsDraft/organisms/Header"
+import Footer from '../components/organisms/Footer';
+import Header from '../components/organisms/Header';
 
-const queryClient = new QueryClient()
+const queryClient = new QueryClient();
 
 function MyApp({ Component, pageProps }) {
-	const router = useRouter()
+	const router = useRouter();
 
 	useEffect(() => {
 		if (router.isReady){
-			if (!localStorage.getItem('tc_ft_source')) localStorage.setItem('tc_ft_source', router.query.utm_source || 'direct')
-			if (!localStorage.getItem('tc_ft_medium')) localStorage.setItem('tc_ft_medium', router.query.utm_medium || 'site-web')
-			if (!localStorage.getItem('tc_ft_campaign')) localStorage.setItem('tc_ft_campaign', router.query.utm_campaign || 'none')
+			if (!localStorage.getItem('tc_ft_source')) localStorage.setItem('tc_ft_source', router.query.utm_source || 'direct');
+			if (!localStorage.getItem('tc_ft_medium')) localStorage.setItem('tc_ft_medium', router.query.utm_medium || 'site-web');
+			if (!localStorage.getItem('tc_ft_campaign')) localStorage.setItem('tc_ft_campaign', router.query.utm_campaign || 'none');
 		}
-	}, [router.isReady])
+	}, [router.isReady]);
 
 	return (
 		<QueryClientProvider client={queryClient}>

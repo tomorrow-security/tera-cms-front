@@ -1,4 +1,4 @@
-import IconLogo from "../atoms/IconLogo"
+import IconLogo from '../atoms/IconLogo';
 
 export default function Footer() {
 	const today = new Date()

@@ -1,17 +1,7 @@
-import classNames from "classnames"
-
-export default function Block ({ children, darken }) {
-
-  const wrapperClassNames = classNames(
-    'py-4 md:py-10 lg:py-16 overflow-hidden',
-    { 'bg-tc-lavender': darken },
-  );
-
-  const containerClassNames = classNames('container mx-auto px-4');
-
+export default function Block ({ children }) {
   return (
-    <div className={wrapperClassNames} >
-      <div className={containerClassNames}>
+    <div className="py-4 md:py-10 lg:py-16 overflow-hidden">
+      <div className="container mx-auto px-4">
         {children}
       </div>
     </div>

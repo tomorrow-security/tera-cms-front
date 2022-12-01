@@ -3,7 +3,7 @@ import { useEffect } from "react"
 import { useForm } from "react-hook-form"
 import { useMutation } from "react-query"
 
-import InputButton from "./../molecules/InputButton"
+import InputButton from "../molecules/InputButton"
 
 const apiUrl = process.env.NEXT_PUBLIC_ARPETTE_URL
 

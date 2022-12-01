@@ -1,5 +1,5 @@
-import Block from "../../components/atoms/Block"
-import Stepper from "../../components/organisms/Stepper"
+import Block from '../components/atoms/Block';
+import Stepper from '../components/organisms/Stepper';
 
 export default function EnrolmentWelcome() {
 
@@ -7,7 +7,7 @@ export default function EnrolmentWelcome() {
     <main>
       <Stepper />
 
-      <Block darken={false}>
+      <Block>
         <div className="text-xl md:text-4xl font-bold">
           Merci pour votre pré-inscription chez Tera Campus !
         </div>
@@ -32,5 +32,5 @@ export default function EnrolmentWelcome() {
       </Block>
     
     </main>
-  )
+  );
 }
