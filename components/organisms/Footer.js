@@ -3,10 +3,10 @@ import IconLogo from '../atoms/IconLogo';
 export default function Footer() {
 	const today = new Date()
 	return (
-		<footer className="py-10 text-white bg-tc-blue">
+		<footer className="py-10 text-white bg-tangaroa">
 			<div className="relative mx-2 md:container md:mx-auto md:px-2">
 				<div className="flex flex-col items-center justify-between lg:flex-row">
-					<div className="flex items-center">
+					<div className="flex items-center text-aqua">
 						<div className="w-10 mr-2">
 							<IconLogo />
 						</div>
@@ -18,7 +18,7 @@ export default function Footer() {
 						</div>
 					</div>
 					<a href="https://www.tera-campus.com/politique-de-confidentialite/" target="_blank" className="underline">Mentions légales et confidentialité</a>
-					<div className="text-center">
+					<div className="text-center text-aqua">
 						© {today.getFullYear()}-{today.getFullYear()+1} Tera Campus
 					</div>
 				</div>

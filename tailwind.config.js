@@ -84,10 +84,15 @@ module.exports = {
         "tc-red-light": "#dd603e",
         "tc-blue-xlight": "#7875aa",
         "tc-red-xlight": "#dd795d",
-        "tc-blue-bright": "#08043f",
-        "tc-red-bright": "#f93600",
         "tc-blue-dark": "#01000a",
         "tc-red-dark": "#c92b00",
+        "tangaroa": "#032845",
+        "aqua": "#00FFFF",
+        "oldking": "#075C9C",
+        "tangerine": "#FFA31A",
+        "stormy": "#535353",
+        "misty": "#EFF7F5",
+        "snowy": "#FFFFFF",
       },
       inset: {
         // TODO vérifier si tous les paramètres sont utilisés

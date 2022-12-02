@@ -85,14 +85,11 @@ function Index() {
       <Stepper />
 
       <Block>
-        <div className="grid grid-cols-1 md:grid-cols-2">
+        <div className="grid grid-cols-1 lg:grid-cols-2">
 
-          <div className="hidden md:flex flex-col bg-tc-lavender rounded-l">
-            <div className="w-full overflow-hidden rounded-tl">
-              <img src="https://res.cloudinary.com/teracampus/image/upload/q_auto:low/v1638972870/cms/yaaay_zpidbm" className="w-full h-96 object-cover object-center"/>
-            </div>
+          <div className="hidden lg:flex flex-col bg-tangaroa rounded-l">
             <div className="grow-1 flex flex-grow items-center px-8">
-              <p className="text-left md:text-center text-lg italic">
+              <p className="text-left md:text-center text-3xl xl:text-3xl italic text-aqua">
                 Empruntez le sentier de la réussite avec Tera Campus et misez sur une formation professionnalisante
                 dans un domaine en constante progression. Nos guides sont là pour vous accompagner dans votre montée
                 en compétences alors n'attendez plus, inscrivez-vous !
@@ -100,7 +97,7 @@ function Index() {
             </div>
           </div>
 
-          <div className="px-8 py-8 bg-tc-blue-navy rounded-r">
+          <div className="px-8 py-8 bg-tangaroa rounded-r">
             <form method="post" onSubmit={handleSubmit(onSubmit)}>
 
               <div>
