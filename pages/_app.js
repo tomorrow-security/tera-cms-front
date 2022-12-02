@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }) {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<div className={`${rubik.variable} font-sans flex flex-col`}>
+			<div className={`${rubik.variable} font-sans flex flex-col min-h-screen`}>
 				<Header />
 				<div className="flex-grow z-0">
 					<Component {...pageProps} />
