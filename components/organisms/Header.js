@@ -1,5 +1,3 @@
-import IconLogo from '../atoms/IconLogo';
-
 export default function Header() {
 	return (
 		<header className="flex items-center justify-center bg-tangaroa">
